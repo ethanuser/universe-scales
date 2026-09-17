@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Deep intergalactic space away from stars and dust is functionally dark, with only stray photons from the cosmic background. The luminance is near zero for human perception even after dark adaptation. Instruments still register faint glows from zodiacal light and unresolved galaxies. This number expresses the ideal empty field reference for contrast.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Deep Space",
@@ -44,6 +45,8 @@
       "id": "obs:brightness:scenario-brightness-deep-space",
       "name": "Deep Space",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Outer_space",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A moonless rural night sky under clear air provides this approximate surface luminance to the ground as seen by a dark adapted eye. It is dominated by starlight and airglow rather than artificial sources. Photographers call it a long exposure regime where noise matters. The value is a practical baseline for night vision performance.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Moonless Night",
@@ -95,6 +99,8 @@
       "id": "obs:brightness:scenario-brightness-moonless-night",
       "name": "Moonless Night",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Night",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Under a clear dark sky with no Moon, the brightest parts of the Milky Way lift the apparent sky glow above the deepest rural darkness by about an order of magnitude. Astrophotographers chase places with so little artificial light that this faint band becomes obvious to the eye. The number is still far below comfortable reading conditions. It represents a rich starlit sky rather than true empty darkness.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Starlit Sky",
@@ -146,6 +153,8 @@
       "id": "obs:brightness:scenario-brightness-starlit-sky",
       "name": "Starlit Sky",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Strong auroral curtains can make the sky visibly luminous in green and red even while the ground remains mostly dark. The display feels bright because your eyes are adapted to night, not because the absolute luminance rivals daylight. Cameras with long exposures exaggerate the effect. The value is a plausible surface-brightness scale for a vivid aurora.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Aurora Borealis",
@@ -197,6 +207,8 @@
       "id": "obs:brightness:scenario-brightness-aurora-borealis",
       "name": "Aurora Borealis",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aurora",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Landscapes lit by a full moon at high altitude reflect enough light to reach this luminance when viewed directly. Snow and pale rock can run higher because of albedo. For reading outdoors some people find it barely sufficient at peak lunar elevation. The number assumes clear skies and a bright moon near opposition.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Full Moon",
@@ -248,6 +261,8 @@
       "id": "obs:brightness:scenario-brightness-full-moon",
       "name": "Full Moon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moon",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A candle flame near the wick presents this luminance when viewed from a short distance along the bright axis. The value varies with wax composition and airflow, which is why candles flicker. Artists learned to stage scenes with this small source for mood long before meters existed. The number ties ambiance to measurable output.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Candle",
@@ -299,6 +315,8 @@
       "id": "obs:brightness:scenario-brightness-candle",
       "name": "Candle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Candle",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Civil twilight on a city street with modest lamppost spacing often leaves building facades near this luminance. Human eyes still color render well but shadows deepen. Photographers consider it a handheld borderline without stabilization. The number captures the feel of evening errands.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "City Street Twilight",
@@ -350,6 +369,8 @@
       "id": "obs:brightness:scenario-brightness-city-street-twilight",
       "name": "City Street Twilight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Twilight",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An illuminated emergency exit sign is intentionally bright enough to stand out in a dark hallway without dazzling nearby occupants. Safety designers choose this middle ground so the sign remains legible during power transitions and smoke. The value fits the glowing face rather than the ambient room. It is a common commercial-building scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Emergency Exit Sign",
@@ -401,6 +423,8 @@
       "id": "obs:brightness:scenario-brightness-emergency-exit-sign",
       "name": "Emergency Exit Sign",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Exit_sign",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Electronic paper displays are meant to mimic comfortable reflected reading surfaces rather than glowing screens, so their luminance stays modest. That is why they feel gentle indoors and remain usable for long stretches. They depend on ambient light rather than brute-force emission. The number is for a front-lit e-reader in a dim room.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "E-Ink Reader",
@@ -452,6 +477,8 @@
       "id": "obs:brightness:scenario-brightness-e-ink-reader",
       "name": "E-Ink Reader",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electronic_paper",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A calibrated cinema projection screen in a dark theater operates near this luminance to preserve contrast and comfort. Going brighter would wash out blacks in large rooms. The standard aims to match human adaptation in that environment. The value underpins projector and screen design.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Movie Screen",
@@ -503,6 +531,8 @@
       "id": "obs:brightness:scenario-brightness-movie-screen",
       "name": "Movie Screen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Movie_theater",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Typical evening room lighting on walls and book pages yields this luminance when using warm bulbs and shaded fixtures. Eyes adapt within minutes to make print comfortable at this level. Screens at matching brightness reduce strain compared with much higher settings. The value presumes matte surfaces to avoid specular glare.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Room Lighting",
@@ -554,6 +585,8 @@
       "id": "obs:brightness:scenario-brightness-room-lighting",
       "name": "Room Lighting",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lighting",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A white sheet of paper near a window on a cloudy morning reflects to this luminance and makes for pleasant reading. Graphic designers proof prints against such conditions to judge tone. The value is a simple domestic check for comfortable lighting. It is also a good target for home offices.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Paper by Window",
@@ -605,6 +639,8 @@
       "id": "obs:brightness:scenario-brightness-paper-by-window",
       "name": "Paper by Window",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Reading",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A laptop display used at a desk commonly runs near a few hundred nits, enough for readability indoors without excessive eye fatigue. Manufacturers publish peak values, but most people settle lower during normal office use. This luminance range became a de facto baseline for portable computing. The value is a representative comfortable working setting.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Laptop Screen",
@@ -656,6 +693,8 @@
       "id": "obs:brightness:scenario-brightness-laptop-screen",
       "name": "Laptop Screen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Liquid-crystal_display",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A calibrated LCD or OLED screen for comfortable indoor reading is near this luminance when set to a neutral profile. Raising it further helps outdoors but wastes battery inside. Color grading suites fix this level to keep perception consistent across rooms. The number ties display practice to visual science.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "LED Screen",
@@ -707,6 +747,8 @@
       "id": "obs:brightness:scenario-brightness-led-screen",
       "name": "LED Screen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/LED_display",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern offices target this luminance on task surfaces to balance alertness with comfort for long work periods. The level supports fine handwriting and screen use without harsh reflections. Designers achieve it with a mix of overhead panels and indirect lamps. The number reflects both standards and accumulated workplace experience.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Office Lighting",
@@ -758,6 +801,8 @@
       "id": "obs:brightness:scenario-brightness-office-lighting",
       "name": "Office Lighting",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Office",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Neon signs and similar gas-discharge tubes produce a saturated glow that looks vivid at night while remaining much dimmer than daylight sources. Their visual punch comes from color contrast and dark surroundings as much as from raw luminance. Urban streetscapes use this effect heavily in entertainment districts. The value is a representative bright-sign scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Neon Sign",
@@ -809,6 +855,8 @@
       "id": "obs:brightness:scenario-brightness-neon-sign",
       "name": "Neon Sign",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neon_sign",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A ceiling mounted fluorescent panel behind a diffuser produces about this luminance on its emitting surface. The light is even and cost effective, which is why schools and labs used it for decades. Spectrum and flicker now matter more than the raw number for comfort. The figure provides a benchmark when retrofitting to LED.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Fluorescent Light",
@@ -860,6 +909,8 @@
       "id": "obs:brightness:scenario-brightness-fluorescent-light",
       "name": "Fluorescent Light",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fluorescent_lamp",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An overcast sky acts like a giant diffuser, making outdoor surfaces roughly uniform at this luminance. Photographers appreciate the soft shadows and gentle skin tones it brings. The level is bright to the eye but tame for cameras compared with direct sun. The value assumes midday and thick cloud cover.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Overcast Day",
@@ -911,6 +963,8 @@
       "id": "obs:brightness:scenario-brightness-overcast-day",
       "name": "Overcast Day",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Overcast",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Smartphone screens at maximum boost for outdoor readability can reach this luminance for short periods. Thermal throttling often reduces it to protect the panel. In bright sun this margin makes the difference between usable and squint. The number explains marketing claims about nits.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Smartphone Max Boost",
@@ -962,6 +1017,8 @@
       "id": "obs:brightness:scenario-brightness-smartphone-max-boost",
       "name": "Smartphone Max Boost",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Display_brightness",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern HDR televisions can reach well above a thousand nits in small highlights so explosions, sunlight glints, and specular reflections feel more lifelike. The whole screen usually cannot sustain this level because heat and power constraints intervene. Still, it marks a step change from older displays. The value is a common premium-TV highlight target.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "HDR Television Highlight",
@@ -1013,6 +1071,8 @@
       "id": "obs:brightness:scenario-brightness-hdr-television-highlight",
       "name": "HDR Television Highlight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/High-dynamic-range_television",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "White paper in direct sunshine can look surprisingly bright because a matte surface reflects a substantial part of the huge outdoor illuminance. That is why reading outdoors often requires shade even though paper itself emits no light. Printers, photographers, and display engineers use such comparisons all the time. The value is for clean white paper under strong sun.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "White Paper in Sun",
@@ -1064,6 +1125,8 @@
       "id": "obs:brightness:scenario-brightness-white-paper-in-sun",
       "name": "White Paper in Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Luminance",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "LED traffic signals are designed so the glowing lens remains easy to recognize in full daylight, fog, and peripheral vision. The relevant quantity for the eye is not just total lumens but the luminance of the emitting face. City intersections therefore live noticeably above ordinary indoor display levels. The value is a representative sun-readable signal-face scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Traffic Signal Lens",
@@ -1115,6 +1179,8 @@
       "id": "obs:brightness:scenario-brightness-traffic-signal-lens",
       "name": "Traffic Signal Lens",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Traffic_light",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The clear blue sky near the zenith is itself a bright luminous surface created by sunlight scattered through the atmosphere. Looking up on a dry day shows how much visual information the eye can tolerate without perceiving the sky as a light source in the same way as the Sun. Polarization studies and skylight models both lean on this scale. The number is a representative midday value.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Blue Sky Zenith",
@@ -1166,6 +1233,8 @@
       "id": "obs:brightness:scenario-brightness-blue-sky-zenith",
       "name": "Blue Sky Zenith",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sky",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The lens of a bright runway light or signal head can reach very high luminance so that it remains conspicuous against daylight backgrounds. Airfields and roads rely on that intensity margin for safety when weather, glare, and distance all fight visibility. What matters to a pilot is not only total luminous flux but the concentrated emitting surface. The value is a practical signal-light scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Runway Signal Lens",
@@ -1217,6 +1287,8 @@
       "id": "obs:brightness:scenario-brightness-runway-signal-lens",
       "name": "Runway Signal Lens",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Approach_lighting_system",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Surgical task lighting focuses high luminance onto a small field to reveal low contrast features in tissue. Heat management and color fidelity matter as much as the raw value. Teams balance glare against visibility under long procedures. The figure is representative for modern LED operating lamps.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Operating Room Field",
@@ -1268,6 +1341,8 @@
       "id": "obs:brightness:scenario-brightness-operating-room-field",
       "name": "Operating Room Field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Surgical_light",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Under direct midday sun, many natural surfaces reach this luminance or more, especially pale stone and sand. Shadows are hard edged and contrast is high which can exceed camera dynamic range. Human pupils constrict and sunglasses become useful. The number marks a typical clear summer noon on land.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Sunny Day",
@@ -1319,6 +1395,8 @@
       "id": "obs:brightness:scenario-brightness-sunny-day",
       "name": "Sunny Day",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sunlight",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fresh snow in direct sun reflects so efficiently that luminance climbs to this level, causing glare and risk of snow blindness. Ski goggles and high albedo roofs are designed with these values in mind. Photovoltaic panels nearby can harvest substantial power because the field is bright and wide. The number assumes clean snow and clear air.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Snow Reflection",
@@ -1370,6 +1449,8 @@
       "id": "obs:brightness:scenario-brightness-snow-reflection",
       "name": "Snow Reflection",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Snow",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An active arc welding pool radiates intensely with luminance near this value at the brightest spot. It emits ultraviolet that can damage eyes and skin in seconds. Helmets and curtains attenuate both brightness and spectrum to safe levels. The number conveys why brief glances feel painful.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Arc Welding",
@@ -1421,6 +1503,8 @@
       "id": "obs:brightness:scenario-brightness-arc-welding",
       "name": "Arc Welding",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Arc_welding",
       "source_count": 2,
       "sources": [
@@ -1459,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Theater spotlights appear dazzling because a lot of luminous power is concentrated into a small aperture and narrow beam. Stage designers exploit that high luminance to isolate performers even in large dark auditoria. Much of the experience of 'being in the spotlight' comes from this contrast. The number is a source-surface scale for a bright stage instrument.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Theater Spotlight",
@@ -1472,6 +1557,8 @@
       "id": "obs:brightness:scenario-brightness-theater-spotlight",
       "name": "Theater Spotlight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Stage_lighting_instrument",
       "source_count": 2,
       "sources": [
@@ -1510,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Magnesium burns with a brilliant white light that photographers once used for flash illumination before electronic strobes took over. The luminous surface is extremely intense even for a very small mass of metal. Eye protection matters because the output includes strong ultraviolet as well. The value is a representative burning-flare luminance scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Magnesium Flare",
@@ -1523,6 +1611,8 @@
       "id": "obs:brightness:scenario-brightness-magnesium-flare",
       "name": "Magnesium Flare",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Flash_powder",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A lightning channel is a transient plasma column whose apparent luminance can rival or exceed the brightest man-made light sources. The pulse is brief, but the eye still experiences it as a violent flash because the number is so high. Cameras saturate easily on nearby strikes for exactly this reason. The value is an order-of-magnitude luminance scale for a bright return stroke.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Lightning Channel",
@@ -1574,6 +1665,8 @@
       "id": "obs:brightness:scenario-brightness-lightning-channel",
       "name": "Lightning Channel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The apparent luminance of Sirius as a disk is a modeling construct since the star is unresolved to the eye. As seen through a telescope with finite aperture, diffraction spreads the light into an Airy pattern. The central peak behaves as if it had an extremely high surface luminance. This number expresses that conceptual peak for comparison only.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Sirius",
@@ -1625,6 +1719,8 @@
       "id": "obs:brightness:scenario-brightness-sirius",
       "name": "Sirius",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sirius",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1759,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The solar photosphere has an effective surface luminance of this order across visible wavelengths. It sets the reference for daylight vision and the upper bound of common sensors. Atmospheric scattering and eye safety make direct viewing unwise. The number is a standard astrophysical parameter for the Sun.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Sun",
@@ -1676,6 +1773,8 @@
       "id": "obs:brightness:scenario-brightness-sun",
       "name": "Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -1714,6 +1813,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A core-collapse supernova photosphere can briefly reach this effective luminance as the ejecta expand and cool. The light curve evolves rapidly so the number applies only near peak brightness. Spectra are line rich and depart from a perfect blackbody, which is why this is a deliberately simplified comparison. The figure situates stellar explosions against the Sun on a surface basis.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Core-Collapse Supernova",
@@ -1727,6 +1827,8 @@
       "id": "obs:brightness:scenario-brightness-core-collapse-supernova",
       "name": "Core-Collapse Supernova",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Supernova",
       "source_count": 2,
       "sources": [
@@ -1765,6 +1867,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A thermonuclear Type Ia supernova is also extremely bright, but its mechanism is different from core collapse. White dwarf disruption lets it reach a similar surface-brightness regime while producing a cleaner standardizable light curve. This sits above ordinary supernovae but below the rarest superluminous events. The value is a representative peak photosphere scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Type Ia Supernova",
@@ -1778,6 +1881,8 @@
       "id": "obs:brightness:scenario-brightness-type-ia-supernova",
       "name": "Type Ia Supernova",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Type_Ia_supernova",
       "source_count": 2,
       "sources": [
@@ -1816,6 +1921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Superluminous supernovae are rare explosions that can outshine ordinary supernovae by orders of magnitude. They are often powered by unusually energetic progenitors or central engines, so this scale bridges the gap between common supernovae and gamma ray bursts. The number is a peak effective luminance, not a literal blackbody surface. It is the sort of event that keeps transient-astronomy surveys busy.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Superluminous Supernova",
@@ -1829,6 +1935,8 @@
       "id": "obs:brightness:scenario-brightness-superluminous-supernova",
       "name": "Superluminous Supernova",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Superluminous_supernova",
       "source_count": 2,
       "sources": [
@@ -1867,6 +1975,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Giant magnetar flares can briefly create an apparently blinding high-energy flash. The geometry is not a simple glowing surface, so the value is best read as an isotropic-equivalent comparison scale. It helps fill the bright gap between supernovae and the most extreme gamma ray bursts. The event is short, violent, and very rare.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Magnetar Giant Flare",
@@ -1880,6 +1989,8 @@
       "id": "obs:brightness:scenario-brightness-magnetar-giant-flare",
       "name": "Magnetar Giant Flare",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetar",
       "source_count": 2,
       "sources": [
@@ -1918,6 +2029,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Short gamma ray bursts are compact, beamed explosions with extreme apparent surface brightness if treated as isotropic emission. The number here is an illustrative equivalent to show the scale of the prompt flash, not a literal glowing disk. Observers reconstruct it from flux, duration, and distance. It is one step below the brightest long-burst examples in this chart.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Short Gamma-Ray Burst",
@@ -1931,6 +2043,8 @@
       "id": "obs:brightness:scenario-brightness-short-gamma-ray-burst",
       "name": "Short Gamma-Ray Burst",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gamma-ray_burst",
       "source_count": 2,
       "sources": [
@@ -1969,6 +2083,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Prompt emission regions in long gamma ray bursts would imply extreme effective luminance if treated as surfaces, though the geometry is beamed and transient. The number here is an illustrative isotropic equivalent to show scale. Observers reconstruct it from flux, duration, and distance. It is not a recommendation to look.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/brightness.yaml",
         "legacy_item_name": "Long Gamma-Ray Burst (isotropic equivalent)",
@@ -1982,6 +2097,8 @@
       "id": "obs:brightness:scenario-brightness-long-gamma-ray-burst-isotropic-equivalent",
       "name": "Long Gamma-Ray Burst (isotropic equivalent)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gamma-ray_burst",
       "source_count": 2,
       "sources": [

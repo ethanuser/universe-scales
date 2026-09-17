@@ -69,6 +69,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Proton volume
     ingest_source: dataset/raw/curated/volume.json
@@ -114,6 +117,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hydrogen atom volume
     ingest_source: dataset/raw/curated/volume.json
@@ -159,6 +165,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water molecule volume
     ingest_source: dataset/raw/curated/volume.json
@@ -202,6 +211,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SARS-CoV-2 virion volume
     ingest_source: dataset/raw/curated/volume.json
@@ -247,6 +259,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Escherichia coli cell volume
     ingest_source: dataset/raw/curated/volume.json
@@ -290,6 +305,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Red blood cell volume
     ingest_source: dataset/raw/curated/volume.json
@@ -333,6 +351,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human cell volume
     ingest_source: dataset/raw/curated/volume.json
@@ -376,6 +397,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Grain of salt volume
     ingest_source: dataset/raw/curated/volume.json
@@ -421,6 +445,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Grain of sand volume
     ingest_source: dataset/raw/curated/volume.json
@@ -464,6 +491,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Grain of sand volume
     ingest_source: dataset/raw/curated/volume.json
@@ -509,6 +539,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Raindrop volume
     ingest_source: dataset/raw/curated/volume.json
@@ -554,6 +587,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sugar cube volume
     ingest_source: dataset/raw/curated/volume.json
@@ -597,6 +633,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Teaspoon
     ingest_source: dataset/raw/curated/volume.json
@@ -640,6 +679,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wine glass volume
     ingest_source: dataset/raw/curated/volume.json
@@ -683,6 +725,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Coffee mug
     ingest_source: dataset/raw/curated/volume.json
@@ -726,6 +771,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soda can
     ingest_source: dataset/raw/curated/volume.json
@@ -769,6 +817,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soda can volume
     ingest_source: dataset/raw/curated/volume.json
@@ -812,6 +863,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wine bottle
     ingest_source: dataset/raw/curated/volume.json
@@ -855,6 +909,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bucket
     ingest_source: dataset/raw/curated/volume.json
@@ -898,6 +955,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human body volume
     ingest_source: dataset/raw/curated/volume.json
@@ -941,6 +1001,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bathtub
     ingest_source: dataset/raw/curated/volume.json
@@ -984,6 +1047,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bathtub volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1027,6 +1093,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Family car envelope volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1070,6 +1139,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Room volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1113,6 +1185,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Shipping container volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1156,6 +1231,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Shipping container
     ingest_source: dataset/raw/curated/volume.json
@@ -1199,6 +1277,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Swimming pool
     ingest_source: dataset/raw/curated/volume.json
@@ -1242,6 +1323,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Swimming pool volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1285,6 +1369,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: City bus envelope volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1328,6 +1415,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Freight train car volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1371,6 +1461,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Apartment
     ingest_source: dataset/raw/curated/volume.json
@@ -1414,6 +1507,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Classroom volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1457,6 +1553,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Apartment volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1500,6 +1599,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: House interior volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1543,6 +1645,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Olympic swimming pool
     ingest_source: dataset/raw/curated/volume.json
@@ -1586,6 +1691,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Oil tanker cargo volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1629,6 +1737,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Great Pyramid of Giza volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1672,6 +1783,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lake Tahoe volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1715,6 +1829,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mount Everest envelope volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1758,6 +1875,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth's oceans
     ingest_source: dataset/raw/curated/volume.json
@@ -1801,6 +1921,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1846,6 +1969,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1889,6 +2015,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1934,6 +2063,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Betelgeuse volume
     ingest_source: dataset/raw/curated/volume.json
@@ -1979,6 +2111,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Oort Cloud volume
     ingest_source: dataset/raw/curated/volume.json
@@ -2024,6 +2159,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Orion Nebula volume
     ingest_source: dataset/raw/curated/volume.json
@@ -2067,6 +2205,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milky Way disk volume
     ingest_source: dataset/raw/curated/volume.json
@@ -2110,6 +2251,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Local Group volume
     ingest_source: dataset/raw/curated/volume.json
@@ -2155,6 +2299,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Virgo Supercluster volume
     ingest_source: dataset/raw/curated/volume.json
@@ -2200,6 +2347,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Observable universe volume
     ingest_source: dataset/raw/curated/volume.json

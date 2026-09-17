@@ -69,6 +69,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One DNA nucleotide
     ingest_source: dataset/raw/curated/information.json
@@ -116,6 +119,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: UUID
     ingest_source: dataset/raw/curated/information.json
@@ -163,6 +169,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: IPv4 header
     ingest_source: dataset/raw/curated/information.json
@@ -208,6 +217,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SHA-256 digest
     ingest_source: dataset/raw/curated/information.json
@@ -255,6 +267,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: IPv6 header
     ingest_source: dataset/raw/curated/information.json
@@ -300,6 +315,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SHA-512 digest
     ingest_source: dataset/raw/curated/information.json
@@ -347,6 +365,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: IBM punch card
     ingest_source: dataset/raw/curated/information.json
@@ -393,6 +414,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SMS text message
     ingest_source: dataset/raw/curated/information.json
@@ -438,6 +462,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tweet at the 280-character limit
     ingest_source: dataset/raw/curated/information.json
@@ -484,6 +511,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ethernet MTU payload
     ingest_source: dataset/raw/curated/information.json
@@ -529,6 +559,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 80x25 text screen
     ingest_source: dataset/raw/curated/information.json
@@ -575,6 +608,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: QR code Version 40-L
     ingest_source: dataset/raw/curated/information.json
@@ -620,6 +656,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 4 KiB memory page
     ingest_source: dataset/raw/curated/information.json
@@ -666,6 +705,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human mitochondrial genome
     ingest_source: dataset/raw/curated/information.json
@@ -713,6 +755,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SARS-CoV-2 genome
     ingest_source: dataset/raw/curated/information.json
@@ -760,6 +805,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Commodore 64 RAM
     ingest_source: dataset/raw/curated/information.json
@@ -806,6 +854,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Apollo Guidance Computer rope memory
     ingest_source: dataset/raw/curated/information.json
@@ -852,6 +903,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Macintosh 128K
     ingest_source: dataset/raw/curated/information.json
@@ -898,6 +952,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One second of CD audio
     ingest_source: dataset/raw/curated/information.json
@@ -945,6 +1002,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Escherichia coli genome
     ingest_source: dataset/raw/curated/information.json
@@ -992,6 +1052,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 3.5-inch floppy disk
     ingest_source: dataset/raw/curated/information.json
@@ -1038,6 +1101,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Yeast genome
     ingest_source: dataset/raw/curated/information.json
@@ -1085,6 +1151,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Five-minute MP3 song at 128 kbit/s
     ingest_source: dataset/raw/curated/information.json
@@ -1132,6 +1201,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Raw 1080p RGB frame
     ingest_source: dataset/raw/curated/information.json
@@ -1178,6 +1250,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One minute of CD audio
     ingest_source: dataset/raw/curated/information.json
@@ -1225,6 +1300,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Raw 4K UHD RGB frame
     ingest_source: dataset/raw/curated/information.json
@@ -1271,6 +1349,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: C. elegans genome
     ingest_source: dataset/raw/curated/information.json
@@ -1318,6 +1399,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fruit fly genome
     ingest_source: dataset/raw/curated/information.json
@@ -1365,6 +1449,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Zip 100 disk
     ingest_source: dataset/raw/curated/information.json
@@ -1411,6 +1498,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rice genome
     ingest_source: dataset/raw/curated/information.json
@@ -1458,6 +1548,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One second of raw 1080p30 video
     ingest_source: dataset/raw/curated/information.json
@@ -1504,6 +1597,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Maize genome
     ingest_source: dataset/raw/curated/information.json
@@ -1551,6 +1647,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One hour of CD audio
     ingest_source: dataset/raw/curated/information.json
@@ -1598,6 +1697,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mouse genome
     ingest_source: dataset/raw/curated/information.json
@@ -1645,6 +1747,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: CD-ROM
     ingest_source: dataset/raw/curated/information.json
@@ -1691,6 +1796,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human haploid genome
     ingest_source: dataset/raw/curated/information.json
@@ -1738,6 +1846,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One second of raw 4K60 video
     ingest_source: dataset/raw/curated/information.json
@@ -1784,6 +1895,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human diploid genome
     ingest_source: dataset/raw/curated/information.json
@@ -1831,6 +1945,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: DVD
     ingest_source: dataset/raw/curated/information.json
@@ -1877,6 +1994,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lungfish genome
     ingest_source: dataset/raw/curated/information.json
@@ -1924,6 +2044,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blu-ray Disc
     ingest_source: dataset/raw/curated/information.json
@@ -1970,6 +2093,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: All GPT-3 generated text in one day (plain-text proxy)
     ingest_source: dataset/raw/curated/information.json
@@ -2018,6 +2144,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Paris japonica genome
     ingest_source: dataset/raw/curated/information.json
@@ -2065,6 +2194,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dual-layer Blu-ray Disc
     ingest_source: dataset/raw/curated/information.json
@@ -2111,6 +2243,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: UHD Blu-ray Disc
     ingest_source: dataset/raw/curated/information.json
@@ -2157,6 +2292,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 1 TB microSDXC card
     ingest_source: dataset/raw/curated/information.json
@@ -2203,6 +2341,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: LTO-9 tape
     ingest_source: dataset/raw/curated/information.json
@@ -2249,6 +2390,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year of YouTube uploads (compressed-video proxy)
     ingest_source: dataset/raw/curated/information.json
@@ -2297,6 +2441,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One day of YouTube viewing on TVs (compressed-video proxy)
     ingest_source: dataset/raw/curated/information.json
@@ -2345,6 +2492,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: All human DNA on Earth (compact sequence proxy)
     ingest_source: dataset/raw/curated/information.json

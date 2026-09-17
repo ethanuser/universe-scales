@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A grain of rice costs less than a ten-thousandth of a dollar when purchased in a 25-pound bag for about $15. Large processors such as Riceland Foods and ADM mill and package thousands of tons daily using automated equipment. The main expense lies in energy and transportation, not the grain itself. It\u2019s an example of how mechanization and global trade have pushed the price of basic calories close to zero.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Grain of Rice",
@@ -44,6 +45,8 @@
       "id": "obs:costs:scenario-costs-grain-of-rice",
       "name": "Grain of Rice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rice",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A standard Gem-style paper clip sells for about a cent, often less when bought in bulk from brands like ACCO or Staples. Each is made from low-carbon steel wire, cut and bent at rates of hundreds of thousands per hour by automated machines. Material and labor together cost less than the box it ships in. It\u2019s a mature industrial product where manufacturing efficiency leaves logistics as the main cost.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Paper Clip",
@@ -95,6 +99,8 @@
       "id": "obs:costs:scenario-costs-paper-clip",
       "name": "Paper Clip",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paper_clip",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One gigabyte of solid state storage purchased in bulk for data centers falls near this price. Consumer retail per gigabyte is higher due to packaging and distribution. Costs trend downward over time with new fabrication nodes. The number provides a planning figure for capacity budgets.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "SSD Storage (per GB)",
@@ -146,6 +153,8 @@
       "id": "obs:costs:scenario-costs-ssd-storage-per-gb",
       "name": "SSD Storage (per GB)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Solid-state_drive",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A cloud virtual machine with modest CPU and memory might cost this much per hour before reserved discounts. Storage and network egress fees are separate line items. Running continuously all month turns small hourly rates into consequential totals. The number is for on demand pricing in a major cloud.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Cloud VM (per hour)",
@@ -197,6 +207,8 @@
       "id": "obs:costs:scenario-costs-cloud-vm-per-hour",
       "name": "Cloud VM (per hour)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cloud_computing",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Residential electricity in many regions costs around this much per kilowatt hour on the bill. Time of use pricing can make peak hours more expensive and nights cheaper. Efficiency gains reduce the number of kilowatt hours purchased rather than the price per unit. The value is an average retail rate.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Electricity (per kWh)",
@@ -248,6 +261,8 @@
       "id": "obs:costs:scenario-costs-electricity-per-kwh",
       "name": "Electricity (per kWh)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kilowatt_hour",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 100 trillion dollar Zimbabwe note during peak hyperinflation exchanged on the street for less than a US dollar despite its face value. Prices lost meaning as numerals raced ahead of goods, showing that money is a social contract more than paper and ink. Today the same note sells as a collectible for its story. The value reflects a representative peak period exchange into USD.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Zimbabwe 100 trillion dollar note (peak street value)",
@@ -299,6 +315,8 @@
       "id": "obs:costs:scenario-costs-zimbabwe-100-trillion-dollar-note-peak-street-value",
       "name": "Zimbabwe 100 trillion dollar note (peak street value)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hyperinflation_in_Zimbabwe",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A U.S. First-Class Forever stamp currently costs about $0.68, paying for nationwide collection, sorting, and delivery of a one-ounce letter. Most of the price supports infrastructure\u2014sorting centers, trucks, and labor\u2014rather than paper or ink. The U.S. Postal Service adjusts rates to track inflation and fuel costs while staying self-funded. Each stamp buys access to one of the largest logistics networks in the world.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Stamp",
@@ -350,6 +369,8 @@
       "id": "obs:costs:scenario-costs-stamp",
       "name": "Stamp",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Postage_stamp",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A cafe coffee commonly costs about $3 per cup even though green beans contribute only around $0.20. The remaining $2.80 pays for wages, rent, equipment amortization, and a seat with heat and wifi. At home brewing can cost around $0.50 per cup for similar quality. The value reflects a city cafe, not a convenience store urn.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Cup of Coffee",
@@ -401,6 +423,8 @@
       "id": "obs:costs:scenario-costs-cup-of-coffee",
       "name": "Cup of Coffee",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Coffee",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A made to order sandwich typically costs about $8 including tax in urban delis. Protein and portion size can push it to $12, while simple vegetarian options drop to $6. Per calorie it often undercuts packaged snacks even with a higher sticker. This figure is for a single counter order with tax.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Sandwich",
@@ -452,6 +477,8 @@
       "id": "obs:costs:scenario-costs-sandwich",
       "name": "Sandwich",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sandwich",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A certified one meter USB data and charge cable typically costs about $10 when sold separately. Shorter, thinner cables can be $5 but often charge slowly due to higher resistance. Good shielding and e marked chips add a dollar or two and prevent flaky connections. This figure assumes a certified cable from a mainstream seller.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "USB Cable",
@@ -503,6 +531,8 @@
       "id": "obs:costs:scenario-costs-usb-cable",
       "name": "USB Cable",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/USB",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A prime time movie ticket averages about $12 at a multiplex before fees. Premium formats such as IMAX or 3D push this toward $18, while weekday matinees drop to around $8. Concessions often double the outlay, which is why theaters keep ticket prices comparatively low. This figure reflects a mainstream evening show.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Movie Ticket",
@@ -554,6 +585,8 @@
       "id": "obs:costs:scenario-costs-movie-ticket",
       "name": "Movie Ticket",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Movie_theater",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A new trade paperback commonly costs about $15, bundling years of writing with editing, printing, and distribution. Color art and coated paper can lift the price to $30, while mass market paperbacks live under $10. E books save printing but still pay editors, platforms, and rights. This figure is for a midlist title at a chain bookstore.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Book",
@@ -605,6 +639,8 @@
       "id": "obs:costs:scenario-costs-book",
       "name": "Book",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Book",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Over ear headphones without noise cancellation often cost about $50 for a comfortable, decent sounding pair. Studio reference sets start around $100, while active noise models range from $150 to $400. Fit and seal matter more for bass than driver spec sheets. This number is for a mainstream consumer pair at retail.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Headphones",
@@ -656,6 +693,8 @@
       "id": "obs:costs:scenario-costs-headphones",
       "name": "Headphones",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Headphones",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A data plan for a smartphone with several gigabytes of high speed data is often billed around this per month. Taxes and device installments add to the bill. Competition among carriers creates promotions that temporarily reduce the cost. The number is for a single line without family discounts.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Mobile Plan (Monthly)",
@@ -707,6 +747,8 @@
       "id": "obs:costs:scenario-costs-mobile-plan-monthly",
       "name": "Mobile Plan (Monthly)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mobile_phone_plan",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A used textbook at a campus bookstore might sell for this amount midway through a term. Online marketplaces can undercut this with wider supply. New editions reset resale value abruptly. The number represents a common student purchase.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Used Textbook",
@@ -758,6 +801,8 @@
       "id": "obs:costs:scenario-costs-used-textbook",
       "name": "Used Textbook",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Textbook",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Monthly public transit pass pricing in many cities sits near this amount for unlimited rides. Zone systems and means tested discounts apply. Passes smooth cash flow for agencies and riders. The figure is a city median rather than a specific system.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Transit Pass (Monthly)",
@@ -809,6 +855,8 @@
       "id": "obs:costs:scenario-costs-transit-pass-monthly",
       "name": "Transit Pass (Monthly)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Public_transport_fare",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A concert ticket for a popular artist at an arena averages this price before fees. Secondary markets can elevate it sharply. Venue size and production scale drive cost up as well. The number reflects a primary sale seat in the lower bowl.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Concert Ticket",
@@ -860,6 +909,8 @@
       "id": "obs:costs:scenario-costs-concert-ticket",
       "name": "Concert Ticket",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concert_tour",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A basic steel frame city bicycle costs about $300 at retail. A sturdy lock adds $50 to $100, and annual tune ups run $50 to $150. Adding an electric assist kit easily adds $800 to $1500. This figure is for a non electric commuter bike.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Bicycle",
@@ -911,6 +963,8 @@
       "id": "obs:costs:scenario-costs-bicycle",
       "name": "Bicycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A transatlantic economy airfare purchased well in advance can be around this price round trip. Fuel, crew, and landing fees set the baseline while demand sets the premium. Flexible tickets cost more but reduce risk. The value is for shoulder season travel.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Flight Ticket Transatlantic",
@@ -962,6 +1017,8 @@
       "id": "obs:costs:scenario-costs-flight-ticket-transatlantic",
       "name": "Flight Ticket Transatlantic",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Air_fare",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A flagship smartphone at launch costs about $800 unlocked, while the bill of materials is closer to $400. The other $400 funds software, warranty, logistics, and marketing, plus the risk of building millions of units. Carriers convert this into $30 to $40 per month with embedded finance charges. This figure is for an unlocked model in a major market.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Smartphone",
@@ -1013,6 +1071,8 @@
       "id": "obs:costs:scenario-costs-smartphone",
       "name": "Smartphone",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smartphone",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A dental crown out of pocket expense in the United States is often around this cost. Insurance negotiated rates and materials change the bill. The price includes lab work and clinical time. The figure is for a single molar crown.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Dental Crown",
@@ -1064,6 +1125,8 @@
       "id": "obs:costs:scenario-costs-dental-crown",
       "name": "Dental Crown",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dental_crown",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mid range laptop for everyday work is about $1200 new with 16 GB RAM and a 512 GB SSD. Sales can drop this to $900, while premium ultrabooks push above $2000. Refurbished corporate machines deliver comparable utility for roughly $600. This value assumes a new unit from a major brand.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Laptop",
@@ -1115,6 +1179,8 @@
       "id": "obs:costs:scenario-costs-laptop",
       "name": "Laptop",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laptop",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A one bedroom apartment rent in a large city often lands around $1500 per month. Deposits and utilities can make the first month exceed $3000, while rent controlled stock sits below market. Proximity to transit and jobs drives the spread more than square footage. This figure assumes a mid market building with basic appliances.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Apartment (Monthly)",
@@ -1166,6 +1233,8 @@
       "id": "obs:costs:scenario-costs-apartment-monthly",
       "name": "Apartment (Monthly)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Apartment",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An academic article publication fee in some open access journals is several thousand dollars. Charges cover editorial work, typesetting, and platform costs. Debates continue about equity and value in this model. The number is a representative article processing charge.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Open Access Article Fee",
@@ -1217,6 +1287,8 @@
       "id": "obs:costs:scenario-costs-open-access-article-fee",
       "name": "Open Access Article Fee",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Open_access",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One semester of public university tuition for in state students is commonly at this level excluding housing. Fees and textbooks add to the total. Scholarships and aid shift the net cost dramatically for many. The number is a sticker price before grants.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "University Tuition (Semester)",
@@ -1268,6 +1341,8 @@
       "id": "obs:costs:scenario-costs-university-tuition-semester",
       "name": "University Tuition (Semester)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tuition_payments",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An entry level motorcycle begins around $8000 before fees, while used learner bikes can be $3000 to $5000. Gear and insurance add $1000 to $2000 in the first year. Displacement and brand move the base dramatically. This figure is for a small street legal commuter.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Motorcycle",
@@ -1319,6 +1395,8 @@
       "id": "obs:costs:scenario-costs-motorcycle",
       "name": "Motorcycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motorcycle",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A high quality violin suitable for conservatory students often costs this much. Handmade instruments by famous luthiers are far higher. Maintenance and bows add meaningful ongoing cost. The number marks an upper student tier, not a professional Stradivari.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Violin (Student High End)",
@@ -1370,6 +1449,8 @@
       "id": "obs:costs:scenario-costs-violin-student-high-end",
       "name": "Violin (Student High End)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Violin",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A compact car lists near $25000 new, but the monthly payment hinges on interest rate and term. Depreciation alone can remove $3000 to $5000 in the first year. Option packages add $2000 to $5000 quickly. This value is a base model before destination and fees.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Car",
@@ -1421,6 +1503,8 @@
       "id": "obs:costs:scenario-costs-car",
       "name": "Car",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Automobile",
       "source_count": 2,
       "sources": [
@@ -1459,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Opening a small business often requires about $50000 to cover permits, a lease deposit, equipment, and 6 months of losses. Frugal founders can start with $10000 but grow slower and risk more downtime. A sound plan budgets 10 percent for mistakes and marketing. This is a planning round number, not advice.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Small Business",
@@ -1472,6 +1557,8 @@
       "id": "obs:costs:scenario-costs-small-business",
       "name": "Small Business",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Small_business",
       "source_count": 2,
       "sources": [
@@ -1510,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Entry luxury cars begin around $100000, while hand built and exotic models run into millions. Annual maintenance and tires can total $2000 to $5000 even for modest use. Buyers pay for engineering, materials, and a story. This number marks the low end of the segment.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Luxury Car",
@@ -1523,6 +1611,8 @@
       "id": "obs:costs:scenario-costs-luxury-car",
       "name": "Luxury Car",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Luxury_car",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A sit down restaurant buildout typically requires about $200000 before the first entree is sold. Ventilation, grease traps, and code compliance alone can exceed $50000. Payroll starts weeks early to train staff, burning runway quickly. This number reflects a mid market dining room.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Restaurant",
@@ -1574,6 +1665,8 @@
       "id": "obs:costs:scenario-costs-restaurant",
       "name": "Restaurant",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Restaurant",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A median detached house at $300000 becomes $1600 to $2200 per month at common mortgage rates before taxes and insurance. In dense cities, land and permits outweigh lumber and labor. Closing costs of $5000 to $15000 arrive before the first night. This figure gives an order of magnitude.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "House",
@@ -1625,6 +1719,8 @@
       "id": "obs:costs:scenario-costs-house",
       "name": "House",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/House",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1759,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mansions in premium locations often cost $5000000 and climb to $50000000 for trophy properties. Heating, insurance, and gardening staff can exceed $100000 per year. Renovations rarely return dollar for dollar at this tier. This value labels a high end residence, not a median.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Mansion",
@@ -1676,6 +1773,8 @@
       "id": "obs:costs:scenario-costs-mansion",
       "name": "Mansion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mansion",
       "source_count": 2,
       "sources": [
@@ -1714,6 +1813,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mid rise office building construction budget can easily run to ten million dollars excluding land. Mechanical systems, elevators, and code compliance dominate complexity. Financing costs accrue during long build schedules. The figure is for a modest footprint in a regional city.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Office Building",
@@ -1727,6 +1827,8 @@
       "id": "obs:costs:scenario-costs-office-building",
       "name": "Office Building",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Office_building",
       "source_count": 2,
       "sources": [
@@ -1765,6 +1867,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A highway bridge project spans from tens to hundreds of millions depending on length and geology. Traffic detours and environmental mitigation are part of the price. Long lived assets like this amortize costs over decades of use. The number is a round figure for a medium span bridge.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Bridge",
@@ -1778,6 +1881,8 @@
       "id": "obs:costs:scenario-costs-bridge",
       "name": "Bridge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bridge",
       "source_count": 2,
       "sources": [
@@ -1816,6 +1921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Building a major international airport terminal complex costs around a billion dollars or more. Airside infrastructure and security drive unique requirements. Construction phases keep operations running while expanding capacity. The value is emblematic of national scale projects.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Airport",
@@ -1829,6 +1935,8 @@
       "id": "obs:costs:scenario-costs-airport",
       "name": "Airport",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Airport",
       "source_count": 2,
       "sources": [
@@ -1867,6 +1975,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The International Space Station total program cost is on the order of hundreds of billions spread across countries and decades. This includes modules, launches, operations, and resupply. Science access is precious because launch capacity is scarce. The figure gives perspective on sustained space infrastructure.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Space Station",
@@ -1880,6 +1989,8 @@
       "id": "obs:costs:scenario-costs-space-station",
       "name": "Space Station",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/International_Space_Station",
       "source_count": 2,
       "sources": [
@@ -1918,6 +2029,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The wealth of the richest person on Earth fluctuates by billions per day with stock prices. It is net worth on paper, not spendable cash, yet it can fund entire industries. The number changes quickly but anchors public imagination about scale. The value is a representative recent peak.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Richest Person (current)",
@@ -1931,6 +2043,8 @@
       "id": "obs:costs:scenario-costs-richest-person-current",
       "name": "Richest Person (current)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/List_of_wealthiest_people",
       "source_count": 2,
       "sources": [
@@ -1969,6 +2083,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The richest private fortunes in history, adjusted to todays dollars, cluster in the low hundreds of billions for industrial magnates like Rockefeller. Pre modern rulers controlled state treasuries rather than personal wealth, complicating comparisons. The point is order of magnitude, not precise ranking. The value reflects a conservative adjusted estimate for a historical peak fortune.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Richest Person (historical, adjusted)",
@@ -1982,6 +2097,8 @@
       "id": "obs:costs:scenario-costs-richest-person-historical-adjusted",
       "name": "Richest Person (historical, adjusted)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/John_D._Rockefeller",
       "source_count": 2,
       "sources": [
@@ -2020,6 +2137,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The annual military budget of a large country can reach hundreds of billions of dollars. Personnel, equipment procurement, and maintenance dominate recurring expenses. Year to year changes track policy and macroeconomics. The value labels the United States case as an example.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "US Military Budget (Annual)",
@@ -2033,6 +2151,8 @@
       "id": "obs:costs:scenario-costs-us-military-budget-annual",
       "name": "US Military Budget (Annual)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Military_budget_of_the_United_States",
       "source_count": 2,
       "sources": [
@@ -2071,6 +2191,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The gross domestic product of the United States per year sums to tens of trillions of dollars. It aggregates consumption, investment, government spending, and net exports. Revisions and price deflators adjust these totals after initial release. The number is a recent magnitude for context.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "US GDP (Annual)",
@@ -2084,6 +2205,8 @@
       "id": "obs:costs:scenario-costs-us-gdp-annual",
       "name": "US GDP (Annual)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Economy_of_the_United_States",
       "source_count": 2,
       "sources": [
@@ -2122,6 +2245,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The world economy generates on the order of one hundred trillion dollars per year across all nations. Exchange rates and purchasing power parity complicate cross country comparison. Growth rates compound to double totals within decades. The figure is a rounded scale for global activity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Global GDP (Annual)",
@@ -2135,6 +2259,8 @@
       "id": "obs:costs:scenario-costs-global-gdp-annual",
       "name": "Global GDP (Annual)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/World_economy",
       "source_count": 2,
       "sources": [
@@ -2173,6 +2299,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Attempts to value Earth price the annual flow of ecosystem services like pollination, water purification, and climate regulation. Estimates land near a hundred trillion dollars per year for services alone, without pricing the irreplaceable stock. The exercise is a guide to stewardship, not a for sale sign. The value here reflects an annual services benchmark.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Estimated Earth Value (annual ecosystem services)",
@@ -2186,6 +2313,8 @@
       "id": "obs:costs:scenario-costs-estimated-earth-value-annual-ecosystem-services",
       "name": "Estimated Earth Value (annual ecosystem services)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ecosystem_services",
       "source_count": 2,
       "sources": [
@@ -2224,6 +2353,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The top one percent by wealth collectively holds nearly half of global household wealth, a concentration that shapes policy and markets. Their net worth moves mainly with asset prices rather than wages. This is not income but accumulated stock. The value assumes a forty five percent share of global wealth.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Wealth of Top 1 percent",
@@ -2237,6 +2367,8 @@
       "id": "obs:costs:scenario-costs-wealth-of-top-1-percent",
       "name": "Wealth of Top 1 percent",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Distribution_of_wealth",
       "source_count": 2,
       "sources": [
@@ -2275,6 +2407,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The bottom ninety nine percent together hold the remaining share of household wealth, which is still a vast sum. Housing and pensions drive much of this number rather than cash. Debates about fairness often anchor to this partition. The value complements the top one percent figure.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Wealth of Bottom 99 percent",
@@ -2288,6 +2421,8 @@
       "id": "obs:costs:scenario-costs-wealth-of-bottom-99-percent",
       "name": "Wealth of Bottom 99 percent",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Distribution_of_wealth",
       "source_count": 2,
       "sources": [
@@ -2326,6 +2461,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The total value of residential and commercial real estate worldwide is in the low hundreds of trillions of dollars. Interest rates and urbanization shift this stock value by tens of trillions without a brick moving. For households, this asset class dominates net worth. The value is a rounded composite estimate for perspective.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Global Real Estate Value",
@@ -2339,6 +2475,8 @@
       "id": "obs:costs:scenario-costs-global-real-estate-value",
       "name": "Global Real Estate Value",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Real_estate_economics",
       "source_count": 2,
       "sources": [
@@ -2377,6 +2515,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Global household net wealth sums property and financial assets minus debts across all adults. Unlike GDP, which is a yearly flow, wealth is a stock that can rise or fall with markets overnight. Small percentage changes here move trillions on paper. The value is a representative recent magnitude.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Global Household Wealth (Net)",
@@ -2390,6 +2529,8 @@
       "id": "obs:costs:scenario-costs-global-household-wealth-net",
       "name": "Global Household Wealth (Net)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Household_financial_assets",
       "source_count": 2,
       "sources": [
@@ -2428,6 +2569,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Summing gross financial and real assets across everyone on Earth gives a total in the high hundreds of trillions. Debts subtract to yield net wealth, but the gross base shows how much is at work in markets. This stock is the backdrop for savings and risk taking. The value is a rounded gross assets figure.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/costs.yaml",
         "legacy_item_name": "Total Assets of Everyone (gross)",
@@ -2441,6 +2583,8 @@
       "id": "obs:costs:scenario-costs-total-assets-of-everyone-gross",
       "name": "Total Assets of Everyone (gross)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Global_financial_system",
       "source_count": 2,
       "sources": [

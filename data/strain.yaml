@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: LIGO strain sensitivity
     ingest_source: dataset/raw/curated/strain.json
@@ -88,6 +91,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Atomic thermal vibration scale
     ingest_source: dataset/raw/curated/strain.json
@@ -133,6 +139,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth tide strain
     ingest_source: dataset/raw/curated/strain.json
@@ -178,6 +187,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Structural-health microstrain
     ingest_source: dataset/raw/curated/strain.json
@@ -224,6 +236,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Microstrain
     ingest_source: dataset/raw/curated/strain.json
@@ -270,6 +285,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Crustal tectonic strain accumulation
     ingest_source: dataset/raw/curated/strain.json
@@ -315,6 +333,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Crustal strain
     ingest_source: dataset/raw/curated/strain.json
@@ -361,6 +382,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bridge thermal expansion
     ingest_source: dataset/raw/curated/strain.json
@@ -407,6 +431,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel thermal expansion over 100 K
     ingest_source: dataset/raw/curated/strain.json
@@ -452,6 +479,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel yield strain
     ingest_source: dataset/raw/curated/strain.json
@@ -497,6 +527,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel elastic strain
     ingest_source: dataset/raw/curated/strain.json
@@ -543,6 +576,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concrete compressive failure
     ingest_source: dataset/raw/curated/strain.json
@@ -588,6 +624,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aluminum yield strain
     ingest_source: dataset/raw/curated/strain.json
@@ -633,6 +672,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Paper stretch
     ingest_source: dataset/raw/curated/strain.json
@@ -679,6 +721,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tendon strain
     ingest_source: dataset/raw/curated/strain.json
@@ -725,6 +770,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human tendon failure strain
     ingest_source: dataset/raw/curated/strain.json
@@ -770,6 +818,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human skin stretch
     ingest_source: dataset/raw/curated/strain.json
@@ -816,6 +867,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Stretch fabric
     ingest_source: dataset/raw/curated/strain.json
@@ -861,6 +915,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rubber band extension
     ingest_source: dataset/raw/curated/strain.json
@@ -906,6 +963,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rubber band stretch
     ingest_source: dataset/raw/curated/strain.json
@@ -952,6 +1012,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silicone elastomer
     ingest_source: dataset/raw/curated/strain.json
@@ -998,6 +1061,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Balloon inflation
     ingest_source: dataset/raw/curated/strain.json

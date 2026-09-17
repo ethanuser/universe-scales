@@ -49,6 +49,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Microarcsecond
     ingest_source: dataset/raw/curated/angle.json
@@ -95,6 +98,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milliarcsecond
     ingest_source: dataset/raw/curated/angle.json
@@ -141,6 +147,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hubble pointing stability
     ingest_source: dataset/raw/curated/angle.json
@@ -187,6 +196,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Arcsecond
     ingest_source: dataset/raw/curated/angle.json
@@ -233,6 +245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Arcminute
     ingest_source: dataset/raw/curated/angle.json
@@ -279,6 +294,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human visual acuity
     ingest_source: dataset/raw/curated/angle.json
@@ -325,6 +343,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon angular diameter
     ingest_source: dataset/raw/curated/angle.json
@@ -371,6 +392,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun angular diameter
     ingest_source: dataset/raw/curated/angle.json
@@ -417,6 +441,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jupiter axial tilt
     ingest_source: dataset/raw/curated/angle.json
@@ -463,6 +490,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Highway grade of 6 percent
     ingest_source: dataset/raw/curated/angle.json
@@ -509,6 +539,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: ADA wheelchair ramp maximum slope angle
     ingest_source: dataset/raw/curated/angle.json
@@ -555,6 +588,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Baseball launch angle
     ingest_source: dataset/raw/curated/angle.json
@@ -601,6 +637,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth axial tilt
     ingest_source: dataset/raw/curated/angle.json
@@ -647,6 +686,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mars axial tilt
     ingest_source: dataset/raw/curated/angle.json
@@ -693,6 +735,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: DNA helix twist per base pair
     ingest_source: dataset/raw/curated/angle.json
@@ -739,6 +784,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wing sweep of a jetliner
     ingest_source: dataset/raw/curated/angle.json
@@ -785,6 +833,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Great Pyramid face angle
     ingest_source: dataset/raw/curated/angle.json
@@ -831,6 +882,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: GPS orbital inclination
     ingest_source: dataset/raw/curated/angle.json
@@ -877,6 +931,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Equilateral triangle interior angle
     ingest_source: dataset/raw/curated/angle.json
@@ -923,6 +980,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Right angle
     ingest_source: dataset/raw/curated/angle.json
@@ -969,6 +1029,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Uranus axial tilt
     ingest_source: dataset/raw/curated/angle.json
@@ -1015,6 +1078,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water bond angle
     ingest_source: dataset/raw/curated/angle.json
@@ -1061,6 +1127,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Regular pentagon interior angle
     ingest_source: dataset/raw/curated/angle.json
@@ -1107,6 +1176,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Methane tetrahedral bond angle
     ingest_source: dataset/raw/curated/angle.json
@@ -1153,6 +1225,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Graphene bond angle
     ingest_source: dataset/raw/curated/angle.json
@@ -1199,6 +1274,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Regular hexagon interior angle
     ingest_source: dataset/raw/curated/angle.json
@@ -1245,6 +1323,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Laptop lid open position
     ingest_source: dataset/raw/curated/angle.json
@@ -1291,6 +1372,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Straight angle
     ingest_source: dataset/raw/curated/angle.json
@@ -1337,6 +1421,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Full turn
     ingest_source: dataset/raw/curated/angle.json

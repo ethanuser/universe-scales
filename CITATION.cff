@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use Universe Scales, please cite it."
+title: "Universe Scales"
+type: software
+authors:
+  - family-names: "Nguyen"
+    given-names: "Ethan"
+abstract: "An open dataset and interactive visualization framework for logarithmic scale intuition across physical, informational, social, and biological quantities."
+repository-code: "https://github.com/ethannguyenuser/universe-scales"
+url: "https://ethannguyenuser.github.io/universe-scales/"
+date-released: "2026-04-29"
+license: "MIT"

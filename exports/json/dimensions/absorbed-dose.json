@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Security imaging sits at the extreme low end of absorbed dose.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Airport backscatter scan",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -48,6 +49,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-airport-backscatter-scan",
       "name": "Airport backscatter scan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Backscatter_X-ray",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One of the smallest routine medical absorbed-dose examples.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dental X-ray",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -103,6 +107,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-dental-x-ray",
       "name": "Dental X-ray",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dental_radiography",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A plain radiograph is still far below CT or therapy.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chest X-ray",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -158,6 +165,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-chest-x-ray",
       "name": "Chest X-ray",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chest_radiograph",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small but nontrivial screening dose.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mammogram",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -213,6 +223,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-mammogram",
       "name": "Mammogram",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mammography",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "CT quickly moves beyond ordinary X-rays.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Head CT scan",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -268,6 +281,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-head-ct-scan",
       "name": "Head CT scan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Computed_tomography",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Background radiation makes a useful low-dose yearly anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Natural background in one year",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -323,6 +339,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-natural-background-in-one-year",
       "name": "Natural background in one year",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Background_radiation",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A stronger CT study enters the centigray neighborhood.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Abdominal CT scan",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -378,6 +397,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-abdominal-ct-scan",
       "name": "Abdominal CT scan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Computed_tomography",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Procedural medicine can accumulate noticeable dose.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Long fluoroscopy-guided procedure",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -433,6 +455,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-long-fluoroscopy-guided-procedure",
       "name": "Long fluoroscopy-guided procedure",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fluoroscopy",
       "source_count": 2,
       "sources": [
@@ -471,6 +495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Historical accident exposures anchor the intermediate range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chernobyl cleanup worker exposure",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -487,6 +512,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-chernobyl-cleanup-worker-exposure",
       "name": "Chernobyl cleanup worker exposure",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chernobyl_disaster",
       "source_count": 2,
       "sources": [
@@ -525,6 +552,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Industrial irradiation overlaps with medical intermediate doses.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Food irradiation low end",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -541,6 +569,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-food-irradiation-low-end",
       "name": "Food irradiation low end",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Food_irradiation",
       "source_count": 2,
       "sources": [
@@ -579,6 +609,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The one-gray scale matters clinically.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Acute radiation syndrome threshold",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -595,6 +626,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-acute-radiation-syndrome-threshold",
       "name": "Acute radiation syndrome threshold",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Acute_radiation_syndrome",
       "source_count": 2,
       "sources": [
@@ -633,6 +666,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Radiotherapy deliberately lives in the gray range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Radiotherapy fraction",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -649,6 +683,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-radiotherapy-fraction",
       "name": "Radiotherapy fraction",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Radiation_therapy",
       "source_count": 2,
       "sources": [
@@ -687,6 +723,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A few gray is life-threatening at whole-body scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Whole-body LD50 without treatment",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -703,6 +740,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-whole-body-ld50-without-treatment",
       "name": "Whole-body LD50 without treatment",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Radiation_poisoning",
       "source_count": 2,
       "sources": [
@@ -741,6 +780,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Localized tissue damage appears in the multi-gray regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Skin erythema threshold",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -757,6 +797,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-skin-erythema-threshold",
       "name": "Skin erythema threshold",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Radiation_burn",
       "source_count": 2,
       "sources": [
@@ -795,6 +837,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Catastrophic acute exposure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Severe acute whole-body accident dose",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -811,6 +854,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-severe-acute-whole-body-accident-dose",
       "name": "Severe acute whole-body accident dose",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Radiation_poisoning",
       "source_count": 2,
       "sources": [
@@ -849,6 +894,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Extreme accident cases show how quickly the scale becomes unsurvivable.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chernobyl firefighter extreme dose",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -865,6 +911,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-chernobyl-firefighter-extreme-dose",
       "name": "Chernobyl firefighter extreme dose",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Deaths_due_to_the_Chernobyl_disaster",
       "source_count": 2,
       "sources": [
@@ -903,6 +951,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Biotechnology can use doses utterly unlike diagnostic medicine.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sterile insect technique dose",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -919,6 +968,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-sterile-insect-technique-dose",
       "name": "Sterile insect technique dose",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sterile_insect_technique",
       "source_count": 2,
       "sources": [
@@ -957,6 +1008,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Industrial sterilization lives orders of magnitude above medicine.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Food irradiation sterilization",
         "ingest_source": "dataset/raw/curated/absorbed-dose.json",
@@ -974,6 +1026,8 @@
       "id": "obs:absorbed-dose:scenario-absorbed-dose-food-irradiation-sterilization",
       "name": "Food irradiation sterilization",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Food_irradiation",
       "source_count": 2,
       "sources": [

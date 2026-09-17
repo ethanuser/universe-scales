@@ -53,6 +53,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: CDC 6600
     ingest_source: dataset/raw/curated/flops.json
@@ -98,6 +101,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cray-1
     ingest_source: dataset/raw/curated/flops.json
@@ -143,6 +149,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Deep Blue
     ingest_source: dataset/raw/curated/flops.json
@@ -189,6 +198,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A Raspberry Pi 4
     ingest_source: dataset/raw/curated/flops.json
@@ -235,6 +247,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: An Intel Core i9 CPU core
     ingest_source: dataset/raw/curated/flops.json
@@ -282,6 +297,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 70B-parameter LLM single-token inference
     ingest_source: dataset/raw/curated/flops.json
@@ -328,6 +346,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: PlayStation 3 Cell processor
     ingest_source: dataset/raw/curated/flops.json
@@ -374,6 +395,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: PlayStation 3 Cell processor
     ingest_source: dataset/raw/curated/flops.json
@@ -419,6 +443,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: IBM Blue Gene/L
     ingest_source: dataset/raw/curated/flops.json
@@ -464,6 +491,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: An Apple M2 GPU
     ingest_source: dataset/raw/curated/flops.json
@@ -510,6 +540,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A PlayStation 5 GPU
     ingest_source: dataset/raw/curated/flops.json
@@ -556,6 +589,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Apple M1 Max
     ingest_source: dataset/raw/curated/flops.json
@@ -601,6 +637,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 70B-parameter LLM 100-token response
     ingest_source: dataset/raw/curated/flops.json
@@ -647,6 +686,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: An NVIDIA A100
     ingest_source: dataset/raw/curated/flops.json
@@ -693,6 +735,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: NVIDIA GeForce RTX 3090
     ingest_source: dataset/raw/curated/flops.json
@@ -739,6 +784,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: NVIDIA RTX 3090
     ingest_source: dataset/raw/curated/flops.json
@@ -784,6 +832,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: An NVIDIA H100
     ingest_source: dataset/raw/curated/flops.json
@@ -830,6 +881,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: AMD Radeon RX 7900 XTX
     ingest_source: dataset/raw/curated/flops.json
@@ -875,6 +929,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: An NVIDIA RTX 4090
     ingest_source: dataset/raw/curated/flops.json
@@ -921,6 +978,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: AMD MI300X
     ingest_source: dataset/raw/curated/flops.json
@@ -966,6 +1026,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: AWS Trainium
     ingest_source: dataset/raw/curated/flops.json
@@ -1011,6 +1074,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Google TPU v4
     ingest_source: dataset/raw/curated/flops.json
@@ -1056,6 +1122,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: IBM Blue Gene/L
     ingest_source: dataset/raw/curated/flops.json
@@ -1102,6 +1171,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Google TPU v3
     ingest_source: dataset/raw/curated/flops.json
@@ -1147,6 +1219,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tianhe-2
     ingest_source: dataset/raw/curated/flops.json
@@ -1192,6 +1267,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tianhe-2
     ingest_source: dataset/raw/curated/flops.json
@@ -1238,6 +1316,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 1024 H100 training cluster throughput
     ingest_source: dataset/raw/curated/flops.json
@@ -1284,6 +1365,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cerebras Wafer Scale Engine 2
     ingest_source: dataset/raw/curated/flops.json
@@ -1329,6 +1413,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Summit
     ingest_source: dataset/raw/curated/flops.json
@@ -1375,6 +1462,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fugaku
     ingest_source: dataset/raw/curated/flops.json
@@ -1421,6 +1511,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Frontier
     ingest_source: dataset/raw/curated/flops.json
@@ -1467,6 +1560,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A future zettaflop-class machine
     ingest_source: dataset/raw/curated/flops.json
@@ -1513,6 +1609,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: GPT-3 training run estimate
     ingest_source: dataset/raw/curated/flops.json

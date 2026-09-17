@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "sha256": "a3c0f71eeacd284a81666d622e115bccad2f232b128fd5e99dc5aff54e45062e",
+      "bytes": 315660,
+      "pinned": false,
+      "local_path": "licenses/nasa-media-guidelines.html"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/README.md",
+      "sha256": "2e86b56d48a27803fa32f6fe66d252746c92a875865af162b3a0941435199a12",
+      "bytes": 2396,
+      "pinned": false,
+      "local_path": "licenses/nasa-3d-resources.README.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/LICENSES/CC-BY-4.0.txt",
+      "sha256": "c8041334a99cb48852b2139253cbde5f8ac87e27f124aed51223e0d5bf0080eb",
+      "bytes": 13034,
+      "pinned": false,
+      "local_path": "licenses/CC-BY-4.0.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/LICENSES/CC0-1.0.txt",
+      "sha256": "a43fc2004d1e073f1107a1f6146664d08dae6cea93cb828742a4bec6da828e91",
+      "bytes": 6533,
+      "pinned": false,
+      "local_path": "licenses/CC0-1.0.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/README.md",
+      "sha256": "fdac90fe042c2cbd4f4e988a473990f249da8466bae57746f871dbd5eeac8de7",
+      "bytes": 883,
+      "pinned": false,
+      "local_path": "licenses/rigged-human.README.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/metadata.json",
+      "sha256": "9ee417e4a2fd3710e3584abf96dfc7e6e6b770a7dc256c9b3cb994bda6584f1a",
+      "bytes": 618,
+      "pinned": false,
+      "local_path": "licenses/rigged-human.metadata.json"
+    },
+    {
+      "url": "https://polyhaven.com/license",
+      "sha256": "f530abb18e6317a9b0f2a128b94150e372c8456d7491a14e4860c4ed5f5fe69a",
+      "bytes": 72336,
+      "pinned": false,
+      "local_path": "licenses/polyhaven-license.html"
+    },
+    {
+      "url": "https://api.polyhaven.com/info/wine_bottles_01",
+      "sha256": "1862205fabc1213db999d015b38cbec9dc3d30701a4252d4df58c326521135d2",
+      "bytes": 1016,
+      "pinned": false,
+      "local_path": "sources/wine-bottles-info.json"
+    },
+    {
+      "url": "https://api.polyhaven.com/files/wine_bottles_01",
+      "sha256": "af51e5b4532e454f4a404faa5a2bf93aacd19eef7f71c37d9cea4987ecf8baff",
+      "bytes": 152449,
+      "pinned": false,
+      "local_path": "sources/wine-bottles-files.json"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/earth-3d-model/",
+      "sha256": "1d0022d9bf2db5af8d6f5234a68a980102deb6e0208f5bbf69972193a0d049a2",
+      "bytes": 252541,
+      "pinned": false,
+      "local_path": "sources/nasa-earth.html"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/jupiter-3d-model/",
+      "sha256": "4e699fe9125306df8c9c1cb541b6ef77b21a950b2b117e8aac4158e4cbdd78c8",
+      "bytes": 252568,
+      "pinned": false,
+      "local_path": "sources/nasa-jupiter.html"
+    },
+    {
+      "url": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/",
+      "sha256": "05299cf1e275d5d6ee2ccf566f8642ebf0c1a7fe31300d8abc95529bfeea61dd",
+      "bytes": 254627,
+      "pinned": false,
+      "local_path": "sources/nasa-sun.html"
+    },
+    {
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Earth_1_12756.glb",
+      "sha256": "05a5aea99db8ab472487a06debc3b5d0b2cae7636a1a6b9ecfa40b7d1722ba23",
+      "bytes": 12916400,
+      "pinned": true
+    },
+    {
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Moon_1_3474.glb",
+      "sha256": "810baf23a81d10f5ba58a13c505dd6634b930ce46d2eabf99504d9bd059b3c90",
+      "bytes": 3276576,
+      "pinned": true
+    },
+    {
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/j/Jupiter_1_142984.glb",
+      "sha256": "8edc4e9b88b73ca1b125a258f0ecaef7fc6494a7cadda37704af459a119f4870",
+      "bytes": 11479456,
+      "pinned": true
+    },
+    {
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/s/Sun_1_1391000.glb",
+      "sha256": "a178f5c43c2c9a6ee6c011c315149a7ab5a2594fd5aa9119ee219625a18da1dd",
+      "bytes": 4343656,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wine_bottles_01/wine_bottles_01_1k.gltf",
+      "sha256": "70a8a5eabeac24cf298774aca78bbcf39145ca6bf5ebdf2f296edab73fbce039",
+      "bytes": 29107,
+      "pinned": true,
+      "local_path": "sources/wine-bottles.gltf"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wine_bottles_01/wine_bottles_01.bin",
+      "sha256": "a520b717c7f9d15b7f114d1be5f454f18b2cfd056757fb4d4c5f5054de5db6d6",
+      "bytes": 688000,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wine_bottles_01/wine_bottles_01_nor_gl_1k.jpg",
+      "sha256": "ed92387b827b7aebf4602e655c8e9cbaf53bbed24b7228106b04b3456e2d779c",
+      "bytes": 194721,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wine_bottles_01/wine_bottles_01_diff_1k.jpg",
+      "sha256": "f440b6364c87eb440c9ca201759cfdaf2735e3147488eadc24be334f1e457a09",
+      "bytes": 110230,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wine_bottles_01/wine_bottles_01_arm_1k.jpg",
+      "sha256": "c3deadf0db4c9c98ad39f389e95fe2b09d8df0e3abb95a47f01478f31fd261a9",
+      "bytes": 464325,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wine_bottles_01/wine_bottles_01_paper_nor_gl_1k.jpg",
+      "sha256": "b05b6f021b942032d45f23e46066da715c4f9624acea7d8db77928a90076a049",
+      "bytes": 980529,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wine_bottles_01/wine_bottles_01_label_ftero_vinea_01_diff_1k.jpg",
+      "sha256": "3d1f02a201c8d573b155b2ea2265b31bf1d532e4c9a7baf2dfe54e2633e5e9c0",
+      "bytes": 323568,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wine_bottles_01/wine_bottles_01_label_ftero_vinea_01_arm_1k.jpg",
+      "sha256": "5808aed6b27b1812bbead8c6d733d412c1ed56adf587770dedf5f5e9d2e5310f",
+      "bytes": 214807,
+      "pinned": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/glTF-Binary/RiggedFigure.glb",
+      "sha256": "d6be85417d3e256861ee733eea6916093a7af7c79c16366181fd8abcaeb38cf5",
+      "bytes": 50116,
+      "pinned": true
+    },
+    {
+      "url": "https://kenney.nl/assets/food-kit",
+      "sha256": "6ea53d94e0807b7ad911af79d1aeed2da55f4556c6aad3bed74be2a42a734826",
+      "bytes": 16920,
+      "pinned": false,
+      "local_path": "sources/soda-can.html"
+    },
+    {
+      "url": "https://poly.pizza/m/qKICY6xla2",
+      "sha256": "447c766632ec3ba7d05ed8b3a6f458ae12e2ad43050e9a264cbacbb8e2064545",
+      "bytes": 111621,
+      "pinned": false,
+      "local_path": "sources/cat.html"
+    },
+    {
+      "url": "https://polyhaven.com/a/ceiling_fan",
+      "sha256": "073d01569853db06f0304198b0beeac9e8b93b004b09ac3131c1b614592afe3c",
+      "bytes": 204999,
+      "pinned": false,
+      "local_path": "sources/ceiling-fan.html"
+    },
+    {
+      "url": "https://api.polyhaven.com/info/ceiling_fan",
+      "sha256": "ac4936b85b6164aea9face15b3a556680573c936b20930ff074160f3bc670acf",
+      "bytes": 1018,
+      "pinned": false,
+      "local_path": "sources/ceiling-fan-info.json"
+    },
+    {
+      "url": "https://api.polyhaven.com/files/ceiling_fan",
+      "sha256": "55139985488035f55acce3567788b1cb07b86ae663fb340799c46d81b56bd042",
+      "bytes": 29374,
+      "pinned": false,
+      "local_path": "sources/ceiling-fan-files.json"
+    },
+    {
+      "url": "https://quaternius.com/packs/ultimateanimatedanimals.html",
+      "sha256": "cff83a95676549b244a26626a77e630d9ac8d95b0348f5e2e2c53ca821af4391",
+      "bytes": 15479,
+      "pinned": false,
+      "local_path": "licenses/quaternius-animals.html"
+    },
+    {
+      "url": "https://kenney.nl/media/pages/assets/food-kit/83086fa91c-1719418518/kenney_food-kit.zip",
+      "sha256": "cdad90853682499b94c9fda2f87678b24bfd8f3264e0ed323f6b6a27fd7c6f6f",
+      "bytes": 4606270,
+      "pinned": true
+    },
+    {
+      "url": "https://static.poly.pizza/67f5e3fe-37ee-4c86-95c8-d269d8c9f8ba.glb",
+      "sha256": "842c5f96c480b9a7800994345ed83be5e9ba5fc8e18be633f2b7cfe09cf8fef7",
+      "bytes": 238672,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/ceiling_fan/ceiling_fan_1k.gltf",
+      "sha256": "be84d4ce1cbbbee21c5f588d5dfde41297f4ecbddedbb0f05e5cb01ddb8ede1b",
+      "bytes": 4777,
+      "pinned": true,
+      "local_path": "sources/ceiling-fan.gltf"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/ceiling_fan/ceiling_fan.bin",
+      "sha256": "06ad4d0cfc71b92e3a8c3fb6540b58ad41c389bb7baae82f9fa21a9286040b28",
+      "bytes": 455032,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceiling_fan/ceiling_fan_emissive_1k.jpg",
+      "sha256": "460d12108893202bfa8261dcfcf521e1bf5063ff12b189939f34b5e1032a3ede",
+      "bytes": 36867,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceiling_fan/ceiling_fan_spec_1k.jpg",
+      "sha256": "a8ab87ed40265af3ea4cdd3b941251fef0912cf48cb490db93ba7c653e520b1f",
+      "bytes": 26647,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceiling_fan/ceiling_fan_nor_gl_1k.jpg",
+      "sha256": "debd38190fdcd65687c5b3752a4f7ba5db30d1e1ac4d59afc05c3f0c93d27c1f",
+      "bytes": 390818,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceiling_fan/ceiling_fan_diff_1k.jpg",
+      "sha256": "a9fb7032da0ce9fac50de7fe02ca2644ae3d925a5e4a73f006fb4902fd5db27b",
+      "bytes": 392243,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceiling_fan/ceiling_fan_arm_1k.jpg",
+      "sha256": "af123055dc185abd34342cfe58df87cc1bf61144831157181c9af03c542339c5",
+      "bytes": 566114,
+      "pinned": true
+    }
+  ],
+  "local_files": [
+    {
+      "path": "licenses/CC0-1.0.txt",
+      "sha256": "a43fc2004d1e073f1107a1f6146664d08dae6cea93cb828742a4bec6da828e91",
+      "bytes": 6533
+    },
+    {
+      "path": "licenses/polyhaven-license.html",
+      "sha256": "f530abb18e6317a9b0f2a128b94150e372c8456d7491a14e4860c4ed5f5fe69a",
+      "bytes": 72336
+    },
+    {
+      "path": "sources/coffee-mug.html",
+      "sha256": "6ea53d94e0807b7ad911af79d1aeed2da55f4556c6aad3bed74be2a42a734826",
+      "bytes": 16920
+    },
+    {
+      "path": "sources/soda-can.html",
+      "sha256": "6ea53d94e0807b7ad911af79d1aeed2da55f4556c6aad3bed74be2a42a734826",
+      "bytes": 16920
+    },
+    {
+      "path": "sources/cat.html",
+      "sha256": "447c766632ec3ba7d05ed8b3a6f458ae12e2ad43050e9a264cbacbb8e2064545",
+      "bytes": 111621
+    },
+    {
+      "path": "sources/ceiling-fan.html",
+      "sha256": "073d01569853db06f0304198b0beeac9e8b93b004b09ac3131c1b614592afe3c",
+      "bytes": 204999
+    },
+    {
+      "path": "sources/ceiling-fan-info.json",
+      "sha256": "ac4936b85b6164aea9face15b3a556680573c936b20930ff074160f3bc670acf",
+      "bytes": 1018
+    },
+    {
+      "path": "sources/ceiling-fan-files.json",
+      "sha256": "55139985488035f55acce3567788b1cb07b86ae663fb340799c46d81b56bd042",
+      "bytes": 29374
+    },
+    {
+      "path": "licenses/quaternius-animals.html",
+      "sha256": "cff83a95676549b244a26626a77e630d9ac8d95b0348f5e2e2c53ca821af4391",
+      "bytes": 15479
+    },
+    {
+      "path": "licenses/kenney-food-kit.txt",
+      "sha256": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f",
+      "bytes": 711
+    },
+    {
+      "path": "sources/coffee-mug-preview.png",
+      "sha256": "10af7dd2324ac566a0a14caf32675e4bda32d54fe4f3c72d7944794cf33ead29",
+      "bytes": 2218
+    },
+    {
+      "path": "sources/soda-can-preview.png",
+      "sha256": "0241e11d4b1a978da233c0111aebea864603f29c540dffe66e374d1097682978",
+      "bytes": 1624
+    },
+    {
+      "path": "sources/ceiling-fan.gltf",
+      "sha256": "be84d4ce1cbbbee21c5f588d5dfde41297f4ecbddedbb0f05e5cb01ddb8ede1b",
+      "bytes": 4777
+    }
+  ]
+}

@@ -61,6 +61,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Continental Drift
@@ -103,6 +106,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Plant Growth
@@ -145,6 +151,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Glacier Movement
@@ -187,6 +196,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Snail
@@ -229,6 +241,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Human Crawl
@@ -271,6 +286,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Human Walking
@@ -313,6 +331,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Marathon Pace (4 h)
@@ -355,6 +376,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Elevator Car
@@ -397,6 +421,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Bicycle
@@ -439,6 +466,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Human Running
@@ -481,6 +511,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Honeybee Flight
@@ -523,6 +556,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Raindrop Terminal Velocity
@@ -565,6 +601,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Olympic Sprinter Peak
@@ -607,6 +646,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Car (City)
@@ -649,6 +691,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Racehorse Gallop
@@ -691,6 +736,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Cheetah
@@ -733,6 +781,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Car (Highway)
@@ -775,6 +826,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Fastball
@@ -817,6 +871,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Tennis Serve
@@ -859,6 +916,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: High-Speed Train
@@ -901,6 +961,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Peregrine Falcon
@@ -943,6 +1006,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Formula 1 Car
@@ -985,6 +1051,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Commercial Jet
@@ -1027,6 +1096,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Sound in Air
@@ -1069,6 +1141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Concorde
@@ -1111,6 +1186,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Rifle Bullet
@@ -1153,6 +1231,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: SR-71 Blackbird
@@ -1195,6 +1276,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Geostationary Satellite
@@ -1237,6 +1321,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: International Space Station
@@ -1279,6 +1366,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Escape Velocity (Earth)
@@ -1321,6 +1411,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Mercury Orbit
@@ -1363,6 +1456,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Helios 2 Spacecraft
@@ -1405,6 +1501,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Parker Solar Probe
@@ -1447,6 +1546,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Sun Around Milky Way
@@ -1489,6 +1591,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Light in Vacuum
@@ -1531,6 +1636,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/speed.yaml
     legacy_item_name: Radio Waves

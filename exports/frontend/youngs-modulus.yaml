@@ -37,6 +37,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Foam
@@ -79,6 +82,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Cartilage
@@ -121,6 +127,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Rubber
@@ -163,6 +172,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Silica Aerogel
@@ -205,6 +217,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Cork
@@ -247,6 +262,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Polyethylene
@@ -289,6 +307,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Tendon
@@ -331,6 +352,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Wood (Soft)
@@ -373,6 +397,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: ABS Plastic
@@ -415,6 +442,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Nylon
@@ -457,6 +487,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: PLA Plastic
@@ -499,6 +532,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Ice
@@ -541,6 +577,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Spider Silk
@@ -583,6 +622,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Oak
@@ -625,6 +667,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Brick
@@ -667,6 +712,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Lead
@@ -709,6 +757,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Bamboo
@@ -751,6 +802,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Bone
@@ -793,6 +847,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Concrete
@@ -835,6 +892,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Magnesium Alloy
@@ -877,6 +937,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Aluminum
@@ -919,6 +982,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Glass
@@ -961,6 +1027,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Kevlar Fiber
@@ -1003,6 +1072,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Brass
@@ -1045,6 +1117,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Titanium
@@ -1087,6 +1162,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Copper
@@ -1129,6 +1207,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Silicon
@@ -1171,6 +1252,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Carbon Fiber
@@ -1213,6 +1297,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Steel
@@ -1255,6 +1342,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Ceramic
@@ -1297,6 +1387,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Tungsten
@@ -1339,6 +1432,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Silicon Carbide
@@ -1381,6 +1477,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Diamond
@@ -1423,6 +1522,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Graphene
@@ -1465,6 +1567,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Neutron Star Crust
@@ -1507,6 +1612,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/youngs-modulus.yaml
     legacy_item_name: Black Hole Horizon

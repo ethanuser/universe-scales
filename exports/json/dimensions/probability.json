@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "US jackpot odds are deep into the one-in-hundreds-of-millions range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Winning the Powerball jackpot",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -47,6 +48,8 @@
       "id": "obs:probability:scenario-probability-winning-the-powerball-jackpot",
       "name": "Winning the Powerball jackpot",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Powerball",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mutation rates provide a biologically grounded tiny probability.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A random mutation hitting one specific DNA base in one generation",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -103,6 +107,8 @@
       "qualifiers": {
         "context": "per base per generation"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mutation_rate",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Shark attacks are vivid but statistically tiny risks.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fatal shark attack in one year",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -157,6 +164,8 @@
       "id": "obs:probability:scenario-probability-fatal-shark-attack-in-one-year",
       "name": "Fatal shark attack in one year",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Shark_attack",
       "source_count": 2,
       "sources": [
@@ -195,6 +204,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "National-lottery odds are a useful one-in-tens-of-millions anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Winning a 6/49 lottery jackpot",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -212,6 +222,8 @@
       "id": "obs:probability:scenario-probability-winning-a-6-49-lottery-jackpot",
       "name": "Winning a 6/49 lottery jackpot",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lottery_mathematics",
       "source_count": 2,
       "sources": [
@@ -250,6 +262,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern commercial aviation lives deep in the low-probability tail.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dying in a commercial airline crash on one flight",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -268,6 +281,8 @@
       "qualifiers": {
         "context": "single commercial flight"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aviation_safety",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lightning is the canonical natural-hazard long-tail event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Being struck by lightning in one year in the US",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -322,6 +338,8 @@
       "id": "obs:probability:scenario-probability-being-struck-by-lightning-in-one-year-in-the-us",
       "name": "Being struck by lightning in one year in the US",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning_strike",
       "source_count": 2,
       "sources": [
@@ -360,6 +378,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A royal flush is the classic ultra-rare card event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Royal flush in five-card poker",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -376,6 +395,8 @@
       "id": "obs:probability:scenario-probability-royal-flush-in-five-card-poker",
       "name": "Royal flush in five-card poker",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poker_probability",
       "source_count": 2,
       "sources": [
@@ -414,6 +435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Four of a kind already lives deep in the long tail.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Four of a kind in five-card poker",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -430,6 +452,8 @@
       "id": "obs:probability:scenario-probability-four-of-a-kind-in-five-card-poker",
       "name": "Four of a kind in five-card poker",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poker_probability",
       "source_count": 2,
       "sources": [
@@ -468,6 +492,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Being born on February 29 is a convenient real-world rare probability.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Leap-day birthday",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -485,6 +510,8 @@
       "id": "obs:probability:scenario-probability-leap-day-birthday",
       "name": "Leap-day birthday",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Leap_year",
       "source_count": 2,
       "sources": [
@@ -523,6 +550,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A full house is rarer than a flush in five-card poker.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Full house in five-card poker",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -539,6 +567,8 @@
       "id": "obs:probability:scenario-probability-full-house-in-five-card-poker",
       "name": "Full house in five-card poker",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poker_probability",
       "source_count": 2,
       "sources": [
@@ -577,6 +607,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A flush is rare enough to feel special in normal play.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Flush in five-card poker",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -593,6 +624,8 @@
       "id": "obs:probability:scenario-probability-flush-in-five-card-poker",
       "name": "Flush in five-card poker",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poker_probability",
       "source_count": 2,
       "sources": [
@@ -631,6 +664,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A straight sits in the sub-percent part of the poker scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Straight in five-card poker",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -647,6 +681,8 @@
       "id": "obs:probability:scenario-probability-straight-in-five-card-poker",
       "name": "Straight in five-card poker",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poker_probability",
       "source_count": 2,
       "sources": [
@@ -685,6 +721,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The chance of drawing one particular card from a standard deck.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Specific card from a shuffled deck",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -701,6 +738,8 @@
       "id": "obs:probability:scenario-probability-specific-card-from-a-shuffled-deck",
       "name": "Specific card from a shuffled deck",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Playing_card",
       "source_count": 2,
       "sources": [
@@ -739,6 +778,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Two fair dice both landing on one is already fairly rare.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Snake eyes with two dice",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -756,6 +796,8 @@
       "id": "obs:probability:scenario-probability-snake-eyes-with-two-dice",
       "name": "Snake eyes with two dice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dice",
       "source_count": 2,
       "sources": [
@@ -794,6 +836,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Two pair is much rarer than a single pair.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Two pair in five-card poker",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -810,6 +853,8 @@
       "id": "obs:probability:scenario-probability-two-pair-in-five-card-poker",
       "name": "Two pair in five-card poker",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poker_probability",
       "source_count": 2,
       "sources": [
@@ -848,6 +893,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A natural blackjack is a familiar few-percent event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blackjack natural",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -865,6 +911,8 @@
       "id": "obs:probability:scenario-probability-blackjack-natural",
       "name": "Blackjack natural",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blackjack",
       "source_count": 2,
       "sources": [
@@ -903,6 +951,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aces are uncommon but not especially rare in a single draw.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Any ace from a deck",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -920,6 +969,8 @@
       "id": "obs:probability:scenario-probability-any-ace-from-a-deck",
       "name": "Any ace from a deck",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Playing_card",
       "source_count": 2,
       "sources": [
@@ -958,6 +1009,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A globally uncommon but everyday trait.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blue eyes worldwide",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -974,6 +1026,8 @@
       "id": "obs:probability:scenario-probability-blue-eyes-worldwide",
       "name": "Blue eyes worldwide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Eye_color",
       "source_count": 2,
       "sources": [
@@ -1012,6 +1066,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Left-handedness is common enough to notice but uncommon enough to be distinctive.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Left-handedness",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1028,6 +1083,8 @@
       "id": "obs:probability:scenario-probability-left-handedness",
       "name": "Left-handedness",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Handedness",
       "source_count": 2,
       "sources": [
@@ -1066,6 +1123,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Interview odds are an intuitive everyday low-probability event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Passing a weakly selective interview loop",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1084,6 +1142,8 @@
       "qualifiers": {
         "context": "representative selective employer"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Job_interview",
       "source_count": 2,
       "sources": [
@@ -1122,6 +1182,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The classic single-die one-in-six event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rolling a six on a fair die",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1138,6 +1199,8 @@
       "id": "obs:probability:scenario-probability-rolling-a-six-on-a-fair-die",
       "name": "Rolling a six on a fair die",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dice",
       "source_count": 2,
       "sources": [
@@ -1176,6 +1239,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ten flips peak around the balanced five-head case.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Exactly five heads in ten flips",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1193,6 +1257,8 @@
       "id": "obs:probability:scenario-probability-exactly-five-heads-in-ten-flips",
       "name": "Exactly five heads in ten flips",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Binomial_distribution",
       "source_count": 2,
       "sources": [
@@ -1231,6 +1297,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The chance of two heads in a row.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Two heads in two fair flips",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1248,6 +1315,8 @@
       "id": "obs:probability:scenario-probability-two-heads-in-two-fair-flips",
       "name": "Two heads in two fair flips",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Coin_flipping",
       "source_count": 2,
       "sources": [
@@ -1286,6 +1355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar real-world forecast probability.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rain tomorrow in a typical moderate forecast",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1304,6 +1374,8 @@
       "qualifiers": {
         "context": "representative forecast"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Probability_of_precipitation",
       "source_count": 2,
       "sources": [
@@ -1342,6 +1414,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood types give a nice everyday distributional probability example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Type O-positive blood worldwide",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1358,6 +1431,8 @@
       "id": "obs:probability:scenario-probability-type-o-positive-blood-worldwide",
       "name": "Type O-positive blood worldwide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_type_distribution_by_country",
       "source_count": 2,
       "sources": [
@@ -1396,6 +1471,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One pair is the most common named poker hand class.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One pair in five-card poker",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1412,6 +1488,8 @@
       "id": "obs:probability:scenario-probability-one-pair-in-five-card-poker",
       "name": "One pair in five-card poker",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poker_probability",
       "source_count": 2,
       "sources": [
@@ -1450,6 +1528,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The chance a fair coin lands heads.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fair coin heads",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1466,6 +1545,8 @@
       "id": "obs:probability:scenario-probability-fair-coin-heads",
       "name": "Fair coin heads",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Coin_flipping",
       "source_count": 2,
       "sources": [
@@ -1504,6 +1585,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fair die gives even and odd with equal probability.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rolling an even number on a die",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1521,6 +1603,8 @@
       "id": "obs:probability:scenario-probability-rolling-an-even-number-on-a-die",
       "name": "Rolling an even number on a die",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dice",
       "source_count": 2,
       "sources": [
@@ -1559,6 +1643,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The birthday paradox crosses the 50 percent line at only 23 people.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Birthday match in a room of 23 people",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1575,6 +1660,8 @@
       "id": "obs:probability:scenario-probability-birthday-match-in-a-room-of-23-people",
       "name": "Birthday match in a room of 23 people",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Birthday_problem",
       "source_count": 2,
       "sources": [
@@ -1613,6 +1700,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The human birth sex ratio is close to but not exactly one half.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Male birth",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1629,6 +1717,8 @@
       "id": "obs:probability:scenario-probability-male-birth",
       "name": "Male birth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_sex_ratio",
       "source_count": 2,
       "sources": [
@@ -1667,6 +1757,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Two fair flips already make heads more likely than not.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "At least one head in two fair flips",
         "ingest_source": "dataset/raw/curated/probability.json",
@@ -1684,6 +1775,8 @@
       "id": "obs:probability:scenario-probability-at-least-one-head-in-two-fair-flips",
       "name": "At least one head in two fair flips",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Coin_flipping",
       "source_count": 2,
       "sources": [

@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lead is a very soft metal and a useful low-hardness anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lead",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -49,6 +50,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lead",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Very soft elastomers live in the megapascals range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Soft rubber",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -104,6 +108,8 @@
       "id": "obs:hardness:entity-soft-rubber-hardness",
       "name": "Soft rubber",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rubber",
       "source_count": 2,
       "sources": [
@@ -142,6 +148,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ice is harder than many people expect but still soft compared with structural materials.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -159,6 +166,8 @@
       "id": "obs:hardness:entity-ice-hardness",
       "name": "Ice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice",
       "source_count": 2,
       "sources": [
@@ -197,6 +206,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fingernail hardness is a familiar body-scale material reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fingernail",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -214,6 +224,8 @@
       "id": "obs:hardness:entity-fingernail-hardness",
       "name": "Fingernail",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nail_(anatomy)",
       "source_count": 2,
       "sources": [
@@ -252,6 +264,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wood is harder than soft polymers but far below metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wood",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -269,6 +282,8 @@
       "id": "obs:hardness:entity-wood-hardness",
       "name": "Wood",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wood",
       "source_count": 2,
       "sources": [
@@ -307,6 +322,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lead is a canonical very soft metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lead",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -324,6 +340,8 @@
       "id": "obs:hardness:entity-lead-hardness",
       "name": "Lead",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lead",
       "source_count": 2,
       "sources": [
@@ -362,6 +380,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concrete is hard but brittle, and sits in a different regime than metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concrete",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -380,6 +399,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -418,6 +439,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fingernail is a practical soft-material benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fingernail",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -436,6 +458,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nail_(anatomy)",
       "source_count": 2,
       "sources": [
@@ -474,6 +498,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hard plastics still sit far below metals and glass.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Acrylic plastic",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -491,6 +516,8 @@
       "id": "obs:hardness:entity-acrylic-hardness",
       "name": "Acrylic plastic",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poly(methyl_methacrylate)",
       "source_count": 2,
       "sources": [
@@ -529,6 +556,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pure gold is softer than many people imagine.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gold",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -546,6 +574,8 @@
       "id": "obs:hardness:entity-gold-hardness",
       "name": "Gold",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gold",
       "source_count": 2,
       "sources": [
@@ -584,6 +614,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Copper is a good soft-metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Copper",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -601,6 +632,8 @@
       "id": "obs:hardness:entity-copper-hardness",
       "name": "Copper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Copper",
       "source_count": 2,
       "sources": [
@@ -639,6 +672,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concrete is relatively hard in indentation terms but brittle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concrete",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -656,6 +690,8 @@
       "id": "obs:hardness:entity-concrete-hardness",
       "name": "Concrete",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -694,6 +730,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brass provides a common medium-hardness metal example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brass",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -712,6 +749,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brass",
       "source_count": 2,
       "sources": [
@@ -750,6 +789,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aluminum reaches the gigapascal scale in hardness.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aluminum",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -767,6 +807,8 @@
       "id": "obs:hardness:entity-aluminum-hardness",
       "name": "Aluminum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -805,6 +847,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brass is harder than aluminum but still well below hardened steels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brass",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -822,6 +865,8 @@
       "id": "obs:hardness:entity-brass-hardness",
       "name": "Brass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brass",
       "source_count": 2,
       "sources": [
@@ -860,6 +905,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mild steel is a common structural hardness benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mild steel",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -878,6 +924,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steel",
       "source_count": 2,
       "sources": [
@@ -916,6 +964,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mild steel gives a familiar engineering hardness reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mild steel",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -933,6 +982,8 @@
       "id": "obs:hardness:entity-mild-steel-hardness",
       "name": "Mild steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steel",
       "source_count": 2,
       "sources": [
@@ -971,6 +1022,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Stainless steels often sit a bit above mild steel in hardness.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Stainless steel",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -988,6 +1040,8 @@
       "id": "obs:hardness:entity-stainless-steel-hardness",
       "name": "Stainless steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Stainless_steel",
       "source_count": 2,
       "sources": [
@@ -1026,6 +1080,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cast iron pushes above mild steel on the hardness scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cast iron",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1043,6 +1098,8 @@
       "id": "obs:hardness:entity-cast-iron-hardness",
       "name": "Cast iron",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cast_iron",
       "source_count": 2,
       "sources": [
@@ -1081,6 +1138,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Glass is much harder than soft metals but still brittle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Glass",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1099,6 +1157,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -1137,6 +1197,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Glass is surprisingly hard relative to many metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Window glass",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1154,6 +1215,8 @@
       "id": "obs:hardness:entity-glass-hardness",
       "name": "Window glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -1192,6 +1255,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Quartz is a standard mineral hardness anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quartz",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1210,6 +1274,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quartz",
       "source_count": 2,
       "sources": [
@@ -1248,6 +1314,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Quartz is a classic mineral-hardness reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quartz",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1265,6 +1332,8 @@
       "id": "obs:hardness:entity-quartz-hardness",
       "name": "Quartz",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quartz",
       "source_count": 2,
       "sources": [
@@ -1303,6 +1372,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silicon gives a semiconductor-material hardness benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silicon",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1320,6 +1390,8 @@
       "id": "obs:hardness:entity-silicon-hardness",
       "name": "Silicon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicon",
       "source_count": 2,
       "sources": [
@@ -1358,6 +1430,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Advanced ceramics land deep in the hard-material regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ceramic knife zirconia",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1375,6 +1448,8 @@
       "id": "obs:hardness:entity-zirconia-hardness",
       "name": "Ceramic knife zirconia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Zirconium_dioxide",
       "source_count": 2,
       "sources": [
@@ -1413,6 +1488,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Carbides sit in the very-hard-tool-material regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tungsten carbide",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1430,6 +1506,8 @@
       "id": "obs:hardness:entity-tungsten-carbide-hardness",
       "name": "Tungsten carbide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tungsten_carbide",
       "source_count": 2,
       "sources": [
@@ -1468,6 +1546,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sapphire is one of the standard ultra-hard transparent materials.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sapphire",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1485,6 +1564,8 @@
       "id": "obs:hardness:entity-sapphire-hardness",
       "name": "Sapphire",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sapphire",
       "source_count": 2,
       "sources": [
@@ -1523,6 +1604,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tungsten carbide is a classic high-hardness engineering material.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tungsten carbide",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1541,6 +1623,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tungsten_carbide",
       "source_count": 2,
       "sources": [
@@ -1579,6 +1663,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cubic boron nitride is among the hardest synthetic materials.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cubic boron nitride",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1596,6 +1681,8 @@
       "id": "obs:hardness:entity-cbn-hardness",
       "name": "Cubic boron nitride",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cubic_boron_nitride",
       "source_count": 2,
       "sources": [
@@ -1634,6 +1721,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Diamond remains the iconic hardness benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Diamond",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1651,6 +1739,8 @@
       "id": "obs:hardness:entity-diamond-hardness",
       "name": "Diamond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Diamond",
       "source_count": 2,
       "sources": [
@@ -1689,6 +1779,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Diamond is the canonical extreme-hardness benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Diamond",
         "ingest_source": "dataset/raw/curated/hardness.json",
@@ -1707,6 +1798,8 @@
       "qualifiers": {
         "measurement": "hardness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Diamond",
       "source_count": 2,
       "sources": [

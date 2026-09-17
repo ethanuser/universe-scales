@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Geometric volume implied by the proton charge radius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Proton volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -48,6 +49,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Proton",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Geometric volume implied by the Bohr radius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hydrogen atom volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -103,6 +107,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen_atom",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic occupied volume of one water molecule.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water molecule volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -156,6 +163,8 @@
       "qualifiers": {
         "measurement": "single molecule volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -194,6 +203,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate volume of a spherical coronavirus particle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SARS-CoV-2 virion volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -211,6 +221,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SARS-CoV-2",
       "source_count": 2,
       "sources": [
@@ -249,6 +261,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic volume of one E. coli cell.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Escherichia coli cell volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -264,6 +277,8 @@
       "qualifiers": {
         "measurement": "single cell volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -302,6 +317,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Typical volume of a human red blood cell.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Red blood cell volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -317,6 +333,8 @@
       "qualifiers": {
         "measurement": "cell volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
       "source_count": 2,
       "sources": [
@@ -355,6 +373,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative volume of a typical human cell.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human cell volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -370,6 +389,8 @@
       "qualifiers": {
         "measurement": "single cell volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cell_(biology)",
       "source_count": 2,
       "sources": [
@@ -408,6 +429,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of a representative coarse salt grain treated as a sphere.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Grain of salt volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -425,6 +447,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Salt",
       "source_count": 2,
       "sources": [
@@ -463,6 +487,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative volume of a grain of sand.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Grain of sand volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -478,6 +503,8 @@
       "qualifiers": {
         "measurement": "particle volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sand",
       "source_count": 2,
       "sources": [
@@ -516,6 +543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of a representative 1 mm sand grain treated as a sphere.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Grain of sand volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -533,6 +561,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sand",
       "source_count": 2,
       "sources": [
@@ -571,6 +601,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of a 5 mm raindrop treated as a sphere.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Raindrop volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -588,6 +619,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Raindrop",
       "source_count": 2,
       "sources": [
@@ -626,6 +659,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative volume of a sugar cube.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sugar cube volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -641,6 +675,8 @@
       "qualifiers": {
         "measurement": "solid volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sugar_cube",
       "source_count": 2,
       "sources": [
@@ -679,6 +715,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of one teaspoon.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Teaspoon",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -694,6 +731,8 @@
       "qualifiers": {
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Teaspoon",
       "source_count": 2,
       "sources": [
@@ -732,6 +771,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative pour volume of a wine glass.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wine glass volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -747,6 +787,8 @@
       "qualifiers": {
         "measurement": "serving volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wine_glass",
       "source_count": 2,
       "sources": [
@@ -785,6 +827,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative capacity of a coffee mug.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Coffee mug",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -800,6 +843,8 @@
       "qualifiers": {
         "measurement": "capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mug",
       "source_count": 2,
       "sources": [
@@ -838,6 +883,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Capacity of a standard soda can.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Soda can",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -853,6 +899,8 @@
       "qualifiers": {
         "measurement": "capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drink_can",
       "source_count": 2,
       "sources": [
@@ -891,6 +939,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative internal volume of a standard soda can.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Soda can volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -906,6 +955,8 @@
       "qualifiers": {
         "measurement": "capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drink_can",
       "source_count": 2,
       "sources": [
@@ -944,6 +995,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Capacity of a typical wine bottle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wine bottle",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -959,6 +1011,8 @@
       "qualifiers": {
         "measurement": "capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wine_bottle",
       "source_count": 2,
       "sources": [
@@ -997,6 +1051,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative capacity of a household bucket.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bucket",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1012,6 +1067,8 @@
       "qualifiers": {
         "measurement": "capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bucket",
       "source_count": 2,
       "sources": [
@@ -1050,6 +1107,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative displaced volume of an adult human body.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human body volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1065,6 +1123,8 @@
       "qualifiers": {
         "measurement": "body volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body",
       "source_count": 2,
       "sources": [
@@ -1103,6 +1163,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative fill volume of a household bathtub.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bathtub",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1118,6 +1179,8 @@
       "qualifiers": {
         "measurement": "capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bathtub",
       "source_count": 2,
       "sources": [
@@ -1156,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative water volume of a bathtub.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bathtub volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1171,6 +1235,8 @@
       "qualifiers": {
         "measurement": "water capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bathtub",
       "source_count": 2,
       "sources": [
@@ -1209,6 +1275,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate outer envelope volume of a family car.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Family car envelope volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1224,6 +1291,8 @@
       "qualifiers": {
         "measurement": "outer envelope volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Car",
       "source_count": 2,
       "sources": [
@@ -1262,6 +1331,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative interior volume of a single room.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Room volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1277,6 +1347,8 @@
       "qualifiers": {
         "measurement": "interior volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Room",
       "source_count": 2,
       "sources": [
@@ -1315,6 +1387,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative internal volume of a standard shipping container.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Shipping container volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1330,6 +1403,8 @@
       "qualifiers": {
         "measurement": "interior capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intermodal_container",
       "source_count": 2,
       "sources": [
@@ -1368,6 +1443,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative internal volume of a standard shipping container.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Shipping container",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1383,6 +1459,8 @@
       "qualifiers": {
         "measurement": "internal volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intermodal_container",
       "source_count": 2,
       "sources": [
@@ -1421,6 +1499,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative volume of a small backyard swimming pool.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Swimming pool",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1436,6 +1515,8 @@
       "qualifiers": {
         "measurement": "water volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Swimming_pool",
       "source_count": 2,
       "sources": [
@@ -1474,6 +1555,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative volume of a backyard swimming pool.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Swimming pool volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1489,6 +1571,8 @@
       "qualifiers": {
         "measurement": "water volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Swimming_pool",
       "source_count": 2,
       "sources": [
@@ -1527,6 +1611,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate outer envelope volume of a city bus.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "City bus envelope volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1542,6 +1627,8 @@
       "qualifiers": {
         "measurement": "outer envelope volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bus",
       "source_count": 2,
       "sources": [
@@ -1580,6 +1667,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative cargo volume of a freight train car.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Freight train car volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1595,6 +1683,8 @@
       "qualifiers": {
         "measurement": "cargo hold volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Freight_car",
       "source_count": 2,
       "sources": [
@@ -1633,6 +1723,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative interior volume of a modest apartment.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Apartment",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1648,6 +1739,8 @@
       "qualifiers": {
         "measurement": "interior volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Apartment",
       "source_count": 2,
       "sources": [
@@ -1686,6 +1779,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative interior volume of a classroom.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Classroom volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1701,6 +1795,8 @@
       "qualifiers": {
         "measurement": "interior air volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Classroom",
       "source_count": 2,
       "sources": [
@@ -1739,6 +1835,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative interior volume of a small apartment.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Apartment volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1754,6 +1851,8 @@
       "qualifiers": {
         "measurement": "interior air volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Apartment",
       "source_count": 2,
       "sources": [
@@ -1792,6 +1891,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative interior volume of a modest detached house.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "House interior volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1807,6 +1907,8 @@
       "qualifiers": {
         "measurement": "interior volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/House",
       "source_count": 2,
       "sources": [
@@ -1845,6 +1947,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of an Olympic-size swimming pool.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Olympic swimming pool",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1860,6 +1963,8 @@
       "qualifiers": {
         "measurement": "water volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Olympic-size_swimming_pool",
       "source_count": 2,
       "sources": [
@@ -1898,6 +2003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative cargo volume of a large oil tanker.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Oil tanker cargo volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1913,6 +2019,8 @@
       "qualifiers": {
         "measurement": "cargo capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oil_tanker",
       "source_count": 2,
       "sources": [
@@ -1951,6 +2059,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Geometric volume of the Great Pyramid of Giza.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Great Pyramid of Giza volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -1966,6 +2075,8 @@
       "qualifiers": {
         "measurement": "geometric volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
       "source_count": 2,
       "sources": [
@@ -2004,6 +2115,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water volume of Lake Tahoe.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lake Tahoe volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2019,6 +2131,8 @@
       "qualifiers": {
         "measurement": "water volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lake_Tahoe",
       "source_count": 2,
       "sources": [
@@ -2057,6 +2171,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Order-of-magnitude envelope volume for Mount Everest above surrounding terrain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mount Everest envelope volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2072,6 +2187,8 @@
       "qualifiers": {
         "measurement": "envelope volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mount_Everest",
       "source_count": 2,
       "sources": [
@@ -2110,6 +2227,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Total volume of Earth's oceans.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth's oceans",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2125,6 +2243,8 @@
       "qualifiers": {
         "measurement": "water volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ocean",
       "source_count": 2,
       "sources": [
@@ -2163,6 +2283,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of the Moon.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2180,6 +2301,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moon",
       "source_count": 2,
       "sources": [
@@ -2218,6 +2341,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2233,6 +2357,8 @@
       "qualifiers": {
         "measurement": "planetary volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -2271,6 +2397,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of the Sun.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2288,6 +2415,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2326,6 +2455,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Order-of-magnitude volume of Betelgeuse using a representative stellar radius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Betelgeuse volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2343,6 +2473,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Betelgeuse",
       "source_count": 2,
       "sources": [
@@ -2381,6 +2513,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume implied by a spherical Oort Cloud with a 50,000 AU radius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Oort Cloud volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2398,6 +2531,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "spherical volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oort_cloud",
       "source_count": 2,
       "sources": [
@@ -2436,6 +2571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Order-of-magnitude volume of the Orion Nebula.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Orion Nebula volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2451,6 +2587,8 @@
       "qualifiers": {
         "measurement": "nebular volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Orion_Nebula",
       "source_count": 2,
       "sources": [
@@ -2489,6 +2627,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Disk volume implied by representative Milky Way radius and thickness.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milky Way disk volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2504,6 +2643,8 @@
       "qualifiers": {
         "measurement": "disk volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -2542,6 +2683,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic spherical volume of the Local Group.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Local Group volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2559,6 +2701,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "spherical volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Local_Group",
       "source_count": 2,
       "sources": [
@@ -2597,6 +2741,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic spherical volume of the Virgo Supercluster.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Virgo Supercluster volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2614,6 +2759,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "spherical volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
       "source_count": 2,
       "sources": [
@@ -2652,6 +2799,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Volume of the observable universe treated as a sphere.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Observable universe volume",
         "ingest_source": "dataset/raw/curated/volume.json",
@@ -2669,6 +2817,8 @@
         "derivation": "(4/3)*pi*r^3",
         "measurement": "spherical volume"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Universe",
       "source_count": 2,
       "sources": [

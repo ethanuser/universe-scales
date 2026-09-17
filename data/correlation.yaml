@@ -45,6 +45,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Shoe size and IQ
     ingest_source: dataset/raw/curated/correlation.json
@@ -92,6 +95,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: BMI and blood pressure
     ingest_source: dataset/raw/curated/correlation.json
@@ -139,6 +145,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Education and income
     ingest_source: dataset/raw/curated/correlation.json
@@ -186,6 +195,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Study hours and exam score
     ingest_source: dataset/raw/curated/correlation.json
@@ -233,6 +245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SAT score and first-year GPA
     ingest_source: dataset/raw/curated/correlation.json
@@ -280,6 +295,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Exercise minutes and resting heart rate
     ingest_source: dataset/raw/curated/correlation.json
@@ -327,6 +345,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Advertising spend and sales
     ingest_source: dataset/raw/curated/correlation.json
@@ -374,6 +395,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hours slept and next-day sleepiness
     ingest_source: dataset/raw/curated/correlation.json
@@ -421,6 +445,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rainfall and wildfire risk
     ingest_source: dataset/raw/curated/correlation.json
@@ -468,6 +495,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Height and weight
     ingest_source: dataset/raw/curated/correlation.json
@@ -515,6 +545,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tree-ring width and rainfall
     ingest_source: dataset/raw/curated/correlation.json
@@ -562,6 +595,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Age and reaction time
     ingest_source: dataset/raw/curated/correlation.json
@@ -609,6 +645,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice cream sales and drowning deaths
     ingest_source: dataset/raw/curated/correlation.json
@@ -657,6 +696,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Smoking pack-years and lung cancer risk
     ingest_source: dataset/raw/curated/correlation.json
@@ -704,6 +746,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Temperature and drowning deaths
     ingest_source: dataset/raw/curated/correlation.json
@@ -751,6 +796,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: GDP per capita and life expectancy
     ingest_source: dataset/raw/curated/correlation.json
@@ -798,6 +846,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Outdoor temperature and ice cream sales
     ingest_source: dataset/raw/curated/correlation.json
@@ -845,6 +896,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rainfall and umbrella sales
     ingest_source: dataset/raw/curated/correlation.json
@@ -892,6 +946,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: CO2 concentration and global temperature anomaly
     ingest_source: dataset/raw/curated/correlation.json
@@ -939,6 +996,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Latitude and average annual temperature
     ingest_source: dataset/raw/curated/correlation.json
@@ -986,6 +1046,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Outdoor temperature and heating demand
     ingest_source: dataset/raw/curated/correlation.json
@@ -1033,6 +1096,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Height and arm span
     ingest_source: dataset/raw/curated/correlation.json
@@ -1080,6 +1146,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Speed and travel time for a fixed distance
     ingest_source: dataset/raw/curated/correlation.json

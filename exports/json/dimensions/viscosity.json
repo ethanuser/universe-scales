@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid helium has an exceptionally low viscosity among ordinary fluids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid helium near boiling",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -49,6 +50,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Viscosity",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid hydrogen is still only in the tens-of-micropascal-second range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid hydrogen",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -105,6 +109,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Liquid_hydrogen",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Carbon dioxide gas has a room-temperature viscosity comparable to other common gases.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Carbon dioxide gas at room temperature",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -162,6 +169,8 @@
         "assumption": "near room temperature",
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Viscosity",
       "source_count": 2,
       "sources": [
@@ -200,6 +209,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Air is thin enough that its viscosity is only a few tens of micropascal-seconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Air at room temperature",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -219,6 +229,8 @@
         "assumption": "near room temperature",
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Viscosity",
       "source_count": 2,
       "sources": [
@@ -257,6 +269,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Air provides a low-viscosity gas reference point.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Air",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -275,6 +288,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Air",
       "source_count": 2,
       "sources": [
@@ -313,6 +328,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Acetone is substantially thinner than water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Acetone",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -331,6 +347,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Acetone",
       "source_count": 2,
       "sources": [
@@ -369,6 +387,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Gasoline is much less viscous than water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gasoline",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -387,6 +406,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gasoline",
       "source_count": 2,
       "sources": [
@@ -425,6 +446,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water sets the familiar baseline of about one millipascal-second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid water at room temperature",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -444,6 +466,8 @@
         "assumption": "near room temperature",
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Viscosity",
       "source_count": 2,
       "sources": [
@@ -482,6 +506,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water is the classic low-viscosity liquid reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -500,6 +525,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -538,6 +565,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Seawater is only slightly more viscous than fresh water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seawater",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -556,6 +584,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Seawater",
       "source_count": 2,
       "sources": [
@@ -594,6 +624,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ethanol is only slightly more viscous than water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethanol",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -613,6 +644,8 @@
         "assumption": "near room temperature",
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ethanol",
       "source_count": 2,
       "sources": [
@@ -651,6 +684,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Milk is a bit more viscous than water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milk",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -669,6 +703,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milk",
       "source_count": 2,
       "sources": [
@@ -707,6 +743,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood is only a few times thicker than water under ordinary conditions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human blood",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -725,6 +762,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood",
       "source_count": 2,
       "sources": [
@@ -763,6 +802,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood is slightly thicker than water, which is important physiologically.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -781,6 +821,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood",
       "source_count": 2,
       "sources": [
@@ -819,6 +861,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cream is noticeably thicker than milk, moving into centipoise-to-decipoise territory.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cream",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -837,6 +880,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cream",
       "source_count": 2,
       "sources": [
@@ -875,6 +920,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Olive oil is noticeably more resistant to flow than water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Olive oil",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -893,6 +939,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Olive_oil",
       "source_count": 2,
       "sources": [
@@ -931,6 +979,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Motor oil is hundreds of times more viscous than water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Motor oil at room temperature",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -950,6 +999,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motor_oil",
       "source_count": 2,
       "sources": [
@@ -988,6 +1039,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Motor oil is thicker still and is tuned for lubrication.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Motor oil",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1006,6 +1058,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motor_oil",
       "source_count": 2,
       "sources": [
@@ -1044,6 +1098,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pure glycerol is thick enough to reach around one or two pascal-seconds near room temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Glycerol",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1062,6 +1117,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glycerol",
       "source_count": 2,
       "sources": [
@@ -1100,6 +1157,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Syrups are where viscosity becomes viscerally obvious.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Maple syrup",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1118,6 +1176,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Maple_syrup",
       "source_count": 2,
       "sources": [
@@ -1156,6 +1216,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Maple syrup flows slowly because its viscosity is a few pascal-seconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Maple syrup",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1174,6 +1235,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Syrup",
       "source_count": 2,
       "sources": [
@@ -1212,6 +1275,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Shampoo often lands in the several-pascal-second range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Shampoo",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1230,6 +1294,8 @@
       "qualifiers": {
         "measurement": "apparent viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Shampoo",
       "source_count": 2,
       "sources": [
@@ -1268,6 +1334,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Honey is one of the classic everyday examples of a roughly ten-pascal-second fluid.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Honey",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1286,6 +1353,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Honey",
       "source_count": 2,
       "sources": [
@@ -1324,6 +1393,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ketchup can behave as a very thick fluid when it is not being shaken or squeezed.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ketchup",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1343,6 +1413,8 @@
         "assumption": "low-shear representative value",
         "measurement": "apparent viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ketchup",
       "source_count": 2,
       "sources": [
@@ -1381,6 +1453,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Runny basaltic lava is still far more viscous than water, often around a hundred pascal-seconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Basaltic lava",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1399,6 +1472,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lava",
       "source_count": 2,
       "sources": [
@@ -1437,6 +1512,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Peanut butter reaches into the hundreds of pascal-seconds as a spreadable paste.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Peanut butter",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1455,6 +1531,8 @@
       "qualifiers": {
         "measurement": "apparent viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Peanut_butter",
       "source_count": 2,
       "sources": [
@@ -1493,6 +1571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Toothpaste behaves more like a paste than a simple liquid and can reach thousands of pascal-seconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Toothpaste",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1511,6 +1590,8 @@
       "qualifiers": {
         "measurement": "apparent viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Toothpaste",
       "source_count": 2,
       "sources": [
@@ -1549,6 +1630,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "More silica-rich lava can climb into the tens of kilopascal-seconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Andesitic lava",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1567,6 +1649,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lava",
       "source_count": 2,
       "sources": [
@@ -1605,6 +1689,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bitumen is thick enough that it can look solid while still flowing over long enough times.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bitumen",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1623,6 +1708,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bitumen",
       "source_count": 2,
       "sources": [
@@ -1661,6 +1748,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rhyolitic magma can be so viscous that it behaves almost like a soft solid.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rhyolitic lava",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1679,6 +1767,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lava",
       "source_count": 2,
       "sources": [
@@ -1717,6 +1807,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tar is a useful near-solid viscosity benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tar",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1735,6 +1826,8 @@
       "qualifiers": {
         "measurement": "dynamic viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tar",
       "source_count": 2,
       "sources": [
@@ -1773,6 +1866,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pitch is famous for appearing solid while dripping on a human timescale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pitch in the pitch-drop experiment",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1789,6 +1883,8 @@
       "id": "obs:viscosity:entity-pitch-drop-viscosity",
       "name": "Pitch in the pitch-drop experiment",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pitch_drop_experiment",
       "source_count": 2,
       "sources": [
@@ -1827,6 +1923,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "On long timescales glacier ice flows like a fluid with an enormous effective viscosity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Glacier ice",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1845,6 +1942,8 @@
       "qualifiers": {
         "measurement": "effective viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glacier",
       "source_count": 2,
       "sources": [
@@ -1883,6 +1982,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The mantle convects only because geologic time makes even a sextillion-pascal-second viscosity mobile.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth mantle",
         "ingest_source": "dataset/raw/curated/viscosity.json",
@@ -1901,6 +2001,8 @@
       "qualifiers": {
         "measurement": "effective viscosity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth%27s_mantle",
       "source_count": 2,
       "sources": [

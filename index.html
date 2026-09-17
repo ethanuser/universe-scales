@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="importmap">{"imports":{"three":"./js/vendor/three/three.module.min.js"}}</script>
+    <script type="module" src="js/experiences/models.js?v=10"></script>
     <title>Universe Scales</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css/styles.css?v=2.5">
     <link rel="stylesheet" href="css/mobile.css?v=2.5">
+    <link rel="stylesheet" href="css/experiences.css?v=10">
+    <link rel="stylesheet" href="css/audio-experience.css?v=1">
+    <link rel="stylesheet" href="css/perception-experience.css?v=1">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -34,7 +39,7 @@
     <div class="container">
         <header class="header">
             <h1>Universe Scales</h1>
-            <p class="subtitle">Interactive logarithmic visualizations of the universe's dimensions</p>
+            <p class="subtitle">Explore the universe through scale, motion, and perspective</p>
 
             <div class="controls">
                 <div class="control-group control-group--native-selector" aria-hidden="true" hidden inert>
@@ -99,6 +104,8 @@
         </header>
 
         <main class="main">
+            <div id="view-switch" class="view-switch" role="group" aria-label="Visualization mode" hidden></div>
+            <section id="dimension-experience" class="experience" aria-label="Interactive dimension explorer" hidden></section>
             <div id="plot-container" class="plot-container">
                 <svg id="plot-svg"></svg>
                 <div class="zoom-controls" aria-label="Plot zoom and pan controls">
@@ -300,7 +307,17 @@
     <script src="js/formatting.js?v=2.5" defer></script>
     <script src="js/editor.js?v=1.9" defer></script>
     <script src="js/plot.js?v=2.5" defer></script>
-    <script src="js/script.js?v=3.0" defer></script>
+    <script src="js/experiences/math.js?v=1" defer></script>
+    <script src="js/experiences/controls.js?v=1" defer></script>
+    <script src="js/experiences/spatial.js?v=10" defer></script>
+    <script src="js/experiences/motion-math.js?v=1" defer></script>
+    <script src="js/experiences/motion.js?v=10" defer></script>
+    <script src="js/experiences/perception.js?v=10" defer></script>
+    <script src="js/experiences/journey.js?v=10" defer></script>
+    <script src="js/experiences/audio-math.js?v=2" defer></script>
+    <script src="js/experiences/audio.js?v=4" defer></script>
+    <script src="js/experiences/controller.js?v=10" defer></script>
+    <script src="js/script.js?v=3.1" defer></script>
     <script src="js/mobile.js?v=1.9" defer></script>
 </body>
 

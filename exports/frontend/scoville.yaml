@@ -41,6 +41,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sweet bell pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -86,6 +89,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pimento pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -131,6 +137,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Banana pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -176,6 +185,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Anaheim pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -221,6 +233,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: New Mexico chile
     ingest_source: dataset/raw/curated/scoville.json
@@ -268,6 +283,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ancho pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -315,6 +333,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Harissa
     ingest_source: dataset/raw/curated/scoville.json
@@ -362,6 +383,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Poblano pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -407,6 +431,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pasilla pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -454,6 +481,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sambal oelek
     ingest_source: dataset/raw/curated/scoville.json
@@ -501,6 +531,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sriracha sauce
     ingest_source: dataset/raw/curated/scoville.json
@@ -546,6 +579,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cascabel pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -593,6 +629,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Guajillo pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -640,6 +679,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jalapeno pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -685,6 +727,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Piri piri sauce
     ingest_source: dataset/raw/curated/scoville.json
@@ -732,6 +777,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tabasco sauce
     ingest_source: dataset/raw/curated/scoville.json
@@ -777,6 +825,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Chipotle pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -822,6 +873,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fresno pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -867,6 +921,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Peri-peri sauce
     ingest_source: dataset/raw/curated/scoville.json
@@ -914,6 +971,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Serrano pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -959,6 +1019,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Chile de árbol
     ingest_source: dataset/raw/curated/scoville.json
@@ -1006,6 +1069,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aji amarillo
     ingest_source: dataset/raw/curated/scoville.json
@@ -1053,6 +1119,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cayenne pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -1098,6 +1167,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thai chili
     ingest_source: dataset/raw/curated/scoville.json
@@ -1145,6 +1217,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thai bird chili
     ingest_source: dataset/raw/curated/scoville.json
@@ -1190,6 +1265,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fatalii pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -1237,6 +1315,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Habanero pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -1282,6 +1363,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Scotch bonnet
     ingest_source: dataset/raw/curated/scoville.json
@@ -1327,6 +1411,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Red Savina habanero
     ingest_source: dataset/raw/curated/scoville.json
@@ -1372,6 +1459,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ghost pepper
     ingest_source: dataset/raw/curated/scoville.json
@@ -1417,6 +1507,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Trinidad Moruga Scorpion average
     ingest_source: dataset/raw/curated/scoville.json
@@ -1463,6 +1556,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Trinidad Moruga Scorpion
     ingest_source: dataset/raw/curated/scoville.json
@@ -1508,6 +1604,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Carolina Reaper
     ingest_source: dataset/raw/curated/scoville.json
@@ -1553,6 +1652,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seven Pot Douglah
     ingest_source: dataset/raw/curated/scoville.json
@@ -1599,6 +1701,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pepper spray
     ingest_source: dataset/raw/curated/scoville.json
@@ -1644,6 +1749,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dragon's Breath pepper claim
     ingest_source: dataset/raw/curated/scoville.json
@@ -1689,6 +1797,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pepper X
     ingest_source: dataset/raw/curated/scoville.json
@@ -1735,6 +1846,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Police-grade OC spray
     ingest_source: dataset/raw/curated/scoville.json
@@ -1780,6 +1894,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pure capsaicin
     ingest_source: dataset/raw/curated/scoville.json

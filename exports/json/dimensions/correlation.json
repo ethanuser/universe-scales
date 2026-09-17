@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A near-zero correlation anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Shoe size and IQ",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -50,6 +51,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Spurious_relationship",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Many health risk factors live in the low-to-moderate range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "BMI and blood pressure",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -107,6 +111,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_pressure",
       "source_count": 2,
       "sources": [
@@ -145,6 +151,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Social variables often show meaningful but noisy correlations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Education and income",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -164,6 +171,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Income",
       "source_count": 2,
       "sources": [
@@ -202,6 +211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Education outcomes often live in the middle of the correlation range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Study hours and exam score",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -221,6 +231,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -259,6 +271,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar moderate predictive correlation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SAT score and first-year GPA",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -278,6 +291,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SAT",
       "source_count": 2,
       "sources": [
@@ -316,6 +331,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Exercise and resting pulse usually move in opposite directions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Exercise minutes and resting heart rate",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -335,6 +351,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Resting_heart_rate",
       "source_count": 2,
       "sources": [
@@ -373,6 +391,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Marketing data often lives in the moderate-correlation band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Advertising spend and sales",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -392,6 +411,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Advertising",
       "source_count": 2,
       "sources": [
@@ -430,6 +451,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An intuitively negative human-performance correlation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hours slept and next-day sleepiness",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -449,6 +471,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sleep_deprivation",
       "source_count": 2,
       "sources": [
@@ -487,6 +511,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hydrology and fire danger often move in opposite directions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rainfall and wildfire risk",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -506,6 +531,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wildfire",
       "source_count": 2,
       "sources": [
@@ -544,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Height and weight are strongly but not tightly coupled.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Height and weight",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -563,6 +591,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -601,6 +631,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Environmental records often show moderate-to-strong climate correlations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tree-ring width and rainfall",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -620,6 +651,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dendrochronology",
       "source_count": 2,
       "sources": [
@@ -658,6 +691,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Older age is strongly associated with slower responses.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Age and reaction time",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -677,6 +711,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Reaction_time",
       "source_count": 2,
       "sources": [
@@ -715,6 +751,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A classic correlation-does-not-imply-causation story.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice cream sales and drowning deaths",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -735,6 +772,8 @@
         "note": "confounded by weather",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation",
       "source_count": 2,
       "sources": [
@@ -773,6 +812,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Smoking exposure and lung harm move together clearly.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smoking pack-years and lung cancer risk",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -792,6 +832,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smoking_and_health",
       "source_count": 2,
       "sources": [
@@ -830,6 +872,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This is a good example of a real but mediated correlation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Temperature and drowning deaths",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -849,6 +892,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation",
       "source_count": 2,
       "sources": [
@@ -887,6 +932,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "National wealth and lifespan are strongly related.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "GDP per capita and life expectancy",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -906,6 +952,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -944,6 +992,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A classic strong positive everyday correlation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Outdoor temperature and ice cream sales",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -963,6 +1012,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -1001,6 +1052,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rain and umbrella sales move together strongly.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rainfall and umbrella sales",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -1020,6 +1072,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -1058,6 +1112,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A climate-data correlation people often want an intuitive anchor for.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "CO2 concentration and global temperature anomaly",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -1077,6 +1132,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -1115,6 +1172,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Latitude is a strong negative correlate of annual temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Latitude and average annual temperature",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -1134,6 +1192,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -1172,6 +1232,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cold weather and heating bills are almost mirror images.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Outdoor temperature and heating demand",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -1191,6 +1252,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heating_degree_day",
       "source_count": 2,
       "sources": [
@@ -1229,6 +1292,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Height and arm span are nearly locked together in adults.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Height and arm span",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -1248,6 +1312,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [
@@ -1286,6 +1352,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A near-perfect negative relationship that everyone has experienced.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Speed and travel time for a fixed distance",
         "ingest_source": "dataset/raw/curated/correlation.json",
@@ -1305,6 +1372,8 @@
         "measurement": "absolute Pearson correlation",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Correlation",
       "source_count": 2,
       "sources": [

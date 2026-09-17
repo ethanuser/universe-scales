@@ -32,6 +32,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single DNA base carries about two bits of sequence information, or one quarter of a byte.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One DNA nucleotide",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -50,6 +51,8 @@
       "id": "obs:information:scenario-information-dna-nucleotide",
       "name": "One DNA nucleotide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A UUID is 128 bits long, making it 16 bytes of binary information.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "UUID",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -106,6 +110,8 @@
       "id": "obs:information:entity-uuid",
       "name": "UUID",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Universally_unique_identifier",
       "source_count": 2,
       "sources": [
@@ -144,6 +150,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The minimum IPv4 packet header is 20 bytes before options or payload are added.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IPv4 header",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -160,6 +167,8 @@
       "id": "obs:information:entity-ipv4-header",
       "name": "IPv4 header",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IPv4",
       "source_count": 2,
       "sources": [
@@ -198,6 +207,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A SHA-256 hash output is 256 bits, or 32 bytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SHA-256 digest",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -216,6 +226,8 @@
       "id": "obs:information:entity-sha-256-digest",
       "name": "SHA-256 digest",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SHA-2",
       "source_count": 2,
       "sources": [
@@ -254,6 +266,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The fixed IPv6 header is 40 bytes long.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IPv6 header",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -270,6 +283,8 @@
       "id": "obs:information:entity-ipv6-header",
       "name": "IPv6 header",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IPv6",
       "source_count": 2,
       "sources": [
@@ -308,6 +323,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A SHA-512 hash output is 512 bits, or 64 bytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SHA-512 digest",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -326,6 +342,8 @@
       "id": "obs:information:entity-sha-512-digest",
       "name": "SHA-512 digest",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SHA-2",
       "source_count": 2,
       "sources": [
@@ -364,6 +382,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An 80-column punch card became a classic benchmark for a tiny unit of text storage.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IBM punch card",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -381,6 +400,8 @@
       "id": "obs:information:entity-ibm-punch-card",
       "name": "IBM punch card",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Punched_card",
       "source_count": 2,
       "sources": [
@@ -419,6 +440,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A standard SMS payload is 140 bytes before multipart tricks or richer encodings are involved.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SMS text message",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -435,6 +457,8 @@
       "id": "obs:information:entity-sms-message",
       "name": "SMS text message",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SMS",
       "source_count": 2,
       "sources": [
@@ -473,6 +497,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A post at the classic 280-character limit is a few hundred bytes if stored as plain ASCII text.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tweet at the 280-character limit",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -490,6 +515,8 @@
       "id": "obs:information:scenario-information-tweet-limit",
       "name": "Tweet at the 280-character limit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Twitter",
       "source_count": 2,
       "sources": [
@@ -528,6 +555,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The classic Ethernet maximum transmission unit carries 1500 bytes of payload.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethernet MTU payload",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -544,6 +572,8 @@
       "id": "obs:information:entity-ethernet-mtu-payload",
       "name": "Ethernet MTU payload",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ethernet_frame",
       "source_count": 2,
       "sources": [
@@ -582,6 +612,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An 80-column by 25-row text screen holds 2000 character cells before attributes or metadata.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "80x25 text screen",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -599,6 +630,8 @@
       "id": "obs:information:scenario-information-80x25-text-screen",
       "name": "80x25 text screen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Text_mode",
       "source_count": 2,
       "sources": [
@@ -637,6 +670,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A maximum-size low-error-correction QR code can store 2953 bytes of binary data.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "QR code Version 40-L",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -653,6 +687,8 @@
       "id": "obs:information:entity-qr-code-version-40-l",
       "name": "QR code Version 40-L",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/QR_code",
       "source_count": 2,
       "sources": [
@@ -691,6 +727,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 4 KiB page is a common basic block of virtual memory and storage systems.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "4 KiB memory page",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -708,6 +745,8 @@
       "id": "obs:information:entity-memory-page-4kib",
       "name": "4 KiB memory page",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Page_(computer_memory)",
       "source_count": 2,
       "sources": [
@@ -746,6 +785,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The human mitochondrial genome is tiny by genomic standards but already several kilobytes in a two-bit encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human mitochondrial genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -764,6 +804,8 @@
       "id": "obs:information:entity-human-mitochondrial-genome",
       "name": "Human mitochondrial genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_mitochondrial_DNA",
       "source_count": 2,
       "sources": [
@@ -802,6 +844,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The coronavirus genome fits into only a few kilobytes when treated as a compact four-letter sequence.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SARS-CoV-2 genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -820,6 +863,8 @@
       "id": "obs:information:entity-sars-cov-2-genome",
       "name": "SARS-CoV-2 genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SARS-CoV-2",
       "source_count": 2,
       "sources": [
@@ -858,6 +903,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Commodore 64 famously shipped with 64 kilobytes of RAM, once a whole computer's working memory.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Commodore 64 RAM",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -875,6 +921,8 @@
       "id": "obs:information:entity-commodore-64-ram",
       "name": "Commodore 64 RAM",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Commodore_64",
       "source_count": 2,
       "sources": [
@@ -913,6 +961,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The fixed rope memory that guided Apollo missions held only tens of kilobytes by modern standards.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Apollo Guidance Computer rope memory",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -930,6 +979,8 @@
       "id": "obs:information:entity-apollo-guidance-computer-rope-memory",
       "name": "Apollo Guidance Computer rope memory",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Apollo_Guidance_Computer",
       "source_count": 2,
       "sources": [
@@ -968,6 +1019,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The original Macintosh's defining spec was its 128 kilobytes of RAM.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Macintosh 128K",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -985,6 +1037,8 @@
       "id": "obs:information:entity-macintosh-128k",
       "name": "Macintosh 128K",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Macintosh_128K",
       "source_count": 2,
       "sources": [
@@ -1023,6 +1077,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One second of uncompressed CD-quality stereo audio is already a substantial chunk of data.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One second of CD audio",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1041,6 +1096,8 @@
       "id": "obs:information:scenario-information-one-second-cd-audio",
       "name": "One second of CD audio",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio",
       "source_count": 2,
       "sources": [
@@ -1079,6 +1136,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The genome of E. coli contains millions of base pairs, corresponding to about a megabyte in a compact sequence encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Escherichia coli genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1097,6 +1155,8 @@
       "id": "obs:information:entity-e-coli-genome-information",
       "name": "Escherichia coli genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -1135,6 +1195,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The 1.44 MB floppy disk became a familiar benchmark for tiny removable storage.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "3.5-inch floppy disk",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1152,6 +1213,8 @@
       "id": "obs:information:entity-3-5-inch-floppy-disk",
       "name": "3.5-inch floppy disk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Floppy_disk",
       "source_count": 2,
       "sources": [
@@ -1190,6 +1253,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The baker's yeast genome is a few megabytes in a compact two-bit sequence encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Yeast genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1208,6 +1272,8 @@
       "id": "obs:information:entity-yeast-genome-information",
       "name": "Yeast genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae",
       "source_count": 2,
       "sources": [
@@ -1246,6 +1312,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical compressed song file lands around a few megabytes rather than hundreds of megabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Five-minute MP3 song at 128 kbit/s",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1264,6 +1331,8 @@
       "id": "obs:information:scenario-information-five-minute-mp3-song",
       "name": "Five-minute MP3 song at 128 kbit/s",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/MP3",
       "source_count": 2,
       "sources": [
@@ -1302,6 +1371,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One uncompressed 1080p RGB frame is already several megabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Raw 1080p RGB frame",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1319,6 +1389,8 @@
       "id": "obs:information:scenario-information-raw-1080p-frame",
       "name": "Raw 1080p RGB frame",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/1080p",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1429,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One minute of uncompressed CD audio is already around ten megabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One minute of CD audio",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1375,6 +1448,8 @@
       "id": "obs:information:scenario-information-one-minute-cd-audio",
       "name": "One minute of CD audio",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio",
       "source_count": 2,
       "sources": [
@@ -1413,6 +1488,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single uncompressed 4K RGB frame is roughly twenty-five megabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Raw 4K UHD RGB frame",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1430,6 +1506,8 @@
       "id": "obs:information:scenario-information-raw-4k-frame",
       "name": "Raw 4K UHD RGB frame",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/4K_resolution",
       "source_count": 2,
       "sources": [
@@ -1468,6 +1546,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The nematode C. elegans genome is around 100 million base pairs, or tens of megabytes in a compact encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "C. elegans genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1486,6 +1565,8 @@
       "id": "obs:information:entity-c-elegans-genome-information",
       "name": "C. elegans genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Caenorhabditis_elegans",
       "source_count": 2,
       "sources": [
@@ -1524,6 +1605,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The fruit fly genome occupies a few dozen megabytes in a two-bit sequence representation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fruit fly genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1542,6 +1624,8 @@
       "id": "obs:information:entity-fruit-fly-genome-information",
       "name": "Fruit fly genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drosophila_melanogaster",
       "source_count": 2,
       "sources": [
@@ -1580,6 +1664,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A Zip 100 disk marked the jump from floppy-like storage into the hundred-megabyte range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Zip 100 disk",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1597,6 +1682,8 @@
       "id": "obs:information:entity-zip-100-disk",
       "name": "Zip 100 disk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Zip_drive",
       "source_count": 2,
       "sources": [
@@ -1635,6 +1722,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The rice genome is larger than many animal genomes and lands near one hundred megabytes in a compact encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rice genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1653,6 +1741,8 @@
       "id": "obs:information:entity-rice-genome-information",
       "name": "Rice genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oryza_sativa",
       "source_count": 2,
       "sources": [
@@ -1691,6 +1781,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One second of uncompressed 1080p video at 30 frames per second is already in the hundreds of megabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One second of raw 1080p30 video",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1708,6 +1799,8 @@
       "id": "obs:information:scenario-information-one-second-raw-1080p30",
       "name": "One second of raw 1080p30 video",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/1080p",
       "source_count": 2,
       "sources": [
@@ -1746,6 +1839,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The maize genome sits in the several-hundred-megabyte range in a two-bit sequence encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Maize genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1764,6 +1858,8 @@
       "id": "obs:information:entity-maize-genome-information",
       "name": "Maize genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Maize",
       "source_count": 2,
       "sources": [
@@ -1802,6 +1898,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One hour of uncompressed CD audio is roughly the size of a small disc image.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One hour of CD audio",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1820,6 +1917,8 @@
       "id": "obs:information:scenario-information-one-hour-cd-audio",
       "name": "One hour of CD audio",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio",
       "source_count": 2,
       "sources": [
@@ -1858,6 +1957,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The mouse genome is in the same broad information range as the human genome.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mouse genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1876,6 +1976,8 @@
       "id": "obs:information:entity-mouse-genome-information",
       "name": "Mouse genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mouse_genome",
       "source_count": 2,
       "sources": [
@@ -1914,6 +2016,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A CD-ROM stores hundreds of megabytes, enough for software that once filled entire shelves of floppies.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "CD-ROM",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1931,6 +2034,8 @@
       "id": "obs:information:entity-cd-rom",
       "name": "CD-ROM",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/CD-ROM",
       "source_count": 2,
       "sources": [
@@ -1969,6 +2074,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One human haploid genome is under a gigabyte in a compact four-letter sequence encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human haploid genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -1987,6 +2093,8 @@
       "id": "obs:information:entity-human-haploid-genome-information",
       "name": "Human haploid genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_genome",
       "source_count": 2,
       "sources": [
@@ -2025,6 +2133,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One uncompressed second of 4K video at 60 frames per second is already around one and a half gigabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One second of raw 4K60 video",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2042,6 +2151,8 @@
       "id": "obs:information:scenario-information-one-second-raw-4k60",
       "name": "One second of raw 4K60 video",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/4K_resolution",
       "source_count": 2,
       "sources": [
@@ -2080,6 +2191,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A diploid human genome is about twice the size of a haploid genome, or around 1.6 gigabytes in a compact sequence encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human diploid genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2098,6 +2210,8 @@
       "id": "obs:information:entity-human-diploid-genome-information",
       "name": "Human diploid genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_genome",
       "source_count": 2,
       "sources": [
@@ -2136,6 +2250,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single-layer DVD stores a few gigabytes, enough for a feature-length movie or software release.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DVD",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2153,6 +2268,8 @@
       "id": "obs:information:entity-dvd",
       "name": "DVD",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DVD",
       "source_count": 2,
       "sources": [
@@ -2191,6 +2308,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The lungfish genome is larger still, climbing into double-digit gigabytes in a compact encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lungfish genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2209,6 +2327,8 @@
       "id": "obs:information:entity-lungfish-genome-information",
       "name": "Lungfish genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lungfish",
       "source_count": 2,
       "sources": [
@@ -2247,6 +2367,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single-layer Blu-ray Disc stores 25 gigabytes, comfortably above DVD scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blu-ray Disc",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2264,6 +2385,8 @@
       "id": "obs:information:entity-blu-ray-disc-information",
       "name": "Blu-ray Disc",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blu-ray",
       "source_count": 2,
       "sources": [
@@ -2302,6 +2425,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "OpenAI said GPT-3-powered applications were generating billions of words each day, which corresponds to only tens of gigabytes as plain text.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "All GPT-3 generated text in one day (plain-text proxy)",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2322,6 +2446,8 @@
         "assumption": "6 bytes per word including spaces and punctuation",
         "measurement": "plain-text output proxy"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://openai.com/index/gpt-3-apps/",
       "source_count": 2,
       "sources": [
@@ -2360,6 +2486,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Paris japonica has one of the largest known genomes, tens of gigabytes even in a compact encoding.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Paris japonica genome",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2378,6 +2505,8 @@
       "id": "obs:information:entity-paris-japonica-genome-information",
       "name": "Paris japonica genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paris_japonica",
       "source_count": 2,
       "sources": [
@@ -2416,6 +2545,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A dual-layer Blu-ray Disc doubles the capacity to 50 gigabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dual-layer Blu-ray Disc",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2433,6 +2563,8 @@
       "id": "obs:information:entity-dual-layer-blu-ray-disc",
       "name": "Dual-layer Blu-ray Disc",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blu-ray",
       "source_count": 2,
       "sources": [
@@ -2471,6 +2603,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Triple-layer Ultra HD Blu-ray media reaches 100 gigabytes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "UHD Blu-ray Disc",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2488,6 +2621,8 @@
       "id": "obs:information:entity-uhd-blu-ray-disc",
       "name": "UHD Blu-ray Disc",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ultra_HD_Blu-ray",
       "source_count": 2,
       "sources": [
@@ -2526,6 +2661,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A one-terabyte microSD card compresses enormous storage into something smaller than a fingernail.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "1 TB microSDXC card",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2543,6 +2679,8 @@
       "id": "obs:information:entity-1tb-microsdxc-card",
       "name": "1 TB microSDXC card",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SD_card",
       "source_count": 2,
       "sources": [
@@ -2581,6 +2719,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One modern LTO-9 tape stores eighteen terabytes uncompressed.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "LTO-9 tape",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2598,6 +2737,8 @@
       "id": "obs:information:entity-lto-9-tape",
       "name": "LTO-9 tape",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Linear_Tape-Open",
       "source_count": 2,
       "sources": [
@@ -2636,6 +2777,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At YouTube's reported upload rate, one year of new uploads is already a few tenths of an exabyte even under a modest compression assumption.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year of YouTube uploads (compressed-video proxy)",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2656,6 +2798,8 @@
         "assumption": "2.5 megabits per second average encoded stream",
         "measurement": "compressed video storage proxy"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://blog.youtube/news-and-events/youtube-turns-20/",
       "source_count": 2,
       "sources": [
@@ -2694,6 +2838,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "YouTube says viewers now watch over a billion hours a day on TVs, which corresponds to several exabytes of delivered video even at a modest streaming bitrate.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One day of YouTube viewing on TVs (compressed-video proxy)",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2714,6 +2859,8 @@
         "assumption": "8 megabits per second delivered stream",
         "measurement": "streamed video transfer proxy"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://blog.youtube/inside-youtube/our-big-bets-for-2025/",
       "source_count": 2,
       "sources": [
@@ -2752,6 +2899,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Multiplying a compact human diploid genome by everyone alive today pushes total human genetic sequence information into the exabyte-to-zettabyte gap.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "All human DNA on Earth (compact sequence proxy)",
         "ingest_source": "dataset/raw/curated/information.json",
@@ -2772,6 +2920,8 @@
         "assumption": "1.6 gigabytes per diploid genome",
         "measurement": "compact sequence-information proxy"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.un.org/en/global-issues/population",
       "source_count": 2,
       "sources": [

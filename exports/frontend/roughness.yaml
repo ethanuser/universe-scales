@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Optical flat
     ingest_source: dataset/raw/curated/roughness.json
@@ -88,6 +91,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silicon wafer
     ingest_source: dataset/raw/curated/roughness.json
@@ -134,6 +140,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Polished silicon wafer
     ingest_source: dataset/raw/curated/roughness.json
@@ -179,6 +188,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mirror polish
     ingest_source: dataset/raw/curated/roughness.json
@@ -224,6 +236,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Optical mirror
     ingest_source: dataset/raw/curated/roughness.json
@@ -270,6 +285,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Compact disc surface
     ingest_source: dataset/raw/curated/roughness.json
@@ -315,6 +333,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Polished glass
     ingest_source: dataset/raw/curated/roughness.json
@@ -361,6 +382,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Smartphone glass
     ingest_source: dataset/raw/curated/roughness.json
@@ -406,6 +430,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Machined metal finish
     ingest_source: dataset/raw/curated/roughness.json
@@ -451,6 +478,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ground steel
     ingest_source: dataset/raw/curated/roughness.json
@@ -497,6 +527,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Machined aluminum
     ingest_source: dataset/raw/curated/roughness.json
@@ -543,6 +576,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Frosted glass
     ingest_source: dataset/raw/curated/roughness.json
@@ -588,6 +624,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Paper
     ingest_source: dataset/raw/curated/roughness.json
@@ -634,6 +673,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Printer paper
     ingest_source: dataset/raw/curated/roughness.json
@@ -679,6 +721,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fine sandpaper
     ingest_source: dataset/raw/curated/roughness.json
@@ -724,6 +769,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human skin
     ingest_source: dataset/raw/curated/roughness.json
@@ -769,6 +817,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Unpainted drywall
     ingest_source: dataset/raw/curated/roughness.json
@@ -814,6 +865,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Planed wood
     ingest_source: dataset/raw/curated/roughness.json
@@ -859,6 +913,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human skin
     ingest_source: dataset/raw/curated/roughness.json
@@ -905,6 +962,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Felt fabric
     ingest_source: dataset/raw/curated/roughness.json
@@ -950,6 +1010,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Orange peel texture
     ingest_source: dataset/raw/curated/roughness.json
@@ -995,6 +1058,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 3D-printed plastic
     ingest_source: dataset/raw/curated/roughness.json
@@ -1041,6 +1107,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sanded wood
     ingest_source: dataset/raw/curated/roughness.json
@@ -1087,6 +1156,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cast iron skillet surface
     ingest_source: dataset/raw/curated/roughness.json
@@ -1132,6 +1204,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pumice stone
     ingest_source: dataset/raw/curated/roughness.json
@@ -1177,6 +1252,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concrete sidewalk
     ingest_source: dataset/raw/curated/roughness.json
@@ -1222,6 +1300,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Road asphalt
     ingest_source: dataset/raw/curated/roughness.json
@@ -1268,6 +1349,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tree bark
     ingest_source: dataset/raw/curated/roughness.json
@@ -1313,6 +1397,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Asphalt road
     ingest_source: dataset/raw/curated/roughness.json
@@ -1358,6 +1445,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gravel surface
     ingest_source: dataset/raw/curated/roughness.json
@@ -1403,6 +1493,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cobblestone
     ingest_source: dataset/raw/curated/roughness.json

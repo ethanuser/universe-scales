@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Gravitational-wave detectors are a spectacular far-tail precision anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "LIGO strain sensitivity",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -49,6 +50,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/LIGO",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern clock metrology pushes into the quadrillionth level.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cesium fountain clock",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -105,6 +109,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cesium_standard",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Navigation timing is far more precise than most people realize.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "GPS satellite clock",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -161,6 +168,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/GPS_signals",
       "source_count": 2,
       "sources": [
@@ -199,6 +208,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Atomic frequency standards quickly jump many orders of magnitude past everyday clocks.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubidium frequency standard",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -217,6 +227,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rubidium_standard",
       "source_count": 2,
       "sources": [
@@ -255,6 +267,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Analytical chemistry often works in the ppb regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Parts-per-billion laboratory chemical assay",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -273,6 +286,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Parts-per_notation",
       "source_count": 2,
       "sources": [
@@ -311,6 +326,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Chip fabrication lives deep in the precision tail.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Semiconductor overlay accuracy",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -328,6 +344,8 @@
       "id": "obs:precision:scenario-precision-semiconductor-overlay-accuracy",
       "name": "Semiconductor overlay accuracy",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Photolithography",
       "source_count": 2,
       "sources": [
@@ -366,6 +384,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Geodesy pushes positioning into the sub-ppm range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Survey-grade GNSS baseline",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -383,6 +402,8 @@
       "id": "obs:precision:scenario-precision-survey-grade-gnss-baseline",
       "name": "Survey-grade GNSS baseline",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Real-time_kinematic_positioning",
       "source_count": 2,
       "sources": [
@@ -421,6 +442,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dimensional metrology gets surprisingly sharp with simple tools.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Micrometer screw gauge on a 10 mm shaft",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -438,6 +460,8 @@
       "id": "obs:precision:scenario-precision-micrometer-screw-gauge-on-a-10-mm-shaft",
       "name": "Micrometer screw gauge on a 10 mm shaft",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Micrometer_(device)",
       "source_count": 2,
       "sources": [
@@ -476,6 +500,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Surveying is a good bridge between everyday and metrology precision.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Surveyor total-station distance measurement",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -493,6 +518,8 @@
       "id": "obs:precision:scenario-precision-surveyor-total-station-distance-measurement",
       "name": "Surveyor total-station distance measurement",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Total_station",
       "source_count": 2,
       "sources": [
@@ -531,6 +558,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Quartz timekeeping lives in the tens-of-parts-per-million band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quartz wristwatch monthly rate",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -548,6 +576,8 @@
       "id": "obs:precision:scenario-precision-quartz-wristwatch-monthly-rate",
       "name": "Quartz wristwatch monthly rate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quartz_clock",
       "source_count": 2,
       "sources": [
@@ -586,6 +616,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Satellite navigation can be coarse locally but impressive over long baselines.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Civilian GPS on a 100 km trip",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -603,6 +634,8 @@
       "id": "obs:precision:scenario-precision-civilian-gps-on-a-100-km-trip",
       "name": "Civilian GPS on a 100 km trip",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Global_Positioning_System",
       "source_count": 2,
       "sources": [
@@ -641,6 +674,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Routine machining moves into the hundred-ppm regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Machine-shop milled part",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -658,6 +692,8 @@
       "id": "obs:precision:scenario-precision-machine-shop-milled-part",
       "name": "Machine-shop milled part",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Machining",
       "source_count": 2,
       "sources": [
@@ -696,6 +732,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hand tools can already beat the 10^-3 regime comfortably.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tape measure on a 2 m board",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -713,6 +750,8 @@
       "id": "obs:precision:scenario-precision-tape-measure-on-a-2-m-board",
       "name": "Tape measure on a 2 m board",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tape_measure",
       "source_count": 2,
       "sources": [
@@ -751,6 +790,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sports timing gives a nice intuitive millesimal-scale example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Stopwatch timing a 100 m sprint",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -768,6 +808,8 @@
       "id": "obs:precision:scenario-precision-stopwatch-timing-a-100-m-sprint",
       "name": "Stopwatch timing a 100 m sprint",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Stopwatch",
       "source_count": 2,
       "sources": [
@@ -806,6 +848,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Digital scales make sub-percent precision routine at home.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Digital bathroom scale on a 70 kg person",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -823,6 +866,8 @@
       "id": "obs:precision:scenario-precision-digital-bathroom-scale-on-a-70-kg-person",
       "name": "Digital bathroom scale on a 70 kg person",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Weighing_scale",
       "source_count": 2,
       "sources": [
@@ -861,6 +906,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Basic electronics measurement quickly reaches the 10^-3 regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Digital multimeter on a 5 V USB rail",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -878,6 +924,8 @@
       "id": "obs:precision:scenario-precision-digital-multimeter-on-a-5-v-usb-rail",
       "name": "Digital multimeter on a 5 V USB rail",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Multimeter",
       "source_count": 2,
       "sources": [
@@ -916,6 +964,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Recipe-scale precision is a good everyday millesimal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kitchen scale measuring 500 g of flour",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -933,6 +982,8 @@
       "id": "obs:precision:scenario-precision-kitchen-scale-measuring-500-g-of-flour",
       "name": "Kitchen scale measuring 500 g of flour",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Weighing_scale",
       "source_count": 2,
       "sources": [
@@ -971,6 +1022,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mechanical scale is noticeably coarse but still useful.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Analog bathroom scale",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -989,6 +1041,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Weighing_scale",
       "source_count": 2,
       "sources": [
@@ -1027,6 +1081,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Driving instrumentation is useful but relatively coarse.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car speedometer at highway speed",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -1045,6 +1100,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Speedometer",
       "source_count": 2,
       "sources": [
@@ -1083,6 +1140,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Home medical devices live in the percent-level precision band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Consumer blood pressure cuff",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -1101,6 +1159,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sphygmomanometer",
       "source_count": 2,
       "sources": [
@@ -1139,6 +1199,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Daily weather forecasts are good but far from metrology-grade.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Weather forecast daily high temperature",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -1157,6 +1218,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Weather_forecasting",
       "source_count": 2,
       "sources": [
@@ -1195,6 +1258,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Room-size judgments are a natural everyday precision example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Eyeballing the width of a room",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -1213,6 +1277,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Estimation",
       "source_count": 2,
       "sources": [
@@ -1251,6 +1317,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human estimation gets noisy quickly without counting aids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Eyeballing a crowd size",
         "ingest_source": "dataset/raw/curated/precision.json",
@@ -1269,6 +1336,8 @@
       "qualifiers": {
         "measurement": "fractional uncertainty"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Estimation",
       "source_count": 2,
       "sources": [

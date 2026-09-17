@@ -32,6 +32,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A dozen is one of the most common everyday counting bundles.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One dozen objects",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -48,6 +49,8 @@
       "id": "obs:counts:scenario-counts-one-dozen",
       "name": "One dozen objects",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dozen",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Triplets over a four-letter DNA alphabet yield sixty-four codons.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DNA codons",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -103,6 +107,8 @@
       "id": "obs:counts:scenario-counts-dna-codons",
       "name": "DNA codons",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Genetic_code",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An adult human skeleton contains just over two hundred bones.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bones in an adult human body",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -157,6 +164,8 @@
       "id": "obs:counts:entity-adult-human-bones-count",
       "name": "Bones in an adult human body",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_skeleton",
       "source_count": 2,
       "sources": [
@@ -195,6 +204,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The famous model nematode is small enough that its adult somatic cell count is fixed and countable.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Somatic cells in an adult C. elegans",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -211,6 +221,8 @@
       "id": "obs:counts:entity-c-elegans-somatic-cells",
       "name": "Somatic cells in an adult C. elegans",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Caenorhabditis_elegans",
       "source_count": 2,
       "sources": [
@@ -249,6 +261,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Even under dark skies, the unaided eye only gets access to a few thousand stars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Naked-eye stars across the whole sky",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -265,6 +278,8 @@
       "id": "obs:counts:scenario-counts-naked-eye-stars",
       "name": "Naked-eye stars across the whole sky",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Naked_eye",
       "source_count": 2,
       "sources": [
@@ -303,6 +318,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human mitochondrial DNA is tiny compared with the nuclear genome but still spans over sixteen thousand base pairs.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Base pairs in the human mitochondrial genome",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -319,6 +335,8 @@
       "id": "obs:counts:entity-human-mitochondrial-genome-base-pairs",
       "name": "Base pairs in the human mitochondrial genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_mitochondrial_DNA",
       "source_count": 2,
       "sources": [
@@ -357,6 +375,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The human genome contains only on the order of twenty thousand protein-coding genes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human protein-coding genes",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -373,6 +392,8 @@
       "id": "obs:counts:entity-human-protein-coding-genes-count",
       "name": "Human protein-coding genes",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_genome",
       "source_count": 2,
       "sources": [
@@ -411,6 +432,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single classic religious text already contains hundreds of thousands of words.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Words in the King James Bible",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -427,6 +449,8 @@
       "id": "obs:counts:entity-king-james-bible-words",
       "name": "Words in the King James Bible",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/King_James_Version",
       "source_count": 2,
       "sources": [
@@ -465,6 +489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Even the tiny 2x2 cube already has millions of reachable states.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Reachable 2x2 Rubik's Cube states",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -481,6 +506,8 @@
       "id": "obs:counts:scenario-counts-pocket-cube-states",
       "name": "Reachable 2x2 Rubik's Cube states",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pocket_Cube",
       "source_count": 2,
       "sources": [
@@ -519,6 +546,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common bacterium already carries several million base pairs of DNA.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Base pairs in the E. coli genome",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -535,6 +563,8 @@
       "id": "obs:counts:entity-e-coli-genome-base-pairs",
       "name": "Base pairs in the E. coli genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -573,6 +603,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Baker's yeast jumps into the tens of millions of base pairs.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Base pairs in the yeast genome",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -589,6 +620,8 @@
       "id": "obs:counts:entity-yeast-genome-base-pairs",
       "name": "Base pairs in the yeast genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae",
       "source_count": 2,
       "sources": [
@@ -627,6 +660,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single 8K image pushes into the tens of millions of pixels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pixels in an 8K UHD frame",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -644,6 +678,8 @@
       "id": "obs:counts:scenario-counts-8k-pixels",
       "name": "Pixels in an 8K UHD frame",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/8K_resolution",
       "source_count": 2,
       "sources": [
@@ -682,6 +718,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The haploid human genome contains about 3.2 billion base pairs.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Base pairs in the human genome",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -698,6 +735,8 @@
       "id": "obs:counts:entity-human-genome-base-pairs-count",
       "name": "Base pairs in the human genome",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_genome",
       "source_count": 2,
       "sources": [
@@ -736,6 +775,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The entire IPv4 internet only has a few billion possible addresses.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IPv4 addresses",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -753,6 +793,8 @@
       "id": "obs:counts:scenario-counts-ipv4-addresses",
       "name": "IPv4 addresses",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IPv4",
       "source_count": 2,
       "sources": [
@@ -791,6 +833,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The current human population is a bit over eight billion people.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "World population",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -807,6 +850,8 @@
       "id": "obs:counts:entity-world-population-2025",
       "name": "World population",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.un.org/en/global-issues/population",
       "source_count": 2,
       "sources": [
@@ -845,6 +890,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "YouTube says more than twenty billion videos have been uploaded to the platform.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "YouTube videos uploaded",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -861,6 +907,8 @@
       "id": "obs:counts:entity-youtube-uploaded-videos-count",
       "name": "YouTube videos uploaded",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://blog.youtube/news-and-events/youtube-turns-20/",
       "source_count": 2,
       "sources": [
@@ -899,6 +947,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The human brain contains on the order of eighty-six billion neurons.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neurons in the human brain",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -915,6 +964,8 @@
       "id": "obs:counts:entity-human-brain-neurons-count",
       "name": "Neurons in the human brain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_brain",
       "source_count": 2,
       "sources": [
@@ -953,6 +1004,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Our galaxy contains roughly one hundred billion stars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Stars in the Milky Way",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -969,6 +1021,8 @@
       "id": "obs:counts:entity-milky-way-stars-count",
       "name": "Stars in the Milky Way",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -1007,6 +1061,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The sliding 15-puzzle already has over ten trillion reachable states.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Reachable 15-puzzle states",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1024,6 +1079,8 @@
       "id": "obs:counts:scenario-counts-15-puzzle-states",
       "name": "Reachable 15-puzzle states",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/15_puzzle",
       "source_count": 2,
       "sources": [
@@ -1062,6 +1119,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A human body contains on the order of tens of trillions of cells.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cells in a human body",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1078,6 +1136,8 @@
       "id": "obs:counts:entity-human-body-cells-count",
       "name": "Cells in a human body",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body",
       "source_count": 2,
       "sources": [
@@ -1116,6 +1176,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The gut microbiome alone contains tens of trillions of bacterial cells.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bacteria in the human gut",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1132,6 +1193,8 @@
       "id": "obs:counts:entity-human-gut-bacteria-count",
       "name": "Bacteria in the human gut",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gut_microbiota",
       "source_count": 2,
       "sources": [
@@ -1170,6 +1233,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brain connectivity climbs to roughly one hundred trillion synapses.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Synapses in the human brain",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1186,6 +1250,8 @@
       "id": "obs:counts:entity-human-brain-synapses-count",
       "name": "Synapses in the human brain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Synapse",
       "source_count": 2,
       "sources": [
@@ -1224,6 +1290,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 48-bit hardware address space already covers hundreds of trillions of identifiers.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "48-bit MAC addresses",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1241,6 +1308,8 @@
       "id": "obs:counts:scenario-counts-mac-address-space",
       "name": "48-bit MAC addresses",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/MAC_address",
       "source_count": 2,
       "sources": [
@@ -1279,6 +1348,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "DES is historically important partly because its 56-bit key space became brute-forceable.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DES key space",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1296,6 +1366,8 @@
       "id": "obs:counts:scenario-counts-des-key-space",
       "name": "DES key space",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Data_Encryption_Standard",
       "source_count": 2,
       "sources": [
@@ -1334,6 +1406,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A full 64-bit value space spans about 18 quintillion possibilities.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "64-bit integer values",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1351,6 +1424,8 @@
       "id": "obs:counts:scenario-counts-64-bit-values",
       "name": "64-bit integer values",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/64-bit_computing",
       "source_count": 2,
       "sources": [
@@ -1389,6 +1464,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The ordinary 3x3 Rubik's Cube has over forty-three quintillion reachable positions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Reachable Rubik's Cube positions",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1405,6 +1481,8 @@
       "id": "obs:counts:scenario-counts-rubiks-cube-positions",
       "name": "Reachable Rubik's Cube positions",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rubik%27s_Cube_group",
       "source_count": 2,
       "sources": [
@@ -1443,6 +1521,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Even a tiny drop of water contains around a sextillion molecules.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molecules in a drop of water",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1463,6 +1542,8 @@
         "assumption": "drop volume of 0.05 milliliters",
         "measurement": "molecules in a representative water drop"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drop_(volume)",
       "source_count": 2,
       "sources": [
@@ -1501,6 +1582,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A standard Sudoku already allows sextillions of completed grids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sudoku solution grids",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1517,6 +1599,8 @@
       "id": "obs:counts:scenario-counts-sudoku-solution-grids",
       "name": "Sudoku solution grids",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mathematics_of_Sudoku",
       "source_count": 2,
       "sources": [
@@ -1555,6 +1639,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The observable universe is estimated to contain around two sextillion stars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Stars in the observable universe",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1571,6 +1656,8 @@
       "id": "obs:counts:entity-observable-universe-stars-count",
       "name": "Stars in the observable universe",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Observable_universe",
       "source_count": 2,
       "sources": [
@@ -1609,6 +1696,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Multiplying one human body's cells by all living humans produces a count in the hundreds of sextillions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human body cells across all living humans",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1626,6 +1714,8 @@
       "id": "obs:counts:scenario-counts-all-human-cells-alive",
       "name": "Human body cells across all living humans",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.un.org/en/global-issues/population",
       "source_count": 2,
       "sources": [
@@ -1664,6 +1754,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "By definition, 12 grams of carbon-12 contains one mole of atoms.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atoms in 12 grams of carbon-12",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1681,6 +1772,8 @@
       "id": "obs:counts:scenario-counts-atoms-12g-carbon-12",
       "name": "Atoms in 12 grams of carbon-12",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Avogadro_constant",
       "source_count": 2,
       "sources": [
@@ -1719,6 +1812,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A liter of water contains on the order of ten septillion molecules.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molecules in one liter of water",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1736,6 +1830,8 @@
       "id": "obs:counts:scenario-counts-molecules-liter-water",
       "name": "Molecules in one liter of water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://physics.nist.gov/cgi-bin/cuu/Value?na",
       "source_count": 2,
       "sources": [
@@ -1774,6 +1870,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "UUIDv4 has 122 random bits, giving a huge but standardized identifier space.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "UUIDv4 values",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1791,6 +1888,8 @@
       "id": "obs:counts:scenario-counts-uuidv4-values",
       "name": "UUIDv4 values",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Universally_unique_identifier",
       "source_count": 2,
       "sources": [
@@ -1829,6 +1928,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "IPv6 expands the internet address space to about 3.4 x 10^38 possibilities.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IPv6 addresses",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1846,6 +1946,8 @@
       "id": "obs:counts:scenario-counts-ipv6-addresses",
       "name": "IPv6 addresses",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IPv6",
       "source_count": 2,
       "sources": [
@@ -1884,6 +1986,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth's atmosphere contains on the order of 10^44 molecules.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molecules in Earth's atmosphere",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1901,6 +2004,8 @@
       "id": "obs:counts:entity-earth-atmosphere-molecules-count",
       "name": "Molecules in Earth's atmosphere",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
       "source_count": 2,
       "sources": [
@@ -1939,6 +2044,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "SHA-1's 160-bit output space contains about 10^48 possible digests.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Possible SHA-1 digests",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -1956,6 +2062,8 @@
       "id": "obs:counts:scenario-counts-sha-1-digests",
       "name": "Possible SHA-1 digests",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SHA-1",
       "source_count": 2,
       "sources": [
@@ -1994,6 +2102,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth contains about 10^50 atoms, making planetary matter feel less abstract.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atoms in Earth",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2010,6 +2119,8 @@
       "id": "obs:counts:entity-earth-atoms-count",
       "name": "Atoms in Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -2048,6 +2159,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun contains about 10^57 nucleons, a useful stellar particle-count anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nucleons in the Sun",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2065,6 +2177,8 @@
       "id": "obs:counts:entity-sun-nucleons-count",
       "name": "Nucleons in the Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2103,6 +2217,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "AES-192 has a standardized 192-bit key space used in modern cryptography.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "AES-192 key space",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2120,6 +2235,8 @@
       "id": "obs:counts:scenario-counts-aes-192-key-space",
       "name": "AES-192 key space",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard",
       "source_count": 2,
       "sources": [
@@ -2158,6 +2275,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A shuffled deck has so many possible orders that almost every real shuffle has likely never occurred before.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Orderings of a 52-card deck",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2175,6 +2293,8 @@
       "id": "obs:counts:scenario-counts-deck-orderings",
       "name": "Orderings of a 52-card deck",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Standard_52-card_deck",
       "source_count": 2,
       "sources": [
@@ -2213,6 +2333,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Converting the Milky Way's baryonic mass into nucleons gives a count around 10^68.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Baryons in the Milky Way",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2229,6 +2350,8 @@
       "id": "obs:counts:entity-milky-way-baryons-count",
       "name": "Baryons in the Milky Way",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -2267,6 +2390,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 256-bit hash output space contains about 10^77 possible digests.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Possible SHA-256 digests",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2284,6 +2408,8 @@
       "id": "obs:counts:scenario-counts-sha-256-digests",
       "name": "Possible SHA-256 digests",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SHA-2",
       "source_count": 2,
       "sources": [
@@ -2322,6 +2448,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A classic rough estimate puts the observable universe near 10^80 atoms.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atoms in the observable universe",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2338,6 +2465,8 @@
       "id": "obs:counts:entity-observable-universe-atoms-count",
       "name": "Atoms in the observable universe",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Observable_universe",
       "source_count": 2,
       "sources": [
@@ -2376,6 +2505,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Including photons, neutrinos, and baryons gives a rough total near 10^90 particles.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Total particles in the observable universe",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2392,6 +2522,8 @@
       "id": "obs:counts:entity-observable-universe-total-particles-count",
       "name": "Total particles in the observable universe",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Observable_universe",
       "source_count": 2,
       "sources": [
@@ -2430,6 +2562,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "SHA-384 expands digest space to roughly 10^115 possibilities.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Possible SHA-384 digests",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2447,6 +2580,8 @@
       "id": "obs:counts:scenario-counts-sha-384-digests",
       "name": "Possible SHA-384 digests",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SHA-2",
       "source_count": 2,
       "sources": [
@@ -2485,6 +2620,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth's volume corresponds to about 10^125 Planck-volume cells.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Planck volumes in Earth",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2502,6 +2638,8 @@
       "id": "obs:counts:scenario-counts-planck-volumes-earth",
       "name": "Planck volumes in Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -2540,6 +2678,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun's volume corresponds to about 10^131 Planck-volume cells.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Planck volumes in the Sun",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2557,6 +2696,8 @@
       "id": "obs:counts:scenario-counts-planck-volumes-sun",
       "name": "Planck volumes in the Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2595,6 +2736,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 512-bit hash output space is already around 10^154 possibilities.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Possible SHA-512 digests",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2612,6 +2754,8 @@
       "id": "obs:counts:scenario-counts-sha-512-digests",
       "name": "Possible SHA-512 digests",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SHA-2",
       "source_count": 2,
       "sources": [
@@ -2650,6 +2794,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The P-521 elliptic-curve private-key space is on the order of 2^521, near 10^157.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "NIST P-521 private keys",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2667,6 +2812,8 @@
       "id": "obs:counts:scenario-counts-nist-p-521-private-keys",
       "name": "NIST P-521 private keys",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm",
       "source_count": 2,
       "sources": [
@@ -2705,6 +2852,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The game of Go explodes into an estimated 2.08 x 10^170 legal positions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Legal Go positions",
         "ingest_source": "dataset/raw/curated/counts.json",
@@ -2721,6 +2869,8 @@
       "id": "obs:counts:scenario-counts-legal-go-positions",
       "name": "Legal Go positions",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Go_and_mathematics",
       "source_count": 2,
       "sources": [

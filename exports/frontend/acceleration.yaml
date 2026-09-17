@@ -63,6 +63,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Accelerating Universe (Dark Energy)
@@ -105,6 +108,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Pioneer Anomaly (extra Sunward drift)
@@ -147,6 +153,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Solar Sail (IKAROS spacecraft)
@@ -189,6 +198,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Moon's Gravity at Earth
@@ -231,6 +243,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Ion Engine Thrust (Deep-Space Ion Thruster)
@@ -273,6 +288,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Phobos Surface Gravity
@@ -315,6 +333,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Earth's Orbit (Centripetal around Sun)
@@ -357,6 +378,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Earth's Rotation at Equator
@@ -399,6 +423,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Enceladus Surface Gravity
@@ -441,6 +468,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Ceres Surface Gravity
@@ -483,6 +513,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Europa Surface Gravity
@@ -525,6 +558,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Moon Surface Gravity
@@ -567,6 +603,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Mars Surface Gravity
@@ -609,6 +648,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Olympic Sprinter from Starting Blocks
@@ -651,6 +693,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Venus Surface Gravity
@@ -693,6 +738,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Earth Surface Gravity (1 g)
@@ -735,6 +783,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Cheetah's Burst Acceleration
@@ -777,6 +828,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Falcon 9 Landing Burn Deceleration
@@ -819,6 +873,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Jupiter Surface Gravity
@@ -861,6 +918,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Saturn V Rocket (Launch Acceleration)
@@ -903,6 +963,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Formula 1 Cornering
@@ -945,6 +1008,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Top Fuel Dragster
@@ -987,6 +1053,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Fighter Jet Turn (High-G Maneuver)
@@ -1029,6 +1098,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Sun's Surface Gravity
@@ -1071,6 +1143,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Rocket Sled Deceleration (Col. Stapp, 1954)
@@ -1113,6 +1188,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Froghopper Jump (Champion Leaper)
@@ -1155,6 +1233,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Woodpecker Pecking Deceleration
@@ -1197,6 +1278,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Baseball Bat Impact (Ball Acceleration)
@@ -1239,6 +1323,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Artillery Shell Launch
@@ -1281,6 +1368,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Rifle Bullet in Barrel
@@ -1323,6 +1413,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: White Dwarf Surface Gravity
@@ -1365,6 +1458,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Fungal Spore Launch (Pilobolus)
@@ -1407,6 +1503,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Jellyfish Stinger (Nematocyst)
@@ -1449,6 +1548,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Neutron Star Surface Gravity
@@ -1493,6 +1595,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Large Hadron Collider (Proton Beam)
@@ -1535,6 +1640,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Schwinger Limit (Critical E-field)
@@ -1577,6 +1685,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/acceleration.yaml
     legacy_item_name: Planck Acceleration (Theoretical Maximum)

@@ -39,6 +39,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid helium
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -84,6 +87,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid helium
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -130,6 +136,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid hydrogen
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -175,6 +184,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid nitrogen
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -221,6 +233,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid oxygen
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -266,6 +281,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hexane
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -311,6 +329,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silicone oil
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -356,6 +377,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Isopropyl alcohol
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -401,6 +425,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gasoline
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -446,6 +473,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ethanol
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -492,6 +522,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Methanol
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -537,6 +570,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ethanol
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -582,6 +618,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Acetone
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -627,6 +666,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lung surfactant
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -672,6 +714,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soap solution
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -717,6 +762,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Diesel fuel
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -762,6 +810,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Kerosene
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -807,6 +858,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Benzene
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -852,6 +906,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Olive oil
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -897,6 +954,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vegetable oil
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -943,6 +1003,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid bromine
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -988,6 +1051,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Beer
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1033,6 +1099,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wine
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1078,6 +1147,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milk
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1123,6 +1195,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid sulfur
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1168,6 +1243,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood serum
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1213,6 +1291,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water at boiling point
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1258,6 +1339,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Glycerol
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1303,6 +1387,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Urine
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1348,6 +1435,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water at room temperature
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1393,6 +1483,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1439,6 +1532,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seawater
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1484,6 +1580,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid sodium
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1529,6 +1628,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Molten glass
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1574,6 +1676,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Molten lead
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1619,6 +1724,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mercury
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1664,6 +1772,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Molten tin
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1709,6 +1820,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid gallium
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1754,6 +1868,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid zinc
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1799,6 +1916,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Molten aluminum
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1844,6 +1964,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Molten silver
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1889,6 +2012,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Molten copper
     ingest_source: dataset/raw/curated/surface-tension.json
@@ -1935,6 +2061,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Molten iron
     ingest_source: dataset/raw/curated/surface-tension.json

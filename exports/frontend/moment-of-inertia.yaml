@@ -35,6 +35,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dust mote sphere
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -80,6 +83,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ping-pong ball
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -126,6 +132,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hard-drive platter
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -171,6 +180,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Golf ball
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -217,6 +229,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: CD about its center
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -262,6 +277,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Yo-yo
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -307,6 +325,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Smartphone about center
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -353,6 +374,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soccer ball
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -399,6 +423,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Solid sphere
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -444,6 +471,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Solid disk
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -489,6 +519,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Basketball
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -535,6 +568,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hollow sphere
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -580,6 +616,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thin ring
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -625,6 +664,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bowling ball
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -671,6 +713,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Broomstick
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -719,6 +764,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thin rod about center
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -764,6 +812,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle wheel
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -809,6 +860,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Baseball bat about handle
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -854,6 +908,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Engine flywheel
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -899,6 +956,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thin rod about end
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -944,6 +1004,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Figure skater with arms in
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -991,6 +1054,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Motorcycle wheel
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1037,6 +1103,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car wheel
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1082,6 +1151,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Door about its hinge
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1127,6 +1199,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Figure skater
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1173,6 +1248,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Person on swivel chair
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1218,6 +1296,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice skater with arms out
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1263,6 +1344,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Truck wheel
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1309,6 +1393,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Merry-go-round
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1354,6 +1441,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1401,6 +1491,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Helicopter rotor
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1446,6 +1539,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: International Space Station
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1491,6 +1587,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon about its spin axis
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1536,6 +1635,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1582,6 +1684,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth about its spin axis
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1627,6 +1732,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neutron star
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1672,6 +1780,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jupiter
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1718,6 +1829,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun
     ingest_source: dataset/raw/curated/moment-of-inertia.json
@@ -1764,6 +1878,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun about its spin axis
     ingest_source: dataset/raw/curated/moment-of-inertia.json

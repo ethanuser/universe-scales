@@ -1,0 +1,348 @@
+/* Dimension-specific views share the existing site's colors and square controls. */
+[hidden] {
+    display: none !important;
+}
+.view-switch {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 18px;
+}
+.experience-button,
+.view-switch button,
+.experience-select {
+    font: inherit;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 9px 14px;
+    min-height: 44px;
+}
+.experience-button,
+.view-switch button {
+    cursor: pointer;
+}
+.experience-button:hover:not(:disabled), .view-switch button:hover, .experience-select:hover {
+    border-color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color) 9%, var(--bg-primary));
+}
+.experience-button:active:not(:disabled) { transform: translateY(1px); }
+.experience-button:disabled { opacity: 0.4; cursor: default; }
+.experience-info { position: relative; }
+.experience-info summary {
+    display: grid; place-items: center; list-style: none;
+    width: 40px; height: 40px; border: 1px solid var(--border-color);
+    border-radius: 4px; cursor: pointer; font-family: Georgia, serif;
+}
+.experience-info[open] { position: static; }
+.experience-info[open] .experience-caption { max-width: 700px; margin: 12px 0; min-height: 0; }
+.experience-info[open] { flex-basis: 100%; }
+.experience-info summary:hover { border-color: var(--accent-color); }
+.experience-stage-frame { position: relative; min-height: 0; overflow: hidden; }
+.experience-stage-frame, .experience-stage-frame * { user-select: none; -webkit-user-select: none; -webkit-user-drag: none; }
+.experience-stage-frame[tabindex] { cursor: grab; }
+.experience-stage-frame.is-dragging { cursor: grabbing; }
+.experience-corner-ruler {
+    position: absolute; left: 12px; bottom: 10px; z-index: 2;
+    display: flex; flex-direction: column; gap: 4px;
+    font-size: 12px; line-height: 1.25; pointer-events: none;
+}
+.experience-corner-ruler > span:first-child { display: block; height: 7px; border: solid currentColor; border-width: 0 1px 1px; }
+.experience-model-stage { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.experience-journey-strip { display: flex; gap: 6px; overflow-x: auto; padding: 8px 12px; }
+.experience-journey-strip button { white-space: nowrap; font-size: 0.78rem; padding: 6px 10px; }
+.experience-journey-strip [aria-current='true'] { border-color: var(--accent-color); color: var(--accent-color); }
+.view-switch [aria-pressed='true'] {
+    color: white;
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.experience-button:focus-visible,
+.view-switch button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+.experience {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.experience-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+.experience-picker {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+    min-width: 200px;
+}
+.experience-select {
+    width: 100%;
+    min-width: 0;
+    max-width: 520px;
+}
+.experience-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+}
+.experience-visual { display: flex; flex-direction: column; }
+.experience-visual {
+    min-width: 0;
+    background: var(--bg-secondary);
+}
+.experience-stage {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    min-height: 280px;
+    color: var(--text-primary);
+}
+.experience-stage text,
+.angle-diagram text {
+    fill: currentColor;
+    font: 17px sans-serif;
+}
+.experience-stage .object-label {
+    font-size: 16px;
+    font-weight: 600;
+}
+.experience-object {
+    cursor: pointer;
+    outline: none;
+}
+.experience-object:focus-visible > rect:first-child {
+    stroke: var(--accent-color);
+    stroke-width: 4;
+}
+.experience-stage .shape {
+    fill: var(--accent-color);
+    fill-opacity: 0.18;
+    stroke: var(--accent-color);
+    stroke-width: 1.5;
+}
+.experience-stage image {
+    pointer-events: none;
+}
+.experience-caption {
+    padding: 0 20px 16px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    min-height: 3.5em;
+}
+.experience-settings {
+    display: grid;
+    gap: 10px;
+    padding: 12px 16px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    background: var(--bg-primary);
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
+    border-top: 1px solid var(--border-color);
+}
+.experience-slider__label {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+.experience-slider output {
+    color: var(--accent-color);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+.experience-slider input {
+    width: 100%;
+    min-height: 32px;
+    accent-color: var(--accent-color);
+    cursor: pointer;
+}
+.experience-detail {
+    padding: 22px;
+    border-left: 1px solid var(--border-color);
+    max-height: min(590px, 66dvh);
+    overflow-y: auto;
+}
+.experience-detail h2 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+.experience-detail h3 {
+    font-size: 1rem;
+    margin: 18px 0 8px;
+}
+.experience-detail p {
+    margin: 10px 0;
+}
+.experience-detail-image {
+    display: block;
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+.experience-comparison {
+    display: none;
+}
+.experience-detail a,
+.experience-attribution a {
+    color: var(--accent-color);
+}
+.experience-value {
+    color: var(--accent-color);
+    margin-bottom: 16px;
+}
+.experience-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+.experience-calibration {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.experience-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.85rem;
+}
+.experience-field input {
+    width: 150px;
+    font: inherit;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+.experience-ruler {
+    width: 100px;
+    height: 12px;
+    border: solid currentColor;
+    border-width: 0 2px 2px;
+    margin: 12px 0;
+}
+.experience-live {
+    padding: 0 20px 12px;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+.experience-attribution {
+    font-size: 0.8rem;
+    padding: 0 20px 12px;
+}
+.experience-audio {
+    overflow-wrap: anywhere;
+    padding: 12px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 16px;
+}
+
+.experience-audio label {
+    display: block;
+    margin: 0.75rem 0;
+}
+
+.experience-audio input[type="number"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
+}
+
+.experience-audio summary {
+    cursor: pointer;
+    padding: 0.75rem 0;
+    min-height: 44px;
+    box-sizing: border-box;
+}
+.experience-audio .experience-note {
+    margin: 8px 0;
+}
+.angle-diagram {
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin: 12px 0;
+    color: var(--text-primary);
+}
+body[data-experience='interactive'] #sticky-top-axis {
+    display: none !important;
+}
+body[data-experience='interactive'] .zoom-controls {
+    display: none !important;
+}
+@media (max-width: 1000px) {
+    .experience-body {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .experience-detail {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        max-height: 400px;
+    }
+}
+@media (max-width: 600px) {
+    .experience-toolbar {
+        padding: 10px;
+        gap: 6px;
+    }
+    .experience-picker {
+        flex-basis: 100%;
+    }
+    .experience-stage {
+        min-height: 210px;
+    }
+    .experience-stage text { font-size: 22px; }
+    .experience-comparison {
+        display: flex;
+        gap: 8px;
+        padding: 0 12px 12px;
+    }
+    .experience-comparison button {
+        flex: 1;
+        min-width: 0;
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+    .experience-settings {
+        padding: 12px;
+    }
+    .experience-slider__label {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+}
+
+body[data-experience='interactive'] .header { margin-bottom: 6px; padding: 10px 0; }
+body[data-experience='interactive'] .header h1 { font-size: 2rem; line-height: 1.2; margin-bottom: 4px; }
+body[data-experience='interactive'] .subtitle { margin-bottom: 12px; font-size: 0.95rem; }
+body[data-experience='interactive'] .dimension-description { font-size: 0.85rem; line-height: 1.5; }
+body[data-experience='interactive'] .experience-stage { min-height: 0; height: clamp(200px, calc(100dvh - 460px), 460px); aspect-ratio: auto; }
+.experience--spatial .experience-toolbar > .experience-button { display: none; }
+.experience--spatial .experience-toolbar { padding: 8px 14px; }
+.experience--spatial .experience-picker { max-width: 440px; margin-right: auto; }
+.experience--spatial .experience-settings { border-top: none; }
+.experience--spatial .experience-comparison { display: none !important; }
+body[data-experience='interactive'] .view-switch { margin-bottom: 10px; }
+body[data-experience='interactive'] .experience-live { margin: 0; padding: 8px 16px; min-height: 1.4em; font-size: 0.8rem; }
+@media (max-width: 700px) {
+    .experience-settings { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 8px; gap: 8px; }
+    .experience-settings .experience-slider { grid-column: 1 / -1; }
+    .experience-toolbar { padding: 8px; }
+    .experience-button { padding: 7px 10px; }
+    .experience-detail { max-height: 34dvh; padding: 14px; }
+    .experience-detail-image { display: none; }
+    body[data-experience='interactive'] .experience-stage { height: 31dvh; min-height: 180px; }
+}

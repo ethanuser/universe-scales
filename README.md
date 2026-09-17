@@ -5,13 +5,17 @@ An interactive visualization of the universe's dimensions, from quantum to cosmi
 ## Features
 
 - **Interactive Plots**: Visualize items across many dimensions on logarithmic or linear scales, depending on the quantity
+- **Dimension Experiences**: Default to size, area, volume, count, motion, cycle, brightness, or viewing-angle explorers where available; switch back to the plot, with a remembered choice per dimension
+- **Shared Simulation Controls**: Zoom, time scale, pause/restart, rotatable equivalent volumes, and manually calibrated viewing angles
+- **Sound Previews**: Licensed real recordings, relative-dB playback, optional measured calibration, and background-music muting. Missing recordings remain unavailable rather than synthesized.
 - **Dimension Browser**: Expand a grouped selector with search instead of using a long dropdown
 - **Multiple Dimensions**: Length, Duration, Mass, Area, Volume, Density, Current, Temperature, Counts, Brightness, and many more
 - **Pan & Zoom**: Drag to pan horizontally, scroll to zoom in/out, double-click to reset zoom
 - **Item Editor**: Visual editor to add, edit, and delete items with image upload support
 - **YAML Import/Export**: Import and export YAML files for easy data management
 - **Canonical Dataset Pipeline**: Build a normalized SQLite corpus and derive the site YAML from it
-- **Content Overrides**: Store longer museum-style descriptions and structured source notes separately from the core values
+- **Separate Description Layer**: Store museum-style descriptions in Markdown outside the structured JSON dataset
+- **Curation Metadata**: Track review status, display status, and quality flags without requiring centralized collaborator management
 - **Unit Conversion**: Switch between different units (meters/feet, seconds/minutes, etc.)
 - **Number Notation Toggle**: Switch between scientific notation (1e10) and standard notation
 - **Dark Mode**: Toggle between light and dark themes
@@ -33,9 +37,12 @@ An interactive visualization of the universe's dimensions, from quantum to cosmi
 
 ## Data Structure
 
-The project now has two data layers:
+The project separates editable inputs from generated artifacts:
 
-- **Canonical dataset** in `dataset/` and `exports/`, where subjects, observations, sources, units, and content overrides are normalized in SQLite and JSON.
+- **Editable source data** in `dataset/raw/`, where structured observations, dimension metadata, and legacy imports live in JSON/YAML inputs.
+- **Editable prose** in `content/descriptions/`, where long item descriptions live as Markdown.
+- **Presentation assets** in `content/visualizations/`, separate from values and prose, for maps, sound recordings, and optional image cutouts.
+- **Canonical dataset artifact** in `dataset/universe_scales.sqlite` and `exports/sqlite/`, where subjects, observations, sources, units, and content are normalized for querying.
 - **Frontend payloads** in `exports/frontend/` and `data/`, where the browser reads generated YAML bundles for each dimension.
 
 The site still consumes YAML, but YAML is no longer the source of truth for the pipeline-managed dimensions.
@@ -71,6 +78,10 @@ The project includes a normalized SQLite-backed data pipeline that generates the
 - Query the dataset: `./venv/bin/python scripts/query_dataset.py between mass 1e-9 1e9 --selected-only`
 
 See [DATASET_PIPELINE.md](DATASET_PIPELINE.md) for the source model, output artifacts, and contributor workflow.
+See [DATASET_STANDARD.md](DATASET_STANDARD.md) for item acceptance rules, review statuses, and the description standard.
+See [content/visualizations/README.md](content/visualizations/README.md) for the interactive modes, physical assumptions, asset licenses, and browser checks. The initial modes use approximate photos or equivalent geometry; they do not automatically remove backgrounds, reconstruct objects, or calibrate device brightness/sound output.
+
+Test visualization math with `node --test tests/experience-math.test.cjs`.
 
 ## File Structure
 
@@ -127,11 +138,12 @@ To add new items or dimensions:
 
 **Using the canonical dataset pipeline:**
 1. Add or revise structured facts in `dataset/raw/curated/<dimension>.json`
-2. Add or revise narrative overrides in `dataset/raw/content/<dimension>.json`
+2. Add or revise narrative descriptions in `content/descriptions/<dimension>/<item-slug>.md`
 3. Update dimension metadata in `dataset/raw/config/`
 4. Rebuild with `./venv/bin/python scripts/dataset/build_dataset.py`
 5. Verify with `./venv/bin/python scripts/dataset/verify_dataset.py`
-6. Review the generated artifacts in `exports/` and `data/`
+6. Audit descriptions with `./venv/bin/python scripts/dataset/audit_content.py --dimension length --dimension costs`
+7. Review the generated artifacts in `exports/` and `data/`
 
 **Using YAML Files directly:**
 1. Edit a generated YAML file only for quick frontend-only experiments
@@ -144,6 +156,7 @@ To add new items or dimensions:
 - `scripts/generate_thumbnails.py`: Generates optimized thumbnail versions of images to reduce bandwidth usage (see SCALABILITY_ANALYSIS.md)
 - `scripts/check_images.py`: Audits image and thumbnail coverage for `exports/frontend/*.yaml` and validates files are readable images
 - `scripts/ensure_images.py`: Convenience wrapper that runs downloader, thumbnail generation, and final coverage audit in one command
+- `scripts/dataset/audit_content.py`: Audits generated descriptions against the museum-plaque style standard
 - `scripts/suppress_broken_pipe.py`: HTTP server wrapper that suppresses harmless BrokenPipeError exceptions for cleaner logs
 
 ## Performance & Scalability
@@ -155,4 +168,11 @@ The site uses optimized thumbnails by default to reduce bandwidth usage:
 
 ## License
 
-This project is open source and available under the MIT License.
+Universe Scales uses a mixed license model:
+
+- Code is licensed under the MIT License.
+- Original structured dataset facts are dedicated under CC0 1.0 where legally possible.
+- Original prose, descriptions, and documentation are licensed under CC BY 4.0.
+- Images, music, and third-party source material retain their original licenses.
+
+See [LICENSE.md](LICENSE.md) and [CITATION.cff](CITATION.cff).

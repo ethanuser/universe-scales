@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid helium has unusually low surface tension.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid helium",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -47,6 +48,8 @@
       "id": "obs:surface-tension:entity-liquid-helium-surface-tension",
       "name": "Liquid helium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helium",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid helium has an extremely low surface tension.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid helium",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -103,6 +107,8 @@
       "qualifiers": {
         "measurement": "surface tension"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Liquid_helium",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid hydrogen has very low surface tension compared with water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid hydrogen",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -157,6 +164,8 @@
       "id": "obs:surface-tension:entity-liquid-hydrogen-surface-tension",
       "name": "Liquid hydrogen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen",
       "source_count": 2,
       "sources": [
@@ -195,6 +204,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cryogenic liquids occupy the very low end of the surface-tension axis.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid nitrogen",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -213,6 +223,8 @@
       "qualifiers": {
         "measurement": "surface tension"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Liquid_nitrogen",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid oxygen is a useful cryogenic propellant benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid oxygen",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -267,6 +280,8 @@
       "id": "obs:surface-tension:entity-liquid-oxygen-surface-tension",
       "name": "Liquid oxygen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oxygen",
       "source_count": 2,
       "sources": [
@@ -305,6 +320,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A low-surface-tension hydrocarbon liquid.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hexane",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -321,6 +337,8 @@
       "id": "obs:surface-tension:entity-hexane-surface-tension",
       "name": "Hexane",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hexane",
       "source_count": 2,
       "sources": [
@@ -359,6 +377,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silicone oils often have relatively low surface tension compared with water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silicone oil",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -375,6 +394,8 @@
       "id": "obs:surface-tension:entity-silicone-oil-surface-tension",
       "name": "Silicone oil",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicone_oil",
       "source_count": 2,
       "sources": [
@@ -413,6 +434,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Isopropyl alcohol wets surfaces more readily than water because of its lower surface tension.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Isopropyl alcohol",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -429,6 +451,8 @@
       "id": "obs:surface-tension:entity-isopropyl-alcohol-surface-tension",
       "name": "Isopropyl alcohol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Isopropyl_alcohol",
       "source_count": 2,
       "sources": [
@@ -467,6 +491,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Gasoline lies near the low-tension hydrocarbon range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gasoline",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -483,6 +508,8 @@
       "id": "obs:surface-tension:entity-gasoline-surface-tension",
       "name": "Gasoline",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gasoline",
       "source_count": 2,
       "sources": [
@@ -521,6 +548,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ethanol is a common low-tension liquid benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethanol",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -539,6 +567,8 @@
       "qualifiers": {
         "measurement": "surface tension"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ethanol",
       "source_count": 2,
       "sources": [
@@ -577,6 +607,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Methanol is similar to ethanol but slightly different in capillary behavior.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Methanol",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -593,6 +624,8 @@
       "id": "obs:surface-tension:entity-methanol-surface-tension",
       "name": "Methanol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Methanol",
       "source_count": 2,
       "sources": [
@@ -631,6 +664,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Alcohol wets surfaces much more readily than water partly because of lower surface tension.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethanol",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -647,6 +681,8 @@
       "id": "obs:surface-tension:entity-ethanol-surface-tension",
       "name": "Ethanol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ethanol",
       "source_count": 2,
       "sources": [
@@ -685,6 +721,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Acetone is another familiar low-surface-tension solvent.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Acetone",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -701,6 +738,8 @@
       "id": "obs:surface-tension:entity-acetone-surface-tension",
       "name": "Acetone",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Acetone",
       "source_count": 2,
       "sources": [
@@ -739,6 +778,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pulmonary surfactant suppresses alveolar surface tension to keep lungs from collapsing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lung surfactant",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -755,6 +795,8 @@
       "id": "obs:surface-tension:entity-lung-surfactant-surface-tension",
       "name": "Lung surfactant",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pulmonary_surfactant",
       "source_count": 2,
       "sources": [
@@ -793,6 +835,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Soap lowers water surface tension dramatically.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Soap solution",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -809,6 +852,8 @@
       "id": "obs:surface-tension:entity-soap-solution-surface-tension",
       "name": "Soap solution",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Soap",
       "source_count": 2,
       "sources": [
@@ -847,6 +892,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative hydrocarbon fuel surface tension.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Diesel fuel",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -863,6 +909,8 @@
       "id": "obs:surface-tension:entity-diesel-surface-tension",
       "name": "Diesel fuel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Diesel_fuel",
       "source_count": 2,
       "sources": [
@@ -901,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Kerosene sits in the same general range as other fuel hydrocarbons.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kerosene",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -917,6 +966,8 @@
       "id": "obs:surface-tension:entity-kerosene-surface-tension",
       "name": "Kerosene",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kerosene",
       "source_count": 2,
       "sources": [
@@ -955,6 +1006,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A classic organic-liquid surface-tension reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Benzene",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -971,6 +1023,8 @@
       "id": "obs:surface-tension:entity-benzene-surface-tension",
       "name": "Benzene",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Benzene",
       "source_count": 2,
       "sources": [
@@ -1009,6 +1063,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Oils tend to sit well below water on the surface-tension scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Olive oil",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1025,6 +1080,8 @@
       "id": "obs:surface-tension:entity-olive-oil-surface-tension",
       "name": "Olive oil",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Olive_oil",
       "source_count": 2,
       "sources": [
@@ -1063,6 +1120,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cooking oils land in the mid-low range of surface tension.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vegetable oil",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1081,6 +1139,8 @@
       "qualifiers": {
         "measurement": "surface tension"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vegetable_oil",
       "source_count": 2,
       "sources": [
@@ -1119,6 +1179,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid bromine sits in the middle of the liquid-surface-tension range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid bromine",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1135,6 +1196,8 @@
       "id": "obs:surface-tension:entity-bromine-surface-tension",
       "name": "Liquid bromine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bromine",
       "source_count": 2,
       "sources": [
@@ -1173,6 +1236,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Beer foams partly because its surface tension is below that of water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Beer",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1189,6 +1253,8 @@
       "id": "obs:surface-tension:entity-beer-surface-tension",
       "name": "Beer",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Beer",
       "source_count": 2,
       "sources": [
@@ -1227,6 +1293,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wine lands in the mid-forties of millinewtons per meter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wine",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1243,6 +1310,8 @@
       "id": "obs:surface-tension:entity-wine-surface-tension",
       "name": "Wine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wine",
       "source_count": 2,
       "sources": [
@@ -1281,6 +1350,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Milk has moderate surface tension modified by proteins and fats.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milk",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1297,6 +1367,8 @@
       "id": "obs:surface-tension:entity-milk-surface-tension",
       "name": "Milk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milk",
       "source_count": 2,
       "sources": [
@@ -1335,6 +1407,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid sulfur has a surface tension below that of liquid metals but above many solvents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid sulfur",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1351,6 +1424,8 @@
       "id": "obs:surface-tension:entity-liquid-sulfur-surface-tension",
       "name": "Liquid sulfur",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sulfur",
       "source_count": 2,
       "sources": [
@@ -1389,6 +1464,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Biological fluids often sit below pure water due to dissolved molecules.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood serum",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1405,6 +1481,8 @@
       "id": "obs:surface-tension:entity-blood-serum-surface-tension",
       "name": "Blood serum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_plasma",
       "source_count": 2,
       "sources": [
@@ -1443,6 +1521,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Boiling water has a noticeably lower surface tension than water at room temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water at boiling point",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1459,6 +1538,8 @@
       "id": "obs:surface-tension:entity-water-boiling-surface-tension",
       "name": "Water at boiling point",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Surface_tension",
       "source_count": 2,
       "sources": [
@@ -1497,6 +1578,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Glycerol is a useful thick-liquid reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Glycerol",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1513,6 +1595,8 @@
       "id": "obs:surface-tension:entity-glycerol-surface-tension",
       "name": "Glycerol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glycerol",
       "source_count": 2,
       "sources": [
@@ -1551,6 +1635,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Urine lies close to water but is shifted by its dissolved solutes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Urine",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1567,6 +1652,8 @@
       "id": "obs:surface-tension:entity-urine-surface-tension",
       "name": "Urine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Urine",
       "source_count": 2,
       "sources": [
@@ -1605,6 +1692,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water has unusually high surface tension for a small molecule, which is why droplets bead.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water at room temperature",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1621,6 +1709,8 @@
       "id": "obs:surface-tension:entity-water-surface-tension",
       "name": "Water at room temperature",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -1659,6 +1749,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water is the default classroom benchmark for surface tension.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1677,6 +1768,8 @@
       "qualifiers": {
         "measurement": "surface tension"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -1715,6 +1808,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sea salt raises surface tension slightly above pure water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seawater",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1731,6 +1825,8 @@
       "id": "obs:surface-tension:entity-seawater-surface-tension",
       "name": "Seawater",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Seawater",
       "source_count": 2,
       "sources": [
@@ -1769,6 +1865,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative reactive liquid-metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid sodium",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1785,6 +1882,8 @@
       "id": "obs:surface-tension:entity-liquid-sodium-surface-tension",
       "name": "Liquid sodium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sodium",
       "source_count": 2,
       "sources": [
@@ -1823,6 +1922,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten glass still clings together strongly enough to form droplets and fibers.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molten glass",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1839,6 +1939,8 @@
       "id": "obs:surface-tension:entity-molten-glass-surface-tension",
       "name": "Molten glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -1877,6 +1979,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten lead has a heavy, cohesive surface compared with water-like fluids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molten lead",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1893,6 +1996,8 @@
       "id": "obs:surface-tension:entity-molten-lead-surface-tension",
       "name": "Molten lead",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lead",
       "source_count": 2,
       "sources": [
@@ -1931,6 +2036,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mercury's very high surface tension is why it forms beads so readily.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mercury",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -1947,6 +2053,8 @@
       "id": "obs:surface-tension:entity-mercury-surface-tension",
       "name": "Mercury",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mercury_(element)",
       "source_count": 2,
       "sources": [
@@ -1985,6 +2093,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten metals have much higher surface tension than common liquids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molten tin",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -2001,6 +2110,8 @@
       "id": "obs:surface-tension:entity-molten-tin-surface-tension",
       "name": "Molten tin",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tin",
       "source_count": 2,
       "sources": [
@@ -2039,6 +2150,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A high-surface-tension liquid metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid gallium",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -2055,6 +2167,8 @@
       "id": "obs:surface-tension:entity-gallium-surface-tension",
       "name": "Liquid gallium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gallium",
       "source_count": 2,
       "sources": [
@@ -2093,6 +2207,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten zinc is far more cohesive at the surface than ordinary room-temperature liquids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid zinc",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -2109,6 +2224,8 @@
       "id": "obs:surface-tension:entity-liquid-zinc-surface-tension",
       "name": "Liquid zinc",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Zinc",
       "source_count": 2,
       "sources": [
@@ -2147,6 +2264,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten aluminum has a strong surface tension typical of hot liquid metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molten aluminum",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -2163,6 +2281,8 @@
       "id": "obs:surface-tension:entity-molten-aluminum-surface-tension",
       "name": "Molten aluminum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -2201,6 +2321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten metals occupy a dramatically higher surface-tension regime than ordinary liquids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molten silver",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -2217,6 +2338,8 @@
       "id": "obs:surface-tension:entity-molten-silver-surface-tension",
       "name": "Molten silver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silver",
       "source_count": 2,
       "sources": [
@@ -2255,6 +2378,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten metals reach very high surface tension values.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molten copper",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -2273,6 +2397,8 @@
       "qualifiers": {
         "measurement": "surface tension"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Copper",
       "source_count": 2,
       "sources": [
@@ -2311,6 +2437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Molten iron sits near the top of the liquid-metal range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Molten iron",
         "ingest_source": "dataset/raw/curated/surface-tension.json",
@@ -2329,6 +2456,8 @@
       "qualifiers": {
         "measurement": "surface tension"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Iron",
       "source_count": 2,
       "sources": [

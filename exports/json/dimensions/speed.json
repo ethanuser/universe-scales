@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Continents creep at centimeters per year as plates slide on the mantle, which is a few nanometers per second. Over a lifetime this sums to meters, enough to redraw coastlines for future generations. GPS networks now measure this motion directly. The value represents a typical mid ocean ridge spreading rate.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Continental Drift",
@@ -44,6 +45,8 @@
       "id": "obs:speed:scenario-speed-continental-drift",
       "name": "Continental Drift",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Continental_drift",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Plant shoots extend by micrometers per second when conditions are kind, driven by water pressure and cell wall remodeling. To the eye it is stillness; to a timelapse it is motion. Botanists infer these rates from growth curves and hormone assays. The number captures a healthy indoor plant.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Plant Growth",
@@ -95,6 +99,8 @@
       "id": "obs:speed:scenario-speed-plant-growth",
       "name": "Plant Growth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Plant_growth",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Glaciers flow down valleys at about a meter per day in temperate climates, changing with snowfall and melt. Crevasses mark places where speed gradients tear the ice. Satellites track these changes season by season. The value is a representative average rather than a surge.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Glacier Movement",
@@ -146,6 +153,8 @@
       "id": "obs:speed:scenario-speed-glacier-movement",
       "name": "Glacier Movement",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glacier",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A garden snail travels at millimeters per second across a sidewalk, limited by muscle cycles and mucus drag. Its speed is steady over minutes but pauses often for sensing. Children learn patience by watching. The value reflects a typical unhurried crawl.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Snail",
@@ -197,6 +207,8 @@
       "id": "obs:speed:scenario-speed-snail",
       "name": "Snail",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Snail",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An infant crawling across the floor moves at only a few tenths of a meter per second. At that pace a room still feels large, and adults can easily match the motion with a walking pace slowed to a shuffle. Developmental studies use such speeds to separate balance from strength. The value is a representative steady crawl rather than a short lunge.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Human Crawl",
@@ -248,6 +261,8 @@
       "id": "obs:speed:scenario-speed-human-crawl",
       "name": "Human Crawl",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Crawling",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Comfortable human walking on level ground averages around one and a half meters per second. This cadence minimizes energy per distance for the human musculoskeletal system. Runners and robots use it as a planning baseline. The value assumes flat terrain and no load.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Human Walking",
@@ -299,6 +315,8 @@
       "id": "obs:speed:scenario-speed-human-walking",
       "name": "Human Walking",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Walking",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A marathon finishing time of four hours corresponds to this average running speed along the course. Hills and crowds change the local pace around this mean. Training plans work backward from such averages. The number ties physics to weekend goals.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Marathon Pace (4 h)",
@@ -350,6 +369,8 @@
       "id": "obs:speed:scenario-speed-marathon-pace-4-h",
       "name": "Marathon Pace (4 h)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Marathon",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A city elevator travels around this speed to balance comfort with throughput, using careful jerk limits at start and stop. Taller buildings run faster express cars to sky lobbies. Riders barely notice speed when motion is smooth. The value applies between floors, not at doors.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Elevator Car",
@@ -401,6 +423,8 @@
       "id": "obs:speed:scenario-speed-elevator-car",
       "name": "Elevator Car",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Elevator",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Everyday urban cycling on level ground averages around this speed for commuters. Wind and traffic lights matter more than raw leg power. Good infrastructure increases average speed safely. The value is for a relaxed pace on a city bike.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Bicycle",
@@ -452,6 +477,8 @@
       "id": "obs:speed:scenario-speed-bicycle",
       "name": "Bicycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Recreational running settles near five to six meters per second for fit adults on a track. Sprinting peaks higher but cannot be held. Coaches train pacing by feel and watch. The number is a sustained pace for several minutes.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Human Running",
@@ -503,6 +531,8 @@
       "id": "obs:speed:scenario-speed-human-running",
       "name": "Human Running",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Running",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Honeybees cruise through gardens at several meters per second while adjusting rapidly as they approach flowers or the hive. Their airspeed is high enough to cover large foraging territories but low enough to permit precise landings. Wind can easily dominate the path you see from the ground. The value is a representative forward flight speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Honeybee Flight",
@@ -554,6 +585,8 @@
       "id": "obs:speed:scenario-speed-honeybee-flight",
       "name": "Honeybee Flight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Honey_bee",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Raindrops do not keep accelerating forever because drag rises until it balances their weight. For a medium drop a terminal velocity near this value is typical in still air. That is why rain stings less than gravel even after falling from clouds kilometers up. The number represents a common drop a few millimeters across.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Raindrop Terminal Velocity",
@@ -605,6 +639,8 @@
       "id": "obs:speed:scenario-speed-raindrop-terminal-velocity",
       "name": "Raindrop Terminal Velocity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Terminal_velocity",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Elite sprinters briefly exceed twelve meters per second during the middle of a 100 meter race. That peak lasts only a second or two before fatigue and posture changes begin to shave it back down. Biomechanics labs use high speed cameras to resolve the stride pattern at this pace. The number is near the top speed reached by world class men.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Olympic Sprinter Peak",
@@ -656,6 +693,8 @@
       "id": "obs:speed:scenario-speed-olympic-sprinter-peak",
       "name": "Olympic Sprinter Peak",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sprinting",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "City driving averages under fifteen meters per second when signals, stops, and congestion are counted. Drivers often overestimate their average due to brief fast segments. Travel time depends more on reliability than peak speed. The value converts to roughly thirty miles per hour.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Car (City)",
@@ -707,6 +747,8 @@
       "id": "obs:speed:scenario-speed-car-city",
       "name": "Car (City)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Automobile",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Racehorses in full gallop cover ground at around this speed over short stretches. Their gait cycles trade contact time for long airborne phases that feel surprisingly smooth to watch. Track conditions, breed, and distance all shift the exact number. The value reflects a thoroughbred at racing pace rather than a relaxed canter.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Racehorse Gallop",
@@ -758,6 +801,8 @@
       "id": "obs:speed:scenario-speed-racehorse-gallop",
       "name": "Racehorse Gallop",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Horse_gait",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A cheetah in a short chase can exceed twenty meters per second using a flexible spine as a spring. The burst lasts only seconds before heat builds. Evolution tuned this system to ambush on open savanna. The value is a peak dash, not cruising.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Cheetah",
@@ -809,6 +855,8 @@
       "id": "obs:speed:scenario-speed-cheetah",
       "name": "Cheetah",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cheetah",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Highway cruising sits around thirty meters per second where legal and conditions allow. Aerodynamic drag dominates fuel economy here. Adaptive cruise control tries to keep this number steady to save energy. The value is a typical posted limit speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Car (Highway)",
@@ -860,6 +909,8 @@
       "id": "obs:speed:scenario-speed-car-highway",
       "name": "Car (Highway)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Automobile",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A pitched baseball leaves the hand near forty meters per second for professional fastballs. Aerodynamics then trims speed before the plate. Catchers train to read this in fractions of a second. The value is at release, not at contact.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Fastball",
@@ -911,6 +963,8 @@
       "id": "obs:speed:scenario-speed-fastball",
       "name": "Fastball",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Baseball",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A professional tennis serve leaves the racket at tens of meters per second, fast enough that returners have only fractions of a second to react. Spin and air drag then bend and slow the ball on the way to the box. Radar guns on courts report this initial speed because it is the dramatic part spectators notice. The figure here is a strong first serve rather than the all-time record.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Tennis Serve",
@@ -962,6 +1017,8 @@
       "id": "obs:speed:scenario-speed-tennis-serve",
       "name": "Tennis Serve",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tennis_serve",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "High speed rail lines in service run near eighty meters per second on straight, well maintained track. Curves and stations reduce the trip average below this peak. Quiet cabins make the experience feel slower than it is. The value states a line speed, not schedule speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "High-Speed Train",
@@ -1013,6 +1071,8 @@
       "id": "obs:speed:scenario-speed-high-speed-train",
       "name": "High-Speed Train",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/High-speed_rail",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A peregrine falcon stooping on prey dives at speeds that approach one hundred meters per second with wings tucked. Feathers and head shape channel air to keep vision stable. The stoop converts gravitational potential into kinetic energy efficiently. The value is for a vertical dive, not level flight.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Peregrine Falcon",
@@ -1064,6 +1125,8 @@
       "id": "obs:speed:scenario-speed-peregrine-falcon",
       "name": "Peregrine Falcon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Peregrine_falcon",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Formula 1 cars on long straights approach one hundred meters per second, a speed that makes braking zones and tire loads central to the whole sport. The lap average is much lower because corners dominate time. Aerodynamic drag rises so quickly here that adding small speed increments demands large power increases. The value is a representative peak on a modern circuit.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Formula 1 Car",
@@ -1115,6 +1179,8 @@
       "id": "obs:speed:scenario-speed-formula-1-car",
       "name": "Formula 1 Car",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Formula_One_car",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A commercial jet at cruise in thin air travels near two hundred and fifty meters per second relative to the air. Tailwinds and headwinds adjust groundspeed by tens of meters per second. Pilots aim for efficient Mach numbers rather than raw speed. The value is a long haul typical.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Commercial Jet",
@@ -1166,6 +1233,8 @@
       "id": "obs:speed:scenario-speed-commercial-jet",
       "name": "Commercial Jet",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jet_aircraft",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sound in dry air at room temperature travels near three hundred forty three meters per second, carrying speech and music. Temperature and humidity tweak this value predictably. Musicians sense it as hall delay between stage and back row. The number is the standard classroom reference.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Sound in Air",
@@ -1217,6 +1287,8 @@
       "id": "obs:speed:scenario-speed-sound-in-air",
       "name": "Sound in Air",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Speed_of_sound",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concorde\u2019s supersonic cruise reached about six hundred meters per second, halving transatlantic time. Fuel burn and sonic boom constraints ended routine service. The flight numbers still inspire new designs. The value is at altitude, not near sea level.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Concorde",
@@ -1268,6 +1341,8 @@
       "id": "obs:speed:scenario-speed-concorde",
       "name": "Concorde",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concorde",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical 7.62 millimeter rifle bullet leaves the barrel at several hundred meters per second. That speed is why even small masses carry large kinetic energy and why ballistic trajectories flatten over ordinary line-of-sight distances. Spin stabilizes the flight but does not change the basic speed scale. The value is a common muzzle velocity for a full-power rifle round.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Rifle Bullet",
@@ -1319,6 +1395,8 @@
       "id": "obs:speed:scenario-speed-rifle-bullet",
       "name": "Rifle Bullet",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Muzzle_velocity",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The SR71 Blackbird set records above nine hundred meters per second in level flight. Airframe heating, not engine thrust, became the limit. Reconnaissance routes exploited this speed to outrun threats. The value is a published peak.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "SR-71 Blackbird",
@@ -1370,6 +1449,8 @@
       "id": "obs:speed:scenario-speed-sr-71-blackbird",
       "name": "SR-71 Blackbird",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Satellites in geostationary orbit move much more slowly than low Earth orbit craft because they circle far farther from Earth\u2019s center. Even so, they still cover thousands of meters every second while hanging over the same longitude. Communications engineers treat this motion as hidden because the orbital period exactly matches a day. The value is the orbital speed at geostationary altitude.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Geostationary Satellite",
@@ -1421,6 +1503,8 @@
       "id": "obs:speed:scenario-speed-geostationary-satellite",
       "name": "Geostationary Satellite",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Geostationary_orbit",
       "source_count": 2,
       "sources": [
@@ -1459,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The International Space Station circles Earth at about seven thousand seven hundred meters per second to remain in low orbit. At this speed one lap takes about ninety minutes. Astronauts feel weightless because they are in continuous free fall. The number is a mean orbital speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "International Space Station",
@@ -1472,6 +1557,8 @@
       "id": "obs:speed:scenario-speed-international-space-station",
       "name": "International Space Station",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/International_Space_Station",
       "source_count": 2,
       "sources": [
@@ -1510,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Escape velocity at Earth\u2019s surface is around eleven thousand meters per second, the speed needed to outrun gravity without further thrust. Rockets reach orbit with less speed by trading some energy to climb rather than escape. The number is a theoretical threshold ignoring atmosphere. It sets a clean physics marker.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Escape Velocity (Earth)",
@@ -1523,6 +1611,8 @@
       "id": "obs:speed:scenario-speed-escape-velocity-earth",
       "name": "Escape Velocity (Earth)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escape_velocity",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mercury whips around the Sun faster than any other planet in the Solar System. Its tight orbit means relativistic corrections are measurable there, which is why Mercury helped confirm general relativity. Temperatures and solar flux at that speed are brutal for spacecraft. The number is the mean orbital speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Mercury Orbit",
@@ -1574,6 +1665,8 @@
       "id": "obs:speed:scenario-speed-mercury-orbit",
       "name": "Mercury Orbit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mercury_(planet)",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Helios 2, a solar probe, reached about seventy thousand meters per second at perihelion using gravity assists. Close to the Sun, orbital speeds soar. Such missions map the heliosphere where wind and fields originate. The value is its record setting peak.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Helios 2 Spacecraft",
@@ -1625,6 +1719,8 @@
       "id": "obs:speed:scenario-speed-helios-2-spacecraft",
       "name": "Helios 2 Spacecraft",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helios_(spacecraft)",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1759,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Parker Solar Probe reaches almost two hundred kilometers per second at closest approach to the Sun, making it the fastest human-made object so far. Gravity rather than engines supplies most of that speed. Thermal shields and mission timing both depend on this number because conditions change violently near perihelion. The value is a published record-class perihelion speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Parker Solar Probe",
@@ -1676,6 +1773,8 @@
       "id": "obs:speed:scenario-speed-parker-solar-probe",
       "name": "Parker Solar Probe",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Parker_Solar_Probe",
       "source_count": 2,
       "sources": [
@@ -1714,6 +1813,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun and nearby stars orbit the Milky Way at hundreds of kilometers per second. We do not feel this motion locally because everything around us shares nearly the same galactic flow. On a galactic map, though, it means the Solar System circles the center only once every couple hundred million years. The value is a representative local circular speed in the Milky Way.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Sun Around Milky Way",
@@ -1727,6 +1827,8 @@
       "id": "obs:speed:scenario-speed-sun-around-milky-way",
       "name": "Sun Around Milky Way",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -1765,6 +1867,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Light in vacuum moves at exactly two hundred ninety nine million seven hundred ninety two thousand four hundred fifty eight meters per second by definition. It is the ultimate speed limit of relativity, entwined with how we measure length and time. Fiber optics carry information just below this pace. The number fixes the meter itself.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Light in Vacuum",
@@ -1778,6 +1881,8 @@
       "id": "obs:speed:scenario-speed-light-in-vacuum",
       "name": "Light in Vacuum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Speed_of_light",
       "source_count": 2,
       "sources": [
@@ -1816,6 +1921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Radio waves are light at lower frequencies and share the same vacuum speed as visible light. In air and cables they slow slightly depending on refractive index. Antennas and circuits are designed with these delays in mind. The value repeats the universal constant in a radio context.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/speed.yaml",
         "legacy_item_name": "Radio Waves",
@@ -1829,6 +1935,8 @@
       "id": "obs:speed:scenario-speed-radio-waves",
       "name": "Radio Waves",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Radio_wave",
       "source_count": 2,
       "sources": [

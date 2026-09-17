@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rolling elements can have extraordinarily low effective friction coefficients.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rolling ball bearing",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -49,6 +50,8 @@
       "qualifiers": {
         "measurement": "effective friction coefficient"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rolling_resistance",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Steel on ice is a very low-friction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel on ice (kinetic)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -105,6 +109,8 @@
       "qualifiers": {
         "measurement": "kinetic coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Friction",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ice is notoriously slippery.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice on ice",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -159,6 +166,8 @@
       "id": "obs:friction-coefficient:entity-ice-on-ice-friction",
       "name": "Ice on ice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Friction",
       "source_count": 2,
       "sources": [
@@ -197,6 +206,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Metal on ice remains very low-friction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel on ice (static)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -215,6 +225,8 @@
       "qualifiers": {
         "measurement": "static coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Friction",
       "source_count": 2,
       "sources": [
@@ -253,6 +265,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Teflon is the classic low-friction everyday material.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "PTFE on PTFE",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -269,6 +282,8 @@
       "id": "obs:friction-coefficient:entity-ptfe-on-ptfe-friction",
       "name": "PTFE on PTFE",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Polytetrafluoroethylene",
       "source_count": 2,
       "sources": [
@@ -307,6 +322,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A standard low-friction engineering pair.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "PTFE on steel",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -323,6 +339,8 @@
       "id": "obs:friction-coefficient:entity-ptfe-on-steel-friction",
       "name": "PTFE on steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Polytetrafluoroethylene",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A winter-sports low-friction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Waxed snowboard on snow",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -379,6 +398,8 @@
       "qualifiers": {
         "measurement": "effective friction coefficient"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Snowboard",
       "source_count": 2,
       "sources": [
@@ -417,6 +438,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lubrication dramatically reduces friction for metal contacts.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lubricated steel on steel",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -433,6 +455,8 @@
       "id": "obs:friction-coefficient:entity-lubricated-steel-friction",
       "name": "Lubricated steel on steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lubricant",
       "source_count": 2,
       "sources": [
@@ -471,6 +495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Waxed skis are a classic low-friction sports interface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ski on snow (kinetic)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -489,6 +514,8 @@
       "qualifiers": {
         "measurement": "kinetic coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ski",
       "source_count": 2,
       "sources": [
@@ -527,6 +554,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lubricated bearings are designed to stay near the low end of friction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lubricated steel bearings",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -545,6 +573,8 @@
       "qualifiers": {
         "measurement": "coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bearing_(mechanical)",
       "source_count": 2,
       "sources": [
@@ -583,6 +613,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Layered materials can have low friction because planes shear easily.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Graphite on graphite",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -599,6 +630,8 @@
       "id": "obs:friction-coefficient:entity-graphite-friction",
       "name": "Graphite on graphite",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Graphite",
       "source_count": 2,
       "sources": [
@@ -637,6 +670,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rubber on ice is a classic cautionary low-friction case.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubber on ice (kinetic)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -655,6 +689,8 @@
       "qualifiers": {
         "measurement": "kinetic coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice",
       "source_count": 2,
       "sources": [
@@ -693,6 +729,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Even rubber loses grip on ice.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubber on ice (static)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -711,6 +748,8 @@
       "qualifiers": {
         "measurement": "static coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Friction",
       "source_count": 2,
       "sources": [
@@ -749,6 +788,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A slip hazard benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wet shoe on polished floor",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -765,6 +805,8 @@
       "id": "obs:friction-coefficient:entity-wet-shoe-floor-friction",
       "name": "Wet shoe on polished floor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Friction",
       "source_count": 2,
       "sources": [
@@ -803,6 +845,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A moderate polymer-on-metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nylon on steel",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -819,6 +862,8 @@
       "id": "obs:friction-coefficient:entity-nylon-on-steel-friction",
       "name": "Nylon on steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nylon",
       "source_count": 2,
       "sources": [
@@ -857,6 +902,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A simple everyday desktop-friction example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Plastic slider on desk",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -873,6 +919,8 @@
       "id": "obs:friction-coefficient:entity-plastic-on-desk-friction",
       "name": "Plastic slider on desk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Plastic",
       "source_count": 2,
       "sources": [
@@ -911,6 +959,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Automotive braking depends on deliberate moderate-to-high friction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brake pad on rotor",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -927,6 +976,8 @@
       "id": "obs:friction-coefficient:entity-brake-pad-friction",
       "name": "Brake pad on rotor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brake_pad",
       "source_count": 2,
       "sources": [
@@ -965,6 +1016,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common everyday contact pair.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Leather on wood",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -981,6 +1033,8 @@
       "id": "obs:friction-coefficient:entity-leather-on-wood-friction",
       "name": "Leather on wood",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Leather",
       "source_count": 2,
       "sources": [
@@ -1019,6 +1073,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar moderate-friction material pair.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wood on wood (static)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1037,6 +1092,8 @@
       "qualifiers": {
         "measurement": "static coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wood",
       "source_count": 2,
       "sources": [
@@ -1075,6 +1132,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common engineering dry-contact benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brass on steel",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1091,6 +1149,8 @@
       "id": "obs:friction-coefficient:entity-brass-on-steel-friction",
       "name": "Brass on steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brass",
       "source_count": 2,
       "sources": [
@@ -1129,6 +1189,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A moderate-to-high dry-friction ceramic interface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ceramic on ceramic",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1145,6 +1206,8 @@
       "id": "obs:friction-coefficient:entity-ceramic-on-ceramic-friction",
       "name": "Ceramic on ceramic",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ceramic",
       "source_count": 2,
       "sources": [
@@ -1183,6 +1246,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Even light everyday materials can have substantial friction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Paper on paper",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1199,6 +1263,8 @@
       "id": "obs:friction-coefficient:entity-paper-on-paper-friction",
       "name": "Paper on paper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paper",
       "source_count": 2,
       "sources": [
@@ -1237,6 +1303,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wet roads roughly halve available tire grip relative to dry pavement.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tire on wet asphalt",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1253,6 +1320,8 @@
       "id": "obs:friction-coefficient:entity-tire-on-wet-asphalt-friction",
       "name": "Tire on wet asphalt",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Road_surface",
       "source_count": 2,
       "sources": [
@@ -1291,6 +1360,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Chalk on a board gives a familiar classroom friction example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chalk on blackboard",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1309,6 +1379,8 @@
       "qualifiers": {
         "measurement": "coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chalk",
       "source_count": 2,
       "sources": [
@@ -1347,6 +1419,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar human-scale traction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bare foot on tile",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1363,6 +1436,8 @@
       "id": "obs:friction-coefficient:entity-bare-foot-tile-friction",
       "name": "Bare foot on tile",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tile",
       "source_count": 2,
       "sources": [
@@ -1401,6 +1476,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Normal walking traction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dry shoe on polished floor",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1417,6 +1493,8 @@
       "id": "obs:friction-coefficient:entity-dry-shoe-floor-friction",
       "name": "Dry shoe on polished floor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Friction",
       "source_count": 2,
       "sources": [
@@ -1455,6 +1533,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A wet-ground traction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubber on wet concrete",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1471,6 +1550,8 @@
       "id": "obs:friction-coefficient:entity-rubber-on-wet-concrete-friction",
       "name": "Rubber on wet concrete",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -1509,6 +1590,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar tactile-friction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human skin on glass",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1525,6 +1607,8 @@
       "id": "obs:friction-coefficient:entity-skin-on-glass-friction",
       "name": "Human skin on glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Skin",
       "source_count": 2,
       "sources": [
@@ -1563,6 +1647,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dry steel-on-steel friction is much higher than lubricated contact.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel on steel dry",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1579,6 +1664,8 @@
       "id": "obs:friction-coefficient:entity-steel-on-steel-dry-friction",
       "name": "Steel on steel dry",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steel",
       "source_count": 2,
       "sources": [
@@ -1617,6 +1704,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Shoes on floors are a common everyday friction case.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Shoe sole on dry floor",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1635,6 +1723,8 @@
       "qualifiers": {
         "measurement": "coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Shoe",
       "source_count": 2,
       "sources": [
@@ -1673,6 +1763,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A useful generic elastomer-on-metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubber on steel",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1689,6 +1780,8 @@
       "id": "obs:friction-coefficient:entity-rubber-on-steel-friction",
       "name": "Rubber on steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rubber",
       "source_count": 2,
       "sources": [
@@ -1727,6 +1820,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sandpaper on wood pushes friction higher into the rough-contact regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sandpaper on wood (kinetic)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1745,6 +1839,8 @@
       "qualifiers": {
         "measurement": "kinetic coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sandpaper",
       "source_count": 2,
       "sources": [
@@ -1783,6 +1879,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Smooth solids can still have high dry friction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Glass on glass",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1799,6 +1896,8 @@
       "id": "obs:friction-coefficient:entity-glass-on-glass-friction",
       "name": "Glass on glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -1837,6 +1936,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A dry-road traction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tire on dry asphalt (static)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1855,6 +1955,8 @@
       "qualifiers": {
         "measurement": "static coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Asphalt_concrete",
       "source_count": 2,
       "sources": [
@@ -1893,6 +1995,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Car tires on dry asphalt are near the practical upper end for everyday surfaces.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tire on asphalt (typical)",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1911,6 +2014,8 @@
       "qualifiers": {
         "measurement": "coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tire",
       "source_count": 2,
       "sources": [
@@ -1949,6 +2054,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dry concrete gives strong tire and shoe traction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubber on dry concrete",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -1965,6 +2071,8 @@
       "id": "obs:friction-coefficient:entity-rubber-on-dry-concrete-friction",
       "name": "Rubber on dry concrete",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -2003,6 +2111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dry tire on concrete is a useful near-unity friction benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tire on dry concrete",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -2021,6 +2130,8 @@
       "qualifiers": {
         "measurement": "coefficient of friction"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -2059,6 +2170,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rubber compounds can exceed one in high-grip use.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Climbing shoe on rock",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -2075,6 +2187,8 @@
       "id": "obs:friction-coefficient:entity-climbing-shoe-rock-friction",
       "name": "Climbing shoe on rock",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Climbing_shoe",
       "source_count": 2,
       "sources": [
@@ -2113,6 +2227,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Soft racing compounds can exceed unity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sticky rubber on dry track",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -2129,6 +2244,8 @@
       "id": "obs:friction-coefficient:entity-sticky-rubber-track-friction",
       "name": "Sticky rubber on dry track",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tire",
       "source_count": 2,
       "sources": [
@@ -2167,6 +2284,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Biological adhesion can produce very high effective friction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gecko foot adhesion",
         "ingest_source": "dataset/raw/curated/friction-coefficient.json",
@@ -2183,6 +2301,8 @@
       "id": "obs:friction-coefficient:entity-gecko-foot-friction",
       "name": "Gecko foot adhesion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gecko",
       "source_count": 2,
       "sources": [

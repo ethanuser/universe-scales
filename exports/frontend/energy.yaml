@@ -81,6 +81,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Photon (Radio)
@@ -123,6 +126,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Photon (Visible)
@@ -165,6 +171,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Chemical Bond
@@ -207,6 +216,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Hydrogen Ionization
@@ -249,6 +261,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Glucose Oxidation
@@ -291,6 +306,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: X-ray Photon
@@ -333,6 +351,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Apple Drop
@@ -375,6 +396,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Heartbeat
@@ -417,6 +441,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: One ChatGPT-Style Response
@@ -459,6 +486,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Lift Bag of Rice
@@ -501,6 +531,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Fastball Pitch
@@ -543,6 +576,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Football Kick
@@ -585,6 +621,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Rifle Cartridge
@@ -627,6 +666,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Warm Room Air (1 m3, plus 10 C)
@@ -669,6 +711,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: AA Battery
@@ -711,6 +756,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Elevator Ride (10 floors)
@@ -753,6 +801,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Smartphone Battery
@@ -795,6 +846,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Boil a Mug of Water
@@ -837,6 +891,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Laptop Charge
@@ -879,6 +936,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Boiling Kettle (1 liter)
@@ -921,6 +981,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Light Bulb (1 hour)
@@ -963,6 +1026,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Car at 60 mph
@@ -1005,6 +1071,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Bread Baking (1 loaf)
@@ -1047,6 +1116,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Workday Computing
@@ -1089,6 +1161,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Car Battery
@@ -1131,6 +1206,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Bus Stop Recovery
@@ -1173,6 +1251,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: One H100 GPU-Hour
@@ -1215,6 +1296,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: TNT (1 kg)
@@ -1257,6 +1341,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Human Daily
@@ -1299,6 +1386,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Data Center Rack-Hour
@@ -1341,6 +1431,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Marathon Effort
@@ -1383,6 +1476,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Gasoline (1 liter)
@@ -1425,6 +1521,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Household (Daily)
@@ -1467,6 +1566,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: EV Battery Pack
@@ -1509,6 +1611,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Jet Flight (per passenger)
@@ -1551,6 +1656,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Lightning Bolt
@@ -1593,6 +1701,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Refrigerator (Annual)
@@ -1635,6 +1746,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Planck Energy
@@ -1677,6 +1791,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Human Lifetime Food
@@ -1719,6 +1836,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Nuclear Bomb (1 kt)
@@ -1761,6 +1881,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Hiroshima Bomb
@@ -1803,6 +1926,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Tsar Bomba
@@ -1845,6 +1971,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Global Datacenter Electricity (1 year)
@@ -1887,6 +2016,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: World Electricity Use (1 year)
@@ -1929,6 +2061,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Transportation Energy Use (1 year)
@@ -1971,6 +2106,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Chicxulub Impact
@@ -2013,6 +2151,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Solar Flare
@@ -2055,6 +2196,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Sun (1 second)
@@ -2097,6 +2241,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Supernova
@@ -2139,6 +2286,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/energy.yaml
     legacy_item_name: Gamma Ray Burst

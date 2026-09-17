@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lead is a classic low-specific-heat material.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lead",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -47,6 +48,8 @@
       "id": "obs:specific-heat:entity-lead-specific-heat",
       "name": "Lead",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lead",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Gold changes temperature quickly because of low specific heat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gold",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -101,6 +105,8 @@
       "id": "obs:specific-heat:entity-gold-specific-heat",
       "name": "Gold",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gold",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mercury is another low-specific-heat liquid metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mercury",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -155,6 +162,8 @@
       "id": "obs:specific-heat:entity-mercury-specific-heat",
       "name": "Mercury",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mercury_(element)",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silver is low but not as low as gold or lead.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silver",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -209,6 +219,8 @@
       "id": "obs:specific-heat:entity-silver-specific-heat",
       "name": "Silver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silver",
       "source_count": 2,
       "sources": [
@@ -247,6 +259,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Copper is a classic metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Copper",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -263,6 +276,8 @@
       "id": "obs:specific-heat:entity-copper-specific-heat",
       "name": "Copper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Copper",
       "source_count": 2,
       "sources": [
@@ -301,6 +316,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Iron is a useful structural-metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Iron",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -317,6 +333,8 @@
       "id": "obs:specific-heat:entity-iron-specific-heat",
       "name": "Iron",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Iron",
       "source_count": 2,
       "sources": [
@@ -355,6 +373,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Steel sits around half a kilojoule per kilogram kelvin.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -371,6 +390,8 @@
       "id": "obs:specific-heat:entity-steel-specific-heat",
       "name": "Steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steel",
       "source_count": 2,
       "sources": [
@@ -409,6 +430,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silicon is a handy semiconductor specific-heat benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silicon",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -425,6 +447,8 @@
       "id": "obs:specific-heat:entity-silicon-specific-heat",
       "name": "Silicon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicon",
       "source_count": 2,
       "sources": [
@@ -463,6 +487,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Granite anchors the rock-and-building-material range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Granite",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -481,6 +506,8 @@
       "qualifiers": {
         "measurement": "specific heat capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Granite",
       "source_count": 2,
       "sources": [
@@ -519,6 +546,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dry sand is a good geological benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sand",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -535,6 +563,8 @@
       "id": "obs:specific-heat:entity-sand-specific-heat",
       "name": "Sand",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sand",
       "source_count": 2,
       "sources": [
@@ -573,6 +603,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Glass sits around the same scale as sand and concrete.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Glass",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -589,6 +620,8 @@
       "id": "obs:specific-heat:entity-glass-specific-heat",
       "name": "Glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -627,6 +660,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concrete's thermal inertia matters in buildings and cities.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concrete",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -643,6 +677,8 @@
       "id": "obs:specific-heat:entity-concrete-specific-heat",
       "name": "Concrete",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -681,6 +717,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aluminum combines high conductivity with moderate specific heat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aluminum",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -697,6 +734,8 @@
       "id": "obs:specific-heat:entity-aluminum-specific-heat",
       "name": "Aluminum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -735,6 +774,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aluminum is a common lightweight engineering metal with a moderate heat capacity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aluminum",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -753,6 +793,8 @@
       "qualifiers": {
         "measurement": "specific heat capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -791,6 +833,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Air is a useful gas-phase benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Air",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -807,6 +850,8 @@
       "id": "obs:specific-heat:entity-air-specific-heat",
       "name": "Air",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Air",
       "source_count": 2,
       "sources": [
@@ -845,6 +890,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wood holds significantly more heat per kilogram than metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wood",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -861,6 +907,8 @@
       "id": "obs:specific-heat:entity-wood-specific-heat",
       "name": "Wood",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wood",
       "source_count": 2,
       "sources": [
@@ -899,6 +947,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A specific food-oil benchmark close to other vegetable oils.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Olive oil",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -915,6 +964,8 @@
       "id": "obs:specific-heat:entity-olive-oil-specific-heat",
       "name": "Olive oil",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Olive_oil",
       "source_count": 2,
       "sources": [
@@ -953,6 +1004,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cooking oils are good liquid benchmarks above water-adjacent solids but below water itself.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vegetable oil",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -969,6 +1021,8 @@
       "id": "obs:specific-heat:entity-vegetable-oil-specific-heat",
       "name": "Vegetable oil",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cooking_oil",
       "source_count": 2,
       "sources": [
@@ -1007,6 +1061,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water vapor sits around two kilojoules per kilogram kelvin.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steam",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1023,6 +1078,8 @@
       "id": "obs:specific-heat:entity-steam-specific-heat",
       "name": "Steam",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steam",
       "source_count": 2,
       "sources": [
@@ -1061,6 +1118,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ice stores much more heat per kilogram than most solids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1077,6 +1135,8 @@
       "id": "obs:specific-heat:entity-ice-specific-heat",
       "name": "Ice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice",
       "source_count": 2,
       "sources": [
@@ -1115,6 +1175,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Snow behaves broadly like ice in specific heat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Snow",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1131,6 +1192,8 @@
       "id": "obs:specific-heat:entity-snow-specific-heat",
       "name": "Snow",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Snow",
       "source_count": 2,
       "sources": [
@@ -1169,6 +1232,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ice provides a phase-linked heat-capacity reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1187,6 +1251,8 @@
       "qualifiers": {
         "measurement": "specific heat capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice",
       "source_count": 2,
       "sources": [
@@ -1225,6 +1291,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Alcohols have relatively high specific heat among common liquids.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethanol",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1241,6 +1308,8 @@
       "id": "obs:specific-heat:entity-ethanol-specific-heat",
       "name": "Ethanol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ethanol",
       "source_count": 2,
       "sources": [
@@ -1279,6 +1348,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lithium is a light metal with unusually high specific heat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lithium",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1295,6 +1365,8 @@
       "id": "obs:specific-heat:entity-lithium-specific-heat",
       "name": "Lithium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lithium",
       "source_count": 2,
       "sources": [
@@ -1333,6 +1405,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water's high specific heat is one of the most important pedagogical benchmarks in physics.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1349,6 +1422,8 @@
       "id": "obs:specific-heat:entity-water-specific-heat",
       "name": "Water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -1387,6 +1462,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ammonia is a notable high-specific-heat working fluid.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ammonia",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1403,6 +1479,8 @@
       "id": "obs:specific-heat:entity-ammonia-specific-heat",
       "name": "Ammonia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ammonia",
       "source_count": 2,
       "sources": [
@@ -1441,6 +1519,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Helium is a high-specific-heat gas reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Helium",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1457,6 +1536,8 @@
       "id": "obs:specific-heat:entity-helium-specific-heat",
       "name": "Helium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helium",
       "source_count": 2,
       "sources": [
@@ -1495,6 +1576,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hydrogen sits at the extreme high end among common substances.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hydrogen",
         "ingest_source": "dataset/raw/curated/specific-heat.json",
@@ -1511,6 +1593,8 @@
       "id": "obs:specific-heat:entity-hydrogen-specific-heat",
       "name": "Hydrogen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen",
       "source_count": 2,
       "sources": [

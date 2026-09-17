@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A sparse Arctic territory anchors the extreme low-density end.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Greenland",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -48,6 +49,8 @@
       "id": "obs:population-density:entity-population-density-greenland",
       "name": "Greenland",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Greenland",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mongolia is a classic low-density national example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mongolia",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -103,6 +107,8 @@
       "id": "obs:population-density:entity-population-density-mongolia",
       "name": "Mongolia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mongolia",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mongolia is one of the sparsest inhabited countries on Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mongolia",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -158,6 +165,8 @@
       "id": "obs:population-density:entity-population-density-mongolia:2",
       "name": "Mongolia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mongolia",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Namibia anchors the very sparse end of modern national population density.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Namibia",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -213,6 +223,8 @@
       "id": "obs:population-density:entity-population-density-namibia",
       "name": "Namibia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Namibia",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Namibia anchors the very sparse end of national population density.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Namibia",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -268,6 +281,8 @@
       "id": "obs:population-density:entity-population-density-namibia:2",
       "name": "Namibia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Namibia",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Australia is sparse despite a very large absolute population.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Australia",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -323,6 +339,8 @@
       "id": "obs:population-density:entity-population-density-australia",
       "name": "Australia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Australia",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Iceland is a classic low-density island nation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Iceland",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -378,6 +397,8 @@
       "id": "obs:population-density:entity-population-density-iceland",
       "name": "Iceland",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Iceland",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Canada is another low-density large-country anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Canada",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -433,6 +455,8 @@
       "id": "obs:population-density:entity-population-density-canada",
       "name": "Canada",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Canada",
       "source_count": 2,
       "sources": [
@@ -471,6 +495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Russia sits low on the density scale despite its size and population.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Russia",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -488,6 +513,8 @@
       "id": "obs:population-density:entity-population-density-russia",
       "name": "Russia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Russia",
       "source_count": 2,
       "sources": [
@@ -526,6 +553,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The United States occupies a mid-low density band for a high-income country.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "United States",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -543,6 +571,8 @@
       "id": "obs:population-density:entity-population-density-united-states",
       "name": "United States",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/United_States",
       "source_count": 2,
       "sources": [
@@ -581,6 +611,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "France is a mid-density large European state.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "France",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -598,6 +629,8 @@
       "id": "obs:population-density:entity-population-density-france",
       "name": "France",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/France",
       "source_count": 2,
       "sources": [
@@ -636,6 +669,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Germany sits in the dense-but-not-urban national band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Germany",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -653,6 +687,8 @@
       "id": "obs:population-density:entity-population-density-germany:2",
       "name": "Germany",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Germany",
       "source_count": 2,
       "sources": [
@@ -691,6 +727,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Germany is densely populated for a large industrial state.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Germany",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -708,6 +745,8 @@
       "id": "obs:population-density:entity-population-density-germany",
       "name": "Germany",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Germany",
       "source_count": 2,
       "sources": [
@@ -746,6 +785,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The United Kingdom sits in a substantial mid-density band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "United Kingdom",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -763,6 +803,8 @@
       "id": "obs:population-density:entity-population-density-united-kingdom",
       "name": "United Kingdom",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/United_Kingdom",
       "source_count": 2,
       "sources": [
@@ -801,6 +843,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Japan is densely settled but not in the very top extreme.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Japan",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -818,6 +861,8 @@
       "id": "obs:population-density:entity-population-density-japan",
       "name": "Japan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Japan",
       "source_count": 2,
       "sources": [
@@ -856,6 +901,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Belgium is a dense Western European benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Belgium",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -873,6 +919,8 @@
       "id": "obs:population-density:entity-population-density-belgium",
       "name": "Belgium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Belgium",
       "source_count": 2,
       "sources": [
@@ -911,6 +959,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "India gives a large, high-density national anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "India",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -928,6 +977,8 @@
       "id": "obs:population-density:entity-population-density-india",
       "name": "India",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/India",
       "source_count": 2,
       "sources": [
@@ -966,6 +1017,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Netherlands is a classic dense European country example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Netherlands",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -983,6 +1035,8 @@
       "id": "obs:population-density:entity-population-density-netherlands",
       "name": "Netherlands",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Netherlands",
       "source_count": 2,
       "sources": [
@@ -1021,6 +1075,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "South Korea is densely settled by national standards.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "South Korea",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1038,6 +1093,8 @@
       "id": "obs:population-density:entity-population-density-south-korea",
       "name": "South Korea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/South_Korea",
       "source_count": 2,
       "sources": [
@@ -1076,6 +1133,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Taiwan is a highly populated island density benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Taiwan",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1093,6 +1151,8 @@
       "id": "obs:population-density:entity-population-density-taiwan",
       "name": "Taiwan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Taiwan",
       "source_count": 2,
       "sources": [
@@ -1131,6 +1191,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bangladesh is one of the most cited national density benchmarks.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bangladesh",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1148,6 +1209,8 @@
       "id": "obs:population-density:entity-population-density-bangladesh",
       "name": "Bangladesh",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bangladesh",
       "source_count": 2,
       "sources": [
@@ -1186,6 +1249,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Vatican City is a compact city-state density reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vatican City",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1203,6 +1267,8 @@
       "id": "obs:population-density:entity-population-density-vatican-city",
       "name": "Vatican City",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vatican_City",
       "source_count": 2,
       "sources": [
@@ -1241,6 +1307,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hong Kong sits in the very high density urban territory range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hong Kong",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1258,6 +1325,8 @@
       "id": "obs:population-density:entity-population-density-hong-kong",
       "name": "Hong Kong",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hong_Kong",
       "source_count": 2,
       "sources": [
@@ -1296,6 +1365,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Singapore is a dense city-state benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Singapore",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1313,6 +1383,8 @@
       "id": "obs:population-density:entity-population-density-singapore",
       "name": "Singapore",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Singapore",
       "source_count": 2,
       "sources": [
@@ -1351,6 +1423,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Singapore compresses a large population into a tiny land area.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Singapore",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1368,6 +1441,8 @@
       "id": "obs:population-density:entity-population-density-singapore:2",
       "name": "Singapore",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Singapore",
       "source_count": 2,
       "sources": [
@@ -1406,6 +1481,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Seoul gives a very dense megacity benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seoul",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1423,6 +1499,8 @@
       "id": "obs:population-density:entity-population-density-seoul",
       "name": "Seoul",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Seoul",
       "source_count": 2,
       "sources": [
@@ -1461,6 +1539,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Monaco is one of the most densely populated sovereign states.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Monaco",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1478,6 +1557,8 @@
       "id": "obs:population-density:entity-population-density-monaco",
       "name": "Monaco",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Monaco",
       "source_count": 2,
       "sources": [
@@ -1516,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Macau pushes the density scale even higher.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Macau",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1533,6 +1615,8 @@
       "id": "obs:population-density:entity-population-density-macau",
       "name": "Macau",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Macau",
       "source_count": 2,
       "sources": [
@@ -1571,6 +1655,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mumbai is a classic extremely dense city example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mumbai",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1588,6 +1673,8 @@
       "id": "obs:population-density:entity-population-density-mumbai",
       "name": "Mumbai",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mumbai",
       "source_count": 2,
       "sources": [
@@ -1626,6 +1713,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Paris is a high-density city-proper benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Paris",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1643,6 +1731,8 @@
       "id": "obs:population-density:entity-population-density-paris",
       "name": "Paris",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paris",
       "source_count": 2,
       "sources": [
@@ -1681,6 +1771,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Manila is an extremely dense urban benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Manila",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1698,6 +1789,8 @@
       "id": "obs:population-density:entity-population-density-manila",
       "name": "Manila",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Manila",
       "source_count": 2,
       "sources": [
@@ -1736,6 +1829,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dhaka pushes the population-density scale into extreme urban territory.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dhaka",
         "ingest_source": "dataset/raw/curated/population-density.json",
@@ -1753,6 +1847,8 @@
       "id": "obs:population-density:entity-population-density-dhaka",
       "name": "Dhaka",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dhaka",
       "source_count": 2,
       "sources": [

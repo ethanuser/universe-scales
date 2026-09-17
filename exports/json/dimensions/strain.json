@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Gravitational-wave detectors measure some of the tiniest strains humans have ever resolved.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "LIGO strain sensitivity",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -47,6 +48,8 @@
       "id": "obs:strain:entity-ligo-strain",
       "name": "LIGO strain sensitivity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/LIGO",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Atomic-scale displacements over macroscopic lengths can correspond to tiny strains.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atomic thermal vibration scale",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -101,6 +105,8 @@
       "id": "obs:strain:entity-atomic-vibration-strain",
       "name": "Atomic thermal vibration scale",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Strain_(mechanics)",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth tides produce measurable crustal strains.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth tide strain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -155,6 +162,8 @@
       "id": "obs:strain:entity-earth-tide-strain",
       "name": "Earth tide strain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth_tide",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A microstrain is a standard engineering small-deformation unit.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Structural-health microstrain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -210,6 +220,8 @@
       "id": "obs:strain:entity-microstrain-reference",
       "name": "Structural-health microstrain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Strain_gauge",
       "source_count": 2,
       "sources": [
@@ -248,6 +260,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Microstrain is a metrology-scale deformation benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Microstrain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -266,6 +279,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Strain_(mechanics)",
       "source_count": 2,
       "sources": [
@@ -304,6 +319,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tectonic loading builds strain over long timescales.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Crustal tectonic strain accumulation",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -320,6 +336,8 @@
       "id": "obs:strain:entity-tectonic-strain",
       "name": "Crustal tectonic strain accumulation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Strain_(geology)",
       "source_count": 2,
       "sources": [
@@ -358,6 +376,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tectonic strain can be tiny in absolute terms but still decisive geologically.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Crustal strain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -376,6 +395,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Strain_(materials_science)",
       "source_count": 2,
       "sources": [
@@ -414,6 +435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Thermal expansion of bridges is a practical small-strain example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bridge thermal expansion",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -432,6 +454,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Thermal_expansion",
       "source_count": 2,
       "sources": [
@@ -470,6 +494,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Thermal expansion over a large temperature swing already reaches engineering-scale strain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel thermal expansion over 100 K",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -486,6 +511,8 @@
       "id": "obs:strain:entity-steel-thermal-strain-100k",
       "name": "Steel thermal expansion over 100 K",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Thermal_expansion",
       "source_count": 2,
       "sources": [
@@ -524,6 +551,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Steel begins to yield at only a few tenths of a percent strain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel yield strain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -540,6 +568,8 @@
       "id": "obs:strain:entity-steel-yield-strain",
       "name": "Steel yield strain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Yield_(engineering)",
       "source_count": 2,
       "sources": [
@@ -578,6 +608,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Structural steel leaves the linear elastic range at small strain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel elastic strain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -596,6 +627,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Young%27s_modulus",
       "source_count": 2,
       "sources": [
@@ -634,6 +667,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concrete fails at only a few tenths of a percent strain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concrete compressive failure",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -650,6 +684,8 @@
       "id": "obs:strain:entity-concrete-failure-strain",
       "name": "Concrete compressive failure",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -688,6 +724,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aluminum typically yields at a somewhat larger strain than steel.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aluminum yield strain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -704,6 +741,8 @@
       "id": "obs:strain:entity-aluminum-yield-strain",
       "name": "Aluminum yield strain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Yield_(engineering)",
       "source_count": 2,
       "sources": [
@@ -742,6 +781,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Paper stretching gives a visibly small but measurable strain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Paper stretch",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -760,6 +800,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paper",
       "source_count": 2,
       "sources": [
@@ -798,6 +840,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tendons are designed to stretch, but only modestly.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tendon strain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -816,6 +859,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tendon",
       "source_count": 2,
       "sources": [
@@ -854,6 +899,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Biological tissues can deform much more than structural metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human tendon failure strain",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -870,6 +916,8 @@
       "id": "obs:strain:entity-tendon-failure-strain",
       "name": "Human tendon failure strain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tendon",
       "source_count": 2,
       "sources": [
@@ -908,6 +956,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human skin can deform significantly without failing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human skin stretch",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -926,6 +975,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_skin",
       "source_count": 2,
       "sources": [
@@ -964,6 +1015,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Stretch textiles operate at very large everyday strains.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Stretch fabric",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -980,6 +1032,8 @@
       "id": "obs:strain:entity-stretch-fabric-strain",
       "name": "Stretch fabric",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Spandex",
       "source_count": 2,
       "sources": [
@@ -1018,6 +1072,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Elastomers can sustain order-unity strain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubber band extension",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -1034,6 +1089,8 @@
       "id": "obs:strain:entity-rubber-band-strain",
       "name": "Rubber band extension",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rubber",
       "source_count": 2,
       "sources": [
@@ -1072,6 +1129,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rubber bands are an easy one-to-one strain example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rubber band stretch",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -1090,6 +1148,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rubber_band",
       "source_count": 2,
       "sources": [
@@ -1128,6 +1188,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Soft elastomers can tolerate strains above 100 percent.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silicone elastomer",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -1146,6 +1207,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicone",
       "source_count": 2,
       "sources": [
@@ -1184,6 +1247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Inflating a balloon is a simple large-strain example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Balloon inflation",
         "ingest_source": "dataset/raw/curated/strain.json",
@@ -1202,6 +1266,8 @@
       "qualifiers": {
         "measurement": "dimensionless strain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Balloon",
       "source_count": 2,
       "sources": [

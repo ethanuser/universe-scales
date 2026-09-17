@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The elementary charge is the magnitude of charge carried by a single proton or electron.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Elementary charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -50,6 +51,8 @@
       "qualifiers": {
         "measurement": "fundamental charge magnitude"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Elementary_charge",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An alpha particle carries two positive elementary charges.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Alpha particle charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -107,6 +111,8 @@
       "qualifiers": {
         "measurement": "particle charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Alpha_particle",
       "source_count": 2,
       "sources": [
@@ -145,6 +151,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Planck charge is the natural charge scale formed from fundamental constants.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Planck charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -164,6 +171,8 @@
       "qualifiers": {
         "measurement": "natural charge scale"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_units",
       "source_count": 2,
       "sources": [
@@ -202,6 +211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A crackling piece of static-clung laundry carries tens of nanocoulombs to microcoulombs of excess charge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Static cling from synthetic laundry",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -221,6 +231,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "net static charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Static_electricity",
       "source_count": 2,
       "sources": [
@@ -259,6 +271,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A rubbed balloon can easily hold on the order of a hundred nanocoulombs of static charge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Static charge on a rubbed balloon",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -278,6 +291,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "net static charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Static_electricity",
       "source_count": 2,
       "sources": [
@@ -316,6 +331,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small static shock from touching a metal doorknob after walking on carpet.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Doorknob static shock",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -335,6 +351,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "discharge transferred charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electrostatic_discharge",
       "source_count": 2,
       "sources": [
@@ -373,6 +391,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A classroom Van de Graaff generator can hold around ten microcoulombs on its dome.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Van de Graaff generator dome charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -392,6 +411,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "stored dome charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Van_de_Graaff_generator",
       "source_count": 2,
       "sources": [
@@ -430,6 +451,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tabletop Tesla coil terminal can carry only tens of microcoulombs despite its dramatic discharges.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tesla coil terminal charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -449,6 +471,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "terminal charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tesla_coil",
       "source_count": 2,
       "sources": [
@@ -487,6 +511,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An electric eel pulse moves a noticeable packet of charge through surrounding water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Electric eel discharge packet charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -506,6 +531,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "pulse charge transfer"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electric_eel",
       "source_count": 2,
       "sources": [
@@ -544,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A photographic flash capacitor can hold a visible burst of charge before discharge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Camera flash capacitor charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -563,6 +591,8 @@
       "qualifiers": {
         "measurement": "stored flash charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Flash_(photography)",
       "source_count": 2,
       "sources": [
@@ -601,6 +631,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Defibrillator capacitors store enough charge for a short, high-energy pulse.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Defibrillator capacitor charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -620,6 +651,8 @@
       "qualifiers": {
         "measurement": "stored capacitor charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Defibrillator",
       "source_count": 2,
       "sources": [
@@ -658,6 +691,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A one-farad supercapacitor at 2.7 volts stores a few coulombs.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Small supercapacitor stored charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -677,6 +711,8 @@
       "qualifiers": {
         "measurement": "stored capacitor charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Supercapacitor",
       "source_count": 2,
       "sources": [
@@ -715,6 +751,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single lightning stroke moves only a few coulombs, which is surprisingly little compared with its voltage and power.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lightning bolt charge transfer",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -734,6 +771,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "stroke charge transfer"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -772,6 +811,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A lightning stroke can transfer a noticeable fraction of a coulomb to a few coulombs of charge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cloud-to-ground lightning charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -791,6 +831,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "charge transfer"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -829,6 +871,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical lightning stroke transfers only tens of coulombs even though the currents are enormous.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Transferred charge in a lightning stroke",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -848,6 +891,8 @@
         "assumption": "representative lightning stroke",
         "measurement": "transferred charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -886,6 +931,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A ten-farad supercapacitor at 2.7 volts holds a few dozen coulombs.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Large supercapacitor stored charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -905,6 +951,8 @@
       "qualifiers": {
         "measurement": "stored capacitor charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Supercapacitor",
       "source_count": 2,
       "sources": [
@@ -943,6 +991,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A thundercloud charge center can hold tens of coulombs of net charge before discharge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Net charge in a thundercloud center",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -962,6 +1011,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "net cloud charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1051,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A thundercloud stores a much larger separated charge reservoir than any single lightning stroke releases.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Storm cloud charge separation",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1019,6 +1071,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "net separated atmospheric charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -1057,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A coin cell only stores a few hundred coulombs over its whole life.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Coin cell total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1076,6 +1131,8 @@
       "qualifiers": {
         "measurement": "battery capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Coin_cell",
       "source_count": 2,
       "sources": [
@@ -1114,6 +1171,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 2000 mAh AA cell corresponds to about 7200 coulombs of charge moved through a circuit.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "AA battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1133,6 +1191,8 @@
       "qualifiers": {
         "measurement": "nominal charge throughput"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/AA_battery",
       "source_count": 2,
       "sources": [
@@ -1171,6 +1231,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small 3 Ah battery pack corresponds to a little over ten thousand coulombs.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "3 Ah power-tool battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1190,6 +1251,8 @@
       "qualifiers": {
         "measurement": "nominal charge throughput"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lithium-ion_battery",
       "source_count": 2,
       "sources": [
@@ -1228,6 +1291,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small drone battery can still move thousands of coulombs through the motor system.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Drone battery pack total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1247,6 +1311,8 @@
       "qualifiers": {
         "measurement": "battery capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drone",
       "source_count": 2,
       "sources": [
@@ -1285,6 +1351,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 5000 mAh phone battery corresponds to about eighteen thousand coulombs of total charge throughput.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smartphone battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1305,6 +1372,8 @@
         "assumption": "5000 mAh battery",
         "measurement": "nominal charge throughput"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lithium-ion_battery",
       "source_count": 2,
       "sources": [
@@ -1343,6 +1412,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A laptop battery stores tens of thousands of coulombs of charge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Laptop battery total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1362,6 +1432,8 @@
       "qualifiers": {
         "measurement": "battery capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laptop",
       "source_count": 2,
       "sources": [
@@ -1400,6 +1472,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An e-bike battery typically stores a larger charge reservoir than a laptop battery.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "E-bike battery total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1419,6 +1492,8 @@
       "qualifiers": {
         "measurement": "battery capacity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electric_bicycle",
       "source_count": 2,
       "sources": [
@@ -1457,6 +1532,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One mole of electrons carries the Faraday constant, a major benchmark in electrochemistry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One mole of electrons",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1475,6 +1551,8 @@
       "qualifiers": {
         "measurement": "charge of one mole of elementary charges"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Faraday_constant",
       "source_count": 2,
       "sources": [
@@ -1513,6 +1591,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 60 Ah car battery corresponds to about two hundred thousand coulombs of charge throughput.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car battery total moved charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1532,6 +1611,8 @@
       "qualifiers": {
         "measurement": "nominal charge throughput"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Automotive_battery",
       "source_count": 2,
       "sources": [
@@ -1570,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An electric car battery moves hundreds of thousands of coulombs when you think of its stored energy as charge at pack voltage.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Electric vehicle battery pack total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1590,6 +1672,8 @@
         "assumption": "75 kWh pack at 400 V",
         "measurement": "equivalent stored charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electric_vehicle_battery",
       "source_count": 2,
       "sources": [
@@ -1628,6 +1712,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A utility-scale battery container corresponds to millions of coulombs once you translate its stored energy into charge at pack-scale voltage.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Utility-scale battery container total charge",
         "ingest_source": "dataset/raw/curated/charge.json",
@@ -1648,6 +1733,8 @@
         "assumption": "1000 volt system voltage",
         "measurement": "equivalent stored charge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Grid_energy_storage",
       "source_count": 2,
       "sources": [

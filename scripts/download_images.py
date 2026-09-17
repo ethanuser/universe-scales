@@ -976,7 +976,7 @@ class ImageDownloader:
             print("Starting automatic image download process...")
             print("Images will be named as: dimension_item_name.jpg")
             
-            # Find all YAML files in the data directory
+            # Find all YAML files in the configured data directory
             yaml_files = list(self.data_dir.glob("*.yaml"))
             if dimension_filter:
                 normalized_filter = str(dimension_filter).strip().lower()
@@ -1031,9 +1031,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--allow-placeholders", action="store_true", help="Generate local placeholder images when no source image can be found.")
     parser.add_argument("--dimension", help="Process only one exported YAML dimension, such as 'area' or 'mass'.")
+    parser.add_argument("--data-dir", default="data", help="Directory containing YAML files to process (default: data).")
     args = parser.parse_args()
 
-    downloader = ImageDownloader(allow_placeholders=args.allow_placeholders)
+    downloader = ImageDownloader(data_dir=args.data_dir, allow_placeholders=args.allow_placeholders)
     downloader.run(dimension_filter=args.dimension)
 
 if __name__ == "__main__":

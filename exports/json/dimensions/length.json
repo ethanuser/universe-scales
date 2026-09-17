@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The smallest meaningful distance in physics, where quantum mechanics and general relativity collide. At this scale, spacetime becomes a seething foam of quantum fluctuations, and attempting to measure distances shorter than this would require so much energy that it would create a black hole. This length is derived from fundamental constants and represents the ultimate limit of our current understanding of space and time.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Planck Length",
@@ -44,6 +45,8 @@
       "id": "obs:length:scenario-length-planck-length",
       "name": "Planck Length",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_length",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The experimental upper limit on quark size from high-energy collisions at particle accelerators. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. This size limit represents our current resolution for probing the fundamental building blocks of matter, and any attempt to see smaller would require energies exceeding what current accelerators can achieve.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Quark",
@@ -95,6 +99,8 @@
       "id": "obs:length:scenario-length-quark",
       "name": "Quark",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quark",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The charge radius of the proton, measured through electron-proton scattering and muonic hydrogen spectroscopy. This measurement sparked the 'proton radius puzzle' when muonic hydrogen gave a different result than electronic hydrogen - a discrepancy that challenged quantum electrodynamics and hinted at possible new physics. The proton's internal structure contains three quarks constantly exchanging gluons in a quantum soup.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Proton Radius",
@@ -146,6 +153,8 @@
       "id": "obs:length:scenario-length-proton-radius",
       "name": "Proton Radius",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Proton",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The electromagnetic 'size' of an electron, calculated from its self-energy interactions. While electrons appear point-like in experiments, this radius represents the scale where electromagnetic effects dominate. Interestingly, if an electron were actually this size, its electrostatic self-energy would exceed its rest mass energy by a factor of 200,000, highlighting the quantum mechanical nature of fundamental particles.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Electron",
@@ -197,6 +207,8 @@
       "id": "obs:length:scenario-length-electron",
       "name": "Electron",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electron",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of atomic nuclei, where 99.97% of an atom's mass is concentrated in a space 100,000 times smaller than the atom itself. Nuclear size scales roughly as the cube root of atomic mass, meaning uranium nuclei are only about 6 times larger than hydrogen nuclei despite being 238 times more massive. This incredible density means nuclear matter is 100 trillion times denser than water.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Atomic Nucleus",
@@ -248,6 +261,8 @@
       "id": "obs:length:scenario-length-atomic-nucleus",
       "name": "Atomic Nucleus",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Atomic_nucleus",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The quantum mechanical 'size' of neutrinos, the most abundant massive particles in the universe. Trillions of neutrinos pass through your body every second from the Sun, yet they're so weakly interacting that you'd need a light-year of lead to stop half of them. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Neutrino",
@@ -299,6 +315,8 @@
       "id": "obs:length:scenario-length-neutrino",
       "name": "Neutrino",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neutrino",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The quantum mechanical 'size' of a hydrogen atom, where the electron exists in a probability cloud around the nucleus. This distance emerges from the balance between electrostatic attraction and quantum uncertainty. Remarkably, if you scaled up a hydrogen atom so its nucleus was the size of a basketball, the electron would orbit at a distance of 2.5 kilometers, illustrating the vast emptiness within atoms.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Hydrogen Atom",
@@ -350,6 +369,8 @@
       "id": "obs:length:scenario-length-hydrogen-atom",
       "name": "Hydrogen Atom",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bohr_radius",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The van der Waals radius of carbon, defining how close non-bonded atoms can approach before repulsion dominates. This 'personal space' radius is crucial for molecular recognition - enzymes use it to distinguish between different molecules. The carbon atom's versatility comes from its ability to form four bonds, making it the backbone of all organic chemistry and life itself.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Carbon Atom",
@@ -401,6 +423,8 @@
       "id": "obs:length:scenario-length-carbon-atom",
       "name": "Carbon Atom",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Van_der_Waals_radius",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The O-H bond length in water, the most important molecule for life. This precise distance creates water's unique properties - its high boiling point, surface tension, and ability to dissolve salts. Water's bent geometry makes it polar, allowing it to form hydrogen bonds that give ice its unusual property of being less dense than liquid water, crucial for aquatic life in cold climates.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Water Molecule",
@@ -454,6 +479,8 @@
       "qualifiers": {
         "measurement": "representative molecular diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -492,6 +519,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of a glucose molecule, the primary fuel for cellular respiration. This sugar's compact structure allows it to efficiently store chemical energy - one glucose molecule can power a cell for several minutes. The molecule's size is optimized for transport through cell membranes and interaction with metabolic enzymes. Interestingly, glucose exists in multiple ring forms, with this size representing the most stable configuration in solution.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Glucose Molecule",
@@ -505,6 +533,8 @@
       "id": "obs:length:scenario-length-glucose-molecule",
       "name": "Glucose Molecule",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glucose",
       "source_count": 2,
       "sources": [
@@ -543,6 +573,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of DNA's double helix, the molecular blueprint of life. This remarkably consistent width accommodates the universal genetic code across all species. The helix's major groove provides access for proteins to read genetic information, while the minor groove offers binding sites for regulatory molecules. This precise dimension has remained constant through billions of years of evolution, reflecting the fundamental constraints of molecular biology.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "DNA Helix Width",
@@ -558,6 +589,8 @@
       "qualifiers": {
         "measurement": "double-helix diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA",
       "source_count": 2,
       "sources": [
@@ -596,6 +629,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of small proteins like insulin, molecular machines that perform specific cellular functions. Proteins fold into precise shapes determined by their amino acid sequence - a single wrong amino acid can cause diseases like sickle cell anemia. This size represents the optimal balance between stability and flexibility, allowing proteins to interact with other molecules while maintaining their functional structure. Remarkably, proteins can fold from random coils to precise shapes in microseconds.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Protein (Small)",
@@ -609,6 +643,8 @@
       "id": "obs:length:scenario-length-protein-small",
       "name": "Protein (Small)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Protein",
       "source_count": 2,
       "sources": [
@@ -647,6 +683,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of typical viruses, biological entities that blur the line between living and non-living. Viruses are essentially genetic material wrapped in protein coats, hijacking cellular machinery to reproduce. Their small size allows them to penetrate cells through endocytosis, while their protein shells protect their genetic material from environmental damage. Some viruses are so small they can pass through filters designed to remove bacteria.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Virus",
@@ -660,6 +697,8 @@
       "id": "obs:length:scenario-length-virus",
       "name": "Virus",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Virus",
       "source_count": 2,
       "sources": [
@@ -698,6 +737,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The wavelength of green light, the peak sensitivity of human vision. This wavelength defines the resolution limit of optical microscopes and explains why we can't see individual atoms with visible light. The evolution of color vision in primates was driven by the need to distinguish ripe fruits from foliage, with green being the most common color in nature. This wavelength also determines the diffraction patterns that create the iridescent colors in butterfly wings and soap bubbles.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Visible Light Wavelength",
@@ -711,6 +751,8 @@
       "id": "obs:length:scenario-length-visible-light-wavelength",
       "name": "Visible Light Wavelength",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visible_spectrum",
       "source_count": 2,
       "sources": [
@@ -749,6 +791,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of E. coli bacteria, the workhorse of molecular biology. These rod-shaped microbes can reproduce every 20 minutes under ideal conditions, meaning a single bacterium could theoretically produce more offspring than there are atoms in the observable universe in just two days. Their streamlined shape optimizes nutrient absorption and allows them to swim efficiently through viscous environments using rotating flagella.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Bacteria",
@@ -762,6 +805,8 @@
       "id": "obs:length:scenario-length-bacteria",
       "name": "Bacteria",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -800,6 +845,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of red blood cells, the oxygen carriers of the human body. These cells lack nuclei to maximize space for hemoglobin, the protein that binds oxygen. Their biconcave shape increases surface area for gas exchange while allowing them to squeeze through capillaries narrower than their own diameter. Remarkably, an adult human has about 25 trillion red blood cells, and they complete a full circuit of the body in just 20 seconds.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Red Blood Cell",
@@ -813,6 +859,8 @@
       "id": "obs:length:scenario-length-red-blood-cell",
       "name": "Red Blood Cell",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
       "source_count": 2,
       "sources": [
@@ -851,6 +899,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of mitochondria, the powerhouses of cells. These organelles contain their own DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP through cellular respiration, generating enough energy to power a cell's activities. Interestingly, mitochondria can fuse together and split apart, and they're inherited only from the mother, making them useful for tracing maternal ancestry.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Mitochondrion",
@@ -864,6 +913,8 @@
       "id": "obs:length:scenario-length-mitochondrion",
       "name": "Mitochondrion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mitochondrion",
       "source_count": 2,
       "sources": [
@@ -902,6 +953,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of human hair, a remarkable biological fiber that grows continuously throughout life. Hair is stronger than steel by weight and can stretch up to 30% before breaking. Each hair follicle cycles through growth phases lasting 2-7 years, which is why hair can grow so long. The diameter varies by ethnicity, with Asian hair typically being thicker than European hair, and red hair being the thickest.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Human Hair",
@@ -915,6 +967,8 @@
       "id": "obs:length:scenario-length-human-hair",
       "name": "Human Hair",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hair",
       "source_count": 2,
       "sources": [
@@ -953,6 +1007,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of neuron cell bodies, the command centers of the nervous system. These cells can have axons extending over a meter long while maintaining electrical signals. Neurons communicate through synapses, where neurotransmitters cross tiny gaps in milliseconds. The brain contains about 86 billion neurons, each connecting to thousands of others, creating the most complex network known in the universe.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Neuron",
@@ -966,6 +1021,8 @@
       "id": "obs:length:scenario-length-neuron",
       "name": "Neuron",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neuron",
       "source_count": 2,
       "sources": [
@@ -1004,6 +1061,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of sand grains, the building blocks of beaches and deserts. Sand forms through the weathering of rocks over millions of years, with each grain representing a tiny piece of geological history. The size determines how sand behaves - fine sand flows like liquid when dry but becomes solid when wet, while coarse sand maintains its shape. Remarkably, there are more grains of sand on Earth than there are stars in the observable universe.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Grain of Sand",
@@ -1017,6 +1075,8 @@
       "id": "obs:length:scenario-length-grain-of-sand",
       "name": "Grain of Sand",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sand",
       "source_count": 2,
       "sources": [
@@ -1055,6 +1115,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of worker ants, among the most successful insects on Earth. Ants can carry objects 50 times their own weight and work together in colonies of millions. They communicate through chemical trails and can navigate using the Earth's magnetic field. Some species farm fungi, while others keep aphids as livestock. The total biomass of ants on Earth exceeds that of all humans combined.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Ant",
@@ -1068,6 +1129,8 @@
       "id": "obs:length:scenario-length-ant",
       "name": "Ant",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ant",
       "source_count": 2,
       "sources": [
@@ -1106,6 +1169,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of houseflies, masterful fliers that can hover, fly backwards, and perform aerial acrobatics. Their compound eyes contain 4,000 lenses and can detect movement 10 times faster than human eyes. Flies taste with their feet and can walk on ceilings using tiny hairs and adhesive pads. They're vectors for over 100 diseases, making them one of humanity's deadliest enemies.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Housefly",
@@ -1119,6 +1183,8 @@
       "id": "obs:length:scenario-length-housefly",
       "name": "Housefly",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Housefly",
       "source_count": 2,
       "sources": [
@@ -1157,6 +1223,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of domestic cats, perfectly sized predators that have adapted to live alongside humans. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Cat Length",
@@ -1170,6 +1237,8 @@
       "id": "obs:length:scenario-length-cat-length",
       "name": "Cat Length",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cat",
       "source_count": 2,
       "sources": [
@@ -1208,6 +1277,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The wingspan of monarch butterflies, champions of long-distance migration. These insects travel up to 3,000 miles from Canada to Mexico, using the Sun's position and Earth's magnetic field for navigation. Their orange and black pattern warns predators of their toxicity, while their wings contain scales that create iridescent colors through light interference. Remarkably, the migration takes multiple generations to complete.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Butterfly Wingspan",
@@ -1221,6 +1291,8 @@
       "id": "obs:length:scenario-length-butterfly-wingspan",
       "name": "Butterfly Wingspan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Monarch_butterfly",
       "source_count": 2,
       "sources": [
@@ -1259,6 +1331,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The average height of humans, a species that walks upright on two legs. This bipedal stance freed our hands for tool use and allowed us to see over tall grass on the African savanna. Human height varies dramatically across populations due to genetics, nutrition, and environment. The tallest recorded human was 8 feet 11 inches, while the shortest was 1 foot 9 inches. Height affects everything from health outcomes to social perceptions and career success.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Human Height",
@@ -1274,6 +1347,8 @@
       "qualifiers": {
         "measurement": "representative adult height"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_height",
       "source_count": 2,
       "sources": [
@@ -1312,6 +1387,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of male giraffes, the tallest living animals on Earth. Their incredible height allows them to browse leaves 20 feet above ground, accessing food unavailable to other herbivores. Giraffes have the same number of neck vertebrae as humans (seven), but each one is 10 inches long. Their hearts pump blood 6 feet uphill to reach their brains, requiring blood pressure twice that of humans and special valves to prevent fainting when they lower their heads.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Giraffe Height",
@@ -1325,6 +1401,8 @@
       "id": "obs:length:scenario-length-giraffe-height",
       "name": "Giraffe Height",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Giraffe",
       "source_count": 2,
       "sources": [
@@ -1363,6 +1441,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of blue whales, the largest animals ever to live on Earth. These marine giants can weigh up to 200 tons and consume 4 tons of krill daily. Their hearts are the size of small cars and beat only twice per minute. Blue whales communicate across entire ocean basins using low-frequency sounds that travel thousands of miles underwater. Despite their massive size, they feed on tiny shrimp-like krill.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Blue Whale",
@@ -1376,6 +1455,8 @@
       "id": "obs:length:scenario-length-blue-whale",
       "name": "Blue Whale",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blue_whale",
       "source_count": 2,
       "sources": [
@@ -1414,6 +1495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of American football fields, standardized playing surfaces that have become cultural landmarks. The field's dimensions were designed to balance offense and defense, creating strategic depth while maintaining spectator visibility. Interestingly, the field is exactly 100 yards long, but with end zones it spans 120 yards total. This length has remained constant since the sport's early days, making it one of the most consistent measurements in professional sports.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Football Field",
@@ -1427,6 +1509,8 @@
       "id": "obs:length:scenario-length-football-field",
       "name": "Football Field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/American_football_field",
       "source_count": 2,
       "sources": [
@@ -1465,6 +1549,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of the Eiffel Tower, an iron lattice structure that was initially criticized but became the symbol of Paris. Built for the 1889 World's Fair, it was the tallest human-made structure for 41 years. The tower expands 6 inches in summer heat and contracts in winter cold. It weighs 10,100 tons but exerts the same pressure on the ground as a person sitting in a chair. Over 300 million people have visited this engineering marvel.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Eiffel Tower",
@@ -1478,6 +1563,8 @@
       "id": "obs:length:scenario-length-eiffel-tower",
       "name": "Eiffel Tower",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Eiffel_Tower",
       "source_count": 2,
       "sources": [
@@ -1516,6 +1603,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of the Burj Khalifa, the world's tallest building that pierces the sky at over half a mile high. This architectural marvel uses a bundled tube design inspired by desert flowers, with setbacks that reduce wind loads. The building contains 57 elevators and can sway up to 2 meters in strong winds. At the top, temperatures are 10 degrees cooler than ground level, and the air pressure is 20% lower than at sea level.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Burj Khalifa",
@@ -1529,6 +1617,8 @@
       "id": "obs:length:scenario-length-burj-khalifa",
       "name": "Burj Khalifa",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Burj_Khalifa",
       "source_count": 2,
       "sources": [
@@ -1567,6 +1657,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of Mount Everest, Earth's highest peak that continues growing 1 centimeter per year due to tectonic plate collision. At this altitude, the air contains only one-third the oxygen of sea level, making it the 'death zone' where human survival becomes impossible without supplemental oxygen. The mountain's height was first measured in 1856, and over 300 people have died attempting to reach its summit. The peak is actually moving northeast at 4 centimeters per year.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Mount Everest",
@@ -1580,6 +1671,8 @@
       "id": "obs:length:scenario-length-mount-everest",
       "name": "Mount Everest",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mount_Everest",
       "source_count": 2,
       "sources": [
@@ -1618,6 +1711,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The depth of the Mariana Trench, Earth's deepest point where pressure reaches 1,000 times that at sea level. At this crushing depth, water temperature is near freezing and sunlight never reaches. Yet life thrives here - giant amphipods, pressure-resistant fish, and bacteria that feed on chemicals from hydrothermal vents. The trench is deeper than Mount Everest is tall, and only three people have ever reached its bottom.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Mariana Trench",
@@ -1631,6 +1725,8 @@
       "id": "obs:length:scenario-length-mariana-trench",
       "name": "Mariana Trench",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mariana_Trench",
       "source_count": 2,
       "sources": [
@@ -1669,6 +1765,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of Manhattan Island, a tiny sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Manhattan Island",
@@ -1682,6 +1779,8 @@
       "id": "obs:length:scenario-length-manhattan-island",
       "name": "Manhattan Island",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Manhattan",
       "source_count": 2,
       "sources": [
@@ -1720,6 +1819,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of marathon races, a distance born from ancient Greek legend. The original marathon commemorates Pheidippides' run from Marathon to Athens to announce victory over Persia. This distance represents the limit of human endurance without specialized equipment - most people can walk this far, but running requires months of training. The marathon has become a global phenomenon, with over 800 marathons held worldwide annually, attracting millions of participants.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Marathon Distance",
@@ -1733,6 +1833,8 @@
       "id": "obs:length:scenario-length-marathon-distance",
       "name": "Marathon Distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Marathon",
       "source_count": 2,
       "sources": [
@@ -1771,6 +1873,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of the Panama Canal, an engineering marvel that revolutionized global trade by eliminating the need to sail around South America. This artificial waterway uses a system of locks to lift ships 26 meters above sea level, saving ships 8,000 miles of dangerous journey. The canal handles 5% of global trade and generates $2 billion annually. It took 75,000 workers and 10 years to complete, with over 25,000 deaths during construction.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Panama Canal",
@@ -1784,6 +1887,8 @@
       "id": "obs:length:scenario-length-panama-canal",
       "name": "Panama Canal",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Panama_Canal",
       "source_count": 2,
       "sources": [
@@ -1822,6 +1927,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, but it's generally considered the world's longest river.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Amazon River",
@@ -1835,6 +1941,8 @@
       "id": "obs:length:scenario-length-amazon-river",
       "name": "Amazon River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Amazon_River",
       "source_count": 2,
       "sources": [
@@ -1873,6 +1981,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of Earth, our home planet that orbits the Sun at 67,000 mph while rotating at 1,000 mph at the equator. Earth is slightly flattened at the poles due to its rotation, making it an oblate spheroid rather than a perfect sphere. This diameter determines Earth's gravity, atmospheric retention, and climate patterns. If Earth were compressed to the size of a basketball, its surface would be smoother than the ball itself, with mountains and ocean trenches representing tiny imperfections.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Earth Diameter",
@@ -1888,6 +1997,8 @@
       "qualifiers": {
         "measurement": "mean diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -1926,6 +2037,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of the Great Wall of China, a massive defensive structure built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Great Wall of China",
@@ -1939,6 +2051,8 @@
       "id": "obs:length:scenario-length-great-wall-of-china",
       "name": "Great Wall of China",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
       "source_count": 2,
       "sources": [
@@ -1977,6 +2091,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of Jupiter, the solar system's largest planet that acts as a cosmic vacuum cleaner, protecting Earth from asteroids and comets. This gas giant contains more mass than all other planets combined and has a Great Red Spot storm larger than Earth. Jupiter's massive gravity influences the orbits of other planets and has 95 known moons, including Europa, which may harbor life beneath its icy surface.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Jupiter Diameter",
@@ -1992,6 +2107,8 @@
       "qualifiers": {
         "measurement": "mean diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -2030,6 +2147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance to the Moon, Earth's closest celestial neighbor that influences our tides, stabilizes our rotation, and lights our nights. This distance varies by 50,000 km due to the Moon's elliptical orbit, creating supermoons and micromoons. The Moon is slowly drifting away at 3.8 cm per year, meaning it was much closer in ancient times. Twelve people have walked on the Moon, and it's the only celestial body humans have visited beyond Earth.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Earth-Moon Distance",
@@ -2043,6 +2161,8 @@
       "id": "obs:length:scenario-length-earth-moon-distance",
       "name": "Earth-Moon Distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lunar_distance_(astronomy)",
       "source_count": 2,
       "sources": [
@@ -2081,6 +2201,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the Sun, our star that converts 600 million tons of hydrogen into helium every second, releasing energy equivalent to 100 billion nuclear bombs. This nuclear fusion process has been ongoing for 4.6 billion years and will continue for another 5 billion years. The Sun contains 99.86% of the solar system's mass and generates enough energy in one second to power human civilization for 500,000 years.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Sun Diameter",
@@ -2096,6 +2217,8 @@
       "qualifiers": {
         "measurement": "mean diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2134,6 +2257,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance from Earth to the Sun, known as one astronomical unit - the yardstick of the solar system. This distance defines the habitable zone where liquid water can exist, making Earth perfectly positioned for life. Light takes 8 minutes and 20 seconds to travel this distance, meaning we see the Sun as it was 8 minutes ago. This distance varies by 5 million km due to Earth's elliptical orbit, affecting our seasons and climate.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Astronomical Unit",
@@ -2147,6 +2271,8 @@
       "id": "obs:length:scenario-length-astronomical-unit",
       "name": "Astronomical Unit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Astronomical_unit",
       "source_count": 2,
       "sources": [
@@ -2185,6 +2311,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of Betelgeuse, a red supergiant star that could explode as a supernova within the next 100,000 years. This massive star is so large that if placed at the center of our solar system, it would extend beyond Jupiter's orbit. Betelgeuse is one of the brightest stars in the night sky and appears red due to its cool surface temperature. When it explodes, it will be visible during daylight and brighter than the full Moon.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Betelgeuse Diameter",
@@ -2198,6 +2325,8 @@
       "id": "obs:length:scenario-length-betelgeuse-diameter",
       "name": "Betelgeuse Diameter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Betelgeuse",
       "source_count": 2,
       "sources": [
@@ -2236,6 +2365,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of our solar system, a vast region dominated by the Sun's gravitational influence. This space contains eight planets, hundreds of moons, millions of asteroids, and trillions of comets. The solar system formed 4.6 billion years ago from a collapsing cloud of gas and dust. Despite its enormous size, the solar system is just a tiny speck in our galaxy, which contains 100 billion other solar systems.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Solar System",
@@ -2249,6 +2379,8 @@
       "id": "obs:length:scenario-length-solar-system",
       "name": "Solar System",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Solar_System",
       "source_count": 2,
       "sources": [
@@ -2287,6 +2419,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the heliosphere, the protective bubble of solar wind that shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Heliosphere",
@@ -2300,6 +2433,8 @@
       "id": "obs:length:scenario-length-heliosphere",
       "name": "Heliosphere",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heliosphere",
       "source_count": 2,
       "sources": [
@@ -2338,6 +2473,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The radius of the Oort Cloud, a vast shell of icy objects that marks the true boundary of our solar system. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Oort Cloud",
@@ -2351,6 +2487,8 @@
       "id": "obs:length:scenario-length-oort-cloud",
       "name": "Oort Cloud",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oort_cloud",
       "source_count": 2,
       "sources": [
@@ -2389,6 +2527,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance to Proxima Centauri, our nearest stellar neighbor that hosts an Earth-sized planet in its habitable zone. This red dwarf star is part of the Alpha Centauri triple star system and is 4.24 light-years away. At current spacecraft speeds, it would take 75,000 years to reach Proxima Centauri. This star is much smaller and cooler than our Sun, but its planet Proxima b could potentially harbor life.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Proxima Centauri",
@@ -2402,6 +2541,8 @@
       "id": "obs:length:scenario-length-proxima-centauri",
       "name": "Proxima Centauri",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Proxima_Centauri",
       "source_count": 2,
       "sources": [
@@ -2440,6 +2581,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Orion Nebula, a stellar nursery visible to the naked eye where hundreds of new stars are being born. This massive cloud of gas and dust contains enough material to form 2,000 Sun-like stars. The nebula glows because young, hot stars ionize the surrounding hydrogen gas. It's one of the most studied objects in astronomy and provides insights into how solar systems like ours form from collapsing clouds.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Orion Nebula",
@@ -2453,6 +2595,8 @@
       "id": "obs:length:scenario-length-orion-nebula",
       "name": "Orion Nebula",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Orion_Nebula",
       "source_count": 2,
       "sources": [
@@ -2491,6 +2635,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Pillars of Creation, iconic cosmic structures made famous by the Hubble Space Telescope. These towering columns of gas and dust are being sculpted by stellar winds from nearby massive stars. The pillars contain dozens of embryonic stars hidden within their dense cores. Despite their name, these structures are actually being destroyed by radiation - they may have already been blown away by a supernova explosion 6,000 years ago.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Pillars of Creation",
@@ -2504,6 +2649,8 @@
       "id": "obs:length:scenario-length-pillars-of-creation",
       "name": "Pillars of Creation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pillars_of_Creation",
       "source_count": 2,
       "sources": [
@@ -2542,6 +2689,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Tarantula Nebula, the most active stellar nursery in our galactic neighborhood. This massive star-forming region in the Large Magellanic Cloud produces stars at a rate 10 times higher than our entire Milky Way galaxy. The nebula contains some of the most massive stars known, including R136a1, which is 300 times more massive than the Sun. This intense star formation creates spectacular light shows visible across vast distances.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Tarantula Nebula",
@@ -2555,6 +2703,8 @@
       "id": "obs:length:scenario-length-tarantula-nebula",
       "name": "Tarantula Nebula",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tarantula_Nebula",
       "source_count": 2,
       "sources": [
@@ -2593,6 +2743,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Carina Nebula",
@@ -2606,6 +2757,8 @@
       "id": "obs:length:scenario-length-carina-nebula",
       "name": "Carina Nebula",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Carina_Nebula",
       "source_count": 2,
       "sources": [
@@ -2644,6 +2797,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the Milky Way, our home galaxy containing 100-400 billion stars orbiting a supermassive black hole. Our solar system orbits the galactic center at 220 km/s, completing one revolution every 230 million years. The galaxy's spiral arms contain most of its stars and gas, while the central bulge contains older stars. The Milky Way is on a collision course with the Andromeda Galaxy, which will merge with us in 4.5 billion years.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Galaxy Diameter",
@@ -2657,6 +2811,8 @@
       "id": "obs:length:scenario-length-galaxy-diameter",
       "name": "Galaxy Diameter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -2695,6 +2851,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance to the Andromeda Galaxy, our nearest major galactic neighbor that's approaching us at 110 km/s. This massive spiral galaxy contains over a trillion stars and is twice the size of the Milky Way. Andromeda is visible to the naked eye as a faint smudge in the night sky. In 4.5 billion years, it will collide with our galaxy, creating a new elliptical galaxy called Milkomeda. The collision will dramatically reshape both galaxies but stars are so far apart that direct collisions are unlikely.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Andromeda Distance",
@@ -2708,6 +2865,8 @@
       "id": "obs:length:scenario-length-andromeda-distance",
       "name": "Andromeda Distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
       "source_count": 2,
       "sources": [
@@ -2746,6 +2905,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the Local Group, our galactic neighborhood containing about 50 galaxies bound together by gravity. This group is dominated by the Milky Way and Andromeda galaxies, which together contain 90% of the group's mass. The Local Group is falling toward the Virgo Cluster at 600 km/s due to dark matter's gravitational pull. Despite its name, this group spans millions of light-years and represents our cosmic backyard in the vast universe.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Local Group",
@@ -2759,6 +2919,8 @@
       "id": "obs:length:scenario-length-local-group",
       "name": "Local Group",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Local_Group",
       "source_count": 2,
       "sources": [
@@ -2797,6 +2959,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Virgo Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. This represents the largest coherent structures in the universe before cosmic expansion dominates over gravitational attraction.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Virgo Supercluster",
@@ -2810,6 +2973,8 @@
       "id": "obs:length:scenario-length-virgo-supercluster",
       "name": "Virgo Supercluster",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
       "source_count": 2,
       "sources": [
@@ -2848,6 +3013,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and represents the largest gravitationally bound system we belong to. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Laniakea Supercluster",
@@ -2861,6 +3027,8 @@
       "id": "obs:length:scenario-length-laniakea-supercluster",
       "name": "Laniakea Supercluster",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laniakea_Supercluster",
       "source_count": 2,
       "sources": [
@@ -2899,6 +3067,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxy clusters arranged in a wall-like formation spanning billions of light-years. The wall's discovery challenged our understanding of cosmic structure formation, as it seemed too large to have formed in the time since the Big Bang. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Sloan Great Wall",
@@ -2912,6 +3081,8 @@
       "id": "obs:length:scenario-length-sloan-great-wall",
       "name": "Sloan Great Wall",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sloan_Great_Wall",
       "source_count": 2,
       "sources": [
@@ -2950,6 +3121,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of the Hercules-Corona Borealis Great Wall, the largest known structure in the observable universe. This immense filament spans 10 billion light-years and contains billions of galaxies arranged in a wall-like formation. The wall's discovery challenged cosmological theories because it appeared too large to have formed through gravitational collapse alone. This structure represents the ultimate scale of cosmic organization and may require new physics to explain its formation.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Hercules-Corona Borealis Great Wall",
@@ -2963,6 +3135,8 @@
       "id": "obs:length:scenario-length-hercules-corona-borealis-great-wall",
       "name": "Hercules-Corona Borealis Great Wall",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall",
       "source_count": 2,
       "sources": [
@@ -3001,6 +3175,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Beyond this distance, objects are receding faster than light can reach us due to cosmic expansion. The observable universe contains about 2 trillion galaxies and represents only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Observable Universe",
@@ -3016,6 +3191,8 @@
       "qualifiers": {
         "measurement": "diameter of observable universe"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Observable_universe",
       "source_count": 2,
       "sources": [

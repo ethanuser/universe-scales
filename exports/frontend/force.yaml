@@ -53,6 +53,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Molecular Force
@@ -95,6 +98,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Kinesin Motor
@@ -137,6 +143,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Atomic Force
@@ -179,6 +188,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Solar Wind
@@ -221,6 +233,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Ant Force
@@ -263,6 +278,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Keyboard Keypress
@@ -305,6 +323,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Apple Weight
@@ -347,6 +368,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Cyclist Aerodynamic Drag
@@ -389,6 +413,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Door Handle Pull
@@ -431,6 +458,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Handshake
@@ -473,6 +503,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: House Cat Jump Push-Off
@@ -515,6 +548,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Bow Draw
@@ -557,6 +593,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Human Grip Strength
@@ -599,6 +638,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Push-Up Support (per arm)
@@ -641,6 +683,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Human Bite
@@ -683,6 +728,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Wind Force
@@ -725,6 +773,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Weight Lifter
@@ -767,6 +818,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Human Punch
@@ -809,6 +863,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Car Brake
@@ -851,6 +908,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Jump Landing Peak
@@ -893,6 +953,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Sledgehammer Blow
@@ -935,6 +998,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Car Engine
@@ -977,6 +1043,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Horse Kick
@@ -1019,6 +1088,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: African Elephant Weight
@@ -1061,6 +1133,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: GE90 Jet Engine
@@ -1103,6 +1178,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Merlin 1D Engine
@@ -1145,6 +1223,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Hydraulic Press
@@ -1187,6 +1268,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Blue Whale Weight
@@ -1229,6 +1313,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Boeing 747 Weight
@@ -1271,6 +1358,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Falcon 9 Liftoff
@@ -1313,6 +1403,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Crane
@@ -1355,6 +1448,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Rocket Thrust
@@ -1397,6 +1493,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Saturn V First Stage
@@ -1439,6 +1538,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Aircraft Carrier Weight
@@ -1481,6 +1583,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Great Pyramid Weight
@@ -1523,6 +1628,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: All Humans Standing on Earth
@@ -1565,6 +1673,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Small Asteroid Weight
@@ -1607,6 +1718,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Tidal Force
@@ -1649,6 +1763,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/force.yaml
     legacy_item_name: Black Hole

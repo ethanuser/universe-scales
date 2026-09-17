@@ -101,6 +101,7 @@ class UniversalScales {
 
         // Initialize plot renderer
         this.plot = new PlotRenderer(this);
+        this.experiences = new DimensionExperiences(this);
 
         // Load dimension metadata before URL handling so the selector is populated dynamically
         await this.loadDimensionCatalog();
@@ -404,6 +405,8 @@ class UniversalScales {
     }
 
     async setDimension(slug) {
+        this.experiences?.pause();
+        this.hideTooltip();
         this.currentDimension = slug;
         if (this.dimensionSelect) {
             this.dimensionSelect.value = slug;
@@ -596,6 +599,7 @@ class UniversalScales {
     }
 
     toggleMusic() {
+        this.experiences?.audio.stop();
         // Remove enableAudio listeners if they exist (user is explicitly toggling)
         if (this.enableAudioHandler) {
             document.removeEventListener('click', this.enableAudioHandler);
@@ -638,6 +642,7 @@ class UniversalScales {
         localStorage.setItem('notationMode', this.notationMode);
 
         // Update plot to reflect new notation
+        this.experiences?.refresh();
         this.plot.updatePlotAfterZoom();
     }
 
@@ -854,6 +859,7 @@ class UniversalScales {
     }
 
     async loadDimension(dimension) {
+        const requestId = this.dimensionRequestId = (this.dimensionRequestId || 0) + 1;
         try {
             let response = await fetch(`exports/frontend/${dimension}.yaml`);
             if (!response.ok) {
@@ -863,6 +869,7 @@ class UniversalScales {
                 throw new Error(`Missing dimension payload for ${dimension}`);
             }
             const yamlText = await response.text();
+            if (requestId !== this.dimensionRequestId) return;
             this.dimensionData = jsyaml.load(yamlText);
             this.normalizeDimensionUnitSymbols();
             if (dimension === 'sound-intensity' && Array.isArray(this.dimensionData.units)) {
@@ -925,6 +932,8 @@ class UniversalScales {
             this.updateDimensionBrowserSelection();
             this.updateDimensionToggleLabel();
 
+            this.experiences?.onDimension();
+
             // Update plot
             this.plot.updatePlot();
 
@@ -943,6 +952,7 @@ class UniversalScales {
             }
 
         } catch (error) {
+            if (requestId !== this.dimensionRequestId) return;
             console.error('Error loading dimension:', error);
             this.showError(`Failed to load ${dimension} data`);
         }
@@ -1089,6 +1099,7 @@ class UniversalScales {
         } else {
             descriptionElement.textContent = '';
         }
+        this.experiences?.addTooltip(item, descriptionElement);
         const sourceLink = this.tooltip.querySelector('.tooltip-source');
         // isTouchPrimary is already defined above
         const showSourceText = isTouchPrimary || pinned; // Show source on mobile or when pinned on desktop
@@ -1306,6 +1317,7 @@ class UniversalScales {
     }
 
     hideTooltip() {
+        this.experiences?.audio.stop();
         this.tooltip.classList.remove('visible');
         // Reset mobile-specific class
         this.tooltip.classList.remove('mobile-pinned');
@@ -1521,6 +1533,7 @@ class UniversalScales {
     }
 
     resizePlot() {
+        if (this.experiences?.active) { this.experiences.refresh(); return; }
         // Preserve current zoom state before resizing
         const currentDomain = this.xScale.domain();
         const wasZoomed = this.originalXDomain && this.isDomainZoomed(currentDomain, this.originalXDomain);
@@ -1660,12 +1673,12 @@ class UniversalScales {
         });
 
         // Filter out any items with invalid names or values
-        return allItems.filter(item => {
+        return ScaleMath.displayItems(allItems.filter(item => {
             const value = parseFloat(item.value);
             const hasValidName = item.name && item.name.trim().length > 0;
             const hasValidValue = !isNaN(value) && isFinite(value) && value !== 0;
             return hasValidName && hasValidValue;
-        });
+        }));
     }
 
     updateUnitDescription() {
@@ -2990,6 +3003,10 @@ class UniversalScales {
 
         // Function to check visibility and update sticky axis
         const checkVisibility = () => {
+            if (this.experiences?.active) {
+                stickyAxisContainer.classList.remove('is-visible');
+                return;
+            }
             const plotRect = plotContainer.getBoundingClientRect();
             const stickyRect = stickyAxisContainer.getBoundingClientRect();
             const stickyAxisHeight = stickyRect.height || 30; // Height of sticky axis

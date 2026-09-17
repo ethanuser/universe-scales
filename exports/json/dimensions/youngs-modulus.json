@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Polymer foams behave like springs in a scaffold of cells, so their effective modulus is tiny until densification. Cell size, gas content, and skin layers matter as much as chemistry. Designers tune this for pillows versus helmet liners. The value is for a flexible open cell foam in small strain compression.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Foam",
@@ -44,6 +45,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-foam",
       "name": "Foam",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Foam",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cartilage combines a collagen network with pressurized water to form a poroelastic material with low instantaneous modulus. Under sustained load the modulus rises as fluid drains. Healthy joints depend on this time dependence for shock absorption. The value is an initial small strain tangent.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Cartilage",
@@ -95,6 +99,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-cartilage",
       "name": "Cartilage",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cartilage",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Soft rubber stores little energy per strain because chains uncoil easily, leading to a very low modulus. As strain rises, entropic elasticity stiffens the response. Fillers like carbon black raise the modulus by reinforcing the network. The value given is for an unfilled gum rubber at room temperature.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Rubber",
@@ -146,6 +153,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-rubber",
       "name": "Rubber",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rubber",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silica aerogel is often called solid smoke because its density is so low and its stiffness is only modestly above that of soft foams. Even so, it is a true solid with a measurable elastic slope that matters in insulation panels and particle collectors. Large strains quickly move it beyond the small-strain regime. The value is a representative low-density aerogel modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Silica Aerogel",
@@ -197,6 +207,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-silica-aerogel",
       "name": "Silica Aerogel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aerogel",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cork compresses easily at first because gas-filled cells collapse and recover, which is why it works so well as a bottle stopper and vibration isolator. Its modulus is far above a liquid but far below wood or plastic. Moisture and direction both matter because the cell structure is anisotropic. The value is a representative small-strain modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Cork",
@@ -248,6 +261,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-cork",
       "name": "Cork",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cork_(material)",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Polyethylene is flexible because its elastic modulus is only a few hundred megapascals, several hundred times lower than common metals. That makes it ideal for bottles, cutting boards, and films that need to bend without cracking. Crystallinity shifts the stiffness a bit but not the basic scale. The value is representative for HDPE.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Polyethylene",
@@ -299,6 +315,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-polyethylene",
       "name": "Polyethylene",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Polyethylene",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tendon stores elastic energy for locomotion with a modulus around a gigapascal that rises with strain. Warm tissues display higher extensibility and lower stiffness initially. Training induces remodeling that tunes this property. The figure is a small strain slope for Achilles tendon.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Tendon",
@@ -350,6 +369,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-tendon",
       "name": "Tendon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tendon",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Softwoods are anisotropic; along the grain the modulus is moderate, across the grain it is an order lower. Moisture acts like a plasticizer that reduces stiffness. Builders season wood to stabilize this property. The value is longitudinal for dried spruce.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Wood (Soft)",
@@ -401,6 +423,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-wood-soft",
       "name": "Wood (Soft)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wood",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "ABS plastic is noticeably stiffer than polyethylene but still far softer than metals, which is why product housings feel solid while retaining some impact tolerance. Engineers like this middle ground for consumer goods and machine covers. The modulus depends on temperature and whether the part is molded or printed. The value is a common handbook figure.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "ABS Plastic",
@@ -452,6 +477,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-abs-plastic",
       "name": "ABS Plastic",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Acrylonitrile_butadiene_styrene",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Nylon sits in the low-gigapascal range, stiff enough for gears, fasteners, and bushings yet compliant enough to damp shock and noise. Moisture softens it because water acts as a plasticizer in the polymer network. That is why dry and conditioned values can differ noticeably in datasheets. The value is a representative small-strain modulus for nylon 6.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Nylon",
@@ -503,6 +531,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-nylon",
       "name": "Nylon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nylon",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "PLA prints feel rigid because their elastic modulus reaches a few gigapascals, substantially above many household plastics. That helps small printed parts keep shape, though it does not guarantee toughness. Temperature softening remains the main weakness. The number is a representative modulus for solid PLA.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "PLA Plastic",
@@ -554,6 +585,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-pla-plastic",
       "name": "PLA Plastic",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Polylactic_acid",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Water ice is much less stiff than rock or metal but far stiffer than rubber, which is why glaciers can support cracks and transmit seismic waves even while creeping over years. Planetary scientists rely on this modulus when modeling icy moons and ice shelves. Temperature shifts it meaningfully. The value is a typical terrestrial ice modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Ice",
@@ -605,6 +639,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-ice",
       "name": "Ice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Spider dragline silk stretches more than most engineering fibers, but its modulus still lands around tens of gigapascals, high enough to store useful elastic energy in a light thread. Biologists care because that balance of stiffness and toughness is rare in natural materials. Humidity changes the feel quickly. The value is a representative dry-fiber modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Spider Silk",
@@ -656,6 +693,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-spider-silk",
       "name": "Spider Silk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Spider_silk",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hardwoods like oak are stiffer than many softwoods because of their denser microstructure and higher latewood fraction. Furniture makers and structural engineers both feel this directly in how little a board flexes under load. Grain direction still dominates the number, so this is an along-grain figure. The value is a representative modulus for oak.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Oak",
@@ -707,6 +747,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-oak",
       "name": "Oak",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oak",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Common fired brick behaves like a stiff brittle ceramic composite on small elastic strains. Masonry design often treats whole walls rather than brick alone, but the brick material itself lives in the low tens of gigapascals. That is enough to keep arches and facades from sagging visibly under ordinary loads. The value is a representative engineering brick modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Brick",
@@ -758,6 +801,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-brick",
       "name": "Brick",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brick",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lead is soft in yield strength but not infinitely floppy: its elastic modulus still sits in the tens of gigapascals. That is why lead pipes and sheets can hold shape until creep and plasticity take over. The contrast between low modulus metals and high modulus ceramics is one of the simplest material lessons to feel by hand. The value is a standard handbook number.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Lead",
@@ -809,6 +855,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-lead",
       "name": "Lead",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lead",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bamboo is a natural fiber composite whose stiffness along the grain can rival some structural timbers and low-end engineering materials. Its geometry makes it especially effective for lightweight columns and scaffolds. Across the grain the modulus is far lower, so direction matters. The number is an along-fiber representative value.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Bamboo",
@@ -860,6 +909,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-bamboo",
       "name": "Bamboo",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bamboo",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cortical bone has a modulus in the tens of gigapascals along the osteon direction due to mineralized collagen. Age and disease reduce both stiffness and toughness. Implant designers choose alloys to match this to avoid stress shielding. The value is for human femoral cortical bone in tension.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Bone",
@@ -911,6 +963,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-bone",
       "name": "Bone",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bone",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concrete\u2019s modulus depends on aggregate and curing; it is not a pure material constant. Codes use empirical formulas tied to compressive strength. Long term creep lowers effective stiffness in service. The value is a short term tangent for a structural mix.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Concrete",
@@ -962,6 +1017,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-concrete",
       "name": "Concrete",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Magnesium alloys are attractive in vehicles and aircraft because their stiffness is lower than aluminum\u2019s but their density is lower too. That means components can still achieve respectable specific stiffness when geometry is optimized. Corrosion protection and fatigue remain important design constraints. The value is a representative modulus for structural magnesium alloys.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Magnesium Alloy",
@@ -1013,6 +1071,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-magnesium-alloy",
       "name": "Magnesium Alloy",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnesium_alloy",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aluminum alloys share a modulus near seventy gigapascals regardless of strength grade because stiffness depends on bonding, not microstructure alone. This constancy simplifies deflection calculations. Temperature reduces modulus slightly. The value is for a typical wrought alloy.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Aluminum",
@@ -1064,6 +1125,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-aluminum",
       "name": "Aluminum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Glass is relatively stiff with a modulus similar to some metals despite brittleness. Defects control strength but not this initial slope. Temperature near the glass transition softens it dramatically. The value is for soda lime glass at room temperature.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Glass",
@@ -1115,6 +1179,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-glass",
       "name": "Glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Kevlar fibers are less stiff than carbon fibers but still very much engineering fibers, landing around tens of gigapascals in axial modulus. Their real advantage is the combination of stiffness, toughness, and low density. Ballistic fabrics and ropes turn that combination into practical products. The value is a representative fiber-direction modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Kevlar Fiber",
@@ -1166,6 +1233,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-kevlar-fiber",
       "name": "Kevlar Fiber",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kevlar",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brass is mechanically between aluminum and steel in stiffness, which is why instruments, fittings, and decorative hardware feel dense and solid without becoming especially springy. Composition changes the exact number, but not by an order of magnitude. Machinists value the consistency this implies. The value is a representative modulus for cartridge brass.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Brass",
@@ -1217,6 +1287,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-brass",
       "name": "Brass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brass",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Titanium alloys are roughly half as stiff as steel at similar densities, giving good specific stiffness. Designers exploit this for weight sensitive parts that must flex without yielding. Temperature and phase mix set exact values. The number is for Ti 6Al 4V.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Titanium",
@@ -1268,6 +1341,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-titanium",
       "name": "Titanium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Titanium",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Copper combines excellent electrical conduction with a modulus a bit above one hundred gigapascals, enough to make busbars and springs hold form while still yielding more readily than steels. Purity and cold work change strength much more than stiffness. That separation is why electrical and mechanical design tables both matter. The value is a representative modulus for bulk copper.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Copper",
@@ -1319,6 +1395,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-copper",
       "name": "Copper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Copper",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Crystalline silicon is the structural backbone of chips and MEMS, and its modulus is high enough that tiny beams and resonators can ring at precise frequencies. The exact value depends on crystal direction because the lattice is anisotropic. Semiconductor fabrication treats this as a design parameter, not trivia. The number is a representative orientation-averaged modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Silicon",
@@ -1370,6 +1449,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-silicon",
       "name": "Silicon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicon",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Unidirectional carbon fiber composites have an effective modulus near two hundred gigapascals along the fiber direction, while transverse is far lower. Rule of mixtures gives a first estimate based on fiber volume. Layup choices tailor stiffness to load paths. The number is for a high modulus fiber epoxy lamina.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Carbon Fiber",
@@ -1421,6 +1503,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-carbon-fiber",
       "name": "Carbon Fiber",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Carbon_fiber",
       "source_count": 2,
       "sources": [
@@ -1459,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Steels cluster near two hundred gigapascals in modulus across many alloys and tempers. Heat treatment alters yield and toughness but not this slope much. That is why beams deflect similarly before yield regardless of grade. The value is the canonical handbook number.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Steel",
@@ -1472,6 +1557,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-steel",
       "name": "Steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steel",
       "source_count": 2,
       "sources": [
@@ -1510,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Engineering ceramics achieve very high modulus due to strong ionic and covalent bonds. Their stiffness remains high even at heat where metals soften. Designers trade brittleness against this stiffness for cutting tools. The value is for alumina.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Ceramic",
@@ -1523,6 +1611,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-ceramic",
       "name": "Ceramic",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ceramic",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tungsten is one of the stiffest practical metals, which is why it holds shape at heat and finds use in filaments, weights, and tooling. Its density is famous, but the high modulus is just as important in applications that need resistance to elastic bending. Brittleness is the tradeoff. The value is a representative room-temperature modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Tungsten",
@@ -1574,6 +1665,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-tungsten",
       "name": "Tungsten",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tungsten",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silicon carbide combines ceramic hardness with very high elastic stiffness, making it valuable for armor, abrasives, mirrors, and high-temperature components. Components made from it resist small elastic strain strongly before brittle failure becomes the real limit. It is a good reminder that stiffness and toughness are separate traits. The value is a representative engineering modulus.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Silicon Carbide",
@@ -1625,6 +1719,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-silicon-carbide",
       "name": "Silicon Carbide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicon_carbide",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1759,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Diamond is among the stiffest known solids because of its dense sp3 network. Small strains store huge elastic energy before fracture. Microelectromechanical resonators exploit this for high frequency stability. The value is a polycrystalline average.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Diamond",
@@ -1676,6 +1773,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-diamond",
       "name": "Diamond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Diamond",
       "source_count": 2,
       "sources": [
@@ -1714,6 +1813,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Graphene\u2019s in plane modulus approaches the theoretical limit for a two dimensional lattice. Out of plane bending is much softer, illustrating geometric effects. Large area films reduce modulus due to wrinkles and defects. The value is from nanoindentation on monolayers.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Graphene",
@@ -1727,6 +1827,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-graphene",
       "name": "Graphene",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Graphene",
       "source_count": 2,
       "sources": [
@@ -1765,6 +1867,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The crust of a neutron star has a colossal effective shear modulus in models, reflecting interactions in a dense nuclear lattice. Starquakes excite oscillations that encode this stiffness indirectly. Laboratory analogies are qualitative at best. The value is an estimate from astrophysical constraints.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Neutron Star Crust",
@@ -1778,6 +1881,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-neutron-star-crust",
       "name": "Neutron Star Crust",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neutron_star",
       "source_count": 2,
       "sources": [
@@ -1816,6 +1921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Near a black hole horizon, describing spacetime response with an effective modulus is metaphorical yet useful for order of magnitude. Accretion disk magneto turbulence sets stress strain like relations for the fluid. These ideas guide simulations of jets and spectra. The number is a heuristic extreme for comparison.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/youngs-modulus.yaml",
         "legacy_item_name": "Black Hole Horizon",
@@ -1829,6 +1935,8 @@
       "id": "obs:youngs-modulus:scenario-youngs-modulus-black-hole-horizon",
       "name": "Black Hole Horizon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Black_hole",
       "source_count": 2,
       "sources": [

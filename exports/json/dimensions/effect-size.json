@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tutoring usually helps, but modestly on the standardized scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Educational tutoring and test scores",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -50,6 +51,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Effect_size",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Caffeine lives near the low end of meaningful standardized effects.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Caffeine and vigilance",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -107,6 +111,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Caffeine",
       "source_count": 2,
       "sources": [
@@ -145,6 +151,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A well-known small-to-moderate clinical effect size.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Antidepressant versus placebo",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -164,6 +171,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Antidepressant",
       "source_count": 2,
       "sources": [
@@ -202,6 +211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Exercise sits in the modest-benefit range on many mood measures.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Exercise and mood",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -221,6 +231,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Effect_size",
       "source_count": 2,
       "sources": [
@@ -259,6 +271,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mindfulness is usually measurable but not huge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mindfulness training and stress",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -278,6 +291,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mindfulness",
       "source_count": 2,
       "sources": [
@@ -316,6 +331,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Environmental interventions often land in the midrange.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Air purifier and indoor PM2.5",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -335,6 +351,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Air_purifier",
       "source_count": 2,
       "sources": [
@@ -373,6 +391,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A moderate treatment effect with a strong mechanistic basis.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Statins and LDL reduction",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -392,6 +411,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Statin",
       "source_count": 2,
       "sources": [
@@ -430,6 +451,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A moderate-to-large standardized benefit.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Iron supplementation and fatigue",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -449,6 +471,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Iron_supplement",
       "source_count": 2,
       "sources": [
@@ -487,6 +511,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common medicine with a fairly large acute effect.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aspirin and headache relief",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -506,6 +531,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aspirin",
       "source_count": 2,
       "sources": [
@@ -544,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Loss of sleep pushes performance strongly in the harmful direction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sleep deprivation and reaction time",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -563,6 +591,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sleep_deprivation",
       "source_count": 2,
       "sources": [
@@ -601,6 +631,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The conventional large-effect benchmark is close to strong psychotherapy results.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cognitive behavioral therapy for depression",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -620,6 +651,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy",
       "source_count": 2,
       "sources": [
@@ -658,6 +691,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Assistive technology often jumps into the large-effect regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hearing aids and speech perception",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -677,6 +711,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hearing_aid",
       "source_count": 2,
       "sources": [
@@ -715,6 +751,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Correctly matched treatment can move well beyond one standard deviation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Antibiotics for susceptible bacterial infection",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -734,6 +771,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Antibiotics",
       "source_count": 2,
       "sources": [
@@ -772,6 +811,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dependence-related effects can be very large.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nicotine withdrawal on craving",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -791,6 +831,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "negative"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nicotine_withdrawal",
       "source_count": 2,
       "sources": [
@@ -829,6 +871,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Surgery often creates an effect that is obviously huge by everyday standards.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cataract surgery and visual acuity",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -848,6 +891,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cataract_surgery",
       "source_count": 2,
       "sources": [
@@ -886,6 +931,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Some interventions are so strong that they sit far above ordinary behavioral effects.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Weight loss after bariatric surgery",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -905,6 +951,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bariatric_surgery",
       "source_count": 2,
       "sources": [
@@ -943,6 +991,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Protective equipment can create very large standardized changes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hearing threshold with earplugs in a loud environment",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -962,6 +1011,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earplug",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1051,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Vision correction is a nice intuitive giant-effect example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Eyeglasses for moderate myopia",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -1019,6 +1071,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glasses",
       "source_count": 2,
       "sources": [
@@ -1057,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Some therapies are so essential that they sit in the extreme tail of effect size.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Insulin for untreated type 1 diabetes",
         "ingest_source": "dataset/raw/curated/effect-size.json",
@@ -1076,6 +1131,8 @@
         "measurement": "absolute standardized mean difference",
         "sign": "positive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Type_1_diabetes",
       "source_count": 2,
       "sources": [

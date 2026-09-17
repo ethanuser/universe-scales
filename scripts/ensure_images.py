@@ -23,6 +23,11 @@ def run_cmd(cmd: list[str], cwd: Path) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Backfill images, regenerate thumbnails, and audit coverage.")
     parser.add_argument(
+        "--data-dir",
+        default="exports/frontend",
+        help="Directory containing YAML files for download step (default: exports/frontend).",
+    )
+    parser.add_argument(
         "--dimension",
         action="append",
         default=[],
@@ -42,6 +47,7 @@ def main() -> int:
         if args.dimension:
             for dim in args.dimension:
                 cmd = ["python3", "scripts/download_images.py", "--dimension", dim]
+                cmd.extend(["--data-dir", args.data_dir])
                 if args.allow_placeholders:
                     cmd.append("--allow-placeholders")
                 code = run_cmd(cmd, root)
@@ -49,6 +55,7 @@ def main() -> int:
                     return code
         else:
             cmd = ["python3", "scripts/download_images.py"]
+            cmd.extend(["--data-dir", args.data_dir])
             if args.allow_placeholders:
                 cmd.append("--allow-placeholders")
             code = run_cmd(cmd, root)
@@ -70,4 +77,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The CDC 6600 is a classic early supercomputer benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "CDC 6600",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -47,6 +48,8 @@
       "id": "obs:flops:entity-flops-cdc-6600",
       "name": "CDC 6600",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/CDC_6600",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Cray-1 marked a major jump in vector supercomputing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cray-1",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -101,6 +105,8 @@
       "id": "obs:flops:entity-flops-cray-1",
       "name": "Cray-1",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cray-1",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Deep Blue is a classic historical FLOP benchmark from the pre-GPU era.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Deep Blue",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -156,6 +163,8 @@
       "id": "obs:flops:entity-flops-deep-blue",
       "name": "Deep Blue",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
       "source_count": 2,
       "sources": [
@@ -194,6 +203,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small single-board computer gives the low end of practical modern FLOP/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A Raspberry Pi 4",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -211,6 +221,8 @@
       "id": "obs:flops:entity-flops-a-raspberry-pi-4",
       "name": "A Raspberry Pi 4",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Raspberry_Pi_4",
       "source_count": 2,
       "sources": [
@@ -249,6 +261,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern CPU cores move the scale into the hundred-gigaflop band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "An Intel Core i9 CPU core",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -268,6 +281,8 @@
       "qualifiers": {
         "assumption": "one high-end core"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intel_Core",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A rough transformer rule of thumb puts one token from a 70B-parameter model in the hundred-billion-FLOP range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "70B-parameter LLM single-token inference",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -323,6 +339,8 @@
       "id": "obs:flops:scenario-70b-llm-single-token-inference-flops",
       "name": "70B-parameter LLM single-token inference",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Large_language_model",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Cell processor gave consumer hardware an early high-FLOPS benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "PlayStation 3 Cell processor",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -378,6 +397,8 @@
       "id": "obs:flops:entity-flops-playstation-3-cell-processor",
       "name": "PlayStation 3 Cell processor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cell_Broadband_Engine",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The PS3 Cell processor is a consumer-hardware floating-point reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "PlayStation 3 Cell processor",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -432,6 +454,8 @@
       "id": "obs:flops:entity-flops-playstation-3-cell",
       "name": "PlayStation 3 Cell processor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/PlayStation_3",
       "source_count": 2,
       "sources": [
@@ -470,6 +494,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blue Gene/L brought supercomputing into the hundreds of gigaflops.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IBM Blue Gene/L",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -486,6 +511,8 @@
       "id": "obs:flops:entity-flops-ibm-blue-gene-l",
       "name": "IBM Blue Gene/L",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blue_Gene",
       "source_count": 2,
       "sources": [
@@ -524,6 +551,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Integrated laptop and tablet GPUs anchor the low-teraflop range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "An Apple M2 GPU",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -541,6 +569,8 @@
       "id": "obs:flops:entity-flops-an-apple-m2-gpu",
       "name": "An Apple M2 GPU",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Apple_M2",
       "source_count": 2,
       "sources": [
@@ -579,6 +609,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Consumer gaming hardware sits comfortably in the teraflop range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A PlayStation 5 GPU",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -596,6 +627,8 @@
       "id": "obs:flops:entity-flops-a-playstation-5-gpu",
       "name": "A PlayStation 5 GPU",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/PlayStation_5",
       "source_count": 2,
       "sources": [
@@ -634,6 +667,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The M1 Max is a strong laptop-class GPU throughput reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Apple M1 Max",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -650,6 +684,8 @@
       "id": "obs:flops:entity-flops-apple-m1-max",
       "name": "Apple M1 Max",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Apple_M1",
       "source_count": 2,
       "sources": [
@@ -688,6 +724,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A short assistant response from a large dense model already pushes into the tens-of-teraflop range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "70B-parameter LLM 100-token response",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -705,6 +742,8 @@
       "id": "obs:flops:scenario-70b-llm-100-token-response-flops",
       "name": "70B-parameter LLM 100-token response",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Large_language_model",
       "source_count": 2,
       "sources": [
@@ -743,6 +782,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Datacenter GPUs live in the tens-of-teraflops band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "An NVIDIA A100",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -760,6 +800,8 @@
       "id": "obs:flops:entity-flops-an-nvidia-a100",
       "name": "An NVIDIA A100",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/A100_GPU",
       "source_count": 2,
       "sources": [
@@ -798,6 +840,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A high-end consumer GPU is a useful tens-of-teraflops anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "NVIDIA GeForce RTX 3090",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -815,6 +858,8 @@
       "id": "obs:flops:entity-flops-nvidia-geforce-rtx-3090",
       "name": "NVIDIA GeForce RTX 3090",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/GeForce_30_series",
       "source_count": 2,
       "sources": [
@@ -853,6 +898,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The RTX 3090 is a consumer GPU with high teraflop throughput.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "NVIDIA RTX 3090",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -869,6 +915,8 @@
       "id": "obs:flops:entity-flops-nvidia-rtx-3090",
       "name": "NVIDIA RTX 3090",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/GeForce_30_series",
       "source_count": 2,
       "sources": [
@@ -907,6 +955,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hopper-class accelerators extend the datacenter envelope further.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "An NVIDIA H100",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -924,6 +973,8 @@
       "id": "obs:flops:entity-flops-an-nvidia-h100",
       "name": "An NVIDIA H100",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)",
       "source_count": 2,
       "sources": [
@@ -962,6 +1013,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The RX 7900 XTX is another high-end consumer GPU benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "AMD Radeon RX 7900 XTX",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -978,6 +1030,8 @@
       "id": "obs:flops:entity-flops-amd-radeon-rx-7900-xtx",
       "name": "AMD Radeon RX 7900 XTX",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Radeon_RX_7000_series",
       "source_count": 2,
       "sources": [
@@ -1016,6 +1070,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "High-end consumer GPUs are an easy teraflop-scale anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "An NVIDIA RTX 4090",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1033,6 +1088,8 @@
       "id": "obs:flops:entity-flops-an-nvidia-rtx-4090",
       "name": "An NVIDIA RTX 4090",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/GeForce_40_series",
       "source_count": 2,
       "sources": [
@@ -1071,6 +1128,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "MI300X sits in the data-center accelerator band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "AMD MI300X",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1087,6 +1145,8 @@
       "id": "obs:flops:entity-flops-amd-mi300x",
       "name": "AMD MI300X",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/AMD_Instinct",
       "source_count": 2,
       "sources": [
@@ -1125,6 +1185,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Trainium is a dedicated training accelerator benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "AWS Trainium",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1141,6 +1202,8 @@
       "id": "obs:flops:entity-flops-aws-trainium",
       "name": "AWS Trainium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/AWS_Trainium",
       "source_count": 2,
       "sources": [
@@ -1179,6 +1242,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "TPU v4 continues the accelerator scaling trend.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Google TPU v4",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1195,6 +1259,8 @@
       "id": "obs:flops:entity-flops-google-tpu-v4",
       "name": "Google TPU v4",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tensor_Processing_Unit",
       "source_count": 2,
       "sources": [
@@ -1233,6 +1299,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blue Gene/L pushed supercomputing into the hundreds of teraflops.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IBM Blue Gene/L",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1250,6 +1317,8 @@
       "id": "obs:flops:entity-flops-ibm-blue-gene-l:2",
       "name": "IBM Blue Gene/L",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IBM_Blue_Gene",
       "source_count": 2,
       "sources": [
@@ -1288,6 +1357,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "TPU v3 is a notable tensor accelerator reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Google TPU v3",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1304,6 +1374,8 @@
       "id": "obs:flops:entity-flops-google-tpu-v3",
       "name": "Google TPU v3",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tensor_Processing_Unit",
       "source_count": 2,
       "sources": [
@@ -1342,6 +1414,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tianhe-2 is an important pre-exascale supercomputer benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tianhe-2",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1358,6 +1431,8 @@
       "id": "obs:flops:entity-flops-tianhe-2",
       "name": "Tianhe-2",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tianhe-2",
       "source_count": 2,
       "sources": [
@@ -1396,6 +1471,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tianhe-2 is a major pre-exascale benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tianhe-2",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1413,6 +1489,8 @@
       "id": "obs:flops:entity-flops-tianhe-2:2",
       "name": "Tianhe-2",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tianhe-2",
       "source_count": 2,
       "sources": [
@@ -1451,6 +1529,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A large AI training cluster reaches supercomputer-scale throughput even before you talk about total training time.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "1024 H100 training cluster throughput",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1468,6 +1547,8 @@
       "id": "obs:flops:scenario-1024-h100-training-cluster-throughput",
       "name": "1024 H100 training cluster throughput",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nvidia_Hopper",
       "source_count": 2,
       "sources": [
@@ -1506,6 +1587,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cerebras WSE-2 is a purpose-built AI chip benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cerebras Wafer Scale Engine 2",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1522,6 +1604,8 @@
       "id": "obs:flops:entity-flops-cerebras-wse-2",
       "name": "Cerebras Wafer Scale Engine 2",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cerebras",
       "source_count": 2,
       "sources": [
@@ -1560,6 +1644,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Another petaflop benchmark, useful for a different design generation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Summit",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1577,6 +1662,8 @@
       "id": "obs:flops:entity-flops-summit",
       "name": "Summit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
       "source_count": 2,
       "sources": [
@@ -1615,6 +1702,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Petaflop supercomputers are an obvious bridge to exascale systems.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fugaku",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1632,6 +1720,8 @@
       "id": "obs:flops:entity-flops-fugaku",
       "name": "Fugaku",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fugaku_(supercomputer)",
       "source_count": 2,
       "sources": [
@@ -1670,6 +1760,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Frontier is the classic exascale anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Frontier",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1687,6 +1778,8 @@
       "id": "obs:flops:entity-flops-frontier",
       "name": "Frontier",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Frontier_(supercomputer)",
       "source_count": 2,
       "sources": [
@@ -1725,6 +1818,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A zettaflop machine is a forward-looking anchor for the upper end.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A future zettaflop-class machine",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1742,6 +1836,8 @@
       "id": "obs:flops:scenario-flops-a-future-zettaflop-class-machine",
       "name": "A future zettaflop-class machine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Supercomputer",
       "source_count": 2,
       "sources": [
@@ -1780,6 +1876,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The commonly cited GPT-3 training estimate is one of the best-known AI-scale compute landmarks.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "GPT-3 training run estimate",
         "ingest_source": "dataset/raw/curated/flops.json",
@@ -1798,6 +1895,8 @@
       "qualifiers": {
         "measurement": "total training compute"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/GPT-3",
       "source_count": 2,
       "sources": [

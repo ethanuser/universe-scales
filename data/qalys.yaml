@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One day of perfect health
     ingest_source: dataset/raw/curated/qalys.json
@@ -90,6 +93,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Avoiding one week of influenza
     ingest_source: dataset/raw/curated/qalys.json
@@ -136,6 +142,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One week of perfect health
     ingest_source: dataset/raw/curated/qalys.json
@@ -183,6 +192,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Avoiding one month of severe back pain
     ingest_source: dataset/raw/curated/qalys.json
@@ -229,6 +241,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One month of perfect health
     ingest_source: dataset/raw/curated/qalys.json
@@ -276,6 +291,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Successful cataract surgery first-year gain
     ingest_source: dataset/raw/curated/qalys.json
@@ -321,6 +339,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year of severe cancer treatment
     ingest_source: dataset/raw/curated/qalys.json
@@ -368,6 +389,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year with severe disability
     ingest_source: dataset/raw/curated/qalys.json
@@ -415,6 +439,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year with paraplegia
     ingest_source: dataset/raw/curated/qalys.json
@@ -462,6 +489,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year on hemodialysis
     ingest_source: dataset/raw/curated/qalys.json
@@ -509,6 +539,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year with moderate depression
     ingest_source: dataset/raw/curated/qalys.json
@@ -556,6 +589,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year with blindness
     ingest_source: dataset/raw/curated/qalys.json
@@ -603,6 +639,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year with mild chronic pain
     ingest_source: dataset/raw/curated/qalys.json
@@ -650,6 +689,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year at 90 percent quality
     ingest_source: dataset/raw/curated/qalys.json
@@ -697,6 +739,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year at 95 percent quality
     ingest_source: dataset/raw/curated/qalys.json
@@ -744,6 +789,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hip replacement five-year gain
     ingest_source: dataset/raw/curated/qalys.json
@@ -789,6 +837,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One year of perfect health
     ingest_source: dataset/raw/curated/qalys.json
@@ -836,6 +887,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Smoking cessation lifetime gain
     ingest_source: dataset/raw/curated/qalys.json
@@ -881,6 +935,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Kidney transplant five-year gain
     ingest_source: dataset/raw/curated/qalys.json
@@ -926,6 +983,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Five years of perfect health
     ingest_source: dataset/raw/curated/qalys.json
@@ -972,6 +1032,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Antiretroviral therapy over a decade
     ingest_source: dataset/raw/curated/qalys.json
@@ -1017,6 +1080,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ten years of perfect health
     ingest_source: dataset/raw/curated/qalys.json

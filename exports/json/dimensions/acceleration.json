@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The expansion of the universe is accelerating at an almost undetectable rate. Over cosmic scales, this acceleration is about 7x10^(-10) m/s^2 - incredibly small compared to everyday experiences. This means that in one second, a galaxy's recession speed might increase by only nanometers per second. Such a gentle acceleration is comparable to the Sun's subtle tug on our solar system as it orbits the Milky Way. Yet, over billions of years, this tiny acceleration drives the universe's expansion faster and faster.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Accelerating Universe (Dark Energy)",
@@ -44,6 +45,8 @@
       "id": "obs:acceleration:scenario-acceleration-accelerating-universe-dark-energy",
       "name": "Accelerating Universe (Dark Energy)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://avi-loeb.medium.com",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "As NASA's Pioneer 10/11 probes coasted into deep space, navigators noticed an extra sunward acceleration of about **8.74x10^(-10) m/s^2**. This minuscule acceleration--only a few parts in a billion of Earth's gravity--was initially unexplained, sparking theories of new physics. Eventually, it was traced to mundane causes: anisotropic heat radiation acting like a tiny thrust. The Pioneer anomaly's resolution was a triumph of precision physics, as it required accounting for accelerations mere **billionths** of a m/s^2.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Pioneer Anomaly (extra Sunward drift)",
@@ -95,6 +99,8 @@
       "id": "obs:acceleration:scenario-acceleration-pioneer-anomaly-extra-sunward-drift",
       "name": "Pioneer Anomaly (extra Sunward drift)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pioneer_anomaly",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Japan's **IKAROS** solar sail demonstrated sunlight-driven acceleration on the order of a few x10^(-6) m/s^2. In 2010, IKAROS unfurled a 200 m^2 reflective membrane that caught solar photons for thrust. The pressure of sunlight provided a **tiny push** - about 0.000004 m/s^2 - altering the craft's velocity over time. Though extremely gentle (roughly a ten-thousandth of a g), this continuous acceleration accumulates in the frictionless vacuum of space, allowing a sailcraft to gradually gain substantial speed without any propellant.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Solar Sail (IKAROS spacecraft)",
@@ -146,6 +153,8 @@
       "id": "obs:acceleration:scenario-acceleration-solar-sail-ikaros-spacecraft",
       "name": "Solar Sail (IKAROS spacecraft)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://global.jaxa.jp/press/2010/07/20100709_ikaros_e.html",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Moon's gravitational pull on objects at Earth's surface is very small - about **3.3x10^(-5) m/s^2**. This is roughly 0.00034% of the acceleration due to Earth's own gravity. In practical terms, when the Moon is directly overhead, you would weigh ever-so-slightly less (only a few parts in a million lighter) because the Moon's tug partly counteracts Earth's pull. Such a weak acceleration still plays a role in ocean tides: it's the differences in the Moon's gravity across Earth (its tidal force) that can move large bodies of water.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Moon's Gravity at Earth",
@@ -197,6 +207,8 @@
       "id": "obs:acceleration:scenario-acceleration-moon-s-gravity-at-earth",
       "name": "Moon's Gravity at Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://hep.physics.utoronto.ca/~pekka/phy140y/lectures/Lecture_6.pdf",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Electric **ion propulsion** provides a continuous but very low acceleration. A typical ion engine (like NASA's NSTAR on *Dawn*) produces ~90 mN of thrust, yielding about **9x10^(-5) m/s^2** on a 1000 kg spacecraft. That's ~0.0000096 g - far too small to feel. For example, such thrust can take a probe from 0 to 97 km/h, but only after about 4 days of steady push. While tiny, this acceleration, applied steadily in the vacuum of space, can achieve high speeds over months or years, making ion engines ideal for deep-space missions.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Ion Engine Thrust (Deep-Space Ion Thruster)",
@@ -248,6 +261,8 @@
       "id": "obs:acceleration:scenario-acceleration-ion-engine-thrust-deep-space-ion-thruster",
       "name": "Ion Engine Thrust (Deep-Space Ion Thruster)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ion_thruster",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "On **Phobos**, the larger moon of Mars, gravity is feeble: about **5.7x10^(-3) m/s^2** at the surface. That's less than 1/2000 of Earth's gravity. A person could *almost* hop off Phobos - escape velocity is only ~11 m/s (40 km/h). In practice, a gentle jump would take you on a long ballistic arc. Such ultra-low gravity means a weight of 100 kg on Earth would effectively weigh only a few hundred grams on Phobos. This tiny acceleration reflects Phobos's small mass (\u224810^16 kg) and makes its environment more like an asteroid's microgravity than a typical moon's.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Phobos Surface Gravity",
@@ -299,6 +315,8 @@
       "id": "obs:acceleration:scenario-acceleration-phobos-surface-gravity",
       "name": "Phobos Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravity_of_Earth",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "As Earth orbits the Sun at ~30 km/s, it continuously \"falls\" inward. The required centripetal acceleration is about **5.9x10^(-3) m/s^2** (\u22480.0006 g) towards the Sun. We don't feel this pull because it's the same acceleration that everything on Earth (including our bodies and atmosphere) experiences as we orbit. This gentle 0.006 m/s^2 acceleration is **1600** times smaller than gravity at Earth's surface. It's enough to keep Earth in a nearly circular 1-year orbit, illustrating how even a small acceleration can curve an object's path given sufficient time and speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Earth's Orbit (Centripetal around Sun)",
@@ -350,6 +369,8 @@
       "id": "obs:acceleration:scenario-acceleration-earth-s-orbit-centripetal-around-sun",
       "name": "Earth's Orbit (Centripetal around Sun)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://physics.stackexchange.com",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth's spin causes a slight outward centrifugal acceleration at the equator of about **3.4x10^(-2) m/s^2**. This is roughly 0.0035 g, or 0.34% of ordinary gravity. It makes you weigh a bit less at the equator than at the poles. For example, a 200-pound person at the north pole would weigh about 199 pounds at the equator. This rotational acceleration is too small to notice directly (it's like losing only a few ounces), but it slightly counteracts gravity. It also contributes to Earth's equatorial bulge, as the spin causes a subtle \"flinging out\" of mass.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Earth's Rotation at Equator",
@@ -401,6 +423,8 @@
       "id": "obs:acceleration:scenario-acceleration-earth-s-rotation-at-equator",
       "name": "Earth's Rotation at Equator",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.wtamu.edu/~cbaird/sq/2014/01/07/do-i-weigh-less-on-the-equator-than-at-the-north-pole/",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Saturn's moon **Enceladus** has surface gravity of only about **0.11 m/s^2**, a little over one percent of Earth's. That weak pull is still enough to shape icy terrain and let the moon hold onto a loose regolith, but it also helps its famous water-ice plumes escape hundreds of kilometers into space. For a human visitor, ordinary jumps would become long floating arcs. The number is a representative surface value for this small active moon.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Enceladus Surface Gravity",
@@ -452,6 +477,8 @@
       "id": "obs:acceleration:scenario-acceleration-enceladus-surface-gravity",
       "name": "Enceladus Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enceladus",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "On dwarf planet **Ceres** (radius ~473 km), surface gravity is only **0.27 m/s^2** (about 2.7% of Earth's). A person of 100 kg mass would weigh just ~2.7 kg-force on Ceres. This acceleration (sometimes expressed as ~27 cm/s^2 or 27 Gal) is enough to hold a loose surface of dust and ice, but walking would feel like bounding in slow motion. Ceres' low gravity arises from its small mass (\u22489.4x10^20 kg) and size. Spacecraft in close orbit must account for Ceres' weak pull, which is hundreds of times weaker than Earth's gravity but still significant for orbiting probes.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Ceres Surface Gravity",
@@ -503,6 +531,8 @@
       "id": "obs:acceleration:scenario-acceleration-ceres-surface-gravity",
       "name": "Ceres Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravity_of_Earth",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter's moon **Europa** pulls downward at roughly **1.3 m/s^2**, close to lunar gravity but slightly lower. That modest acceleration helps shape the cracked ice shell and would make walking there feel springy and slow. It also controls the height of ejecta plumes and the behavior of any future landers. The value quoted is Europa's mean surface gravity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Europa Surface Gravity",
@@ -554,6 +585,8 @@
       "id": "obs:acceleration:scenario-acceleration-europa-surface-gravity",
       "name": "Europa Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Europa_(moon)",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The **Moon's** gravity at its surface is **1.62 m/s^2**, about one-sixth of Earth's. In the Apollo missions, astronauts could hop high and fall slowly - taking about 2.4 seconds to drop 1 meter. This low acceleration (often noted as ~0.165 g) allowed the iconic lunar \"bunny hops.\" A 90 kg astronaut who weighs ~882 N on Earth weighs only ~147 N on the Moon. Even though it's weak, lunar gravity is sufficient to hold an atmosphere (if the Moon had one) for only a brief time; in reality the Moon's escape velocity is too low to retain light gases. The Moon's moderate gravity shaped its craters and geology - ejecta from impacts travel farther under 1.62 m/s^2 than they would on Earth.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Moon Surface Gravity",
@@ -605,6 +639,8 @@
       "id": "obs:acceleration:scenario-acceleration-moon-surface-gravity",
       "name": "Moon Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravity_of_Earth",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "**Mars'** surface gravity is **3.71 m/s^2**, about 38% of Earth's. A person who weighs 1000 N (\u2248100 kgf) on Earth would weigh only ~380 N on Mars. This reduced acceleration means objects fall more slowly - a dropped object takes \u221a(3) \u22481.7 times longer to hit the ground on Mars than on Earth. Mars' gravity is strong enough to hold onto a thin atmosphere (unlike smaller bodies) but too weak to retain water vapor over geologic time, contributing to Mars' arid state. Lower Martian gravity also enables taller mountains - Olympus Mons stands ~22 km high, aided in part by gravity being less of a \"downward\" constraint than on Earth.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Mars Surface Gravity",
@@ -656,6 +693,8 @@
       "id": "obs:acceleration:scenario-acceleration-mars-surface-gravity",
       "name": "Mars Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravity_of_Earth",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An elite sprinter driving out of the blocks can accelerate at around **4 to 5 m/s^2** during the opening steps of a 100 m race. That is enough to noticeably tilt the body forward and keep the athlete in a low, forceful posture before transitioning upright. The value only lasts a second or two because air drag and finite muscle power quickly reduce the rate. It is a representative opening acceleration for world-class sprinting.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Olympic Sprinter from Starting Blocks",
@@ -707,6 +747,8 @@
       "id": "obs:acceleration:scenario-acceleration-olympic-sprinter-from-starting-blocks",
       "name": "Olympic Sprinter from Starting Blocks",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sprinting",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Despite its hellish atmosphere, **Venus** has surface gravity of about **8.87 m/s^2**, surprisingly close to Earth's **9.81 m/s^2**. A person standing on Venus would feel only slightly lighter than on Earth, even though the heat and pressure would dominate every other aspect of the experience. This near-match is why Venus is sometimes called Earth's twin in size, if not in habitability. The number is the planet's mean surface gravity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Venus Surface Gravity",
@@ -758,6 +801,8 @@
       "id": "obs:acceleration:scenario-acceleration-venus-surface-gravity",
       "name": "Venus Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Venus",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "**Earth's** standard surface gravity is **9.81 m/s^2** (by definition). This acceleration - often called **1 g** - causes unsupported objects to gain about 9.81 m/s of downward speed every second. It sets the scale for everyday forces: for instance, your weight equals your mass times 9.81 m/s^2. Small variations occur with location: gravity is ~9.78 m/s^2 at the equator and ~9.83 m/s^2 at the poles (due to Earth's rotation and shape). Earth's gravity not only keeps us grounded, but also binds the atmosphere and determines escape velocity (~11.2 km/s). It's the **benchmark** against which stronger or weaker accelerations are often compared.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Earth Surface Gravity (1 g)",
@@ -809,6 +855,8 @@
       "id": "obs:acceleration:scenario-acceleration-earth-surface-gravity-1-g",
       "name": "Earth Surface Gravity (1 g)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravity_of_Earth",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The cheetah is famed not just for its speed but also its **acceleration**. In wild hunts, cheetahs can achieve lateral accelerations over **13 m/s^2** (\u22481.3 g) when zigzagging after prey. From a standstill, a cheetah can reach 60 mph (27 m/s) in ~3 s, an average acceleration of ~9 m/s^2. Peak forward thrusts on good footing may approach or exceed 10-13 m/s^2. This explosive acceleration, combined with traction and agility, lets cheetahs close in on nimble prey rapidly. For comparison, a cheetah's acceleration can be **4x** higher than Usain Bolt's out of the starting blocks, highlighting their incredible muscle power and claw grip.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Cheetah's Burst Acceleration",
@@ -860,6 +909,8 @@
       "id": "obs:acceleration:scenario-acceleration-cheetah-s-burst-acceleration",
       "name": "Cheetah's Burst Acceleration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.sciencedaily.com/releases/2013/06/130614082900.htm",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "During the final landing burn, a **Falcon 9** booster briefly experiences decelerations on the order of a few g as its engines cancel out a descent that began from space. Guidance software modulates thrust continuously so the rocket arrives at near-zero speed right at touchdown. This is one of the stranger modern acceleration regimes: a skyscraper-sized object balancing itself on fire. The value is a representative magnitude during the terminal landing phase.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Falcon 9 Landing Burn Deceleration",
@@ -911,6 +963,8 @@
       "id": "obs:acceleration:scenario-acceleration-falcon-9-landing-burn-deceleration",
       "name": "Falcon 9 Landing Burn Deceleration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Falcon_9",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The giant planet **Jupiter** has a surface (cloud-top) gravity of about **25.3 m/s^2**, roughly 2.58 g. This means a 100 kg object would feel a weight of ~2.5 tons on Jupiter. Such strong gravity significantly affects spacecraft: a probe entering Jupiter's atmosphere accelerates rapidly and experiences intense deceleration on parachutes. Jupiter's high gravity (despite being a gas giant with no solid surface) comes from its huge mass (~318 Earth masses) concentrated within a radius just 11 times Earth's. It contributes to holding dozens of moons and bending the paths of comets and asteroids that venture near. If you could stand at Jupiter's \"surface,\" you'd find moving extremely difficult under 2.5 g, and your bones and muscles would be heavily strained.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Jupiter Surface Gravity",
@@ -962,6 +1017,8 @@
       "id": "obs:acceleration:scenario-acceleration-jupiter-surface-gravity",
       "name": "Jupiter Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravity_of_Earth",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The **Saturn V** Moon rocket, as it burned fuel, reached a peak acceleration of about **4 g** (\u224839 m/s^2) during first-stage ascent. About 2 minutes after launch, the crew felt four times their weight. To avoid exceeding this, the Saturn V's center engine was shut down early, dropping acceleration to ~3 g. Even 3-4 g for a minute or two was very taxing for Apollo astronauts, who lay on their backs to tolerate the force. This **39 m/s^2** acceleration is modest compared to bullets or spacecraft reentries, but for a 3,000-ton rocket it was an immense achievement - the Saturn V had to carefully balance thrust to not crush its payload while still escaping Earth's gravity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Saturn V Rocket (Launch Acceleration)",
@@ -1013,6 +1071,8 @@
       "id": "obs:acceleration:scenario-acceleration-saturn-v-rocket-launch-acceleration",
       "name": "Saturn V Rocket (Launch Acceleration)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saturn_V",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern **Formula 1** cars can pull lateral accelerations of several g in fast corners, corresponding to roughly **45 m/s^2**. Drivers train neck and core muscles specifically to withstand this because the load must be sustained lap after lap. Aerodynamic downforce is what makes such extreme cornering possible at all. The number here is a representative high-speed turn rather than the absolute peak in a transient.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Formula 1 Cornering",
@@ -1064,6 +1125,8 @@
       "id": "obs:acceleration:scenario-acceleration-formula-1-cornering",
       "name": "Formula 1 Cornering",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Formula_One_car",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A modern Top Fuel dragster can accelerate from 0 to 100 mph in under 1 second, subjecting the driver to over **5 g** (\u224850 m/s^2) of acceleration. Off the starting line, these nitromethane-fueled machines launch harder than even fighter jets on carrier takeoff. At ~5 g, a dragster out-accelerates the space shuttle (which averages ~3 g at launch) and any production car. The driver experiences immense force pushing them back as the 11,000 hp engine propels the car to ~330 mph in ~3.7 seconds. This brutal acceleration - more than five times the force of gravity - must be limited by rules and tire technology; otherwise, the tires would break traction. It showcases the extreme of land vehicle performance, where even human reflexes barely keep up with the acceleration.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Top Fuel Dragster",
@@ -1115,6 +1179,8 @@
       "id": "obs:acceleration:scenario-acceleration-top-fuel-dragster",
       "name": "Top Fuel Dragster",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.nhra.com/news/2021/how-many-g-s-does-modern-11-000-hp-top-fuel-dragster-pull",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Elite fighter pilots can withstand accelerations of **9-10 g** (around **98 m/s^2**) for short periods during tight turns or pull-ups. For example, an F-16 executing a tight 9 g turn causes the pilot to feel nine times their weight, making blood pool in the legs. Special anti-g suits and training help pilots remain conscious under these ~100 m/s^2 accelerations by squeezing the body to maintain blood flow to the brain. At 10 g, a pilot's head effectively weighs as much as an adult lion, and arms feel ten times heavier. Humans can only sustain such acceleration for a few seconds without blacking out (g-LOC). These high-g maneuvers are crucial in air combat to outturn opponents, but they push the limits of human physiology and aircraft structure.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Fighter Jet Turn (High-G Maneuver)",
@@ -1166,6 +1233,8 @@
       "id": "obs:acceleration:scenario-acceleration-fighter-jet-turn-high-g-maneuver",
       "name": "Fighter Jet Turn (High-G Maneuver)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://avi-loeb.medium.com",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The **Sun's** surface (photospheric) gravity is about **274 m/s^2** (\u224828 g). This is 28 times stronger than Earth's gravity. A 100 kg person on the Sun (ignoring the heat!) would weigh the equivalent of 2,800 kg. Such intense acceleration makes the Sun's atmosphere very stratified - gas quickly gets pulled inward unless buoyed by pressure or magnetic fields. Sunspots, for instance, have strong magnetic support against this gravity. The high surface gravity also means a very high escape velocity (~617 km/s). Solar gravity keeps the planets in orbit, dominating the dynamics of the solar system. It's so strong that, near the solar limb, hot plasma arches into loops (prominences) only to rain back down under gravity. This 274 m/s^2 value is an average at the Sun's \"surface\" (since the Sun has no solid surface), and gravity would increase further toward its core.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Sun's Surface Gravity",
@@ -1217,6 +1287,8 @@
       "id": "obs:acceleration:scenario-acceleration-sun-s-surface-gravity",
       "name": "Sun's Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravity_of_Earth",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "In 1954, Air Force physician Col. John Stapp rode a rocket sled to research extreme deceleration. In the final test, he endured a peak **40 g** deceleration (\u2248392 m/s^2) over a few seconds. This violent slowdown from about 632 mph (after rocket burn) to a full stop caused Stapp to briefly black out and left him with bloodshot eyes (from retinal hemorrhages) - yet he survived and remained committed to safety research. A 40 g deceleration means his 70 kg body experienced forces of roughly 27,000 N (equivalent to a 2.7 ton force). The data from Stapp's harrowing tests led to improved cockpit restraints and ejection seats. His self-experiment demonstrated how much acceleration a well-prepared human can tolerate in the forward-facing direction, and earned him the nickname \"the Fastest Man on Earth\" at the time.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Rocket Sled Deceleration (Col. Stapp, 1954)",
@@ -1268,6 +1341,8 @@
       "id": "obs:acceleration:scenario-acceleration-rocket-sled-deceleration-col-stapp-1954",
       "name": "Rocket Sled Deceleration (Col. Stapp, 1954)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.thiot-ingenierie.com/en/2016/09/22/embedded-electronics-tested-at-100000-g-2/",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The tiny **froghopper insect** (spittlebug) is one of nature's acceleration champions. It can jump with an acceleration of up to **5,400 m/s^2** (over 550 g) in the best leaps. Froghoppers (Philaenus spumarius), only ~6 mm long, use a catapult mechanism in their hind legs. They reach take-off speeds of ~4 m/s in under a millisecond, experiencing astonishing g-forces. High-speed video shows froghoppers going from rest to airborne in 0.001-0.002 s, with leg joints acting like spring-loaded triggers. This acceleration is about 4 times what a fighter pilot experiences ejecting from an aircraft. It enables the froghopper's jumps to heights of ~70 cm - huge relative to its 2 mm body length. Such feats make the froghopper one of the highest-acceleration organisms recorded, demonstrating the power possible in small-scale, spring-loaded biomechanics.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Froghopper Jump (Champion Leaper)",
@@ -1319,6 +1395,8 @@
       "id": "obs:acceleration:scenario-acceleration-froghopper-jump-champion-leaper",
       "name": "Froghopper Jump (Champion Leaper)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.sciencedaily.com/releases/2013/06/130614082900.htm",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A woodpecker drilling into a tree experiences enormous decelerations - about **1,200 g** (\u224811,800 m/s^2) with each beak strike. These birds slam their heads into wood at ~6-7 m/s and stop within just 0.5-1 ms, enduring forces that would severely concuss a human. Remarkably, woodpeckers avoid brain injury thanks to evolutionary adaptations: a thick, spongy skull, a specialized hyoid bone that wraps around the skull to absorb shocks, and perfectly aligned impact direction to reduce shear forces. The deceleration (~60,000 m/s^2) they tolerate is **14x greater** than what causes concussion in humans. Studying how woodpeckers survive these 12,000 m/s^2 decelerations has inspired improvements in helmet and armor design, using nature's engineering to mitigate high-g impacts.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Woodpecker Pecking Deceleration",
@@ -1370,6 +1449,8 @@
       "id": "obs:acceleration:scenario-acceleration-woodpecker-pecking-deceleration",
       "name": "Woodpecker Pecking Deceleration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.fieldmuseum.org/blog/what-woodpecker-brains-can-tell-us-about-concussions",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "When a baseball is struck by a professional batter, it experiences extreme acceleration - on the order of **tens of thousands of m/s^2**. In a milliseconds-long impact, a 150 g baseball can go from 0 to ~50 m/s (112 mph). Peak accelerations can reach ~30,000-35,000 m/s^2 (~3,000-3,500 g). This is why the ball compresses and then springs off the bat. Such acceleration far exceeds what any human could survive - it's a brief, mechanical event. The bat imparts a force of perhaps 30-40 kN (equivalent to lifting 3-4 tonnes) on the ball. The resulting acceleration is so high that high-speed cameras are needed to capture the distortion of the ball. These enormous accelerations are what give the ball its exit velocity (often 100+ mph) and long flight, illustrating the violent physics in the instant of bat-ball collision.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Baseball Bat Impact (Ball Acceleration)",
@@ -1421,6 +1503,8 @@
       "id": "obs:acceleration:scenario-acceleration-baseball-bat-impact-ball-acceleration",
       "name": "Baseball Bat Impact (Ball Acceleration)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://avi-loeb.medium.com",
       "source_count": 2,
       "sources": [
@@ -1459,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The acceleration of an artillery shell inside a gun barrel is enormous - on the order of **(1-3)x10^5 m/s^2** (tens of thousands of g's). When a shell is fired, the expanding propellant gases push it from zero to muzzle velocity (often ~800 m/s) in a barrel just a few meters long. This might be ~15,000-30,000 g of acceleration during the microseconds of travel in the barrel. Such extreme acceleration poses engineering challenges: onboard electronics and fuzes must be hardened to survive ~10^5 g shock loads. For perspective, 30,000 g would press a 1 kg object with a force of nearly 30 tons. Despite the brevity of the force, the projectile and gun must withstand tremendous stress. This high acceleration is why artillery achieves high muzzle energy, propelling shells dozens of kilometers.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Artillery Shell Launch",
@@ -1472,6 +1557,8 @@
       "id": "obs:acceleration:scenario-acceleration-artillery-shell-launch",
       "name": "Artillery Shell Launch",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.thiot-ingenierie.com/en/2016/09/22/embedded-electronics-tested-at-100000-g-2/",
       "source_count": 2,
       "sources": [
@@ -1510,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A rifle bullet reaches muzzle speed over only a fraction of a meter inside the barrel, so its average acceleration climbs to hundreds of thousands of meters per second squared. That is why even short barrels can still launch projectiles at extraordinary speed. Internal ballistics spreads the force over milliseconds, but the resulting acceleration is still immense by everyday standards. The number is a representative barrel-average acceleration for a full-power rifle round.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Rifle Bullet in Barrel",
@@ -1523,6 +1611,8 @@
       "id": "obs:acceleration:scenario-acceleration-rifle-bullet-in-barrel",
       "name": "Rifle Bullet in Barrel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Internal_ballistics",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical **white dwarf** star has a surface gravity around **10^6 m/s^2** (about 100,000 g). This is *hundred thousand times* Earth's gravity - an object that weighs 1 kg on Earth would effectively weigh 100,000 kg on a white dwarf. In these stellar remnants (mass ~0.6-1.4 Sun masses compressed into an Earth-sized sphere), gravity is so strong that hydrogen in the atmosphere sinks in seconds, leaving only the heaviest elements at the surface. A person standing on a white dwarf (ignoring the fatal conditions) would be crushed flat instantly as **1e6 m/s^2** pulls them down. White dwarf gravity also significantly redshifts light escaping from the star's surface. This immense acceleration is a frontier for testing physics - for instance, atomic spectra on white dwarfs are measurably shifted by the gravitational field.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "White Dwarf Surface Gravity",
@@ -1574,6 +1665,8 @@
       "id": "obs:acceleration:scenario-acceleration-white-dwarf-surface-gravity",
       "name": "White Dwarf Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Surface_gravity#Variations",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Some fungi launch spores with record-breaking accelerations. The dung fungus **Pilobolus** fires spores at about **1.8x10^6 m/s^2** (~180,000 g). This happens as a pressurized stalk explosively ruptures, shooting a spore up to ~2-3 m. High-speed video revealed spores reaching 20 m/s in just 0.0001 s. The acceleration, ~ **180,000 times gravity**, makes this the fastest acceleration in the living world known to date. By comparison, a space shuttle launches at ~3 g and a fighter jet pilot may feel ~9 g. The spores need such extreme launch acceleration to escape the \"zone of repugnance\" (the dung pile) and land on fresh grass. Pilobolus achieves this with an ingenious single-use squirt-gun mechanism, illustrating evolution's ability to produce staggering accelerations in microscopic structures.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Fungal Spore Launch (Pilobolus)",
@@ -1625,6 +1719,8 @@
       "id": "obs:acceleration:scenario-acceleration-fungal-spore-launch-pilobolus",
       "name": "Fungal Spore Launch (Pilobolus)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.scientificamerican.com/article/fungus-spores-fast-speedy-mold/",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1759,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The stinging cells of certain jellyfish (like the box jellyfish) discharge with the fastest acceleration recorded in the animal kingdom - around **5x10^6 g**, which is **~5x10^7 m/s^2**. Nematocysts are microscopic capsules that, upon triggering, explosively eject a barbed harpoon. The tip reaches its prey in microseconds, achieving a launch speed of ~15 m/s in a distance of only a few microns. The resulting acceleration (on the order of 50 million m/s^2) is beyond any macroscopic motion on Earth. It allows jellyfish tentacles to puncture tough skin or exoskeleton almost instantly. These accelerations - several million times gravity - are possible only over tiny distances with ingenious biological spring mechanisms. They illustrate how evolution has engineered one of nature's **most extreme accelerations** for survival, making jellyfish stings virtually impossible for prey to avoid.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Jellyfish Stinger (Nematocyst)",
@@ -1676,6 +1773,8 @@
       "id": "obs:acceleration:scenario-acceleration-jellyfish-stinger-nematocyst",
       "name": "Jellyfish Stinger (Nematocyst)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.nationalgeographic.com/animals/article/animals-stingers-bees-jellyfish-wasps",
       "source_count": 2,
       "sources": [
@@ -1714,6 +1813,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A **neutron star's** surface gravity is mind-boggling: around **10^12 m/s^2** (100 billion g), with the most massive neutron stars reaching up to ~7x10^12 m/s^2. At 10^12 m/s^2, a small 1 kg mass would weigh as much as 100 billion kilograms. Neutron stars cram ~1.4 solar masses into a sphere ~20 km across, so gravity at their surface is intense enough to accelerate objects to near fractions of light speed in just a few centimeters of fall. Photons struggle to escape - the gravitational pull redshifts their wavelength significantly. If an object were dropped from just 1 meter above a neutron star, it would hit the surface in microseconds at over 4,000 km/s. These accelerations are so extreme that they test general relativity; indeed, neutron star surface gravity is often cited when probing alternative gravity theories at unprecedented scales.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Neutron Star Surface Gravity",
@@ -1727,6 +1827,8 @@
       "id": "obs:acceleration:scenario-acceleration-neutron-star-surface-gravity",
       "name": "Neutron Star Surface Gravity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Surface_gravity#Variations",
       "source_count": 2,
       "sources": [
@@ -1765,6 +1867,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Protons in the **Large Hadron Collider (LHC)** circle a 27 km ring at 0.999999991 c, experiencing a centripetal acceleration of about **2.3x10^13 m/s^2**. That's ~2.3x10^12 g - by far the largest acceleration routinely produced on Earth. The magnetic fields in the LHC bend the 7 TeV protons around the ring, forcing them to change direction nearly 11,245 times per second. Despite this colossal acceleration, the protons don't radiate all their energy away instantly because of relativistic effects and the vacuum environment (though they do emit some synchrotron radiation). To put 2.3x10^13 m/s^2 in perspective, it's as if the protons gain ~0.00077 c of speed every single meter of curvature. This immense acceleration is required to keep particles with 7,000 times their rest energy moving in a circle. It exemplifies human-made extremes: a tiny particle undergoing an acceleration 12 orders of magnitude greater than a fighter pilot's, enabling high-energy collisions that probe fundamental physics.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Large Hadron Collider (Proton Beam)",
@@ -1778,6 +1881,8 @@
       "id": "obs:acceleration:scenario-acceleration-large-hadron-collider-proton-beam",
       "name": "Large Hadron Collider (Proton Beam)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://lhc-closer.es/taking_a_closer_look_at_lhc/0.simple_movement",
       "source_count": 2,
       "sources": [
@@ -1816,6 +1921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "According to quantum electrodynamics, an electric field of ~1.3x10^18 V/m (the **Schwinger limit**) will accelerate electrons at about **2.5x10^29 m/s^2**. This is ~2.5x10^28 g, or 25 octillion times Earth's gravity. At this theoretical acceleration, electrons would gain ~10% of light speed in each femtosecond. Such a field causes the vacuum to spontaneously produce electron-positron pairs (as calculated by Julian Schwinger), effectively setting an upper bound on electric-field-driven acceleration in nature. Enormous accelerations near this scale might occur around magnetars or in extreme laser experiments. It's **25,000,000,000,000,000,000,000,000,000** g - an acceleration so extreme that our intuition fails. Beyond this point, classical electrodynamics gives way to quantum effects as the vacuum itself breaks down into particles.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Schwinger Limit (Critical E-field)",
@@ -1829,6 +1935,8 @@
       "id": "obs:acceleration:scenario-acceleration-schwinger-limit-critical-e-field",
       "name": "Schwinger Limit (Critical E-field)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://avi-loeb.medium.com",
       "source_count": 2,
       "sources": [
@@ -1867,6 +1975,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "**Planck acceleration** - around **5.56x10^51 m/s^2** - is a hypothetical upper limit defined by fundamental constants. It equals c (3x10^8 m/s) change in velocity per Planck time (\u22485.4x10^(-44) s). In other words, it's the acceleration an object would need to reach light speed in one Planck time. This value (~5x10^50 g) is absurdly high: it dwarfs any acceleration in the observable universe. For example, it is 10^39 times greater than a proton's acceleration in the LHC. At Planck accelerations, classical ideas cease to make sense - such extreme gravity or force would create a black hole or unrecognizable spacetime conditions. While no physical object is known to attain this, Planck acceleration provides a theoretical scale at which quantum gravity effects become important. It represents an **absolute extreme** beyond which current physics cannot reliably predict behavior.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/acceleration.yaml",
         "legacy_item_name": "Planck Acceleration (Theoretical Maximum)",
@@ -1880,6 +1989,8 @@
       "id": "obs:acceleration:scenario-acceleration-planck-acceleration-theoretical-maximum",
       "name": "Planck Acceleration (Theoretical Maximum)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_units",
       "source_count": 2,
       "sources": [

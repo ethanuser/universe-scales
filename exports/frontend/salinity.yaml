@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ultrapure water
     ingest_source: dataset/raw/curated/salinity.json
@@ -88,6 +91,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rainwater
     ingest_source: dataset/raw/curated/salinity.json
@@ -133,6 +139,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Desalinated water
     ingest_source: dataset/raw/curated/salinity.json
@@ -178,6 +187,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mountain stream freshwater
     ingest_source: dataset/raw/curated/salinity.json
@@ -223,6 +235,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Great Lakes water
     ingest_source: dataset/raw/curated/salinity.json
@@ -268,6 +283,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tap water
     ingest_source: dataset/raw/curated/salinity.json
@@ -313,6 +331,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Freshwater aquarium
     ingest_source: dataset/raw/curated/salinity.json
@@ -358,6 +379,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Upper Chesapeake Bay
     ingest_source: dataset/raw/curated/salinity.json
@@ -403,6 +427,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Baltic Sea
     ingest_source: dataset/raw/curated/salinity.json
@@ -448,6 +475,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Greenland fjord water
     ingest_source: dataset/raw/curated/salinity.json
@@ -493,6 +523,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood plasma
     ingest_source: dataset/raw/curated/salinity.json
@@ -538,6 +571,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Normal saline
     ingest_source: dataset/raw/curated/salinity.json
@@ -584,6 +620,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human tears
     ingest_source: dataset/raw/curated/salinity.json
@@ -629,6 +668,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Urine
     ingest_source: dataset/raw/curated/salinity.json
@@ -674,6 +716,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human sweat
     ingest_source: dataset/raw/curated/salinity.json
@@ -719,6 +764,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brackish estuary
     ingest_source: dataset/raw/curated/salinity.json
@@ -764,6 +812,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Chesapeake Bay estuary
     ingest_source: dataset/raw/curated/salinity.json
@@ -809,6 +860,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Black Sea
     ingest_source: dataset/raw/curated/salinity.json
@@ -854,6 +908,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seawater
     ingest_source: dataset/raw/curated/salinity.json
@@ -900,6 +957,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mediterranean Sea
     ingest_source: dataset/raw/curated/salinity.json
@@ -945,6 +1005,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Red Sea
     ingest_source: dataset/raw/curated/salinity.json
@@ -990,6 +1053,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pickle brine
     ingest_source: dataset/raw/curated/salinity.json
@@ -1035,6 +1101,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lake Urmia
     ingest_source: dataset/raw/curated/salinity.json
@@ -1080,6 +1149,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Great Salt Lake
     ingest_source: dataset/raw/curated/salinity.json
@@ -1125,6 +1197,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soy sauce
     ingest_source: dataset/raw/curated/salinity.json
@@ -1170,6 +1245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brine pool
     ingest_source: dataset/raw/curated/salinity.json
@@ -1215,6 +1293,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Salt evaporation pond
     ingest_source: dataset/raw/curated/salinity.json
@@ -1260,6 +1341,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saturated salt brine
     ingest_source: dataset/raw/curated/salinity.json
@@ -1305,6 +1389,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hypersaline brine pool
     ingest_source: dataset/raw/curated/salinity.json
@@ -1350,6 +1437,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dead Sea
     ingest_source: dataset/raw/curated/salinity.json
@@ -1395,6 +1485,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lake Assal
     ingest_source: dataset/raw/curated/salinity.json
@@ -1440,6 +1533,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Highly evaporated brine
     ingest_source: dataset/raw/curated/salinity.json

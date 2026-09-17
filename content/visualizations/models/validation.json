@@ -1,0 +1,712 @@
+{
+  "validator": "Khronos glTF Validator",
+  "version": "2.0.0-dev.3.10",
+  "source": "https://github.com/KhronosGroup/glTF-Validator",
+  "models": [
+    {
+      "id": "nasa-earth",
+      "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 1,
+        "numInfos": 2,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations.",
+            "severity": 1,
+            "pointer": "/meshes/0/primitives/0/material"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          },
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/1"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 392352
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgb",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 1778,
+        "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "nasa-moon",
+      "sha256": "d342a56c4fe2757e19c1c92fb3ee0f2d3d9ae24420e0ebb98160f0d52644203e",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 261020
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 2034,
+        "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "nasa-jupiter",
+      "sha256": "69eb9f18550557c4496a598a41d1f2babb98dfca0ee7b5b44f0045161adb9aff",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 186128
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 1649,
+        "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "nasa-sun",
+      "sha256": "7b5ba6cf18d46532a4d2741a345432dbd784027c357f741780911839e68c85c3",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 304992
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 1649,
+        "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "wine-bottle",
+      "sha256": "dbc435be3d69c4f5ae53a0abff97c5440a13ebeee7c3016f23812bee14459e21",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 3,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations.",
+            "severity": 1,
+            "pointer": "/meshes/0/primitives/0/material"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations.",
+            "severity": 1,
+            "pointer": "/meshes/0/primitives/1/material"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations.",
+            "severity": 1,
+            "pointer": "/meshes/0/primitives/3/material"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos glTF Blender I/O v1.8.19",
+        "extensionsUsed": [
+          "KHR_materials_transmission"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 2554536
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/2",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/3",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/4",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/5",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/6",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 4,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 3656,
+        "totalTriangleCount": 6520,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "rigged-human",
+      "sha256": "8bc673c7f15539c73f9b8090d21a39988988125a94f5129fabfb4615c2e69845",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "COLLADA2GLTF",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 10416
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 370,
+        "totalTriangleCount": 256,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "coffee-mug",
+      "sha256": "a725123f09c47335d3f78e196905147f2c8b84b6952914161d0b0b74cdd7395a",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TANGENT"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "UnityGLTF",
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 17004
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgb",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 124,
+        "totalTriangleCount": 112,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 4
+      }
+    },
+    {
+      "id": "soda-can",
+      "sha256": "108cc05cd06feddbfb99604bbf45b1fe5819cdb389b94191ebb796ae2dca0b7a",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TANGENT"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "UnityGLTF",
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 25332
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgb",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 284,
+        "totalTriangleCount": 164,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 4
+      }
+    },
+    {
+      "id": "cat",
+      "sha256": "372207c7276ed5235b3c373a3dfab5dbc06e64cb821ec80569487afda5509e29",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 1,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_FEATURES_UNSUPPORTED",
+            "message": "Image contains unsupported features like non-default colorspace information, non-square pixels, or animation.",
+            "severity": 1,
+            "pointer": "/images/0"
+          },
+          {
+            "code": "ACCESSOR_INDEX_TRIANGLE_DEGENERATE",
+            "message": "Indices accessor contains 37 degenerate triangles (out of 2448).",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/indices"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "FBX2glTF v0.9.7",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 129916
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgba",
+              "primaries": "custom",
+              "transfer": "custom",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 2276,
+        "totalTriangleCount": 2448,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 4
+      }
+    },
+    {
+      "id": "ceiling-fan",
+      "sha256": "7c7849e068b592107eeb56d3e662ed50cf6658e544fc7dc3f15e1f99d20718b1",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 2,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations.",
+            "severity": 1,
+            "pointer": "/meshes/0/primitives/0/material"
+          },
+          {
+            "code": "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE",
+            "message": "Material requires a tangent space but the mesh primitive does not provide it. Runtime-generated tangent space may be non-portable across implementations.",
+            "severity": 1,
+            "pointer": "/meshes/1/primitives/0/material"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos glTF Blender I/O v4.4.56",
+        "extensionsUsed": [
+          "KHR_materials_specular"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1867728
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/2",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/3",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/4",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 11153,
+        "totalTriangleCount": 16356,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    }
+  ]
+}

@@ -677,6 +677,7 @@ class PlotRenderer {
     
     updatePlot() {
         if (!this.app.dimensionData) return;
+        if (this.app.experiences?.active) { this.app.experiences.refresh(); return; }
         
         // Clear existing plot elements
         this.mainGroup.selectAll('.item-group').remove();

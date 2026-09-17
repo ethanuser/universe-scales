@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The coarse/acquisition GPS navigation message runs at 50 bits per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "GPS C/A navigation message",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -49,6 +50,8 @@
       "qualifiers": {
         "measurement": "navigation message bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/GPS_signals",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A classic electromechanical teletype communicating at 110 bits per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Teletype Model 33",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -105,6 +109,8 @@
       "qualifiers": {
         "measurement": "serial data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Teletype_Model_33",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single nanopore reading roughly 450 DNA bases each second corresponds to about 900 bits/s of raw sequence information.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nanopore sequencing pore",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -164,6 +171,8 @@
         "derivation": "bit rate = 450 bases/s x 2 bits/base",
         "measurement": "single-pore base-calling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nanopore_sequencing",
       "source_count": 2,
       "sources": [
@@ -202,6 +211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bell 212A modems raised dial-up data rates to 1200 bit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bell 212A modem",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -220,6 +230,8 @@
       "qualifiers": {
         "measurement": "maximum modem data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bell_212A",
       "source_count": 2,
       "sources": [
@@ -258,6 +270,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A bacterial-style replication fork copying about 1000 bases per second corresponds to roughly 2000 bits/s of sequence information.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DNA replication fork",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -279,6 +292,8 @@
         "derivation": "bit rate = 1000 bases/s x 2 bits/base",
         "measurement": "genetic copying rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA_replication",
       "source_count": 2,
       "sources": [
@@ -317,6 +332,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The V.22bis standard delivered 2400 bit/s over ordinary telephone lines.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "V.22bis modem",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -335,6 +351,8 @@
       "qualifiers": {
         "measurement": "maximum modem data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/V.22",
       "source_count": 2,
       "sources": [
@@ -373,6 +391,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative Group 3 fax modem transmits at 9600 bit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Group 3 fax modem",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -391,6 +410,8 @@
       "qualifiers": {
         "measurement": "fax transmission rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fax",
       "source_count": 2,
       "sources": [
@@ -429,6 +450,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The original GSM full-rate speech codec compresses voice to 13 kbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "GSM full-rate speech codec",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -448,6 +470,8 @@
       "qualifiers": {
         "measurement": "speech codec bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Full_Rate",
       "source_count": 2,
       "sources": [
@@ -486,6 +510,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Classic 5-pin DIN MIDI runs at 31.25 kbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "MIDI DIN link",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -505,6 +530,8 @@
       "qualifiers": {
         "measurement": "serial transport bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/MIDI",
       "source_count": 2,
       "sources": [
@@ -543,6 +570,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "V.34 modems reached 33.6 kbit/s near the end of the dial-up era.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "V.34 modem",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -562,6 +590,8 @@
       "qualifiers": {
         "measurement": "maximum modem data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/V.34",
       "source_count": 2,
       "sources": [
@@ -600,6 +630,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Late dial-up modems topped out around 56 kbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dial-up modem (V.90)",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -619,6 +650,8 @@
       "qualifiers": {
         "measurement": "maximum modem data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/V.90",
       "source_count": 2,
       "sources": [
@@ -657,6 +690,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One basic-rate ISDN bearer channel carries 64 kbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "ISDN B channel",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -676,6 +710,8 @@
       "qualifiers": {
         "measurement": "channel bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Integrated_Services_Digital_Network",
       "source_count": 2,
       "sources": [
@@ -714,6 +750,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Classic Bluetooth 1.2 supported a peak payload rate of 721 kbit/s in one direction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bluetooth 1.2 payload",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -733,6 +770,8 @@
       "qualifiers": {
         "measurement": "maximum asymmetric user data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bluetooth",
       "source_count": 2,
       "sources": [
@@ -771,6 +810,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Stereo CD audio at 44.1 kHz and 16 bits per sample comes to 1.4112 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Compact Disc audio",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -790,6 +830,8 @@
       "qualifiers": {
         "measurement": "raw stereo PCM data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Compact_Disc_Digital_Audio",
       "source_count": 2,
       "sources": [
@@ -828,6 +870,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "USB low-speed mode runs at 1.5 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "USB low-speed",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -847,6 +890,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/USB",
       "source_count": 2,
       "sources": [
@@ -885,6 +930,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A North American T1 line carries 1.544 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "T1 line",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -904,6 +950,8 @@
       "qualifiers": {
         "measurement": "line bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/T-carrier",
       "source_count": 2,
       "sources": [
@@ -942,6 +990,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An E1 line in the E-carrier system carries 2.048 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "E1 line",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -961,6 +1010,8 @@
       "qualifiers": {
         "measurement": "line bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/E-carrier",
       "source_count": 2,
       "sources": [
@@ -999,6 +1050,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative first-generation ADSL line tops out around 8 Mbit/s downstream.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "ADSL connection",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1018,6 +1070,8 @@
       "qualifiers": {
         "measurement": "maximum downstream bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/ADSL",
       "source_count": 2,
       "sources": [
@@ -1056,6 +1110,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A DVD-Video stream peaks at 9.8 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DVD-Video stream",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1075,6 +1130,8 @@
       "qualifiers": {
         "measurement": "maximum combined video and audio bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DVD-Video",
       "source_count": 2,
       "sources": [
@@ -1113,6 +1170,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The original mainstream Wi-Fi generation 802.11b reached 11 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "802.11b Wi-Fi",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1132,6 +1190,8 @@
       "qualifiers": {
         "measurement": "maximum physical layer bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IEEE_802.11b-1999",
       "source_count": 2,
       "sources": [
@@ -1170,6 +1230,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "USB full-speed mode runs at 12 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "USB full-speed",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1189,6 +1250,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/USB",
       "source_count": 2,
       "sources": [
@@ -1227,6 +1290,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 1x Blu-ray Disc data stream is 54 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blu-ray Disc",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1246,6 +1310,8 @@
       "qualifiers": {
         "measurement": "maximum transfer rate at 1x speed"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blu-ray",
       "source_count": 2,
       "sources": [
@@ -1284,6 +1350,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fast Ethernet standardized 100 Mbit/s local networking.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fast Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1303,6 +1370,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fast_Ethernet",
       "source_count": 2,
       "sources": [
@@ -1341,6 +1410,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "USB 2.0 high-speed signaling reaches 480 Mbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "USB high-speed",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1360,6 +1430,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/USB",
       "source_count": 2,
       "sources": [
@@ -1398,6 +1470,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Gigabit Ethernet carries one billion bits each second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gigabit Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1417,6 +1490,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gigabit_Ethernet",
       "source_count": 2,
       "sources": [
@@ -1455,6 +1530,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "First-generation Serial ATA links signaled at 1.5 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SATA I",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1474,6 +1550,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Serial_ATA",
       "source_count": 2,
       "sources": [
@@ -1512,6 +1590,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Second-generation Serial ATA doubled the signaling rate to 3 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SATA II",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1531,6 +1610,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Serial_ATA",
       "source_count": 2,
       "sources": [
@@ -1569,6 +1650,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The first HDMI specification carried up to 4.95 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "HDMI 1.0",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1588,6 +1670,8 @@
       "qualifiers": {
         "measurement": "maximum aggregate data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/HDMI",
       "source_count": 2,
       "sources": [
@@ -1626,6 +1710,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "5GBASE-T carries 5 Gbit/s over twisted-pair cabling.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "5 Gigabit Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1645,6 +1730,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/2.5GBASE-T_and_5GBASE-T",
       "source_count": 2,
       "sources": [
@@ -1683,6 +1770,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "USB 3.0 SuperSpeed signaling runs at 5 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "USB 3.0 SuperSpeed",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1702,6 +1790,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/USB_3.0",
       "source_count": 2,
       "sources": [
@@ -1740,6 +1830,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Third-generation Serial ATA links signal at 6 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SATA III",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1759,6 +1850,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Serial_ATA",
       "source_count": 2,
       "sources": [
@@ -1797,6 +1890,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wi-Fi 5 under 802.11ac reaches a theoretical 6.93 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "802.11ac Wi-Fi",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1816,6 +1910,8 @@
       "qualifiers": {
         "measurement": "maximum physical layer bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IEEE_802.11ac-2013",
       "source_count": 2,
       "sources": [
@@ -1854,6 +1950,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "10 Gigabit Ethernet carries 10 billion bits each second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "10 Gigabit Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1873,6 +1970,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/10_Gigabit_Ethernet",
       "source_count": 2,
       "sources": [
@@ -1911,6 +2010,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "USB 3.1 Gen 2 doubles SuperSpeed to 10 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "USB 3.1 Gen 2",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1930,6 +2030,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/USB_3.0",
       "source_count": 2,
       "sources": [
@@ -1968,6 +2070,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "HDMI 2.0 increased aggregate data rate to 18 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "HDMI 2.0",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -1987,6 +2090,8 @@
       "qualifiers": {
         "measurement": "maximum aggregate data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/HDMI",
       "source_count": 2,
       "sources": [
@@ -2025,6 +2130,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "USB 3.2 Gen 2x2 reaches 20 Gbit/s by using two 10 Gbit/s lanes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "USB 3.2 Gen 2x2",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2044,6 +2150,8 @@
       "qualifiers": {
         "measurement": "signaling rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/USB_3.0",
       "source_count": 2,
       "sources": [
@@ -2082,6 +2190,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "DisplayPort 1.2 supports 21.6 Gbit/s across four lanes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DisplayPort 1.2",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2101,6 +2210,8 @@
       "qualifiers": {
         "measurement": "maximum aggregate lane rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DisplayPort",
       "source_count": 2,
       "sources": [
@@ -2139,6 +2250,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Thunderbolt 3 links carry up to 40 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thunderbolt 3",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2158,6 +2270,8 @@
       "qualifiers": {
         "measurement": "aggregate interface bandwidth"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Thunderbolt_(interface)",
       "source_count": 2,
       "sources": [
@@ -2196,6 +2310,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "IEEE 802.11be, marketed as Wi-Fi 7, is specified up to 46 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wi-Fi 7",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2215,6 +2330,8 @@
       "qualifiers": {
         "measurement": "maximum theoretical physical layer bit rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IEEE_802.11be",
       "source_count": 2,
       "sources": [
@@ -2253,6 +2370,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "HDMI 2.1 carries up to 48 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "HDMI 2.1",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2272,6 +2390,8 @@
       "qualifiers": {
         "measurement": "maximum aggregate data rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/HDMI",
       "source_count": 2,
       "sources": [
@@ -2310,6 +2430,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "DisplayPort 2.1 reaches 80 Gbit/s across four UHBR20 lanes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DisplayPort 2.1",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2329,6 +2450,8 @@
       "qualifiers": {
         "measurement": "maximum aggregate lane rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DisplayPort",
       "source_count": 2,
       "sources": [
@@ -2367,6 +2490,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "100 Gigabit Ethernet carries 100 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "100 Gigabit Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2386,6 +2510,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/100_Gigabit_Ethernet",
       "source_count": 2,
       "sources": [
@@ -2424,6 +2550,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "200 Gigabit Ethernet carries 200 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "200 Gigabit Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2443,6 +2570,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/200_Gigabit_Ethernet",
       "source_count": 2,
       "sources": [
@@ -2481,6 +2610,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single DDR4-3200 memory channel moves 25.6 GB each second, or 204.8 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DDR4-3200 memory channel",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2502,6 +2632,8 @@
         "derivation": "bit rate = 25.6 GB/s x 8 bits/byte",
         "measurement": "single-channel peak transfer bandwidth"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DDR4_SDRAM",
       "source_count": 2,
       "sources": [
@@ -2540,6 +2672,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "400 Gigabit Ethernet carries 400 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "400 Gigabit Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2559,6 +2692,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/400_Gigabit_Ethernet",
       "source_count": 2,
       "sources": [
@@ -2597,6 +2732,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single DDR5-6400 memory channel moves 51.2 GB each second, or 409.6 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DDR5-6400 memory channel",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2618,6 +2754,8 @@
         "derivation": "bit rate = 51.2 GB/s x 8 bits/byte",
         "measurement": "single-channel peak transfer bandwidth"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DDR5_SDRAM",
       "source_count": 2,
       "sources": [
@@ -2656,6 +2794,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A PCIe 5.0 x16 link carries about 63.0 GB/s one way, or roughly 504 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "PCI Express 5.0 x16",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2677,6 +2816,8 @@
         "derivation": "bit rate = 63.015 GB/s x 8 bits/byte",
         "measurement": "one-direction peak payload bandwidth"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/PCI_Express",
       "source_count": 2,
       "sources": [
@@ -2715,6 +2856,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "800 Gigabit Ethernet carries 800 Gbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "800 Gigabit Ethernet",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2734,6 +2876,8 @@
       "qualifiers": {
         "measurement": "line rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/800_Gigabit_Ethernet",
       "source_count": 2,
       "sources": [
@@ -2772,6 +2916,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A PCIe 6.0 x16 link carries about 126 GB/s one way, or just over one terabit per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "PCI Express 6.0 x16",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2793,6 +2938,8 @@
         "derivation": "bit rate = 126.031 GB/s x 8 bits/byte",
         "measurement": "one-direction peak payload bandwidth"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/PCI_Express",
       "source_count": 2,
       "sources": [
@@ -2831,6 +2978,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single HBM3 stack reaches 819 GB/s, or about 6.55 Tbit/s.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "HBM3 memory stack",
         "ingest_source": "dataset/raw/curated/information-rate.json",
@@ -2852,6 +3000,8 @@
         "derivation": "bit rate = 819 GB/s x 8 bits/byte",
         "measurement": "peak stack bandwidth"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/High_Bandwidth_Memory",
       "source_count": 2,
       "sources": [

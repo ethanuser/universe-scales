@@ -91,6 +91,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Planck Time
@@ -133,6 +136,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Particle Resonance
@@ -175,6 +181,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Electron Orbit
@@ -217,6 +226,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Molecular Vibration
@@ -259,6 +271,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Computer Clock Cycle
@@ -301,6 +316,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Light Travel Time (1 meter)
@@ -343,6 +361,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Weak Nuclear Decay
@@ -385,6 +406,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Muon Lifetime
@@ -427,6 +451,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Neuron Firing
@@ -469,6 +496,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Cinema Frame
@@ -511,6 +541,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Human Reaction Time
@@ -553,6 +586,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Blink
@@ -595,6 +631,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Musical Beat (120 BPM)
@@ -637,6 +676,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Heartbeat
@@ -679,6 +721,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Elevator Floor Travel
@@ -721,6 +766,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Breathing Cycle
@@ -763,6 +811,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Microwave Heating Time
@@ -805,6 +856,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Movie Trailer Duration
@@ -847,6 +901,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Washing Machine Cycle
@@ -889,6 +946,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Feature Film Duration
@@ -931,6 +991,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Work Shift Duration
@@ -973,6 +1036,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Universe Scales Website Creation
@@ -1015,6 +1081,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Transatlantic Crossing
@@ -1057,6 +1126,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Week
@@ -1099,6 +1171,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Gamma-Ray Burst Afterglow
@@ -1141,6 +1216,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Month
@@ -1183,6 +1261,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Decade
@@ -1225,6 +1306,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Cat Lifetime
@@ -1268,6 +1352,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Dog Lifetime
@@ -1311,6 +1398,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Human Lifetime
@@ -1354,6 +1444,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Century
@@ -1396,6 +1489,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Millennium
@@ -1438,6 +1534,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Human Civilization
@@ -1480,6 +1579,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Ice Age Cycle
@@ -1522,6 +1624,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Geological Epoch
@@ -1564,6 +1669,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Continental Drift Timescale
@@ -1606,6 +1714,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Galactic Rotation Period
@@ -1648,6 +1759,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Dinosaurs Extinction
@@ -1690,6 +1804,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Galaxy Merger Timescale
@@ -1732,6 +1849,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Main Sequence Lifetime
@@ -1774,6 +1894,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Planetary System Lifetime
@@ -1816,6 +1939,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Earth Age
@@ -1859,6 +1985,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Sun Age
@@ -1902,6 +2031,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: Universe Age
@@ -1945,6 +2077,9 @@ items:
   hook: null
   caveats: null
   content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: All Human Hours Ever
@@ -1987,6 +2122,9 @@ items:
   hook: null
   caveats: null
   content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: All Mammal Hours Ever
@@ -2029,6 +2167,9 @@ items:
   hook: null
   caveats: null
   content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: All Vertebrate Hours Ever
@@ -2071,6 +2212,9 @@ items:
   hook: null
   caveats: null
   content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: All Insect Hours Ever
@@ -2113,6 +2257,9 @@ items:
   hook: null
   caveats: null
   content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: All Plant Hours Ever
@@ -2155,6 +2302,9 @@ items:
   hook: null
   caveats: null
   content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     ingest_source: dataset/raw/legacy_yaml/duration.yaml
     legacy_item_name: All Microbial Hours Ever

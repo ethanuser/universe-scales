@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The smallest time interval that makes sense in physics, derived from fundamental constants. At this scale, gravity and quantum effects become equally important, breaking our normal understanding of space and time. This duration represents the limit where classical physics breaks down and quantum gravity effects dominate. Named after Max Planck, who introduced the concept in 1899 while studying blackbody radiation.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Planck Time",
@@ -44,6 +45,8 @@
       "id": "obs:duration:scenario-duration-planck-time",
       "name": "Planck Time",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_time",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The lifetime of extremely short-lived subatomic particles called resonances, which exist only briefly before decaying. These particles are detected indirectly through their decay products in particle accelerators. The duration represents the time between particle creation and decay, revealing the fundamental instability of certain quantum states.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Particle Resonance",
@@ -95,6 +99,8 @@
       "id": "obs:duration:scenario-duration-particle-resonance",
       "name": "Particle Resonance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Resonance_(particle_physics)",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The orbital period of an electron in the ground state of a hydrogen atom, calculated using quantum mechanics. This duration represents the time for one complete quantum orbit around the nucleus. The electron's wave function completes one full oscillation in this time, defining the fundamental quantum mechanical motion that underlies all atomic structure. Niels Bohr first calculated this in 1913, revolutionizing atomic physics.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Electron Orbit",
@@ -146,6 +153,8 @@
       "id": "obs:duration:scenario-duration-electron-orbit",
       "name": "Electron Orbit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bohr_model",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The characteristic vibrational period of covalent bonds in organic molecules, such as carbon-carbon single bonds. This duration represents the natural oscillation frequency of molecular bonds at room temperature. The vibration occurs when atoms move back and forth around their equilibrium positions, creating the fundamental molecular motion that defines chemical behavior.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Molecular Vibration",
@@ -197,6 +207,8 @@
       "id": "obs:duration:scenario-duration-molecular-vibration",
       "name": "Molecular Vibration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Molecular_vibration",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a single processor clock cycle in modern high-speed computers, typically around 1 nanosecond. This represents the fastest possible computation step in current technology. The duration determines how quickly processors can execute instructions and process data, setting fundamental limits on computational speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Computer Clock Cycle",
@@ -248,6 +261,8 @@
       "id": "obs:duration:scenario-duration-computer-clock-cycle",
       "name": "Computer Clock Cycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clock_rate",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for light to travel one meter in vacuum, representing the fundamental speed limit of the universe. This duration defines the meter in the International System of Units, making it the basis for all length measurements. Nothing can travel faster than this speed, as established by Einstein's theory of relativity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Light Travel Time (1 meter)",
@@ -299,6 +315,8 @@
       "id": "obs:duration:scenario-duration-light-travel-time-1-meter",
       "name": "Light Travel Time (1 meter)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Speed_of_light",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The characteristic timescale for weak nuclear interactions, responsible for radioactive beta decay and neutrino interactions. This duration determines how quickly unstable nuclei transform into more stable configurations. The weak force operates much slower than the strong force, explaining why radioactive decay takes measurable time rather than occurring instantly.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Weak Nuclear Decay",
@@ -350,6 +369,8 @@
       "id": "obs:duration:scenario-duration-weak-nuclear-decay",
       "name": "Weak Nuclear Decay",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Weak_interaction",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The characteristic lifetime of muons, unstable elementary particles similar to electrons but 200 times heavier. Muons are created in cosmic ray interactions and decay into electrons and neutrinos. This duration is crucial for understanding cosmic ray physics and particle accelerator experiments.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Muon Lifetime",
@@ -401,6 +423,8 @@
       "id": "obs:duration:scenario-duration-muon-lifetime",
       "name": "Muon Lifetime",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Muon",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The complete duration of a nerve action potential, from initial depolarization to full repolarization. This includes the rapid sodium influx phase and slower potassium efflux phase. The duration ensures unidirectional signal propagation by creating a refractory period that prevents backward firing. Alan Hodgkin and Andrew Huxley won the 1963 Nobel Prize for deciphering this electrical mechanism.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Neuron Firing",
@@ -452,6 +477,8 @@
       "id": "obs:duration:scenario-duration-neuron-firing",
       "name": "Neuron Firing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Action_potential",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a single frame in modern cinema, typically 1/24th of a second for film or 1/30th for video. This duration represents the persistence of vision threshold, below which individual images appear as continuous motion. The concept revolutionized entertainment and communication, enabling the birth of cinema in the late 19th century.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Cinema Frame",
@@ -503,6 +531,8 @@
       "id": "obs:duration:scenario-duration-cinema-frame",
       "name": "Cinema Frame",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Film_frame",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a typical human reaction to visual stimuli, representing the speed of neural processing from eye to brain to muscle response. This duration varies with age, training, and stimulus complexity. Professional athletes and pilots often achieve reaction times significantly faster than average.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Human Reaction Time",
@@ -554,6 +585,8 @@
       "id": "obs:duration:scenario-duration-human-reaction-time",
       "name": "Human Reaction Time",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mental_chronometry",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a voluntary human eye blink, including both closing and opening phases of the eyelid movement. This reflex serves to moisten the cornea and remove debris from the eye surface. The timing allows for adequate tear distribution while minimizing visual interruption. Leonardo da Vinci studied this mechanism in his anatomical drawings, noting its protective function.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Blink",
@@ -605,6 +639,8 @@
       "id": "obs:duration:scenario-duration-blink",
       "name": "Blink",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blinking",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a single musical beat at 120 beats per minute, a common tempo in electronic dance music. This timing creates the rhythmic foundation for most contemporary popular music. The duration represents the optimal tempo for human movement and dance, reflecting our natural biological rhythms.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Musical Beat (120 BPM)",
@@ -656,6 +693,8 @@
       "id": "obs:duration:scenario-duration-musical-beat-120-bpm",
       "name": "Musical Beat (120 BPM)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tempo",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of one complete cardiac cycle in a healthy adult at rest, including systole and diastole phases. This timing allows for proper ventricular filling and ejection of blood. The duration varies with heart rate, decreasing during exercise and increasing during rest. William Harvey first described blood circulation in 1628, overturning 1500 years of Galenic medicine.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Heartbeat",
@@ -707,6 +747,8 @@
       "id": "obs:duration:scenario-duration-heartbeat",
       "name": "Heartbeat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heart_rate",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a typical commercial elevator to travel between floors in a modern building. This duration represents the balance between speed and passenger comfort, as well as energy efficiency. Elevator technology has evolved significantly since Elisha Otis's safety brake invention in 1852.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Elevator Floor Travel",
@@ -758,6 +801,8 @@
       "id": "obs:duration:scenario-duration-elevator-floor-travel",
       "name": "Elevator Floor Travel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Elevator",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a single breath cycle in a healthy adult at rest, including both inhalation and exhalation phases. This timing varies with physical activity, emotional state, and health conditions. The breath cycle is fundamental to life and has been used in meditation practices for thousands of years.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Breathing Cycle",
@@ -809,6 +855,8 @@
       "id": "obs:duration:scenario-duration-breathing-cycle",
       "name": "Breathing Cycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Breathing",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a typical microwave oven to heat a cup of water to boiling point. This duration represents the efficiency of electromagnetic heating technology. Microwave ovens revolutionized food preparation by using radio waves to directly excite water molecules in food.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Microwave Heating Time",
@@ -860,6 +909,8 @@
       "id": "obs:duration:scenario-duration-microwave-heating-time",
       "name": "Microwave Heating Time",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Microwave_oven",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a typical movie trailer, designed to capture audience attention and generate interest in upcoming films. This timing represents the optimal length for maintaining viewer engagement while providing enough information to create anticipation. Trailers have evolved from simple announcements to sophisticated marketing tools.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Movie Trailer Duration",
@@ -911,6 +963,8 @@
       "id": "obs:duration:scenario-duration-movie-trailer-duration",
       "name": "Movie Trailer Duration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Film_trailer",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a typical washing machine cycle to clean clothes, representing the duration of modern laundry technology. This timing balances cleaning effectiveness with energy efficiency and fabric care. Washing machines revolutionized household labor, freeing up countless hours for other activities.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Washing Machine Cycle",
@@ -962,6 +1017,8 @@
       "id": "obs:duration:scenario-duration-washing-machine-cycle",
       "name": "Washing Machine Cycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Washing_machine",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a typical feature-length film, representing the standard length for cinematic storytelling. This timing allows for character development and plot progression while maintaining audience attention. The feature film format has remained remarkably consistent since the early days of cinema.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Feature Film Duration",
@@ -1013,6 +1071,8 @@
       "id": "obs:duration:scenario-duration-feature-film-duration",
       "name": "Feature Film Duration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Feature_film",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a typical work shift in many industries, representing the standard length of human labor periods. This timing balances productivity with worker health and safety. The eight-hour workday became standard through labor movements in the early 20th century.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Work Shift Duration",
@@ -1064,6 +1125,8 @@
       "id": "obs:duration:scenario-duration-work-shift-duration",
       "name": "Work Shift Duration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Working_time",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required to create this universe scales website, representing the duration of modern web development. This includes designing the interface, writing code, curating cosmic data, and creating visualizations that help people understand the vast scales of the universe. Modern web development tools allow rapid creation of interactive experiences that can educate and inspire many people.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Universe Scales Website Creation",
@@ -1115,6 +1179,8 @@
       "id": "obs:duration:scenario-duration-universe-scales-website-creation",
       "name": "Universe Scales Website Creation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://github.com/universe-scales",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a typical ocean liner to cross the Atlantic Ocean, representing transatlantic passenger travel. This duration has varied throughout history, from weeks in sailing ships to days in modern vessels. Ocean liners played a crucial role in immigration and cultural exchange.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Transatlantic Crossing",
@@ -1166,6 +1233,8 @@
       "id": "obs:duration:scenario-duration-transatlantic-crossing",
       "name": "Transatlantic Crossing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ocean_liner",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A seven-day period that aligns with natural human work and rest rhythms. This duration provides a convenient subdivision of longer time periods and fits well with lunar cycles. The week has deep religious significance in Judaism, Christianity, and Islam, originating from the biblical creation story and Sabbath traditions.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Week",
@@ -1217,6 +1287,8 @@
       "id": "obs:duration:scenario-duration-week",
       "name": "Week",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Week",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The estimated lifetime of a typical gamma-ray burst afterglow, representing the time required for the high-energy radiation to fade. Gamma-ray bursts are the most energetic explosions in the universe, releasing more energy in seconds than the Sun will in its entire lifetime. These events are associated with the deaths of massive stars.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Gamma-Ray Burst Afterglow",
@@ -1268,6 +1341,8 @@
       "id": "obs:duration:scenario-duration-gamma-ray-burst-afterglow",
       "name": "Gamma-Ray Burst Afterglow",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gamma-ray_burst",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The average length of a calendar month, about 30.44 days based on our 365.25-day year divided by 12 months. This duration accounts for variations between 28, 29, 30, and 31-day months. The month has astronomical origins in lunar cycles, with the word \"month\" deriving from \"moon.\" Roman emperors famously manipulated month lengths for political purposes.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Month",
@@ -1319,6 +1395,8 @@
       "id": "obs:duration:scenario-duration-month",
       "name": "Month",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Month",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A ten-year period that captures significant changes in technology, society, and personal development. This duration spans approximately one generation of technological progress and social evolution. Decades provide a useful framework for analyzing long-term trends and historical patterns, from the \"Roaring Twenties\" to the \"Digital Decade\" of the 2010s.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Decade",
@@ -1370,6 +1449,8 @@
       "id": "obs:duration:scenario-duration-decade",
       "name": "Decade",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Decade",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The typical lifespan of a domestic cat, representing the duration of feline companionship. Indoor cats generally live longer than outdoor cats due to reduced risks from predators, disease, and accidents. Cats have been valued companions for their independence, hunting abilities, and affectionate nature.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Cat Lifetime",
@@ -1423,6 +1505,8 @@
       "qualifiers": {
         "measurement": "representative lifespan"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cat",
       "source_count": 2,
       "sources": [
@@ -1461,6 +1545,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The typical lifespan of a domestic dog, representing the duration of canine companionship. This timescale varies by breed, with smaller dogs often living longer than larger breeds. Dogs have been humanity's companions for thousands of years, providing loyalty, protection, and emotional support throughout their relatively short but meaningful lives.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Dog Lifetime",
@@ -1476,6 +1561,8 @@
       "qualifiers": {
         "measurement": "representative lifespan"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dog",
       "source_count": 2,
       "sources": [
@@ -1514,6 +1601,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The average human lifespan in developed countries, representing the duration of a complete human life from birth to death. This timescale encompasses childhood, education, career, family, and aging. Human life expectancy has increased dramatically over the past century due to medical advances, sanitation, and nutrition improvements.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Human Lifetime",
@@ -1529,6 +1617,8 @@
       "qualifiers": {
         "measurement": "representative lifespan"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Life_expectancy",
       "source_count": 2,
       "sources": [
@@ -1567,6 +1657,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A hundred-year period that spans multiple human generations and encompasses major historical transformations. This duration represents roughly the maximum human lifespan, making it particularly meaningful for long-term planning and historical perspective. Centuries provide the fundamental unit for historical periodization, from the \"Century of Light\" (18th) to the \"American Century\" (20th).",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Century",
@@ -1580,6 +1671,8 @@
       "id": "obs:duration:scenario-duration-century",
       "name": "Century",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Century",
       "source_count": 2,
       "sources": [
@@ -1618,6 +1711,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A thousand-year period that represents major milestones in human civilization and geological time. This duration spans about 40 human generations and encompasses significant cultural, technological, and environmental changes. Millennia serve as important reference periods, from the \"First Millennium\" of Christianity to the \"Third Millennium\" of the Common Era.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Millennium",
@@ -1631,6 +1725,8 @@
       "id": "obs:duration:scenario-duration-millennium",
       "name": "Millennium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Millennium",
       "source_count": 2,
       "sources": [
@@ -1669,6 +1765,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "About 4000 years since humans developed agriculture, writing, and urban centers. This represents the time since the first civilizations emerged in Mesopotamia and Egypt. During this period, humans transitioned from hunter-gatherers to building complex societies with advanced technologies. This duration encompasses the entire span of recorded history, from the pyramids to the internet.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Human Civilization",
@@ -1682,6 +1779,8 @@
       "id": "obs:duration:scenario-duration-human-civilization",
       "name": "Human Civilization",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/History_of_the_world",
       "source_count": 2,
       "sources": [
@@ -1720,6 +1819,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The characteristic duration of glacial-interglacial cycles during the Quaternary period, averaging about 100,000 years. This cycle is driven by changes in Earth's orbit and tilt that affect solar radiation distribution. The cycle includes roughly 80,000 years of glacial advance and 20,000 years of interglacial warming. Serbian scientist Milutin Milankovitch first calculated these orbital cycles in the early 1900s.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Ice Age Cycle",
@@ -1733,6 +1833,8 @@
       "id": "obs:duration:scenario-duration-ice-age-cycle",
       "name": "Ice Age Cycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice_age",
       "source_count": 2,
       "sources": [
@@ -1771,6 +1873,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The duration of a typical geological epoch, representing major changes in Earth's history. Epochs are defined by significant geological or biological events, such as mass extinctions or climate changes. These periods help scientists understand Earth's long-term evolution.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Geological Epoch",
@@ -1784,6 +1887,8 @@
       "id": "obs:duration:scenario-duration-geological-epoch",
       "name": "Geological Epoch",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Epoch_(geology)",
       "source_count": 2,
       "sources": [
@@ -1822,6 +1927,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for continental drift to move continents significant distances, representing the slow movement of tectonic plates. This process shapes Earth's geography over millions of years, creating mountains, oceans, and changing climate patterns. Continental drift explains the distribution of fossils and geological features.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Continental Drift Timescale",
@@ -1835,6 +1941,8 @@
       "id": "obs:duration:scenario-duration-continental-drift-timescale",
       "name": "Continental Drift Timescale",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Continental_drift",
       "source_count": 2,
       "sources": [
@@ -1873,6 +1981,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a typical galaxy to complete one full rotation around its center, representing galactic dynamics and structure. This duration varies by galaxy type and size, with smaller galaxies rotating faster than larger ones. Galactic rotation shapes spiral arms and influences star formation.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Galactic Rotation Period",
@@ -1886,6 +1995,8 @@
       "id": "obs:duration:scenario-duration-galactic-rotation-period",
       "name": "Galactic Rotation Period",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Galactic_rotation_curve",
       "source_count": 2,
       "sources": [
@@ -1924,6 +2035,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "About 66 million years since the Cretaceous-Paleogene mass extinction event that eliminated non-avian dinosaurs. This extinction was likely caused by a combination of asteroid impact and volcanic activity. The event marked the end of the Mesozoic Era and enabled the rapid diversification of mammals that eventually led to human evolution. This is one of the \"Big Five\" mass extinctions in Earth's history.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Dinosaurs Extinction",
@@ -1937,6 +2049,8 @@
       "id": "obs:duration:scenario-duration-dinosaurs-extinction",
       "name": "Dinosaurs Extinction",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event",
       "source_count": 2,
       "sources": [
@@ -1975,6 +2089,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The time required for a typical galaxy to merge with another galaxy, representing the slow process of galactic collision and interaction. Galaxy mergers are common events that reshape galactic structure and trigger bursts of star formation. Our Milky Way will eventually merge with the Andromeda Galaxy.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Galaxy Merger Timescale",
@@ -1988,6 +2103,8 @@
       "id": "obs:duration:scenario-duration-galaxy-merger-timescale",
       "name": "Galaxy Merger Timescale",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Galaxy_merger",
       "source_count": 2,
       "sources": [
@@ -2026,6 +2143,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The estimated lifetime of a typical main-sequence star like our Sun, representing the duration of hydrogen fusion in stellar cores. This timescale determines how long stars can sustain nuclear reactions and maintain stable luminosity. Most stars spend the majority of their lives in this phase.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Main Sequence Lifetime",
@@ -2039,6 +2157,8 @@
       "id": "obs:duration:scenario-duration-main-sequence-lifetime",
       "name": "Main Sequence Lifetime",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Main_sequence",
       "source_count": 2,
       "sources": [
@@ -2077,6 +2197,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The estimated lifetime of a typical planetary system, representing how long planets can maintain stable orbits around their parent star. This duration depends on stellar evolution, gravitational interactions, and external perturbations. Our solar system has remained stable for over 4 billion years.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Planetary System Lifetime",
@@ -2090,6 +2211,8 @@
       "id": "obs:duration:scenario-duration-planetary-system-lifetime",
       "name": "Planetary System Lifetime",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planetary_system",
       "source_count": 2,
       "sources": [
@@ -2128,6 +2251,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "About 4.6 billion years since Earth formed from the solar nebula through accretion and differentiation. This represents the time since Earth cooled enough to form oceans and continents. Scientists determine this age by radiometric dating of meteorites and lunar samples. Clair Patterson's 1956 work on lead isotopes provided our most precise estimate of planetary age.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Earth Age",
@@ -2143,6 +2267,8 @@
       "qualifiers": {
         "measurement": "age since formation"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Age_of_Earth",
       "source_count": 2,
       "sources": [
@@ -2181,6 +2307,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "About 4.6 billion years since the Sun formed from gravitational collapse of a molecular cloud. The Sun has been steadily fusing hydrogen into helium in its core for this entire time. It's approximately halfway through its 10-billion-year main sequence lifetime, with plenty of time left for life on Earth to continue evolving. Scientists determine this using stellar evolution models and helioseismology.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Sun Age",
@@ -2196,6 +2323,8 @@
       "qualifiers": {
         "measurement": "age since formation"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2234,6 +2363,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "About 13.8 billion years since the Big Bang, calculated from the current expansion rate and cosmic microwave background measurements. This represents the age of spacetime itself and all matter within it. Scientists measure this by studying the cosmic microwave background radiation, the leftover heat from the universe's birth. This is our most precise estimate of cosmic time.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "Universe Age",
@@ -2249,6 +2379,8 @@
       "qualifiers": {
         "measurement": "age of the observable universe"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Age_of_the_universe",
       "source_count": 2,
       "sources": [
@@ -2287,6 +2419,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The total conscious time spent by every human who has ever lived is large enough to feel geological, yet still tiny beside the biosphere that carried humans the whole time. It is a useful reminder that human history is only one thin slice of the planet's much longer clock.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "All Human Hours Ever",
@@ -2300,6 +2433,8 @@
       "id": "obs:duration:scenario-duration-all-human-hours-ever",
       "name": "All Human Hours Ever",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/World_population",
       "source_count": 2,
       "sources": [
@@ -2338,6 +2473,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mammals occupy a surprisingly modest slice of deep time compared with insects or microbes, but their total accumulated life still jumps far beyond the human story. This is where a clade-wide total starts to feel ecological rather than historical.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "All Mammal Hours Ever",
@@ -2351,6 +2487,8 @@
       "id": "obs:duration:scenario-duration-all-mammal-hours-ever",
       "name": "All Mammal Hours Ever",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mammal",
       "source_count": 2,
       "sources": [
@@ -2389,6 +2527,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Vertebrates are the animal branch people notice first, but most of their total lifetime is not in the big land animals. Fish and other small, numerous species quietly dominate the count, which is why this total is much larger than intuition suggests.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "All Vertebrate Hours Ever",
@@ -2402,6 +2541,8 @@
       "id": "obs:duration:scenario-duration-all-vertebrate-hours-ever",
       "name": "All Vertebrate Hours Ever",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vertebrate",
       "source_count": 2,
       "sources": [
@@ -2440,6 +2581,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Insects are where the tally starts to feel almost absurd. Their bodies are small and their generations are short, so abundance and turnover do most of the work once you start adding up everything that has ever lived.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "All Insect Hours Ever",
@@ -2453,6 +2595,8 @@
       "id": "obs:duration:scenario-duration-all-insect-hours-ever",
       "name": "All Insect Hours Ever",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Insect",
       "source_count": 2,
       "sources": [
@@ -2491,6 +2635,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Plants stretch time differently from animals because they are long-lived, widespread, and often present as standing biomass for years at a stretch. Their accumulated hours pile up across seasons, forests, and whole landscapes rather than across brief lifetimes.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "All Plant Hours Ever",
@@ -2504,6 +2649,8 @@
       "id": "obs:duration:scenario-duration-all-plant-hours-ever",
       "name": "All Plant Hours Ever",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Plant",
       "source_count": 2,
       "sources": [
@@ -2542,6 +2689,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Microbes dominate life by both count and turnover, so even tiny lifetimes accumulate into something immense. This is the point where the biosphere stops feeling like a collection of organisms and starts feeling like a planetary process.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/duration.yaml",
         "legacy_item_name": "All Microbial Hours Ever",
@@ -2555,6 +2703,8 @@
       "id": "obs:duration:scenario-duration-all-microbial-hours-ever",
       "name": "All Microbial Hours Ever",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Microorganism",
       "source_count": 2,
       "sources": [

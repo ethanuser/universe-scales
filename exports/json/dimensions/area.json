@@ -26,11 +26,12 @@
   "items": [
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "This is the target size implied by the proton's [charge radius](https://en.wikipedia.org/wiki/Charge_radius). In scattering experiments, an area this small is still enough to show that a proton is not a hard bead but a quantum object with internal structure.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This is the target size implied by the proton's [charge radius](https://en.wikipedia.org/wiki/Charge_radius). In scattering experiments, an area this small is still enough to show that a proton is not a hard bead but a quantum object with internal structure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Proton cross-section",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -48,6 +49,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Proton",
       "source_count": 2,
       "sources": [
@@ -81,11 +84,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A hydrogen atom covers an area almost ten orders of magnitude larger than a proton's cross-section. That leap comes from the [Bohr radius](https://en.wikipedia.org/wiki/Bohr_radius), a vivid reminder that atoms are mostly empty space whose size is set by quantum rules.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A hydrogen atom covers an area almost ten orders of magnitude larger than a proton's cross-section. That leap comes from the [Bohr radius](https://en.wikipedia.org/wiki/Bohr_radius), a vivid reminder that atoms are mostly empty space whose size is set by quantum rules.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hydrogen atom cross-section",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -103,6 +107,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen_atom",
       "source_count": 2,
       "sources": [
@@ -136,11 +142,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "This is roughly the patch of space a single water molecule presents in a collision. At this scale, area begins to control diffusion, viscosity, and the hydrogen-bond traffic that gives liquid water so many of its strange bulk properties.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This is roughly the patch of space a single water molecule presents in a collision. At this scale, area begins to control diffusion, viscosity, and the hydrogen-bond traffic that gives liquid water so many of its strange bulk properties.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water molecule cross-section",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -158,6 +165,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -191,11 +200,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "The [DNA double helix](https://en.wikipedia.org/wiki/Nucleic_acid_double_helix) keeps an almost constant width across life. That narrow area is wide enough for proteins to read its grooves, yet compact enough for meters of DNA to be folded into a cell nucleus.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The [DNA double helix](https://en.wikipedia.org/wiki/Nucleic_acid_double_helix) keeps an almost constant width across life. That narrow area is wide enough for proteins to read its grooves, yet compact enough for meters of DNA to be folded into a cell nucleus.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DNA helix cross-section",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -213,6 +223,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA",
       "source_count": 2,
       "sources": [
@@ -246,11 +258,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A coronavirus particle is tiny enough to drift with air currents yet large enough to carry a forest of spike proteins. Its cross-section sits in the awkward middle where biology is no longer molecular but not yet cellular.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A coronavirus particle is tiny enough to drift with air currents yet large enough to carry a forest of spike proteins. Its cross-section sits in the awkward middle where biology is no longer molecular but not yet cellular.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SARS-CoV-2 virion cross-section",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -268,6 +281,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/SARS-CoV-2",
       "source_count": 2,
       "sources": [
@@ -301,11 +316,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "For a virus, surface area is where the action is: attachment, entry, and escape all happen on the shell. On influenza, this tiny membrane hosts the proteins that bind to host cells and later help new virions break free.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "For a virus, surface area is where the action is: attachment, entry, and escape all happen on the shell. On influenza, this tiny membrane hosts the proteins that bind to host cells and later help new virions break free.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Influenza virion surface area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -323,6 +339,8 @@
         "derivation": "4*pi*r^2",
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Influenza",
       "source_count": 2,
       "sources": [
@@ -356,11 +374,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A red blood cell has far more membrane area than its outline suggests because of its [biconcave](https://en.wikipedia.org/wiki/Red_blood_cell#Human_red_blood_cells) shape. That extra area helps it exchange gases quickly while still squeezing through capillaries narrower than the cell itself.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A red blood cell has far more membrane area than its outline suggests because of its [biconcave](https://en.wikipedia.org/wiki/Red_blood_cell#Human_red_blood_cells) shape. That extra area helps it exchange gases quickly while still squeezing through capillaries narrower than the cell itself.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Red blood cell surface area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -376,6 +395,8 @@
       "qualifiers": {
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
       "source_count": 2,
       "sources": [
@@ -409,11 +430,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A coarse salt grain is already enormous compared with molecules, yet still small enough that texture matters on the tongue. That is part of why flaky and fine salts can feel different even when the chemistry is identical.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A coarse salt grain is already enormous compared with molecules, yet still small enough that texture matters on the tongue. That is part of why flaky and fine salts can feel different even when the chemistry is identical.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Grain of salt cross-section",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -431,6 +453,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Salt",
       "source_count": 2,
       "sources": [
@@ -464,11 +488,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A sand grain looks inert, but its surface is where weathering, dissolution, and chemical exchange happen. Multiply this tiny area across a beach or dune field and sand becomes an enormous reactive interface rather than a passive pile of grains.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A sand grain looks inert, but its surface is where weathering, dissolution, and chemical exchange happen. Multiply this tiny area across a beach or dune field and sand becomes an enormous reactive interface rather than a passive pile of grains.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Grain of sand surface area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -486,6 +511,8 @@
         "derivation": "4*pi*r^2",
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sand",
       "source_count": 2,
       "sources": [
@@ -519,11 +546,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A stamp is a good hand-scale anchor: larger than a fingernail, smaller than a card, and easy to picture instantly. It marks the point where area stops feeling microscopic and starts feeling graspable.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A stamp is a good hand-scale anchor: larger than a fingernail, smaller than a card, and easy to picture instantly. It marks the point where area stops feeling microscopic and starts feeling graspable.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Postage stamp face area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -539,6 +567,8 @@
       "qualifiers": {
         "measurement": "rectangular face area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Postage_stamp",
       "source_count": 2,
       "sources": [
@@ -572,11 +602,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A payment card is one of the most standardized rectangles in daily life. Its area is so familiar that it makes a surprisingly good reference for screens, labels, badges, and other palm-sized surfaces.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A payment card is one of the most standardized rectangles in daily life. Its area is so familiar that it makes a surprisingly good reference for screens, labels, badges, and other palm-sized surfaces.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Credit card face area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -592,6 +623,8 @@
       "qualifiers": {
         "measurement": "rectangular face area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Payment_card_number",
       "source_count": 2,
       "sources": [
@@ -625,11 +658,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A phone display feels small in the hand, but its lit area is already approaching that of a small sheet of paper. The diagonal size people quote hides how quickly usable area grows as screens become taller and wider.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A phone display feels small in the hand, but its lit area is already approaching that of a small sheet of paper. The diagonal size people quote hides how quickly usable area grows as screens become taller and wider.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smartphone screen area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -645,6 +679,8 @@
       "qualifiers": {
         "measurement": "display area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smartphone",
       "source_count": 2,
       "sources": [
@@ -678,11 +714,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A5 is notebook-sized: intimate enough for a journal, large enough for diagrams and serious notes. It also sits neatly in the ISO paper system, where two A5 sheets make one A4.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A5 is notebook-sized: intimate enough for a journal, large enough for diagrams and serious notes. It also sits neatly in the ISO paper system, where two A5 sheets make one A4.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A5 sheet area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -698,6 +735,8 @@
       "qualifiers": {
         "measurement": "sheet area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paper_size",
       "source_count": 2,
       "sources": [
@@ -731,11 +770,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A laptop display only looks modest until you compare its active area with a phone's. That jump in surface helps explain why moving from mobile to laptop work feels like getting a real desk back.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A laptop display only looks modest until you compare its active area with a phone's. That jump in surface helps explain why moving from mobile to laptop work feels like getting a real desk back.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Laptop screen area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -751,6 +791,8 @@
       "qualifiers": {
         "measurement": "display area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laptop",
       "source_count": 2,
       "sources": [
@@ -784,11 +826,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A4 is the quiet default of offices, printers, forms, and handouts across much of the world. People rarely think of it in square meters, but its area is one of the best everyday anchors on this scale.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A4 is the quiet default of offices, printers, forms, and handouts across much of the world. People rarely think of it in square meters, but its area is one of the best everyday anchors on this scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A4 sheet area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -804,6 +847,8 @@
       "qualifiers": {
         "measurement": "sheet area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paper_size",
       "source_count": 2,
       "sources": [
@@ -837,11 +882,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "An adult human carries a total skin area larger than most people guess. That broad surface is what makes sweating, touch, heat loss, and barrier protection body-scale processes rather than merely local ones.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An adult human carries a total skin area larger than most people guess. That broad surface is what makes sweating, touch, heat loss, and barrier protection body-scale processes rather than merely local ones.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human skin area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -857,6 +903,8 @@
       "qualifiers": {
         "measurement": "skin surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_skin",
       "source_count": 2,
       "sources": [
@@ -890,11 +938,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A parking space is a revealing unit of built land use: a patch of city large enough to store one car while it does nothing. Once you start noticing them, paved landscapes begin to look like area spent on idle machines.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A parking space is a revealing unit of built land use: a patch of city large enough to store one car while it does nothing. Once you start noticing them, paved landscapes begin to look like area spent on idle machines.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Parking space",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -910,6 +959,8 @@
       "qualifiers": {
         "measurement": "footprint area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Parking_space",
       "source_count": 2,
       "sources": [
@@ -943,11 +994,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A tennis court is small on a map but large in motion. Its area is just enough that shot placement, recovery time, and court coverage become the geometry of the sport.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tennis court is small on a map but large in motion. Its area is just enough that shot placement, recovery time, and court coverage become the geometry of the sport.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tennis court",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -963,6 +1015,8 @@
       "qualifiers": {
         "measurement": "court area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tennis_court",
       "source_count": 2,
       "sources": [
@@ -996,11 +1050,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A basketball court packs a whole game into a surface small enough to stay visually legible from the stands. That compact area is part of why basketball feels dense, quick, and spatially crowded.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A basketball court packs a whole game into a surface small enough to stay visually legible from the stands. That compact area is part of why basketball feels dense, quick, and spatially crowded.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Basketball court",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1016,6 +1071,8 @@
       "qualifiers": {
         "measurement": "court area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Basketball_court",
       "source_count": 2,
       "sources": [
@@ -1049,11 +1106,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A football field is one of the most common mental rulers for large areas in the United States. Even one field already spans thousands of square meters, which is why people reach for it when a number starts to get hard to picture.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A football field is one of the most common mental rulers for large areas in the United States. Even one field already spans thousands of square meters, which is why people reach for it when a number starts to get hard to picture.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "American football field",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1069,6 +1127,8 @@
       "qualifiers": {
         "measurement": "field area including end zones"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/American_football_field",
       "source_count": 2,
       "sources": [
@@ -1102,11 +1162,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A soccer pitch is large enough that open space becomes a strategic resource in its own right. Compared with indoor courts, the jump in area turns fitness, shape, and passing lanes into core features of the game.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A soccer pitch is large enough that open space becomes a strategic resource in its own right. Compared with indoor courts, the jump in area turns fitness, shape, and passing lanes into core features of the game.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Soccer pitch",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1122,6 +1183,8 @@
       "qualifiers": {
         "measurement": "pitch area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Football_pitch",
       "source_count": 2,
       "sources": [
@@ -1155,11 +1218,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Central Park is not just a big park; it is a designed landscape inserted into one of the densest urban grids on Earth. On an area scale it already feels less like a park and more like a district of Manhattan set aside for trees, water, and paths.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Central Park is not just a big park; it is a designed landscape inserted into one of the densest urban grids on Earth. On an area scale it already feels less like a park and more like a district of Manhattan set aside for trees, water, and paths.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Central Park",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1175,6 +1239,8 @@
       "qualifiers": {
         "measurement": "land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Central_Park",
       "source_count": 2,
       "sources": [
@@ -1208,11 +1274,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Manhattan feels enormous culturally, but its land area is surprisingly compact. That mismatch between symbolic size and physical size is part of what makes the island such a useful anchor for urban scale.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Manhattan feels enormous culturally, but its land area is surprisingly compact. That mismatch between symbolic size and physical size is part of what makes the island such a useful anchor for urban scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Manhattan",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1228,6 +1295,8 @@
       "qualifiers": {
         "measurement": "land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Manhattan",
       "source_count": 2,
       "sources": [
@@ -1261,11 +1330,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Paris proper is smaller in area than many people expect from a world city. Its influence comes not from sprawl but from density, history, and the way so much culture is packed into a relatively tight footprint.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Paris proper is smaller in area than many people expect from a world city. Its influence comes not from sprawl but from density, history, and the way so much culture is packed into a relatively tight footprint.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Paris",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1281,6 +1351,8 @@
       "qualifiers": {
         "measurement": "commune land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paris",
       "source_count": 2,
       "sources": [
@@ -1314,11 +1386,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "A lake surface is a different kind of area from land: it is a boundary between water and sky rather than a place to stand. At Tahoe's scale, that interface is already large enough to shape local weather, ecology, and evaporation.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A lake surface is a different kind of area from land: it is a boundary between water and sky rather than a place to stand. At Tahoe's scale, that interface is already large enough to shape local weather, ecology, and evaporation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lake Tahoe surface",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1334,6 +1407,8 @@
       "qualifiers": {
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lake_Tahoe",
       "source_count": 2,
       "sources": [
@@ -1367,11 +1442,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "New York City is much larger than its iconic core. Once all five boroughs are counted together, the city shifts from island-sized intuition into something much closer to a full region.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "New York City is much larger than its iconic core. Once all five boroughs are counted together, the city shifts from island-sized intuition into something much closer to a full region.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "New York City",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1387,6 +1463,8 @@
       "qualifiers": {
         "measurement": "land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/New_York_City",
       "source_count": 2,
       "sources": [
@@ -1420,11 +1498,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Rhode Island is the clich\u00e9 example of a small state, yet even the smallest U.S. state is far beyond park or city scale. It reminds you how quickly administrative geography becomes physically large.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rhode Island is the clich\u00e9 example of a small state, yet even the smallest U.S. state is far beyond park or city scale. It reminds you how quickly administrative geography becomes physically large.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rhode Island",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1440,6 +1519,8 @@
       "qualifiers": {
         "measurement": "land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rhode_Island",
       "source_count": 2,
       "sources": [
@@ -1473,11 +1554,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "The [Caspian Sea](https://en.wikipedia.org/wiki/Caspian_Sea) behaves more like an inland geographic world than like a familiar lake. Its surface is large enough that coastlines, fisheries, and climate effects unfold on the scale of nations.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The [Caspian Sea](https://en.wikipedia.org/wiki/Caspian_Sea) behaves more like an inland geographic world than like a familiar lake. Its surface is large enough that coastlines, fisheries, and climate effects unfold on the scale of nations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Caspian Sea surface",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1493,6 +1575,8 @@
       "qualifiers": {
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Caspian_Sea",
       "source_count": 2,
       "sources": [
@@ -1526,11 +1610,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Texas is large enough that weather systems, ecosystems, and travel times vary dramatically within one state. At this scale, area stops feeling like a parcel and starts feeling like a world with internal regions.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Texas is large enough that weather systems, ecosystems, and travel times vary dramatically within one state. At this scale, area stops feeling like a parcel and starts feeling like a world with internal regions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Texas",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1546,6 +1631,8 @@
       "qualifiers": {
         "measurement": "land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Texas",
       "source_count": 2,
       "sources": [
@@ -1579,11 +1666,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Greenland is famous for looking absurdly huge on some map projections, but even after correcting for that distortion it is still enormous. Much of that area is ice sheet, which makes the island feel more like a frozen cap than a conventional landmass.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Greenland is famous for looking absurdly huge on some map projections, but even after correcting for that distortion it is still enormous. Much of that area is ice sheet, which makes the island feel more like a frozen cap than a conventional landmass.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Greenland",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1599,6 +1687,8 @@
       "qualifiers": {
         "measurement": "land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Greenland",
       "source_count": 2,
       "sources": [
@@ -1632,11 +1722,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Australia sits near the threshold where 'island' stops feeling like the right word and 'continent' begins to. Its area is large enough to contain deserts, reefs, rainforests, and journeys that feel more intercontinental than local.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Australia sits near the threshold where 'island' stops feeling like the right word and 'continent' begins to. Its area is large enough to contain deserts, reefs, rainforests, and journeys that feel more intercontinental than local.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Australia",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1652,6 +1743,8 @@
       "qualifiers": {
         "measurement": "land area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Australia",
       "source_count": 2,
       "sources": [
@@ -1685,11 +1778,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "The Moon's entire surface is only a bit larger than Africa's. That comparison makes the lunar world feel less like a distant dot and more like a place with continental-scale landscapes.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Moon's entire surface is only a bit larger than Africa's. That comparison makes the lunar world feel less like a distant dot and more like a place with continental-scale landscapes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon surface area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1707,6 +1801,8 @@
         "derivation": "4*pi*r^2",
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moon",
       "source_count": 2,
       "sources": [
@@ -1740,11 +1836,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Earth's surface sounds abstract until you remember that most of it is ocean. The total is planetary, but the land humans actually occupy is only a comparatively thin fraction of the whole shell.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth's surface sounds abstract until you remember that most of it is ocean. The total is planetary, but the land humans actually occupy is only a comparatively thin fraction of the whole shell.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth surface area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1760,6 +1857,8 @@
       "qualifiers": {
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -1793,11 +1892,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "Jupiter has no solid surface in the everyday sense, so this refers to the visible cloud-top envelope. It is a useful reminder that area scales with radius squared: even a modest increase in size produces a huge increase in surface.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter has no solid surface in the everyday sense, so this refers to the visible cloud-top envelope. It is a useful reminder that area scales with radius squared: even a modest increase in size produces a huge increase in surface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jupiter surface area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1815,6 +1915,8 @@
         "derivation": "4*pi*r^2",
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -1848,11 +1950,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "The Sun's visible surface is vast enough to hold roughly twelve thousand Earths' worth of area. This is the radiant skin from which sunlight escapes, so stellar physics often looks less like studying a point and more like studying weather on a sphere.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun's visible surface is vast enough to hold roughly twelve thousand Earths' worth of area. This is the radiant skin from which sunlight escapes, so stellar physics often looks less like studying a point and more like studying weather on a sphere.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun surface area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1870,6 +1973,8 @@
         "derivation": "4*pi*r^2",
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -1903,11 +2008,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "This is the area of a disk reaching out to Neptune's orbit, not a filled solid plate. Most of that region is emptiness, which is exactly why the Solar System can be both enormous and sparse at the same time.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This is the area of a disk reaching out to Neptune's orbit, not a filled solid plate. Most of that region is emptiness, which is exactly why the Solar System can be both enormous and sparse at the same time.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Solar system disk to Neptune",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1925,6 +2031,8 @@
         "derivation": "pi*r^2",
         "measurement": "orbital disk area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neptune",
       "source_count": 2,
       "sources": [
@@ -1958,11 +2066,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "The Milky Way's disk spreads stars, gas, and dust across an immense plane, yet the stars themselves occupy very little of it. A galaxy at this scale is less like a crowded city and more like a thin luminous ecosystem.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Milky Way's disk spreads stars, gas, and dust across an immense plane, yet the stars themselves occupy very little of it. A galaxy at this scale is less like a crowded city and more like a thin luminous ecosystem.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milky Way stellar disk area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -1980,6 +2089,8 @@
         "derivation": "pi*r^2",
         "measurement": "disk area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -2013,11 +2124,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "This cross-section spans the gravitational neighborhood that contains the Milky Way, Andromeda, and dozens of smaller galaxies. At this scale, a full galaxy is no longer the landscape; it is one landmark inside a region whose emptiness is measured in megaparsecs.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This cross-section spans the gravitational neighborhood that contains the Milky Way, Andromeda, and dozens of smaller galaxies. At this scale, a full galaxy is no longer the landscape; it is one landmark inside a region whose emptiness is measured in megaparsecs.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Local Group cross-sectional area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -2035,6 +2147,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Local_Group",
       "source_count": 2,
       "sources": [
@@ -2068,11 +2182,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "By the time you reach supercluster scale, even rich galaxy clusters stop feeling like worlds and start feeling like nodes in a loose web. This area is the footprint of large-scale structure: the kind of scale on which the Milky Way, Andromeda, and Virgo cluster all count as local detail rather than the main event.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "By the time you reach supercluster scale, even rich galaxy clusters stop feeling like worlds and start feeling like nodes in a loose web. This area is the footprint of large-scale structure: the kind of scale on which the Milky Way, Andromeda, and Virgo cluster all count as local detail rather than the main event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Virgo Supercluster cross-sectional area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -2090,6 +2205,8 @@
         "derivation": "pi*r^2",
         "measurement": "cross-sectional area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
       "source_count": 2,
       "sources": [
@@ -2123,11 +2240,12 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
+      "content_status": "curated",
       "description": "This is not a physical wall but the area of our cosmic horizon, set by the fact that light has had only a finite time to reach us. The radius is about $46$ billion light-years, so the oldest [cosmic microwave background](https://en.wikipedia.org/wiki/Cosmic_microwave_background) light and every galaxy we can ever map both live inside the same observable shell. On this scale, area becomes a statement about access to information, not just geometry.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This is not a physical wall but the area of our cosmic horizon, set by the fact that light has had only a finite time to reach us. The radius is about $46$ billion light-years, so the oldest [cosmic microwave background](https://en.wikipedia.org/wiki/Cosmic_microwave_background) light and every galaxy we can ever map both live inside the same observable shell. On this scale, area becomes a statement about access to information, not just geometry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Observable universe boundary area",
         "ingest_source": "dataset/raw/curated/area.json",
@@ -2145,6 +2263,8 @@
         "derivation": "4*pi*r^2",
         "measurement": "surface area"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Universe",
       "source_count": 2,
       "sources": [

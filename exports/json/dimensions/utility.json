@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One second of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One second of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -48,6 +49,8 @@
       "id": "obs:utility:scenario-utility-one-second-of-perfect-health",
       "name": "One second of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One minute of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One minute of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -103,6 +107,8 @@
       "id": "obs:utility:scenario-utility-one-minute-of-perfect-health",
       "name": "One minute of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One hour of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One hour of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -158,6 +165,8 @@
       "id": "obs:utility:scenario-utility-one-hour-of-perfect-health",
       "name": "One hour of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Even a single avoided sick day has a measurable utility value.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Avoiding one day of influenza symptoms",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -215,6 +225,8 @@
       "qualifiers": {
         "assumption": "one half-quality day avoided"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Influenza",
       "source_count": 2,
       "sources": [
@@ -253,6 +265,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One day of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One day of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -270,6 +283,8 @@
       "id": "obs:utility:scenario-utility-one-day-of-perfect-health",
       "name": "One day of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -308,6 +323,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Short intense suffering converts into surprisingly visible healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Avoiding one week of migraine-level pain",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -327,6 +343,8 @@
       "qualifiers": {
         "assumption": "0.7 utility loss for 7 days"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Migraine",
       "source_count": 2,
       "sources": [
@@ -365,6 +383,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One week of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One week of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -382,6 +401,8 @@
       "id": "obs:utility:scenario-utility-one-week-of-perfect-health",
       "name": "One week of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -420,6 +441,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One month of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One month of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -437,6 +459,8 @@
       "id": "obs:utility:scenario-utility-one-month-of-perfect-health",
       "name": "One month of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -475,6 +499,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cataract surgery is a compact, intuitive positive-utility intervention.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cataract surgery first-year benefit",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -491,6 +516,8 @@
       "id": "obs:utility:scenario-utility-cataract-surgery-first-year-benefit",
       "name": "Cataract surgery first-year benefit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cataract_surgery",
       "source_count": 2,
       "sources": [
@@ -529,6 +556,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Severe treatment years sit low on the utility scale without being near zero.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year of severe cancer treatment",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -548,6 +576,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.30"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cancer",
       "source_count": 2,
       "sources": [
@@ -586,6 +616,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A half-quality year is a good midscale utility benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with paraplegia",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -605,6 +636,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.50"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paraplegia",
       "source_count": 2,
       "sources": [
@@ -643,6 +676,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Chronic treatment burden can cut a healthy year nearly in half.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year on hemodialysis",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -662,6 +696,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.56"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hemodialysis",
       "source_count": 2,
       "sources": [
@@ -700,6 +736,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mental health states belong naturally on the utility scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with moderate depression",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -719,6 +756,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.60"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Major_depressive_disorder",
       "source_count": 2,
       "sources": [
@@ -757,6 +796,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sensory loss makes a good middle-scale utility example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with blindness",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -776,6 +816,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.70"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blindness",
       "source_count": 2,
       "sources": [
@@ -814,6 +856,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mild chronic symptoms leave most utility intact.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with mild chronic pain",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -833,6 +876,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.80"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chronic_pain",
       "source_count": 2,
       "sources": [
@@ -871,6 +916,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common near-full-health chronic-state benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year at 90 percent quality",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -890,6 +936,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.90"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -928,6 +976,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A year at very high quality is slightly below the full-health anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year at 95 percent quality",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -947,6 +996,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.95"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -985,6 +1036,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Large durable function gains can exceed one full healthy-year equivalent.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hip replacement five-year benefit",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -1001,6 +1053,8 @@
       "id": "obs:utility:scenario-utility-hip-replacement-five-year-benefit",
       "name": "Hip replacement five-year benefit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hip_replacement",
       "source_count": 2,
       "sources": [
@@ -1039,6 +1093,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -1056,6 +1111,8 @@
       "id": "obs:utility:scenario-utility-one-year-of-perfect-health",
       "name": "One year of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -1094,6 +1151,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Preventive choices can sit in the multi-QALY range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smoking cessation at age 40",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -1110,6 +1168,8 @@
       "id": "obs:utility:scenario-utility-smoking-cessation-at-age-40",
       "name": "Smoking cessation at age 40",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smoking_cessation",
       "source_count": 2,
       "sources": [
@@ -1148,6 +1208,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Some interventions produce several healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kidney transplant five-year benefit",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -1164,6 +1225,8 @@
       "id": "obs:utility:scenario-utility-kidney-transplant-five-year-benefit",
       "name": "Kidney transplant five-year benefit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kidney_transplantation",
       "source_count": 2,
       "sources": [
@@ -1202,6 +1265,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Long-running disease control can generate civilization-scale utility per person.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Antiretroviral therapy over a decade",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -1218,6 +1282,8 @@
       "id": "obs:utility:scenario-utility-antiretroviral-therapy-over-a-decade",
       "name": "Antiretroviral therapy over a decade",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Antiretroviral_therapy",
       "source_count": 2,
       "sources": [
@@ -1256,6 +1322,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One decade of perfect health expressed in full-healthy-year equivalents.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One decade of perfect health",
         "ingest_source": "dataset/raw/curated/utility.json",
@@ -1273,6 +1340,8 @@
       "id": "obs:utility:scenario-utility-one-decade-of-perfect-health",
       "name": "One decade of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [

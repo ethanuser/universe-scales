@@ -47,6 +47,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One person-second of focused attention
     ingest_source: dataset/raw/curated/attention.json
@@ -92,6 +95,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One person-minute of focused attention
     ingest_source: dataset/raw/curated/attention.json
@@ -137,6 +143,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One person-hour of focused work
     ingest_source: dataset/raw/curated/attention.json
@@ -182,6 +191,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One eight-hour workday
     ingest_source: dataset/raw/curated/attention.json
@@ -229,6 +241,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A classroom period
     ingest_source: dataset/raw/curated/attention.json
@@ -275,6 +290,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A 200-seat lecture hall for one hour
     ingest_source: dataset/raw/curated/attention.json
@@ -321,6 +339,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A sold-out movie theater for a two-hour film
     ingest_source: dataset/raw/curated/attention.json
@@ -367,6 +388,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One person-year of continuous attention
     ingest_source: dataset/raw/curated/attention.json
@@ -413,6 +437,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A million readers for one minute
     ingest_source: dataset/raw/curated/attention.json
@@ -459,6 +486,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A Taylor Swift stadium show
     ingest_source: dataset/raw/curated/attention.json
@@ -505,6 +535,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A Twitch stream with 100,000 concurrent viewers for 4 hours
     ingest_source: dataset/raw/curated/attention.json
@@ -551,6 +584,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A podcast episode with 1 million listens at 45 minutes each
     ingest_source: dataset/raw/curated/attention.json
@@ -597,6 +633,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A viral clip watched by 100 million people for 30 seconds
     ingest_source: dataset/raw/curated/attention.json
@@ -643,6 +682,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A TED talk with 10 million full views
     ingest_source: dataset/raw/curated/attention.json
@@ -689,6 +731,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A MrBeast-scale video watched by 100 million viewers for 15 minutes
     ingest_source: dataset/raw/curated/attention.json
@@ -735,6 +780,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A bestselling book read by 10 million people for 8 hours each
     ingest_source: dataset/raw/curated/attention.json
@@ -781,6 +829,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A blockbuster movie seen by 50 million viewers for 2 hours
     ingest_source: dataset/raw/curated/attention.json
@@ -827,6 +878,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A presidential debate watched by 70 million viewers for 90 minutes
     ingest_source: dataset/raw/curated/attention.json
@@ -873,6 +927,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A Super Bowl broadcast
     ingest_source: dataset/raw/curated/attention.json
@@ -920,6 +977,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A FIFA World Cup final broadcast
     ingest_source: dataset/raw/curated/attention.json
@@ -967,6 +1027,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One day of YouTube watch time
     ingest_source: dataset/raw/curated/attention.json
@@ -1013,6 +1076,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One day of worldwide television viewing
     ingest_source: dataset/raw/curated/attention.json

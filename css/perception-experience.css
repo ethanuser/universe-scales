@@ -1,0 +1,117 @@
+/* Load after experiences.css. The controller owns this active-dimension attribute. */
+body[data-experience-dimension='brightness'] {
+    color-scheme: dark;
+    --bg-primary: #000;
+    --bg-secondary: #080808;
+    --text-primary: #bdbdbd;
+    --text-secondary: #999;
+    --border-color: #303030;
+    --accent-color: #aaa;
+    --hover-bg: #181818;
+    background: #000;
+    color: var(--text-primary);
+}
+
+body[data-experience-dimension='brightness'] .experience-visual,
+body[data-experience-dimension='brightness'] .experience-stage,
+body[data-experience-dimension='brightness'] .experience-detail {
+    background: #000;
+}
+
+body[data-experience-dimension='brightness'] .view-switch [aria-pressed='true'] {
+    background: #242424;
+    color: #c4c4c4;
+    border-color: #777;
+}
+
+.experience-stage.perception-stage {
+    min-height: 0;
+    overflow: hidden;
+}
+
+.perception-stage.perception-stage--angle > text {
+    font-size: 16px;
+}
+
+.perception-settings {
+    align-items: start;
+}
+
+.perception-stage .perception-photo {
+    /* No transition: navigation must not flash through full white. */
+    pointer-events: none;
+}
+
+.perception-stage .object-label {
+    font-size: 15px;
+}
+
+.perception-stage .perception-value {
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+}
+
+.perception-stage .perception-status,
+.perception-stage .perception-unavailable {
+    font-size: 12px;
+    fill: var(--text-secondary);
+}
+
+.perception-settings .experience-slider__label {
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.perception-settings .experience-slider input {
+    min-height: 44px;
+}
+
+.perception-calibration {
+    min-width: 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+}
+
+.perception-calibration summary {
+    cursor: pointer;
+    min-height: 44px;
+    padding: 10px 0;
+}
+
+.perception-calibration .experience-field {
+    margin: 8px 0;
+    min-width: 0;
+    flex: 1 1 150px;
+}
+
+.perception-calibration input,
+.perception-calibration select {
+    min-height: 44px;
+    max-width: 100%;
+}
+
+.perception-calibration .experience-ruler {
+    box-sizing: border-box;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.perception-validation {
+    color: var(--text-primary);
+}
+
+.perception-calibration :focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .perception-settings {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .perception-calibration .experience-calibration {
+        gap: 8px;
+    }
+}

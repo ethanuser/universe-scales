@@ -1,0 +1,850 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "nasa-earth",
+      "source": "https://science.nasa.gov/resource/earth-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Earth_1_12756.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "matches": {
+        "length": [
+          "Earth Diameter"
+        ],
+        "area": [
+          "Earth surface area"
+        ],
+        "volume": [
+          "Earth volume"
+        ],
+        "angular-velocity": [
+          "Earth rotation"
+        ]
+      },
+      "geometry": "sphere",
+      "note": "NASA-authored topology, UVs and materials; adapted to a centered unit sphere. An idealized spherical scale model, not a geodetic/oblateness or terrain model. Use r=(3V/(4*pi))^(1/3) for volume or r=sqrt(A/(4*pi)) for total surface area. Texture resolution reduced to at most 1024 pixels; see processing metadata.",
+      "src": "content/visualizations/models/nasa-earth.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 393876,
+      "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "05a5aea99db8ab472487a06debc3b5d0b2cae7636a1a6b9ecfa40b7d1722ba23",
+      "source_bytes": 12916400,
+      "processing": {
+        "operations": [
+          "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
+          "Remove source node scale; preserve source node rotation",
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+        ],
+        "source_bounds": {
+          "min": [
+            -499.9999694824219,
+            -498.3235168457031,
+            -500
+          ],
+          "max": [
+            500,
+            498.32342529296875,
+            500
+          ],
+          "node": {
+            "mesh": 0,
+            "name": "Cube.001"
+          }
+        },
+        "textures": [
+          {
+            "name": "earth_norm.jpg",
+            "original_size": [
+              4096,
+              3072
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/png"
+          },
+          {
+            "name": "earth_diff.jpg",
+            "original_size": [
+              4096,
+              3072
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ]
+      },
+      "volume_semantics": "analytic_sphere",
+      "closed_volume_checked": false,
+      "normalized_radius": 1
+    },
+    {
+      "id": "nasa-moon",
+      "source": "https://solarsystem.nasa.gov/resources/2366/earths-moon-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Moon_1_3474.glb",
+      "author": "NASA (individual model artist not identified in current asset metadata)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "matches": {
+        "length": [],
+        "area": [
+          "Moon surface area"
+        ],
+        "volume": [
+          "Moon volume"
+        ]
+      },
+      "geometry": "sphere",
+      "note": "NASA-authored topology, UVs and materials; adapted to a centered unit sphere. An idealized spherical scale model, not a geodetic/oblateness or terrain model. Use r=(3V/(4*pi))^(1/3) for volume or r=sqrt(A/(4*pi)) for total surface area. Texture resolution reduced to at most 1024 pixels; see processing metadata. Legacy landing page is unavailable; the official NASA asset-host GLB remains available.",
+      "src": "content/visualizations/models/nasa-moon.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 262284,
+      "sha256": "d342a56c4fe2757e19c1c92fb3ee0f2d3d9ae24420e0ebb98160f0d52644203e",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "810baf23a81d10f5ba58a13c505dd6634b930ce46d2eabf99504d9bd059b3c90",
+      "source_bytes": 3276576,
+      "processing": {
+        "operations": [
+          "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
+          "Remove source node scale; preserve source node rotation",
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+        ],
+        "source_bounds": {
+          "min": [
+            -500.0000305175781,
+            -499.3760070800781,
+            -500.0000305175781
+          ],
+          "max": [
+            500.0000305175781,
+            499.3760070800781,
+            500.0000305175781
+          ],
+          "node": {
+            "mesh": 0,
+            "name": "Cube.008"
+          }
+        },
+        "textures": [
+          {
+            "name": "moon_diff.jpg",
+            "original_size": [
+              2048,
+              1536
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ]
+      },
+      "volume_semantics": "analytic_sphere",
+      "closed_volume_checked": false,
+      "normalized_radius": 1
+    },
+    {
+      "id": "nasa-jupiter",
+      "source": "https://science.nasa.gov/resource/jupiter-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/j/Jupiter_1_142984.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "matches": {
+        "length": [
+          "Jupiter Diameter"
+        ],
+        "area": [
+          "Jupiter surface area"
+        ],
+        "volume": [],
+        "angular-velocity": [
+          "Jupiter rotation"
+        ]
+      },
+      "geometry": "sphere",
+      "note": "NASA-authored topology, UVs and materials; adapted to a centered unit sphere. An idealized spherical scale model, not a geodetic/oblateness or terrain model. Use r=(3V/(4*pi))^(1/3) for volume or r=sqrt(A/(4*pi)) for total surface area. Texture resolution reduced to at most 1024 pixels; see processing metadata.",
+      "src": "content/visualizations/models/nasa-jupiter.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 187384,
+      "sha256": "69eb9f18550557c4496a598a41d1f2babb98dfca0ee7b5b44f0045161adb9aff",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "8edc4e9b88b73ca1b125a258f0ecaef7fc6494a7cadda37704af459a119f4870",
+      "source_bytes": 11479456,
+      "processing": {
+        "operations": [
+          "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
+          "Remove source node scale; preserve source node rotation",
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+        ],
+        "source_bounds": {
+          "min": [
+            -500,
+            -467.56298828125,
+            -500
+          ],
+          "max": [
+            500,
+            467.56298828125,
+            500
+          ],
+          "node": {
+            "mesh": 0,
+            "name": "cubemap"
+          }
+        },
+        "textures": [
+          {
+            "name": "jupiter_diff.jpg",
+            "original_size": [
+              4096,
+              3072
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ]
+      },
+      "volume_semantics": "analytic_sphere",
+      "closed_volume_checked": false,
+      "normalized_radius": 1
+    },
+    {
+      "id": "nasa-sun",
+      "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/s/Sun_1_1391000.glb",
+      "author": "NASA (individual model artist not identified in current asset metadata)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "matches": {
+        "length": [
+          "Sun Diameter"
+        ],
+        "area": [
+          "Sun surface area"
+        ],
+        "volume": [
+          "Sun volume"
+        ]
+      },
+      "geometry": "sphere",
+      "note": "NASA-authored topology, UVs and materials; adapted to a centered unit sphere. An idealized spherical scale model, not a geodetic/oblateness or terrain model. Use r=(3V/(4*pi))^(1/3) for volume or r=sqrt(A/(4*pi)) for total surface area. Texture resolution reduced to at most 1024 pixels; see processing metadata. Current landing page links USDZ only; the corresponding official GLB remains available.",
+      "src": "content/visualizations/models/nasa-sun.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 306332,
+      "sha256": "7b5ba6cf18d46532a4d2741a345432dbd784027c357f741780911839e68c85c3",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "a178f5c43c2c9a6ee6c011c315149a7ab5a2594fd5aa9119ee219625a18da1dd",
+      "source_bytes": 4343656,
+      "processing": {
+        "operations": [
+          "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
+          "Remove source node scale; preserve source node rotation",
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+        ],
+        "source_bounds": {
+          "min": [
+            -0.5,
+            -0.5,
+            -0.5
+          ],
+          "max": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "node": {
+            "mesh": 0,
+            "name": "Cube.001",
+            "rotation": [
+              0.7071068286895752,
+              0,
+              0,
+              0.7071067094802856
+            ],
+            "scale": [
+              1000,
+              1000,
+              1000
+            ]
+          }
+        },
+        "textures": [
+          {
+            "name": "sun_diff.jpg",
+            "original_size": [
+              2048,
+              1536
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ]
+      },
+      "volume_semantics": "analytic_sphere",
+      "closed_volume_checked": false,
+      "normalized_radius": 1
+    },
+    {
+      "id": "wine-bottle",
+      "source": "https://polyhaven.com/a/wine_bottles_01",
+      "download_url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wine_bottles_01/wine_bottles_01_1k.gltf",
+      "author": "Rico Cilliers (modeling); Jurita Burger (graphic design); Poly Haven",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/polyhaven-license.html"
+      ],
+      "matches": {
+        "length": [],
+        "area": [],
+        "volume": [
+          "Wine bottle"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "One Bordeaux bottle extracted from Poly Haven Wine Bottles 01, with original 1k textures and glass transmission. Capacity is not the enclosed glass/mesh volume. Closed volume has NOT been checked. Use the same cubic-linear equivalent approximation as other mesh proxies, not a claim of measured watertight volume.",
+      "src": "content/visualizations/models/wine-bottle.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2560200,
+      "sha256": "dbc435be3d69c4f5ae53a0abff97c5440a13ebeee7c3016f23812bee14459e21",
+      "extensions_used": [
+        "KHR_materials_transmission"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6520,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "70a8a5eabeac24cf298774aca78bbcf39145ca6bf5ebdf2f296edab73fbce039",
+      "source_bytes": 29107,
+      "processing": {
+        "operations": [
+          "Extract only wine_bottles_01_bordeaux; remove collection translation",
+          "Prune unused meshes/materials/textures/accessors; embed original 1k JPEGs and binary data"
+        ],
+        "selected_source_node": "wine_bottles_01_bordeaux"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "rigged-human",
+      "source": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/RiggedFigure",
+      "download_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/RiggedFigure/glTF-Binary/RiggedFigure.glb",
+      "author": "Cesium (2017), distributed by Khronos Group",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "licenses/rigged-human.README.md",
+        "licenses/rigged-human.metadata.json"
+      ],
+      "matches": {
+        "length": [
+          "Human Height"
+        ],
+        "area": [],
+        "volume": [
+          "Human body volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Static bind-pose derivative of a low-poly human figure, not an anatomical scan or calibrated person. Credit Cesium (2017), CC BY 4.0; adapted by Universe Scales. Skinning and animation removed; original bind-pose positions retained and transformed to Y-up. Use world bounds for height. Closed volume has NOT been checked. Use the same cubic-linear equivalent approximation as other mesh proxies; do not infer anatomical volume or skin area from this mesh.",
+      "src": "content/visualizations/models/rigged-human.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 11632,
+      "sha256": "8bc673c7f15539c73f9b8090d21a39988988125a94f5129fabfb4615c2e69845",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 256,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "d6be85417d3e256861ee733eea6916093a7af7c79c16366181fd8abcaeb38cf5",
+      "source_bytes": 50116,
+      "processing": {
+        "operations": [
+          "Remove animation, skin and joint attributes; retain original bind-pose geometry",
+          "Bake source Z_UP axis conversion into POSITION/NORMAL vectors; prune unused resources"
+        ]
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "coffee-mug",
+      "source": "https://kenney.nl/assets/food-kit",
+      "author": "Kenney",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/kenney-food-kit.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Coffee mug"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Stylized empty ceramic handled cup (source cup.glb), not the pack's wooden tankard mug.glb. Representative coffee mug, not a calibrated 250 mL vessel; no liquid is modeled.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "download_url": "https://kenney.nl/media/pages/assets/food-kit/83086fa91c-1719418518/kenney_food-kit.zip",
+      "archive_member": "Models/GLB format/cup.glb",
+      "src": "content/visualizations/models/coffee-mug.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 18956,
+      "sha256": "a725123f09c47335d3f78e196905147f2c8b84b6952914161d0b0b74cdd7395a",
+      "extensions_used": [
+        "KHR_texture_transform"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 112,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "cdad90853682499b94c9fda2f87678b24bfd8f3264e0ed323f6b6a27fd7c6f6f",
+      "source_bytes": 4606270,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.11500000208616257,
+              0.0,
+              -0.17711664736270905
+            ],
+            "max": [
+              0.11500000208616257,
+              0.20000000298023224,
+              0.11500000208616257
+            ]
+          },
+          "source_longest_extent": 0.2921166494488716,
+          "center": [
+            0.0,
+            0.10000000149011612,
+            -0.03105832263827324
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.3936783552157328,
+              -0.3423290034264851,
+              -0.5
+            ],
+            "max": [
+              0.3936783552157328,
+              0.3423290034264851,
+              0.5
+            ]
+          }
+        },
+        "archive_member": "Models/GLB format/cup.glb",
+        "member_sha256": "f9d6786fe9836f16ebb10cc1cb5a8ea8d512c7ae6cfa22394af653e5a5b05f09",
+        "member_bytes": 8008,
+        "archive_license_sha256": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "soda-can",
+      "source": "https://kenney.nl/assets/food-kit",
+      "author": "Kenney",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/kenney-food-kit.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Soda can",
+          "Soda can volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Stylized actual soda can with pull-tab top (source soda-can.glb), not a food can or water bottle. Nominal beverage capacity is not the enclosed mesh volume.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "download_url": "https://kenney.nl/media/pages/assets/food-kit/83086fa91c-1719418518/kenney_food-kit.zip",
+      "archive_member": "Models/GLB format/soda-can.glb",
+      "src": "content/visualizations/models/soda-can.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 27300,
+      "sha256": "108cc05cd06feddbfb99604bbf45b1fe5819cdb389b94191ebb796ae2dca0b7a",
+      "extensions_used": [
+        "KHR_texture_transform"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 164,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "cdad90853682499b94c9fda2f87678b24bfd8f3264e0ed323f6b6a27fd7c6f6f",
+      "source_bytes": 4606270,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.11231999844312668,
+              0.0,
+              -0.11231999844312668
+            ],
+            "max": [
+              0.11231999844312668,
+              0.35059699416160583,
+              0.11231999844312668
+            ]
+          },
+          "source_longest_extent": 0.35059699416160583,
+          "center": [
+            0.0,
+            0.17529849708080292,
+            0.0
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.3203678306247924,
+              -0.5,
+              -0.3203678306247924
+            ],
+            "max": [
+              0.3203678306247924,
+              0.5,
+              0.3203678306247924
+            ]
+          }
+        },
+        "archive_member": "Models/GLB format/soda-can.glb",
+        "member_sha256": "4ae68cbd532e69353ae1392e95bb57afa7cb2acc98f3bb46dc5a017c765c89fe",
+        "member_bytes": 16384,
+        "archive_license_sha256": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "cat",
+      "source": "https://poly.pizza/m/qKICY6xla2",
+      "author": "Quaternius (creator); Poly Pizza (distributor)",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "sources/cat.html",
+        "licenses/quaternius-animals.html"
+      ],
+      "matches": {
+        "length": [
+          "Cat Length"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Stylized standing domestic cat, static bind-pose derivative. Includes its tail; longest-axis normalization is a display approximation, not a measured nose-to-rump anatomical length. Do not claim this is a scan, a specific breed, or a calibrated animal.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "download_url": "https://static.poly.pizza/67f5e3fe-37ee-4c86-95c8-d269d8c9f8ba.glb",
+      "creator_source": "https://quaternius.com/packs/ultimateanimatedanimals.html",
+      "src": "content/visualizations/models/cat.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 131968,
+      "sha256": "372207c7276ed5235b3c373a3dfab5dbc06e64cb821ec80569487afda5509e29",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 2448,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "842c5f96c480b9a7800994345ed83be5e9ba5fc8e18be633f2b7cfe09cf8fef7",
+      "source_bytes": 238672,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.6555757950991392,
+              0.004815707333654923,
+              -0.9286269834493097
+            ],
+            "max": [
+              0.6555757950991392,
+              1.8718745661990517,
+              1.2308337157382034
+            ]
+          },
+          "source_longest_extent": 2.1594606991875134,
+          "center": [
+            0.0,
+            0.9383451367663533,
+            0.15110336614444686
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.3035831100541892,
+              -0.4322974851007635,
+              -0.5
+            ],
+            "max": [
+              0.3035831100541892,
+              0.43229748510076355,
+              0.4999999999999999
+            ]
+          }
+        },
+        "static_pose": "Bind pose verified against joint world matrices and inverse bind matrices; animation/skin removed"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "ceiling-fan",
+      "source": "https://polyhaven.com/a/ceiling_fan",
+      "author": "Ulan Cabanilla; Poly Haven",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/polyhaven-license.html"
+      ],
+      "matches": {
+        "angular-velocity": [
+          "Ceiling fan"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Actual ceiling fan with separate fixture and blades. Animate only ceiling_fan_blades about its local +Y axis; do not rotate the fixture, light, or normalization root. No animation clip is needed. The same exact name covers both dataset Ceiling fan observations; use each observation's speed.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "polyhaven_id": "ceiling_fan",
+      "download_url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/ceiling_fan/ceiling_fan_1k.gltf",
+      "src": "content/visualizations/models/ceiling-fan.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1870916,
+      "sha256": "7c7849e068b592107eeb56d3e662ed50cf6658e544fc7dc3f15e1f99d20718b1",
+      "extensions_used": [
+        "KHR_materials_specular"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 16356,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "be84d4ce1cbbbee21c5f588d5dfde41297f4ecbddedbb0f05e5cb01ddb8ede1b",
+      "source_bytes": 4777,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.7323667407035828,
+              -0.516343355178833,
+              -0.7306660413742065
+            ],
+            "max": [
+              0.7305503487586975,
+              0.0,
+              0.7322510480880737
+            ]
+          },
+          "source_longest_extent": 1.4629170894622803,
+          "center": [
+            -0.000908195972442627,
+            -0.2581716775894165,
+            0.0007925033569335938
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.5,
+              -0.1764773133413267,
+              -0.5
+            ],
+            "max": [
+              0.5,
+              0.1764773133413267,
+              0.5000000000000001
+            ]
+          }
+        },
+        "motion": {
+          "type": "node_rotation",
+          "rotating_node": "ceiling_fan_blades",
+          "rotating_node_index": 1,
+          "stationary_nodes": [
+            "ceiling_fan"
+          ],
+          "stationary_node_indices": [
+            0
+          ],
+          "axis_local": [
+            0,
+            1,
+            0
+          ],
+          "pivot_local": [
+            0,
+            0,
+            0
+          ],
+          "pivot_normalized_world": [
+            0.0006208116502189811,
+            0.1764773133413267,
+            -0.000541728142108786
+          ],
+          "orientation": "Y-up hanging fixture; blades sweep the XZ plane. +Y points toward the ceiling. Pivot may lie above the blades anywhere on the vertical spindle axis.",
+          "angle_units": "radians",
+          "speed_units": "radians per second",
+          "integration": "Set bladeNode.rotation.y = theta0 + omega * elapsedSeconds. Rotate only the named child, never scene/root/fixture. Positive follows right-hand rule; dataset gives speed magnitude, not a measured direction. View obliquely or from below."
+        }
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "status": "no_dataset_entry",
+      "note": "No Jupiter volume or Moon diameter item exists in the current exports. Earth-Moon Distance is not a Moon diameter; Earth's oceans is not Earth volume. Human skin area is deliberately not matched to an uncalibrated figure."
+    },
+    {
+      "status": "source_page_unavailable",
+      "source": "https://science.nasa.gov/resource/earths-moon-3d-model/",
+      "note": "HTTP 404, as is /resource/moon-3d-model/. Official Moon_1_3474.glb succeeded. Newer SVS alternatives at https://svs.gsfc.nasa.gov/14959/ were larger (13.2 MB plain Moon; 6.9 MB grid-overlay version; larger terrain versions)."
+    },
+    {
+      "status": "source_format_link_missing",
+      "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/",
+      "note": "Sun landing page exposes USDZ, not GLB. Corresponding NASA-hosted GLB returned HTTP 200 and was downloaded and validated; no USDZ conversion is required."
+    },
+    {
+      "status": "deferred_bounded_task",
+      "matches": {
+        "volume": [
+          "Bucket",
+          "Family car envelope volume"
+        ]
+      },
+      "note": "Prior source definitions preserved in the fetch script, but not downloaded or validated in this bounded task."
+    },
+    {
+      "status": "not_reviewed_in_bounded_task",
+      "matches": {
+        "length": [
+          "Blue Whale",
+          "Ant",
+          "Grain of Sand"
+        ],
+        "volume": [
+          "Grain of sand volume",
+          "Bathtub",
+          "Bathtub volume"
+        ]
+      },
+      "note": "No models delivered or licensing/identity claims made for these candidates. No generic whale, rock, or other substitute was used."
+    }
+  ],
+  "build": {
+    "script": "scripts/fetch_model_assets.py",
+    "pillow_version": "12.1.1",
+    "asset_lock": "content/visualizations/models/sources/downloads.json"
+  }
+}

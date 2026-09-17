@@ -41,6 +41,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Schumann resonance
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -86,6 +89,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Elephant rumbles
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -131,6 +137,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pipe organ low C
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -176,6 +185,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blue whale call
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -221,6 +233,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human hearing low edge
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -266,6 +281,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lowest piano A0
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -311,6 +329,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tuba pedal tone
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -356,6 +377,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bass guitar low E
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -401,6 +425,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Power-line hum
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -446,6 +473,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bass guitar A string
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -491,6 +521,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Kick drum fundamental
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -536,6 +569,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Subwoofer crossover
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -581,6 +617,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Guitar low E
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -626,6 +665,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Male voice fundamental
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -671,6 +713,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Violin open G
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -716,6 +761,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Female voice fundamental
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -761,6 +809,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Middle C
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -806,6 +857,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Frog croak
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -851,6 +905,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concert A4
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -896,6 +953,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dog bark
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -941,6 +1001,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mosquito wingbeat
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -986,6 +1049,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Violin E7
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1031,6 +1097,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Smoke alarm tone
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1076,6 +1145,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Telephone upper band edge
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1121,6 +1193,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Piccolo high C
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1166,6 +1241,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cricket chirp
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1211,6 +1289,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Speech sibilants
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1256,6 +1337,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Canary song
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1301,6 +1385,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human hearing high edge
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1346,6 +1433,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dog whistle
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1391,6 +1481,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quartz watch crystal
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1436,6 +1529,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ultrasonic cleaner
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1481,6 +1577,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bat echolocation
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1526,6 +1625,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dolphin clicks
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1571,6 +1673,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fish-finder sonar
     ingest_source: dataset/raw/curated/sound-frequency.json
@@ -1617,6 +1722,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Medical ultrasound
     ingest_source: dataset/raw/curated/sound-frequency.json

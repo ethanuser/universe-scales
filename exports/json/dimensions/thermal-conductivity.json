@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Vacuum panels approach the low end of practical thermal conductivity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vacuum insulation panel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -47,6 +48,8 @@
       "id": "obs:thermal-conductivity:entity-vip-thermal-conductivity",
       "name": "Vacuum insulation panel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vacuum_insulation_panel",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aerogel is one of the lowest-conductivity solids people commonly encounter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silica aerogel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -101,6 +105,8 @@
       "id": "obs:thermal-conductivity:entity-aerogel-thermal-conductivity",
       "name": "Silica aerogel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aerogel",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aerogel is a dramatic thermal insulator.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aerogel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -157,6 +164,8 @@
       "qualifiers": {
         "measurement": "thermal conductivity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aerogel",
       "source_count": 2,
       "sources": [
@@ -195,6 +204,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "CO2 conducts heat poorly.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Carbon dioxide gas",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -211,6 +221,8 @@
       "id": "obs:thermal-conductivity:entity-co2-thermal-conductivity",
       "name": "Carbon dioxide gas",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Carbon_dioxide",
       "source_count": 2,
       "sources": [
@@ -249,6 +261,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Air is a useful everyday low-conductivity reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Air",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -265,6 +278,8 @@
       "id": "obs:thermal-conductivity:entity-air-thermal-conductivity",
       "name": "Air",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Thermal_conductivity",
       "source_count": 2,
       "sources": [
@@ -303,6 +318,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Common insulating foam sits just above air.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Polyurethane foam",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -319,6 +335,8 @@
       "id": "obs:thermal-conductivity:entity-polyurethane-thermal-conductivity",
       "name": "Polyurethane foam",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Polyurethane",
       "source_count": 2,
       "sources": [
@@ -357,6 +375,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar building-insulation benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Expanded polystyrene",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -373,6 +392,8 @@
       "id": "obs:thermal-conductivity:entity-eps-thermal-conductivity",
       "name": "Expanded polystyrene",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Polystyrene",
       "source_count": 2,
       "sources": [
@@ -411,6 +432,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wood insulates far better than metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wood",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -427,6 +449,8 @@
       "id": "obs:thermal-conductivity:entity-wood-thermal-conductivity",
       "name": "Wood",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wood",
       "source_count": 2,
       "sources": [
@@ -465,6 +489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Helium conducts heat unusually well for a gas.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Helium gas",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -481,6 +506,8 @@
       "id": "obs:thermal-conductivity:entity-helium-thermal-conductivity",
       "name": "Helium gas",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helium",
       "source_count": 2,
       "sources": [
@@ -519,6 +546,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid water is much more conductive than air.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -535,6 +563,8 @@
       "id": "obs:thermal-conductivity:entity-water-thermal-conductivity",
       "name": "Water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -573,6 +603,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brick sits in the mid-range of common building materials.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brick",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -591,6 +622,8 @@
       "qualifiers": {
         "measurement": "thermal conductivity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brick",
       "source_count": 2,
       "sources": [
@@ -629,6 +662,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Window glass sits around one watt per meter kelvin.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Glass",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -645,6 +679,8 @@
       "id": "obs:thermal-conductivity:entity-glass-thermal-conductivity",
       "name": "Glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -683,6 +719,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concrete is much more conductive than insulation but far less than metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concrete",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -699,6 +736,8 @@
       "id": "obs:thermal-conductivity:entity-concrete-thermal-conductivity",
       "name": "Concrete",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -737,6 +776,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ice conducts heat much better than liquid water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -753,6 +793,8 @@
       "id": "obs:thermal-conductivity:entity-ice-thermal-conductivity",
       "name": "Ice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice",
       "source_count": 2,
       "sources": [
@@ -791,6 +833,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common rock benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Granite",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -807,6 +850,8 @@
       "id": "obs:thermal-conductivity:entity-granite-thermal-conductivity",
       "name": "Granite",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Granite",
       "source_count": 2,
       "sources": [
@@ -845,6 +890,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Stainless steel is much worse than copper at conducting heat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Stainless steel",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -861,6 +907,8 @@
       "id": "obs:thermal-conductivity:entity-stainless-steel-thermal-conductivity",
       "name": "Stainless steel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Stainless_steel",
       "source_count": 2,
       "sources": [
@@ -899,6 +947,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical conductive metal benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Iron",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -915,6 +964,8 @@
       "id": "obs:thermal-conductivity:entity-iron-thermal-conductivity",
       "name": "Iron",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Iron",
       "source_count": 2,
       "sources": [
@@ -953,6 +1004,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silicon is a surprisingly good thermal conductor for a semiconductor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silicon",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -969,6 +1021,8 @@
       "id": "obs:thermal-conductivity:entity-silicon-thermal-conductivity",
       "name": "Silicon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicon",
       "source_count": 2,
       "sources": [
@@ -1007,6 +1061,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aluminum is a common high-conductivity engineering metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aluminum",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1023,6 +1078,8 @@
       "id": "obs:thermal-conductivity:entity-aluminum-thermal-conductivity",
       "name": "Aluminum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -1061,6 +1118,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Copper is one of the classic high-conductivity reference metals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Copper",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1077,6 +1135,8 @@
       "id": "obs:thermal-conductivity:entity-copper-thermal-conductivity",
       "name": "Copper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Copper",
       "source_count": 2,
       "sources": [
@@ -1115,6 +1175,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Silver slightly exceeds copper as a heat conductor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silver",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1131,6 +1192,8 @@
       "id": "obs:thermal-conductivity:entity-silver-thermal-conductivity",
       "name": "Silver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silver",
       "source_count": 2,
       "sources": [
@@ -1169,6 +1232,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Diamond is an extreme thermal conductor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Diamond",
         "ingest_source": "dataset/raw/curated/thermal-conductivity.json",
@@ -1185,6 +1249,8 @@
       "id": "obs:thermal-conductivity:entity-diamond-thermal-conductivity",
       "name": "Diamond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Diamond",
       "source_count": 2,
       "sources": [

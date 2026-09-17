@@ -49,6 +49,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Yesterday
     ingest_source: dataset/raw/curated/historical-time.json
@@ -95,6 +98,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Last week
     ingest_source: dataset/raw/curated/historical-time.json
@@ -141,6 +147,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One month ago
     ingest_source: dataset/raw/curated/historical-time.json
@@ -187,6 +196,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: COVID-19 pandemic start
     ingest_source: dataset/raw/curated/historical-time.json
@@ -233,6 +245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: First iPhone release
     ingest_source: dataset/raw/curated/historical-time.json
@@ -279,6 +294,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fall of the Berlin Wall
     ingest_source: dataset/raw/curated/historical-time.json
@@ -325,6 +343,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon landing
     ingest_source: dataset/raw/curated/historical-time.json
@@ -371,6 +392,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Start of World War II
     ingest_source: dataset/raw/curated/historical-time.json
@@ -417,6 +441,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: US Declaration of Independence
     ingest_source: dataset/raw/curated/historical-time.json
@@ -463,6 +490,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Printing press in Europe
     ingest_source: dataset/raw/curated/historical-time.json
@@ -509,6 +539,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Magna Carta
     ingest_source: dataset/raw/curated/historical-time.json
@@ -555,6 +588,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Norman conquest of England
     ingest_source: dataset/raw/curated/historical-time.json
@@ -601,6 +637,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bronze Age collapse
     ingest_source: dataset/raw/curated/historical-time.json
@@ -646,6 +685,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Construction of the Great Pyramid
     ingest_source: dataset/raw/curated/historical-time.json
@@ -691,6 +733,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gobekli Tepe
     ingest_source: dataset/raw/curated/historical-time.json
@@ -736,6 +781,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Agriculture begins
     ingest_source: dataset/raw/curated/historical-time.json
@@ -781,6 +829,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: End of last glacial maximum
     ingest_source: dataset/raw/curated/historical-time.json
@@ -826,6 +877,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Oldest cave art
     ingest_source: dataset/raw/curated/historical-time.json
@@ -871,6 +925,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Toba eruption
     ingest_source: dataset/raw/curated/historical-time.json
@@ -916,6 +973,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Emergence of Homo sapiens
     ingest_source: dataset/raw/curated/historical-time.json
@@ -961,6 +1021,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Genus Homo emergence
     ingest_source: dataset/raw/curated/historical-time.json
@@ -1006,6 +1069,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: K-Pg extinction
     ingest_source: dataset/raw/curated/historical-time.json
@@ -1051,6 +1117,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: First dinosaurs
     ingest_source: dataset/raw/curated/historical-time.json
@@ -1096,6 +1165,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cambrian explosion
     ingest_source: dataset/raw/curated/historical-time.json
@@ -1141,6 +1213,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: First life on Earth
     ingest_source: dataset/raw/curated/historical-time.json
@@ -1186,6 +1261,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Formation of Earth
     ingest_source: dataset/raw/curated/historical-time.json
@@ -1231,6 +1309,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Age of the universe
     ingest_source: dataset/raw/curated/historical-time.json

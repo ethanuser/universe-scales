@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Patch-clamp and single-cell perfusion systems operate at truly tiny volumetric flow rates.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Patch-clamp perfusion",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -47,6 +48,8 @@
       "id": "obs:flow-rate:scenario-flow-rate-patch-clamp",
       "name": "Patch-clamp perfusion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Patch_clamp",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tiny microfluidic flow rate on the picoliter-per-second scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Microfluidic channel",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -101,6 +105,8 @@
       "id": "obs:flow-rate:entity-microfluidic-channel-flow",
       "name": "Microfluidic channel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Microfluidics",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Inkjet droplets correspond to extremely small volumetric flow rates when averaged over firing time.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Inkjet nozzle",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -155,6 +162,8 @@
       "id": "obs:flow-rate:entity-inkjet-nozzle-flow",
       "name": "Inkjet nozzle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Inkjet_printing",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A slow medical infusion can be just tens of picoliters per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Insulin pump basal delivery",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -209,6 +219,8 @@
       "id": "obs:flow-rate:entity-insulin-pump-flow",
       "name": "Insulin pump basal delivery",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Insulin_pump",
       "source_count": 2,
       "sources": [
@@ -247,6 +259,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A slow IV drip is still far above microfluidic chip flows.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IV drip",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -264,6 +277,8 @@
       "id": "obs:flow-rate:entity-iv-drip-flow",
       "name": "IV drip",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intravenous_therapy",
       "source_count": 2,
       "sources": [
@@ -302,6 +317,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A drip emitter releases water only by the milliliter over long intervals.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Drip irrigation emitter",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -319,6 +335,8 @@
       "id": "obs:flow-rate:scenario-flow-rate-drip-irrigation-emitter",
       "name": "Drip irrigation emitter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drip_irrigation",
       "source_count": 2,
       "sources": [
@@ -357,6 +375,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A slow intravenous drip is a tiny but concrete human-scale flow.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "IV drip",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -376,6 +395,8 @@
       "qualifiers": {
         "measurement": "fluid delivery rate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intravenous_therapy",
       "source_count": 2,
       "sources": [
@@ -414,6 +435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A drip emitter delivers water at a very small but practical gardening flow rate.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Garden drip emitter",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -431,6 +453,8 @@
       "id": "obs:flow-rate:entity-garden-drip-emitter-flow",
       "name": "Garden drip emitter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drip_irrigation",
       "source_count": 2,
       "sources": [
@@ -469,6 +493,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 30 mL espresso shot pulled in 30 seconds averages a microliter-scale flow per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Espresso shot extraction",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -486,6 +511,8 @@
       "id": "obs:flow-rate:scenario-flow-rate-espresso-shot",
       "name": "Espresso shot extraction",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Espresso",
       "source_count": 2,
       "sources": [
@@ -524,6 +551,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A pour-over dripper sits just above espresso on a volumetric-flow scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pour-over coffee dripper",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -541,6 +569,8 @@
       "id": "obs:flow-rate:scenario-flow-rate-pour-over-coffee",
       "name": "Pour-over coffee dripper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Coffee_preparation",
       "source_count": 2,
       "sources": [
@@ -579,6 +609,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The aorta carries blood at a rate on the order of liters per minute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood through the aorta",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -597,6 +628,8 @@
       "qualifiers": {
         "measurement": "physiological flow"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aorta",
       "source_count": 2,
       "sources": [
@@ -635,6 +668,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A low-flow shower head cuts the discharge to conserve water while remaining usable.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water-efficient shower head",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -651,6 +685,8 @@
       "id": "obs:flow-rate:scenario-flow-rate-low-flow-shower-head",
       "name": "Water-efficient shower head",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Shower_head",
       "source_count": 2,
       "sources": [
@@ -689,6 +725,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Resting cardiac output is a useful physiology benchmark in liters per minute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cardiac output",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -708,6 +745,8 @@
       "qualifiers": {
         "measurement": "heart pump output"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cardiac_output",
       "source_count": 2,
       "sources": [
@@ -746,6 +785,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A resting adult pumps about five liters of blood each minute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human cardiac output",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -763,6 +803,8 @@
       "id": "obs:flow-rate:entity-human-cardiac-output",
       "name": "Human cardiac output",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cardiac_output",
       "source_count": 2,
       "sources": [
@@ -801,6 +843,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical faucet flow rate is around a tenth of a liter each second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kitchen faucet",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -818,6 +861,8 @@
       "id": "obs:flow-rate:entity-kitchen-faucet-flow",
       "name": "Kitchen faucet",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tap_(valve)",
       "source_count": 2,
       "sources": [
@@ -856,6 +901,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical household faucet is a familiar plumbing benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Faucet",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -875,6 +921,8 @@
       "qualifiers": {
         "measurement": "tap flow"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Faucet",
       "source_count": 2,
       "sources": [
@@ -913,6 +961,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A garden sprinkler pushes a modest stream that is easy to visualize at household scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Garden sprinkler",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -929,6 +978,8 @@
       "id": "obs:flow-rate:scenario-flow-rate-garden-sprinkler",
       "name": "Garden sprinkler",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sprinkler",
       "source_count": 2,
       "sources": [
@@ -967,6 +1018,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At rest, a person moves on the order of a tenth of a liter of air each second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human resting breathing air intake",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -984,6 +1036,8 @@
       "id": "obs:flow-rate:scenario-resting-breathing-air-flow",
       "name": "Human resting breathing air intake",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tidal_volume",
       "source_count": 2,
       "sources": [
@@ -1022,6 +1076,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A low-flow shower head still moves more water than a kitchen faucet.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Shower head",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1039,6 +1094,8 @@
       "id": "obs:flow-rate:entity-shower-head-flow",
       "name": "Shower head",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Shower",
       "source_count": 2,
       "sources": [
@@ -1077,6 +1134,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A CPAP system pushes continuous airflow on the order of ten liters per minute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "CPAP machine airflow",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1094,6 +1152,8 @@
       "id": "obs:flow-rate:entity-cpap-airflow",
       "name": "CPAP machine airflow",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Continuous_positive_airway_pressure",
       "source_count": 2,
       "sources": [
@@ -1132,6 +1192,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A shower head delivers noticeably more water than a faucet.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Shower",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1151,6 +1212,8 @@
       "qualifiers": {
         "measurement": "shower flow"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Shower",
       "source_count": 2,
       "sources": [
@@ -1189,6 +1252,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A garden hose occupies the upper household range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Garden hose",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1208,6 +1272,8 @@
       "qualifiers": {
         "measurement": "hose flow"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Garden_hose",
       "source_count": 2,
       "sources": [
@@ -1246,6 +1312,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A garden hose produces a substantial household flow rate.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Garden hose",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1263,6 +1330,8 @@
       "id": "obs:flow-rate:entity-garden-hose-flow",
       "name": "Garden hose",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hose",
       "source_count": 2,
       "sources": [
@@ -1301,6 +1370,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A toilet flush briefly produces a few liters per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Toilet flush peak flow",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1318,6 +1388,8 @@
       "id": "obs:flow-rate:entity-toilet-flush-flow",
       "name": "Toilet flush peak flow",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Flush_toilet",
       "source_count": 2,
       "sources": [
@@ -1356,6 +1428,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fire hose can deliver roughly ten liters each second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fire hose",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1373,6 +1446,8 @@
       "id": "obs:flow-rate:entity-fire-hose-flow",
       "name": "Fire hose",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fire_hose",
       "source_count": 2,
       "sources": [
@@ -1411,6 +1486,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fully opened fire hydrant reaches into the hundred-liter-per-second regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fire hydrant",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1427,6 +1503,8 @@
       "id": "obs:flow-rate:entity-fire-hydrant-flow",
       "name": "Fire hydrant",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fire_hydrant",
       "source_count": 2,
       "sources": [
@@ -1465,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A hydrant sits far above domestic plumbing and into emergency-response scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fire hydrant",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1483,6 +1562,8 @@
       "qualifiers": {
         "measurement": "hydrant discharge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fire_hydrant",
       "source_count": 2,
       "sources": [
@@ -1521,6 +1602,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An oil pipeline moves flow on the order of whole cubic meters per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Oil pipeline segment",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1537,6 +1619,8 @@
       "id": "obs:flow-rate:entity-oil-pipeline-flow",
       "name": "Oil pipeline segment",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pipeline_transport",
       "source_count": 2,
       "sources": [
@@ -1575,6 +1659,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Large water mains bridge household plumbing and city-scale infrastructure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Municipal water main",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1593,6 +1678,8 @@
       "qualifiers": {
         "measurement": "main flow"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water_distribution_system",
       "source_count": 2,
       "sources": [
@@ -1631,6 +1718,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Old Faithful expels water at tens of cubic meters per second during eruption.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Old Faithful eruption",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1647,6 +1735,8 @@
       "id": "obs:flow-rate:entity-old-faithful-flow",
       "name": "Old Faithful eruption",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Old_Faithful",
       "source_count": 2,
       "sources": [
@@ -1685,6 +1775,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The River Thames provides a city-scale river-flow benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thames River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1701,6 +1792,8 @@
       "id": "obs:flow-rate:entity-thames-river-flow",
       "name": "Thames River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/River_Thames",
       "source_count": 2,
       "sources": [
@@ -1739,6 +1832,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Colorado River discharge is a recognizable mid-sized river flow.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Colorado River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1755,6 +1849,8 @@
       "id": "obs:flow-rate:entity-colorado-river-flow",
       "name": "Colorado River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Colorado_River",
       "source_count": 2,
       "sources": [
@@ -1793,6 +1889,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A large hydropower penstock carries a major engineered water flow.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hoover Dam penstock",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1809,6 +1906,8 @@
       "id": "obs:flow-rate:entity-hoover-dam-penstock-flow",
       "name": "Hoover Dam penstock",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hoover_Dam",
       "source_count": 2,
       "sources": [
@@ -1847,6 +1946,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Niagara Falls discharges a few thousand cubic meters of water each second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Niagara Falls",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1863,6 +1963,8 @@
       "id": "obs:flow-rate:entity-niagara-falls-flow",
       "name": "Niagara Falls",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Niagara_Falls",
       "source_count": 2,
       "sources": [
@@ -1901,6 +2003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Nile carries a modest continental river discharge compared with the Amazon.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nile River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1917,6 +2020,8 @@
       "id": "obs:flow-rate:entity-nile-river-flow",
       "name": "Nile River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nile",
       "source_count": 2,
       "sources": [
@@ -1955,6 +2060,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Danube is a large European river with a substantial discharge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Danube River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -1971,6 +2077,8 @@
       "id": "obs:flow-rate:entity-danube-river-flow",
       "name": "Danube River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Danube",
       "source_count": 2,
       "sources": [
@@ -2009,6 +2117,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Mississippi River carries tens of thousands of cubic meters per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mississippi River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -2025,6 +2134,8 @@
       "id": "obs:flow-rate:entity-mississippi-river-flow",
       "name": "Mississippi River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mississippi_River",
       "source_count": 2,
       "sources": [
@@ -2063,6 +2174,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Yangtze is among the world's biggest river flows.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Yangtze River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -2079,6 +2191,8 @@
       "id": "obs:flow-rate:entity-yangtze-river-flow",
       "name": "Yangtze River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Yangtze",
       "source_count": 2,
       "sources": [
@@ -2117,6 +2231,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Congo River is a giant tropical river with enormous discharge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Congo River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -2133,6 +2248,8 @@
       "id": "obs:flow-rate:entity-congo-river-flow",
       "name": "Congo River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Congo_River",
       "source_count": 2,
       "sources": [
@@ -2171,6 +2288,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Amazon is the largest river by discharge on Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Amazon River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -2187,6 +2305,8 @@
       "id": "obs:flow-rate:entity-amazon-river-flow",
       "name": "Amazon River",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Amazon_River",
       "source_count": 2,
       "sources": [
@@ -2225,6 +2345,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Amazon is the classic giant-river discharge reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Amazon River",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -2243,6 +2364,8 @@
       "qualifiers": {
         "measurement": "river discharge"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Amazon_River",
       "source_count": 2,
       "sources": [
@@ -2281,6 +2404,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "All rivers together deliver over a million cubic meters of freshwater per second to the oceans.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Global river discharge to oceans",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -2297,6 +2421,8 @@
       "id": "obs:flow-rate:scenario-global-river-discharge",
       "name": "Global river discharge to oceans",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drainage_basin",
       "source_count": 2,
       "sources": [
@@ -2335,6 +2461,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Gulf Stream carries tens of millions of cubic meters of seawater each second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gulf Stream transport",
         "ingest_source": "dataset/raw/curated/flow-rate.json",
@@ -2351,6 +2478,8 @@
       "id": "obs:flow-rate:entity-gulf-stream-flow",
       "name": "Gulf Stream transport",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gulf_Stream",
       "source_count": 2,
       "sources": [

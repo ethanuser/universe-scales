@@ -47,6 +47,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A bacterium
     ingest_source: dataset/raw/curated/cell-count.json
@@ -92,6 +95,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A human oocyte
     ingest_source: dataset/raw/curated/cell-count.json
@@ -137,6 +143,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A human red blood cell
     ingest_source: dataset/raw/curated/cell-count.json
@@ -182,6 +191,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A yeast cell
     ingest_source: dataset/raw/curated/cell-count.json
@@ -227,6 +239,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Adult C. elegans hermaphrodite
     ingest_source: dataset/raw/curated/cell-count.json
@@ -273,6 +288,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A zebrafish embryo
     ingest_source: dataset/raw/curated/cell-count.json
@@ -320,6 +338,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Drosophila embryo at hatching
     ingest_source: dataset/raw/curated/cell-count.json
@@ -367,6 +388,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A drop of blood
     ingest_source: dataset/raw/curated/cell-count.json
@@ -414,6 +438,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: An E. coli culture in one milliliter
     ingest_source: dataset/raw/curated/cell-count.json
@@ -461,6 +488,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dense E. coli culture (1 mL)
     ingest_source: dataset/raw/curated/cell-count.json
@@ -508,6 +538,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A mouse body
     ingest_source: dataset/raw/curated/cell-count.json
@@ -555,6 +588,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: The human brain
     ingest_source: dataset/raw/curated/cell-count.json
@@ -602,6 +638,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human brain neurons
     ingest_source: dataset/raw/curated/cell-count.json
@@ -649,6 +688,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A mature oak tree
     ingest_source: dataset/raw/curated/cell-count.json
@@ -696,6 +738,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human red blood cells
     ingest_source: dataset/raw/curated/cell-count.json
@@ -743,6 +788,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A human body
     ingest_source: dataset/raw/curated/cell-count.json
@@ -789,6 +837,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: The human gut microbiome
     ingest_source: dataset/raw/curated/cell-count.json
@@ -836,6 +887,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A blue whale body
     ingest_source: dataset/raw/curated/cell-count.json

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "images": {
+    "angular-velocity": {
+      "Ceiling fan": {
+        "src": "content/visualizations/images/motion/ceiling-fan.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Ceiling_fan_(16788023279).jpg",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "author": "Vikramdeep Sidhu",
+        "title": "Ceiling fan (16788023279)",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Ceiling_fan_%2816788023279%29.jpg",
+        "original_source": "https://www.flickr.com/photos/deep_sidhu/16788023279/",
+        "sha256": "7a82658d91b69f69767b9e099a7da13de830b7a8c08b5e9d4fd79119ffff25a0",
+        "bytes": 109194,
+        "width": 640,
+        "height": 640,
+        "changes": "None; original JPEG downloaded unchanged.",
+        "note": "Actual three-blade ceiling fan photographed nearly face-on from below. The ceiling and fixed housing remain in the frame, so this is a stationary reference photo, not a spinning cutout or measured geometry. A separate phase marker illustrates the listed angular velocity; the pictured fan's speed and direction are not established by the photo. Commons records a Flickr license review on 10 July 2015 confirming CC BY 2.0."
+      }
+    }
+  }
+}

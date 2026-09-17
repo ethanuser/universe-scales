@@ -8,13 +8,16 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 
 ROOT = Path(__file__).resolve().parents[2]
 DATASET_DIR = ROOT / "dataset"
 RAW_DIR = DATASET_DIR / "raw"
 CONFIG_DIR = RAW_DIR / "config"
 CURATED_DIR = RAW_DIR / "curated"
-CONTENT_DIR = RAW_DIR / "content"
+LEGACY_CONTENT_DIR = RAW_DIR / "content"
+PROSE_CONTENT_DIR = ROOT / "content" / "descriptions"
 
 
 @dataclass(frozen=True)
@@ -49,12 +52,12 @@ def _load_curated_observations() -> list[dict[str, Any]]:
     return records
 
 
-def _load_content_overrides() -> list[dict[str, Any]]:
-    if not CONTENT_DIR.exists():
+def _load_legacy_json_content_overrides() -> list[dict[str, Any]]:
+    if not LEGACY_CONTENT_DIR.exists():
         return []
 
     records: list[dict[str, Any]] = []
-    for path in sorted(CONTENT_DIR.glob("*.json")):
+    for path in sorted(LEGACY_CONTENT_DIR.glob("*.json")):
         payload = _load_json(path, [])
         if isinstance(payload, dict):
             if "items" in payload and isinstance(payload["items"], list):
@@ -80,6 +83,40 @@ def _load_content_overrides() -> list[dict[str, Any]]:
             record["_raw_path"] = str(path.relative_to(ROOT))
             records.append(record)
     return records
+
+
+def _load_markdown_content_overrides() -> list[dict[str, Any]]:
+    if not PROSE_CONTENT_DIR.exists():
+        return []
+
+    records: list[dict[str, Any]] = []
+    for path in sorted(PROSE_CONTENT_DIR.glob("*/*.md")):
+        text = path.read_text(encoding="utf-8")
+        if not text.startswith("---\n"):
+            raise ValueError(f"Markdown content file is missing YAML frontmatter: {path}")
+        try:
+            _, frontmatter, body = text.split("---\n", 2)
+        except ValueError as exc:
+            raise ValueError(f"Markdown content file has invalid frontmatter: {path}") from exc
+        metadata = yaml.safe_load(frontmatter) or {}
+        if not isinstance(metadata, dict):
+            raise ValueError(f"Expected mapping frontmatter in {path}")
+
+        record = dict(metadata)
+        record.setdefault("dimension", path.parent.name)
+        record.setdefault("content_format", "markdown")
+        record.setdefault("content_status", "curated")
+        record.setdefault("content_origin", str(path.relative_to(ROOT)))
+        record.setdefault("description_medium", body.strip())
+        record["_raw_path"] = str(path.relative_to(ROOT))
+        records.append(record)
+    return records
+
+
+def _load_content_overrides() -> list[dict[str, Any]]:
+    # JSON content files are kept as a compatibility layer. Markdown files are
+    # loaded last so prose outside dataset/raw takes precedence.
+    return _load_legacy_json_content_overrides() + _load_markdown_content_overrides()
 
 
 def load_raw_catalog() -> RawCatalog:

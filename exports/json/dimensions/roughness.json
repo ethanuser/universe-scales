@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Precision optical flats approach the angstrom-to-subnanometer roughness regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Optical flat",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -47,6 +48,8 @@
       "id": "obs:roughness:entity-optical-flat-roughness",
       "name": "Optical flat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Optical_flat",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A polished silicon wafer is nearly atomically flat by macroscopic standards.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silicon wafer",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -103,6 +107,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silicon",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Semiconductor wafers are astonishingly smooth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Polished silicon wafer",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -157,6 +164,8 @@
       "id": "obs:roughness:entity-silicon-wafer-roughness",
       "name": "Polished silicon wafer",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wafer_(electronics)",
       "source_count": 2,
       "sources": [
@@ -195,6 +204,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mirror-polished metal surface is still rough on nanometer scales.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mirror polish",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -211,6 +221,8 @@
       "id": "obs:roughness:entity-mirror-polish-roughness",
       "name": "Mirror polish",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Polishing",
       "source_count": 2,
       "sources": [
@@ -249,6 +261,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Optical mirrors sit in the nanometer roughness regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Optical mirror",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -267,6 +280,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mirror",
       "source_count": 2,
       "sources": [
@@ -305,6 +320,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Optical media are smoother than most everyday materials.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Compact disc surface",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -321,6 +337,8 @@
       "id": "obs:roughness:entity-cd-surface-roughness",
       "name": "Compact disc surface",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Compact_disc",
       "source_count": 2,
       "sources": [
@@ -359,6 +377,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Polished glass remains very smooth, but not atomic-flat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Polished glass",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -377,6 +396,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -415,6 +436,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Touchscreen glass feels smooth because its roughness is tiny relative to skin ridges.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smartphone glass",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -431,6 +453,8 @@
       "id": "obs:roughness:entity-smartphone-glass-roughness",
       "name": "Smartphone glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glass",
       "source_count": 2,
       "sources": [
@@ -469,6 +493,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Typical machined parts land in the micron roughness regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Machined metal finish",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -485,6 +510,8 @@
       "id": "obs:roughness:entity-machined-metal-roughness",
       "name": "Machined metal finish",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Machining",
       "source_count": 2,
       "sources": [
@@ -523,6 +550,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ground steel is a classic micrometer-scale surface finish.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ground steel",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -541,6 +569,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steel",
       "source_count": 2,
       "sources": [
@@ -579,6 +609,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Machined aluminum is a standard engineering finish.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Machined aluminum",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -597,6 +628,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -635,6 +668,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Frosted surfaces are deliberately roughened to diffuse light.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Frosted glass",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -651,6 +685,8 @@
       "id": "obs:roughness:entity-frosted-glass-roughness",
       "name": "Frosted glass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Frosted_glass",
       "source_count": 2,
       "sources": [
@@ -689,6 +725,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Paper is rough enough to feel, yet much smoother than sandpaper.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Paper",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -707,6 +744,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paper",
       "source_count": 2,
       "sources": [
@@ -745,6 +784,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Paper texture is obvious at the tens-of-microns scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Printer paper",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -761,6 +801,8 @@
       "id": "obs:roughness:entity-printer-paper-roughness",
       "name": "Printer paper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Paper",
       "source_count": 2,
       "sources": [
@@ -799,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fine abrasives are still much rougher than precision surfaces.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fine sandpaper",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -815,6 +858,8 @@
       "id": "obs:roughness:entity-fine-sandpaper-roughness",
       "name": "Fine sandpaper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sandpaper",
       "source_count": 2,
       "sources": [
@@ -853,6 +898,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Skin texture spans tens of micrometers or more.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human skin",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -869,6 +915,8 @@
       "id": "obs:roughness:entity-skin-roughness",
       "name": "Human skin",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Skin",
       "source_count": 2,
       "sources": [
@@ -907,6 +955,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Interior walls still have visible texture in oblique light.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Unpainted drywall",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -923,6 +972,8 @@
       "id": "obs:roughness:entity-drywall-roughness",
       "name": "Unpainted drywall",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drywall",
       "source_count": 2,
       "sources": [
@@ -961,6 +1012,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Finished wood is smooth to the hand but not microscopically smooth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Planed wood",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -977,6 +1029,8 @@
       "id": "obs:roughness:entity-planed-wood-roughness",
       "name": "Planed wood",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wood",
       "source_count": 2,
       "sources": [
@@ -1015,6 +1069,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Skin is a biologically textured surface with visible roughness at the tens-of-microns scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human skin",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1033,6 +1088,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_skin",
       "source_count": 2,
       "sources": [
@@ -1071,6 +1128,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fabric-texture benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Felt fabric",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1087,6 +1145,8 @@
       "id": "obs:roughness:entity-felt-roughness",
       "name": "Felt fabric",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Felt",
       "source_count": 2,
       "sources": [
@@ -1125,6 +1185,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar food texture benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Orange peel texture",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1141,6 +1202,8 @@
       "id": "obs:roughness:entity-orange-peel-roughness",
       "name": "Orange peel texture",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Orange_(fruit)",
       "source_count": 2,
       "sources": [
@@ -1179,6 +1242,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Layer lines in 3D printing often leave a roughness around the hundred-micron scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "3D-printed plastic",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1197,6 +1261,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/3D_printing",
       "source_count": 2,
       "sources": [
@@ -1235,6 +1301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sanded wood is rough enough to be clearly tactile.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sanded wood",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1253,6 +1320,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wood",
       "source_count": 2,
       "sources": [
@@ -1291,6 +1360,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Even seasoned cookware is much rougher than polished glass.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cast iron skillet surface",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1307,6 +1377,8 @@
       "id": "obs:roughness:entity-cast-iron-pan-roughness",
       "name": "Cast iron skillet surface",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cast-iron_cookware",
       "source_count": 2,
       "sources": [
@@ -1345,6 +1417,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pumice is coarse enough to feel strongly abrasive.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pumice stone",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1361,6 +1434,8 @@
       "id": "obs:roughness:entity-pumice-roughness",
       "name": "Pumice stone",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pumice",
       "source_count": 2,
       "sources": [
@@ -1399,6 +1474,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concrete has clearly perceptible millimeter-scale texture.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concrete sidewalk",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1415,6 +1491,8 @@
       "id": "obs:roughness:entity-concrete-roughness",
       "name": "Concrete sidewalk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -1453,6 +1531,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Road asphalt is a coarse macroscopic surface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Road asphalt",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1471,6 +1550,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Asphalt_concrete",
       "source_count": 2,
       "sources": [
@@ -1509,6 +1590,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bark surface texture is coarse on the millimeter scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tree bark",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1525,6 +1607,8 @@
       "id": "obs:roughness:entity-tree-bark-roughness",
       "name": "Tree bark",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bark_(botany)",
       "source_count": 2,
       "sources": [
@@ -1563,6 +1647,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Road surfaces are rough on the millimeter scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Asphalt road",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1579,6 +1664,8 @@
       "id": "obs:roughness:entity-asphalt-roughness",
       "name": "Asphalt road",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Asphalt_concrete",
       "source_count": 2,
       "sources": [
@@ -1617,6 +1704,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Loose gravel reaches centimeter-scale roughness.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gravel surface",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1633,6 +1721,8 @@
       "id": "obs:roughness:entity-gravel-roughness",
       "name": "Gravel surface",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravel",
       "source_count": 2,
       "sources": [
@@ -1671,6 +1761,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cobblestones are highly rough by everyday-surface standards.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cobblestone",
         "ingest_source": "dataset/raw/curated/roughness.json",
@@ -1689,6 +1780,8 @@
       "qualifiers": {
         "measurement": "surface roughness"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cobblestone",
       "source_count": 2,
       "sources": [
