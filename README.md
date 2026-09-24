@@ -80,6 +80,7 @@ The project includes a normalized SQLite-backed data pipeline that generates the
 See [DATASET_PIPELINE.md](DATASET_PIPELINE.md) for the source model, output artifacts, and contributor workflow.
 See [DATASET_STANDARD.md](DATASET_STANDARD.md) for item acceptance rules, review statuses, and the description standard.
 See [content/visualizations/README.md](content/visualizations/README.md) for the interactive modes, physical assumptions, asset licenses, and browser checks. The initial modes use approximate photos or equivalent geometry; they do not automatically remove backgrounds, reconstruct objects, or calibrate device brightness/sound output.
+See [content/visualizations/models/README.md](content/visualizations/models/README.md) for the 3D model registry and the Sketchfab Length import workflow.
 
 Test visualization math with `node --test tests/experience-math.test.cjs`.
 

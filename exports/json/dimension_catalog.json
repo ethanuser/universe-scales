@@ -296,14 +296,14 @@
   {
     "available": true,
     "base_unit": "cubic_meters",
-    "candidate_count": 52,
+    "candidate_count": 54,
     "description": "Volume tracks three-dimensional extent under explicit geometric assumptions. Many values here are derived from a stated radius, diameter, or envelope shape rather than directly measured container capacity. Each item therefore includes a short qualifier describing whether it is a literal volume, an effective occupied volume, or an approximate geometric envelope.",
     "description_format": "markdown",
     "frontend_group": "geometry",
     "frontend_group_label": "Geometry & Scale",
     "frontend_order": 220,
     "name": "Volume",
-    "observation_count": 52,
+    "observation_count": 54,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
     "quantity_kind": "volume",
@@ -317,7 +317,7 @@
   {
     "available": true,
     "base_unit": "people_per_square_kilometer",
-    "candidate_count": 32,
+    "candidate_count": 28,
     "description": "Population density here means people per unit total land area. It is a clean way to compare remote regions, countries, city-states, boroughs, and extreme urban enclaves. Because jurisdiction boundaries matter, the label should always say what region is being measured.",
     "description_format": "markdown",
     "frontend_group": "global",
@@ -330,7 +330,7 @@
     "quantity_kind": "population_density",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 32,
+    "selected_count": 28,
     "selection_bin_count": 24,
     "slug": "population-density",
     "status": "available"
@@ -338,7 +338,7 @@
   {
     "available": true,
     "base_unit": "people_per_square_kilometer_arable_land",
-    "candidate_count": 25,
+    "candidate_count": 22,
     "description": "Physiological density is population divided by arable land area rather than total land area. That makes it a rough measure of how heavily a society leans on its food-producing land. It is more conceptually loaded than ordinary population density, so the arable-land qualifier is essential.",
     "description_format": "markdown",
     "frontend_group": "global",
@@ -351,7 +351,7 @@
     "quantity_kind": "physiological_density",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 25,
+    "selected_count": 22,
     "selection_bin_count": 24,
     "slug": "physiological-density",
     "status": "available"
@@ -359,7 +359,7 @@
   {
     "available": true,
     "base_unit": "farmers_per_square_kilometer_arable_land",
-    "candidate_count": 29,
+    "candidate_count": 27,
     "description": "Agricultural density is agricultural population divided by arable land area. It is often used to contrast labor-intensive farming with heavily mechanized farming. The numerator is not total population, so that qualifier should stay visible anywhere the value is shown.",
     "description_format": "markdown",
     "frontend_group": "global",
@@ -372,7 +372,7 @@
     "quantity_kind": "agricultural_density",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 29,
+    "selected_count": 27,
     "selection_bin_count": 24,
     "slug": "agricultural-density",
     "status": "available"
@@ -527,7 +527,7 @@
   {
     "available": true,
     "base_unit": "flops",
-    "candidate_count": 33,
+    "candidate_count": 30,
     "description": "This scale treats FLOPs pragmatically as floating-point operations per second, the throughput measure most people mean when they compare processors, GPUs, AI accelerators, and supercomputers. It now includes AI-flavored reference points such as approximate LLM inference workloads and training-scale estimates alongside direct hardware specs. Precision mode still matters in real hardware, so the notes are representative rather than exhaustive.",
     "description_format": "markdown",
     "frontend_group": "information",
@@ -540,7 +540,7 @@
     "quantity_kind": "flops",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 33,
+    "selected_count": 30,
     "selection_bin_count": 24,
     "slug": "flops",
     "status": "available"
@@ -632,7 +632,7 @@
   {
     "available": true,
     "base_unit": "pascal_seconds",
-    "candidate_count": 34,
+    "candidate_count": 33,
     "description": "Dynamic viscosity measures how strongly a fluid resists being sheared or made to flow. Some entries are ordinary room-temperature liquids, others are effective viscosities for materials like glacier ice or the mantle that only flow over long timescales. Because viscosity changes strongly with temperature and composition, qualifiers matter here more than they do for many other scales.",
     "description_format": "markdown",
     "frontend_group": "materials",
@@ -645,7 +645,7 @@
     "quantity_kind": "viscosity",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 34,
+    "selected_count": 33,
     "selection_bin_count": 24,
     "slug": "viscosity",
     "status": "available"
@@ -674,7 +674,7 @@
   {
     "available": true,
     "base_unit": "newtons_per_meter",
-    "candidate_count": 43,
+    "candidate_count": 41,
     "description": "Surface tension is the energetic cost of creating more liquid surface, usually expressed as force per unit length. It is highly sensitive to temperature and contaminants, so these are representative values rather than immutable constants. This scale is useful for comparing cryogenic fluids, common liquids, and unusual high-tension metals.",
     "description_format": "markdown",
     "frontend_group": "materials",
@@ -687,7 +687,7 @@
     "quantity_kind": "surface_tension",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 43,
+    "selected_count": 41,
     "selection_bin_count": 24,
     "slug": "surface-tension",
     "status": "available"
@@ -737,7 +737,7 @@
   {
     "available": true,
     "base_unit": "pascals",
-    "candidate_count": 31,
+    "candidate_count": 23,
     "description": "Hardness here is treated pragmatically as indentation hardness expressed in pascals where possible. This is not a perfect universal property because Mohs, Vickers, Brinell, and other hardness scales emphasize different tests. Still, a pressure-like canonical scale makes the ordering of soft metals, glass, carbides, and diamond easier to compare logarithmically.",
     "description_format": "markdown",
     "frontend_group": "materials",
@@ -750,7 +750,7 @@
     "quantity_kind": "hardness",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 31,
+    "selected_count": 23,
     "selection_bin_count": 24,
     "slug": "hardness",
     "status": "available"
@@ -926,7 +926,7 @@
   {
     "available": true,
     "base_unit": "newton_meters",
-    "candidate_count": 42,
+    "candidate_count": 41,
     "description": "Torque measures rotational push: how strongly a force tries to twist something around an axis. This scale mixes microscopic rotary motors, hand tools, engines, and utility-scale machinery. Many values are representative operating torques rather than immutable constants, so the qualifiers and source notes matter.",
     "description_format": "markdown",
     "frontend_group": "motion",
@@ -939,7 +939,7 @@
     "quantity_kind": "torque",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 42,
+    "selected_count": 41,
     "selection_bin_count": 24,
     "slug": "torque",
     "status": "available"
@@ -989,7 +989,7 @@
   {
     "available": true,
     "base_unit": "radians_per_second",
-    "candidate_count": 42,
+    "candidate_count": 38,
     "description": "Angular velocity measures how fast something rotates. This scale connects orbital motion, clocks, household appliances, turbines, and compact stars. Many entries are converted from revolutions per minute or periods, so the derivations are intentionally exposed.",
     "description_format": "markdown",
     "frontend_group": "motion",
@@ -1002,7 +1002,7 @@
     "quantity_kind": "angular_velocity",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 42,
+    "selected_count": 38,
     "selection_bin_count": 24,
     "slug": "angular-velocity",
     "status": "available"
@@ -1031,7 +1031,7 @@
   {
     "available": true,
     "base_unit": "parts_per_billion_by_volume",
-    "candidate_count": 30,
+    "candidate_count": 29,
     "description": "This first-pass odor scale is not \u201chow smelly\u201d in the abstract. It is the airborne concentration of a named odorant, usually in parts per billion by volume, which makes the axis more objective and shareable. Perception still depends on chemistry and thresholds, so the named compound is part of the data, not a side note.",
     "description_format": "markdown",
     "frontend_group": "senses",
@@ -1044,7 +1044,7 @@
     "quantity_kind": "odor_concentration",
     "required_min_items": 24,
     "scale_mode": "log",
-    "selected_count": 30,
+    "selected_count": 29,
     "selection_bin_count": 24,
     "slug": "odor-concentration",
     "status": "available"

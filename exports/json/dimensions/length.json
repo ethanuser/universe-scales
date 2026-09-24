@@ -4,9 +4,11 @@
     "bin_count": 24,
     "candidate_count": 59,
     "candidate_shortfall_to_preferred_target": 1,
+    "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
     "preferred_max_items": 100,
     "preferred_target_items": 60,
+    "raw_candidate_count": 59,
     "required_min_items": 24,
     "selected_count": 59,
     "selected_primary_count": 19,
@@ -1219,60 +1221,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of domestic cats, perfectly sized predators that have adapted to live alongside humans. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The length of domestic cats, perfectly sized predators that have adapted to live alongside humans. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
-      "display_status": "display",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Cat Length",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "5e-2",
-          "source_url": "https://en.wikipedia.org/wiki/Cat"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-cat-length",
-      "name": "Cat Length",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Cat",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-cat",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Cat",
-          "url": "https://en.wikipedia.org/wiki/Cat"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "The length of domestic cats, perfectly sized predators that have adapted to live alongside humans.",
-      "value": 0.05,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "The wingspan of monarch butterflies, champions of long-distance migration. These insects travel up to 3,000 miles from Canada to Mexico, using the Sun's position and Earth's magnetic field for navigation. Their orange and black pattern warns predators of their toxicity, while their wings contain scales that create iridescent colors through light interference. Remarkably, the migration takes multiple generations to complete.",
       "description_format": "markdown",
       "description_long": null,
@@ -1321,6 +1269,60 @@
       ],
       "summary_short": "The wingspan of monarch butterflies, champions of long-distance migration.",
       "value": 0.1,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "From nose to rump, a typical domestic cat is about 46 cm long; its tail adds roughly another 30 cm. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "From nose to rump, a typical domestic cat is about 46 cm long; its tail adds roughly another 30 cm. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Cat Length",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.46",
+          "source_url": "https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-cat-length",
+      "name": "Cat Length",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-govinfo-gov-content-pkg-govpub-a101-purl-gpo173402-pdf-govpub-a101-purl-gpo173402-pdf",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.govinfo.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "GOVPUB-A101-PURL-gpo173402.pdf",
+          "url": "https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "From nose to rump, a typical domestic cat is about 46 cm long; its tail adds roughly another 30 cm.",
+      "value": 0.46,
       "value_type": "derived",
       "wikidata_qid": null
     },

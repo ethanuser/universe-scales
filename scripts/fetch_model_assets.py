@@ -661,6 +661,15 @@ def inspect_glb(data, sphere=False):
         if view["buffer"] != 0 or view.get("byteOffset", 0) + view["byteLength"] > declared:
             raise ValueError("Buffer view is out of bounds")
     primitives = [p for mesh in document["meshes"] for p in mesh["primitives"]]
+    def triangle_count(primitive):
+        accessor = primitive.get("indices", primitive["attributes"]["POSITION"])
+        count = document["accessors"][accessor]["count"]
+        mode = primitive.get("mode", 4)
+        if mode == 4:
+            return count // 3
+        if mode in (5, 6):
+            return max(0, count - 2)
+        return 0
     if sphere:
         for primitive in primitives:
             accessor = document["accessors"][primitive["attributes"]["POSITION"]]
@@ -679,7 +688,7 @@ def inspect_glb(data, sphere=False):
         "extensions_required": document.get("extensionsRequired", []),
         "decompression_required": [], "external_resources": [],
         "mesh_count": len(document["meshes"]),
-        "triangle_count": sum(document["accessors"][p["indices"]]["count"] // 3 for p in primitives),
+        "triangle_count": sum(triangle_count(p) for p in primitives),
         "animations": len(document.get("animations", [])), "skins": len(document.get("skins", [])),
     }
 
@@ -819,16 +828,24 @@ def build(update_lock=False, model_ids=None):
             local_files[relative] = {"path": relative, "sha256": sha(data), "bytes": len(data)}
     write_json(lock_path, {"schema_version": 1, "artifacts": list(ARTIFACTS.values()),
                            "local_files": list(local_files.values())})
-    # Preserve unrelated prior gap records, but remove the now-covered soda-can gap.
+    # Preserve unrelated prior gap records and remove exact names now covered by
+    # either this builder or supplementary importers.
     gaps = copy.deepcopy(GAPS)
     covered = {(dimension, name) for model in result for dimension, names in model["matches"].items() for name in names}
     for gap in existing.get("coverage_gaps", []):
         matches = {(dimension, name) for dimension, names in gap.get("matches", {}).items() for name in names}
         if gap not in gaps and not (matches and matches <= covered):
             gaps.append(gap)
+    for gap in gaps:
+        if "matches" in gap:
+            gap["matches"] = {dimension: [name for name in names if (dimension, name) not in covered]
+                              for dimension, names in gap["matches"].items()}
+    gaps = [gap for gap in gaps if "matches" not in gap or any(gap["matches"].values())]
+    build_info = {**existing.get("build", {}), "script": "scripts/fetch_model_assets.py",
+                  "pillow_version": PIL.__version__,
+                  "asset_lock": "content/visualizations/models/sources/downloads.json"}
     write_json(REGISTRY, {"schema_version": 1, "models": result, "coverage_gaps": gaps,
-                         "build": {"script": "scripts/fetch_model_assets.py", "pillow_version": PIL.__version__,
-                                   "asset_lock": "content/visualizations/models/sources/downloads.json"}})
+                         "build": build_info})
     verify()
 
 

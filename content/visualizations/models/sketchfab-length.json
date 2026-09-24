@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "sketchfab-water-molecule",
+      "name": "Water Molecule",
+      "uid": "e181944932084b5dbb4d5b625a5e9b10",
+      "author": "MehdiMM",
+      "license": "by",
+      "note": "Ball-and-stick illustration of H2O. Sphere radii and bond thickness are illustrative; the listed length is the molecular span."
+    },
+    {
+      "id": "sketchfab-glucose-molecule",
+      "name": "Glucose Molecule",
+      "uid": "2b4c96af7c0c41debf1bd654c1103a00",
+      "author": "brutebandit",
+      "license": "by",
+      "note": "Molecular illustration, not an electron-density surface. The longest visible axis is used as an approximate span."
+    },
+    {
+      "id": "sketchfab-dna-helix",
+      "name": "DNA Helix Width",
+      "uid": "6749915e7e1645a18b74a676d4f96eab",
+      "author": "TiSzma",
+      "license": "by",
+      "enabled": false,
+      "deferred_reason": "The item measures helix width, but the current renderer scales the model's longest axis.",
+      "note": "Illustrative double helix. The datum is helix width, whereas the renderer normally sizes a model by its longest axis; do not infer strand length from this display."
+    },
+    {
+      "id": "sketchfab-virus-capsid",
+      "name": "Virus",
+      "uid": "cd2c1e4cd2764cba9e64763fc068c362",
+      "author": "uuon_foundation",
+      "license": "by",
+      "note": "Icosahedral capsid as one recognizable virus form; viruses vary greatly in shape and diameter."
+    },
+    {
+      "id": "sketchfab-e-coli",
+      "name": "Bacteria",
+      "uid": "6e338e60bb6f496595b1d2a23f227e4a",
+      "author": "mnoerbrata10",
+      "license": "by",
+      "note": "Stylized exterior of E. coli, used as a representative bacterium; surface hairs and flagella are illustrative, and bacterial lengths vary by species and growth state."
+    },
+    {
+      "id": "sketchfab-red-blood-cell",
+      "name": "Red Blood Cell",
+      "uid": "1a1bbd5e3cd746888232fefa46b3f7d1",
+      "author": "elearning.imu",
+      "license": "by",
+      "note": "Biconcave red blood cell from an educational morphology model. The listed size refers to cell diameter."
+    },
+    {
+      "id": "sketchfab-mitochondrion",
+      "name": "Mitochondrion",
+      "uid": "7445a425050e49daa881070ca6917a91",
+      "author": "brianj.seely",
+      "license": "by",
+      "note": "Mitochondrial form varies across cells; this model is an illustrative example rather than a measured organelle."
+    },
+    {
+      "id": "sketchfab-neuron",
+      "name": "Neuron",
+      "uid": "d40557a1e4154267b78117433bc51296",
+      "author": "versal",
+      "license": "by",
+      "enabled": false,
+      "deferred_reason": "The item measures cell-body size, while this model includes long neuronal processes.",
+      "note": "Illustrative neuron. Neurons can have processes much longer than the local cell-body scale listed in the dataset."
+    },
+    {
+      "id": "sketchfab-black-ant",
+      "name": "Ant",
+      "uid": "54db3a0ee3c947168c7f3755ca684217",
+      "author": "3d-render.nl",
+      "license": "by",
+      "note": "Representative black ant; body lengths differ greatly among ant species."
+    },
+    {
+      "id": "sketchfab-housefly",
+      "name": "Housefly",
+      "uid": "2baa84955f704a4091a274ef4acec24a",
+      "author": "glowbox3d",
+      "license": "by",
+      "note": "Low-poly housefly model. Its longest mesh axis is only an approximate proxy for the listed body length."
+    },
+    {
+      "id": "sketchfab-butterfly-open",
+      "name": "Butterfly Wingspan",
+      "uid": "c147ba066f2b449d836cb73c6cebf663",
+      "author": "victorberdugo1",
+      "license": "by",
+      "replaces": "sketchfab-butterfly",
+      "note": "Open-wing monarch illustration. The wingtip-to-wingtip mesh extent represents the listed wingspan."
+    },
+    {
+      "id": "sketchfab-human-anatomical",
+      "name": "Human Height",
+      "uid": "15a422001834483c9750ce6117d59cc1",
+      "author": "Dessen",
+      "license": "by",
+      "replaces": "sketchfab-human-scan",
+      "note": "Neutral-pose human anatomy study. The mesh is normalized to the representative 1.7 m height, not presented as a measurement of the artist's reference."
+    },
+    {
+      "id": "sketchfab-domestic-cat",
+      "name": "Cat Length",
+      "uid": "baa1120483c844e6bce9744f3f868c63",
+      "author": "rt699448",
+      "license": "by",
+      "replaces": "cat",
+      "enabled": true,
+      "note": "User-selected domestic cat; the 46 cm dataset length is nose to rump and excludes the visible tail. The modeled body is estimated as 84% of the source mesh's longest bound."
+    },
+    {
+      "id": "sketchfab-giraffe",
+      "name": "Giraffe Height",
+      "uid": "522c042aad9f4348a74c2985ec3f99f9",
+      "author": "BlueMesh",
+      "license": "by",
+      "note": "Representative standing giraffe. The model is scaled by height, not claimed to depict a measured individual."
+    },
+    {
+      "id": "sketchfab-blue-whale",
+      "name": "Blue Whale",
+      "uid": "d24d19021c724c3a9134eebcb76b0e0f",
+      "author": "ostapblendercg",
+      "license": "by",
+      "note": "Textured adult blue-whale illustration, selected for a recognizable side silhouette. The dataset value is a representative body length."
+    },
+    {
+      "id": "sketchfab-eiffel-tower-v2",
+      "name": "Eiffel Tower",
+      "uid": "8553f94d06e24cb4b0fde1080f281674",
+      "author": "Lambo_SC04",
+      "license": "by",
+      "replaces": "sketchfab-eiffel-tower",
+      "enabled": true,
+      "note": "User-selected lattice Eiffel Tower; vertical mesh height represents the listed 330 m landmark height."
+    },
+    {
+      "id": "sketchfab-burj-khalifa",
+      "name": "Burj Khalifa",
+      "uid": "59e6dd74e5f647158de568b5a7f9cab7",
+      "author": "noears6",
+      "license": "by",
+      "note": "Architectural illustration of Burj Khalifa. The listed dimension is total building height."
+    }
+  ]
+}

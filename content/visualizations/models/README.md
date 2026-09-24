@@ -1,7 +1,8 @@
 # Downloaded 3D Models
 
-Six real, freely reusable source models are downloaded and adapted here, not
-replaced with generated stand-ins. The runtime registry is `../models.json`.
+The runtime registry is `../models.json`. The existing models are downloaded
+source assets, not generated stand-ins. The Length Sketchfab candidate list is
+`sketchfab-length.json`; it does not imply that every candidate has been imported.
 Paths in its `src` field are relative to the site root. All models are binary
 glTF 2.0 (`.glb`) with embedded textures and buffers. No Draco, Meshopt, Basis/KTX2,
 USDZ conversion, external textures, or decompression setup is required.
@@ -14,11 +15,96 @@ USDZ conversion, external textures, or decompression setup is required.
 | `nasa-sun.glb` | [NASA Sun](https://science.nasa.gov/learn/heat/resource/sun-3d-model/) | NASA media guidelines | Unit sphere |
 | `wine-bottle.glb` | [Poly Haven Wine Bottles 01](https://polyhaven.com/a/wine_bottles_01) | CC0-1.0 | Single Bordeaux bottle |
 | `rigged-human.glb` | [Khronos Rigged Figure](https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/RiggedFigure) | CC-BY-4.0 | Static human bind-pose derivative |
+| `coffee-mug.glb` | [Kenney Food Kit](https://kenney.nl/assets/food-kit) | CC0-1.0 | Representative cup |
+| `soda-can.glb` | [Kenney Food Kit](https://kenney.nl/assets/food-kit) | CC0-1.0 | Soda can |
+| `cat.glb` | [Quaternius via Poly Pizza](https://poly.pizza/m/qKICY6xla2) | CC0-1.0 | Stylized cat |
+| `ceiling-fan.glb` | [Poly Haven Ceiling Fan](https://polyhaven.com/a/ceiling_fan) | CC0-1.0 | Fan with separate blades |
+
+## Sketchfab Length Imports
+
+The public search API can find candidates without authentication. The curated
+manifest pins each candidate's exact Length item name, Sketchfab UID, creator,
+license, and interpretation note. Some entries remain deferred pending geometry
+or editorial review. Fourteen imported Sketchfab Length models total about
+11.75 MB; the largest delivered GLB is 2.11 MB. Audit candidate identity and
+licensing before importing:
+
+```sh
+SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/sketchfab_models.py audit
+SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/sketchfab_models.py search 'monarch butterfly'
+```
+
+To choose a model yourself, generate a shortlist in a directory separate from
+your token file. The review page shows thumbnails, a live rotatable Sketchfab
+preview, creator, license, source archive size (when publicly listed), and mesh
+face count. It does not download a model or change the site:
+
+```sh
+SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/sketchfab_models.py review \
+  --id sketchfab-domestic-cat --query 'cat' --query 'Bengal Cat' \
+  --output /private/tmp/universe-scales-review/cat.html
+python3 -m http.server 8123 --bind 127.0.0.1 \
+  --directory /private/tmp/universe-scales-review
+```
+
+Open `http://127.0.0.1:8123/cat.html`, inspect several candidates from all
+sides, then use **Copy approval command** and paste it into a terminal. The
+generated command uses absolute paths, so it works from any directory on this
+macOS host. You can
+also add a known candidate with `--uid UID` when search misses it. Approval
+updates only the curated manifest; import is a separate step. The currently
+selected [cat](https://sketchfab.com/3d-models/cat-in-motion-3d-model-free-baa1120483c844e6bce9744f3f868c63)
+and [Eiffel Tower](https://sketchfab.com/3d-models/free-la-tour-eiffel-8553f94d06e24cb4b0fde1080f281674)
+are imported and optimized. For another approved model, run `import --only ID`
+with your private token file and inspect the result locally before publishing. The importer
+replaces the previous exact-name match only after the new asset passes checks.
+
+Sketchfab's Download API requires your account's API token. On Sketchfab, open
+**My Settings > Password** to find it. Save the token as a single line in a file
+outside the repository, for example
+`~/.config/universe-scales/sketchfab-token`, and restrict that file to your user
+(`chmod 600`). Never commit or paste it into an issue or chat. Import with:
+
+```sh
+SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/sketchfab_models.py import \
+  --token-file ~/.config/universe-scales/sketchfab-token
+python3 scripts/fetch_model_assets.py --verify
+```
+
+The import script requests a fresh short-lived URL for each approved model,
+embeds its glTF resources in a GLB, discards unused animations for the static
+Length explorer, and resizes textures to at most 512 pixels,
+retrying at 256 and 128 pixels if the delivered file exceeds the size cap.
+Default limits are 15 MB per source archive, 2 MB per delivered GLB, and 20 MB
+for the batch. Unsupported decoders, unsuitable licenses, changed author
+identities, mismatched names, and over-budget files are rejected. Import is
+idempotent for names already in the registry. The site only loads a matching
+model when needed; visitors do not need Sketchfab accounts.
+
+The chosen cat's source exceeded the default limits, so it and the tower were
+first staged with larger import limits, then simplified, texture-resized, and
+quantized with glTF Transform 4.5.0. Their delivered sizes are 1.52 MB and
+2.11 MB. The registry records the exact source and delivered hashes and
+processing steps. For future replacements, inspect the staged size before
+raising `--max-archive-mb`, `--max-glb-mb`, or `--max-total-mb`; an import with
+raised limits is not ready to publish until optimized and revalidated. The
+optimized files use `KHR_mesh_quantization`, which the bundled GLTFLoader
+handles without an external decoder.
+
+The renderer links the model creator's Sketchfab page and license beside the
+selected item's description. The registry preserves the model UID, source
+archive hash, processing steps, delivered hash, and file size. The token and
+expiring download URLs are not saved. Review the imported geometry in the
+explorer, then regenerate `validation.json` with the Khronos validator below.
+The current Sketchfab GLBs have zero Khronos validator errors. The Giraffe and
+Blue Whale source rigs retain many zero-weight-joint warnings; they are rendered
+as static models, and their source animations were discarded.
 
 ## Renderer Contract
 
-- `matches` contains case-sensitive names verified against the three JSON exports.
-  There are 13 matches: four length, four area, and five volume entries.
+- `matches` contains case-sensitive names verified against the JSON exports.
+  The current baseline registry has 20 exact-name matches across several dimensions;
+  successful Sketchfab imports add Length matches to the same registry.
 - NASA geometry is explicitly adapted to centered unit spheres, including removal
   of the source bodies' oblateness and the Sun's 1000x node scale. Original
   topology, UVs, material roles, and texture orientation are retained. Source
@@ -28,6 +114,13 @@ USDZ conversion, external textures, or decompression setup is required.
   `sqrt(area / (4 * Math.PI))` for a total-surface-area item, and `diameter / 2`
   for a diameter item. If the renderer first normalizes largest extent to 1,
   its input size must be the resulting **diameter**, not radius.
+- For Length models, `presentation.measure_axis` can pin which mesh bound
+  represents the recorded value (for example, height for a giraffe or tower).
+  The default is the longest bound. `presentation.measure_fraction` can
+  calibrate a known measured part of that bound, such as the cat's body excluding
+  its tail; this remains an illustrative estimate. A default pose and removable non-subject
+  scene nodes are also declared in `presentation`; these change the display,
+  not the source GLB. Dragging a model rotates it independently of camera travel.
 - For `geometry: "mesh"`, use the application's same cubic-linear equivalent
   approximation. Neither human nor bottle has a checked, calibrated closed
   volume. Bottle capacity is not glass volume; the human is not an anatomical

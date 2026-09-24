@@ -25,17 +25,41 @@
             return data;
         }).catch(() => null);
     }
-    function navigation(ctx, order, zoom, render, layoutOptions = () => ({})) {
+    const mix = (a, b, amount) => a.map((value, index) =>
+        Math.round(value + (b[index] - value) * clamp(amount, 0, 1))
+    );
+    function ramp(value, stops) {
+        if (value <= stops[0][0]) return stops[0][1];
+        for (let index = 1; index < stops.length; index++) {
+            if (value <= stops[index][0]) {
+                const [startAt, startColor] = stops[index - 1];
+                const [endAt, endColor] = stops[index];
+                return mix(startColor, endColor, (value - startAt) / (endAt - startAt));
+            }
+        }
+        return stops.at(-1)[1];
+    }
+    function navigation(ctx, order, zoom, render, layoutOptions = () => ({}), interaction = {}) {
         ctx.comparison.hidden = true;
         ctx.updateComparison = () => {};
         const camera = new ScaleJourney.Camera(zoom.value, Number(zoom.input.min), Number(zoom.input.max));
         const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-        let frame, previousTime, disposed = false;
+        let frame, previousTime, disposed = false, explicitFocusIndex = null;
+        let explicitFocusExponent = null, explicitFocusWindow = 0.3;
         const apply = () => {
             zoom.set(camera.value);
             const options = layoutOptions();
-            const entries = ScaleJourney.layout(ctx.items,camera.value*(options.exponentFactor??1),options.order??order,options);
-            const index = entries.reduce((best,p)=>Math.abs(p.x-500)<Math.abs(entries[best].x-500)?p.index:best,0);
+            const entries = ScaleJourney.layout(ctx.items,camera.value*(options.exponentFactor??1),options.order??order,
+                {...options, focusIndex: explicitFocusIndex,
+                    focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow});
+            const focusEntries = options.maxFocusSize
+                ? entries.filter(entry => entry.visible && entry.size <= options.maxFocusSize)
+                : entries;
+            const focusPool = focusEntries.length ? focusEntries : entries;
+            const focused = focusPool.reduce((best,entry) =>
+                Math.abs(entry.x-500) < Math.abs(best.x-500) ? entry : best
+            , focusPool[0]);
+            const index = focused.index;
             if (index !== ctx.index) ctx.focus(index, false);
             render();
         };
@@ -47,7 +71,12 @@
             frame = moving ? requestAnimationFrame(animate) : null;
             if (!moving) previousTime = null;
         };
-        const aim = value => {
+        const aim = (value, focusIndex, focusWindow = 0.3) => {
+            if (focusIndex != null) {
+                explicitFocusIndex = focusIndex;
+                explicitFocusExponent = value;
+                explicitFocusWindow = focusWindow;
+            }
             camera.aim(value);
             if (reduceMotion.matches) { camera.snap(value); apply(); }
             else if (!frame) frame = requestAnimationFrame(animate);
@@ -60,12 +89,14 @@
         ctx.stageFrame.addEventListener('wheel', e => {
             e.preventDefault();
             const pixels = (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 400 : 1);
-            move(clamp(pixels * 0.0015, -0.4, 0.4));
+            move(clamp(pixels * 0.00045, -0.16, 0.16));
         }, { passive: false });
-        let previous, dragged = 0, velocity = 0, movedAt = 0;
+        let previous, previousY, dragged = 0, velocity = 0, movedAt = 0, rotating = null;
         ctx.stageFrame.addEventListener('pointerdown', e => {
-            if (e.button !== 0) return;
-            previous = e.clientX; dragged = 0; velocity = 0; movedAt = e.timeStamp;
+            if (e.button !== 0 || e.target.closest('.experience-camera-slider')) return;
+            rotating = interaction.pick?.(e.clientX, e.clientY) || null;
+            if (rotating) interaction.beginRotate?.(rotating);
+            previous = e.clientX; previousY = e.clientY; dragged = 0; velocity = 0; movedAt = e.timeStamp;
             camera.aim(camera.value);
             e.preventDefault();
             ctx.stageFrame.classList.add('is-dragging');
@@ -73,47 +104,75 @@
         ctx.stageFrame.addEventListener('pointermove', e => {
             if (previous == null) return;
             const delta = previous - e.clientX; previous = e.clientX;
-            dragged += Math.abs(delta);
+            const deltaY = e.clientY - previousY; previousY = e.clientY;
+            dragged += Math.hypot(delta, deltaY);
             const dt = Math.max(8, e.timeStamp - movedAt) / 1000;
             movedAt = e.timeStamp;
-            velocity = 0.65 * velocity + 0.35 * delta * 0.004 / dt;
+            if (!rotating) velocity = 0.65 * velocity + 0.35 * delta * 0.0012 / dt;
             if (dragged > 5) {
                 ctx.stageFrame.setPointerCapture(e.pointerId);
-                move(delta * 0.004); e.preventDefault();
+                if (rotating) interaction.rotate?.(rotating, -delta, deltaY);
+                else move(delta * 0.0012);
+                e.preventDefault();
             }
         });
         const release = e => {
             if (previous == null) return;
             previous = null;
-            if (e.type === 'pointerup' && dragged > 5 && e.timeStamp - movedAt < 100) move(clamp(velocity * 0.16, -0.6, 0.6));
+            if (!rotating && e.type === 'pointerup' && dragged > 5 && e.timeStamp - movedAt < 100) move(clamp(velocity * 0.16, -0.6, 0.6));
+            if (rotating) interaction.releaseRotate?.(rotating);
+            rotating = null;
             if (ctx.stageFrame.hasPointerCapture(e.pointerId)) ctx.stageFrame.releasePointerCapture(e.pointerId);
             ctx.stageFrame.classList.remove('is-dragging');
         };
         for (const event of ['pointerup', 'pointercancel', 'lostpointercapture']) ctx.stageFrame.addEventListener(event, release);
         ctx.stageFrame.addEventListener('pointerleave', e => { if (!ctx.stageFrame.hasPointerCapture(e.pointerId)) release(e); });
         ctx.stageFrame.addEventListener('dragstart', e => e.preventDefault());
-        ctx.stageFrame.addEventListener('click', e => { if (dragged > 5) { e.preventDefault(); e.stopPropagation(); dragged = 0; } }, true);
+        ctx.stageFrame.addEventListener('click', e => {
+            if (dragged > 5) { e.preventDefault(); e.stopPropagation(); dragged = 0; return; }
+            const picked = interaction.pick?.(e.clientX, e.clientY);
+            if (picked) { e.preventDefault(); e.stopPropagation(); ctx.focus(ctx.items.indexOf(picked)); }
+        }, true);
         ctx.stageFrame.style.touchAction = 'pan-y';
         ctx.stageFrame.tabIndex = 0;
-        ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag or use arrow keys to zoom.');
+        ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use arrow keys.');
         ctx.stageFrame.addEventListener('keydown', e => { if (['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); move(e.key === 'ArrowRight' ? 0.15 : -0.15); } });
         return { update: () => { ctx.updateComparison(); }, frameTo: aim,
+            focusOptions: () => ({focusIndex: explicitFocusIndex,
+                focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow}),
             dispose: () => { disposed = true; cancelAnimationFrame(frame); delete ctx.updateComparison; } };
     }
     R.spatial = ctx => {
         const order = { length: 1, area: 2, volume: 3 }[ctx.dimension];
         const zoom = ctx.zoomControl(order, 'Travel through scale');
-        let yaw = 0.25, land, modelStage, disposed = false;
-        const widthFactor = item => order===2 && /cross-section|surface area|disk|boundary/i.test(item.name) ? 2/Math.sqrt(Math.PI)
-            : order===2 && item.name==='Earth surface area' ? 1.6
-            : modelStage?.entry(item) ? 1.5*(order===3&&modelStage.entry(item).geometry==='sphere'?Math.cbrt(6/Math.PI):1) : 1;
-        const navigationControl = navigation(ctx, order, zoom, render, () => ({widthFactor}));
+        zoom.input.min = ScaleJourney.frameExponent(ctx.items, 0, order);
+        zoom.input.max = ScaleJourney.frameExponent(ctx.items, ctx.items.length - 1, order);
+        zoom.set(clamp(zoom.value, Number(zoom.input.min), Number(zoom.input.max)));
+        zoom.input.setAttribute('aria-label', 'Scale camera');
+        let land, modelStage, disposed = false;
+        const widthFactor = item => {
+            if (order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)) return 2 / Math.sqrt(Math.PI);
+            if (order === 2 && item.name === 'Earth surface area') return 1.6;
+            const model = modelStage?.entry(item);
+            if (!model) return 1;
+            return (model.presentation?.layout_width_factor ?? 1) *
+                (order === 3 && model.geometry === 'sphere' ? Math.cbrt(6 / Math.PI) : 1);
+        };
+        const navigationControl = navigation(ctx, order, zoom, render, () => ({widthFactor}), {
+            pick: (x, y) => modelStage?.pick(x, y),
+            beginRotate: item => modelStage?.beginRotate(item),
+            rotate: (item, dx, dy) => modelStage?.rotate(item, dx, dy),
+            releaseRotate: item => modelStage?.releaseRotate(item)
+        });
         ctx.host.classList.add('experience--spatial');
         ctx.live.hidden = true;
         const ruler = dom('div', 'experience-corner-ruler');
         const rulerLine = dom('span');
-        const rulerLabel = dom('span');
-        ruler.append(rulerLine, rulerLabel); ctx.stageFrame.append(ruler);
+        const rulerLabel = dom('span', 'experience-corner-ruler__label');
+        ruler.append(rulerLine, rulerLabel);
+        zoom.element.classList.add('experience-camera-slider');
+        zoom.output.hidden = true;
+        ctx.stageFrame.append(ruler, zoom.element);
         const attachModels = () => {
             if (disposed || modelStage || !root.ScaleModels) return;
             modelStage = new ScaleModels.ModelStage(ctx, render); render();
@@ -123,29 +182,54 @@
         if (order === 2) world().then(data => { land = data; if (!disposed) render(); });
         function render() {
             if (disposed) return;
-            ctx.stage.replaceChildren(); modelStage?.begin();
+            ctx.stage.replaceChildren(); modelStage?.begin(zoom.value);
             const view = viewport(ctx);
-            const blend = (a,b,t) => a.map((v,i)=>Math.round(v+(b[i]-v)*clamp(t,0,1)));
-            const sky = zoom.value<1 ? blend([250,252,255],[162,214,250],(zoom.value+3)/4)
-                : zoom.value<7 ? blend([162,214,250],[71,151,212],(zoom.value-1)/6)
-                : blend([71,151,212],[4,11,29],(zoom.value-7)/6);
-            const fg = zoom.value < 8 ? 25 : 235;
-            ctx.stageFrame.style.background = `radial-gradient(ellipse at 35% 35%,rgb(${sky.join(',')}),rgb(${sky.map(v=>Math.max(0,v-8)).join(',')}))`;
-            ctx.stage.style.color = `rgb(${fg},${fg},${fg})`;
+            const sky = ramp(zoom.value, [
+                [-4, [255, 255, 255]],
+                [1.2, [250, 253, 255]],
+                [2.2, [171, 220, 248]],
+                [6.6, [74, 154, 218]],
+                [7.25, [31, 79, 134]],
+                [8.5, [8, 23, 47]],
+                [10.5, [2, 6, 16]]
+            ]);
+            const fg = ramp(zoom.value, [
+                [-4, [22, 29, 36]],
+                [5.9, [22, 29, 36]],
+                [6.35, [255, 220, 24]],
+                [7.15, [255, 239, 116]],
+                [7.75, [248, 250, 255]]
+            ]);
+            const edgeSky = zoom.value <= -3 ? sky : sky.map(value => Math.max(0, value - 8));
+            ctx.stageFrame.style.background = `radial-gradient(ellipse at 35% 35%,rgb(${sky.join(',')}),rgb(${edgeSky.join(',')}))`;
+            ctx.stage.style.color = `rgb(${fg.join(',')})`;
+            ctx.stage.style.setProperty('--journey-label-halo', `rgb(${sky.join(',')})`);
             ruler.style.color = ctx.stage.style.color;
-            const entries = ScaleJourney.layout(ctx.items, zoom.value, order, {...view,widthFactor});
+            // Keep nearby offscreen objects mounted so the SVG viewport, rather than
+            // JavaScript culling, controls the exact moment they cross an edge.
+            const entries = ScaleJourney.layout(ctx.items, zoom.value, order, {
+                ...view,
+                widthFactor,
+                ...navigationControl.focusOptions(),
+                overscan: view.width * 0.75
+            });
             const labels = [];
             let renderedModels = 0;
             let clipped = false;
-            entries.filter(p => p.visible).forEach(({item, x, y, size}) => {
-                if (size * view.scale < 0.2) return;
+            entries.filter(entry => entry.visible).forEach(({item, x, y, size}) => {
                 const entry = modelStage?.entry(item);
                 // A sphere's diameter differs from the cube root of its volume.
                 const visualSize = order === 3 && entry?.geometry === 'sphere' ? size * Math.cbrt(6 / Math.PI) : size;
-                const extent = order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name) ? size * 2/Math.sqrt(Math.PI) : visualSize;
+                const modelExtent = entry?.presentation?.display_extent_factor ?? 1;
+                const extent = order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)
+                    ? size * 2/Math.sqrt(Math.PI) : visualSize * modelExtent;
                 clipped ||= y - extent < 0 || x - extent/2 < view.left || x + extent/2 > view.left + view.width;
-                const g = ctx.object(ctx.stage, item, x, y, visualSize, visualSize, { image: false });
-                const isModel = order !== 2 && modelStage?.draw(item, x, y, visualSize, yaw);
+                const g = ctx.object(ctx.stage, item, x, y, extent, extent, { image: false });
+                if (order !== 2 && entry) {
+                    g.dataset.modelIndex = ctx.items.indexOf(item);
+                    g.style.pointerEvents = 'none';
+                }
+                const isModel = order !== 2 && modelStage?.draw(item, x, y, visualSize);
                 if (isModel) renderedModels++;
                 else if (order === 2 && item.name === 'Earth surface area' && land) {
                     const projection = d3.geoEqualEarth().scale(1).translate([0, 0]);
@@ -161,32 +245,63 @@
                         const circular = /cross-section|surface area|disk|boundary/i.test(item.name);
                         if (circular) g.append(svg('circle', { cx:x, cy:y-size/Math.sqrt(Math.PI), r:size/Math.sqrt(Math.PI), class:'shape' }));
                         else g.append(svg('rect', { x:x-size/2,y:y-size,width:size,height:size,class:'shape',rx:2 }));
+                    } else if (!src) {
+                        g.append(svg('circle', { cx:x,cy:y-size/2,r:size/2,class:'shape' }));
                     }
                     if (src) g.append(svg('image', { href:src, x:x-size/2,y:y-size,width:size,height:size,
-                        preserveAspectRatio:'xMidYMax meet', opacity:order===2?0.6:1 }));
-                    else if (order !== 2) g.append(svg('circle', { cx:x,cy:y-size/2,r:size/2,class:'shape' }));
+                        preserveAspectRatio:'xMidYMax meet' }));
                 }
-                const fontSize = 20 * size / 200;
-                if (fontSize * view.scale > 0.5) {
+                const fontSize = 19 * extent / ScaleJourney.BASE_SIZE;
+                if (fontSize * view.scale > 0.08) {
                     const text = svg('text',{x,y:y+fontSize*1.8,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px`},item.name);
                     labels.push(text);
                 }
             });
             ctx.stage.append(...labels);
-            modelStage?.finish();
-            rulerLine.style.width = `${200 * view.scale}px`;
-            rulerLabel.textContent = `${number(power(zoom.value))} m`;
+            modelStage?.finish(zoom.value);
+            const rulerWidth = 112;
+            const rulerValue = power(zoom.value) * rulerWidth / (ScaleJourney.BASE_SIZE * view.scale);
+            rulerLine.style.width = `${rulerWidth}px`;
+            rulerLabel.innerHTML = `${ctx.app.formatNumber(rulerValue, 2, true)} m`;
             ctx.caption.textContent = order === 1
                 ? 'All objects share a continuous camera. The ruler and image span use the listed length; image framing is approximate. Spacing is arranged for reading, not physical distance. Distances, radii and object diameters retain their dataset definitions. Downloaded models are used when available.'
                 : order === 2
                 ? 'Outlined disks or squares have the listed area; photos identify the subject and do not define its outline. Earth uses an Equal Earth map whose entire footprint includes land and ocean. This is a continuous area journey, not a geographic map. Model/photo sources and geometry conventions are documented with the assets.'
                 : 'Downloaded spherical models are sized using diameter = (6V/pi)^(1/3). Non-spherical models and photos use an equivalent-volume span V^(1/3), not a measured physical outline or mesh volume. A bottle capacity is not the volume of its glass. Object spacing is editorial, not a real spatial distribution.';
+            if (modelStage?.entry(ctx.item)?.procedural) ctx.caption.textContent += ` ${modelStage.entry(ctx.item).note}`;
             ctx.attribution.replaceChildren();
             const current = modelStage?.entry(ctx.item);
-            if (current) { const a=dom('a','',`3D: ${current.author} · ${current.license}`); a.href=current.source;a.target='_blank';a.rel='noopener noreferrer';ctx.attribution.append(a); }
+            if (current?.procedural) {
+                ctx.attribution.append(document.createTextNode('Procedural 3D illustration'));
+                if (current.basis_url) {
+                    const basis = dom('a', '', current.basis_label || 'Orbital basis: MIT OpenCourseWare');
+                    basis.href = current.basis_url;
+                    basis.target = '_blank';
+                    basis.rel = 'noopener noreferrer';
+                    ctx.attribution.append(document.createTextNode(' · '), basis);
+                }
+            } else if (current) {
+                const source = dom('a', '', `3D model: ${current.author}`);
+                source.href = current.source;
+                source.target = '_blank';
+                source.rel = 'noopener noreferrer';
+                const license = dom('a', '', current.license);
+                license.href = current.license_url;
+                license.target = '_blank';
+                license.rel = 'noopener noreferrer';
+                ctx.attribution.append(source, document.createTextNode(' · '), license);
+                if (current.sketchfab_uid) ctx.attribution.append(document.createTextNode(' · adapted for web'));
+            }
             navigationControl.update();
         }
-        return { render, focus: frame => { if (frame) navigationControl.frameTo(ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor})); },
+        return { render, focus: frame => {
+            if (frame) {
+                const presentation = modelStage?.entry(ctx.item)?.presentation || {};
+                const exponent = ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor}) +
+                    Math.log10(presentation.focus_scale_factor || 1);
+                navigationControl.frameTo(exponent, ctx.index, presentation.focus_scale_factor ? 1 : 0.3);
+            }
+        },
             dispose: () => { disposed=true; ctx.host.classList.remove('experience--spatial'); modelStage?.dispose(); window.removeEventListener('scale-models-ready',attachModels); navigationControl.dispose(); } };
     };
     function board(parent, x, y, width, seed) {

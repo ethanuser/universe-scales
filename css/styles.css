@@ -217,7 +217,15 @@ select:focus {
 }
 
 .dimension-browser-toggle__chevron {
-    font-size: 0.9rem;
+    width: 0;
+    height: 0;
+    flex: 0 0 auto;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid currentColor;
+    font-size: 0;
+    line-height: 0;
+    transform-origin: center;
     transition: transform 0.2s ease;
 }
 

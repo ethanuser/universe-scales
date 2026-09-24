@@ -220,15 +220,15 @@ items:
   name: Ant
   source: https://en.wikipedia.org/wiki/Ant
   value: 5e-3
-- description: The length of domestic cats, perfectly sized predators that
-    have adapted to live alongside humans. Cats are obligate carnivores
+- description: From nose to rump, a typical domestic cat is about 46 cm long;
+    its tail adds roughly another 30 cm. Cats are obligate carnivores
     with retractable claws and exceptional night vision. They can rotate
     their ears 180 degrees and hear frequencies up to 65 kHz, far beyond
     human hearing. Remarkably, cats purr at frequencies that promote
     bone healing, and they spend 12-16 hours per day sleeping.
   name: Cat Length
-  source: https://en.wikipedia.org/wiki/Cat
-  value: 5e-2
+  source: https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf
+  value: 4.6e-1
 - description: The length of houseflies, masterful fliers that can hover,
     fly backwards, and perform aerial acrobatics. Their compound eyes
     contain 4,000 lenses and can detect movement 10 times faster than

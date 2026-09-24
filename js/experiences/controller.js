@@ -169,33 +169,93 @@
             this.logButton?.setAttribute('aria-pressed', String(!this.active));
             if (this.active) this.mount();
             else {
+                this.toolbarCleanup?.();
+                this.toolbarCleanup = null;
                 this.renderer = null;
                 if (wasActive) this.app.resizePlot();
             }
         }
         mount() {
+            this.toolbarCleanup?.();
             this.host.replaceChildren();
             this.images.clear();
             const toolbar = dom('div', 'experience-toolbar');
-            const label = dom('label', 'experience-picker', 'Explore');
-            this.select = dom('select', 'experience-select');
-            this.select.setAttribute('aria-label', 'Explore an item');
+            const picker = dom('div', 'experience-picker');
+            const pickerLabel = dom('span', 'experience-picker__label', 'Explore');
+            this.select = dom('select', 'experience-select sr-only');
+            this.select.tabIndex = -1;
+            this.select.setAttribute('aria-hidden', 'true');
             this.items.forEach((item, index) => {
                 const option = dom('option', '', item.name);
                 option.value = index;
                 this.select.append(option);
             });
             this.select.value = this.index;
-            this.select.addEventListener('change', () =>
-                this.focus(Number(this.select.value))
-            );
-            label.append(this.select);
-            toolbar.append(label);
-            const info = dom('details', 'experience-info');
-            const summary = dom('summary', '', 'i');
-            summary.setAttribute('aria-label', 'How this visualization works');
-            summary.title = 'How this visualization works';
-            info.append(summary);
+            this.pickerToggle = dom('button', 'experience-picker-toggle');
+            this.pickerToggle.type = 'button';
+            this.pickerToggle.setAttribute('aria-expanded', 'false');
+            this.pickerToggle.setAttribute('aria-controls', 'experience-picker-panel');
+            this.pickerCurrent = dom('span', '', this.item.name);
+            this.pickerToggle.append(this.pickerCurrent, dom('span', 'dimension-browser-toggle__chevron', '▾'));
+            this.pickerPanel = dom('div', 'experience-picker-panel');
+            this.pickerPanel.id = 'experience-picker-panel';
+            this.pickerPanel.hidden = true;
+            const search = dom('input', 'experience-picker-search');
+            Object.assign(search, { type: 'search', placeholder: 'Search items', autocomplete: 'off', spellcheck: false });
+            search.setAttribute('aria-label', 'Search items');
+            const options = dom('div', 'experience-picker-options');
+            this.pickerButtons = this.items.map((item, index) => {
+                const option = dom('button', 'experience-picker-option', item.name);
+                option.type = 'button';
+                option.dataset.search = item.name.toLocaleLowerCase();
+                option.addEventListener('click', () => {
+                    this.focus(index);
+                    closePicker();
+                });
+                options.append(option);
+                return option;
+            });
+            this.pickerEmpty = dom('p', 'experience-picker-empty', 'No items match that search.');
+            this.pickerEmpty.hidden = true;
+            this.pickerPanel.append(search, options, this.pickerEmpty);
+            picker.append(pickerLabel, this.pickerToggle, this.select, this.pickerPanel);
+            toolbar.append(picker);
+            const closePicker = () => {
+                this.pickerPanel.hidden = true;
+                this.pickerToggle.classList.remove('is-open');
+                this.pickerToggle.setAttribute('aria-expanded', 'false');
+                search.value = '';
+                this.pickerButtons.forEach(option => option.hidden = false);
+                this.pickerEmpty.hidden = true;
+            };
+            const openPicker = () => {
+                this.pickerPanel.hidden = false;
+                this.pickerToggle.classList.add('is-open');
+                this.pickerToggle.setAttribute('aria-expanded', 'true');
+                search.focus();
+            };
+            this.pickerToggle.addEventListener('click', () => this.pickerPanel.hidden ? openPicker() : closePicker());
+            search.addEventListener('input', () => {
+                const query = search.value.trim().toLocaleLowerCase();
+                let matches = 0;
+                this.pickerButtons.forEach(option => {
+                    option.hidden = Boolean(query) && !option.dataset.search.includes(query);
+                    if (!option.hidden) matches++;
+                });
+                this.pickerEmpty.hidden = matches !== 0;
+            });
+            const info = dom('div', 'experience-info');
+            const infoButton = dom('button', 'experience-info__button', 'i');
+            infoButton.type = 'button';
+            infoButton.setAttribute('aria-label', 'How this visualization works');
+            infoButton.setAttribute('aria-expanded', 'false');
+            const infoPanel = dom('div', 'experience-info__panel');
+            infoPanel.setAttribute('role', 'tooltip');
+            infoButton.addEventListener('click', () => {
+                const open = info.classList.toggle('is-open');
+                infoButton.setAttribute('aria-expanded', String(open));
+            });
+            info.append(infoButton, infoPanel);
             this.previous = button(toolbar, 'Previous', () =>
                 this.focus(this.index - 1)
             );
@@ -218,7 +278,7 @@
             this.live = dom('p', 'experience-live');
             this.settings = dom('div', 'experience-settings');
             this.attribution = dom('div', 'experience-attribution');
-            info.append(this.caption, this.attribution);
+            infoPanel.append(this.caption, this.attribution);
             toolbar.append(info);
             this.stageFrame = dom('div', 'experience-stage-frame');
             this.stageFrame.append(this.stage);
@@ -232,6 +292,26 @@
             this.detail.setAttribute('aria-label', 'Selected item description');
             body.append(visual, this.detail);
             this.host.append(toolbar, body);
+            const outside = (event) => {
+                if (!picker.contains(event.target)) closePicker();
+                if (!info.contains(event.target)) {
+                    info.classList.remove('is-open');
+                    infoButton.setAttribute('aria-expanded', 'false');
+                }
+            };
+            const escape = (event) => {
+                if (event.key !== 'Escape') return;
+                closePicker();
+                info.classList.remove('is-open');
+                infoButton.setAttribute('aria-expanded', 'false');
+                this.pickerToggle.focus();
+            };
+            document.addEventListener('pointerdown', outside);
+            document.addEventListener('keydown', escape);
+            this.toolbarCleanup = () => {
+                document.removeEventListener('pointerdown', outside);
+                document.removeEventListener('keydown', escape);
+            };
             this.clock.reset();
             this.renderer = ScaleRenderers[this.config[1]](this);
             this.focus(this.index);
@@ -239,6 +319,11 @@
         focus(index, frame = true) {
             this.index = clamp(index, 0, this.items.length - 1);
             this.select.value = this.index;
+            if (this.pickerCurrent) this.pickerCurrent.textContent = this.item.name;
+            this.pickerButtons?.forEach((option, optionIndex) => {
+                option.classList.toggle('is-active', optionIndex === this.index);
+                option.setAttribute('aria-current', optionIndex === this.index ? 'true' : 'false');
+            });
             this.previous.disabled = this.index === 0;
             this.next.disabled = this.index === this.items.length - 1;
             this.clock.reset();
