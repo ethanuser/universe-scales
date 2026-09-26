@@ -181,7 +181,8 @@
       "presentation": {
         "measure_axis": "x",
         "measure_fraction": 0.75,
-        "pitch": 30
+        "pitch": 30,
+        "layout_width_factor": 1.4
       },
       "note": "A drone photogrammetry scan of the football field at Milton Frank Stadium in Huntsville, Alabama, cropped to the playing surface; stands, track, lights, and the noisily scanned goalposts were removed. The goal-line-to-goal-line span, 100 yards (91.44 m), is calibrated to the listed length; it is about three quarters of the mesh, which also includes both end zones and a strip of turf beyond them."
     },
@@ -198,6 +199,19 @@
         "pitch": 22
       },
       "note": "Everest's summit massif from a heightmap draped with rock and snow imagery, shown as a block diagram. Its 3.35 km of relief matches the drop from the 8,848 m summit to glaciers near 5,500 m, so the heightmap is treated as true-scale meters; the faint plinth beneath continues the crust down to sea level, so the whole block is the listed 8,848 m tall."
+    },
+    {
+      "id": "sketchfab-statue-of-liberty",
+      "name": "Statue of Liberty",
+      "uid": "f109b8b65eef4440a9ef2ad9a4b23714",
+      "author": "seifurt",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "y",
+        "layout_width_factor": 0.45,
+        "opaque": true
+      },
+      "note": "A photogrammetry scan of a detailed Statue of Liberty replica with a copper-green patina; the replica's souvenir display base was cut away. Its height, from the base of the robe to the tip of the torch, is calibrated to the listed 46.05 m of the copper statue; the real granite pedestal and fort, which lift the torch to 93 m, are not shown."
     }
   ]
 }

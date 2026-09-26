@@ -127,4 +127,15 @@ python3 scripts/fetch_model_assets.py --verify
   cloud cut at its 95% sphere (3.15 Bohr radii) with the Bohr radius marked; light wave with E (red)
   and B (blue) arrows and labels; SEM-style procedural hair; date-accurate procedural solar system
   (JPL elements); weathered Eiffel Tower; football field (Milton Frank Stadium scan); Everest as a
-  block diagram on sea level; DNA deduplicated (3.4 → 0.37 MB). See the git log for details.
+  block diagram on sea level; DNA deduplicated (3.4 → 0.37 MB); new Statue of Liberty item (46.05 m)
+  with a cropped replica scan (`scripts/crop_glb.py`). See the git log for details.
+
+## Open work (as of 2026-09-26)
+
+- Owner still wants a higher-quality bacterium (more pili/flagella), a more accurate mitochondrion
+  (more cristae), and a neuron model (item is 100 µm, described as a cell body). A sourcing run was
+  in progress; its candidates (if finished) are in the session scratchpad under `models/cells2/`,
+  otherwise redo the search with `scripts/preview_glb.cjs` comparisons and register with
+  `scripts/register_model.py`.
+- Owner's chosen sand grain is CC BY-NC-SA; import only if the owner accepts that license.
+- The owner's last message ended with "the neuron" (cut off); confirm what was wanted.

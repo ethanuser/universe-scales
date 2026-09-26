@@ -25,7 +25,7 @@ from PIL import Image, ImageDraw
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_model_assets import pack_glb, read_glb, sha  # noqa: E402
 
-COMPONENTS = {5121: np.uint8, 5123: np.uint16, 5125: np.uint32, 5126: np.float32}
+COMPONENTS = {5120: np.int8, 5121: np.uint8, 5122: np.int16, 5123: np.uint16, 5125: np.uint32, 5126: np.float32}
 WIDTH = {"SCALAR": 1, "VEC2": 2, "VEC3": 3, "VEC4": 4}
 OPERATION = "Pad texture-atlas gutters with nearest UV-island colors to prevent mipmap seam bleeding"
 

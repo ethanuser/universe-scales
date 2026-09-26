@@ -669,6 +669,16 @@
     "Stainless Steel": [],
     "Stainless Steel (304)": [],
     "Stainless Steel (304) yield-strength": [],
+    "Statue of Liberty": [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/LibertyStatue.JPG/1920px-LibertyStatue.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Liberty_Island_photo_Don_Ramey_Logan.jpg/1920px-Liberty_Island_photo_Don_Ramey_Logan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "https://upload.wikimedia.org/wikipedia/commons/f/fd/National_Park_Service_9-11_Statue_of_Liberty_and_WTC_fire.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Statue_of_Liberty%2C_NY.jpg/1920px-Statue_of_Liberty%2C_NY.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Statue_of_Liberty_Annular_Solar_Eclipse_%2851239095574%29.jpg/1920px-Statue_of_Liberty_Annular_Solar_Eclipse_%2851239095574%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2a/Statue_of_Liberty_Paris_2007-05-29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Statue_of_Liberty_frontal_2.jpg/1920px-Statue_of_Liberty_frontal_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Statue_of_Liberty_frontal_2_crop.JPG/1920px-Statue_of_Liberty_frontal_2_crop.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+    ],
     "Sterile insect technique dose": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Annual_conference_report_on_cotton_insect_research_and_control_%28IA_CAT76670756016%29.pdf/page1-1485px-Annual_conference_report_on_cotton_insect_research_and_control_%28IA_CAT76670756016%29.pdf.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Annual_conference_report_on_cotton_insect_research_and_control_%28IA_CAT76670756017%29.pdf/page1-1525px-Annual_conference_report_on_cotton_insect_research_and_control_%28IA_CAT76670756017%29.pdf.jpg",
@@ -10016,6 +10026,17 @@
       "https://images.nms.ac.uk/production/Images/Collection-objects/Science-and-Technology/Colour%20television/colour-tv-set-490px_2025-08-21-233411_ddme.jpg?w=562&amp;h=375&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.7388&amp;fp-y=0.3062&amp;dm=1755819443&amp;s=3d5f82e1ef8e98e291afa614612ffcd8",
       "https://images.nms.ac.uk/production/Images/Discover/Wylam-Dilly-One-of-the-worlds-oldest-locomotives/PF54367.jpg?w=562&amp;h=375&amp;q=100&amp;auto=format&amp;fit=crop&amp;dm=1754648694&amp;s=0707e3a045922412b320453aefd2f287",
       "https://images.nms.ac.uk/production/Images/Discover/Freddy-the-robot/8-freddy-the-robot.jpg?w=562&amp;h=375&amp;q=100&amp;auto=format&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.4501&amp;fp-y=0.4399&amp;dm=1754080917&amp;s=4b3d6c5754cc4832082f1778fdaf7622"
+    ],
+    "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm": [
+      "https://www.nps.gov/stli/learn/historyculture/images/how_tall_half_1.jpg",
+      "https://www.nps.gov/stli/learn/historyculture/images/how_tall_half_1.jpg?maxwidth=1300&maxheight=1300&autorotate=false&format=webp",
+      "https://www.nps.gov/common/commonspot/templates/assets/images/app-promo/app-promo-background-large.png?format=webp",
+      "https://www.nps.gov/common/commonspot/templates/assets/images/app-promo/app-store-badge.svg",
+      "https://www.nps.gov/common/commonspot/templates/assets/images/app-promo/google-play-badge.svg",
+      "https://www.nps.gov/common/commonspot/templates/assets/images/app-promo/app-promo-phones.png",
+      "https://www.nps.gov/common/commonspot/templates/assets/images/branding/lockup-horizontal.svg",
+      "https://www.nps.gov/common/commonspot/templates/assets/images/branding/lockup-reverse-vertical.svg",
+      "https://www.nps.gov/common/commonspot/templates/assets/images/branding/lockup-reverse-horizontal.svg"
     ],
     "https://www.nps.gov/subjects/volcanoes/basaltic-lava-flows.htm": [
       "https://www.nps.gov/subjects/volcanoes/images/vhp_img4569.jpg",
@@ -24464,6 +24485,7 @@
       "https://cdn.britannica.com/88/91388-004-F84F5F3A/Crab-Nebula-exposures-image-astronomers-explosion-NASA.jpg",
       "https://cdn.britannica.com/25/92825-004-C6A93067/Eagle-Nebula-column-Stars-cold-dust-gas.jpg"
     ],
+    "Statue of Liberty": [],
     "Steam": [
       "https://cdn.akamai.steamstatic.com/store/home/store_home_share.jpg",
       "https://shared.akamai.steamstatic.com/store_item_assets/mm/1177467111770428906/0/82f32b0e95c8b57241f57a54cd6e7e8620d18054.jpg?t=1774636954",
@@ -30151,6 +30173,7 @@
       "https://science.nasa.gov/mission/webb/science-overview/science-explainers/is-the-milky-way-unique/",
       "https://www.skyatnightmagazine.com/space-science/stars-in-milky-way"
     ],
+    "Statue of Liberty": [],
     "Steam": [
       "https://store.steampowered.com/",
       "https://steamcommunity.com/?http",

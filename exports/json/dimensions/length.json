@@ -2,22 +2,22 @@
   "base_unit": "meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 59,
-    "candidate_shortfall_to_preferred_target": 1,
+    "candidate_count": 60,
+    "candidate_shortfall_to_preferred_target": 0,
     "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
     "preferred_max_items": 100,
     "preferred_target_items": 60,
-    "raw_candidate_count": 59,
+    "raw_candidate_count": 60,
     "required_min_items": 24,
-    "selected_count": 59,
+    "selected_count": 60,
     "selected_primary_count": 19,
-    "selected_secondary_count": 40,
+    "selected_secondary_count": 41,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 59
+      "secondary_reference": 60
     },
-    "target_selected_count": 59
+    "target_selected_count": 60
   },
   "description_format": "markdown",
   "dimension": "length",
@@ -1487,6 +1487,60 @@
       ],
       "summary_short": "The length of blue whales, the largest animals ever to live on Earth.",
       "value": 30.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The Statue of Liberty's copper figure rises 46 m (151 ft) from its base to the tip of its torch; on its granite pedestal and star-shaped fort, the torch stands 93 m above the ground. Its skin of copper sheets, only about 2.4 mm thick, hangs on an iron framework designed by Gustave Eiffel, the engineer behind the Eiffel Tower. The copper weathered from brown to its familiar green patina within about two decades of the statue's 1886 dedication. This marker is the statue alone, not its pedestal.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The Statue of Liberty's copper figure rises 46 m (151 ft) from its base to the tip of its torch; on its granite pedestal and star-shaped fort, the torch stands 93 m above the ground. Its skin of copper sheets, only about 2.4 mm thick, hangs on an iron framework designed by Gustave Eiffel, the engineer behind the Eiffel Tower. The copper weathered from brown to its familiar green patina within about two decades of the statue's 1886 dedication. This marker is the statue alone, not its pedestal.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Statue of Liberty",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "46.05",
+          "source_url": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-statue-of-liberty",
+      "name": "Statue of Liberty",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-nps-gov-stli-learn-historyculture-statue-statistics-htm",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.nps.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "statue-statistics.htm",
+          "url": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The Statue of Liberty's copper figure rises 46 m (151 ft) from its base to the tip of its torch; on its granite pedestal and star-shaped fort, the torch stands 93 m above the ground.",
+      "value": 46.05,
       "value_type": "derived",
       "wikidata_qid": null
     },

@@ -278,6 +278,16 @@ items:
   name: Blue Whale
   source: https://en.wikipedia.org/wiki/Blue_whale
   value: 30
+- description: The Statue of Liberty's copper figure rises 46 m (151 ft) from its
+    base to the tip of its torch; on its granite pedestal and star-shaped fort,
+    the torch stands 93 m above the ground. Its skin of copper sheets, only
+    about 2.4 mm thick, hangs on an iron framework designed by Gustave Eiffel,
+    the engineer behind the Eiffel Tower. The copper weathered from brown to
+    its familiar green patina within about two decades of the statue's 1886
+    dedication. This marker is the statue alone, not its pedestal.
+  name: Statue of Liberty
+  source: https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm
+  value: 46.05
 - description: The length of American football fields, standardized playing surfaces
     that have become cultural landmarks. The field's dimensions were designed
     to balance offense and defense, creating strategic depth while maintaining

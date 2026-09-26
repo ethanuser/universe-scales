@@ -631,22 +631,22 @@
   },
   "length": {
     "bin_count": 24,
-    "candidate_count": 59,
-    "candidate_shortfall_to_preferred_target": 1,
+    "candidate_count": 60,
+    "candidate_shortfall_to_preferred_target": 0,
     "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
     "preferred_max_items": 100,
     "preferred_target_items": 60,
-    "raw_candidate_count": 59,
+    "raw_candidate_count": 60,
     "required_min_items": 24,
-    "selected_count": 59,
+    "selected_count": 60,
     "selected_primary_count": 19,
-    "selected_secondary_count": 40,
+    "selected_secondary_count": 41,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 59
+      "secondary_reference": 60
     },
-    "target_selected_count": 59
+    "target_selected_count": 60
   },
   "magnetic-field": {
     "bin_count": 24,
