@@ -39,6 +39,38 @@
         }
         return stops.at(-1)[1];
     }
+    function distanceBracket(entry, x, y, size) {
+        const distance = entry?.processing?.center_distance_m;
+        const bodies = Object.entries(entry?.processing?.body_radii_m || {});
+        const radii = bodies.map(([, radius]) => radius);
+        if (!distance || radii.length !== 2) return null;
+        const maximum = Math.max(...radii) / distance;
+        const top = y - (2 * maximum + 0.24) * size;
+        const marker = svg('g', {
+            class: 'journey-distance-bracket',
+            opacity: clamp(size / 80, 0, 1)
+        });
+        for (let index = 0; index < 2; index++) {
+            const bodyX = x + (index - 0.5) * size;
+            const bodyY = y - maximum * size;
+            const bodyTop = y - (maximum + radii[index] / distance) * size;
+            marker.append(svg('line', { x1: bodyX, y1: bodyTop, x2: bodyX, y2: top }));
+            marker.append(svg('circle', {
+                cx: bodyX, cy: bodyY, r: 5,
+                class: 'journey-distance-locator',
+                fill: { Sun: '#ffe19a', Earth: '#78b9ef', Moon: '#e0e2e3' }[bodies[index][0]] || '#fff'
+            }));
+            const label = svg('text', {
+                x: bodyX, y: top - 8,
+                class: 'journey-distance-body-label',
+                'text-anchor': 'middle'
+            });
+            label.textContent = bodies[index][0];
+            marker.append(label);
+        }
+        marker.append(svg('line', { x1: x - size / 2, y1: top, x2: x + size / 2, y2: top }));
+        return marker;
+    }
     function navigation(ctx, order, zoom, render, layoutOptions = () => ({}), interaction = {}) {
         ctx.comparison.hidden = true;
         ctx.updateComparison = () => {};
@@ -89,29 +121,38 @@
         ctx.stageFrame.addEventListener('wheel', e => {
             e.preventDefault();
             const pixels = (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 400 : 1);
-            move(clamp(pixels * 0.00045, -0.16, 0.16));
+            move(-clamp(pixels * 0.00045, -0.16, 0.16));
         }, { passive: false });
         let previous, previousY, dragged = 0, velocity = 0, movedAt = 0, rotating = null;
+        const hover = e => {
+            const item = e && !e.target.closest('.experience-camera-slider')
+                ? interaction.pick?.(e.clientX, e.clientY) || null : null;
+            interaction.hover?.(item, e && !e.target.closest('.experience-camera-slider')
+                ? { x: e.clientX, y: e.clientY } : null);
+            ctx.stageFrame.classList.toggle('is-model-hovered', Boolean(item));
+        };
         ctx.stageFrame.addEventListener('pointerdown', e => {
             if (e.button !== 0 || e.target.closest('.experience-camera-slider')) return;
             rotating = interaction.pick?.(e.clientX, e.clientY) || null;
-            if (rotating) interaction.beginRotate?.(rotating);
+            if (rotating) interaction.beginRotate?.(rotating, e.timeStamp);
             previous = e.clientX; previousY = e.clientY; dragged = 0; velocity = 0; movedAt = e.timeStamp;
             camera.aim(camera.value);
             e.preventDefault();
+            ctx.stageFrame.classList.remove('is-model-hovered');
             ctx.stageFrame.classList.add('is-dragging');
         });
         ctx.stageFrame.addEventListener('pointermove', e => {
-            if (previous == null) return;
+            if (previous == null) { hover(e); return; }
             const delta = previous - e.clientX; previous = e.clientX;
             const deltaY = e.clientY - previousY; previousY = e.clientY;
             dragged += Math.hypot(delta, deltaY);
             const dt = Math.max(8, e.timeStamp - movedAt) / 1000;
             movedAt = e.timeStamp;
+            if (rotating) interaction.hover?.(null, { x: e.clientX, y: e.clientY });
             if (!rotating) velocity = 0.65 * velocity + 0.35 * delta * 0.0012 / dt;
             if (dragged > 5) {
                 ctx.stageFrame.setPointerCapture(e.pointerId);
-                if (rotating) interaction.rotate?.(rotating, -delta, deltaY);
+                if (rotating) interaction.rotate?.(rotating, -delta, deltaY, e.timeStamp);
                 else move(delta * 0.0012);
                 e.preventDefault();
             }
@@ -120,13 +161,17 @@
             if (previous == null) return;
             previous = null;
             if (!rotating && e.type === 'pointerup' && dragged > 5 && e.timeStamp - movedAt < 100) move(clamp(velocity * 0.16, -0.6, 0.6));
-            if (rotating) interaction.releaseRotate?.(rotating);
+            if (rotating) interaction.releaseRotate?.(rotating, e.timeStamp);
             rotating = null;
             if (ctx.stageFrame.hasPointerCapture(e.pointerId)) ctx.stageFrame.releasePointerCapture(e.pointerId);
             ctx.stageFrame.classList.remove('is-dragging');
+            hover(e.type === 'pointerup' ? e : null);
         };
         for (const event of ['pointerup', 'pointercancel', 'lostpointercapture']) ctx.stageFrame.addEventListener(event, release);
-        ctx.stageFrame.addEventListener('pointerleave', e => { if (!ctx.stageFrame.hasPointerCapture(e.pointerId)) release(e); });
+        ctx.stageFrame.addEventListener('pointerleave', e => {
+            hover(null);
+            if (!ctx.stageFrame.hasPointerCapture(e.pointerId)) release(e);
+        });
         ctx.stageFrame.addEventListener('dragstart', e => e.preventDefault());
         ctx.stageFrame.addEventListener('click', e => {
             if (dragged > 5) { e.preventDefault(); e.stopPropagation(); dragged = 0; return; }
@@ -160,9 +205,10 @@
         };
         const navigationControl = navigation(ctx, order, zoom, render, () => ({widthFactor}), {
             pick: (x, y) => modelStage?.pick(x, y),
-            beginRotate: item => modelStage?.beginRotate(item),
-            rotate: (item, dx, dy) => modelStage?.rotate(item, dx, dy),
-            releaseRotate: item => modelStage?.releaseRotate(item)
+            hover: (item, pointer) => modelStage?.setHover(item, pointer),
+            beginRotate: (item, timestamp) => modelStage?.beginRotate(item, timestamp),
+            rotate: (item, dx, dy, timestamp) => modelStage?.rotate(item, dx, dy, timestamp),
+            releaseRotate: (item, timestamp) => modelStage?.releaseRotate(item, timestamp)
         });
         ctx.host.classList.add('experience--spatial');
         ctx.live.hidden = true;
@@ -173,9 +219,12 @@
         zoom.element.classList.add('experience-camera-slider');
         zoom.output.hidden = true;
         ctx.stageFrame.append(ruler, zoom.element);
+        ctx.modelEntry = item => modelStage?.entry(item);
         const attachModels = () => {
             if (disposed || modelStage || !root.ScaleModels) return;
-            modelStage = new ScaleModels.ModelStage(ctx, render); render();
+            modelStage = new ScaleModels.ModelStage(ctx, render);
+            ctx.updateDetail();
+            render();
         };
         window.addEventListener('scale-models-ready', attachModels);
         attachModels();
@@ -225,6 +274,10 @@
                     ? size * 2/Math.sqrt(Math.PI) : visualSize * modelExtent;
                 clipped ||= y - extent < 0 || x - extent/2 < view.left || x + extent/2 > view.left + view.width;
                 const g = ctx.object(ctx.stage, item, x, y, extent, extent, { image: false });
+                if (order === 1) {
+                    const bracket = distanceBracket(entry, x, y, visualSize);
+                    if (bracket) g.append(bracket);
+                }
                 if (order !== 2 && entry) {
                     g.dataset.modelIndex = ctx.items.indexOf(item);
                     g.style.pointerEvents = 'none';
@@ -262,13 +315,14 @@
             const rulerWidth = 112;
             const rulerValue = power(zoom.value) * rulerWidth / (ScaleJourney.BASE_SIZE * view.scale);
             rulerLine.style.width = `${rulerWidth}px`;
-            rulerLabel.innerHTML = `${ctx.app.formatNumber(rulerValue, 2, true)} m`;
+            rulerLabel.innerHTML = ctx.app.formatTooltipValueHTML(
+                ctx.app.formatValueForCurrentUnit(rulerValue, 2, true),
+                ctx.app.getCurrentUnitDefinition()?.symbol || 'm');
             ctx.caption.textContent = order === 1
                 ? 'All objects share a continuous camera. The ruler and image span use the listed length; image framing is approximate. Spacing is arranged for reading, not physical distance. Distances, radii and object diameters retain their dataset definitions. Downloaded models are used when available.'
                 : order === 2
                 ? 'Outlined disks or squares have the listed area; photos identify the subject and do not define its outline. Earth uses an Equal Earth map whose entire footprint includes land and ocean. This is a continuous area journey, not a geographic map. Model/photo sources and geometry conventions are documented with the assets.'
                 : 'Downloaded spherical models are sized using diameter = (6V/pi)^(1/3). Non-spherical models and photos use an equivalent-volume span V^(1/3), not a measured physical outline or mesh volume. A bottle capacity is not the volume of its glass. Object spacing is editorial, not a real spatial distribution.';
-            if (modelStage?.entry(ctx.item)?.procedural) ctx.caption.textContent += ` ${modelStage.entry(ctx.item).note}`;
             ctx.attribution.replaceChildren();
             const current = modelStage?.entry(ctx.item);
             if (current?.procedural) {
@@ -302,7 +356,7 @@
                 navigationControl.frameTo(exponent, ctx.index, presentation.focus_scale_factor ? 1 : 0.3);
             }
         },
-            dispose: () => { disposed=true; ctx.host.classList.remove('experience--spatial'); modelStage?.dispose(); window.removeEventListener('scale-models-ready',attachModels); navigationControl.dispose(); } };
+            dispose: () => { disposed=true; delete ctx.modelEntry; ctx.host.classList.remove('experience--spatial'); modelStage?.dispose(); window.removeEventListener('scale-models-ready',attachModels); navigationControl.dispose(); } };
     };
     function board(parent, x, y, width, seed) {
         const cell=width/20;

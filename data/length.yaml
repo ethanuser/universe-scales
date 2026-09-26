@@ -435,14 +435,14 @@ items:
 - id: obs:length:entity-water
   name: Water Molecule
   value: 2.75e-10
-  description: The O-H bond length in water, the most important molecule for life. This precise distance creates water's unique properties - its high boiling point, surface tension, and ability to dissolve salts. Water's bent geometry makes it polar, allowing it to form hydrogen bonds that give ice its unusual property of being less dense than liquid water, crucial for aquatic life in cold climates.
+  description: Water's bend matters more than its rough diameter. Its two O–H bonds meet at about 104.5°, so their electrical polarities reinforce rather than cancel; neighboring molecules can then form a shifting network of hydrogen bonds. The 2.75 Å marker is an approximate overall molecular diameter, not a bond length. In an isolated molecule, each O–H distance is only 0.958 Å, as recorded in [NIST's experimental geometry](https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185).
   description_format: markdown
-  summary_short: The O-H bond length in water, the most important molecule for life.
-  description_medium: The O-H bond length in water, the most important molecule for life. This precise distance creates water's unique properties - its high boiling point, surface tension, and ability to dissolve salts. Water's bent geometry makes it polar, allowing it to form hydrogen bonds that give ice its unusual property of being less dense than liquid water, crucial for aquatic life in cold climates.
+  summary_short: A representative molecular diameter, not the length of an O–H bond.
+  description_medium: Water's bend matters more than its rough diameter. Its two O–H bonds meet at about 104.5°, so their electrical polarities reinforce rather than cancel; neighboring molecules can then form a shifting network of hydrogen bonds. The 2.75 Å marker is an approximate overall molecular diameter, not a bond length. In an isolated molecule, each O–H distance is only 0.958 Å, as recorded in [NIST's experimental geometry](https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185).
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
   review_status: accepted
   display_status: display
   quality_flags: []
@@ -481,14 +481,14 @@ items:
 - id: obs:length:scenario-length-glucose-molecule
   name: Glucose Molecule
   value: 1.0e-09
-  description: The size of a glucose molecule, the primary fuel for cellular respiration. This sugar's compact structure allows it to efficiently store chemical energy - one glucose molecule can power a cell for several minutes. The molecule's size is optimized for transport through cell membranes and interaction with metabolic enzymes. Interestingly, glucose exists in multiple ring forms, with this size representing the most stable configuration in solution.
+  description: Glucose is not one rigid shape. In water, its carbon chain usually closes into a six-membered ring, which puckers into a chair rather than lying flat. The 3D explorer chooses [alpha-D-glucopyranose](https://pubchem.ncbi.nlm.nih.gov/compound/79025), one specific anomer and conformer, so its visible hydroxyl groups have definite positions. The 1 nm marker is a round-number molecular span, not the distance between neighboring atoms; individual C–C and C–O bonds are much shorter.
   description_format: markdown
-  summary_short: The size of a glucose molecule, the primary fuel for cellular respiration.
-  description_medium: The size of a glucose molecule, the primary fuel for cellular respiration. This sugar's compact structure allows it to efficiently store chemical energy - one glucose molecule can power a cell for several minutes. The molecule's size is optimized for transport through cell membranes and interaction with metabolic enzymes. Interestingly, glucose exists in multiple ring forms, with this size representing the most stable configuration in solution.
+  summary_short: An approximate span of glucose; the 3D explorer shows one cyclic anomer.
+  description_medium: Glucose is not one rigid shape. In water, its carbon chain usually closes into a six-membered ring, which puckers into a chair rather than lying flat. The 3D explorer chooses [alpha-D-glucopyranose](https://pubchem.ncbi.nlm.nih.gov/compound/79025), one specific anomer and conformer, so its visible hydroxyl groups have definite positions. The 1 nm marker is a round-number molecular span, not the distance between neighboring atoms; individual C–C and C–O bonds are much shorter.
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
   review_status: accepted
   display_status: display
   quality_flags: []
@@ -616,11 +616,11 @@ items:
   qualifiers: {}
 - id: obs:length:scenario-length-virus
   name: Virus
-  value: 1.0e-08
-  description: The size of typical viruses, biological entities that blur the line between living and non-living. Viruses are essentially genetic material wrapped in protein coats, hijacking cellular machinery to reproduce. Their small size allows them to penetrate cells through endocytosis, while their protein shells protect their genetic material from environmental damage. Some viruses are so small they can pass through filters designed to remove bacteria.
+  value: 2.8e-08
+  description: Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid. Its coat is assembled from sixty protein subunits; the surface folds are part of what determines which cells it can enter. This marker is the capsid diameter of one studied virus, not an average size for all viruses or a model of the viral genome inside.
   description_format: markdown
-  summary_short: The size of typical viruses, biological entities that blur the line between living and non-living.
-  description_medium: The size of typical viruses, biological entities that blur the line between living and non-living. Viruses are essentially genetic material wrapped in protein coats, hijacking cellular machinery to reproduce. Their small size allows them to penetrate cells through endocytosis, while their protein shells protect their genetic material from environmental damage. Some viruses are so small they can pass through filters designed to remove bacteria.
+  summary_short: Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid.
+  description_medium: Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid. Its coat is assembled from sixty protein subunits; the surface folds are part of what determines which cells it can enter. This marker is the capsid diameter of one studied virus, not an average size for all viruses or a model of the viral genome inside.
   description_long: null
   hook: null
   caveats: null
@@ -633,16 +633,16 @@ items:
     legacy_item_name: Virus
     source_trace:
       method: derived
-      original_value_text: 1e-8
-      source_url: https://en.wikipedia.org/wiki/Virus
-  source: https://en.wikipedia.org/wiki/Virus
+      original_value_text: '2.8e-08'
+      source_url: https://pubmed.ncbi.nlm.nih.gov/11827486/
+  source: https://pubmed.ncbi.nlm.nih.gov/11827486/
   source_count: 2
   sources:
-  - id: src:https-en-wikipedia-org-wiki-virus
-    url: https://en.wikipedia.org/wiki/Virus
-    title: Virus
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
+  - id: src:https-pubmed-ncbi-nlm-nih-gov-11827486
+    url: https://pubmed.ncbi.nlm.nih.gov/11827486/
+    title: '11827486'
+    publisher: pubmed.ncbi.nlm.nih.gov
+    license_text: null
     source_class: secondary_reference
     source_type: web_page
     role: external_source

@@ -59,6 +59,10 @@ class UniversalScales {
         this.musicToggle = document.getElementById('music-toggle');
         this.backgroundMusic = document.getElementById('background-music');
         this.tooltip = document.getElementById('tooltip');
+        this.tooltip?.addEventListener('pointerenter', () => this.cancelTooltipHide());
+        this.tooltip?.addEventListener('pointerleave', () => {
+            if (!this.tooltipPinned) this.scheduleTooltipHide();
+        });
         this.plotContainer = document.getElementById('plot-container');
         this.imageModal = document.getElementById('image-modal');
         this.imageModalImg = document.getElementById('image-modal-img');
@@ -342,6 +346,7 @@ class UniversalScales {
     }
 
     setCurrentUnit(unitName, { closePicker = true } = {}) {
+        this.hideUnitConversions();
         this.currentUnit = unitName;
         if (this.unitSelect) {
             this.unitSelect.value = unitName;
@@ -354,6 +359,13 @@ class UniversalScales {
         this.plot.lastTickDomain = null;
         this.plot.lastTickLogRange = null;
         this.plot.updatePlot();
+        if (this.tooltip?.classList.contains('visible') && this.tooltipItem) {
+            const value = this.tooltip.querySelector('.tooltip-value');
+            value.innerHTML = this.formatTooltipValueHTML(
+                this.formatValueForCurrentUnit(this.tooltipItem.value, 2, true),
+                this.getCurrentUnitDefinition()?.symbol || '');
+            this.enableUnitConversions(value, this.tooltipItem.value);
+        }
         if (closePicker) {
             this.setUnitBrowserOpen(false);
         }
@@ -505,7 +517,9 @@ class UniversalScales {
 
         // Hide tooltips when clicking elsewhere (but allow clicks on tooltip itself)
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.plot-item') && !e.target.closest('.label-hover-area') && !e.target.closest('.tooltip') && !e.target.closest('.image-modal')) {
+            if (!e.target.closest('.plot-item') && !e.target.closest('.label-hover-area') &&
+                !e.target.closest('.tooltip') && !e.target.closest('.image-modal') &&
+                !e.target.closest('.unit-value-trigger') && !e.target.closest('.unit-conversions-popover')) {
                 this.hideTooltip();
             }
         });
@@ -685,6 +699,158 @@ class UniversalScales {
 
     getCurrentUnitDefinition() {
         return this.dimensionData?.units?.find(unit => unit.name === this.currentUnit) || null;
+    }
+
+    getAvailableUnits() {
+        return (this.dimensionData?.units || []).filter((unit, index) =>
+            !this.editor?.unitOverrides?.[this.currentDimension]?.[index]?.isDeleted &&
+            this.isUnitCompatibleWithCurrentScale(unit));
+    }
+
+    formatValueInUnit(value, unit) {
+        const converted = unit.special_conversion === 'sound_intensity_db'
+            ? (value > 0 ? 10 * Math.log10(value / 1e-12) : Number.NEGATIVE_INFINITY)
+            : this.convertBaseValueToUnit(value, unit);
+        return unit.special_conversion === 'sound_intensity_db'
+            ? this.formatter.formatLinearNumber(converted, 2)
+            : this.formatNumber(converted, 2, true);
+    }
+
+    formatValueInUnitHTML(value, unit) {
+        const formatted = this.formatValueInUnit(value, unit);
+        const valueHtml = !this.isLinearScale() && this.notationMode === 'mathematical' &&
+            unit.special_conversion !== 'sound_intensity_db'
+            ? formatted : this.escapeHtml(formatted);
+        const symbolHtml = this.formatUnitSymbolHTML(unit.symbol);
+        return symbolHtml ? `${valueHtml} ${symbolHtml}` : valueHtml;
+    }
+
+    cancelTooltipHide() {
+        clearTimeout(this.tooltipHideTimer);
+        this.tooltipHideTimer = null;
+    }
+
+    scheduleTooltipHide() {
+        this.cancelTooltipHide();
+        this.tooltipHideTimer = setTimeout(() => {
+            if (!this.tooltipPinned && !this.unitPopoverSelecting && !this.isNearUnitConversions())
+                this.hideTooltip();
+        }, 220);
+    }
+
+    isNearUnitConversions() {
+        if (!this.unitPopover) return false;
+        if (this.unitPopoverSelecting || document.activeElement === this.unitPopoverTrigger) return true;
+        const pointer = this.unitPopoverPointer;
+        if (!pointer) return false;
+        const near = element => {
+            if (!element?.isConnected) return false;
+            const rect = element.getBoundingClientRect();
+            return pointer.x >= rect.left - 24 && pointer.x <= rect.right + 24 &&
+                pointer.y >= rect.top - 24 && pointer.y <= rect.bottom + 24;
+        };
+        return near(this.unitPopover) || near(this.unitPopoverTrigger);
+    }
+
+    hideUnitConversions() {
+        clearTimeout(this.unitPopoverTimer);
+        this.unitPopoverTimer = null;
+        if (this.unitPopoverPointerMove) document.removeEventListener('pointermove', this.unitPopoverPointerMove);
+        if (this.unitPopoverPointerUp) document.removeEventListener('pointerup', this.unitPopoverPointerUp);
+        this.unitPopoverPointerMove = this.unitPopoverPointerUp = null;
+        this.unitPopoverSelecting = false;
+        this.unitPopover?.remove();
+        this.unitPopover = null;
+        this.unitPopoverTrigger = null;
+    }
+
+    scheduleUnitConversionsHide() {
+        clearTimeout(this.unitPopoverTimer);
+        this.unitPopoverTimer = setTimeout(() => {
+            if (!this.isNearUnitConversions()) this.hideUnitConversions();
+        }, 450);
+    }
+
+    showUnitConversions(anchor, baseValue) {
+        const units = this.getAvailableUnits().filter(unit => unit.name !== this.currentUnit);
+        if (!units.length || !anchor.isConnected) return;
+        this.hideUnitConversions();
+        this.cancelTooltipHide();
+        const popover = document.createElement('div');
+        popover.className = 'unit-conversions-popover';
+        popover.setAttribute('role', 'tooltip');
+        popover.innerHTML = `<strong>Other units</strong><div class="unit-conversions-popover__list">${units.map(unit =>
+            `<div class="unit-conversions-popover__row"><span>${this.escapeHtml(unit.name)}</span>` +
+            `<span>${this.formatValueInUnitHTML(baseValue, unit)}</span></div>`
+        ).join('')}</div>`;
+        popover.addEventListener('pointerenter', () => {
+            clearTimeout(this.unitPopoverTimer);
+            this.cancelTooltipHide();
+        });
+        popover.addEventListener('pointerleave', () => {
+            this.scheduleUnitConversionsHide();
+            if (!this.tooltipPinned && this.tooltip.contains(anchor)) this.scheduleTooltipHide();
+        });
+        document.body.append(popover);
+        this.unitPopover = popover;
+        this.unitPopoverTrigger = anchor;
+        this.unitPopoverPointerMove = event => {
+            this.unitPopoverPointer = { x: event.clientX, y: event.clientY };
+            if (this.isNearUnitConversions()) {
+                clearTimeout(this.unitPopoverTimer);
+                this.cancelTooltipHide();
+            } else this.scheduleUnitConversionsHide();
+        };
+        this.unitPopoverPointerUp = () => {
+            this.unitPopoverSelecting = false;
+            if (!this.isNearUnitConversions()) this.scheduleUnitConversionsHide();
+        };
+        popover.addEventListener('pointerdown', () => {
+            this.unitPopoverSelecting = true;
+            clearTimeout(this.unitPopoverTimer);
+            this.cancelTooltipHide();
+        });
+        document.addEventListener('pointermove', this.unitPopoverPointerMove, { passive: true });
+        document.addEventListener('pointerup', this.unitPopoverPointerUp);
+        const rect = anchor.getBoundingClientRect();
+        const width = popover.getBoundingClientRect().width;
+        popover.style.left = `${Math.max(8, Math.min(rect.left, innerWidth - width - 8))}px`;
+        const height = popover.getBoundingClientRect().height;
+        popover.style.top = `${rect.bottom + height + 8 < innerHeight ? rect.bottom + 6 :
+            Math.max(8, rect.top - height - 6)}px`;
+        this.typesetMathIfReady(popover);
+    }
+
+    enableUnitConversions(anchor, baseValue) {
+        anchor.classList.remove('unit-value-trigger');
+        anchor.removeAttribute('role');
+        anchor.removeAttribute('aria-label');
+        anchor.removeAttribute('tabindex');
+        anchor.onpointerenter = anchor.onpointerleave = anchor.onfocus = anchor.onblur = null;
+        anchor.onkeydown = anchor.onclick = null;
+        if (this.getAvailableUnits().length < 2) return;
+        anchor.classList.add('unit-value-trigger');
+        anchor.tabIndex = 0;
+        anchor.setAttribute('role', 'button');
+        anchor.setAttribute('aria-label', 'Show this value in other units');
+        anchor.onpointerenter = event => {
+            this.unitPopoverPointer = { x: event.clientX, y: event.clientY };
+            this.showUnitConversions(anchor, baseValue);
+        };
+        anchor.onpointerleave = () => this.scheduleUnitConversionsHide();
+        anchor.onfocus = () => this.showUnitConversions(anchor, baseValue);
+        anchor.onblur = () => this.scheduleUnitConversionsHide();
+        anchor.onkeydown = event => {
+            if (event.key === 'Escape') this.hideUnitConversions();
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                this.showUnitConversions(anchor, baseValue);
+            }
+        };
+        anchor.onclick = event => {
+            event.stopPropagation();
+            this.showUnitConversions(anchor, baseValue);
+        };
     }
 
     convertBaseValueToUnit(valueBase, unit) {
@@ -1063,6 +1229,9 @@ class UniversalScales {
     }
 
     showTooltip(event, item, pinned = false) {
+        this.cancelTooltipHide();
+        this.hideUnitConversions();
+        this.tooltipItem = item;
         const unit = this.getCurrentUnitDefinition();
 
         // Determine if this is a touch/mobile device
@@ -1090,6 +1259,7 @@ class UniversalScales {
         const unitSymbol = unit ? unit.symbol : '';
         const tooltipValueElement = this.tooltip.querySelector('.tooltip-value');
         tooltipValueElement.innerHTML = this.formatTooltipValueHTML(formattedValue, unitSymbol);
+        this.enableUnitConversions(tooltipValueElement, item.value);
 
         const descriptionElement = this.tooltip.querySelector('.tooltip-description');
         const descriptionText = item.description || item.description_long || item.description_medium || item.summary_short || '';
@@ -1205,7 +1375,7 @@ class UniversalScales {
                 this.tooltip.style.transform = '';
                 // Enable pointer events when pinned so source link is clickable
                 // Also increase z-index when pinned to ensure it's on top
-                this.tooltip.style.pointerEvents = pinned ? 'auto' : 'none';
+                this.tooltip.style.pointerEvents = 'auto';
                 // Use CSS variable for z-index (matches --z-tooltip-pinned in styles.css)
                 const tooltipZIndex = getComputedStyle(document.documentElement)
                     .getPropertyValue('--z-tooltip-pinned').trim() || '4000';
@@ -1317,6 +1487,9 @@ class UniversalScales {
     }
 
     hideTooltip() {
+        this.cancelTooltipHide();
+        this.hideUnitConversions();
+        this.tooltipItem = null;
         this.experiences?.audio.stop();
         this.tooltip.classList.remove('visible');
         // Reset mobile-specific class
@@ -2212,7 +2385,8 @@ class UniversalScales {
         this.imageModalImg.style.opacity = '0.5';
 
         // Get full-resolution image path
-        const fullPath = await this.getFullImagePath(imagePath);
+        const fullPath = /\.(?:jpe?g|png|webp|svg)(?:\?|$)/i.test(imagePath)
+            ? imagePath : await this.getFullImagePath(imagePath);
         if (fullPath) {
             const img = new Image();
             img.onload = () => {

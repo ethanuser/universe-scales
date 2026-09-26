@@ -55,6 +55,16 @@ test('object world positions and clearances do not change with zoom',()=>{
         });
     }
 });
+test('near-sized neighbors use a compact, fixed clearance',()=>{
+    const items=[1,1.25,1.5,2.5].map(value=>({value}));
+    for(const exponent of [-1,0,.1,.5,1]){
+        const entries=layout(items,exponent);
+        for(let index=1;index<entries.length;index++){
+            const gap=(entries[index].leftEdge-entries[index-1].rightEdge)/entries[index].size;
+            assert.ok(gap>=.08-1e-8 && gap<.09,`gap ${gap} at ${exponent}`);
+        }
+    }
+});
 test('smaller objects approach the left edge while continuously shrinking',()=>{
     const items=[1,10,100,1000].map(value=>({value}));
     let previous=layout(items,0)[0], disappearance;
@@ -95,10 +105,10 @@ test('a selected item can be centered among equal-sized neighbors without moving
 });
 test('a radius-defined cloud can be framed farther out without changing its physical span',()=>{
     const items=[{value:5.3e-11},{value:7e-11},{value:2.7e-10}];
-    const exponent=Math.log10(items[0].value*6.6);
+    const exponent=Math.log10(items[0].value*4);
     const focused=layout(items,exponent,1,{focusIndex:0,focusExponent:exponent,focusWindow:1});
     assert.ok(Math.abs(focused[0].x-500)<1e-8);
-    assert.ok(Math.abs(focused[0].size*6.6-370)<1e-8);
+    assert.ok(Math.abs(focused[0].size*4-370)<1e-8);
     assert.deepEqual(focused.map(entry=>entry.worldX),layout(items,exponent).map(entry=>entry.worldX));
 });
 test('camera eases over multiple frames and converges without overshooting',()=>{

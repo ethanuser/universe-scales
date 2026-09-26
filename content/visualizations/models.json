@@ -727,12 +727,10 @@
         "licenses/CC-BY-4.0.txt"
       ],
       "matches": {
-        "length": [
-          "Water Molecule"
-        ]
+        "length": []
       },
       "geometry": "mesh",
-      "note": "Ball-and-stick illustration of H2O. Sphere radii and bond thickness are illustrative; the listed length is the molecular span.",
+      "note": "Archived Sketchfab illustration; the Length explorer now uses NIST gas-phase bond geometry instead.",
       "src": "content/visualizations/models/sketchfab-water-molecule.glb",
       "format": "glb",
       "gltf_version": "2.0",
@@ -770,12 +768,10 @@
         "licenses/CC-BY-4.0.txt"
       ],
       "matches": {
-        "length": [
-          "Glucose Molecule"
-        ]
+        "length": []
       },
       "geometry": "mesh",
-      "note": "Molecular illustration, not an electron-density surface. The longest visible axis is used as an approximate span.",
+      "note": "Archived Sketchfab illustration; the Length explorer now uses PubChem alpha-D-glucose coordinates instead.",
       "src": "content/visualizations/models/sketchfab-glucose-molecule.glb",
       "format": "glb",
       "gltf_version": "2.0",
@@ -799,100 +795,6 @@
         ],
         "source_model_name": "Glucose Molecule",
         "source_author": "brutebandit"
-      },
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false
-    },
-    {
-      "id": "sketchfab-virus-capsid",
-      "presentation": {
-        "tint": "#739d83",
-        "roughness": 0.88,
-        "metalness": 0
-      },
-      "source": "https://sketchfab.com/3d-models/capsid-icosahedral-virus-cd2c1e4cd2764cba9e64763fc068c362",
-      "author": "uuon_foundation on Sketchfab",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "matches": {
-        "length": [
-          "Virus"
-        ]
-      },
-      "geometry": "mesh",
-      "note": "Icosahedral capsid as one recognizable virus form; viruses vary greatly in shape and diameter.",
-      "src": "content/visualizations/models/sketchfab-virus-capsid.glb",
-      "format": "glb",
-      "gltf_version": "2.0",
-      "bytes": 524408,
-      "sha256": "1f866fa56484a6603fc58294bb18418ef8a9a8e200e2195d0177be31bfa145f6",
-      "extensions_used": [
-        "KHR_materials_specular"
-      ],
-      "extensions_required": [],
-      "decompression_required": [],
-      "external_resources": [],
-      "mesh_count": 1,
-      "triangle_count": 18000,
-      "animations": 0,
-      "skins": 0,
-      "sketchfab_uid": "cd2c1e4cd2764cba9e64763fc068c362",
-      "source_sha256": "232ea7e5695f7e0d32a629cfc29ed1fd21f2b4168e3108ca6c6378d9481235e9",
-      "source_bytes": 234705,
-      "processing": {
-        "operations": [
-          "Embed glTF buffers and images into GLB",
-          "Resize textures to at most 512px",
-          "Remove animations for static Length presentation"
-        ],
-        "source_model_name": "Capsid Icosahedral Virus",
-        "source_author": "uuon_foundation"
-      },
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false
-    },
-    {
-      "id": "sketchfab-e-coli",
-      "source": "https://sketchfab.com/3d-models/escherichia-coli-6e338e60bb6f496595b1d2a23f227e4a",
-      "author": "mnoerbrata10 on Sketchfab",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "matches": {
-        "length": [
-          "Bacteria"
-        ]
-      },
-      "geometry": "mesh",
-      "note": "Stylized exterior of E. coli, used as a representative bacterium; surface hairs and flagella are illustrative, and bacterial lengths vary by species and growth state.",
-      "src": "content/visualizations/models/sketchfab-e-coli.glb",
-      "format": "glb",
-      "gltf_version": "2.0",
-      "bytes": 483792,
-      "sha256": "21d011e42af4ce2cdbf6cd50e67cd46350ee53c273c2091d5b200cb577f4b4c4",
-      "extensions_used": [],
-      "extensions_required": [],
-      "decompression_required": [],
-      "external_resources": [],
-      "mesh_count": 1,
-      "triangle_count": 9403,
-      "animations": 0,
-      "skins": 0,
-      "sketchfab_uid": "6e338e60bb6f496595b1d2a23f227e4a",
-      "source_sha256": "7f99e091a0d9b7166ed7577209e3926afc19d9a50b548cb777fdfbcc8cef39e2",
-      "source_bytes": 1670843,
-      "processing": {
-        "operations": [
-          "Embed glTF buffers and images into GLB",
-          "Resize textures to at most 512px"
-        ],
-        "source_model_name": "Escherichia Coli",
-        "source_author": "mnoerbrata10"
       },
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false
@@ -983,54 +885,6 @@
         ],
         "source_model_name": "Black Ant Model",
         "source_author": "3d-render.nl"
-      },
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false
-    },
-    {
-      "id": "sketchfab-housefly",
-      "presentation": {
-        "yaw": 90,
-        "roughness": 0.88,
-        "metalness": 0
-      },
-      "source": "https://sketchfab.com/3d-models/low-poly-house-fly-diptera-2baa84955f704a4091a274ef4acec24a",
-      "author": "glowbox3d on Sketchfab",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "matches": {
-        "length": [
-          "Housefly"
-        ]
-      },
-      "geometry": "mesh",
-      "note": "Low-poly housefly model. Its longest mesh axis is only an approximate proxy for the listed body length.",
-      "src": "content/visualizations/models/sketchfab-housefly.glb",
-      "format": "glb",
-      "gltf_version": "2.0",
-      "bytes": 284084,
-      "sha256": "40a35bf01a31e422c9b09f6dc5551057fb7f4960d17179b0d64b1310c036bdf1",
-      "extensions_used": [],
-      "extensions_required": [],
-      "decompression_required": [],
-      "external_resources": [],
-      "mesh_count": 1,
-      "triangle_count": 1736,
-      "animations": 0,
-      "skins": 0,
-      "sketchfab_uid": "2baa84955f704a4091a274ef4acec24a",
-      "source_sha256": "a862689d86a79bb4efb29724819ff04a3761b8723248f7459456b31577d9ac57",
-      "source_bytes": 1193564,
-      "processing": {
-        "operations": [
-          "Embed glTF buffers and images into GLB",
-          "Resize textures to at most 512px"
-        ],
-        "source_model_name": "Low Poly House Fly (Diptera)",
-        "source_author": "glowbox3d"
       },
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false
@@ -1293,8 +1147,8 @@
         "measure_axis": "y",
         "layout_width_factor": 0.48,
         "tint": "#657078",
-        "roughness": 0.86,
-        "metalness": 0
+        "roughness": 0.46,
+        "metalness": 0.16
       },
       "source": "https://sketchfab.com/3d-models/free-la-tour-eiffel-8553f94d06e24cb4b0fde1080f281674",
       "author": "Lambo_SC04 on Sketchfab",
@@ -1346,7 +1200,8 @@
     {
       "id": "sketchfab-butterfly-open",
       "presentation": {
-        "measure_axis": "x"
+        "measure_axis": "x",
+        "yaw": 90
       },
       "source": "https://sketchfab.com/3d-models/monarch-butterfly-c147ba066f2b449d836cb73c6cebf663",
       "author": "victorberdugo1 on Sketchfab",
@@ -1411,18 +1266,18 @@
         ]
       },
       "geometry": "mesh",
-      "note": "Micro-CT-derived Caicos ooid, particle 00080, rather than a synthetic sphere. The scanned grain's maximum span is about 577 micrometers; the explorer normalizes its shape to the dataset's representative 1 mm sand-grain span. Caicos ooids are carbonate grains, not quartz grains.",
+      "note": "Micro-CT-derived Caicos ooid, particle 00080, rather than a synthetic sphere. The scanned grain's maximum span is about 577 micrometers; its mesh has been lightly smoothed and is normalized to the dataset's representative 1 mm sand-grain span. Caicos ooids are carbonate grains, not quartz grains.",
       "src": "content/visualizations/models/sand-atlas-caicos-ooid-80.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 108312,
-      "sha256": "76fa28a1574ce7ad6b99345fbaff355b7dffbd601ebe9b3ec0bb840dbc3fd2b6",
+      "bytes": 108504,
+      "sha256": "fa38bd147e40a1b3fb36c296f9611701b691b1884c0f9516063e17cbf6643e13",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
       "mesh_count": 1,
-      "triangle_count": 1492,
+      "triangle_count": 5968,
       "animations": 0,
       "skins": 0,
       "source_sha256": "3db514079fe111cb41694991a0c0f7ae970c87770e719be331d01973eebedbff",
@@ -1430,7 +1285,8 @@
       "processing": {
         "operations": [
           "Extract particle_00080.stl from meshes_10.zip",
-          "Convert binary STL triangles to glTF 2.0 with recomputed face normals",
+          "Loop-subdivide the scanned surface once and average vertex normals",
+          "Convert indexed geometry to glTF 2.0",
           "Normalize scanned maximum extent to the representative Length datum at render time"
         ],
         "source_model_name": "Caicos Ooids, particle 00080"
@@ -1487,6 +1343,867 @@
       },
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false
+    },
+    {
+      "id": "sketchfab-dna-helix",
+      "presentation": {
+        "measure_axis": "x",
+        "flatten_static": true
+      },
+      "source": "https://sketchfab.com/3d-models/human-dna-3e78c4697cd44d949db99d72733369c2",
+      "author": "alexanderesmith on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "DNA Helix Width"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "An atom-colored segment of human B-DNA with alternating A\u2013T and C\u2013G pairs, credited to alexanderesmith. The listed 2 nm measures double-helix width, not the length of this arbitrary segment; hydrogen is white, oxygen red, nitrogen blue, carbon gray, and phosphorus yellow.",
+      "src": "content/visualizations/models/sketchfab-dna-helix.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 3386624,
+      "sha256": "b76d6d9ed45dd190662bab50ee60a8c8b32404cb59abe608248a77b6f6ed7893",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1590,
+      "triangle_count": 76320,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_uid": "3e78c4697cd44d949db99d72733369c2",
+      "source_sha256": "dfcaab1f9b08550cb22d097a187064c00fc0ac8811641091484514dda53ba1de",
+      "source_bytes": 139382,
+      "processing": {
+        "operations": [
+          "Embed glTF buffers and images into GLB",
+          "Resize textures to at most 512px",
+          "Remove animations for static Length presentation"
+        ],
+        "source_model_name": "Human DNA",
+        "source_author": "alexanderesmith"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "sketchfab-insulin-monomer",
+      "source": "https://sketchfab.com/3d-models/human-insulin-monomer-molecular-structure-d5e97a4e04194cc9878404a6b43e7362",
+      "author": "sduce on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Protein (Small)"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "A human insulin monomer, not an interchangeable model of every small protein. The listed 5 nm is a representative protein scale, not a measured diameter of this conformer; its longest visible mesh extent is normalized to that illustrative value.",
+      "src": "content/visualizations/models/sketchfab-insulin-monomer.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 489496,
+      "sha256": "074163b69592c271f184bb7dfe8d3ba792d09251c0456e37fa1331e9d868de60",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 14132,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_uid": "d5e97a4e04194cc9878404a6b43e7362",
+      "source_sha256": "cb67b67fe6f7c9a082ed7d260a02378c48b0fe3a947471ce499e5929e0061135",
+      "source_bytes": 167452,
+      "processing": {
+        "operations": [
+          "Embed glTF buffers and images into GLB",
+          "Resize textures to at most 512px",
+          "Remove animations for static Length presentation"
+        ],
+        "source_model_name": "Human Insulin Monomer Molecular Structure",
+        "source_author": "sduce"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "sketchfab-housefly-v2",
+      "source": "https://sketchfab.com/3d-models/housefly-5fe7cbd25f9a446d8bae005893d010dd",
+      "author": "Schmoldt5000 on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Housefly"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Adult Musca domestica with anatomically recognizable body, legs and wings. The source display pedestal is excluded. Its body-axis extent is an approximate proxy for the listed body length, not a measured specimen.",
+      "src": "content/visualizations/models/sketchfab-housefly-v2.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 956732,
+      "sha256": "e472456ecfc97617aed4b16ce8969b13324a62d8e50045b9738ec9a7471ab390",
+      "extensions_used": [
+        "KHR_materials_specular",
+        "KHR_materials_transmission"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 12521,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_uid": "5fe7cbd25f9a446d8bae005893d010dd",
+      "source_sha256": "0bfec02d0326abd9d7e2e5f570d8735beededf77039c3c0b63eb9382623214c7",
+      "source_bytes": 16829102,
+      "processing": {
+        "operations": [
+          "Embed glTF buffers and images into GLB",
+          "Resize textures to at most 256px",
+          "Remove animations for static Length presentation"
+        ],
+        "source_model_name": "Housefly",
+        "source_author": "Schmoldt5000"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "presentation": {
+        "remove_nodes": [
+          "Cylinder001_Material #175_0"
+        ],
+        "measure_axis": "z",
+        "yaw": 90
+      }
+    },
+    {
+      "id": "family-car",
+      "source": "https://kenney.nl/assets/car-kit",
+      "author": "Kenney",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/kenney-car-kit.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Family car envelope volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Stylized four-wheel sedan (source sedan.glb), not a particular manufacturer or calibrated vehicle. Envelope volume is not cabin capacity, material volume, or a measured watertight mesh volume.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "download_url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+      "archive_member": "Models/GLB format/sedan.glb",
+      "src": "content/visualizations/models/family-car.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 184776,
+      "sha256": "9896a2ce468dbfb38b725ca8318092763281d13bad9cd69cef3218a6a1a4d49d",
+      "extensions_used": [
+        "KHR_texture_transform"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 2032,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+      "source_bytes": 4814237,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.75,
+              -1.1920928966180355e-08,
+              -1.299999976158142
+            ],
+            "max": [
+              0.75,
+              1.299999976158142,
+              1.2499999761581422
+            ]
+          },
+          "source_longest_extent": 2.549999952316284,
+          "center": [
+            0.0,
+            0.6499999821186065,
+            -0.02499999999999991
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.2941176525586755,
+              -0.254901963213415,
+              -0.5
+            ],
+            "max": [
+              0.2941176525586755,
+              0.2549019632134151,
+              0.49999999999999994
+            ]
+          }
+        },
+        "archive_member": "Models/GLB format/sedan.glb",
+        "member_sha256": "b532ea7d2c59f7f6b22b138cf1955218a2c1898f1cea932af4d3fd563c3959b7",
+        "member_bytes": 172216,
+        "archive_license_sha256": "c33b7f6453d134deae7b1b8493717d9ccfa754c25ab97f6de89b88f8fda19b00"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "bucket",
+      "source": "https://polyhaven.com/a/wooden_bucket_02",
+      "author": "James Ray Cock; Poly Haven",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/polyhaven-license.html"
+      ],
+      "matches": {
+        "volume": [
+          "Bucket"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Actual open wooden bucket with metal bands and handles. Representative bucket, not a calibrated 10 L container; hollow capacity is not solid wood/mesh volume.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "polyhaven_id": "wooden_bucket_02",
+      "download_url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_bucket_02/wooden_bucket_02_1k.gltf",
+      "src": "content/visualizations/models/bucket.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2511128,
+      "sha256": "244c262acf9aba3fb86d19fcb71db43b8a76ecc23aa3eb36b50fcf3081b99e84",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 7252,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "9ced8ec4849e59e7135d1ab342dbb106adc8c927d2178b1643f1089f19d548b5",
+      "source_bytes": 5625,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.3077849745750427,
+              0.000261455774307251,
+              -0.3086950480937958
+            ],
+            "max": [
+              0.3075416684150696,
+              0.3506869375705719,
+              0.30760839581489563
+            ]
+          },
+          "source_longest_extent": 0.6163034439086914,
+          "center": [
+            -0.00012165307998657227,
+            0.17547419667243958,
+            -0.0005433261394500732
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.49920753248401145,
+              -0.28429622230715784,
+              -0.5000000000000001
+            ],
+            "max": [
+              0.4992075324840114,
+              0.28429622230715784,
+              0.5
+            ]
+          }
+        }
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "wine-glass",
+      "source": "https://kenney.nl/assets/food-kit",
+      "author": "Kenney",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/kenney-food-kit.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Wine glass volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Stylized stemmed wine glass (source glass-wine.glb). The dataset value is representative liquid capacity, not the volume of the glass material or its exact polygon interior.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "download_url": "https://kenney.nl/media/pages/assets/food-kit/83086fa91c-1719418518/kenney_food-kit.zip",
+      "archive_member": "Models/GLB format/glass-wine.glb",
+      "src": "content/visualizations/models/wine-glass.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 34892,
+      "sha256": "c0267ab329be055850a37764ed676fb605705221ee7d349f6cdaf4dcac67f882",
+      "extensions_used": [
+        "KHR_texture_transform"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 232,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "cdad90853682499b94c9fda2f87678b24bfd8f3264e0ed323f6b6a27fd7c6f6f",
+      "source_bytes": 4606270,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.11338268220424652,
+              0.0,
+              -0.09846480935811996
+            ],
+            "max": [
+              0.11338268220424652,
+              0.49986231327056885,
+              0.09846480935811996
+            ]
+          },
+          "source_longest_extent": 0.49986231327056885,
+          "center": [
+            0.0,
+            0.24993115663528442,
+            0.0
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.2268278267717174,
+              -0.5,
+              -0.19698386284389133
+            ],
+            "max": [
+              0.2268278267717174,
+              0.5,
+              0.19698386284389133
+            ]
+          }
+        },
+        "archive_member": "Models/GLB format/glass-wine.glb",
+        "member_sha256": "7021e2a701419b48fcfba5a1344f12049d84fd6e68fc9e54fbe051ae522a23bb",
+        "member_bytes": 23984,
+        "archive_license_sha256": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "freight-train-car",
+      "source": "https://kenney.nl/assets/train-kit",
+      "author": "Kenney",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/kenney-train-kit.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Freight train car volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Stylized open-topped cargo railcar (source train-carriage-box.glb). The listed volume is a representative cargo-space volume, not the volume of the mesh or external railcar envelope.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "download_url": "https://kenney.nl/media/pages/assets/train-kit/cf8521d625-1727040883/kenney_train-kit.zip",
+      "archive_member": "Models/GLB format/train-carriage-box.glb",
+      "src": "content/visualizations/models/freight-train-car.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 111648,
+      "sha256": "00647565262a1053aa581566e0d34de83a0d6f91b4a04c3a4c1063d05c683b56",
+      "extensions_used": [
+        "KHR_texture_transform"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 1076,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "cf50d77e8cbacbf38dd50826d4bce5392db8e4f67373d3c4e583b0ed0e474475",
+      "source_bytes": 5266588,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.6000118255615234,
+              -9.132383738119643e-11,
+              -1.3500001430511475
+            ],
+            "max": [
+              0.6000118255615234,
+              1.2976958751678467,
+              1.3500001430511475
+            ]
+          },
+          "source_longest_extent": 2.700000286102295,
+          "center": [
+            0.0,
+            0.6488479375382614,
+            0.0
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.2222265785118479,
+              -0.24031402550933,
+              -0.5
+            ],
+            "max": [
+              0.2222265785118479,
+              0.24031402550933004,
+              0.5
+            ]
+          }
+        },
+        "archive_member": "Models/GLB format/train-carriage-box.glb",
+        "member_sha256": "6b594f3f7ef779879043219e2ee79eb37523427e2100855296a0c9662b36689c",
+        "member_bytes": 98768,
+        "archive_license_sha256": "8ad3a0453dc1416d54e9af692dafe875a24069d577fe64edb193d3c8d868881a"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "sketchfab-isuzu-city-bus",
+      "source": "https://sketchfab.com/3d-models/isuzu-erga-mio-bus-050e8acd0bbc4da0902a8a874ef10fca",
+      "author": "own.guest on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "volume": [
+          "City bus envelope volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "An Isuzu Erga Mio Japanese city bus. The listed volume is a representative exterior envelope, not the interior passenger space or the exact volume of this particular bus.",
+      "src": "content/visualizations/models/sketchfab-isuzu-city-bus.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 203488,
+      "sha256": "b8c2dbc93b1b5b3e8aef2dae310c7e1fa71869c8b4835704336764a3ab2bf917",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3434,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_uid": "050e8acd0bbc4da0902a8a874ef10fca",
+      "source_sha256": "15da25b55286aafc04f2d59f1c1cc9fbbf3dfa7bb93efed7e99960dcc5e8e55e",
+      "source_bytes": 1121023,
+      "processing": {
+        "operations": [
+          "Embed glTF buffers and images into GLB",
+          "Resize textures to at most 256px",
+          "Remove animations for static Length presentation"
+        ],
+        "source_model_name": "Isuzu Erga Mio bus",
+        "source_author": "own.guest"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "shipping-container",
+      "source": "https://kenney.nl/assets/city-kit-industrial",
+      "author": "Kenney",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "licenses/kenney-industrial-kit.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Shipping container",
+          "Shipping container volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Stylized intermodal shipping container (source shipping-container-a.glb). The listed capacity is representative interior cargo space; the visible exterior is not an exact dimensional survey or a watertight volume measurement.",
+      "model_units_note": "Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.",
+      "download_url": "https://kenney.nl/media/pages/assets/city-kit-industrial/0ec35b139d-1788171848/kenney_city-kit-industrial_2.0.zip",
+      "archive_member": "Models/GLB format/shipping-container-a.glb",
+      "src": "content/visualizations/models/shipping-container.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 48828,
+      "sha256": "9484840687d8aac84420a7eb415512fbd4abd771ec1d7ff1b93001f0d181ac91",
+      "extensions_used": [
+        "KHR_texture_transform"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 402,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "5b381164e5760f3830a2dbee43b972deee38b2a695d091b56e238ab2910c96d2",
+      "source_bytes": 5045077,
+      "processing": {
+        "operations": [
+          "Retain authored geometry, materials, UVs and Y-up orientation; embed all resources",
+          "Add uniform normalization parent; preserve local child transforms and fan spindle pivot"
+        ],
+        "normalization": {
+          "source_bounds": {
+            "min": [
+              -0.1863002246618271,
+              6.857303924689973e-10,
+              -0.41130002617836003
+            ],
+            "max": [
+              0.18629990279674533,
+              0.34807996273040775,
+              0.41130002617836003
+            ]
+          },
+          "source_longest_extent": 0.8226000523567201,
+          "center": [
+            -1.6093254089077913e-07,
+            0.17403998170806909,
+            0.0
+          ],
+          "normalized_longest_extent": 1,
+          "up_axis": "+Y",
+          "world_bounds": {
+            "min": [
+              -0.22647708712823825,
+              -0.21157302448950777,
+              -0.5
+            ],
+            "max": [
+              0.22647708712823822,
+              0.2115730244895077,
+              0.5
+            ]
+          }
+        },
+        "archive_member": "Models/GLB format/shipping-container-a.glb",
+        "member_sha256": "7b2d5ca874c8e659ee6cfd1614f0470b70410b2ddc7620ac83b8954dedeb861d",
+        "member_bytes": 36624,
+        "archive_license_sha256": "60a8c5c31191256ec9779dc18745dea6d69c46f4b29703459ce064c1765a59ea"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "sketchfab-teaspoon",
+      "source": "https://sketchfab.com/3d-models/teaspoon-96467926442342eab2c797de0ed80e6a",
+      "author": "LordOfTheSnow on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Teaspoon"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "A single chromium-finished teaspoon modeled from a reference photograph. It illustrates a 5 mL measuring teaspoon, but the mesh bowl was not calibrated to hold exactly 5 mL.",
+      "src": "content/visualizations/models/sketchfab-teaspoon.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 150664,
+      "sha256": "d8361eea95a7286772240381eb9249aceeb2ebec46ee3c9f5e182b51d32a8be9",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3904,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_uid": "96467926442342eab2c797de0ed80e6a",
+      "source_sha256": "3d8186c513b8a8040e01519410aba76d8115e8e58dd5ae93903db6846380fd3e",
+      "source_bytes": 61895,
+      "processing": {
+        "operations": [
+          "Embed glTF buffers and images into GLB",
+          "Resize textures to at most 256px",
+          "Remove animations for static Length presentation"
+        ],
+        "source_model_name": "Teaspoon",
+        "source_author": "LordOfTheSnow"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false
+    },
+    {
+      "id": "nasa-earth-moon-distance",
+      "source": "https://science.nasa.gov/moon/by-the-numbers/",
+      "author": "NASA; composite assembled by Universe Scales",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "matches": {
+        "length": [
+          "Earth-Moon Distance"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, with their radii scaled to the same distance. Lunar distance changes during its orbit; this idealized diagram is not a view from a particular date or phase.",
+      "src": "content/visualizations/models/nasa-earth-moon-distance.glb",
+      "presentation": {
+        "reference_size": 1
+      },
+      "processing": {
+        "source_models": [
+          {
+            "id": "nasa-earth",
+            "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+            "source": "https://science.nasa.gov/resource/earth-3d-model/"
+          },
+          {
+            "id": "nasa-moon",
+            "sha256": "d342a56c4fe2757e19c1c92fb3ee0f2d3d9ae24420e0ebb98160f0d52644203e",
+            "source": "https://solarsystem.nasa.gov/resources/2366/earths-moon-3d-model/"
+          }
+        ],
+        "center_distance_m": 384400000,
+        "body_radii_m": {
+          "Earth": 6371000,
+          "Moon": 1737500
+        },
+        "operations": [
+          "Retain NASA geometry and embedded textures",
+          "Place sphere centers one reference distance apart"
+        ]
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 656080,
+      "sha256": "d3ddc2748e4c0fdf8f6610965483bda5e5839350cf8da4ae082783aaceb556f9",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 6144,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-sun-earth-au",
+      "source": "https://ssd.jpl.nasa.gov/faq.html",
+      "author": "NASA; composite assembled by Universe Scales",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "matches": {
+        "length": [
+          "Astronomical Unit"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit (149,597,870,700 m) center-to-center, using their approximate mean radii. The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
+      "src": "content/visualizations/models/nasa-sun-earth-au.glb",
+      "presentation": {
+        "reference_size": 1
+      },
+      "processing": {
+        "source_models": [
+          {
+            "id": "nasa-sun",
+            "sha256": "7b5ba6cf18d46532a4d2741a345432dbd784027c357f741780911839e68c85c3",
+            "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+          },
+          {
+            "id": "nasa-earth",
+            "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+            "source": "https://science.nasa.gov/resource/earth-3d-model/"
+          }
+        ],
+        "center_distance_m": 149597870700,
+        "body_radii_m": {
+          "Sun": 695700000,
+          "Earth": 6371000
+        },
+        "operations": [
+          "Retain NASA geometry and embedded textures",
+          "Place sphere centers one reference distance apart"
+        ]
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 700136,
+      "sha256": "6eb5e11b3b8e2d782a2aa1122543324dabadf6bc8fff69fc1b03e2783214d007",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 6144,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "sketchfab-bacterium-rod",
+      "source": "https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533",
+      "author": "andrewfrueh on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Bacteria"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. The model's main body is calibrated to the listed 2 micrometer length; the surface projections are illustrative. One long appendage was omitted so that the body remains legible at this scale.",
+      "src": "content/visualizations/models/sketchfab-bacterium-rod.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 376276,
+      "sha256": "9330515f23c85c94d4393c5394f18e99ae4322a19fd66ad7fc7e77d1dfcb83a0",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 7890,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_uid": "75ae189551e94d59aedce00104217533",
+      "source_sha256": "af7116c8b4d4b32e99fd45382024fcb8da98fdef02d8777fc80f43a0ce59bf3b",
+      "source_bytes": 2714439,
+      "processing": {
+        "operations": [
+          "Embed glTF buffers and images into GLB",
+          "Resize textures to at most 512px",
+          "Remove animations for static Length presentation"
+        ],
+        "source_model_name": "Bacterium",
+        "source_author": "andrewfrueh"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "presentation": {
+        "remove_nodes": [
+          "Bacterium geo node body end"
+        ],
+        "measure_axis": "x",
+        "measure_fraction": 0.8355,
+        "layout_width_factor": 1.2
+      }
+    },
+    {
+      "id": "nih-porcine-parvovirus-capsid",
+      "source": "https://3d.nih.gov/entries/9728",
+      "author": "NIH 3D; structural model from PDB 1K3V",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Virus"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "Molecular surface of the porcine parvovirus capsid from PDB 1K3V, generated by NIH 3D. The 28 nm marker is this capsid's approximate diameter, not a universal virus size. The model shows the protein shell, not the genome or a measured individual virion. Surface colors distinguish protein chains.",
+      "src": "content/visualizations/models/nih-porcine-parvovirus-capsid.glb",
+      "source_sha256": "69cf2b1a3704326b0cf5b2ae8a969a4da34d8ef79b9f0d7aa9c15b4339a74515",
+      "source_bytes": 793208,
+      "processing": {
+        "operations": [
+          "Retain NIH 3D's embedded molecular surface and chain colors"
+        ],
+        "pdb_id": "1K3V",
+        "nih_output_file_id": 261470,
+        "download_url": "https://3d.nih.gov/api/submissions/11748/runs/5857566f-fc26-4534-8b11-48897c408ea3/output-files/261470"
+      },
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 793208,
+      "sha256": "69cf2b1a3704326b0cf5b2ae8a969a4da34d8ef79b9f0d7aa9c15b4339a74515",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 30456,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [
@@ -1505,14 +2222,16 @@
       "note": "Sun landing page exposes USDZ, not GLB. Corresponding NASA-hosted GLB returned HTTP 200 and was downloaded and validated; no USDZ conversion is required."
     },
     {
-      "status": "deferred_bounded_task",
+      "status": "not_reviewed_in_bounded_task",
       "matches": {
+        "length": [],
         "volume": [
-          "Bucket",
-          "Family car envelope volume"
+          "Grain of sand volume",
+          "Bathtub",
+          "Bathtub volume"
         ]
       },
-      "note": "Prior source definitions preserved in the fetch script, but not downloaded or validated in this bounded task."
+      "note": "No models delivered or licensing/identity claims made for these candidates. No generic whale, rock, or other substitute was used."
     },
     {
       "status": "not_reviewed_in_bounded_task",

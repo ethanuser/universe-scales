@@ -166,10 +166,10 @@
     },
     {
       "url": "https://kenney.nl/assets/food-kit",
-      "sha256": "6ea53d94e0807b7ad911af79d1aeed2da55f4556c6aad3bed74be2a42a734826",
-      "bytes": 16920,
+      "sha256": "8f3cef43ce02a68b9c7e72a4468c749aafa682183920721ffcda35acf9c0803c",
+      "bytes": 17268,
       "pinned": false,
-      "local_path": "sources/soda-can.html"
+      "local_path": "sources/wine-glass.html"
     },
     {
       "url": "https://poly.pizza/m/qKICY6xla2",
@@ -260,6 +260,97 @@
       "sha256": "af123055dc185abd34342cfe58df87cc1bf61144831157181c9af03c542339c5",
       "bytes": 566114,
       "pinned": true
+    },
+    {
+      "url": "https://kenney.nl/assets/car-kit",
+      "sha256": "90bbedd062461c0b5283ae1c6b54083407cf058f7c6d70ecb0d387b4d9ac90ba",
+      "bytes": 18359,
+      "pinned": false,
+      "local_path": "sources/family-car.html"
+    },
+    {
+      "url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+      "sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+      "bytes": 4814237,
+      "pinned": true
+    },
+    {
+      "url": "https://polyhaven.com/a/wooden_bucket_02",
+      "sha256": "bc9376cad514ad39b45aa7edb2262e930d0ac40b82253654b812121d1f61b226",
+      "bytes": 204570,
+      "pinned": false,
+      "local_path": "sources/bucket.html"
+    },
+    {
+      "url": "https://api.polyhaven.com/info/wooden_bucket_02",
+      "sha256": "a9b202cd0a67f8553b7bf0ce2e18b5b29cabbb0ff8061a416033c121f7214e20",
+      "bytes": 1069,
+      "pinned": false,
+      "local_path": "sources/bucket-info.json"
+    },
+    {
+      "url": "https://api.polyhaven.com/files/wooden_bucket_02",
+      "sha256": "12fb3b87b8069b40b910ea75dd00e1edf5d9beac46749df529c23da96ad51548",
+      "bytes": 31002,
+      "pinned": false,
+      "local_path": "sources/bucket-files.json"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_bucket_02/wooden_bucket_02_1k.gltf",
+      "sha256": "9ced8ec4849e59e7135d1ab342dbb106adc8c927d2178b1643f1089f19d548b5",
+      "bytes": 5625,
+      "pinned": true,
+      "local_path": "sources/bucket.gltf"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wooden_bucket_02/wooden_bucket_02.bin",
+      "sha256": "d733864312ab54d3d7908b930e858acde4eabe332ea742e0d1d15097c09aab93",
+      "bytes": 227128,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_bucket_02/wooden_bucket_02_nor_gl_1k.jpg",
+      "sha256": "206d606d5ce5d27fcc13e5a0c34e338d7841f6f26a3dd3f3a4f9d45644da45be",
+      "bytes": 756137,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_bucket_02/wooden_bucket_02_diff_1k.jpg",
+      "sha256": "473693e53010cf87e0800037c39d8a5843351888b907c213e775bf1c10aac559",
+      "bytes": 648386,
+      "pinned": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_bucket_02/wooden_bucket_02_arm_1k.jpg",
+      "sha256": "4873fc1f3cda8a0e49f254861b1a6761bc9d8f192509e7f9b2163fdc84d7e86d",
+      "bytes": 875674,
+      "pinned": true
+    },
+    {
+      "url": "https://kenney.nl/assets/train-kit",
+      "sha256": "abe2ebe82faefe663014065db2d782e004e8a0b808a14e39850005d7d332fb50",
+      "bytes": 18377,
+      "pinned": false,
+      "local_path": "sources/freight-train-car.html"
+    },
+    {
+      "url": "https://kenney.nl/media/pages/assets/train-kit/cf8521d625-1727040883/kenney_train-kit.zip",
+      "sha256": "cf50d77e8cbacbf38dd50826d4bce5392db8e4f67373d3c4e583b0ed0e474475",
+      "bytes": 5266588,
+      "pinned": true
+    },
+    {
+      "url": "https://kenney.nl/assets/city-kit-industrial",
+      "sha256": "936fcbb802ba90785a6813d1ea771ebfefdd0b4cecf931d28cdaf46cc84beb6a",
+      "bytes": 19272,
+      "pinned": false,
+      "local_path": "sources/shipping-container.html"
+    },
+    {
+      "url": "https://kenney.nl/media/pages/assets/city-kit-industrial/0ec35b139d-1788171848/kenney_city-kit-industrial_2.0.zip",
+      "sha256": "5b381164e5760f3830a2dbee43b972deee38b2a695d091b56e238ab2910c96d2",
+      "bytes": 5045077,
+      "pinned": true
     }
   ],
   "local_files": [
@@ -327,6 +418,81 @@
       "path": "sources/ceiling-fan.gltf",
       "sha256": "be84d4ce1cbbbee21c5f588d5dfde41297f4ecbddedbb0f05e5cb01ddb8ede1b",
       "bytes": 4777
+    },
+    {
+      "path": "sources/family-car.html",
+      "sha256": "90bbedd062461c0b5283ae1c6b54083407cf058f7c6d70ecb0d387b4d9ac90ba",
+      "bytes": 18359
+    },
+    {
+      "path": "licenses/kenney-car-kit.txt",
+      "sha256": "c33b7f6453d134deae7b1b8493717d9ccfa754c25ab97f6de89b88f8fda19b00",
+      "bytes": 696
+    },
+    {
+      "path": "sources/family-car-preview.png",
+      "sha256": "d957628a5689322b152588c1d077c51d0d576b229c788195f4a73d8042177ce4",
+      "bytes": 2278
+    },
+    {
+      "path": "sources/bucket.html",
+      "sha256": "bc9376cad514ad39b45aa7edb2262e930d0ac40b82253654b812121d1f61b226",
+      "bytes": 204570
+    },
+    {
+      "path": "sources/bucket-info.json",
+      "sha256": "a9b202cd0a67f8553b7bf0ce2e18b5b29cabbb0ff8061a416033c121f7214e20",
+      "bytes": 1069
+    },
+    {
+      "path": "sources/bucket-files.json",
+      "sha256": "12fb3b87b8069b40b910ea75dd00e1edf5d9beac46749df529c23da96ad51548",
+      "bytes": 31002
+    },
+    {
+      "path": "sources/bucket.gltf",
+      "sha256": "9ced8ec4849e59e7135d1ab342dbb106adc8c927d2178b1643f1089f19d548b5",
+      "bytes": 5625
+    },
+    {
+      "path": "sources/wine-glass.html",
+      "sha256": "8f3cef43ce02a68b9c7e72a4468c749aafa682183920721ffcda35acf9c0803c",
+      "bytes": 17268
+    },
+    {
+      "path": "sources/freight-train-car.html",
+      "sha256": "abe2ebe82faefe663014065db2d782e004e8a0b808a14e39850005d7d332fb50",
+      "bytes": 18377
+    },
+    {
+      "path": "sources/wine-glass-preview.png",
+      "sha256": "c4fe5605846e9c50a728f9100cda9066c5b933dec0963f08b7337911b8013a88",
+      "bytes": 1448
+    },
+    {
+      "path": "licenses/kenney-train-kit.txt",
+      "sha256": "8ad3a0453dc1416d54e9af692dafe875a24069d577fe64edb193d3c8d868881a",
+      "bytes": 762
+    },
+    {
+      "path": "sources/freight-train-car-preview.png",
+      "sha256": "00252f94e647211a61bffc26c8cc76c5abd59300d1a6f9ea026acb2059b3234b",
+      "bytes": 1964
+    },
+    {
+      "path": "sources/shipping-container.html",
+      "sha256": "936fcbb802ba90785a6813d1ea771ebfefdd0b4cecf931d28cdaf46cc84beb6a",
+      "bytes": 19272
+    },
+    {
+      "path": "licenses/kenney-industrial-kit.txt",
+      "sha256": "60a8c5c31191256ec9779dc18745dea6d69c46f4b29703459ce064c1765a59ea",
+      "bytes": 708
+    },
+    {
+      "path": "sources/shipping-container-preview.png",
+      "sha256": "bf5ba34a744ef457c9b9d72942505f7fd199ed03f1e558a8e55686254b599dcc",
+      "bytes": 3345
     }
   ]
 }

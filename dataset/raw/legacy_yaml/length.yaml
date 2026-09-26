@@ -133,16 +133,14 @@ items:
   name: Protein (Small)
   source: https://en.wikipedia.org/wiki/Protein
   value: 5e-9
-- description: The size of typical viruses, biological entities that blur the
-    line between living and non-living. Viruses are essentially genetic
-    material wrapped in protein coats, hijacking cellular machinery to
-    reproduce. Their small size allows them to penetrate cells through
-    endocytosis, while their protein shells protect their genetic material
-    from environmental damage. Some viruses are so small they can pass
-    through filters designed to remove bacteria.
+- description: Porcine parvovirus is a small virus with a roughly 28 nm
+    icosahedral capsid. Its coat is assembled from sixty protein subunits;
+    the surface folds are part of what determines which cells it can enter.
+    This marker is the capsid diameter of one studied virus, not an average
+    size for all viruses or a model of the viral genome inside.
   name: Virus
-  source: https://en.wikipedia.org/wiki/Virus
-  value: 1e-8
+  source: https://pubmed.ncbi.nlm.nih.gov/11827486/
+  value: 2.8e-8
 - description: The wavelength of green light, the peak sensitivity of human vision.
     This wavelength defines the resolution limit of optical microscopes and
     explains why we can't see individual atoms with visible light. The

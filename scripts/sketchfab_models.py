@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Find and import small, credited Sketchfab models for the Length explorer.
 
-Search needs no credentials. Import needs an API token in a file outside this
-repository; the token and short-lived download URLs are never written to disk.
+Search needs no credentials. Import accepts an API token from the environment
+or a file outside this repository; the token and short-lived download URLs are
+never written to disk.
 """
 
 import argparse
@@ -10,6 +11,7 @@ import base64
 import html
 import io
 import json
+import os
 import posixpath
 import re
 import shlex
@@ -61,8 +63,8 @@ def request_bytes(url, limit):
     return data
 
 
-def dataset_names():
-    path = ROOT / "exports/json/dimensions/length.json"
+def dataset_names(dimension="length"):
+    path = ROOT / f"exports/json/dimensions/{dimension}.json"
     return {item["name"] for item in json.loads(path.read_text())["items"]}
 
 
@@ -218,16 +220,17 @@ def select_model(model_id, uid):
     print(f"Approved {entry['name']}: {detail['name']} by {entry['author']}. Run import --only {model_id} with your token file.")
 
 
-def read_manifest():
-    entries = json.loads(MANIFEST.read_text())["models"]
-    names = dataset_names()
+def read_manifest(dimension="length"):
+    manifest = MANIFEST if dimension == "length" else ASSETS / f"sketchfab-{dimension}.json"
+    entries = json.loads(manifest.read_text())["models"]
+    names = dataset_names(dimension)
     used = set()
     identifiers = set()
     for entry in entries:
         if entry["name"] not in names:
-            raise ValueError(f"Not an exact Length item: {entry['name']}")
+            raise ValueError(f"Not an exact {dimension} item: {entry['name']}")
         if entry["name"] in used:
-            raise ValueError(f"Duplicate Length match: {entry['name']}")
+            raise ValueError(f"Duplicate {dimension} match: {entry['name']}")
         if not re.fullmatch(r"[a-z0-9-]+", entry["id"]):
             raise ValueError(f"Unsafe model ID: {entry['id']}")
         if entry["id"] in identifiers:
@@ -359,17 +362,77 @@ def repair_static_models(only):
     print(f"Repacked {changed} model(s)")
 
 
-def import_models(entries, token_file, max_archive, max_glb, max_total, texture_size):
-    token_path = token_file.expanduser().resolve()
-    if token_path.is_relative_to(ROOT):
-        raise ValueError("Keep the API token outside the repository")
-    token = token_path.read_text().strip()
+def stage_models(uids, token_file, token_env, output_dir, max_archive, max_glb, texture_size):
+    """Download candidates outside the repository for geometry review, without activating them."""
+    from fetch_model_assets import inspect_glb, sha, write_json
+
+    destination = output_dir.expanduser().resolve()
+    if destination.is_relative_to(ROOT.resolve()):
+        raise ValueError("Stage candidate files outside the repository")
+    if token_env:
+        token = os.environ.get("SKETCHFAB_TOKEN", "").strip()
+    else:
+        token_path = token_file.expanduser().resolve()
+        if token_path.is_relative_to(ROOT.resolve()):
+            raise ValueError("Keep the API token outside the repository")
+        token = token_path.read_text().strip()
     if not token:
+        raise ValueError("API token is empty")
+    destination.mkdir(parents=True, exist_ok=True)
+    for uid in uids:
+        detail = model_detail(uid)
+        license_info = detail.get("license") or {}
+        if not detail.get("isDownloadable") or license_info.get("slug") not in ALLOWED_LICENSES:
+            print(f"Skip {uid}: not downloadable under CC BY or CC0")
+            continue
+        answer = request_json(f"{API}/models/{uid}/download", token)
+        gltf = answer.get("gltf") or {}
+        if not gltf.get("url") or gltf.get("size", max_archive + 1) > max_archive:
+            print(f"Skip {uid}: archive exceeds {max_archive / 1_000_000:g} MB")
+            continue
+        source = request_bytes(gltf["url"], max_archive)
+        selected_size = texture_size
+        output = gltf_to_glb(source, selected_size)
+        while len(output) > max_glb and selected_size > 128:
+            selected_size = max(128, selected_size // 2)
+            output = gltf_to_glb(source, selected_size)
+        if len(output) > max_glb:
+            print(f"Skip {uid}: delivered GLB exceeds {max_glb / 1_000_000:g} MB")
+            continue
+        stats = inspect_glb(output)
+        (destination / f"{uid}.glb").write_bytes(output)
+        write_json(destination / f"{uid}.json", {
+            "uid": uid, "name": detail["name"], "author": detail["user"]["username"],
+            "license": license_info["slug"],
+            "source": detail.get("viewerUrl") or f"https://sketchfab.com/models/{uid}",
+            "description": detail.get("description", ""),
+            "source_sha256": sha(source), "source_bytes": len(source),
+            "texture_size": selected_size, **stats,
+        })
+        print(f"Staged {detail['name']}: {len(output) / 1_000_000:.2f} MB, "
+              f"{stats['triangle_count']:,} triangles; {destination / f'{uid}.glb'}")
+
+
+def import_models(entries, token_file, max_archive, max_glb, max_total, texture_size, token_env=False,
+                  staged_dir=None, dimension="length"):
+    if staged_dir is not None:
+        staged_dir = staged_dir.expanduser().resolve()
+        if staged_dir.is_relative_to(ROOT.resolve()):
+            raise ValueError("Keep staged candidate files outside the repository")
+        token = None
+    elif token_env:
+        token = os.environ.get("SKETCHFAB_TOKEN", "").strip()
+    else:
+        token_path = token_file.expanduser().resolve()
+        if token_path.is_relative_to(ROOT.resolve()):
+            raise ValueError("Keep the API token outside the repository")
+        token = token_path.read_text().strip()
+    if staged_dir is None and not token:
         raise ValueError("API token file is empty")
     from fetch_model_assets import check_matches, inspect_glb, sha, write_json
 
     registry = json.loads(REGISTRY.read_text())
-    existing = {name for model in registry["models"] for name in model.get("matches", {}).get("length", [])}
+    existing = {name for model in registry["models"] for name in model.get("matches", {}).get(dimension, [])}
     pending = []
     for entry in entries:
         if entry.get("enabled") is False:
@@ -384,19 +447,42 @@ def import_models(entries, token_file, max_archive, max_glb, max_total, texture_
             continue
         if replacement and not any(model["id"] == replacement for model in registry["models"]):
             raise ValueError(f"Replacement not found: {replacement}")
-        detail = checked_detail(entry)
-        answer = request_json(f"{API}/models/{entry['uid']}/download", token)
-        gltf = answer.get("gltf") or {}
-        if not gltf.get("url") or gltf.get("size", max_archive + 1) > max_archive:
-            print(f"Skip {entry['name']}: source archive exceeds {max_archive / 1_000_000:g} MB")
-            continue
-        source = request_bytes(gltf["url"], max_archive)
         try:
-            selected_texture_size = texture_size
-            output = gltf_to_glb(source, selected_texture_size)
-            while len(output) > max_glb and selected_texture_size > 128:
-                selected_texture_size = max(128, selected_texture_size // 2)
+            if staged_dir is not None:
+                metadata = json.loads((staged_dir / f"{entry['uid']}.json").read_text())
+                if (metadata["uid"] != entry["uid"] or metadata["author"] != entry["author"]
+                        or metadata["license"] != entry["license"]):
+                    raise ValueError("Staged identity or license differs from reviewed manifest")
+                source_url = urlsplit(metadata["source"])
+                if source_url.scheme != "https" or source_url.hostname != "sketchfab.com" \
+                        or entry["uid"] not in source_url.path:
+                    raise ValueError("Staged source page is not the reviewed Sketchfab model")
+                if metadata["license"] not in ALLOWED_LICENSES or metadata["source_bytes"] > max_archive:
+                    raise ValueError("Staged archive exceeds limit or has unsupported license")
+                output = (staged_dir / f"{entry['uid']}.glb").read_bytes()
+                if sha(output) != metadata["sha256"]:
+                    raise ValueError("Staged GLB checksum mismatch")
+                selected_texture_size = metadata["texture_size"]
+                source_hash, source_bytes = metadata["source_sha256"], metadata["source_bytes"]
+                license_url = ("https://creativecommons.org/licenses/by/4.0/" if metadata["license"] == "by"
+                               else "https://creativecommons.org/publicdomain/zero/1.0/")
+                detail = {"name": metadata["name"], "user": {"username": metadata["author"]},
+                          "viewerUrl": metadata["source"],
+                          "license": {"slug": metadata["license"], "url": license_url}}
+            else:
+                detail = checked_detail(entry)
+                answer = request_json(f"{API}/models/{entry['uid']}/download", token)
+                gltf = answer.get("gltf") or {}
+                if not gltf.get("url") or gltf.get("size", max_archive + 1) > max_archive:
+                    print(f"Skip {entry['name']}: source archive exceeds {max_archive / 1_000_000:g} MB")
+                    continue
+                source = request_bytes(gltf["url"], max_archive)
+                selected_texture_size = texture_size
                 output = gltf_to_glb(source, selected_texture_size)
+                while len(output) > max_glb and selected_texture_size > 128:
+                    selected_texture_size = max(128, selected_texture_size // 2)
+                    output = gltf_to_glb(source, selected_texture_size)
+                source_hash, source_bytes = sha(source), len(source)
             if len(output) > max_glb:
                 print(f"Skip {entry['name']}: GLB is {len(output) / 1_000_000:.2f} MB")
                 continue
@@ -414,32 +500,34 @@ def import_models(entries, token_file, max_archive, max_glb, max_total, texture_
         model = {
             "id": entry["id"], "source": source_page, "author": f"{username} on Sketchfab",
             "license": license_name, "license_url": license_info["url"].replace("http://", "https://"),
-            "license_files": [license_file], "matches": {"length": [entry["name"]]},
+            "license_files": [license_file], "matches": {dimension: [entry["name"]]},
             "geometry": "mesh", "note": entry.get("note", "Illustrative model; longest mesh axis represents the listed length."),
             "src": f"content/visualizations/models/{entry['id']}.glb", **stats,
-            "sketchfab_uid": entry["uid"], "source_sha256": sha(source), "source_bytes": len(source),
+            "sketchfab_uid": entry["uid"], "source_sha256": source_hash, "source_bytes": source_bytes,
             "processing": {"operations": ["Embed glTF buffers and images into GLB",
                                           f"Resize textures to at most {selected_texture_size}px",
                                           "Remove animations for static Length presentation"],
                            "source_model_name": detail["name"], "source_author": username},
             "volume_semantics": "cubic_linear_equivalent_approximation", "closed_volume_checked": False,
         }
+        if entry.get("presentation"):
+            model["presentation"] = entry["presentation"]
         pending.append((model, output))
         print(f"Ready {entry['name']}: {len(output) / 1_000_000:.2f} MB, {stats['triangle_count']:,} triangles")
     replaced = {entry["replaces"] for entry in entries if entry.get("replaces")
                 and any(model["id"] == entry["id"] for model, _ in pending)}
     if replaced:
         registry["models"] = [model for model in registry["models"] if model["id"] not in replaced]
-    check_matches(registry["models"] + [model for model, _ in pending])
+    check_matches(registry["models"] + [model for model, _ in pending if model["id"] not in replaced])
     for model, data in pending:
         destination = ROOT / model["src"]
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_bytes(data)
         registry["models"].append(model)
-    covered = {name for model in registry["models"] for name in model.get("matches", {}).get("length", [])}
+    covered = {name for model in registry["models"] for name in model.get("matches", {}).get(dimension, [])}
     for gap in registry.get("coverage_gaps", []):
-        if "length" in gap.get("matches", {}):
-            gap["matches"]["length"] = [name for name in gap["matches"]["length"] if name not in covered]
+        if dimension in gap.get("matches", {}):
+            gap["matches"][dimension] = [name for name in gap["matches"][dimension] if name not in covered]
     registry["coverage_gaps"] = [gap for gap in registry.get("coverage_gaps", [])
                                  if not gap.get("matches") or any(gap["matches"].values())]
     registry.setdefault("build", {})["sketchfab_script"] = "scripts/sketchfab_models.py"
@@ -467,13 +555,29 @@ def main():
     selector.add_argument("--uid", required=True)
     audit = subcommands.add_parser("audit", help="Check curated model identity and licenses")
     audit.add_argument("--only", nargs="*")
+    audit.add_argument("--dimension", choices=("length", "volume"), default="length")
     importer = subcommands.add_parser("import", help="Download curated models using a personal API token")
-    importer.add_argument("--token-file", type=Path, required=True)
+    credentials = importer.add_mutually_exclusive_group(required=True)
+    credentials.add_argument("--token-file", type=Path)
+    credentials.add_argument("--token-env", action="store_true",
+                             help="Read SKETCHFAB_TOKEN without writing it to a file")
+    credentials.add_argument("--staged-dir", type=Path,
+                             help="Import checksum-verified candidate GLBs staged outside the repo")
     importer.add_argument("--only", nargs="*")
+    importer.add_argument("--dimension", choices=("length", "volume"), default="length")
     importer.add_argument("--max-archive-mb", type=float, default=15)
     importer.add_argument("--max-glb-mb", type=float, default=2)
     importer.add_argument("--max-total-mb", type=float, default=20)
     importer.add_argument("--texture-size", type=int, default=512)
+    staging = subcommands.add_parser("stage", help="Download licensed candidates outside the repo for review")
+    staging.add_argument("--uid", action="append", required=True, help="Sketchfab model UID; repeat as needed")
+    stage_credentials = staging.add_mutually_exclusive_group(required=True)
+    stage_credentials.add_argument("--token-file", type=Path)
+    stage_credentials.add_argument("--token-env", action="store_true")
+    staging.add_argument("--output-dir", type=Path, default=Path("/private/tmp/universe-scales-candidates"))
+    staging.add_argument("--max-archive-mb", type=float, default=6)
+    staging.add_argument("--max-glb-mb", type=float, default=3)
+    staging.add_argument("--texture-size", type=int, default=512)
     repair = subcommands.add_parser("repair-static", help="Remove unused animations from imported GLBs")
     repair.add_argument("--only", nargs="*")
     args = parser.parse_args()
@@ -487,8 +591,12 @@ def main():
             select_model(args.id, args.uid)
         elif args.command == "repair-static":
             repair_static_models(args.only)
+        elif args.command == "stage":
+            stage_models(args.uid, args.token_file, args.token_env, args.output_dir,
+                         int(args.max_archive_mb * 1_000_000), int(args.max_glb_mb * 1_000_000),
+                         args.texture_size)
         else:
-            entries = read_manifest()
+            entries = read_manifest(args.dimension)
             if args.only:
                 entries = [entry for entry in entries if entry["id"] in args.only]
             if args.command == "audit":
@@ -500,7 +608,7 @@ def main():
             else:
                 import_models(entries, args.token_file, int(args.max_archive_mb * 1_000_000),
                               int(args.max_glb_mb * 1_000_000), int(args.max_total_mb * 1_000_000),
-                              args.texture_size)
+                              args.texture_size, args.token_env, args.staged_dir, args.dimension)
     except (OSError, ValueError, KeyError, zipfile.BadZipFile) as error:
         print(f"Sketchfab import failed: {error}", file=sys.stderr)
         return 1

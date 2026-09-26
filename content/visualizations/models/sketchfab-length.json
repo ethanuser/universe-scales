@@ -20,12 +20,22 @@
     {
       "id": "sketchfab-dna-helix",
       "name": "DNA Helix Width",
-      "uid": "6749915e7e1645a18b74a676d4f96eab",
-      "author": "TiSzma",
+      "uid": "3e78c4697cd44d949db99d72733369c2",
+      "author": "alexanderesmith",
       "license": "by",
-      "enabled": false,
-      "deferred_reason": "The item measures helix width, but the current renderer scales the model's longest axis.",
-      "note": "Illustrative double helix. The datum is helix width, whereas the renderer normally sizes a model by its longest axis; do not infer strand length from this display."
+      "presentation": {
+        "measure_axis": "x",
+        "flatten_static": true
+      },
+      "note": "An atom-colored segment of human B-DNA with alternating A–T and C–G pairs, credited to alexanderesmith. The listed 2 nm measures double-helix width, not the length of this arbitrary segment; hydrogen is white, oxygen red, nitrogen blue, carbon gray, and phosphorus yellow."
+    },
+    {
+      "id": "sketchfab-insulin-monomer",
+      "name": "Protein (Small)",
+      "uid": "d5e97a4e04194cc9878404a6b43e7362",
+      "author": "sduce",
+      "license": "by",
+      "note": "A human insulin monomer, not an interchangeable model of every small protein. The listed 5 nm is a representative protein scale, not a measured diameter of this conformer; its longest visible mesh extent is normalized to that illustrative value."
     },
     {
       "id": "sketchfab-virus-capsid",
@@ -36,12 +46,19 @@
       "note": "Icosahedral capsid as one recognizable virus form; viruses vary greatly in shape and diameter."
     },
     {
-      "id": "sketchfab-e-coli",
+      "id": "sketchfab-bacterium-rod",
       "name": "Bacteria",
-      "uid": "6e338e60bb6f496595b1d2a23f227e4a",
-      "author": "mnoerbrata10",
+      "uid": "75ae189551e94d59aedce00104217533",
+      "author": "andrewfrueh",
       "license": "by",
-      "note": "Stylized exterior of E. coli, used as a representative bacterium; surface hairs and flagella are illustrative, and bacterial lengths vary by species and growth state."
+      "replaces": "sketchfab-e-coli",
+      "presentation": {
+        "remove_nodes": ["Bacterium geo node body end"],
+        "measure_axis": "x",
+        "measure_fraction": 0.8355,
+        "layout_width_factor": 1.2
+      },
+      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. The model's main body is calibrated to the listed 2 micrometer length; the surface projections are illustrative. One long appendage was omitted so that the body remains legible at this scale."
     },
     {
       "id": "sketchfab-red-blood-cell",
@@ -78,12 +95,18 @@
       "note": "Representative black ant; body lengths differ greatly among ant species."
     },
     {
-      "id": "sketchfab-housefly",
+      "id": "sketchfab-housefly-v2",
       "name": "Housefly",
-      "uid": "2baa84955f704a4091a274ef4acec24a",
-      "author": "glowbox3d",
+      "uid": "5fe7cbd25f9a446d8bae005893d010dd",
+      "author": "Schmoldt5000",
       "license": "by",
-      "note": "Low-poly housefly model. Its longest mesh axis is only an approximate proxy for the listed body length."
+      "replaces": "sketchfab-housefly",
+      "note": "Adult Musca domestica with anatomically recognizable body, legs and wings. The source display pedestal is excluded. Its body-axis extent is an approximate proxy for the listed body length, not a measured specimen.",
+      "presentation": {
+        "remove_nodes": ["Cylinder001_Material #175_0"],
+        "measure_axis": "z",
+        "yaw": 90
+      }
     },
     {
       "id": "sketchfab-butterfly-open",

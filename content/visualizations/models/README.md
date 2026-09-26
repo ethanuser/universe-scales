@@ -1,8 +1,10 @@
 # Downloaded 3D Models
 
-The runtime registry is `../models.json`. The existing models are downloaded
-source assets, not generated stand-ins. The Length Sketchfab candidate list is
-`sketchfab-length.json`; it does not imply that every candidate has been imported.
+The runtime registry is `../models.json`. Most registered models are downloaded
+source assets. The Length explorer also renders explicitly labeled procedural
+objects, including hydrogen's probability cloud and ball-and-stick molecules.
+The curated Sketchfab manifests are `sketchfab-length.json` and
+`sketchfab-volume.json`; a manifest entry does not imply that it has been imported.
 Paths in its `src` field are relative to the site root. All models are binary
 glTF 2.0 (`.glb`) with embedded textures and buffers. No Draco, Meshopt, Basis/KTX2,
 USDZ conversion, external textures, or decompression setup is required.
@@ -13,20 +15,33 @@ USDZ conversion, external textures, or decompression setup is required.
 | `nasa-moon.glb` | [NASA original GLB](https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Moon_1_3474.glb) | NASA media guidelines | Unit sphere |
 | `nasa-jupiter.glb` | [NASA Jupiter](https://science.nasa.gov/resource/jupiter-3d-model/) | NASA media guidelines | Unit sphere |
 | `nasa-sun.glb` | [NASA Sun](https://science.nasa.gov/learn/heat/resource/sun-3d-model/) | NASA media guidelines | Unit sphere |
+| `nasa-earth-moon-distance.glb` | NASA Earth and Moon; [mean-distance figures](https://science.nasa.gov/moon/by-the-numbers/) | NASA media guidelines | Center spacing and radii at one scale |
+| `nasa-sun-earth-au.glb` | NASA Sun and Earth; [IAU astronomical unit](https://ssd.jpl.nasa.gov/faq.html) | NASA media guidelines | Center spacing and radii at one scale |
 | `wine-bottle.glb` | [Poly Haven Wine Bottles 01](https://polyhaven.com/a/wine_bottles_01) | CC0-1.0 | Single Bordeaux bottle |
 | `rigged-human.glb` | [Khronos Rigged Figure](https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/RiggedFigure) | CC-BY-4.0 | Static human bind-pose derivative |
 | `coffee-mug.glb` | [Kenney Food Kit](https://kenney.nl/assets/food-kit) | CC0-1.0 | Representative cup |
 | `soda-can.glb` | [Kenney Food Kit](https://kenney.nl/assets/food-kit) | CC0-1.0 | Soda can |
+| `wine-glass.glb` | [Kenney Food Kit](https://kenney.nl/assets/food-kit) | CC0-1.0 | Stemmed glass |
+| `family-car.glb` | [Kenney Car Kit](https://kenney.nl/assets/car-kit) | CC0-1.0 | Sedan envelope proxy |
+| `bucket.glb` | [Poly Haven Wooden Bucket 02](https://polyhaven.com/a/wooden_bucket_02) | CC0-1.0 | Open wooden bucket |
+| `freight-train-car.glb` | [Kenney Train Kit](https://kenney.nl/assets/train-kit) | CC0-1.0 | Open cargo railcar |
+| `shipping-container.glb` | [Kenney City Kit Industrial](https://kenney.nl/assets/city-kit-industrial) | CC0-1.0 | Intermodal container |
+| `sketchfab-housefly-v2.glb` | [Schmoldt5000's housefly](https://sketchfab.com/3d-models/housefly-5fe7cbd25f9a446d8bae005893d010dd) | CC-BY-4.0 | Adult *Musca domestica*, display pedestal hidden |
+| `sketchfab-bacterium-rod.glb` | [andrewfrueh's bacterium](https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533) | CC-BY-4.0 | Generic rod, long appendage hidden; body-length calibration |
+| `nih-porcine-parvovirus-capsid.glb` | [NIH 3D porcine parvovirus capsid](https://3d.nih.gov/entries/9728), from PDB 1K3V | CC-BY-4.0 | Chain-colored molecular surface, about 28 nm across |
+| `sketchfab-isuzu-city-bus.glb` | [own.guest's Isuzu Erga Mio](https://sketchfab.com/3d-models/isuzu-erga-mio-bus-050e8acd0bbc4da0902a8a874ef10fca) | CC-BY-4.0 | Japanese city bus envelope proxy |
+| `sketchfab-teaspoon.glb` | [LordOfTheSnow's teaspoon](https://sketchfab.com/3d-models/teaspoon-96467926442342eab2c797de0ed80e6a) | CC-BY-4.0 | Uncalibrated 5 mL teaspoon proxy |
 | `cat.glb` | [Quaternius via Poly Pizza](https://poly.pizza/m/qKICY6xla2) | CC0-1.0 | Stylized cat |
 | `ceiling-fan.glb` | [Poly Haven Ceiling Fan](https://polyhaven.com/a/ceiling_fan) | CC0-1.0 | Fan with separate blades |
 
-## Sketchfab Length Imports
+## Sketchfab Imports
 
 The public search API can find candidates without authentication. The curated
-manifest pins each candidate's exact Length item name, Sketchfab UID, creator,
+manifests pin each candidate's exact dimension item name, Sketchfab UID, creator,
 license, and interpretation note. Some entries remain deferred pending geometry
-or editorial review. Fourteen imported Sketchfab Length models total about
-11.75 MB; the largest delivered GLB is 2.11 MB. Audit candidate identity and
+or editorial review. The imported DNA segment is calibrated by its transverse
+width rather than its segment length; its many static atom meshes are merged
+by material in the browser to reduce draw calls. Audit candidate identity and
 licensing before importing:
 
 ```sh
@@ -56,7 +71,7 @@ updates only the curated manifest; import is a separate step. The currently
 selected [cat](https://sketchfab.com/3d-models/cat-in-motion-3d-model-free-baa1120483c844e6bce9744f3f868c63)
 and [Eiffel Tower](https://sketchfab.com/3d-models/free-la-tour-eiffel-8553f94d06e24cb4b0fde1080f281674)
 are imported and optimized. For another approved model, run `import --only ID`
-with your private token file and inspect the result locally before publishing. The importer
+with your private token file or `--token-env` and inspect the result locally before publishing. The importer
 replaces the previous exact-name match only after the new asset passes checks.
 
 Sketchfab's Download API requires your account's API token. On Sketchfab, open
@@ -71,15 +86,40 @@ SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/sketchfab_models.py import \
 python3 scripts/fetch_model_assets.py --verify
 ```
 
+`--token-env` reads `SKETCHFAB_TOKEN` from the process environment instead.
+Keep it out of shell history, logs, the repository, and copied commands.
+The DNA import used a 3.39 MB GLB, so its per-file import limit was raised to
+4 MB only after reviewing the archive and geometry; the normal 2 MB limit remains.
+The small-protein example is a 0.49 MB human insulin monomer, not a universal
+protein shape. Both new GLBs passed Khronos validation with no errors or warnings.
+
 The import script requests a fresh short-lived URL for each approved model,
-embeds its glTF resources in a GLB, discards unused animations for the static
-Length explorer, and resizes textures to at most 512 pixels,
+embeds its glTF resources in a GLB, discards unused animations for static
+presentation, and resizes textures to at most 512 pixels,
 retrying at 256 and 128 pixels if the delivered file exceeds the size cap.
 Default limits are 15 MB per source archive, 2 MB per delivered GLB, and 20 MB
 for the batch. Unsupported decoders, unsuitable licenses, changed author
-identities, mismatched names, and over-budget files are rejected. Import is
+identities, mismatched identities, and over-budget files are rejected. Import is
 idempotent for names already in the registry. The site only loads a matching
 model when needed; visitors do not need Sketchfab accounts.
+
+To review multiple licensed candidates before adding them to the site, use
+`stage --token-env --uid UID --output-dir /private/tmp/universe-scales-candidates`.
+Staging saves self-contained GLBs and source metadata outside the repository.
+Use `scripts/render_glb_preview.py` for a quick local shape check and
+`scripts/audit_glb_geometry.mjs` to inspect bounds and node names; the preview
+is untextured and does not replace an in-browser material/lighting review.
+After visual review, import a Volume candidate without another network request
+or token:
+
+```sh
+python3 scripts/sketchfab_models.py import --dimension volume \
+  --staged-dir /private/tmp/universe-scales-candidates --only ID
+```
+
+The importer rechecks the manifest UID, creator,
+license, source size, and delivered GLB SHA-256. The source token and expiring
+download URL are never saved in the repository. For Length, omit `--dimension`.
 
 The chosen cat's source exceeded the default limits, so it and the tower were
 first staged with larger import limits, then simplified, texture-resized, and
@@ -96,15 +136,57 @@ selected item's description. The registry preserves the model UID, source
 archive hash, processing steps, delivered hash, and file size. The token and
 expiring download URLs are not saved. Review the imported geometry in the
 explorer, then regenerate `validation.json` with the Khronos validator below.
-The current Sketchfab GLBs have zero Khronos validator errors. The Giraffe and
+The last validated Sketchfab GLBs had zero Khronos validator errors; new imports
+must be validated before publication. The Giraffe and
 Blue Whale source rigs retain many zero-weight-joint warnings; they are rendered
 as static models, and their source animations were discarded.
+
+## Molecular Geometry
+
+`../molecules.json` is the small geometry-only companion to the dataset. Water
+uses the [NIST experimental gas-phase geometry](https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185)
+(0.958 angstrom O-H bonds, 104.4776 degree H-O-H angle). Alpha-D-glucose uses
+[PubChem CID 79025](https://pubchem.ncbi.nlm.nih.gov/compound/79025) atom
+coordinates and bonds. Regenerate the local file with:
+
+```sh
+python3 scripts/build_molecule_data.py
+```
+
+The ball radii and bond rods are visual conventions, not atomic surfaces.
+These two procedural models and their geometry-source links appear only in the
+Length explorer; the numeric observations remain in the ordinary dataset.
+
+The Virus observation now uses the approximate 28 nm porcine parvovirus capsid
+diameter reported in [the structural study](https://pubmed.ncbi.nlm.nih.gov/11827486/),
+not the old generic 10 nm guess. The NIH 3D surface is already 0.79 MB and
+30,456 triangles, so no lossy simplification was needed. Reimport the pinned
+source with `python3 scripts/import_nih_parvovirus.py`; the script checks its
+SHA-256 before replacing the old generic capsid. The bacterium is a generic
+rod rather than an *E. coli* specimen. Its long appendage is hidden, and only
+its main body is calibrated to the 2 micrometer Bacteria marker.
+
+## Orbital Distance Diagrams
+
+`scripts/build_earth_moon_model.py` rebuilds the two distance diagrams from the
+already downloaded NASA sphere assets. Earth-Moon uses a representative mean
+384,400 km center separation; Sun-Earth uses the exactly defined astronomical
+unit of 149,597,870,700 m. Sphere radii and center separation share a single
+scale. Earth-Moon distance changes over the lunar orbit, and the actual
+Sun-Earth distance is not always one au. These are spatial diagrams, not
+time-specific orbital snapshots. The source textures and model credits remain
+in the registry; the generator checks their hashes before merging them.
+
+```sh
+python3 scripts/build_earth_moon_model.py
+python3 -m unittest tests/test_orbital_distance_models.py
+```
 
 ## Renderer Contract
 
 - `matches` contains case-sensitive names verified against the JSON exports.
-  The current baseline registry has 20 exact-name matches across several dimensions;
-  successful Sketchfab imports add Length matches to the same registry.
+  The current registry has 36 self-contained GLBs and 44 exact-name matches
+  across dimensions. Length and Volume imports share that registry.
 - NASA geometry is explicitly adapted to centered unit spheres, including removal
   of the source bodies' oblateness and the Sun's 1000x node scale. Original
   topology, UVs, material roles, and texture orientation are retained. Source
@@ -194,9 +276,9 @@ node content/visualizations/models/validate-models.cjs /path/to/node_modules/glt
 
 ## Missing Coverage
 
-No appropriate soda-can GLB was found in the reviewed Poly Haven/Khronos catalogs
-or Smithsonian search. Food cans, cleaner cans, and reusable water bottles were
-not mislabeled as soda cans. `Soda can` and `Soda can volume` remain uncovered.
+The soda-can items now use an actual Kenney soda-can mesh rather than a food can
+or reusable water bottle. Capacity, cargo space, and exterior envelope entries
+remain illustrative: none of these meshes is a calibrated watertight measurement.
 
 The current dataset has no Jupiter volume or Moon diameter entry. Earth-Moon
 Distance is not a Moon diameter, Earth's oceans is not Earth volume, and Human

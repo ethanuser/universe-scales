@@ -193,6 +193,46 @@ class SketchfabImportTests(unittest.TestCase):
             self.assertEqual({model["id"] for model in saved}, {"earth", "sketchfab-cat-test"})
             self.assertEqual(saved[-1]["matches"]["length"], ["Cat Length"])
 
+    def test_staged_volume_import_verifies_identity_and_glb_checksum(self):
+        uid = "d" * 32
+        entry = {"id": "sketchfab-bus-test", "name": "City bus envelope volume",
+                 "uid": uid, "author": "artist", "license": "by"}
+        output = gltf_to_glb(sample_archive(), 64)
+        import hashlib
+        with tempfile.TemporaryDirectory() as root_dir, tempfile.TemporaryDirectory() as stage_dir:
+            root, stage = Path(root_dir), Path(stage_dir)
+            registry = root / "content/visualizations/models.json"
+            registry.parent.mkdir(parents=True)
+            registry.write_text(json.dumps({"models": [], "coverage_gaps": []}))
+            metadata = {"uid": uid, "name": "A bus", "author": "artist", "license": "by",
+                        "source": f"https://sketchfab.com/models/{uid}", "source_bytes": 500,
+                        "source_sha256": "f" * 64, "texture_size": 64,
+                        "sha256": hashlib.sha256(output).hexdigest()}
+            (stage / f"{uid}.json").write_text(json.dumps(metadata))
+            (stage / f"{uid}.glb").write_bytes(output)
+            with patch.object(sketchfab_models, "ROOT", root), \
+                 patch.object(sketchfab_models, "REGISTRY", registry), \
+                 patch.object(sketchfab_models, "request_json", side_effect=AssertionError("network request")):
+                sketchfab_models.import_models([entry], None, 1000, 1_000_000, 1_000_000, 64,
+                                               staged_dir=stage, dimension="volume")
+                saved = json.loads(registry.read_text())["models"][0]
+                self.assertEqual(saved["matches"], {"volume": ["City bus envelope volume"]})
+                self.assertEqual(saved["source_sha256"], metadata["source_sha256"])
+                registry.write_text(json.dumps({"models": [], "coverage_gaps": []}))
+                (stage / f"{uid}.glb").write_bytes(output + b"tampered")
+                sketchfab_models.import_models([entry], None, 1000, 1_000_000, 1_000_000, 64,
+                                               staged_dir=stage, dimension="volume")
+                self.assertEqual(json.loads(registry.read_text())["models"], [])
+
+    def test_stage_rejects_token_file_inside_repository(self):
+        with tempfile.TemporaryDirectory() as root_dir, tempfile.TemporaryDirectory() as stage_dir:
+            root = Path(root_dir)
+            token = root / "token"
+            token.write_text("secret")
+            with patch.object(sketchfab_models, "ROOT", root):
+                with self.assertRaisesRegex(ValueError, "outside the repository"):
+                    sketchfab_models.stage_models([], token, False, Path(stage_dir), 1000, 1000, 128)
+
 
 if __name__ == "__main__":
     unittest.main()

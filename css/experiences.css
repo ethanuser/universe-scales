@@ -61,6 +61,7 @@
 .experience-stage-frame { position: relative; min-height: 0; overflow: hidden; }
 .experience-stage-frame, .experience-stage-frame * { user-select: none; -webkit-user-select: none; -webkit-user-drag: none; }
 .experience-stage-frame[tabindex] { cursor: grab; }
+.experience-stage-frame.is-model-hovered { cursor: pointer; }
 .experience-stage-frame.is-dragging { cursor: grabbing; }
 .experience-corner-ruler {
     position: absolute; left: 0; bottom: 0; z-index: 2;
@@ -203,8 +204,27 @@
 .experience--spatial .journey-object-label {
     paint-order: stroke fill;
     stroke: var(--journey-label-halo, white);
-    stroke-width: 1.3px;
+    stroke-width: 2px;
     stroke-linejoin: round;
+}
+.experience--spatial .journey-distance-bracket {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.35;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+}
+.experience--spatial .journey-distance-body-label {
+    fill: #fff;
+    stroke: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+.experience--spatial .experience-stage-frame:not(.is-dragging) .experience-object:hover image,
+.experience--spatial .experience-stage-frame:not(.is-dragging) .experience-object:hover .shape,
+.experience--spatial .experience-object:focus-visible image,
+.experience--spatial .experience-object:focus-visible .shape {
+    filter: brightness(1.1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.42));
 }
 .experience-stage text,
 .angle-diagram text {
@@ -285,12 +305,40 @@
 .experience-detail p {
     margin: 10px 0;
 }
+.experience-model-note {
+    margin: 16px 0;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent-color);
+    color: var(--text-secondary);
+}
+.experience-model-note h3 { margin: 0 0 6px; color: var(--text-primary); }
+.experience-model-note p { margin: 0; line-height: 1.5; }
+.experience-detail-sources { margin-top: 18px; }
+.experience-detail-image-button {
+    display: block;
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+.experience-detail-image-button:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 3px;
+}
 .experience-detail-image {
     display: block;
     width: 100%;
     max-height: 160px;
     object-fit: contain;
-    margin-bottom: 18px;
+    transition: opacity 0.3s ease;
+}
+.experience-detail-image-button:hover .experience-detail-image,
+.experience-detail-image-button:focus-visible .experience-detail-image {
+    opacity: 0.1;
 }
 .experience-comparison {
     display: none;
@@ -491,7 +539,7 @@ body[data-experience='interactive'] .experience-live { margin: 0; padding: 8px 1
     .experience-picker-options { grid-template-columns: 1fr; }
     .experience-button { padding: 7px 10px; }
     .experience-detail { max-height: 34dvh; padding: 14px; }
-    .experience-detail-image { display: none; }
+    .experience-detail-image-button { display: none; }
     body[data-experience='interactive'] .experience-stage { height: 31dvh; min-height: 180px; }
     body[data-experience='interactive'] .experience--spatial .experience-stage { height: 100%; min-height: 0; }
     .experience--spatial .experience-stage-frame { flex: 0 0 clamp(360px, 60dvh, 520px); min-height: 0; }

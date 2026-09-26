@@ -108,6 +108,8 @@ for model in MODELS:
 
 KENNEY_FOOD = "https://kenney.nl/media/pages/assets/food-kit/83086fa91c-1719418518/kenney_food-kit.zip"
 KENNEY_CAR = "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip"
+KENNEY_TRAIN = "https://kenney.nl/media/pages/assets/train-kit/cf8521d625-1727040883/kenney_train-kit.zip"
+KENNEY_INDUSTRIAL = "https://kenney.nl/media/pages/assets/city-kit-industrial/0ec35b139d-1788171848/kenney_city-kit-industrial_2.0.zip"
 UNITS_NOTE = ("Model units are dimensionless display units: centered world AABB, Y-up, longest world AABB axis = 1. "
               "For Length the renderer assumes the dataset length corresponds to the longest axis, not a measured anatomical landmark. "
               "For Volume use cubic-linear equivalent scaling only; capacity/envelope is not measured mesh volume.")
@@ -136,6 +138,12 @@ ADDITIONS = [
                 "Nominal beverage capacity is not the enclosed mesh volume.",
                 download_url=KENNEY_FOOD, archive_member="Models/GLB format/soda-can.glb",
                 license_files=["licenses/kenney-food-kit.txt"]),
+    extra_model("wine-glass", "https://kenney.nl/assets/food-kit", "Kenney",
+                {"volume": ["Wine glass volume"]},
+                "Stylized stemmed wine glass (source glass-wine.glb). The dataset value is representative "
+                "liquid capacity, not the volume of the glass material or its exact polygon interior.",
+                download_url=KENNEY_FOOD, archive_member="Models/GLB format/glass-wine.glb",
+                license_files=["licenses/kenney-food-kit.txt"]),
     extra_model("family-car", "https://kenney.nl/assets/car-kit", "Kenney",
                 {"volume": ["Family car envelope volume"]},
                 "Stylized four-wheel sedan (source sedan.glb), not a particular manufacturer or calibrated vehicle. "
@@ -147,6 +155,20 @@ ADDITIONS = [
                 "Actual open wooden bucket with metal bands and handles. Representative bucket, not a calibrated "
                 "10 L container; hollow capacity is not solid wood/mesh volume.",
                 polyhaven_id="wooden_bucket_02", license_files=["licenses/polyhaven-license.html"]),
+    extra_model("freight-train-car", "https://kenney.nl/assets/train-kit", "Kenney",
+                {"volume": ["Freight train car volume"]},
+                "Stylized open-topped cargo railcar (source train-carriage-box.glb). The listed volume is a "
+                "representative cargo-space volume, not the volume of the mesh or external railcar envelope.",
+                download_url=KENNEY_TRAIN, archive_member="Models/GLB format/train-carriage-box.glb",
+                license_files=["licenses/kenney-train-kit.txt"]),
+    extra_model("shipping-container", "https://kenney.nl/assets/city-kit-industrial", "Kenney",
+                {"volume": ["Shipping container", "Shipping container volume"]},
+                "Stylized intermodal shipping container (source shipping-container-a.glb). The listed "
+                "capacity is representative interior cargo space; the visible exterior is not an exact "
+                "dimensional survey or a watertight volume measurement.",
+                download_url=KENNEY_INDUSTRIAL,
+                archive_member="Models/GLB format/shipping-container-a.glb",
+                license_files=["licenses/kenney-industrial-kit.txt"]),
     extra_model("cat", "https://poly.pizza/m/qKICY6xla2", "Quaternius (creator); Poly Pizza (distributor)",
                 {"length": ["Cat Length"]},
                 "Stylized standing domestic cat, static bind-pose derivative. Includes its tail; longest-axis "

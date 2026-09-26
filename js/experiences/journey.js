@@ -28,11 +28,12 @@
         const world = [0];
         for (let index = 1; index < items.length; index++) {
             const footprint = Math.min(1, factors[index - 1], factors[index]);
-            const gapFactor = 0.10 + (WORLD_GAP_FACTOR - 0.10) * footprint * footprint;
+            const ratio = lengths[index] / lengths[index - 1];
+            const separation = Math.max(0, Math.min(1, Math.log10(ratio / 2) / Math.log10(5)));
+            const gapFactor = 0.08 + (WORLD_GAP_FACTOR - 0.08) * separation * footprint * footprint;
             world[index] = world[index - 1] +
                 (factors[index - 1] * lengths[index - 1] + factors[index] * lengths[index]) / 2 +
                 gapFactor * lengths[index];
-            const ratio = lengths[index] / lengths[index - 1];
             if (ratio > 1) {
                 // Only objects readable beside the previous anchor constrain
                 // its next camera segment. Microscopic, long-gone objects do not.

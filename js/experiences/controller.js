@@ -334,6 +334,7 @@
         }
         updateDetail() {
             const item = this.item;
+            const model = this.modelEntry?.(item);
             const title = dom('h2', '', this.item.name);
             const value = dom('div', 'experience-value');
             const photometry = this.dimension === 'brightness' && root.ScaleRenderers.photometry?.(this.item);
@@ -341,6 +342,8 @@
                 photometry && photometry.kind !== 'luminance' ? number(this.item.value) : this.app.formatValueForCurrentUnit(this.item.value, 2, true),
                 photometry && photometry.kind !== 'luminance' ? photometry.unit : this.app.getCurrentUnitDefinition()?.symbol || ''
             );
+            if (!photometry || photometry.kind === 'luminance')
+                this.app.enableUnitConversions(value, this.item.value);
             this.app.typesetMathIfReady(value);
             const prose = dom('div');
             this.app.setRichText(
@@ -353,33 +356,46 @@
                         ''
                 )
             );
-            this.detail.replaceChildren(title, value, prose);
+            const modelNote = model?.note ? dom('section', 'experience-model-note') : null;
+            if (modelNote) modelNote.append(dom('h3', '', 'What this 3D model shows'),
+                dom('p', '', model.note));
+            this.detail.replaceChildren(title, value, ...(modelNote ? [modelNote] : []), prose);
+            const thumbnailButton = dom('button', 'experience-detail-image-button');
+            thumbnailButton.type = 'button';
+            thumbnailButton.hidden = true;
+            thumbnailButton.setAttribute('aria-label', `Open full image of ${item.name}`);
             const thumbnail = dom('img', 'experience-detail-image');
             thumbnail.alt = `${item.name} (illustrative image)`;
-            thumbnail.hidden = true;
-            this.detail.prepend(thumbnail);
+            thumbnailButton.append(thumbnail);
+            this.detail.prepend(thumbnailButton);
             this.resolveImage(item)
                 .then((info) => {
                     if (!thumbnail.isConnected || this.item !== item) return;
                     const src = typeof info === 'string' ? info : info?.path;
                     if (!src) return;
+                    const fullPath = typeof info === 'string' ? info : info.fullPath || info.path;
+                    thumbnailButton.onclick = () => this.app.openImageModal(fullPath, item.name);
                     thumbnail.onload = () => {
-                        thumbnail.hidden = false;
+                        thumbnailButton.hidden = false;
                     };
                     thumbnail.onerror = () => {
-                        thumbnail.hidden = true;
+                        thumbnailButton.hidden = true;
                     };
                     thumbnail.src = src;
                 });
-            if (/^https?:\/\//.test(this.item.source || '')) {
-                const link = dom('a', '', 'Source');
-                Object.assign(link, {
-                    href: this.item.source,
-                    target: '_blank',
-                    rel: 'noopener noreferrer'
-                });
-                this.detail.append(link);
-            }
+            const sources = dom('div', 'experience-detail-sources');
+            const addSource = (label, href) => {
+                if (!/^https?:\/\//.test(href || '')) return;
+                if (sources.childNodes.length) sources.append(document.createTextNode(' · '));
+                const link = dom('a', '', label);
+                Object.assign(link, { href, target: '_blank', rel: 'noopener noreferrer' });
+                sources.append(link);
+            };
+            addSource('Source', item.source);
+            const modelSource = model?.source || model?.basis_url;
+            if (modelSource !== item.source)
+                addSource(model?.link_label || (model?.procedural ? 'Model basis' : '3D model'), modelSource);
+            if (sources.childNodes.length) this.detail.append(sources);
             this.detail.scrollTop = 0;
         }
         updateComparison() {
