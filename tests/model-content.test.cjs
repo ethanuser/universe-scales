@@ -22,26 +22,35 @@ test('DNA model is credited, local, and calibrated by helix width', () => {
     assert.equal(audit.bytes, model.bytes);
 });
 
-test('virus uses a sourced 28 nm capsid rather than a generic hollow shell', () => {
-    const model = byId('nih-porcine-parvovirus-capsid');
+test('virus is the NIAID SARS-CoV-2 virion calibrated by envelope, not spikes', () => {
+    const model = byId('coronavirus-sars-cov-2');
     assert.deepEqual(model.matches.length, ['Virus']);
-    assert.equal(model.processing.pdb_id, '1K3V');
-    assert.match(model.note, /28 nm/);
     assert.match(model.source, /^https:\/\/3d\.nih\.gov\//);
+    assert.equal(model.license, 'CC-BY-4.0');
+    assert.ok(model.presentation.measure_fraction > 0.6 && model.presentation.measure_fraction < 0.75);
+    assert.match(model.note, /91 nm/);
     assert.ok(model.bytes < 1_000_000);
-    assert.ok(!byId('sketchfab-virus-capsid'));
+    assert.ok(!byId('nih-porcine-parvovirus-capsid'));
     const length = JSON.parse(readFileSync(path.join(root, 'exports/json/dimensions/length.json')));
-    assert.equal(length.items.find(item => item.name === 'Virus').value, 2.8e-8);
+    assert.equal(length.items.find(item => item.name === 'Virus').value, 9.1e-8);
 });
 
-test('bacterium has one body with separately omitted long flagellum', () => {
-    const model = byId('sketchfab-bacterium-rod');
+test('bacterium is one clean rod calibrated by body length, not flagellum', () => {
+    const model = byId('sketchfab-bacterium-rod-v2');
     assert.deepEqual(model.matches.length, ['Bacteria']);
-    assert.deepEqual(model.presentation.remove_nodes, ['Bacterium geo node body end']);
     assert.equal(model.presentation.measure_axis, 'x');
-    assert.ok(model.presentation.measure_fraction > 0.8);
-    assert.ok(!model.presentation.backing_color);
-    assert.ok(!byId('sketchfab-e-coli'));
+    assert.ok(model.presentation.measure_fraction > 0.4 && model.presentation.measure_fraction < 0.6);
+    assert.ok(!byId('sketchfab-bacterium-rod'));
+    assert.ok(model.bytes < 500_000);
+});
+
+test('mitochondrion is a single cut-away organelle without baked labels', () => {
+    const model = byId('sketchfab-mitochondrion-v2');
+    assert.deepEqual(model.matches.length, ['Mitochondrion']);
+    assert.ok(!byId('sketchfab-mitochondrion'));
+    const audit = JSON.parse(execFileSync(process.execPath,
+        ['scripts/audit_glb_geometry.mjs', model.src], { cwd: root, encoding: 'utf8' }));
+    assert.ok(!JSON.stringify(audit).includes('Labels'));
 });
 
 test('insulin example is compact and its label does not claim a measured diameter', () => {

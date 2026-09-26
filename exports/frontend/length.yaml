@@ -616,11 +616,11 @@ items:
   qualifiers: {}
 - id: obs:length:scenario-length-virus
   name: Virus
-  value: 2.8e-08
-  description: Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid. Its coat is assembled from sixty protein subunits; the surface folds are part of what determines which cells it can enter. This marker is the capsid diameter of one studied virus, not an average size for all viruses or a model of the viral genome inside.
+  value: 9.1e-08
+  description: SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across. Its fatty envelope is studded with a few dozen spike proteins that reach another 20 nm or so outward and latch onto ACE2 receptors on human cells. Inside, a single strand of RNA about 30,000 letters long is one of the largest genomes of any RNA virus. This marker is the mean envelope diameter measured by cryo-electron tomography, not counting the spikes; viruses as a group range from about 20 nm to more than a micrometer.
   description_format: markdown
-  summary_short: Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid.
-  description_medium: Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid. Its coat is assembled from sixty protein subunits; the surface folds are part of what determines which cells it can enter. This marker is the capsid diameter of one studied virus, not an average size for all viruses or a model of the viral genome inside.
+  summary_short: SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across.
+  description_medium: SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across. Its fatty envelope is studded with a few dozen spike proteins that reach another 20 nm or so outward and latch onto ACE2 receptors on human cells. Inside, a single strand of RNA about 30,000 letters long is one of the largest genomes of any RNA virus. This marker is the mean envelope diameter measured by cryo-electron tomography, not counting the spikes; viruses as a group range from about 20 nm to more than a micrometer.
   description_long: null
   hook: null
   caveats: null
@@ -633,15 +633,15 @@ items:
     legacy_item_name: Virus
     source_trace:
       method: derived
-      original_value_text: '2.8e-08'
-      source_url: https://pubmed.ncbi.nlm.nih.gov/11827486/
-  source: https://pubmed.ncbi.nlm.nih.gov/11827486/
+      original_value_text: '9.1e-08'
+      source_url: https://www.nature.com/articles/s41586-020-2665-2
+  source: https://www.nature.com/articles/s41586-020-2665-2
   source_count: 2
   sources:
-  - id: src:https-pubmed-ncbi-nlm-nih-gov-11827486
-    url: https://pubmed.ncbi.nlm.nih.gov/11827486/
-    title: '11827486'
-    publisher: pubmed.ncbi.nlm.nih.gov
+  - id: src:https-www-nature-com-articles-s41586-020-2665-2
+    url: https://www.nature.com/articles/s41586-020-2665-2
+    title: s41586-020-2665-2
+    publisher: www.nature.com
     license_text: null
     source_class: secondary_reference
     source_type: web_page
@@ -1292,7 +1292,7 @@ items:
   qualifiers: {}
 - id: obs:length:scenario-length-football-field
   name: Football Field
-  value: 100.0
+  value: 91.44
   description: The length of American football fields, standardized playing surfaces that have become cultural landmarks. The field's dimensions were designed to balance offense and defense, creating strategic depth while maintaining spectator visibility. Interestingly, the field is exactly 100 yards long, but with end zones it spans 120 yards total. This length has remained constant since the sport's early days, making it one of the most consistent measurements in professional sports.
   description_format: markdown
   summary_short: The length of American football fields, standardized playing surfaces that have become cultural landmarks.
@@ -1309,7 +1309,7 @@ items:
     legacy_item_name: Football Field
     source_trace:
       method: derived
-      original_value_text: '100'
+      original_value_text: '91.44'
       source_url: https://en.wikipedia.org/wiki/American_football_field
   source: https://en.wikipedia.org/wiki/American_football_field
   source_count: 2

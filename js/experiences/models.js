@@ -2,11 +2,12 @@ import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtils.js';
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
+import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 
 const models = new Map();
-const registry = fetch('content/visualizations/models.json', { cache: 'no-store' })
+const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
     .then(r => r.ok ? r.json() : { models: [] }).catch(() => ({ models: [] }));
-const moleculeData = fetch('content/visualizations/molecules.json', { cache: 'no-store' })
+const moleculeData = fetch('content/visualizations/molecules.json', { cache: 'no-cache' })
     .then(r => r.ok ? r.json() : null).catch(() => null);
 const loader = new GLTFLoader();
 const cross2D = (a, b, c) => (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
@@ -72,7 +73,7 @@ function sampledModelPoints(instance) {
 function addHoverOverlay(instance) {
     const originals = [];
     instance.traverse(child => {
-        if (child.isMesh || child.isPoints) originals.push(child);
+        if ((child.isMesh || child.isPoints) && !child.userData.bracketAxis) originals.push(child);
     });
     return originals.map(child => {
         const overlay = child.clone(false);
@@ -126,6 +127,44 @@ function flattenStaticScene(scene) {
     }
     return flattened.children.length ? flattened : scene;
 }
+// Distance diagrams (e.g. Earth-Moon) get a U-shaped bracket below the two
+// bodies: each vertical line is tangent to a body's facing edge, and the
+// horizontal line joins their lower ends. The bracket belongs to the model, so
+// it rotates with it; bar thickness is reset every frame to a constant screen
+// width (see ModelStage.finish). Bodies are unit spheres scaled by their node.
+const BRACKET_LINE_PX = 1.4;
+const BRACKET_DROP = 0.1; // below the larger body, as a fraction of the center distance
+let bracketParts;
+function addDistanceBracket(scene, config) {
+    bracketParts ||= { material: new THREE.MeshBasicMaterial({ color: 0xffffff }),
+        geometry: new THREE.BoxGeometry(1, 1, 1) };
+    scene.updateMatrixWorld(true);
+    const bodies = config.bodies.map(name => {
+        const node = scene.getObjectByName(name);
+        if (!node) return null;
+        node.userData.bodyLabel = name;
+        return { x: node.getWorldPosition(new THREE.Vector3()).x,
+            radius: node.matrixWorld.getMaxScaleOnAxis() };
+    });
+    if (bodies.length !== 2 || bodies.some(body => !body)) return;
+    const [left, right] = bodies[0].x <= bodies[1].x ? bodies : [bodies[1], bodies[0]];
+    const x0 = left.x + left.radius, x1 = right.x - right.radius;
+    const bottom = -(Math.max(left.radius, right.radius) + BRACKET_DROP * (right.x - left.x));
+    const bracket = new THREE.Group();
+    bracket.name = 'distance-bracket';
+    const bar = (axis, length, x, y) => {
+        const mesh = new THREE.Mesh(bracketParts.geometry, bracketParts.material);
+        mesh.position.set(x, y, 0);
+        mesh.userData.bracketAxis = axis;
+        mesh.userData.bracketLength = length;
+        mesh.scale.set(axis === 'x' ? length : 1e-6, axis === 'y' ? length : 1e-6, 1e-6);
+        bracket.add(mesh);
+    };
+    bar('y', -bottom, x0, bottom / 2);
+    bar('y', -bottom, x1, bottom / 2);
+    bar('x', x1 - x0, (x0 + x1) / 2, bottom);
+    scene.add(bracket);
+}
 const proceduralLength = {
     'Hydrogen Atom': { id: 'hydrogen-1s', procedural: 'hydrogen-1s', geometry: 'mesh',
         presentation: { reference_size: 1, layout_width_factor: 2.6,
@@ -147,7 +186,13 @@ const proceduralLength = {
         presentation: { measure_axis: 'x', layout_width_factor: 1.1 },
         basis_url: 'https://wellcomecollection.org/works/wxgqyf66',
         basis_label: 'Cuticle reference: Wellcome Collection',
-        note: 'An illustrative scalp-hair fiber with overlapping cuticle ridges. Only its horizontal diameter is calibrated to the listed 100 micrometers; the cropped shaft length is not.' }
+        note: 'An illustrative scalp-hair fiber with overlapping cuticle ridges. Only its horizontal diameter is calibrated to the listed 100 micrometers; the cropped shaft length is not.' },
+    'Visible Light Wavelength': { id: 'light-wave', procedural: 'light-wave', geometry: 'mesh',
+        presentation: { reference_size: 1, layout_width_factor: 2, focus_scale_factor: 2,
+            display_extent_factor: 2, yaw: -32, pitch: 14 },
+        basis_url: 'https://en.wikipedia.org/wiki/Electromagnetic_radiation',
+        basis_label: 'Wave basis: electromagnetic radiation',
+        note: 'A schematic plane light wave, two cycles long. The crest-to-crest distance is calibrated to the listed 500 nm of green light. Field strengths are not lengths, so the wave heights are arbitrary; the electric field (green) and magnetic field (pale blue) oscillate at right angles to each other and to the direction of travel.' }
 };
 
 function moleculeScene(data) {
@@ -188,6 +233,36 @@ function proceduralScene(kind) {
             ridge.position.y = -0.46 + index * 0.048;
             scene.add(ridge);
         }
+    } else if (kind === 'light-wave') {
+        // Two wavelengths along +X; one model unit is one wavelength.
+        const cycles = 2, amplitude = 0.3, samples = 160;
+        const curve = axis => new THREE.CatmullRomCurve3(Array.from({ length: samples + 1 }, (_, index) => {
+            const x = cycles * index / samples, wave = amplitude * Math.sin(2 * Math.PI * x);
+            return new THREE.Vector3(x - cycles / 2, axis === 'y' ? wave : 0, axis === 'z' ? wave : 0);
+        }));
+        const electric = new THREE.MeshStandardMaterial({ color: 0x39d353, emissive: 0x1f8f2e,
+            emissiveIntensity: 0.6, roughness: 0.5 });
+        const magnetic = new THREE.MeshStandardMaterial({ color: 0xa9c4ff, roughness: 0.6,
+            transparent: true, opacity: 0.75 });
+        scene.add(new THREE.Mesh(new THREE.TubeGeometry(curve('y'), 320, 0.014, 10), electric));
+        scene.add(new THREE.Mesh(new THREE.TubeGeometry(curve('z'), 320, 0.009, 8), magnetic));
+        const axis = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, cycles, 8),
+            new THREE.MeshStandardMaterial({ color: 0x8a9198, roughness: 0.8 }));
+        axis.rotation.z = Math.PI / 2;
+        scene.add(axis);
+        // Field-vector stems make the oscillation read as a field, not a rope.
+        const stemGeometry = new THREE.CylinderGeometry(0.004, 0.004, 1, 6);
+        const stemMaterial = electric.clone();
+        stemMaterial.transparent = true;
+        stemMaterial.opacity = 0.45;
+        for (let index = 1; index < cycles * 16; index++) {
+            const x = index / 16, height = amplitude * Math.sin(2 * Math.PI * x);
+            if (Math.abs(height) < 0.02) continue;
+            const stem = new THREE.Mesh(stemGeometry, stemMaterial);
+            stem.position.set(x - cycles / 2, height / 2, 0);
+            stem.scale.y = Math.abs(height);
+            scene.add(stem);
+        }
     } else if (kind === 'hydrogen-1s') {
         let seed = 0x1234abcd;
         const random = () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) + 0.5) / 4294967296;
@@ -211,12 +286,14 @@ function proceduralScene(kind) {
 }
 
 async function load(entry) {
-    const key = entry.src || entry.id;
+    // Entries may share a GLB but differ in presentation (e.g. a recolored Sun).
+    const key = entry.id || entry.src;
     if (!models.has(key)) models.set(key, (entry.procedural === 'molecule'
         ? moleculeData.then(data => data?.models?.[entry.molecule]
             ? { scene: moleculeScene(data.models[entry.molecule]) } : null)
         : entry.procedural ? Promise.resolve({ scene: proceduralScene(entry.procedural) })
-            : loader.loadAsync(entry.src)).then(gltf => {
+            // The content hash busts browser caches whenever a model file changes.
+            : loader.loadAsync(entry.sha256 ? `${entry.src}?v=${entry.sha256.slice(0, 12)}` : entry.src)).then(gltf => {
         if (!gltf) return null;
         let scene = gltf.scene;
         const removedNames = new Set(entry.presentation?.remove_nodes || []);
@@ -234,6 +311,7 @@ async function load(entry) {
             THREE.MathUtils.degToRad(preRotation.z || 0)
         );
         if (entry.presentation?.flatten_static) scene = flattenStaticScene(scene);
+        if (entry.presentation?.distance_bracket) addDistanceBracket(scene, entry.presentation.distance_bracket);
         scene.updateMatrixWorld(true);
         const bounds = new THREE.Box3().setFromObject(scene);
         const center = bounds.getCenter(new THREE.Vector3());
@@ -248,7 +326,7 @@ async function load(entry) {
         group.scale.setScalar(1 / (referenceSize * measureFraction));
         const normalized = new THREE.Group();
         normalized.add(group);
-        if (entry.presentation && ['tint', 'color_gain', 'roughness', 'metalness', 'opaque', 'double_sided', 'emissive']
+        if (entry.presentation && ['tint', 'color_gain', 'roughness', 'metalness', 'opaque', 'double_sided', 'emissive', 'environment']
             .some(key => key in entry.presentation)) {
             normalized.traverse(child => {
                 if (!child.isMesh) return;
@@ -264,6 +342,8 @@ async function load(entry) {
                         material.depthWrite = true;
                     }
                     if (entry.presentation.double_sided) material.side = THREE.DoubleSide;
+                    // Metals need something to reflect; ModelStage attaches its room map.
+                    if (entry.presentation.environment) material.userData.environment = entry.presentation.environment;
                     if (entry.presentation.emissive && material.emissive) {
                         material.emissive.set(entry.presentation.emissive);
                         material.emissiveIntensity = entry.presentation.emissive_intensity ?? 0.25;
@@ -309,6 +389,16 @@ class ModelStage {
                 redraw();
             });
         } catch { this.unavailable = true; }
+    }
+    environment() {
+        if (!this.environmentMap) {
+            const generator = new THREE.PMREMGenerator(this.renderer);
+            const room = new RoomEnvironment();
+            this.environmentMap = generator.fromScene(room, 0.04).texture;
+            room.dispose();
+            generator.dispose();
+        }
+        return this.environmentMap;
     }
     entry(item) {
         return (this.ctx.dimension === 'length' && proceduralLength[item.name]) ||
@@ -421,7 +511,20 @@ class ModelStage {
                     const defaultBounds = new THREE.Box3().setFromObject(instance);
                     instance.userData.anchorMinY = defaultBounds.min.y;
                     instance.userData.anchorMaxZ = defaultBounds.max.z;
+                    instance.traverse(child => {
+                        for (const material of [child.material].flat())
+                            if (material?.userData.environment) {
+                                material.envMap = this.environment();
+                                material.envMapIntensity = material.userData.environment;
+                            }
+                    });
                     instance.userData.modelItem = item;
+                    instance.userData.bracketBars = [];
+                    instance.userData.bodies = [];
+                    instance.traverse(child => {
+                        if (child.userData.bracketAxis) instance.userData.bracketBars.push(child);
+                        if (child.userData.bodyLabel) instance.userData.bodies.push(child);
+                    });
                     this.instances.set(item, instance);
                     this.scene.add(instance);
                 }
@@ -438,6 +541,7 @@ class ModelStage {
             THREE.MathUtils.degToRad(pose.yaw || 0) + rotation.yaw,
             THREE.MathUtils.degToRad(pose.roll || 0));
         instance.scale.setScalar(size);
+        instance.userData.drawSize = size;
         instance.position.set(0, 0, 0);
         // The default pose establishes placement once. Drag rotation changes only
         // orientation, never the model's center or its camera-depth offset.
@@ -476,9 +580,22 @@ class ModelStage {
         this.camera.updateMatrixWorld(true);
         this.camera.matrixWorldInverse.copy(this.camera.matrixWorld).invert();
         this.hulls.clear();
+        // Screen-space size of one world unit at a given camera depth.
+        const pixelsPerUnit = depth => this.camera.projectionMatrix.elements[5] * h / 2 / depth;
         for (const [item, instance] of this.instances) {
             if (!instance?.visible) continue;
             instance.updateMatrixWorld(true);
+            if (instance.userData.bracketBars.length) {
+                const perPixel = 1 / pixelsPerUnit(distance - instance.position.z);
+                for (const bar of instance.userData.bracketBars) {
+                    const thickness = BRACKET_LINE_PX * perPixel / bar.parent.matrixWorld.getMaxScaleOnAxis();
+                    const length = bar.userData.bracketLength;
+                    if (bar.userData.bracketAxis === 'x') bar.scale.set(length, thickness, thickness);
+                    else bar.scale.set(thickness, length, thickness);
+                }
+                instance.updateMatrixWorld(true);
+            }
+            this.labelBodies(instance, w, h, scale, cx, cy, view);
             const projected = [];
             for (const point of instance.userData.pickPoints || []) {
                 const ndc = point.clone().applyMatrix4(instance.matrixWorld).project(this.camera);
@@ -496,9 +613,35 @@ class ModelStage {
                 overlay.visible = item === this.hovered && instance.visible;
         this.renderer.render(this.scene, this.camera);
     }
+    // Body names stay upright and face the viewer: they are SVG text placed
+    // above each body's projected position rather than geometry in the model.
+    labelBodies(instance, w, h, scale, cx, cy, view) {
+        if (!instance.userData.bodies.length) return;
+        const opacity = THREE.MathUtils.clamp(instance.userData.drawSize / 80, 0, 1);
+        if (!opacity) return;
+        const toScreen = point => {
+            const ndc = point.project(this.camera);
+            return { x: cx + (ndc.x * w / 2) / scale, y: view.y + view.height / 2 - (ndc.y * h / 2) / scale };
+        };
+        for (const body of instance.userData.bodies) {
+            const center = body.getWorldPosition(new THREE.Vector3());
+            const radius = body.matrixWorld.getMaxScaleOnAxis();
+            const bodyCenter = toScreen(center.clone());
+            const top = toScreen(center.add(new THREE.Vector3(0, radius, 0)));
+            const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            label.setAttribute('class', 'journey-distance-body-label');
+            label.setAttribute('text-anchor', 'middle');
+            label.setAttribute('x', bodyCenter.x);
+            label.setAttribute('y', Math.min(top.y, bodyCenter.y) - 7);
+            label.setAttribute('opacity', opacity);
+            label.textContent = body.userData.bodyLabel;
+            this.ctx.stage.append(label);
+        }
+    }
     dispose() {
         this.disposed = true;
         cancelAnimationFrame(this.returnFrame);
+        this.environmentMap?.dispose();
         this.renderer?.dispose();
         this.renderer?.forceContextLoss();
         this.renderer?.domElement.remove();

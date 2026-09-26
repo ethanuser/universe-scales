@@ -361,10 +361,13 @@ def sphere_derivative(data):
             payloads[index] = output.getvalue()
             textures.append({"name": item.get("name"), "original_size": original_size,
                              "size": list(image.size), "mime_type": item["mimeType"]})
-    return pack_glb(document, pack_views(document, payloads)), {
+    from texture_padding import OPERATION as PAD_OPERATION, pad_glb  # local: texture_padding imports this module
+    padded, _ = pad_glb(pack_glb(document, pack_views(document, payloads)))
+    return padded, {
         "operations": ["Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
                        "Remove source node scale; preserve source node rotation",
-                       "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"],
+                       "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals",
+                       PAD_OPERATION],
         "source_bounds": original_bounds, "textures": textures,
     }
 

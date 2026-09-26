@@ -27,12 +27,21 @@ USDZ conversion, external textures, or decompression setup is required.
 | `freight-train-car.glb` | [Kenney Train Kit](https://kenney.nl/assets/train-kit) | CC0-1.0 | Open cargo railcar |
 | `shipping-container.glb` | [Kenney City Kit Industrial](https://kenney.nl/assets/city-kit-industrial) | CC0-1.0 | Intermodal container |
 | `sketchfab-housefly-v2.glb` | [Schmoldt5000's housefly](https://sketchfab.com/3d-models/housefly-5fe7cbd25f9a446d8bae005893d010dd) | CC-BY-4.0 | Adult *Musca domestica*, display pedestal hidden |
-| `sketchfab-bacterium-rod.glb` | [andrewfrueh's bacterium](https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533) | CC-BY-4.0 | Generic rod, long appendage hidden; body-length calibration |
-| `nih-porcine-parvovirus-capsid.glb` | [NIH 3D porcine parvovirus capsid](https://3d.nih.gov/entries/9728), from PDB 1K3V | CC-BY-4.0 | Chain-colored molecular surface, about 28 nm across |
+| `sketchfab-bacterium-rod-v2.glb` | [ModuleStudios' bacterial cell](https://sketchfab.com/3d-models/bacterial-cell-bacterium-19618642dad34d0b82219c162aa522e8) | CC-BY-4.0 | Generic rod; duplicate shell and hidden organelles removed; body-length calibration |
+| `coronavirus-sars-cov-2.glb` | [NIAID SARS-CoV-2 virion, NIH 3D 3DPX-013323](https://3d.nih.gov/entries/3DPX-013323) | CC-BY-4.0 | Vertex-colored virion simplified to 50k triangles; envelope calibrated |
+| `sketchfab-mitochondrion-v2.glb` | [brianj.seely's mitochondria](https://sketchfab.com/3d-models/mitochondria-7445a425050e49daa881070ca6917a91) | CC-BY-4.0 | Single cut-away organelle; second copy and text labels removed |
 | `sketchfab-isuzu-city-bus.glb` | [own.guest's Isuzu Erga Mio](https://sketchfab.com/3d-models/isuzu-erga-mio-bus-050e8acd0bbc4da0902a8a874ef10fca) | CC-BY-4.0 | Japanese city bus envelope proxy |
 | `sketchfab-teaspoon.glb` | [LordOfTheSnow's teaspoon](https://sketchfab.com/3d-models/teaspoon-96467926442342eab2c797de0ed80e6a) | CC-BY-4.0 | Uncalibrated 5 mL teaspoon proxy |
-| `cat.glb` | [Quaternius via Poly Pizza](https://poly.pizza/m/qKICY6xla2) | CC0-1.0 | Stylized cat |
 | `ceiling-fan.glb` | [Poly Haven Ceiling Fan](https://polyhaven.com/a/ceiling_fan) | CC0-1.0 | Fan with separate blades |
+
+## Quick Workflow
+
+`AGENTS.md` at the repo root has the short version. The tools: `scripts/preview_glb.cjs`
+renders a textured multi-view PNG headlessly with the explorer's lighting;
+`scripts/register_model.py ENTRY.json MODEL.glb` copies a processed GLB into place,
+recomputes its stats, replaces an older entry (deleting its unused file), updates the
+Sketchfab manifest, and checks exact-name matches. Model URLs carry `?v=<sha256 prefix>`,
+so a changed file is never served stale from the browser cache.
 
 ## Sketchfab Imports
 
@@ -157,14 +166,17 @@ The ball radii and bond rods are visual conventions, not atomic surfaces.
 These two procedural models and their geometry-source links appear only in the
 Length explorer; the numeric observations remain in the ordinary dataset.
 
-The Virus observation now uses the approximate 28 nm porcine parvovirus capsid
-diameter reported in [the structural study](https://pubmed.ncbi.nlm.nih.gov/11827486/),
-not the old generic 10 nm guess. The NIH 3D surface is already 0.79 MB and
-30,456 triangles, so no lossy simplification was needed. Reimport the pinned
-source with `python3 scripts/import_nih_parvovirus.py`; the script checks its
-SHA-256 before replacing the old generic capsid. The bacterium is a generic
-rod rather than an *E. coli* specimen. Its long appendage is hidden, and only
-its main body is calibrated to the 2 micrometer Bacteria marker.
+The Virus observation is a SARS-CoV-2 virion: 91 nm, the mean envelope diameter
+measured by cryo-electron tomography ([Ke et al. 2020](https://www.nature.com/articles/s41586-020-2665-2)).
+The NIAID model from NIH 3D (566k triangles, one vertex-colored surface) was
+welded and simplified to about 50k triangles with glTF Transform. Its envelope is
+about 0.68 of the full spike-to-spike extent (measured by classifying vertex
+colors), so `measure_fraction: 0.68` calibrates the envelope, not the spikes.
+The bacterium is a generic rod rather than an *E. coli* specimen; its source had
+a duplicate outer shell (the "two overlaid models") that was deleted. Only its
+body is calibrated to the 2 micrometer Bacteria marker; the flagellum trails beyond.
+The mitochondrion source contained two organelles plus text labels; one cut-away
+organelle remains, so its long axis is no longer drawn at half size.
 
 ## Orbital Distance Diagrams
 
@@ -176,6 +188,10 @@ scale. Earth-Moon distance changes over the lunar orbit, and the actual
 Sun-Earth distance is not always one au. These are spatial diagrams, not
 time-specific orbital snapshots. The source textures and model credits remain
 in the registry; the generator checks their hashes before merging them.
+`presentation.distance_bracket` makes the renderer add a white U-shaped bracket
+under the two bodies (lines tangent to their facing edges, so it spans the
+surface-to-surface gap) and upright SVG body labels; see `addDistanceBracket`
+in `js/experiences/models.js`.
 
 ```sh
 python3 scripts/build_earth_moon_model.py
@@ -185,13 +201,15 @@ python3 -m unittest tests/test_orbital_distance_models.py
 ## Renderer Contract
 
 - `matches` contains case-sensitive names verified against the JSON exports.
-  The current registry has 36 self-contained GLBs and 44 exact-name matches
-  across dimensions. Length and Volume imports share that registry.
+  The current registry has 37 GLB entries (Betelgeuse reuses the Sun file with an
+  orange emissive tint) and 45 exact-name matches across dimensions. Length and Volume imports share that registry.
 - NASA geometry is explicitly adapted to centered unit spheres, including removal
   of the source bodies' oblateness and the Sun's 1000x node scale. Original
   topology, UVs, material roles, and texture orientation are retained. Source
   bounds and texture changes are recorded in each registry entry. These are
-  idealized spherical visualizations, not geodetic models.
+  idealized spherical visualizations, not geodetic models. Their cube-cross
+  texture atlases have white gutters; `scripts/texture_padding.py` fills them
+  with nearest island colors so mipmaps do not draw white seams.
 - A sphere's radius is `cbrt(3 * volume / (4 * Math.PI))` for a volume item,
   `sqrt(area / (4 * Math.PI))` for a total-surface-area item, and `diameter / 2`
   for a diameter item. If the renderer first normalizes largest extent to 1,

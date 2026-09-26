@@ -21,8 +21,10 @@ DIAGRAMS = (
         "distance_m": 384_400_000,
         "source": "https://science.nasa.gov/moon/by-the-numbers/",
         "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, "
-                "with their radii scaled to the same distance. Lunar distance changes during its orbit; "
-                "this idealized diagram is not a view from a particular date or phase.",
+                "with their radii at the same scale. The white bracket's lines are tangent to the facing "
+                "edges, so it spans the surface-to-surface gap (about 376,300 km), slightly less than the "
+                "center distance. Lunar distance changes during its orbit; this idealized diagram is not "
+                "a view from a particular date or phase.",
     },
     {
         "id": "nasa-sun-earth-au",
@@ -31,9 +33,11 @@ DIAGRAMS = (
         "distance_m": 149_597_870_700,
         "source": "https://ssd.jpl.nasa.gov/faq.html",
         "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit "
-                "(149,597,870,700 m) center-to-center, using their approximate mean radii. "
-                "The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. "
-                "This idealized diagram is not an orbital snapshot.",
+                "(149,597,870,700 m) center-to-center, using their approximate mean radii. At this scale "
+                "Earth is far smaller than a pixel; its label and the bracket mark where it is. The "
+                "bracket's lines are tangent to the facing edges, so it spans the surface-to-surface gap "
+                "(about 0.995 au). The au is a defined unit close to, but not identical to, the varying "
+                "Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
     },
 )
 
@@ -135,7 +139,8 @@ def build_diagram(config, by_id):
         "geometry": "mesh",
         "note": config["note"],
         "src": str(output_path.relative_to(ROOT)),
-        "presentation": {"reference_size": 1},
+        # The renderer adds the tangent-line bracket and upright body labels.
+        "presentation": {"reference_size": 1, "distance_bracket": {"bodies": list(config["bodies"])}},
         "processing": {"source_models": source_info, "center_distance_m": config["distance_m"],
                        "body_radii_m": {name: RADII_M[name] for name in config["bodies"]},
                        "operations": ["Retain NASA geometry and embedded textures",

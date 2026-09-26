@@ -25,6 +25,7 @@ class OrbitalDistanceModelTests(unittest.TestCase):
                 entry = models[model_id]
                 self.assertEqual(entry["matches"]["length"], [item])
                 self.assertEqual(entry["presentation"]["reference_size"], 1)
+                self.assertEqual(entry["presentation"]["distance_bracket"]["bodies"], list(radii))
                 self.assertEqual(entry["processing"]["center_distance_m"], distance)
                 data = (ROOT / entry["src"]).read_bytes()
                 self.assertLess(len(data), 2_000_000)

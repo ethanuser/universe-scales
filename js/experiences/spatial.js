@@ -4,6 +4,7 @@
     const { log, power, clamp, countCluster } = ScaleMath;
     const line = (x1, y1, x2, y2) => svg('line', { x1, y1, x2, y2, stroke: 'currentColor', 'stroke-width': 2 });
     let worldPromise;
+    const MIN_DRAWN_PX = 0.5;
     function viewport(ctx) {
         const box = ctx.stage.getBoundingClientRect();
         const width = box.width < 600 ? 560 : 1000;
@@ -38,38 +39,6 @@
             }
         }
         return stops.at(-1)[1];
-    }
-    function distanceBracket(entry, x, y, size) {
-        const distance = entry?.processing?.center_distance_m;
-        const bodies = Object.entries(entry?.processing?.body_radii_m || {});
-        const radii = bodies.map(([, radius]) => radius);
-        if (!distance || radii.length !== 2) return null;
-        const maximum = Math.max(...radii) / distance;
-        const top = y - (2 * maximum + 0.24) * size;
-        const marker = svg('g', {
-            class: 'journey-distance-bracket',
-            opacity: clamp(size / 80, 0, 1)
-        });
-        for (let index = 0; index < 2; index++) {
-            const bodyX = x + (index - 0.5) * size;
-            const bodyY = y - maximum * size;
-            const bodyTop = y - (maximum + radii[index] / distance) * size;
-            marker.append(svg('line', { x1: bodyX, y1: bodyTop, x2: bodyX, y2: top }));
-            marker.append(svg('circle', {
-                cx: bodyX, cy: bodyY, r: 5,
-                class: 'journey-distance-locator',
-                fill: { Sun: '#ffe19a', Earth: '#78b9ef', Moon: '#e0e2e3' }[bodies[index][0]] || '#fff'
-            }));
-            const label = svg('text', {
-                x: bodyX, y: top - 8,
-                class: 'journey-distance-body-label',
-                'text-anchor': 'middle'
-            });
-            label.textContent = bodies[index][0];
-            marker.append(label);
-        }
-        marker.append(svg('line', { x1: x - size / 2, y1: top, x2: x + size / 2, y2: top }));
-        return marker;
     }
     function navigation(ctx, order, zoom, render, layoutOptions = () => ({}), interaction = {}) {
         ctx.comparison.hidden = true;
@@ -272,12 +241,10 @@
                 const modelExtent = entry?.presentation?.display_extent_factor ?? 1;
                 const extent = order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)
                     ? size * 2/Math.sqrt(Math.PI) : visualSize * modelExtent;
+                // Sub-pixel objects would still fetch their GLB or photo; they load when they grow.
+                if (extent * view.scale < MIN_DRAWN_PX) return;
                 clipped ||= y - extent < 0 || x - extent/2 < view.left || x + extent/2 > view.left + view.width;
                 const g = ctx.object(ctx.stage, item, x, y, extent, extent, { image: false });
-                if (order === 1) {
-                    const bracket = distanceBracket(entry, x, y, visualSize);
-                    if (bracket) g.append(bracket);
-                }
                 if (order !== 2 && entry) {
                     g.dataset.modelIndex = ctx.items.indexOf(item);
                     g.style.pointerEvents = 'none';

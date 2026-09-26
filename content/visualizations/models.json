@@ -31,8 +31,8 @@
       "src": "content/visualizations/models/nasa-earth.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 393876,
-      "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+      "bytes": 419952,
+      "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
@@ -47,7 +47,8 @@
         "operations": [
           "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
           "Remove source node scale; preserve source node rotation",
-          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals",
+          "Pad texture-atlas gutters with nearest UV-island colors to prevent mipmap seam bleeding"
         ],
         "source_bounds": {
           "min": [
@@ -94,7 +95,10 @@
       },
       "volume_semantics": "analytic_sphere",
       "closed_volume_checked": false,
-      "normalized_radius": 1
+      "normalized_radius": 1,
+      "presentation": {
+        "yaw": 180
+      }
     },
     {
       "id": "nasa-moon",
@@ -121,8 +125,8 @@
       "src": "content/visualizations/models/nasa-moon.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 262284,
-      "sha256": "d342a56c4fe2757e19c1c92fb3ee0f2d3d9ae24420e0ebb98160f0d52644203e",
+      "bytes": 295908,
+      "sha256": "3c1236e03b1a42e067a27cc0ae7c31889f99f121f2b7c690d80dc199f72b98e9",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
@@ -137,7 +141,8 @@
         "operations": [
           "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
           "Remove source node scale; preserve source node rotation",
-          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals",
+          "Pad texture-atlas gutters with nearest UV-island colors to prevent mipmap seam bleeding"
         ],
         "source_bounds": {
           "min": [
@@ -202,8 +207,8 @@
       "src": "content/visualizations/models/nasa-jupiter.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 187384,
-      "sha256": "69eb9f18550557c4496a598a41d1f2babb98dfca0ee7b5b44f0045161adb9aff",
+      "bytes": 211672,
+      "sha256": "821c75e6a2268ab139d6fd87c1d0f37b86ca4985957e23e900936535b4bf9e50",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
@@ -218,7 +223,8 @@
         "operations": [
           "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
           "Remove source node scale; preserve source node rotation",
-          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals",
+          "Pad texture-atlas gutters with nearest UV-island colors to prevent mipmap seam bleeding"
         ],
         "source_bounds": {
           "min": [
@@ -282,8 +288,8 @@
       "src": "content/visualizations/models/nasa-sun.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 306332,
-      "sha256": "7b5ba6cf18d46532a4d2741a345432dbd784027c357f741780911839e68c85c3",
+      "bytes": 355740,
+      "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
@@ -298,7 +304,8 @@
         "operations": [
           "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
           "Remove source node scale; preserve source node rotation",
-          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals"
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals",
+          "Pad texture-atlas gutters with nearest UV-island colors to prevent mipmap seam bleeding"
         ],
         "source_bounds": {
           "min": [
@@ -800,7 +807,7 @@
       "closed_volume_checked": false
     },
     {
-      "id": "sketchfab-mitochondrion",
+      "id": "sketchfab-mitochondrion-v2",
       "source": "https://sketchfab.com/3d-models/mitochondria-7445a425050e49daa881070ca6917a91",
       "author": "brianj.seely on Sketchfab",
       "license": "CC-BY-4.0",
@@ -814,18 +821,21 @@
         ]
       },
       "geometry": "mesh",
-      "note": "Mitochondrial form varies across cells; this model is an illustrative example rather than a measured organelle.",
-      "src": "content/visualizations/models/sketchfab-mitochondrion.glb",
+      "presentation": {
+        "yaw": -150
+      },
+      "note": "A cut-away mitochondrion showing the translucent outer membrane, the folded inner membrane (cristae), the matrix, and ribosomes. Mitochondrial shape varies widely between cells, so this is an illustrative example rather than a measured organelle; its long axis is calibrated to the listed length.",
+      "src": "content/visualizations/models/sketchfab-mitochondrion-v2.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 490316,
-      "sha256": "6877a20a125e83a00702734e9391f920faafa4499a377ef8905bde8076735d4b",
+      "bytes": 217748,
+      "sha256": "f80f28dda5223192304c0f703e535d94e8f45ef758b038090be0b16fddb888d0",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
-      "mesh_count": 3,
-      "triangle_count": 13772,
+      "mesh_count": 2,
+      "triangle_count": 6851,
       "animations": 0,
       "skins": 0,
       "sketchfab_uid": "7445a425050e49daa881070ca6917a91",
@@ -833,8 +843,11 @@
       "source_bytes": 311774,
       "processing": {
         "operations": [
-          "Embed glTF buffers and images into GLB",
-          "Resize textures to at most 512px"
+          "Loaded the existing repo GLB (no re-download); identified that its 'Transparent structures' and 'Opaque structures' meshes each combined geometry from TWO spatially separate mitochondria (a whole closed one and a cut-away one) sharing one mesh/material apiece",
+          "Split each of those two meshes into connected components (union-find over shared triangle vertices) and grouped components by local-space bounding-box center into the two mitochondria; kept only the cut-away copy's components (matrix, cristae folds, ribosome markers, outer membrane) and discarded the whole copy's components",
+          "Deleted the 'Labels V004_2' node/mesh entirely (four text billboards plus their leader-line geometry) and its now-unused 'Labels_opaque_unlit' material/texture",
+          "Rotated the kept geometry (positions and normals) 90 degrees about Y so the organelle's long axis is world X instead of the source's local Z; this also fixes the original bug where the renderer's longest-extent auto-measurement was picking a foreshortened axis, drawing each mitochondrion at roughly half its intended size",
+          "glTF Transform 4.5.0: prune (drops the orphaned Labels material/texture/accessors), weld, dedup; no external geometry decoder used"
         ],
         "source_model_name": "Mitochondria",
         "source_author": "brianj.seely"
@@ -1041,9 +1054,6 @@
     },
     {
       "id": "sketchfab-red-blood-cell",
-      "presentation": {
-        "pitch": 55
-      },
       "source": "https://sketchfab.com/3d-models/rbc-morphology-red-blood-cell-1a1bbd5e3cd746888232fefa46b3f7d1",
       "author": "elearning.imu on Sketchfab",
       "license": "CC-BY-4.0",
@@ -1146,9 +1156,10 @@
       "presentation": {
         "measure_axis": "y",
         "layout_width_factor": 0.48,
-        "tint": "#657078",
-        "roughness": 0.46,
-        "metalness": 0.16
+        "tint": "#8a7a66",
+        "roughness": 0.38,
+        "metalness": 0.85,
+        "environment": 0.9
       },
       "source": "https://sketchfab.com/3d-models/free-la-tour-eiffel-8553f94d06e24cb4b0fde1080f281674",
       "author": "Lambo_SC04 on Sketchfab",
@@ -1994,6 +2005,212 @@
       "closed_volume_checked": false
     },
     {
+      "id": "sketchfab-bacterium-rod-v2",
+      "source": "https://sketchfab.com/3d-models/bacterial-cell-bacterium-19618642dad34d0b82219c162aa522e8",
+      "author": "ModuleStudios on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "sketchfab_uid": "19618642dad34d0b82219c162aa522e8",
+      "source_sha256": "d087ae194f1a5ea042faa5fda148b1d2eea34bee566e7a2242ece8d2c26a7683",
+      "source_bytes": 131529,
+      "bytes": 141988,
+      "sha256": "25e1753a86fbefd1340451df3bb9f79722614e71f7aabf8b405599d17ea7d4e0",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "mesh_count": 3,
+      "triangle_count": 7580,
+      "draw_calls": 3,
+      "matches": {
+        "length": [
+          "Bacteria"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "measure_axis": "x",
+        "measure_fraction": 0.4825,
+        "pre_rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+        },
+        "layout_width_factor": 2.0,
+        "focus_scale_factor": 1.4,
+        "display_extent_factor": 2.07
+      },
+      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. Its body, with short surface pili, is calibrated to the listed 2 micrometer length of E. coli; the trailing flagellum, roughly as long again, is not part of that measurement.",
+      "processing": {
+        "operations": [
+          "Stage: download via Sketchfab API, embed buffers/images into GLB (no textures present)",
+          "Delete duplicate overlapping outer-shell mesh node (\"Capsule\", a redundant copy of \"Cell_Wall\")",
+          "Delete fully-internal, never-visible organelle meshes (Cytoplasm, Nucleoid, Plasmid) hidden behind the opaque cell wall",
+          "gltf-transform prune + dedup + weld + join to merge remaining materials/meshes and cut draw calls (26 -> 3)",
+          "Recolor the single remaining material to a warm tan/cream (baseColor 0.86/0.76/0.58, roughness 0.55, metalness 0) instead of flat grey",
+          "Measured body-only extent (excluding flagellum) vs full extent (including flagellum) with scripts/audit_glb_geometry.mjs to derive measure_fraction"
+        ],
+        "source_model_name": "Bacterial Cell / Bacterium.",
+        "source_author": "ModuleStudios"
+      },
+      "src": "content/visualizations/models/sketchfab-bacterium-rod-v2.glb",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "coronavirus-sars-cov-2",
+      "source": "https://3d.nih.gov/entries/3DPX-013323",
+      "author": "Kristen Browne / NIAID, via NIH 3D Print Exchange",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_sha256": "f1bff39b83418a83f5fc48bfbbcb693cd10b4d8aab3fe8e9e93af4550f9cef7b",
+      "source_bytes": 11274372,
+      "bytes": 682504,
+      "sha256": "00a3ea0417a8425d284383085cebd8e36af5135e46811551f2b8f46d48d2e5c2",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "mesh_count": 1,
+      "triangle_count": 50522,
+      "draw_calls": 1,
+      "matches": {
+        "length": [
+          "Virus"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "measure_fraction": 0.68,
+        "layout_width_factor": 1.4,
+        "focus_scale_factor": 1.5,
+        "display_extent_factor": 1.47
+      },
+      "note": "NIAID's SARS-CoV-2 virion model from the NIH 3D Print Exchange: a lipid envelope (teal) studded with spike trimers (gray) and membrane proteins (orange). It is an illustrative, artist-built model rather than a cryo-electron tomography reconstruction, simplified here for the web. The envelope, not counting the spikes, is calibrated to the listed 91 nm; the spikes reach about 20 nm beyond it.",
+      "processing": {
+        "operations": [
+          "Download SARSCOV2_Thick_NIH3D.glb from NIH 3D (submission 17182, run 20e70d77-195b-4032-bb74-2a8c59184a43, output-file 386420)",
+          "gltf-transform weld (merge duplicate vertices)",
+          "gltf-transform simplify --ratio 0.09 --error 0.01 (566,399 -> 50,522 triangles, vertex colors preserved through decimation)",
+          "gltf-transform prune + dedup",
+          "Measured envelope vs. full extent with a custom script (measure_corona.py) that classifies vertices by COLOR_0 (teal/blue = envelope, pale = spikes, orange = HE/membrane proteins) and compares mean envelope radius to overall bounding-box extent"
+        ],
+        "source_model_name": "SARS CoV-2 Virion (NIAID)",
+        "source_author": "kbrowne (NIAID)",
+        "nih_threedpx_id": "3DPX-013323",
+        "nih_submission_id": 17182,
+        "nih_output_file_id": 386420,
+        "download_url": "https://3d.nih.gov/api/submissions/17182/runs/20e70d77-195b-4032-bb74-2a8c59184a43/output-files/386420"
+      },
+      "src": "content/visualizations/models/coronavirus-sars-cov-2.glb",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/s/Sun_1_1391000.glb",
+      "author": "NASA (individual model artist not identified in current asset metadata)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "sphere",
+      "src": "content/visualizations/models/nasa-sun.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 355740,
+      "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "a178f5c43c2c9a6ee6c011c315149a7ab5a2594fd5aa9119ee219625a18da1dd",
+      "source_bytes": 4343656,
+      "processing": {
+        "operations": [
+          "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
+          "Remove source node scale; preserve source node rotation",
+          "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals",
+          "Pad texture-atlas gutters with nearest UV-island colors to prevent mipmap seam bleeding"
+        ],
+        "source_bounds": {
+          "min": [
+            -0.5,
+            -0.5,
+            -0.5
+          ],
+          "max": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "node": {
+            "mesh": 0,
+            "name": "Cube.001",
+            "rotation": [
+              0.7071068286895752,
+              0,
+              0,
+              0.7071067094802856
+            ],
+            "scale": [
+              1000,
+              1000,
+              1000
+            ]
+          }
+        },
+        "textures": [
+          {
+            "name": "sun_diff.jpg",
+            "original_size": [
+              2048,
+              1536
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ]
+      },
+      "volume_semantics": "analytic_sphere",
+      "closed_volume_checked": false,
+      "normalized_radius": 1,
+      "id": "nasa-sun-as-betelgeuse",
+      "matches": {
+        "length": [
+          "Betelgeuse Diameter"
+        ]
+      },
+      "presentation": {
+        "emissive": "#ff7b3a",
+        "emissive_intensity": 1.0
+      },
+      "note": "Illustrative only: NASA's Sun sphere recolored orange-red for a cool red supergiant. Its diameter is set to the listed value; Betelgeuse's real surface is dominated by a few enormous convection cells, and its size changes as it pulsates."
+    },
+    {
       "id": "nasa-earth-moon-distance",
       "source": "https://science.nasa.gov/moon/by-the-numbers/",
       "author": "NASA; composite assembled by Universe Scales",
@@ -2009,21 +2226,27 @@
         ]
       },
       "geometry": "mesh",
-      "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, with their radii scaled to the same distance. Lunar distance changes during its orbit; this idealized diagram is not a view from a particular date or phase.",
+      "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, with their radii at the same scale. The white bracket's lines are tangent to the facing edges, so it spans the surface-to-surface gap (about 376,300 km), slightly less than the center distance. Lunar distance changes during its orbit; this idealized diagram is not a view from a particular date or phase.",
       "src": "content/visualizations/models/nasa-earth-moon-distance.glb",
       "presentation": {
-        "reference_size": 1
+        "reference_size": 1,
+        "distance_bracket": {
+          "bodies": [
+            "Earth",
+            "Moon"
+          ]
+        }
       },
       "processing": {
         "source_models": [
           {
             "id": "nasa-earth",
-            "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+            "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
             "source": "https://science.nasa.gov/resource/earth-3d-model/"
           },
           {
             "id": "nasa-moon",
-            "sha256": "d342a56c4fe2757e19c1c92fb3ee0f2d3d9ae24420e0ebb98160f0d52644203e",
+            "sha256": "3c1236e03b1a42e067a27cc0ae7c31889f99f121f2b7c690d80dc199f72b98e9",
             "source": "https://solarsystem.nasa.gov/resources/2366/earths-moon-3d-model/"
           }
         ],
@@ -2041,8 +2264,8 @@
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 656080,
-      "sha256": "d3ddc2748e4c0fdf8f6610965483bda5e5839350cf8da4ae082783aaceb556f9",
+      "bytes": 715780,
+      "sha256": "f35374def27c0b78205d9faa835790e2add2b06818e5df381a3e639088cb8b54",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
@@ -2068,21 +2291,27 @@
         ]
       },
       "geometry": "mesh",
-      "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit (149,597,870,700 m) center-to-center, using their approximate mean radii. The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
+      "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit (149,597,870,700 m) center-to-center, using their approximate mean radii. At this scale Earth is far smaller than a pixel; its label and the bracket mark where it is. The bracket's lines are tangent to the facing edges, so it spans the surface-to-surface gap (about 0.995 au). The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
       "src": "content/visualizations/models/nasa-sun-earth-au.glb",
       "presentation": {
-        "reference_size": 1
+        "reference_size": 1,
+        "distance_bracket": {
+          "bodies": [
+            "Sun",
+            "Earth"
+          ]
+        }
       },
       "processing": {
         "source_models": [
           {
             "id": "nasa-sun",
-            "sha256": "7b5ba6cf18d46532a4d2741a345432dbd784027c357f741780911839e68c85c3",
+            "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
             "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
           },
           {
             "id": "nasa-earth",
-            "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+            "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
             "source": "https://science.nasa.gov/resource/earth-3d-model/"
           }
         ],
@@ -2100,108 +2329,14 @@
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 700136,
-      "sha256": "6eb5e11b3b8e2d782a2aa1122543324dabadf6bc8fff69fc1b03e2783214d007",
+      "bytes": 775620,
+      "sha256": "999a662eb12d8d4ede0ad0ba852ff6a0ec029fb9fc630f044fd0422c4334f1ec",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
       "mesh_count": 2,
       "triangle_count": 6144,
-      "animations": 0,
-      "skins": 0
-    },
-    {
-      "id": "sketchfab-bacterium-rod",
-      "source": "https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533",
-      "author": "andrewfrueh on Sketchfab",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "matches": {
-        "length": [
-          "Bacteria"
-        ]
-      },
-      "geometry": "mesh",
-      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. The model's main body is calibrated to the listed 2 micrometer length; the surface projections are illustrative. One long appendage was omitted so that the body remains legible at this scale.",
-      "src": "content/visualizations/models/sketchfab-bacterium-rod.glb",
-      "format": "glb",
-      "gltf_version": "2.0",
-      "bytes": 376276,
-      "sha256": "9330515f23c85c94d4393c5394f18e99ae4322a19fd66ad7fc7e77d1dfcb83a0",
-      "extensions_used": [],
-      "extensions_required": [],
-      "decompression_required": [],
-      "external_resources": [],
-      "mesh_count": 3,
-      "triangle_count": 7890,
-      "animations": 0,
-      "skins": 0,
-      "sketchfab_uid": "75ae189551e94d59aedce00104217533",
-      "source_sha256": "af7116c8b4d4b32e99fd45382024fcb8da98fdef02d8777fc80f43a0ce59bf3b",
-      "source_bytes": 2714439,
-      "processing": {
-        "operations": [
-          "Embed glTF buffers and images into GLB",
-          "Resize textures to at most 512px",
-          "Remove animations for static Length presentation"
-        ],
-        "source_model_name": "Bacterium",
-        "source_author": "andrewfrueh"
-      },
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false,
-      "presentation": {
-        "remove_nodes": [
-          "Bacterium geo node body end"
-        ],
-        "measure_axis": "x",
-        "measure_fraction": 0.8355,
-        "layout_width_factor": 1.2
-      }
-    },
-    {
-      "id": "nih-porcine-parvovirus-capsid",
-      "source": "https://3d.nih.gov/entries/9728",
-      "author": "NIH 3D; structural model from PDB 1K3V",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "matches": {
-        "length": [
-          "Virus"
-        ]
-      },
-      "geometry": "mesh",
-      "note": "Molecular surface of the porcine parvovirus capsid from PDB 1K3V, generated by NIH 3D. The 28 nm marker is this capsid's approximate diameter, not a universal virus size. The model shows the protein shell, not the genome or a measured individual virion. Surface colors distinguish protein chains.",
-      "src": "content/visualizations/models/nih-porcine-parvovirus-capsid.glb",
-      "source_sha256": "69cf2b1a3704326b0cf5b2ae8a969a4da34d8ef79b9f0d7aa9c15b4339a74515",
-      "source_bytes": 793208,
-      "processing": {
-        "operations": [
-          "Retain NIH 3D's embedded molecular surface and chain colors"
-        ],
-        "pdb_id": "1K3V",
-        "nih_output_file_id": 261470,
-        "download_url": "https://3d.nih.gov/api/submissions/11748/runs/5857566f-fc26-4534-8b11-48897c408ea3/output-files/261470"
-      },
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false,
-      "format": "glb",
-      "gltf_version": "2.0",
-      "bytes": 793208,
-      "sha256": "69cf2b1a3704326b0cf5b2ae8a969a4da34d8ef79b9f0d7aa9c15b4339a74515",
-      "extensions_used": [],
-      "extensions_required": [],
-      "decompression_required": [],
-      "external_resources": [],
-      "mesh_count": 1,
-      "triangle_count": 30456,
       "animations": 0,
       "skins": 0
     }

@@ -133,14 +133,17 @@ items:
   name: Protein (Small)
   source: https://en.wikipedia.org/wiki/Protein
   value: 5e-9
-- description: Porcine parvovirus is a small virus with a roughly 28 nm
-    icosahedral capsid. Its coat is assembled from sixty protein subunits;
-    the surface folds are part of what determines which cells it can enter.
-    This marker is the capsid diameter of one studied virus, not an average
-    size for all viruses or a model of the viral genome inside.
+- description: SARS-CoV-2, the coronavirus behind COVID-19, is a roughly
+    spherical particle about 91 nm across. Its fatty envelope is studded with
+    a few dozen spike proteins that reach another 20 nm or so outward and
+    latch onto ACE2 receptors on human cells. Inside, a single strand of RNA
+    about 30,000 letters long is one of the largest genomes of any RNA virus.
+    This marker is the mean envelope diameter measured by cryo-electron
+    tomography, not counting the spikes; viruses as a group range from about
+    20 nm to more than a micrometer.
   name: Virus
-  source: https://pubmed.ncbi.nlm.nih.gov/11827486/
-  value: 2.8e-8
+  source: https://www.nature.com/articles/s41586-020-2665-2
+  value: 9.1e-8
 - description: The wavelength of green light, the peak sensitivity of human vision.
     This wavelength defines the resolution limit of optical microscopes and
     explains why we can't see individual atoms with visible light. The
@@ -284,7 +287,7 @@ items:
     most consistent measurements in professional sports.
   name: Football Field
   source: https://en.wikipedia.org/wiki/American_football_field
-  value: 100
+  value: 91.44
 - description: The height of the Eiffel Tower, an iron lattice structure that
     was initially criticized but became the symbol of Paris. Built for the
     1889 World's Fair, it was the tallest human-made structure for 41 years.

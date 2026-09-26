@@ -27,7 +27,7 @@
         "measure_axis": "x",
         "flatten_static": true
       },
-      "note": "An atom-colored segment of human B-DNA with alternating A–T and C–G pairs, credited to alexanderesmith. The listed 2 nm measures double-helix width, not the length of this arbitrary segment; hydrogen is white, oxygen red, nitrogen blue, carbon gray, and phosphorus yellow."
+      "note": "An atom-colored segment of human B-DNA with alternating A\u2013T and C\u2013G pairs, credited to alexanderesmith. The listed 2 nm measures double-helix width, not the length of this arbitrary segment; hydrogen is white, oxygen red, nitrogen blue, carbon gray, and phosphorus yellow."
     },
     {
       "id": "sketchfab-insulin-monomer",
@@ -38,27 +38,24 @@
       "note": "A human insulin monomer, not an interchangeable model of every small protein. The listed 5 nm is a representative protein scale, not a measured diameter of this conformer; its longest visible mesh extent is normalized to that illustrative value."
     },
     {
-      "id": "sketchfab-virus-capsid",
-      "name": "Virus",
-      "uid": "cd2c1e4cd2764cba9e64763fc068c362",
-      "author": "uuon_foundation",
-      "license": "by",
-      "note": "Icosahedral capsid as one recognizable virus form; viruses vary greatly in shape and diameter."
-    },
-    {
-      "id": "sketchfab-bacterium-rod",
+      "id": "sketchfab-bacterium-rod-v2",
       "name": "Bacteria",
-      "uid": "75ae189551e94d59aedce00104217533",
-      "author": "andrewfrueh",
+      "uid": "19618642dad34d0b82219c162aa522e8",
+      "author": "ModuleStudios",
       "license": "by",
-      "replaces": "sketchfab-e-coli",
       "presentation": {
-        "remove_nodes": ["Bacterium geo node body end"],
         "measure_axis": "x",
-        "measure_fraction": 0.8355,
-        "layout_width_factor": 1.2
+        "measure_fraction": 0.4825,
+        "pre_rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+        },
+        "layout_width_factor": 2.0,
+        "focus_scale_factor": 1.4,
+        "display_extent_factor": 2.07
       },
-      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. The model's main body is calibrated to the listed 2 micrometer length; the surface projections are illustrative. One long appendage was omitted so that the body remains legible at this scale."
+      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. Its body, with short surface pili, is calibrated to the listed 2 micrometer length of E. coli; the trailing flagellum, roughly as long again, is not part of that measurement."
     },
     {
       "id": "sketchfab-red-blood-cell",
@@ -69,12 +66,15 @@
       "note": "Biconcave red blood cell from an educational morphology model. The listed size refers to cell diameter."
     },
     {
-      "id": "sketchfab-mitochondrion",
+      "id": "sketchfab-mitochondrion-v2",
       "name": "Mitochondrion",
       "uid": "7445a425050e49daa881070ca6917a91",
       "author": "brianj.seely",
       "license": "by",
-      "note": "Mitochondrial form varies across cells; this model is an illustrative example rather than a measured organelle."
+      "presentation": {
+        "yaw": -150
+      },
+      "note": "A cut-away mitochondrion showing the translucent outer membrane, the folded inner membrane (cristae), the matrix, and ribosomes. Mitochondrial shape varies widely between cells, so this is an illustrative example rather than a measured organelle; its long axis is calibrated to the listed length."
     },
     {
       "id": "sketchfab-neuron",
@@ -103,7 +103,9 @@
       "replaces": "sketchfab-housefly",
       "note": "Adult Musca domestica with anatomically recognizable body, legs and wings. The source display pedestal is excluded. Its body-axis extent is an approximate proxy for the listed body length, not a measured specimen.",
       "presentation": {
-        "remove_nodes": ["Cylinder001_Material #175_0"],
+        "remove_nodes": [
+          "Cylinder001_Material #175_0"
+        ],
         "measure_axis": "z",
         "yaw": 90
       }

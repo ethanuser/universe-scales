@@ -681,18 +681,18 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid. Its coat is assembled from sixty protein subunits; the surface folds are part of what determines which cells it can enter. This marker is the capsid diameter of one studied virus, not an average size for all viruses or a model of the viral genome inside.",
+      "description": "SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across. Its fatty envelope is studded with a few dozen spike proteins that reach another 20 nm or so outward and latch onto ACE2 receptors on human cells. Inside, a single strand of RNA about 30,000 letters long is one of the largest genomes of any RNA virus. This marker is the mean envelope diameter measured by cryo-electron tomography, not counting the spikes; viruses as a group range from about 20 nm to more than a micrometer.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid. Its coat is assembled from sixty protein subunits; the surface folds are part of what determines which cells it can enter. This marker is the capsid diameter of one studied virus, not an average size for all viruses or a model of the viral genome inside.",
+      "description_medium": "SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across. Its fatty envelope is studded with a few dozen spike proteins that reach another 20 nm or so outward and latch onto ACE2 receptors on human cells. Inside, a single strand of RNA about 30,000 letters long is one of the largest genomes of any RNA virus. This marker is the mean envelope diameter measured by cryo-electron tomography, not counting the spikes; viruses as a group range from about 20 nm to more than a micrometer.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Virus",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "2.8e-08",
-          "source_url": "https://pubmed.ncbi.nlm.nih.gov/11827486/"
+          "original_value_text": "9.1e-08",
+          "source_url": "https://www.nature.com/articles/s41586-020-2665-2"
         }
       },
       "hook": null,
@@ -701,19 +701,19 @@
       "qualifiers": {},
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://pubmed.ncbi.nlm.nih.gov/11827486/",
+      "source": "https://www.nature.com/articles/s41586-020-2665-2",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-pubmed-ncbi-nlm-nih-gov-11827486",
+          "id": "src:https-www-nature-com-articles-s41586-020-2665-2",
           "license_text": null,
           "note": null,
-          "publisher": "pubmed.ncbi.nlm.nih.gov",
+          "publisher": "www.nature.com",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "11827486",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/11827486/"
+          "title": "s41586-020-2665-2",
+          "url": "https://www.nature.com/articles/s41586-020-2665-2"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -727,8 +727,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Porcine parvovirus is a small virus with a roughly 28 nm icosahedral capsid.",
-      "value": 2.8e-08,
+      "summary_short": "SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across.",
+      "value": 9.1e-08,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1503,7 +1503,7 @@
         "legacy_item_name": "Football Field",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "100",
+          "original_value_text": "91.44",
           "source_url": "https://en.wikipedia.org/wiki/American_football_field"
         }
       },
@@ -1540,7 +1540,7 @@
         }
       ],
       "summary_short": "The length of American football fields, standardized playing surfaces that have become cultural landmarks.",
-      "value": 100.0,
+      "value": 91.44,
       "value_type": "derived",
       "wikidata_qid": null
     },

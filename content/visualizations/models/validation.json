@@ -5,7 +5,7 @@
   "models": [
     {
       "id": "nasa-earth",
-      "sha256": "981e9993f2413e721d2bf21b3e5c6fa8734dd931980e995e35b9367152f6b563",
+      "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
       "issues": {
         "numErrors": 0,
         "numWarnings": 1,
@@ -41,7 +41,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 392352
+            "byteLength": 418428
           },
           {
             "pointer": "/images/0",
@@ -84,7 +84,7 @@
     },
     {
       "id": "nasa-moon",
-      "sha256": "d342a56c4fe2757e19c1c92fb3ee0f2d3d9ae24420e0ebb98160f0d52644203e",
+      "sha256": "3c1236e03b1a42e067a27cc0ae7c31889f99f121f2b7c690d80dc199f72b98e9",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -108,7 +108,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 261020
+            "byteLength": 294644
           },
           {
             "pointer": "/images/0",
@@ -138,7 +138,7 @@
     },
     {
       "id": "nasa-jupiter",
-      "sha256": "69eb9f18550557c4496a598a41d1f2babb98dfca0ee7b5b44f0045161adb9aff",
+      "sha256": "821c75e6a2268ab139d6fd87c1d0f37b86ca4985957e23e900936535b4bf9e50",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -162,7 +162,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 186128
+            "byteLength": 210416
           },
           {
             "pointer": "/images/0",
@@ -192,7 +192,7 @@
     },
     {
       "id": "nasa-sun",
-      "sha256": "7b5ba6cf18d46532a4d2741a345432dbd784027c357f741780911839e68c85c3",
+      "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -216,7 +216,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 304992
+            "byteLength": 354400
           },
           {
             "pointer": "/images/0",
@@ -739,8 +739,8 @@
       }
     },
     {
-      "id": "sketchfab-mitochondrion",
-      "sha256": "6877a20a125e83a00702734e9391f920faafa4499a377ef8905bde8076735d4b",
+      "id": "sketchfab-mitochondrion-v2",
+      "sha256": "f80f28dda5223192304c0f703e535d94e8f45ef758b038090be0b16fddb888d0",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -751,13 +751,13 @@
       },
       "info": {
         "version": "2.0",
-        "generator": "Sketchfab-14.69.0",
+        "generator": "glTF-Transform v4.5.0",
         "resources": [
           {
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 485360
+            "byteLength": 214720
           },
           {
             "pointer": "/images/0",
@@ -782,28 +782,17 @@
               "format": "rgb",
               "bits": 8
             }
-          },
-          {
-            "pointer": "/images/2",
-            "mimeType": "image/jpeg",
-            "storage": "buffer-view",
-            "image": {
-              "width": 512,
-              "height": 512,
-              "format": "rgb",
-              "bits": 8
-            }
           }
         ],
         "animationCount": 0,
-        "materialCount": 3,
+        "materialCount": 2,
         "hasMorphTargets": false,
         "hasSkins": false,
         "hasTextures": true,
         "hasDefaultScene": true,
-        "drawCallCount": 3,
-        "totalVertexCount": 8770,
-        "totalTriangleCount": 13772,
+        "drawCallCount": 2,
+        "totalVertexCount": 4423,
+        "totalTriangleCount": 6851,
         "maxUVs": 1,
         "maxInfluences": 0,
         "maxAttributes": 3
@@ -14066,8 +14055,134 @@
       }
     },
     {
+      "id": "sketchfab-bacterium-rod-v2",
+      "sha256": "25e1753a86fbefd1340451df3bb9f79722614e71f7aabf8b405599d17ea7d4e0",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 138312
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 3868,
+        "totalTriangleCount": 7580,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "coronavirus-sars-cov-2",
+      "sha256": "00a3ea0417a8425d284383085cebd8e36af5135e46811551f2b8f46d48d2e5c2",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 681452
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 0,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 23645,
+        "totalTriangleCount": 50522,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "nasa-sun-as-betelgeuse",
+      "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 354400
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 1649,
+        "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
       "id": "nasa-earth-moon-distance",
-      "sha256": "d3ddc2748e4c0fdf8f6610965483bda5e5839350cf8da4ae082783aaceb556f9",
+      "sha256": "f35374def27c0b78205d9faa835790e2add2b06818e5df381a3e639088cb8b54",
       "issues": {
         "numErrors": 0,
         "numWarnings": 1,
@@ -14109,7 +14224,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 653372
+            "byteLength": 713072
           },
           {
             "pointer": "/images/0",
@@ -14163,7 +14278,7 @@
     },
     {
       "id": "nasa-sun-earth-au",
-      "sha256": "6eb5e11b3b8e2d782a2aa1122543324dabadf6bc8fff69fc1b03e2783214d007",
+      "sha256": "999a662eb12d8d4ede0ad0ba852ff6a0ec029fb9fc630f044fd0422c4334f1ec",
       "issues": {
         "numErrors": 0,
         "numWarnings": 1,
@@ -14205,7 +14320,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 697344
+            "byteLength": 772828
           },
           {
             "pointer": "/images/0",
@@ -14253,132 +14368,6 @@
         "totalVertexCount": 3427,
         "totalTriangleCount": 6144,
         "maxUVs": 1,
-        "maxInfluences": 0,
-        "maxAttributes": 3
-      }
-    },
-    {
-      "id": "sketchfab-bacterium-rod",
-      "sha256": "9330515f23c85c94d4393c5394f18e99ae4322a19fd66ad7fc7e77d1dfcb83a0",
-      "issues": {
-        "numErrors": 0,
-        "numWarnings": 0,
-        "numInfos": 1,
-        "numHints": 0,
-        "messages": [
-          {
-            "code": "UNUSED_OBJECT",
-            "message": "This object may be unused.",
-            "severity": 2,
-            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
-          }
-        ],
-        "truncated": false
-      },
-      "info": {
-        "version": "2.0",
-        "generator": "Sketchfab-15.24.0",
-        "resources": [
-          {
-            "pointer": "/buffers/0",
-            "mimeType": "application/gltf-buffer",
-            "storage": "glb",
-            "byteLength": 370988
-          },
-          {
-            "pointer": "/images/0",
-            "mimeType": "image/jpeg",
-            "storage": "buffer-view",
-            "image": {
-              "width": 512,
-              "height": 512,
-              "format": "rgb",
-              "bits": 8
-            }
-          },
-          {
-            "pointer": "/images/1",
-            "mimeType": "image/jpeg",
-            "storage": "buffer-view",
-            "image": {
-              "width": 512,
-              "height": 512,
-              "format": "rgb",
-              "bits": 8
-            }
-          }
-        ],
-        "animationCount": 0,
-        "materialCount": 2,
-        "hasMorphTargets": false,
-        "hasSkins": false,
-        "hasTextures": true,
-        "hasDefaultScene": true,
-        "drawCallCount": 3,
-        "totalVertexCount": 5121,
-        "totalTriangleCount": 7890,
-        "maxUVs": 2,
-        "maxInfluences": 0,
-        "maxAttributes": 5
-      }
-    },
-    {
-      "id": "nih-porcine-parvovirus-capsid",
-      "sha256": "69cf2b1a3704326b0cf5b2ae8a969a4da34d8ef79b9f0d7aa9c15b4339a74515",
-      "issues": {
-        "numErrors": 0,
-        "numWarnings": 0,
-        "numInfos": 0,
-        "numHints": 4,
-        "messages": [
-          {
-            "code": "BUFFER_VIEW_TARGET_MISSING",
-            "message": "bufferView.target should be set for vertex or index data.",
-            "severity": 3,
-            "pointer": "/meshes/0/primitives/0/attributes/POSITION"
-          },
-          {
-            "code": "BUFFER_VIEW_TARGET_MISSING",
-            "message": "bufferView.target should be set for vertex or index data.",
-            "severity": 3,
-            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
-          },
-          {
-            "code": "BUFFER_VIEW_TARGET_MISSING",
-            "message": "bufferView.target should be set for vertex or index data.",
-            "severity": 3,
-            "pointer": "/meshes/0/primitives/0/attributes/COLOR_0"
-          },
-          {
-            "code": "BUFFER_VIEW_TARGET_MISSING",
-            "message": "bufferView.target should be set for vertex or index data.",
-            "severity": 3,
-            "pointer": "/meshes/0/primitives/0/indices"
-          }
-        ],
-        "truncated": false
-      },
-      "info": {
-        "version": "2.0",
-        "generator": "UCSF ChimeraX 1.6.dev202301280224",
-        "resources": [
-          {
-            "pointer": "/buffers/0",
-            "mimeType": "application/gltf-buffer",
-            "storage": "glb",
-            "byteLength": 791968
-          }
-        ],
-        "animationCount": 0,
-        "materialCount": 0,
-        "hasMorphTargets": false,
-        "hasSkins": false,
-        "hasTextures": false,
-        "hasDefaultScene": false,
-        "drawCallCount": 1,
-        "totalVertexCount": 15232,
-        "totalTriangleCount": 30456,
-        "maxUVs": 0,
         "maxInfluences": 0,
         "maxAttributes": 3
       }

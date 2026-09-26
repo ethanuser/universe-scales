@@ -114,7 +114,12 @@
             this.items = this.readItems();
             this.itemsFingerprint = this.fingerprint(this.items);
             const initialExponent = ['angle', 'visual-angle'].includes(this.dimension) ? -1 : 0;
-            this.index = this.items.length
+            // ?item=Exact%20Name deep-links to an item (first load only).
+            const linked = this.linkedItem !== undefined ? null
+                : new URLSearchParams(location.search).get('item');
+            this.linkedItem ??= linked;
+            const linkedIndex = linked ? this.items.findIndex(item => item.name === linked) : -1;
+            this.index = linkedIndex >= 0 ? linkedIndex : this.items.length
                 ? this.items.indexOf(nearest(this.items, initialExponent))
                 : 0;
             this.switcher.replaceChildren();
