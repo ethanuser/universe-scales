@@ -13372,7 +13372,7 @@
     },
     {
       "id": "sketchfab-dna-helix",
-      "sha256": "b76d6d9ed45dd190662bab50ee60a8c8b32404cb59abe608248a77b6f6ed7893",
+      "sha256": "9c4f870c9b9fe92a4873be6bb622c05e4044278e4bd97c5498fc65efc84edd8d",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -13383,13 +13383,13 @@
       },
       "info": {
         "version": "2.0",
-        "generator": "Sketchfab-12.68.0",
+        "generator": "glTF-Transform v4.5.0",
         "resources": [
           {
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 2223648
+            "byteLength": 2784
           }
         ],
         "animationCount": 0,
@@ -13398,9 +13398,9 @@
         "hasSkins": false,
         "hasTextures": false,
         "hasDefaultScene": true,
-        "drawCallCount": 1590,
-        "totalVertexCount": 54492,
-        "totalTriangleCount": 76320,
+        "drawCallCount": 7,
+        "totalVertexCount": 214,
+        "totalTriangleCount": 336,
         "maxUVs": 0,
         "maxInfluences": 0,
         "maxAttributes": 2
@@ -14175,6 +14175,106 @@
         "drawCallCount": 1,
         "totalVertexCount": 1649,
         "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "sketchfab-football-field",
+      "sha256": "183a9291fab91cb96bb7b5d1a44ec519f49733d2ae25fcd0fbb1a74786fbd927",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1413992
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 39508,
+        "totalTriangleCount": 50407,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "sketchfab-mount-everest",
+      "sha256": "b2040ba28a2bb7ee2a4a7cdab84fa4c981863ef05928be04814e696b05e05612",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales terrain block",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 396448
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 3,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 5665,
+        "totalTriangleCount": 7643,
         "maxUVs": 1,
         "maxInfluences": 0,
         "maxAttributes": 3

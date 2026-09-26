@@ -1,15 +1,9 @@
-// The orbital distance bracket is built from the registry's body nodes with the
-// real vendored three.js, so this checks geometry rather than a stub.
+// Model decorations built with the real vendored three.js.
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import * as THREE from '../js/vendor/three/three.module.min.js';
-
-const source = readFileSync(new URL('../js/experiences/models.js', import.meta.url), 'utf8');
-const start = source.indexOf('const BRACKET_LINE_PX');
-const end = source.indexOf('const proceduralLength');
-const { addDistanceBracket, BRACKET_DROP } = new Function('THREE',
-    `${source.slice(start, end)}; return { addDistanceBracket, BRACKET_DROP };`)(THREE);
+import { BRACKET_DROP, HYDROGEN_95_RADIUS, addDistanceBracket, planetPositions, proceduralScene }
+    from '../js/experiences/procedural-models.js';
 
 function diagram(left, right) {
     const scene = new THREE.Group();
@@ -22,37 +16,55 @@ function diagram(left, right) {
     }
     return scene;
 }
+const close = (a, b) => Math.abs(a - b) < 1e-12;
 
-test('bracket lines are tangent to the facing edges and joined below both bodies', () => {
+test('bracket marks center-to-center distance below both bodies', () => {
     const earth = 6_371_000 / 384_400_000, moon = 1_737_500 / 384_400_000;
     const scene = diagram(['Earth', -0.5, earth], ['Moon', 0.5, moon]);
     addDistanceBracket(scene, { bodies: ['Earth', 'Moon'] });
-    const bars = scene.getObjectByName('distance-bracket').children;
-    const vertical = bars.filter(bar => bar.userData.bracketAxis === 'y')
+    const lines = scene.getObjectByName('distance-bracket').children;
+    const vertical = lines.filter(line => line.userData.screenLine.axis === 'y')
         .sort((a, b) => a.position.x - b.position.x);
-    const [horizontal] = bars.filter(bar => bar.userData.bracketAxis === 'x');
-    assert.equal(vertical.length, 2);
-    assert.ok(Math.abs(vertical[0].position.x - (-0.5 + earth)) < 1e-12);
-    assert.ok(Math.abs(vertical[1].position.x - (0.5 - moon)) < 1e-12);
+    const [horizontal] = lines.filter(line => line.userData.screenLine.axis === 'x');
     const bottom = -(earth + BRACKET_DROP);
-    for (const bar of vertical) {
-        // Each line runs from the tangent point (body equator, y = 0) down to the bottom.
-        assert.ok(Math.abs(bar.position.y - bottom / 2) < 1e-12);
-        assert.ok(Math.abs(bar.userData.bracketLength + bottom) < 1e-12);
+    for (const [line, x, radius] of [[vertical[0], -0.5, earth], [vertical[1], 0.5, moon]]) {
+        // Each line starts at the bottom of its body, directly below the center.
+        assert.ok(close(line.position.x, x));
+        assert.ok(close(line.position.y + line.userData.screenLine.length / 2, -radius));
+        assert.ok(close(line.position.y - line.userData.screenLine.length / 2, bottom));
     }
-    assert.ok(Math.abs(horizontal.position.y - bottom) < 1e-12);
-    assert.ok(Math.abs(horizontal.userData.bracketLength - (1 - earth - moon)) < 1e-12);
-    assert.equal(scene.getObjectByName('Earth').userData.bodyLabel, 'Earth');
-    assert.equal(scene.getObjectByName('Moon').userData.bodyLabel, 'Moon');
+    assert.ok(close(horizontal.position.y, bottom));
+    assert.ok(close(horizontal.userData.screenLine.length, 1));
+    for (const name of ['Earth', 'Moon'])
+        assert.deepEqual(scene.getObjectByName(name).userData, { label: name, outline: true, sphere: true });
 });
 
-test('bracket works when the larger body is listed second and skips missing nodes', () => {
-    const scene = diagram(['Earth', 0.5, 0.001], ['Sun', -0.5, 0.05]);
-    addDistanceBracket(scene, { bodies: ['Earth', 'Sun'] });
-    const xs = scene.getObjectByName('distance-bracket').children
-        .filter(bar => bar.userData.bracketAxis === 'y').map(bar => bar.position.x).sort((a, b) => a - b);
-    assert.deepEqual(xs.map(x => Number(x.toFixed(6))), [-0.45, 0.499]);
-    const missing = diagram(['Earth', -0.5, 0.01], ['Moon', 0.5, 0.01]);
-    addDistanceBracket(missing, { bodies: ['Earth', 'Mars'] });
-    assert.equal(missing.getObjectByName('distance-bracket'), undefined);
+test('bracket skips diagrams whose named bodies are missing', () => {
+    const scene = diagram(['Earth', -0.5, 0.01], ['Moon', 0.5, 0.01]);
+    addDistanceBracket(scene, { bodies: ['Earth', 'Mars'] });
+    assert.equal(scene.getObjectByName('distance-bracket'), undefined);
+});
+
+test('hydrogen dots stop at the 95% boundary sphere', () => {
+    const scene = proceduralScene('hydrogen-1s');
+    const cloud = scene.children.find(child => child.isPoints);
+    const position = cloud.geometry.getAttribute('position');
+    let outside = 0;
+    for (let index = 0; index < position.count; index++)
+        if (new THREE.Vector3().fromBufferAttribute(position, index).length() > HYDROGEN_95_RADIUS + 1e-9) outside++;
+    assert.equal(outside, 0);
+    // 1 - e^(-2r)(1 + 2r + 2r^2) at the boundary radius.
+    const r = HYDROGEN_95_RADIUS;
+    assert.ok(Math.abs(1 - Math.exp(-2 * r) * (1 + 2 * r + 2 * r * r) - 0.95) < 1e-4);
+});
+
+test('planet positions match known heliocentric distances', () => {
+    const at = date => Object.fromEntries(planetPositions(new Date(date))
+        .map(({ name, position }) => [name, Math.hypot(...position)]));
+    // Earth is near perihelion in early January and aphelion in early July.
+    assert.ok(Math.abs(at('2026-01-03T12:00:00Z').Earth - 0.9833) < 0.001);
+    assert.ok(Math.abs(at('2026-07-06T12:00:00Z').Earth - 1.0167) < 0.001);
+    const today = at('2026-09-26T00:00:00Z');
+    assert.ok(today.Mercury > 0.30 && today.Mercury < 0.47);
+    assert.ok(today.Neptune > 29.7 && today.Neptune < 30.4);
 });

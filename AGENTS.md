@@ -29,15 +29,19 @@ Bump the `?v=` query of any JS/CSS file you change in `index.html`; browsers cac
 | App shell, plot, units, images, URL | `js/script.js`, `js/plot.js`, `js/formatting.js`, `js/constants.js`, `js/editor.js` |
 | Explorer framework (mode registry, detail panel, picker, deep link) | `js/experiences/controller.js`, `controls.js`, `math.js` |
 | Length/Area/Volume explorer (camera, layout, SVG labels) | `js/experiences/spatial.js`, `journey.js` |
-| 3D models (loading, calibration, rotation, picking, bracket, labels) | `js/experiences/models.js` |
+| 3D models (loading, calibration, rotation, picking, overlays) | `js/experiences/models.js` |
+| Procedural models (hydrogen, molecules, hair, light wave, solar system) and the distance bracket | `js/experiences/procedural-models.js` |
 | Other explorers | `motion.js`, `perception.js`, `audio.js` (+ `*-math.js`) |
 | Model registry (runtime + provenance) | `content/visualizations/models.json` |
 | Model files and licenses | `content/visualizations/models/` (see its README) |
 | Dataset source of truth | `dataset/raw/` → built into `exports/` and `data/` (see `DATASET_PIPELINE.md`) |
 
 Scripts: `scripts/sketchfab_models.py` (search/stage/import Sketchfab), `scripts/preview_glb.cjs`
-(headless textured preview), `scripts/audit_glb_geometry.mjs` (bounds), `scripts/build_earth_moon_model.py`
-(orbital diagrams), `scripts/fetch_model_assets.py --verify` (offline registry check).
+(headless textured GLB preview), `scripts/screenshot_explorer.cjs` (headless screenshots of explorer
+items after the camera settles), `scripts/register_model.py` (add/replace a registry entry),
+`scripts/audit_glb_geometry.mjs` (bounds), `scripts/build_earth_moon_model.py` (orbital diagrams),
+`scripts/build_terrain_block.py` (terrain → block diagram on sea level), `scripts/texture_padding.py`
+(fix atlas seams), `scripts/fetch_model_assets.py --verify` (offline registry check).
 
 ## How a Length model is drawn
 
@@ -57,9 +61,14 @@ equals the item's value:
   `emissive` (+ `emissive_intensity`), and `environment` (reflection strength from a studio
   room map; metals look black without it).
 - `distance_bracket: {"bodies": [A, B]}` (orbital diagrams) adds a white U-shaped bracket
-  under two named sphere nodes: vertical lines tangent to the facing edges and a joining
-  line below, part of the model so it rotates with it, drawn at a constant 1.4 px width.
-  Body names are SVG labels projected above each body, so they stay upright.
+  under two named sphere nodes: vertical lines drop from each body's center (distances are
+  center to center) to a joining line below. It is part of the model, so it rotates with it.
+
+Overlay conventions (set on any node's `userData`, including glTF `extras`):
+`screenLine: {axis, length}` draws a box at a constant 1.4 px width; `label` (+ `labelClass`)
+draws upright SVG text at the node; `outline` + `sphere` circle a unit-sphere node with a thin
+line (so sub-pixel planets stay findable); `pointSize: {max, perPixel}` scales a point cloud
+with the drawn model. See the header of `procedural-models.js`.
 
 The model's projected convex hull (including the bracket) is its hover/drag/click area.
 
@@ -72,7 +81,8 @@ The model's projected convex hull (including the bracket) is its hover/drag/clic
 3. Clean and simplify with `npx @gltf-transform/cli@4.5.0` (weld, simplify, prune, resize, quantize).
    Do not use Draco/Meshopt/KTX2/WebP: the vendored GLTFLoader has no decoders.
    Budget: ideally ≤ 1.5 MB, ≤ 60k triangles, textures ≤ 1024 px.
-4. Look at it: `node scripts/preview_glb.cjs model.glb out.png` (then view the PNG).
+4. Look at it: `node scripts/preview_glb.cjs model.glb out.png` (then view the PNG), and after
+   registering, `node scripts/screenshot_explorer.cjs /tmp/shots "Item name"` with the site served.
 5. Copy the GLB to `content/visualizations/models/`, add a registry entry (copy an existing
    Sketchfab entry's shape; `bytes`/`sha256`/stats come from `inspect_glb` in
    `scripts/fetch_model_assets.py`), write an honest `note`, and credit the author.
@@ -99,7 +109,13 @@ python3 scripts/fetch_model_assets.py --verify
 - `models.json` mixes runtime fields with provenance (hashes, processing). Keep both; the
   site only reads a few fields.
 - The browser pane in Claude's desktop app pauses `requestAnimationFrame` while hidden, so camera
-  animations do not settle there; screenshots can show mid-flight framing.
+  animations do not settle there; use `scripts/screenshot_explorer.cjs` instead.
+- `models.js` imports `./procedural-models.js?v=N`: bump N (and `models.js?v=` in `index.html`)
+  when the procedural module changes.
+- Import policy is CC-BY/CC0 only (`ALLOWED_LICENSES` in `sketchfab_models.py`). The owner's chosen
+  sand grain (Sketchfab 8e7caaef…, "Sand Grain scaled to 75mm") is CC BY-NC-SA, so it was not imported;
+  the CC-BY Sand Atlas scan remains. Lincoln Financial Field and the suggested Everest model are not
+  downloadable, so CC-BY alternatives were used.
 
 ## Session log
 
@@ -107,4 +123,8 @@ python3 scripts/fetch_model_assets.py --verify
   deep links, red blood cell rests unrotated, metallic Eiffel Tower (`environment`), procedural
   light wave for Visible Light Wavelength, recolored-Sun Betelgeuse, Virus → SARS-CoV-2 (91 nm),
   Football Field corrected to 91.44 m (100 yd), `scripts/preview_glb.cjs`, junk files removed.
-  See the git log for the rest of this session's model replacements.
+  Later the same day: bracket lines switched to center-to-center with thin body outlines; hydrogen
+  cloud cut at its 95% sphere (3.15 Bohr radii) with the Bohr radius marked; light wave with E (red)
+  and B (blue) arrows and labels; SEM-style procedural hair; date-accurate procedural solar system
+  (JPL elements); weathered Eiffel Tower; football field (Milton Frank Stadium scan); Everest as a
+  block diagram on sea level; DNA deduplicated (3.4 → 0.37 MB). See the git log for details.

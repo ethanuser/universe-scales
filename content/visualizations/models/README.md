@@ -178,6 +178,17 @@ body is calibrated to the 2 micrometer Bacteria marker; the flagellum trails bey
 The mitochondrion source contained two organelles plus text labels; one cut-away
 organelle remains, so its long axis is no longer drawn at half size.
 
+## Landmarks And Terrain
+
+The football field is a drone photogrammetry scan of Milton Frank Stadium
+(Huntsville, Alabama), cropped to the turf by sampling the base-color texture at
+each vertex. Its goal-line span (91.44 m) is 0.75 of the kept mesh length. The
+Mount Everest heightmap's 3.35 km of relief matches the drop from the summit to
+the surrounding glaciers, so it is treated as true-scale meters;
+`scripts/build_terrain_block.py` adds strata-shaded rock walls, a translucent
+plinth down to sea level, and summit/sea-level label nodes (`extras.label`), so
+the whole block is 8,848 m tall.
+
 ## Orbital Distance Diagrams
 
 `scripts/build_earth_moon_model.py` rebuilds the two distance diagrams from the
@@ -189,9 +200,10 @@ Sun-Earth distance is not always one au. These are spatial diagrams, not
 time-specific orbital snapshots. The source textures and model credits remain
 in the registry; the generator checks their hashes before merging them.
 `presentation.distance_bracket` makes the renderer add a white U-shaped bracket
-under the two bodies (lines tangent to their facing edges, so it spans the
-surface-to-surface gap) and upright SVG body labels; see `addDistanceBracket`
-in `js/experiences/models.js`.
+under the two bodies (lines drop from each body's center, matching the
+center-to-center distance), upright SVG body labels, and thin outline circles
+so bodies smaller than a pixel stay findable; see `addDistanceBracket` in
+`js/experiences/procedural-models.js`.
 
 ```sh
 python3 scripts/build_earth_moon_model.py

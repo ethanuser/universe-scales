@@ -1156,10 +1156,10 @@
       "presentation": {
         "measure_axis": "y",
         "layout_width_factor": 0.48,
-        "tint": "#8a7a66",
-        "roughness": 0.38,
-        "metalness": 0.85,
-        "environment": 0.9
+        "tint": "#7a5a45",
+        "roughness": 0.66,
+        "metalness": 0.45,
+        "environment": 0.35
       },
       "source": "https://sketchfab.com/3d-models/free-la-tour-eiffel-8553f94d06e24cb4b0fde1080f281674",
       "author": "Lambo_SC04 on Sketchfab",
@@ -1174,7 +1174,7 @@
         ]
       },
       "geometry": "mesh",
-      "note": "User-selected lattice illustration of the Eiffel Tower. The model is scaled by vertical height to the listed landmark value.",
+      "note": "User-selected lattice illustration of the Eiffel Tower, shaded as weathered, painted wrought iron (the real tower is repainted in a bronze-brown every few years). The model is scaled by vertical height to the listed landmark value.",
       "src": "content/visualizations/models/sketchfab-eiffel-tower-v2.glb",
       "format": "glb",
       "gltf_version": "2.0",
@@ -1378,14 +1378,14 @@
       "src": "content/visualizations/models/sketchfab-dna-helix.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 3386624,
-      "sha256": "b76d6d9ed45dd190662bab50ee60a8c8b32404cb59abe608248a77b6f6ed7893",
+      "bytes": 368768,
+      "sha256": "9c4f870c9b9fe92a4873be6bb622c05e4044278e4bd97c5498fc65efc84edd8d",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
-      "mesh_count": 1590,
-      "triangle_count": 76320,
+      "mesh_count": 7,
+      "triangle_count": 336,
       "animations": 0,
       "skins": 0,
       "sketchfab_uid": "3e78c4697cd44d949db99d72733369c2",
@@ -1395,7 +1395,8 @@
         "operations": [
           "Embed glTF buffers and images into GLB",
           "Resize textures to at most 512px",
-          "Remove animations for static Length presentation"
+          "Remove animations for static Length presentation",
+          "glTF Transform 4.5.0 dedup: share the identical per-atom meshes and accessors (3.39 MB to 0.37 MB; geometry and bounds unchanged)"
         ],
         "source_model_name": "Human DNA",
         "source_author": "alexanderesmith"
@@ -2211,6 +2212,117 @@
       "note": "Illustrative only: NASA's Sun sphere recolored orange-red for a cool red supergiant. Its diameter is set to the listed value; Betelgeuse's real surface is dominated by a few enormous convection cells, and its size changes as it pulsates."
     },
     {
+      "id": "sketchfab-football-field",
+      "source": "https://sketchfab.com/3d-models/milton-frank-stadium-8aa98f842d5341d796f80804c86ae11a",
+      "author": "johnnokomis on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "sketchfab_uid": "8aa98f842d5341d796f80804c86ae11a",
+      "source_sha256": "6c3cb515ed4e734e0d327eeebd2d65dafd13d87ddc93d9c64d6e5ae26d955b01",
+      "source_bytes": 69473500,
+      "matches": {
+        "length": [
+          "Football Field"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "measure_axis": "x",
+        "measure_fraction": 0.75,
+        "pitch": 30
+      },
+      "note": "A drone photogrammetry scan of the football field at Milton Frank Stadium in Huntsville, Alabama, cropped to the playing surface; stands, track, lights, and the noisily scanned goalposts were removed. The goal-line-to-goal-line span, 100 yards (91.44 m), is calibrated to the listed length; it is about three quarters of the mesh, which also includes both end zones and a strip of turf beyond them.",
+      "processing": {
+        "operations": [
+          "Rejected the user-chosen Lincoln Financial Field model (isDownloadable=false, no usable license) and the suggested search results that were mostly soccer pitches or game-asset low-poly fields; selected Milton Frank Stadium (CC-BY, isDownloadable, real photogrammetry with legible field markings) instead",
+          "Staged via scripts/sketchfab_models.py with texture-size 1024 (source has 21 mesh chunks sharing one 1024x1024 baseColor JPEG, KHR_materials_unlit)",
+          "Computed the node hierarchy's cumulative transform analytically and applied it to bake all 21 chunks into one world-space vertex soup (custom Python script using scripts/fetch_model_assets.py's GLB helpers + numpy)",
+          "Classified vertices by sampling the baseColor texture at each vertex's UV (green turf vs red track) to find the field's XZ density plateau (heatmap + 1D histograms), then kept only triangles whose 3 vertices fall inside that XZ rectangle and a tight Y-band at field level (drops stands, track, lights, parking, and the noisy goalpost geometry)",
+          "Baked a 90 degree yaw so the field's long axis (originally world Z) became world X",
+          "Repacked a single-primitive GLB, then ran glTF-Transform weld -> simplify (ratio 0.28, error 0.01) -> quantize (KHR_mesh_quantization) to go from 1,900,050 to 50,407 triangles and from 66.9 MB to 1.42 MB while preserving the flat playing surface's texture and markings",
+          "Set material doubleSided=true so the plane is not invisible if the camera dips below field level"
+        ],
+        "source_model_name": "Milton Frank Stadium",
+        "source_author": "johnnokomis"
+      },
+      "src": "content/visualizations/models/sketchfab-football-field.glb",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1415536,
+      "sha256": "183a9291fab91cb96bb7b5d1a44ec519f49733d2ae25fcd0fbb1a74786fbd927",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 50407,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "sketchfab-mount-everest",
+      "source": "https://sketchfab.com/3d-models/mount-everest-and-mountains-tibet-nepal-e086183da4854416a606dc4f3bbea3ae",
+      "author": "arizonaguide (Nate Loper) on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "sketchfab_uid": "e086183da4854416a606dc4f3bbea3ae",
+      "source_sha256": "2b358c6c565302700cc8d2b0cfaa7732085ecf9929deead400d7be736d77bb3e",
+      "source_bytes": 45237686,
+      "matches": {
+        "length": [
+          "Mount Everest"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "measure_axis": "y",
+        "measure_fraction": 1.0,
+        "layout_width_factor": 0.95,
+        "pitch": 22
+      },
+      "note": "Everest's summit massif from a heightmap draped with rock and snow imagery, shown as a block diagram. Its 3.35 km of relief matches the drop from the 8,848 m summit to glaciers near 5,500 m, so the heightmap is treated as true-scale meters; the faint plinth beneath continues the crust down to sea level, so the whole block is the listed 8,848 m tall.",
+      "processing": {
+        "operations": [
+          "Rejected the user-suggested Mt Everest model (bd68a19f3f7c445d85318a3a6da4c480): isDownloadable=false and no usable license",
+          "Selected 'Mount Everest and Mountains - Tibet & Nepal' by arizonaguide (CC-BY, isDownloadable, USGS/NASA-tagged, a clean 65x65 heightmap grid draped with a real aerial/satellite-style rock-and-snow texture) over a competing high-poly candidate (phamsondetector's 'Mount Everest') whose Sketchfab thumbnail failed to render, a yellow flag for asset quality",
+          "Staged via scripts/sketchfab_models.py with texture-size 1024",
+          "Computed the single node's cumulative rotation matrix analytically and baked it into world-space positions/normals (custom Python script using scripts/fetch_model_assets.py's GLB helpers + numpy)",
+          "Found the two highest points of the tile sit at opposite U=0/U=1 texture edges (two separate 8000m-class peaks); cropped the triangle soup to a square region anchored on the Everest side (X in [xmin, xmin+zSpan*1.05]) to drop the second peak and its surrounding terrain",
+          "Rebuilt a minimal indexed GLB from the kept triangles, then ran glTF-Transform weld+prune for a clean, fully-deduplicated mesh (4,993 triangles, 2,601 vertices, 256 KB total, well under budget)",
+          "scripts/build_terrain_block.py --summit 8848: strata-shaded rock walls from the terrain edge to its lowest point, a translucent plinth down to sea level, and summit/sea-level label nodes"
+        ],
+        "source_model_name": "Mount Everest and Mountains \u2013 Tibet & Nepal",
+        "source_author": "arizonaguide"
+      },
+      "src": "content/visualizations/models/sketchfab-mount-everest.glb",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 399512,
+      "sha256": "b2040ba28a2bb7ee2a4a7cdab84fa4c981863ef05928be04814e696b05e05612",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 7643,
+      "animations": 0,
+      "skins": 0
+    },
+    {
       "id": "nasa-earth-moon-distance",
       "source": "https://science.nasa.gov/moon/by-the-numbers/",
       "author": "NASA; composite assembled by Universe Scales",
@@ -2226,7 +2338,7 @@
         ]
       },
       "geometry": "mesh",
-      "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, with their radii at the same scale. The white bracket's lines are tangent to the facing edges, so it spans the surface-to-surface gap (about 376,300 km), slightly less than the center distance. Lunar distance changes during its orbit; this idealized diagram is not a view from a particular date or phase.",
+      "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, with their radii at the same scale. The white bracket drops from each center, and thin circles mark each body. Lunar distance changes during its orbit; this idealized diagram is not a view from a particular date or phase.",
       "src": "content/visualizations/models/nasa-earth-moon-distance.glb",
       "presentation": {
         "reference_size": 1,
@@ -2291,7 +2403,7 @@
         ]
       },
       "geometry": "mesh",
-      "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit (149,597,870,700 m) center-to-center, using their approximate mean radii. At this scale Earth is far smaller than a pixel; its label and the bracket mark where it is. The bracket's lines are tangent to the facing edges, so it spans the surface-to-surface gap (about 0.995 au). The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
+      "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit (149,597,870,700 m) center-to-center, using their approximate mean radii. At this scale Earth is far smaller than a pixel; its label, circle and the bracket mark where it is. The bracket spans the center-to-center distance. The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
       "src": "content/visualizations/models/nasa-sun-earth-au.glb",
       "presentation": {
         "reference_size": 1,

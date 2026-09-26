@@ -207,12 +207,25 @@
     stroke-width: 2px;
     stroke-linejoin: round;
 }
-.experience--spatial .journey-distance-body-label {
-    fill: #fff;
-    stroke: none;
-    pointer-events: none;
+.experience--spatial .journey-model-label {
+    fill: currentColor;
     font-size: 12px;
     font-weight: 600;
+    paint-order: stroke;
+    stroke: var(--journey-label-halo, transparent);
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+.experience--spatial .journey-model-label.is-electric { fill: #d8362b; }
+.experience--spatial .journey-model-label.is-magnetic { fill: #2f6fd6; }
+.experience--spatial .journey-model-outline {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+    stroke-opacity: 0.8;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
 }
 .experience--spatial .experience-stage-frame:not(.is-dragging) .experience-object:hover image,
 .experience--spatial .experience-stage-frame:not(.is-dragging) .experience-object:hover .shape,

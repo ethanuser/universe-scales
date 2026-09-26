@@ -117,7 +117,9 @@ try {
 } catch (error) { window.report = { error: String(error && error.stack || error) }; }
 </script></body></html>`;
 
-(async () => {
+module.exports = { loadPlaywright, executablePath };
+
+if (require.main === module) (async () => {
     const options = parseArgs(process.argv.slice(2));
     const [width, height] = options.size.split('x').map(Number);
     const { chromium } = loadPlaywright();

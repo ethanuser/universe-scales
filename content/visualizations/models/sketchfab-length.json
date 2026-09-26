@@ -171,6 +171,33 @@
       "author": "noears6",
       "license": "by",
       "note": "Architectural illustration of Burj Khalifa. The listed dimension is total building height."
+    },
+    {
+      "id": "sketchfab-football-field",
+      "name": "Football Field",
+      "uid": "8aa98f842d5341d796f80804c86ae11a",
+      "author": "johnnokomis",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "measure_fraction": 0.75,
+        "pitch": 30
+      },
+      "note": "A drone photogrammetry scan of the football field at Milton Frank Stadium in Huntsville, Alabama, cropped to the playing surface; stands, track, lights, and the noisily scanned goalposts were removed. The goal-line-to-goal-line span, 100 yards (91.44 m), is calibrated to the listed length; it is about three quarters of the mesh, which also includes both end zones and a strip of turf beyond them."
+    },
+    {
+      "id": "sketchfab-mount-everest",
+      "name": "Mount Everest",
+      "uid": "e086183da4854416a606dc4f3bbea3ae",
+      "author": "arizonaguide (Nate Loper)",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "y",
+        "measure_fraction": 1.0,
+        "layout_width_factor": 0.95,
+        "pitch": 22
+      },
+      "note": "Everest's summit massif from a heightmap draped with rock and snow imagery, shown as a block diagram. Its 3.35 km of relief matches the drop from the 8,848 m summit to glaciers near 5,500 m, so the heightmap is treated as true-scale meters; the faint plinth beneath continues the crust down to sea level, so the whole block is the listed 8,848 m tall."
     }
   ]
 }

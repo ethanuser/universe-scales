@@ -3,6 +3,7 @@ import { GLTFLoader } from '../vendor/three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtils.js';
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=2';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -43,7 +44,7 @@ function sampledModelPoints(instance) {
     instance.updateMatrixWorld(true);
     const meshes = [];
     instance.traverse(child => {
-        if (child.isMesh || child.isPoints) {
+        if (child.isMesh || child.isPoints || child.isLine) {
             const position = child.geometry.getAttribute('position');
             if (position) meshes.push({ child, position });
         }
@@ -73,10 +74,11 @@ function sampledModelPoints(instance) {
 function addHoverOverlay(instance) {
     const originals = [];
     instance.traverse(child => {
-        if ((child.isMesh || child.isPoints) && !child.userData.bracketAxis) originals.push(child);
+        if ((child.isMesh || child.isPoints) && !child.userData.screenLine) originals.push(child);
     });
     return originals.map(child => {
         const overlay = child.clone(false);
+        overlay.userData = {}; // not a labeled or outlined node itself
         overlay.material = child.isPoints
             ? new THREE.PointsMaterial({ color: 0xffffff, size: child.material.size,
                 sizeAttenuation: child.material.sizeAttenuation, transparent: true,
@@ -127,164 +129,6 @@ function flattenStaticScene(scene) {
     }
     return flattened.children.length ? flattened : scene;
 }
-// Distance diagrams (e.g. Earth-Moon) get a U-shaped bracket below the two
-// bodies: each vertical line is tangent to a body's facing edge, and the
-// horizontal line joins their lower ends. The bracket belongs to the model, so
-// it rotates with it; bar thickness is reset every frame to a constant screen
-// width (see ModelStage.finish). Bodies are unit spheres scaled by their node.
-const BRACKET_LINE_PX = 1.4;
-const BRACKET_DROP = 0.1; // below the larger body, as a fraction of the center distance
-let bracketParts;
-function addDistanceBracket(scene, config) {
-    bracketParts ||= { material: new THREE.MeshBasicMaterial({ color: 0xffffff }),
-        geometry: new THREE.BoxGeometry(1, 1, 1) };
-    scene.updateMatrixWorld(true);
-    const bodies = config.bodies.map(name => {
-        const node = scene.getObjectByName(name);
-        if (!node) return null;
-        node.userData.bodyLabel = name;
-        return { x: node.getWorldPosition(new THREE.Vector3()).x,
-            radius: node.matrixWorld.getMaxScaleOnAxis() };
-    });
-    if (bodies.length !== 2 || bodies.some(body => !body)) return;
-    const [left, right] = bodies[0].x <= bodies[1].x ? bodies : [bodies[1], bodies[0]];
-    const x0 = left.x + left.radius, x1 = right.x - right.radius;
-    const bottom = -(Math.max(left.radius, right.radius) + BRACKET_DROP * (right.x - left.x));
-    const bracket = new THREE.Group();
-    bracket.name = 'distance-bracket';
-    const bar = (axis, length, x, y) => {
-        const mesh = new THREE.Mesh(bracketParts.geometry, bracketParts.material);
-        mesh.position.set(x, y, 0);
-        mesh.userData.bracketAxis = axis;
-        mesh.userData.bracketLength = length;
-        mesh.scale.set(axis === 'x' ? length : 1e-6, axis === 'y' ? length : 1e-6, 1e-6);
-        bracket.add(mesh);
-    };
-    bar('y', -bottom, x0, bottom / 2);
-    bar('y', -bottom, x1, bottom / 2);
-    bar('x', x1 - x0, (x0 + x1) / 2, bottom);
-    scene.add(bracket);
-}
-const proceduralLength = {
-    'Hydrogen Atom': { id: 'hydrogen-1s', procedural: 'hydrogen-1s', geometry: 'mesh',
-        presentation: { reference_size: 1, layout_width_factor: 2.6,
-            focus_scale_factor: 2.6, display_extent_factor: 2.6 },
-        basis_url: 'https://ocw.mit.edu/courses/5-111-principles-of-chemical-science-fall-2008/8a0da0346f1d611fbbd5c31a54865c2d_lecnotes06.pdf',
-        note: 'A sparse sample of hydrogen’s 1s electron probability cloud, clipped at 1.3 Bohr radii for legibility. The listed Bohr radius is the most probable electron distance, not a hard atomic edge; the cloud continues beyond these dots.' },
-    'Water Molecule': { id: 'nist-water-molecule', procedural: 'molecule', molecule: 'water',
-        geometry: 'mesh', presentation: { reference_size: 2.75 },
-        source: 'https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185',
-        link_label: 'Model geometry',
-        note: 'Gas-phase H2O with oxygen below two hydrogens. NIST gives O–H center distances of 0.958 Å and a 104.4776° H–O–H angle. The listed 2.75 Å is a representative molecular diameter, not an O–H bond length; ball radii and bond rods are illustrative.' },
-    'Glucose Molecule': { id: 'pubchem-alpha-d-glucose', procedural: 'molecule', molecule: 'glucose',
-        geometry: 'mesh', presentation: { reference_size: 10,
-            pre_rotation: { x: 60, y: -15, z: -8 } },
-        source: 'https://pubchem.ncbi.nlm.nih.gov/compound/79025',
-        link_label: '3D conformer',
-        note: 'Alpha-D-glucopyranose, shown as PubChem CID 79025’s 3D conformer. Its six-membered pyranose ring has a chair-like pucker; atom centers and bonds come from the conformer. The listed 1 nm is a rough molecular envelope, not a bond length; ball radii are illustrative.' },
-    'Human Hair': { id: 'hair-fiber', procedural: 'hair-fiber', geometry: 'mesh',
-        presentation: { measure_axis: 'x', layout_width_factor: 1.1 },
-        basis_url: 'https://wellcomecollection.org/works/wxgqyf66',
-        basis_label: 'Cuticle reference: Wellcome Collection',
-        note: 'An illustrative scalp-hair fiber with overlapping cuticle ridges. Only its horizontal diameter is calibrated to the listed 100 micrometers; the cropped shaft length is not.' },
-    'Visible Light Wavelength': { id: 'light-wave', procedural: 'light-wave', geometry: 'mesh',
-        presentation: { reference_size: 1, layout_width_factor: 2, focus_scale_factor: 2,
-            display_extent_factor: 2, yaw: -32, pitch: 14 },
-        basis_url: 'https://en.wikipedia.org/wiki/Electromagnetic_radiation',
-        basis_label: 'Wave basis: electromagnetic radiation',
-        note: 'A schematic plane light wave, two cycles long. The crest-to-crest distance is calibrated to the listed 500 nm of green light. Field strengths are not lengths, so the wave heights are arbitrary; the electric field (green) and magnetic field (pale blue) oscillate at right angles to each other and to the direction of travel.' }
-};
-
-function moleculeScene(data) {
-    const scene = new THREE.Group();
-    const colors = { C: 0x424950, O: 0xd8433e, H: 0xf7f9fc };
-    const radii = { C: 0.29, O: 0.27, H: 0.18 };
-    const sphere = new THREE.SphereGeometry(1, 20, 14);
-    const rod = new THREE.CylinderGeometry(1, 1, 1, 10);
-    const materials = Object.fromEntries(Object.entries(colors).map(([element, color]) =>
-        [element, new THREE.MeshStandardMaterial({ color, roughness: 0.65, metalness: 0 })]));
-    const rodMaterial = new THREE.MeshStandardMaterial({ color: 0x8a9198, roughness: 0.82 });
-    const positions = data.atoms.map(atom => new THREE.Vector3(...atom.position));
-    data.atoms.forEach((atom, index) => {
-        const ball = new THREE.Mesh(sphere, materials[atom.element]);
-        ball.position.copy(positions[index]);
-        ball.scale.setScalar(radii[atom.element]);
-        scene.add(ball);
-    });
-    for (const [a, b] of data.bonds) {
-        const direction = positions[b].clone().sub(positions[a]);
-        const bond = new THREE.Mesh(rod, rodMaterial);
-        bond.position.copy(positions[a]).add(positions[b]).multiplyScalar(0.5);
-        bond.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), direction.clone().normalize());
-        bond.scale.set(0.065, direction.length(), 0.065);
-        scene.add(bond);
-    }
-    return scene;
-}
-
-function proceduralScene(kind) {
-    const scene = new THREE.Group();
-    if (kind === 'hair-fiber') {
-        const material = new THREE.MeshStandardMaterial({ color: 0x744831, roughness: 0.88 });
-        scene.add(new THREE.Mesh(new THREE.CylinderGeometry(0.493, 0.493, 1, 64, 1), material));
-        const cuticle = new THREE.MeshStandardMaterial({ color: 0x86573c, roughness: 0.94 });
-        for (let index = 0; index < 20; index++) {
-            const ridge = new THREE.Mesh(new THREE.CylinderGeometry(0.499, 0.494, 0.06, 64, 1, true), cuticle);
-            ridge.position.y = -0.46 + index * 0.048;
-            scene.add(ridge);
-        }
-    } else if (kind === 'light-wave') {
-        // Two wavelengths along +X; one model unit is one wavelength.
-        const cycles = 2, amplitude = 0.3, samples = 160;
-        const curve = axis => new THREE.CatmullRomCurve3(Array.from({ length: samples + 1 }, (_, index) => {
-            const x = cycles * index / samples, wave = amplitude * Math.sin(2 * Math.PI * x);
-            return new THREE.Vector3(x - cycles / 2, axis === 'y' ? wave : 0, axis === 'z' ? wave : 0);
-        }));
-        const electric = new THREE.MeshStandardMaterial({ color: 0x39d353, emissive: 0x1f8f2e,
-            emissiveIntensity: 0.6, roughness: 0.5 });
-        const magnetic = new THREE.MeshStandardMaterial({ color: 0xa9c4ff, roughness: 0.6,
-            transparent: true, opacity: 0.75 });
-        scene.add(new THREE.Mesh(new THREE.TubeGeometry(curve('y'), 320, 0.014, 10), electric));
-        scene.add(new THREE.Mesh(new THREE.TubeGeometry(curve('z'), 320, 0.009, 8), magnetic));
-        const axis = new THREE.Mesh(new THREE.CylinderGeometry(0.004, 0.004, cycles, 8),
-            new THREE.MeshStandardMaterial({ color: 0x8a9198, roughness: 0.8 }));
-        axis.rotation.z = Math.PI / 2;
-        scene.add(axis);
-        // Field-vector stems make the oscillation read as a field, not a rope.
-        const stemGeometry = new THREE.CylinderGeometry(0.004, 0.004, 1, 6);
-        const stemMaterial = electric.clone();
-        stemMaterial.transparent = true;
-        stemMaterial.opacity = 0.45;
-        for (let index = 1; index < cycles * 16; index++) {
-            const x = index / 16, height = amplitude * Math.sin(2 * Math.PI * x);
-            if (Math.abs(height) < 0.02) continue;
-            const stem = new THREE.Mesh(stemGeometry, stemMaterial);
-            stem.position.set(x - cycles / 2, height / 2, 0);
-            stem.scale.y = Math.abs(height);
-            scene.add(stem);
-        }
-    } else if (kind === 'hydrogen-1s') {
-        let seed = 0x1234abcd;
-        const random = () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) + 0.5) / 4294967296;
-        const positions = [];
-        // The 1s shell distribution is Gamma(k=3, rate=2) in Bohr-radius units.
-        for (let index = 0; index < 6200; index++) {
-            const radius = -Math.log(random() * random() * random()) / 2;
-            if (radius > 1.3) continue;
-            const z = 2 * random() - 1, angle = 2 * Math.PI * random();
-            const circle = Math.sqrt(1 - z * z);
-            positions.push(radius * circle * Math.cos(angle), radius * circle * Math.sin(angle), radius * z);
-        }
-        const geometry = new THREE.BufferGeometry();
-        geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-        scene.add(new THREE.Points(geometry, new THREE.PointsMaterial({
-            color: 0x2675ae, size: 1.6, sizeAttenuation: false,
-            transparent: true, opacity: 0.26, depthWrite: false
-        })));
-    }
-    return scene;
-}
-
 async function load(entry) {
     // Entries may share a GLB but differ in presentation (e.g. a recolored Sun).
     const key = entry.id || entry.src;
@@ -519,11 +363,11 @@ class ModelStage {
                             }
                     });
                     instance.userData.modelItem = item;
-                    instance.userData.bracketBars = [];
-                    instance.userData.bodies = [];
+                    Object.assign(instance.userData, { screenLines: [], overlays: [], clouds: [] });
                     instance.traverse(child => {
-                        if (child.userData.bracketAxis) instance.userData.bracketBars.push(child);
-                        if (child.userData.bodyLabel) instance.userData.bodies.push(child);
+                        if (child.userData.screenLine) instance.userData.screenLines.push(child);
+                        if (child.userData.label || child.userData.outline) instance.userData.overlays.push(child);
+                        if (child.userData.pointSize) instance.userData.clouds.push(child);
                     });
                     this.instances.set(item, instance);
                     this.scene.add(instance);
@@ -585,17 +429,23 @@ class ModelStage {
         for (const [item, instance] of this.instances) {
             if (!instance?.visible) continue;
             instance.updateMatrixWorld(true);
-            if (instance.userData.bracketBars.length) {
+            if (instance.userData.screenLines.length) {
                 const perPixel = 1 / pixelsPerUnit(distance - instance.position.z);
-                for (const bar of instance.userData.bracketBars) {
-                    const thickness = BRACKET_LINE_PX * perPixel / bar.parent.matrixWorld.getMaxScaleOnAxis();
-                    const length = bar.userData.bracketLength;
-                    if (bar.userData.bracketAxis === 'x') bar.scale.set(length, thickness, thickness);
-                    else bar.scale.set(thickness, length, thickness);
+                for (const line of instance.userData.screenLines) {
+                    const thickness = SCREEN_LINE_PX * perPixel / line.parent.matrixWorld.getMaxScaleOnAxis();
+                    const { axis, length } = line.userData.screenLine;
+                    line.scale.set(axis === 'x' ? length : thickness, axis === 'y' ? length : thickness,
+                        axis === 'z' ? length : thickness);
                 }
                 instance.updateMatrixWorld(true);
             }
-            this.labelBodies(instance, w, h, scale, cx, cy, view);
+            // Point clouds shrink with the model instead of staying a fixed-size smudge.
+            const drawnPixels = instance.userData.drawSize * scale;
+            for (const cloud of instance.userData.clouds) {
+                const { max, perPixel } = cloud.userData.pointSize;
+                cloud.material.size = THREE.MathUtils.clamp(drawnPixels * perPixel, 0.35, max);
+            }
+            this.overlay(instance, w, h, scale, cx, view);
             const projected = [];
             for (const point of instance.userData.pickPoints || []) {
                 const ndc = point.clone().applyMatrix4(instance.matrixWorld).project(this.camera);
@@ -613,29 +463,39 @@ class ModelStage {
                 overlay.visible = item === this.hovered && instance.visible;
         this.renderer.render(this.scene, this.camera);
     }
-    // Body names stay upright and face the viewer: they are SVG text placed
-    // above each body's projected position rather than geometry in the model.
-    labelBodies(instance, w, h, scale, cx, cy, view) {
-        if (!instance.userData.bodies.length) return;
+    // Labels and outlines are SVG drawn at projected node positions, so text
+    // stays upright and lines stay thin while the model rotates underneath.
+    overlay(instance, w, h, scale, cx, view) {
+        if (!instance.userData.overlays.length) return;
         const opacity = THREE.MathUtils.clamp(instance.userData.drawSize / 80, 0, 1);
         if (!opacity) return;
         const toScreen = point => {
             const ndc = point.project(this.camera);
             return { x: cx + (ndc.x * w / 2) / scale, y: view.y + view.height / 2 - (ndc.y * h / 2) / scale };
         };
-        for (const body of instance.userData.bodies) {
-            const center = body.getWorldPosition(new THREE.Vector3());
-            const radius = body.matrixWorld.getMaxScaleOnAxis();
-            const bodyCenter = toScreen(center.clone());
-            const top = toScreen(center.add(new THREE.Vector3(0, radius, 0)));
-            const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-            label.setAttribute('class', 'journey-distance-body-label');
-            label.setAttribute('text-anchor', 'middle');
-            label.setAttribute('x', bodyCenter.x);
-            label.setAttribute('y', Math.min(top.y, bodyCenter.y) - 7);
-            label.setAttribute('opacity', opacity);
-            label.textContent = body.userData.bodyLabel;
-            this.ctx.stage.append(label);
+        const svgNode = (name, attributes) => {
+            const node = document.createElementNS('http://www.w3.org/2000/svg', name);
+            for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value);
+            this.ctx.stage.append(node);
+            return node;
+        };
+        for (const node of instance.userData.overlays) {
+            const center = node.getWorldPosition(new THREE.Vector3());
+            const at = toScreen(center.clone());
+            let radius = 0;
+            if (node.userData.sphere) {
+                const top = toScreen(center.add(new THREE.Vector3(0, node.matrixWorld.getMaxScaleOnAxis(), 0)));
+                radius = Math.abs(at.y - top.y);
+            }
+            if (node.userData.outline) {
+                radius = Math.max(radius + 1.5 / scale, 3.5 / scale);
+                svgNode('circle', { cx: at.x, cy: at.y, r: radius, class: 'journey-model-outline', opacity });
+            }
+            if (node.userData.label) {
+                const label = svgNode('text', { x: at.x, y: at.y - radius - (radius ? 6 : 0) / scale,
+                    class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle', opacity });
+                label.textContent = node.userData.label;
+            }
         }
     }
     dispose() {
