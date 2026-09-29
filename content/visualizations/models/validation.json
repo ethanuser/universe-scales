@@ -14581,6 +14581,42 @@
         "maxInfluences": 0,
         "maxAttributes": 3
       }
+    },
+    {
+      "id": "mapzen-mariana-trench-dem",
+      "sha256": "9e277f14ae39bd117025595b21bd979dec0a33c35a412b06091c65c5b0063082",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales generalized DEM block builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 619588
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 11169,
+        "totalTriangleCount": 17644,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
     }
   ]
 }

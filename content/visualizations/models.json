@@ -2506,6 +2506,66 @@
       "triangle_count": 6144,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "mapzen-mariana-trench-dem",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "author": "Mapzen Terrain Tiles / Tilezen; open-ocean bathymetry is NOAA NCEI's ETOPO1; block adaptation by Universe Scales",
+      "license": "Mapzen Terrain Tiles attribution; underlying ETOPO1 bathymetry is U.S. public-domain NOAA data",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [],
+      "matches": {
+        "length": [
+          "Mariana Trench"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "measure_axis": "y",
+        "measure_fraction": 0.973298,
+        "layout_width_factor": 1.22,
+        "pitch": 16
+      },
+      "note": "A true-scale block of ocean around Challenger Deep, from public Mapzen elevation tiles whose open-ocean depths come from NOAA's ETOPO1 grid (about 1.85 km resolution, so the seafloor is smoothed). The deepest sample is anchored to the surveyed 10,935 m, and sea level to that point is calibrated to the listed 11,000 m; a thin rock slab sits below. The translucent blue is the water column: Everest, at 8.8 km, would fit inside it with more than 2 km to spare.",
+      "processing": {
+        "operations": [
+          "Fetched the public Terrarium z10 elevation tile (about 150 m/pixel at this latitude) covering 11.3299 N, 142.1993 E with scripts/build_dem_block.py --mode sea; z11/z12 tiles in this remote area returned flat, no-data pixels and were not usable",
+          "Sampled a 91x91 grid (about 13.49 km square, step 1 native pixel) centered on the pixel nearest the 2010 CCOM/JHC multibeam sonar position for Challenger Deep",
+          "Applied one narrow Gaussian correction anchoring the sampled deepest pixel (-10,905 m) to the surveyed -10,935 m, without rescaling the rest of the sampled relief (build_everest_dem.py's summit-correction technique, generalized to a minimum instead of a maximum)",
+          "Built an opaque seafloor top surface colored by a depth-stretched bathymetric ramp, plus opaque rock walls dropping from the terrain boundary to a flat base 300 m below the deepest point and a floor cap closing the block",
+          "Added a second, translucent primitive (alphaMode BLEND, RGBA vertex colors) for the water shell: a flat quad at sea level (y=0) plus walls following the terrain boundary from y=0 down to the seafloor, colored lighter/more transparent near the top and darker/more opaque toward the bottom",
+          "Packed both primitives into one GLB buffer (scripts/fetch_model_assets.py pack_glb); no Draco, meshopt, or external textures",
+          "Added extras.label nodes at the deepest sampled point (\"Challenger Deep, about 10.9 km\") and at the sea-level plane (\"Sea level\")"
+        ],
+        "data_sources": [
+          "https://registry.opendata.aws/terrain-tiles/",
+          "https://github.com/tilezen/joerd/blob/master/docs/data-sources.md",
+          "https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
+        ],
+        "tiles": [
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/10/916/479.png",
+            "sha256": "ef46b63805ea9f4ee55050dfce905e00c23b8e2b7cf8df391776057feca29219"
+          }
+        ],
+        "source_model_name": "Mapzen Terrarium elevation tiles (Terrain Tiles on AWS Open Data)",
+        "source_author": "Mapzen / Tilezen (Joerd pipeline); NOAA NCEI (ETOPO1 bathymetry)"
+      },
+      "src": "content/visualizations/models/mapzen-mariana-trench-dem.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 622668,
+      "sha256": "9e277f14ae39bd117025595b21bd979dec0a33c35a412b06091c65c5b0063082",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 17644,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [
