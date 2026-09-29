@@ -38,27 +38,28 @@
       "note": "A human insulin monomer, not an interchangeable model of every small protein. The listed 5 nm is a representative protein scale, not a measured diameter of this conformer; its longest visible mesh extent is normalized to that illustrative value."
     },
     {
-      "id": "sketchfab-bacterium-rod-v2",
+      "id": "sketchfab-bacterium-piliated-v3",
       "name": "Bacteria",
-      "uid": "19618642dad34d0b82219c162aa522e8",
-      "author": "ModuleStudios",
+      "uid": "75ae189551e94d59aedce00104217533",
+      "author": "andrewfrueh",
       "license": "by",
       "presentation": {
         "measure_axis": "x",
-        "measure_fraction": 0.4825,
-        "pre_rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 90
-        },
-        "layout_width_factor": 2.0,
-        "focus_scale_factor": 1.4,
-        "display_extent_factor": 2.07
+        "measure_fraction": 0.534,
+        "layout_width_factor": 2,
+        "focus_scale_factor": 1.55,
+        "display_extent_factor": 2.1
       },
-      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. Its body, with short surface pili, is calibrated to the listed 2 micrometer length of E. coli; the trailing flagellum, roughly as long again, is not part of that measurement."
+      "note": "An illustrative rod-shaped bacterium with many short pili and several long flagella. The artist did not identify a species, so it should not be read as a specimen of E. coli; its main body is calibrated to the listed representative 2-micrometer E. coli length. The flagella are outside that measurement, and the model's surface pattern is illustrative."
     },
     {
       "id": "sketchfab-red-blood-cell",
+      "presentation": {
+        "measure_axis": "x",
+        "pre_rotation": {
+          "x": 50
+        }
+      },
       "name": "Red Blood Cell",
       "uid": "1a1bbd5e3cd746888232fefa46b3f7d1",
       "author": "elearning.imu",
@@ -156,6 +157,14 @@
     },
     {
       "id": "sketchfab-eiffel-tower-v2",
+      "presentation": {
+        "measure_axis": "y",
+        "layout_width_factor": 0.48,
+        "tint": "#9b8067",
+        "roughness": 0.3,
+        "metalness": 0.75,
+        "environment": 1.1
+      },
       "name": "Eiffel Tower",
       "uid": "8553f94d06e24cb4b0fde1080f281674",
       "author": "Lambo_SC04",
@@ -187,31 +196,20 @@
       "note": "A drone photogrammetry scan of the football field at Milton Frank Stadium in Huntsville, Alabama, cropped to the playing surface; stands, track, lights, and the noisily scanned goalposts were removed. The goal-line-to-goal-line span, 100 yards (91.44 m), is calibrated to the listed length; it is about three quarters of the mesh, which also includes both end zones and a strip of turf beyond them."
     },
     {
-      "id": "sketchfab-mount-everest",
-      "name": "Mount Everest",
-      "uid": "e086183da4854416a606dc4f3bbea3ae",
-      "author": "arizonaguide (Nate Loper)",
-      "license": "by",
-      "presentation": {
-        "measure_axis": "y",
-        "measure_fraction": 1.0,
-        "layout_width_factor": 0.95,
-        "pitch": 22
-      },
-      "note": "Everest's summit massif from a heightmap draped with rock and snow imagery, shown as a block diagram. Its 3.35 km of relief matches the drop from the 8,848 m summit to glaciers near 5,500 m, so the heightmap is treated as true-scale meters; the faint plinth beneath continues the crust down to sea level, so the whole block is the listed 8,848 m tall."
-    },
-    {
-      "id": "sketchfab-statue-of-liberty",
+      "id": "sketchfab-liberty-gravity-jack",
       "name": "Statue of Liberty",
-      "uid": "f109b8b65eef4440a9ef2ad9a4b23714",
-      "author": "seifurt",
+      "uid": "84094e8d5e724b5c882cf576ca12e44e",
+      "author": "Gravity Jack",
       "license": "by",
       "presentation": {
         "measure_axis": "y",
-        "layout_width_factor": 0.45,
-        "opaque": true
+        "measure_fraction": 0.4952,
+        "liberty_pedestal": true,
+        "focus_scale_factor": 2.05,
+        "layout_width_factor": 0.9,
+        "pitch": 10
       },
-      "note": "A photogrammetry scan of a detailed Statue of Liberty replica with a copper-green patina; the replica's souvenir display base was cut away. Its height, from the base of the robe to the tip of the torch, is calibrated to the listed 46.05 m of the copper statue; the real granite pedestal and fort, which lift the torch to 93 m, are not shown."
+      "note": "Gravity Jack's hand-modeled, PBR-textured statue, not a photogrammetric scan. A simplified tiered granite-colored pedestal and foundation are added in the explorer. The copper statue from base to torch is the listed 46.05 m; the added support is approximately 46.94 m, making the full diagram approximately 92.99 m from ground to flame. The pedestal geometry is illustrative rather than a survey of Liberty Island."
     }
   ]
 }

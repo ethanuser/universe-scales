@@ -2,6 +2,8 @@
 // relative three.js import resolves to the same module as the page's import map
 // and also works under Node for tests.
 import * as THREE from '../vendor/three/three.module.min.js';
+import { atomicModelMetadata, atomicScenes } from './atomic-models.js?v=2';
+import { waveModelMetadata, waveScenes } from './wave-models.js?v=2';
 
 // Overlay conventions read by ModelStage.finish():
 //   userData.screenLine = { axis: 'x' | 'y' | 'z', length }  box drawn at a constant pixel width
@@ -28,41 +30,38 @@ function anchor(label, position, labelClass) {
 }
 
 // Distance diagrams (Earth-Moon, AU) get a U-shaped bracket below the two
-// bodies. Distances are center to center, so each vertical line drops from the
-// bottom of its body's center; the horizontal line joins their lower ends. The
-// bracket is part of the model and rotates with it.
+// bodies. Uprights touch the inward-facing limbs and the joining line sits
+// below them. The bracket is part of the model and rotates with it.
 export const BRACKET_DROP = 0.1; // below the larger body, as a fraction of the center distance
 export function addDistanceBracket(scene, config) {
     scene.updateMatrixWorld(true);
     const bodies = config.bodies.map(name => {
         const node = scene.getObjectByName(name);
         if (!node) return null;
-        Object.assign(node.userData, { label: name, outline: true, sphere: true });
-        return { x: node.getWorldPosition(new THREE.Vector3()).x, radius: node.matrixWorld.getMaxScaleOnAxis() };
+        Object.assign(node.userData, { label: name, sphere: true });
+        delete node.userData.outline;
+        return { center: node.getWorldPosition(new THREE.Vector3()), radius: node.matrixWorld.getMaxScaleOnAxis() };
     });
     if (bodies.length !== 2 || bodies.some(body => !body)) return;
-    const [left, right] = bodies[0].x <= bodies[1].x ? bodies : [bodies[1], bodies[0]];
-    const bottom = -(Math.max(left.radius, right.radius) + BRACKET_DROP * (right.x - left.x));
+    const [left, right] = bodies[0].center.x <= bodies[1].center.x ? bodies : [bodies[1], bodies[0]];
+    const leftX = left.center.x + left.radius, rightX = right.center.x - right.radius;
+    const bottom = Math.min(left.center.y - left.radius, right.center.y - right.radius)
+        - BRACKET_DROP * (right.center.x - left.center.x);
     const bracket = new THREE.Group();
     bracket.name = 'distance-bracket';
-    for (const body of [left, right])
-        bracket.add(screenLine('y', -body.radius - bottom, new THREE.Vector3(body.x, (bottom - body.radius) / 2, 0)));
-    bracket.add(screenLine('x', right.x - left.x, new THREE.Vector3((left.x + right.x) / 2, bottom, 0)));
+    for (const [body, x] of [[left, leftX], [right, rightX]])
+        bracket.add(screenLine('y', body.center.y - bottom,
+            new THREE.Vector3(x, (bottom + body.center.y) / 2, body.center.z)));
+    bracket.add(screenLine('x', rightX - leftX, new THREE.Vector3((leftX + rightX) / 2, bottom, 0)));
     scene.add(bracket);
 }
 
-// Enclosed probability of hydrogen's 1s state within r Bohr radii is
-// 1 - e^(-2r)(1 + 2r + 2r^2); 95% is reached at r = 3.148.
-export const HYDROGEN_95_RADIUS = 3.1479;
 // Pluto's orbit spans about 80 au, the dataset's Solar System diameter.
 const AU = 149_597_870_700;
 
 export const proceduralLength = {
-    'Hydrogen Atom': { id: 'hydrogen-1s', procedural: 'hydrogen-1s', geometry: 'mesh',
-        presentation: { reference_size: 1, layout_width_factor: 2 * HYDROGEN_95_RADIUS,
-            focus_scale_factor: 2 * HYDROGEN_95_RADIUS, display_extent_factor: 2 * HYDROGEN_95_RADIUS },
-        basis_url: 'https://ocw.mit.edu/courses/5-111-principles-of-chemical-science-fall-2008/8a0da0346f1d611fbbd5c31a54865c2d_lecnotes06.pdf',
-        note: 'A sample of hydrogen’s 1s electron probability cloud. The listed 53 pm is the Bohr radius, the most probable electron distance, marked by the line from the nucleus; it is a radius, not a diameter. The faint sphere at 3.15 Bohr radii encloses 95% of the probability, and the dots stop there, so the whole picture is about six times wider than the listed value.' },
+    ...atomicModelMetadata,
+    ...waveModelMetadata,
     'Water Molecule': { id: 'nist-water-molecule', procedural: 'molecule', molecule: 'water',
         geometry: 'mesh', presentation: { reference_size: 2.75 },
         source: 'https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185',
@@ -75,21 +74,29 @@ export const proceduralLength = {
         link_label: '3D conformer',
         note: 'Alpha-D-glucopyranose, shown as PubChem CID 79025’s 3D conformer. Its six-membered pyranose ring has a chair-like pucker; atom centers and bonds come from the conformer. The listed 1 nm is a rough molecular envelope, not a bond length; ball radii are illustrative.' },
     'Human Hair': { id: 'hair-fiber', procedural: 'hair-fiber', geometry: 'mesh',
-        presentation: { measure_axis: 'x', layout_width_factor: 1.1, focus_scale_factor: 1.5, roll: 6 },
+        presentation: { measure_axis: 'x', layout_width_factor: 1.1, focus_scale_factor: 2.1,
+            display_extent_factor: 2 },
         basis_url: 'https://wellcomecollection.org/works/wxgqyf66',
         basis_label: 'Cuticle reference: Wellcome Collection',
         note: 'A scalp hair shaft modeled on electron micrographs: overlapping cuticle scales about 8 micrometers tall, with irregular free edges pointing toward the tip, around a slightly oval shaft. Its diameter is calibrated to the listed 100 micrometers; the shaft is cropped, and its color and luster are those of medium-brown hair rather than a false-colored micrograph.' },
-    'Visible Light Wavelength': { id: 'light-wave', procedural: 'light-wave', geometry: 'mesh',
-        presentation: { reference_size: 1, layout_width_factor: 2.3, focus_scale_factor: 2.3,
-            display_extent_factor: 2.3, yaw: -32, pitch: 14 },
-        basis_url: 'https://en.wikipedia.org/wiki/Electromagnetic_radiation',
-        basis_label: 'Wave basis: electromagnetic radiation',
-        note: 'A schematic plane light wave, two cycles long, traveling left to right. The crest-to-crest distance is calibrated to the listed 500 nm of green light. Field strengths are not lengths, so the wave heights are arbitrary; by convention the electric field is drawn red and the magnetic field blue, oscillating at right angles to each other and to the direction of travel.' },
+    'Mitochondrion': { id: 'mitochondrion-lamellar-cutaway', procedural: 'mitochondrion-lamellar-cutaway',
+        geometry: 'mesh', presentation: { reference_size: 1, layout_width_factor: 1.15,
+            focus_scale_factor: 1.6, display_extent_factor: 1.15 },
+        basis_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2829299/',
+        basis_label: 'Electron tomography of lamellar cristae',
+        note: 'An opaque cutaway of a long, tubular mitochondrion. The outer membrane is opened toward the viewer; the inner boundary membrane and a series of lamellar cristae are visible inside. Electron tomography reveals organized inner-membrane sheets, but this surface pattern is an illustration, not a reconstruction of a measured organelle. The long axis is calibrated to the listed 10 micrometers; membrane thickness and spacing are enlarged for legibility.' },
+    'Football Field': { id: 'regulation-football-field', procedural: 'regulation-football-field',
+        geometry: 'mesh', presentation: { reference_size: 100, pitch: 62,
+            layout_width_factor: 1.25, focus_scale_factor: 1.45, display_extent_factor: 1.25 },
+        basis_url: 'https://operations.nfl.com/the-rules/nfl-rulebook/',
+        basis_label: 'NFL field dimensions and markings',
+        note: 'A regulation field of play, 100 yards (91.44 m) between goal lines, with a 10-yard end zone at either end. The entire rendered turf is therefore 120 yards long and 53⅓ yards wide; the listed size measures only the playing field. Five-yard lines, sidelines, and inbounds marks are included. Colors are generic, not a model of a particular stadium.' },
     'Solar System': { id: 'solar-system-today', procedural: 'solar-system', geometry: 'mesh',
-        presentation: { reference_size: 1.2e13 / AU, pitch: 62, layout_width_factor: 1.05 },
+        presentation: { reference_size: 1.2e13 / AU, pitch: 62, layout_width_factor: 1.2,
+            focus_scale_factor: 0.72 },
         basis_url: 'https://ssd.jpl.nasa.gov/planets/approx_pos.html',
         basis_label: 'Orbits: JPL approximate planetary positions',
-        note: 'The Sun, eight planets and Pluto at their positions for today, computed from JPL’s approximate orbital elements, with each orbit drawn to the same scale. Planet sizes are true to scale too, so every body is far smaller than a pixel; the faint circles only mark where they are. The listed 80 au is roughly the span of Pluto’s orbit (Neptune’s is 60 au).' }
+        note: 'The Sun, eight planets and Pluto at their positions for today, computed from JPL’s approximate orbital elements, with each orbit drawn to the same scale. Planet sizes are true to scale too, so tiny rings mark their positions. The main asteroid belt is shown as an illustrative population between about 2.1 and 3.3 au, rather than individual predicted asteroid positions. The listed 80 au is roughly the span of Pluto’s orbit (Neptune’s is 60 au).' }
 };
 
 export function moleculeScene(data) {
@@ -128,7 +135,7 @@ function seeded(seed) {
 // the surface steps back down to the next scale. Edges wander around the shaft.
 function hairFiber() {
     const random = seeded(0x5eed1234);
-    const radius = 0.5, length = 2, radial = 160, rows = 560;
+    const radius = 0.5, length = 2, radial = 96, rows = 224;
     const step = 0.028, oval = 0.045;
     // Scale heights vary (about 5-10 micrometers on a 100 micrometer hair), and
     // each free edge meanders around the shaft with a jagged, torn look.
@@ -169,7 +176,7 @@ function hairFiber() {
     for (let row = 0; row < rows; row++)
         for (let column = 0; column < radial; column++) {
             const a = row * (radial + 1) + column, b = a + radial + 1;
-            indices.push(a, a + 1, b, a + 1, b + 1, b);
+            indices.push(a, b, a + 1, a + 1, b, b + 1);
         }
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
@@ -181,17 +188,133 @@ function hairFiber() {
     cuticle.userData.environment = 0.55; // keratin has a soft sheen
     const scene = new THREE.Group();
     scene.add(new THREE.Mesh(geometry, cuticle));
-    // Cut end: cortex with a darker medulla core.
-    const cap = new THREE.Mesh(new THREE.CircleGeometry(radius * 1.005, radial),
-        new THREE.MeshStandardMaterial({ color: 0x5c3822, roughness: 0.7 }));
-    cap.rotation.x = -Math.PI / 2;
-    cap.scale.set(1 + oval, 1 - oval, 1);
-    cap.position.y = length / 2;
-    const medulla = new THREE.Mesh(new THREE.CircleGeometry(radius * 0.16, 48),
-        new THREE.MeshStandardMaterial({ color: 0x3a261a, roughness: 0.9 }));
-    medulla.rotation.x = -Math.PI / 2;
-    medulla.position.y = length / 2 + 0.002;
-    scene.add(cap, medulla);
+    // Exact end rings close the shaft without gaps or coplanar disk overlays.
+    for (const endRow of [0, rows]) {
+        const sign = endRow === 0 ? -1 : 1;
+        const capPositions = [0, sign * length / 2, 0], capColors = [0.16, 0.075, 0.03], capIndices = [];
+        for (let column = 0; column < radial; column++) {
+            const start = 3 * (endRow * (radial + 1) + column);
+            capPositions.push(...positions.slice(start, start + 3));
+            capColors.push(0.31, 0.17, 0.085);
+            const current = column + 1, next = (column + 1) % radial + 1;
+            capIndices.push(...(sign > 0 ? [0, next, current] : [0, current, next]));
+        }
+        const capGeometry = new THREE.BufferGeometry();
+        capGeometry.setAttribute('position', new THREE.Float32BufferAttribute(capPositions, 3));
+        capGeometry.setAttribute('color', new THREE.Float32BufferAttribute(capColors, 3));
+        capGeometry.setIndex(capIndices);
+        capGeometry.computeVertexNormals();
+        const cap = new THREE.Mesh(capGeometry,
+            new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.78 }));
+        cap.name = sign > 0 ? 'hair-top-cut' : 'hair-bottom-cut';
+        scene.add(cap);
+    }
+    return scene;
+}
+
+function mitochondrionCutaway() {
+    const scene = new THREE.Group();
+    const matrix = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 32),
+        new THREE.MeshStandardMaterial({ color: 0x576568, roughness: 0.9, metalness: 0 }));
+    matrix.scale.set(0.465, 0.154, 0.154);
+    matrix.name = 'mitochondrial-matrix';
+    scene.add(matrix);
+
+    // The near-side outer membrane is omitted as a clean cutaway. Both end
+    // poles stay closed; the darker back and the rim keep the organelle solid.
+    const positions = [], colors = [], indices = [];
+    const longitudinal = 64, around = 48;
+    const segments = [[0, 0.34], [Math.PI - 0.34, 2 * Math.PI]];
+    const base = new THREE.Color(0x9a5b53);
+    for (const [start, end] of segments) {
+        const offset = positions.length / 3;
+        for (let row = 0; row <= longitudinal; row++) {
+            const phi = Math.PI * row / longitudinal;
+            const x = 0.5 * Math.cos(phi), ring = Math.sin(phi);
+            for (let column = 0; column <= around; column++) {
+                const theta = start + (end - start) * column / around;
+                const grain = 0.985 + 0.025 * Math.sin(47 * phi + 19 * theta) * Math.sin(13 * phi - 31 * theta);
+                positions.push(x, 0.19 * ring * Math.cos(theta) * grain,
+                    0.19 * ring * Math.sin(theta) * grain);
+                const tone = base.clone().multiplyScalar(0.86 + 0.11 * Math.sin(7 * phi + 5 * theta) ** 2);
+                colors.push(tone.r, tone.g, tone.b);
+            }
+        }
+        for (let row = 0; row < longitudinal; row++)
+            for (let column = 0; column < around; column++) {
+                const a = offset + row * (around + 1) + column, b = a + around + 1;
+                indices.push(a, a + 1, b, b, a + 1, b + 1);
+            }
+    }
+    const shellGeometry = new THREE.BufferGeometry();
+    shellGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    shellGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    shellGeometry.setIndex(indices);
+    shellGeometry.computeVertexNormals();
+    const shell = new THREE.Mesh(shellGeometry,
+        new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.72, side: THREE.DoubleSide }));
+    shell.name = 'opaque-outer-membrane';
+    scene.add(shell);
+
+    const innerMaterial = new THREE.MeshStandardMaterial({ color: 0xc18469,
+        roughness: 0.63, metalness: 0, side: THREE.DoubleSide });
+    for (let fold = 0; fold < 11; fold++) {
+        const centerX = -0.36 + fold * 0.072;
+        const membrane = [], faces = [], steps = 24;
+        for (let step = 0; step <= steps; step++) {
+            const t = step / steps, y = (2 * t - 1) * 0.116;
+            const x = centerX + 0.009 * Math.sin(3 * Math.PI * t + fold * 0.65);
+            const core = Math.max(0.01, 1 - (x / 0.465) ** 2 - (y / 0.154) ** 2);
+            const z = 0.154 * Math.sqrt(core) + 0.009;
+            membrane.push(x - 0.006, y, z, x + 0.006, y, z);
+            if (step < steps) {
+                const a = step * 2;
+                faces.push(a, a + 1, a + 2, a + 1, a + 3, a + 2);
+            }
+        }
+        const geometry = new THREE.BufferGeometry();
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(membrane, 3));
+        geometry.setIndex(faces);
+        geometry.computeVertexNormals();
+        const crista = new THREE.Mesh(geometry, innerMaterial);
+        crista.name = `lamellar-crista-${fold + 1}`;
+        scene.add(crista);
+    }
+    return scene;
+}
+
+function footballField() {
+    const scene = new THREE.Group();
+    const turf = [0x276b3d, 0x2c7442].map(color =>
+        new THREE.MeshBasicMaterial({ color, side: THREE.DoubleSide, polygonOffset: true,
+            polygonOffsetFactor: -1, polygonOffsetUnits: -1 }));
+    const endZone = new THREE.MeshBasicMaterial({ color: 0x143d54, side: THREE.DoubleSide,
+        polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
+    const paint = new THREE.MeshBasicMaterial({ color: 0xf2f4e9, side: THREE.DoubleSide,
+        polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+    const width = 160 / 3;
+    const addPlane = (x, z, length, depth, y, material) => {
+        const mesh = new THREE.Mesh(new THREE.PlaneGeometry(length, depth), material);
+        mesh.rotation.x = -Math.PI / 2;
+        mesh.position.set(x, y, z);
+        scene.add(mesh);
+    };
+    const base = new THREE.Mesh(new THREE.BoxGeometry(120, 0.16, width),
+        new THREE.MeshStandardMaterial({ color: 0x1b2a24, roughness: 1 }));
+    base.position.y = -0.08;
+    scene.add(base);
+    for (let band = 0; band < 20; band++)
+        addPlane(-47.5 + 5 * band, 0, 5, width, 0.06, turf[band % 2]);
+    for (const x of [-55, 55]) addPlane(x, 0, 10, width, 0.06, endZone);
+    for (let yard = -50; yard <= 50; yard += 5)
+        addPlane(yard, 0, 0.18, width, 0.09, paint);
+    for (const z of [-width / 2 + 0.1, width / 2 - 0.1])
+        addPlane(0, z, 120, 0.25, 0.09, paint);
+    for (let yard = -49; yard <= 49; yard++) {
+        if (yard % 5 === 0) continue;
+        for (const z of [-3.083, 3.083]) addPlane(yard, z, 0.18, 0.7, 0.09, paint);
+    }
+    for (const x of [-59.9, 59.9]) addPlane(x, 0, 0.2, width, 0.09, paint);
     return scene;
 }
 
@@ -334,7 +457,8 @@ function solarSystem(date = new Date()) {
     const sphere = new THREE.SphereGeometry(1, 24, 16);
     const sun = new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xffd36b }));
     sun.scale.setScalar(695_700_000 / AU);
-    Object.assign(sun.userData, { outline: true, sphere: true });
+    Object.assign(sun.userData, { outline: true, sphere: true, label: 'Sun', labelLayout: 'orbit',
+        markerRadius: 1.8, markerPadding: 0.6 });
     scene.add(sun);
     const positions = new Map(planetPositions(date).map(({ name, position }) => [name, position]));
     for (const [name, radius, color, elements, rates] of PLANETS) {
@@ -345,16 +469,36 @@ function solarSystem(date = new Date()) {
         const planet = new THREE.Mesh(sphere, new THREE.MeshStandardMaterial({ color, roughness: 0.8 }));
         planet.position.copy(toScene(positions.get(name)));
         planet.scale.setScalar(radius / AU);
-        Object.assign(planet.userData, { outline: true, sphere: true });
+        planet.name = name;
+        Object.assign(planet.userData, { outline: true, sphere: true, label: name, labelLayout: 'orbit',
+            markerRadius: 1.5, markerPadding: 0.5 });
         scene.add(line, planet);
     }
+    const random = seeded(0x4a57e);
+    const belt = [];
+    for (let index = 0; index < 1200; index++) {
+        const angle = random() * 2 * Math.PI, radius = Math.sqrt(2.1 ** 2 + random() * (3.3 ** 2 - 2.1 ** 2));
+        belt.push(radius * Math.cos(angle), (random() - 0.5) * 0.22, radius * Math.sin(angle));
+    }
+    const beltGeometry = new THREE.BufferGeometry();
+    beltGeometry.setAttribute('position', new THREE.Float32BufferAttribute(belt, 3));
+    const asteroids = new THREE.Points(beltGeometry, new THREE.PointsMaterial({ color: 0xcbbca4,
+        size: 0.75, sizeAttenuation: false, transparent: true, opacity: 0.35, depthWrite: false }));
+    asteroids.name = 'Main asteroid belt';
+    asteroids.userData.pointSize = { max: 1.2, perPixel: 1 / 900 };
+    scene.add(asteroids);
+    const beltLabel = anchor('Asteroid belt', new THREE.Vector3(-2.8, 0, 0));
+    beltLabel.userData.labelLayout = 'orbit';
+    scene.add(beltLabel);
     return scene;
 }
 
 export function proceduralScene(kind) {
+    if (atomicScenes[kind]) return atomicScenes[kind]();
+    if (waveScenes[kind]) return waveScenes[kind]();
     if (kind === 'hair-fiber') return hairFiber();
-    if (kind === 'light-wave') return lightWave();
-    if (kind === 'hydrogen-1s') return hydrogen1s();
+    if (kind === 'mitochondrion-lamellar-cutaway') return mitochondrionCutaway();
+    if (kind === 'regulation-football-field') return footballField();
     if (kind === 'solar-system') return solarSystem();
     return new THREE.Group();
 }

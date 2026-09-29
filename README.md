@@ -17,7 +17,7 @@ An interactive visualization of the universe's dimensions, from quantum to cosmi
 - **Separate Description Layer**: Store museum-style descriptions in Markdown outside the structured JSON dataset
 - **Curation Metadata**: Track review status, display status, and quality flags without requiring centralized collaborator management
 - **Unit Conversion**: Switch between different units (meters/feet, seconds/minutes, etc.)
-- **Number Notation Toggle**: Switch between scientific notation (1e10) and standard notation
+- **Number Notation Toggle**: Switch among scientific, powers-of-ten, human-readable, and SI-prefix notation. SI-prefix values use at most three significant figures.
 - **Dark Mode**: Toggle between light and dark themes
 - **Background Music**: Optional ambient background music
 - **Responsive Design**: Works on desktop and mobile devices
@@ -73,13 +73,14 @@ The site still consumes YAML, but YAML is no longer the source of truth for the 
 
 The project includes a normalized SQLite-backed data pipeline that generates the frontend YAML bundles and supporting JSON exports.
 
-- Build the dataset: `./venv/bin/python scripts/dataset/build_dataset.py`
+- Rebuild one dimension without rewriting unrelated exports: `./venv/bin/python -m scripts.dataset.rebuild_dimension length`
+- Rebuild the entire dataset: `./venv/bin/python scripts/dataset/build_dataset.py`
 - Verify the generated artifacts: `./venv/bin/python scripts/dataset/verify_dataset.py`
 - Query the dataset: `./venv/bin/python scripts/query_dataset.py between mass 1e-9 1e9 --selected-only`
 
 See [DATASET_PIPELINE.md](DATASET_PIPELINE.md) for the source model, output artifacts, and contributor workflow.
 See [DATASET_STANDARD.md](DATASET_STANDARD.md) for item acceptance rules, review statuses, and the description standard.
-See [content/visualizations/README.md](content/visualizations/README.md) for the interactive modes, physical assumptions, asset licenses, and browser checks. The initial modes use approximate photos or equivalent geometry; they do not automatically remove backgrounds, reconstruct objects, or calibrate device brightness/sound output.
+See [content/visualizations/README.md](content/visualizations/README.md) for the interactive modes, physical assumptions, asset licenses, and browser checks. Explorer subjects may use calibrated downloaded models, procedural diagrams, or approximate photos; the site does not automatically reconstruct objects or measure device brightness/sound output.
 See [content/visualizations/models/README.md](content/visualizations/models/README.md) for the 3D model registry and the Sketchfab Length import workflow.
 
 Test visualization math with `node --test tests/experience-math.test.cjs`.

@@ -219,6 +219,12 @@
 }
 .experience--spatial .journey-model-label.is-electric { fill: #d8362b; }
 .experience--spatial .journey-model-label.is-magnetic { fill: #2f6fd6; }
+.experience--spatial .journey-model-leader {
+    stroke: currentColor;
+    stroke-width: 0.7;
+    stroke-opacity: 0.6;
+    pointer-events: none;
+}
 .experience--spatial .journey-model-outline {
     fill: none;
     stroke: currentColor;

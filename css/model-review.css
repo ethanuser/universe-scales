@@ -1,0 +1,23 @@
+:root { color-scheme: light; font-family: ui-sans-serif, sans-serif; color: #283641; background: #f4f6f7; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-bottom: 1px solid #cad3d8; }
+h1 { font-size: 19px; margin: 0; } h2 { font-size: 18px; margin: 0; }
+a { color: #155cab; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; padding: 12px 20px; }
+label { display: grid; gap: 4px; font-size: 12px; }
+label:has(input[type=checkbox]) { display: flex; align-items: center; align-self: center; }
+button, select, input[type=search] { font: inherit; border: 1px solid #aebcc6; border-radius: 5px; padding: 8px 10px; background: #fff; color: inherit; }
+button:hover { background: #e4edf4; } button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #1979d8; }
+input[type=range] { width: 130px; min-height: 32px; } input[type=file] { width: 210px; }
+#stage-frame { position: relative; height: min(66vh, 740px); min-height: 340px; overflow: hidden; background: #f8fbfd; color: #27323d; touch-action: none; user-select: none; --halo: #f8fbfd; }
+#stage-frame.dark { background: #060d19; color: #edf4ff; --halo: #060d19; }
+#stage-frame.sky { background: #a8d8ee; color: #1a2c39; --halo: #a8d8ee; }
+#stage, .experience-model-stage { position: absolute; inset: 0; width: 100%; height: 100%; }
+#stage { z-index: 1; pointer-events: none; }
+.journey-model-label { font-size: 12px; font-weight: 600; fill: currentColor; paint-order: stroke fill; stroke: var(--halo); stroke-width: 2px; stroke-linejoin: round; }
+.journey-model-label.is-electric { fill: #c53732; }.journey-model-label.is-magnetic { fill: #276ace; }
+.journey-model-leader, .journey-model-outline { fill: none; stroke: currentColor; stroke-width: .7; opacity: .6; }
+#status { display: block; min-height: 36px; padding: 10px 20px; font: 12px ui-monospace, monospace; border-bottom: 1px solid #cad3d8; }
+aside { padding: 16px 20px; max-width: 1050px; line-height: 1.5; } aside p { margin: 8px 0; } #photo { max-width: 260px; max-height: 180px; object-fit: contain; }
+@media(max-width: 650px) { .toolbar { gap: 8px; padding: 12px; } #stage-frame { height: 52vh; } }

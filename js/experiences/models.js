@@ -3,7 +3,9 @@ import { GLTFLoader } from '../vendor/three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtils.js';
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=2';
+import { layoutModelLabels } from './model-labels.js?v=1';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=8';
+import { waveAnimation } from './wave-models.js?v=2';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -156,6 +158,7 @@ async function load(entry) {
         );
         if (entry.presentation?.flatten_static) scene = flattenStaticScene(scene);
         if (entry.presentation?.distance_bracket) addDistanceBracket(scene, entry.presentation.distance_bracket);
+        if (entry.presentation?.liberty_pedestal) addLibertyPedestal(scene);
         scene.updateMatrixWorld(true);
         const bounds = new THREE.Box3().setFromObject(scene);
         const center = bounds.getCenter(new THREE.Vector3());
@@ -210,10 +213,35 @@ async function load(entry) {
     }).catch(() => null));
     return models.get(key);
 }
-class ModelStage {
-    constructor(ctx, redraw) {
+
+function addLibertyPedestal(scene) {
+    scene.updateMatrixWorld(true);
+    const bounds = new THREE.Box3().setFromObject(scene);
+    const statueHeight = bounds.max.y - bounds.min.y;
+    const pedestalHeight = statueHeight * (46.94 / 46.05);
+    const center = bounds.getCenter(new THREE.Vector3());
+    const base = bounds.min.y - pedestalHeight;
+    const width = statueHeight * 0.54;
+    const stone = new THREE.MeshStandardMaterial({ color: 0x8f8980, roughness: 0.94 });
+    const inset = new THREE.MeshStandardMaterial({ color: 0x736d65, roughness: 0.96 });
+    const addTier = (bottom, height, lowerWidth, upperWidth, material) => {
+        const geometry = new THREE.CylinderGeometry(upperWidth / Math.SQRT2,
+            lowerWidth / Math.SQRT2, height, 4, 1, false, Math.PI / 4);
+        const tier = new THREE.Mesh(geometry, material);
+        tier.rotation.y = Math.PI / 4;
+        tier.position.set(center.x, bottom + height / 2, center.z);
+        scene.add(tier);
+    };
+    addTier(base, pedestalHeight * 0.19, width * 1.26, width * 1.14, inset);
+    addTier(base + pedestalHeight * 0.19, pedestalHeight * 0.1, width * 1.18, width, stone);
+    addTier(base + pedestalHeight * 0.29, pedestalHeight * 0.62, width * 0.83, width * 0.57, stone);
+    addTier(base + pedestalHeight * 0.91, pedestalHeight * 0.09, width * 0.81, width * 0.81, inset);
+}
+export class ModelStage {
+    constructor(ctx, redraw, onRegistryReady) {
         this.ctx = ctx; this.redraw = redraw; this.instances = new Map(); this.entries = [];
         this.rotations = new Map(); this.hulls = new Map();
+        this.waveStart = performance.now();
         try {
             this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
             this.renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -230,6 +258,7 @@ class ModelStage {
                 if (this.disposed) return;
                 this.entries = data.models || [];
                 this.ctx.updateDetail();
+                onRegistryReady?.();
                 redraw();
             });
         } catch { this.unavailable = true; }
@@ -345,6 +374,7 @@ class ModelStage {
                 if (this.disposed) return;
                 if (model) {
                     const instance = clone(model);
+                    instance.userData.waveRoots = waveAnimation.animationRoots(instance);
                     instance.userData.pickPoints = sampledModelPoints(instance);
                     instance.userData.hoverOverlays = addHoverOverlay(instance);
                     const pose = entry.presentation || {};
@@ -424,10 +454,18 @@ class ModelStage {
         this.camera.updateMatrixWorld(true);
         this.camera.matrixWorldInverse.copy(this.camera.matrixWorld).invert();
         this.hulls.clear();
+        let visibleWave = false;
+        const animateWaves = !document.hidden && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         // Screen-space size of one world unit at a given camera depth.
         const pixelsPerUnit = depth => this.camera.projectionMatrix.elements[5] * h / 2 / depth;
         for (const [item, instance] of this.instances) {
             if (!instance?.visible) continue;
+            if (instance.userData.waveRoots.length) {
+                visibleWave = true;
+                const elapsed = this.animationTime ?? (performance.now() - this.waveStart) / 1000;
+                if (animateWaves || this.animationTime != null)
+                    for (const root of instance.userData.waveRoots) waveAnimation.update(root, elapsed);
+            }
             instance.updateMatrixWorld(true);
             if (instance.userData.screenLines.length) {
                 const perPixel = 1 / pixelsPerUnit(distance - instance.position.z);
@@ -462,6 +500,15 @@ class ModelStage {
             for (const overlay of instance?.userData.hoverOverlays || [])
                 overlay.visible = item === this.hovered && instance.visible;
         this.renderer.render(this.scene, this.camera);
+        if (visibleWave && animateWaves && this.animationTime == null && !this.waveFrame)
+            this.waveFrame = requestAnimationFrame(() => {
+                this.waveFrame = null;
+                if (!this.disposed) this.redraw();
+            });
+        else if ((!visibleWave || !animateWaves || this.animationTime != null) && this.waveFrame) {
+            cancelAnimationFrame(this.waveFrame);
+            this.waveFrame = null;
+        }
     }
     // Labels and outlines are SVG drawn at projected node positions, so text
     // stays upright and lines stay thin while the model rotates underneath.
@@ -479,6 +526,7 @@ class ModelStage {
             this.ctx.stage.append(node);
             return node;
         };
+        const orbitLabels = [];
         for (const node of instance.userData.overlays) {
             const center = node.getWorldPosition(new THREE.Vector3());
             const at = toScreen(center.clone());
@@ -488,19 +536,36 @@ class ModelStage {
                 radius = Math.abs(at.y - top.y);
             }
             if (node.userData.outline) {
-                radius = Math.max(radius + 1.5 / scale, 3.5 / scale);
+                radius = Math.max(radius + (node.userData.markerPadding ?? 1.5) / scale,
+                    (node.userData.markerRadius ?? 3.5) / scale);
                 svgNode('circle', { cx: at.x, cy: at.y, r: radius, class: 'journey-model-outline', opacity });
             }
             if (node.userData.label) {
+                if (node.userData.labelLayout === 'orbit') {
+                    orbitLabels.push({ x: at.x, y: at.y, text: node.userData.label });
+                    continue;
+                }
                 const label = svgNode('text', { x: at.x, y: at.y - radius - (radius ? 6 : 0) / scale,
                     class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle', opacity });
                 label.textContent = node.userData.label;
             }
         }
+        for (const label of layoutModelLabels(orbitLabels, {
+            left: view.x + 8, right: view.x + view.width - 8,
+            top: view.y + 8, bottom: view.y + view.height - 36
+        })) {
+            if (Math.hypot(label.labelX - label.x, label.labelY - label.y) > 18)
+                svgNode('line', { x1: label.x, y1: label.y, x2: label.labelX, y2: label.labelY - 4,
+                    class: 'journey-model-leader', opacity });
+            const text = svgNode('text', { x: label.labelX, y: label.labelY,
+                class: 'journey-model-label', 'text-anchor': 'middle', opacity });
+            text.textContent = label.text;
+        }
     }
     dispose() {
         this.disposed = true;
         cancelAnimationFrame(this.returnFrame);
+        cancelAnimationFrame(this.waveFrame);
         this.environmentMap?.dispose();
         this.renderer?.dispose();
         this.renderer?.forceContextLoss();

@@ -191,7 +191,12 @@
         ctx.modelEntry = item => modelStage?.entry(item);
         const attachModels = () => {
             if (disposed || modelStage || !root.ScaleModels) return;
-            modelStage = new ScaleModels.ModelStage(ctx, render);
+            modelStage = new ScaleModels.ModelStage(ctx, render, () => {
+                const factor = modelStage?.entry(ctx.item)?.presentation?.focus_scale_factor;
+                const exponent = ScaleJourney.frameExponent(ctx.items, ctx.index, order);
+                if (factor && Math.abs(zoom.value - exponent) < 0.05)
+                    navigationControl.frameTo(exponent + Math.log10(factor), ctx.index, 1);
+            });
             ctx.updateDetail();
             render();
         };

@@ -35,13 +35,41 @@ test('virus is the NIAID SARS-CoV-2 virion calibrated by envelope, not spikes', 
     assert.equal(length.items.find(item => item.name === 'Virus').value, 9.1e-8);
 });
 
-test('bacterium is one clean rod calibrated by body length, not flagellum', () => {
-    const model = byId('sketchfab-bacterium-rod-v2');
+test('bacterium is a credited, pilose rod calibrated by body length, not flagellum', () => {
+    const model = byId('sketchfab-bacterium-piliated-v3');
     assert.deepEqual(model.matches.length, ['Bacteria']);
     assert.equal(model.presentation.measure_axis, 'x');
     assert.ok(model.presentation.measure_fraction > 0.4 && model.presentation.measure_fraction < 0.6);
-    assert.ok(!byId('sketchfab-bacterium-rod'));
+    assert.match(model.note, /species/);
+    assert.ok(!byId('sketchfab-bacterium-rod-v2'));
     assert.ok(model.bytes < 500_000);
+});
+
+test('Everest is an opaque DEM block with a surveyed-height summit', () => {
+    const model = byId('mapzen-everest-dem');
+    assert.deepEqual(model.matches.length, ['Mount Everest']);
+    assert.match(model.source, /terrain-tiles/);
+    assert.ok(!byId('sketchfab-mount-everest'));
+    const bytes = readFileSync(path.join(root, model.src));
+    const jsonLength = bytes.readUInt32LE(12);
+    const gltf = JSON.parse(bytes.subarray(20, 20 + jsonLength));
+    assert.ok(gltf.materials.every(material => material.alphaMode !== 'BLEND'));
+    const audit = JSON.parse(execFileSync(process.execPath,
+        ['scripts/audit_glb_geometry.mjs', model.src], { cwd: root, encoding: 'utf8' }));
+    assert.ok(Math.abs(audit.min[1]) < 0.01);
+    assert.ok(Math.abs(audit.max[1] - 8848.86) < 0.01);
+    assert.ok(model.bytes < 1_000_000);
+});
+
+test('Liberty is authored geometry with a separately calibrated pedestal', () => {
+    const model = byId('sketchfab-liberty-gravity-jack');
+    assert.deepEqual(model.matches.length, ['Statue of Liberty']);
+    assert.equal(model.license, 'CC-BY-4.0');
+    assert.equal(model.presentation.liberty_pedestal, true);
+    assert.ok(Math.abs(model.presentation.measure_fraction - 46.05 / 92.99) < 0.001);
+    assert.ok(model.presentation.focus_scale_factor > 2);
+    assert.match(model.note, /illustrative/);
+    assert.ok(!byId('sketchfab-statue-of-liberty'));
 });
 
 test('mitochondrion is a single cut-away organelle without baked labels', () => {

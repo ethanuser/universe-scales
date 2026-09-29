@@ -1054,6 +1054,12 @@
     },
     {
       "id": "sketchfab-red-blood-cell",
+      "presentation": {
+        "measure_axis": "x",
+        "pre_rotation": {
+          "x": 50
+        }
+      },
       "source": "https://sketchfab.com/3d-models/rbc-morphology-red-blood-cell-1a1bbd5e3cd746888232fefa46b3f7d1",
       "author": "elearning.imu on Sketchfab",
       "license": "CC-BY-4.0",
@@ -1156,10 +1162,10 @@
       "presentation": {
         "measure_axis": "y",
         "layout_width_factor": 0.48,
-        "tint": "#7a5a45",
-        "roughness": 0.66,
-        "metalness": 0.45,
-        "environment": 0.35
+        "tint": "#9b8067",
+        "roughness": 0.3,
+        "metalness": 0.75,
+        "environment": 1.1
       },
       "source": "https://sketchfab.com/3d-models/free-la-tour-eiffel-8553f94d06e24cb4b0fde1080f281674",
       "author": "Lambo_SC04 on Sketchfab",
@@ -2006,62 +2012,54 @@
       "closed_volume_checked": false
     },
     {
-      "id": "sketchfab-bacterium-rod-v2",
-      "source": "https://sketchfab.com/3d-models/bacterial-cell-bacterium-19618642dad34d0b82219c162aa522e8",
-      "author": "ModuleStudios on Sketchfab",
+      "id": "sketchfab-bacterium-piliated-v3",
+      "source": "https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533",
+      "author": "andrewfrueh on Sketchfab",
       "license": "CC-BY-4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "sketchfab_uid": "19618642dad34d0b82219c162aa522e8",
-      "source_sha256": "d087ae194f1a5ea042faa5fda148b1d2eea34bee566e7a2242ece8d2c26a7683",
-      "source_bytes": 131529,
-      "bytes": 141988,
-      "sha256": "25e1753a86fbefd1340451df3bb9f79722614e71f7aabf8b405599d17ea7d4e0",
-      "format": "glb",
-      "gltf_version": "2.0",
-      "mesh_count": 3,
-      "triangle_count": 7580,
-      "draw_calls": 3,
+      "sketchfab_uid": "75ae189551e94d59aedce00104217533",
+      "source_sha256": "af7116c8b4d4b32e99fd45382024fcb8da98fdef02d8777fc80f43a0ce59bf3b",
+      "source_bytes": 2714439,
       "matches": {
         "length": [
           "Bacteria"
         ]
       },
-      "geometry": "mesh",
       "presentation": {
         "measure_axis": "x",
-        "measure_fraction": 0.4825,
-        "pre_rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 90
-        },
-        "layout_width_factor": 2.0,
-        "focus_scale_factor": 1.4,
-        "display_extent_factor": 2.07
+        "measure_fraction": 0.534,
+        "layout_width_factor": 2,
+        "focus_scale_factor": 1.55,
+        "display_extent_factor": 2.1
       },
-      "note": "A generic rod-shaped bacterium, not an identified species or measured specimen. Its body, with short surface pili, is calibrated to the listed 2 micrometer length of E. coli; the trailing flagellum, roughly as long again, is not part of that measurement.",
+      "note": "An illustrative rod-shaped bacterium with many short pili and several long flagella. The artist did not identify a species, so it should not be read as a specimen of E. coli; its main body is calibrated to the listed representative 2-micrometer E. coli length. The flagella are outside that measurement, and the model's surface pattern is illustrative.",
       "processing": {
         "operations": [
-          "Stage: download via Sketchfab API, embed buffers/images into GLB (no textures present)",
-          "Delete duplicate overlapping outer-shell mesh node (\"Capsule\", a redundant copy of \"Cell_Wall\")",
-          "Delete fully-internal, never-visible organelle meshes (Cytoplasm, Nucleoid, Plasmid) hidden behind the opaque cell wall",
-          "gltf-transform prune + dedup + weld + join to merge remaining materials/meshes and cut draw calls (26 -> 3)",
-          "Recolor the single remaining material to a warm tan/cream (baseColor 0.86/0.76/0.58, roughness 0.55, metalness 0) instead of flat grey",
-          "Measured body-only extent (excluding flagellum) vs full extent (including flagellum) with scripts/audit_glb_geometry.mjs to derive measure_fraction"
+          "Downloaded through the Sketchfab model API",
+          "Embedded glTF buffers and images into a GLB",
+          "Reduced base-color and normal textures to 512 pixels",
+          "Measured body-only X extent against full extent to calibrate the 2-micrometer value"
         ],
-        "source_model_name": "Bacterial Cell / Bacterium.",
-        "source_author": "ModuleStudios"
+        "source_model_name": "Bacterium",
+        "source_author": "andrewfrueh"
       },
-      "src": "content/visualizations/models/sketchfab-bacterium-rod-v2.glb",
+      "src": "content/visualizations/models/sketchfab-bacterium-piliated-v3.glb",
       "license_files": [
         "licenses/CC-BY-4.0.txt"
       ],
+      "geometry": "mesh",
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 376276,
+      "sha256": "9330515f23c85c94d4393c5394f18e99ae4322a19fd66ad7fc7e77d1dfcb83a0",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 7890,
       "animations": 0,
       "skins": 0
     },
@@ -2270,14 +2268,12 @@
       "skins": 0
     },
     {
-      "id": "sketchfab-mount-everest",
-      "source": "https://sketchfab.com/3d-models/mount-everest-and-mountains-tibet-nepal-e086183da4854416a606dc4f3bbea3ae",
-      "author": "arizonaguide (Nate Loper) on Sketchfab",
-      "license": "CC-BY-4.0",
-      "license_url": "http://creativecommons.org/licenses/by/4.0/",
-      "sketchfab_uid": "e086183da4854416a606dc4f3bbea3ae",
-      "source_sha256": "2b358c6c565302700cc8d2b0cfaa7732085ecf9929deead400d7be736d77bb3e",
-      "source_bytes": 45237686,
+      "id": "mapzen-everest-dem",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "author": "Mapzen Terrain Tiles / Tilezen; underlying SRTM data courtesy of the U.S. Geological Survey; terrain adaptation by Universe Scales",
+      "license": "Mapzen Terrain Tiles attribution; underlying SRTM public-domain U.S. government data",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [],
       "matches": {
         "length": [
           "Mount Everest"
@@ -2286,40 +2282,36 @@
       "geometry": "mesh",
       "presentation": {
         "measure_axis": "y",
-        "measure_fraction": 1.0,
-        "layout_width_factor": 0.95,
-        "pitch": 22
+        "measure_fraction": 1,
+        "layout_width_factor": 0.92,
+        "pitch": 27
       },
-      "note": "Everest's summit massif from a heightmap draped with rock and snow imagery, shown as a block diagram. Its 3.35 km of relief matches the drop from the 8,848 m summit to glaciers near 5,500 m, so the heightmap is treated as true-scale meters; the faint plinth beneath continues the crust down to sea level, so the whole block is the listed 8,848 m tall.",
+      "note": "This gridded terrain depicts the Everest summit area from Mapzen elevation tiles, with an opaque section down to sea level. The underlying approximately 30 m DEM does not resolve the knife-edge summit; a local correction anchors its maximum to the surveyed 8,848.86 m. Colors schematize rock and snow by elevation, not satellite imagery. This is an explanatory terrain diagram, not a climbing or navigation map.",
       "processing": {
         "operations": [
-          "Rejected the user-suggested Mt Everest model (bd68a19f3f7c445d85318a3a6da4c480): isDownloadable=false and no usable license",
-          "Selected 'Mount Everest and Mountains - Tibet & Nepal' by arizonaguide (CC-BY, isDownloadable, USGS/NASA-tagged, a clean 65x65 heightmap grid draped with a real aerial/satellite-style rock-and-snow texture) over a competing high-poly candidate (phamsondetector's 'Mount Everest') whose Sketchfab thumbnail failed to render, a yellow flag for asset quality",
-          "Staged via scripts/sketchfab_models.py with texture-size 1024",
-          "Computed the single node's cumulative rotation matrix analytically and baked it into world-space positions/normals (custom Python script using scripts/fetch_model_assets.py's GLB helpers + numpy)",
-          "Found the two highest points of the tile sit at opposite U=0/U=1 texture edges (two separate 8000m-class peaks); cropped the triangle soup to a square region anchored on the Everest side (X in [xmin, xmin+zSpan*1.05]) to drop the second peak and its surrounding terrain",
-          "Rebuilt a minimal indexed GLB from the kept triangles, then ran glTF-Transform weld+prune for a clean, fully-deduplicated mesh (4,993 triangles, 2,601 vertices, 256 KB total, well under budget)",
-          "scripts/build_terrain_block.py --summit 8848: strata-shaded rock walls from the terrain edge to its lowest point, a translucent plinth down to sea level, and summit/sea-level label nodes"
+          "Sampled public Terrarium z12 elevation tiles around 27.9881 N, 86.9250 E using scripts/build_everest_dem.py",
+          "Decimated to a 95 by 95 height grid, made a closed opaque sea-level block and altitude-colored surface",
+          "Locally corrected sampled summit 8743 m to surveyed 8848.86 m without rescaling the full terrain"
         ],
-        "source_model_name": "Mount Everest and Mountains \u2013 Tibet & Nepal",
-        "source_author": "arizonaguide"
+        "data_sources": [
+          "https://registry.opendata.aws/terrain-tiles/",
+          "https://github.com/tilezen/joerd/blob/master/docs/data-sources.md",
+          "https://github.com/tilezen/joerd/blob/master/docs/attribution.md"
+        ]
       },
-      "src": "content/visualizations/models/sketchfab-mount-everest.glb",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
+      "src": "content/visualizations/models/mapzen-everest-dem.glb",
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 399512,
-      "sha256": "b2040ba28a2bb7ee2a4a7cdab84fa4c981863ef05928be04814e696b05e05612",
+      "bytes": 602352,
+      "sha256": "526b1d2e9a68f924cce6f6a37bcb133572b08d9c00ae9d95ea1dc34bdda9adc8",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
       "mesh_count": 1,
-      "triangle_count": 7643,
+      "triangle_count": 18426,
       "animations": 0,
       "skins": 0
     },
@@ -2339,7 +2331,7 @@
         ]
       },
       "geometry": "mesh",
-      "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, with their radii at the same scale. The white bracket drops from each center, and thin circles mark each body. Lunar distance changes during its orbit; this idealized diagram is not a view from a particular date or phase.",
+      "note": "NASA Earth and Moon spheres at a mean center-to-center separation of 384,400 km, with their radii at the same scale. The white bracket touches the facing limbs and joins below them; the listed distance is measured center to center. Lunar distance changes during its orbit; this idealized diagram is not a view from a particular date or phase.",
       "src": "content/visualizations/models/nasa-earth-moon-distance.glb",
       "presentation": {
         "reference_size": 1,
@@ -2404,7 +2396,7 @@
         ]
       },
       "geometry": "mesh",
-      "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit (149,597,870,700 m) center-to-center, using their approximate mean radii. At this scale Earth is far smaller than a pixel; its label, circle and the bracket mark where it is. The bracket spans the center-to-center distance. The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
+      "note": "NASA Sun and Earth spheres separated by exactly one astronomical unit (149,597,870,700 m) center-to-center, using their approximate mean radii. At this scale Earth is far smaller than a pixel; its label and the bracket mark where it is. The bracket touches the facing limbs and joins below them; the listed distance is measured center to center. The au is a defined unit close to, but not identical to, the varying Sun-Earth distance. This idealized diagram is not an orbital snapshot.",
       "src": "content/visualizations/models/nasa-sun-earth-au.glb",
       "presentation": {
         "reference_size": 1,
@@ -2454,14 +2446,15 @@
       "skins": 0
     },
     {
-      "id": "sketchfab-statue-of-liberty",
-      "source": "https://sketchfab.com/3d-models/statue-of-liberty-souvenir-f109b8b65eef4440a9ef2ad9a4b23714",
-      "author": "seifurt on Sketchfab",
+      "id": "sketchfab-liberty-gravity-jack",
+      "source": "https://sketchfab.com/3d-models/statue-of-liberty-84094e8d5e724b5c882cf576ca12e44e",
+      "author": "Gravity Jack on Sketchfab",
       "license": "CC-BY-4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "sketchfab_uid": "f109b8b65eef4440a9ef2ad9a4b23714",
-      "source_sha256": "dda36a8b95bc960985c05cfeb394e61c1520a74139750934dbfcd58175651328",
-      "source_bytes": 33605678,
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "sketchfab_uid": "84094e8d5e724b5c882cf576ca12e44e",
       "matches": {
         "length": [
           "Statue of Liberty"
@@ -2470,44 +2463,36 @@
       "geometry": "mesh",
       "presentation": {
         "measure_axis": "y",
-        "layout_width_factor": 0.45,
-        "opaque": true
+        "measure_fraction": 0.4952,
+        "liberty_pedestal": true,
+        "focus_scale_factor": 2.05,
+        "layout_width_factor": 0.9,
+        "pitch": 10
       },
-      "note": "A photogrammetry scan of a detailed Statue of Liberty replica with a copper-green patina; the replica's souvenir display base was cut away. Its height, from the base of the robe to the tip of the torch, is calibrated to the listed 46.05 m of the copper statue; the real granite pedestal and fort, which lift the torch to 93 m, are not shown.",
+      "note": "Gravity Jack's hand-modeled, PBR-textured statue, not a photogrammetric scan. A simplified tiered granite-colored pedestal and foundation are added in the explorer. The copper statue from base to torch is the listed 46.05 m; the added support is approximately 46.94 m, making the full diagram approximately 92.99 m from ground to flame. The pedestal geometry is illustrative rather than a survey of Liberty Island.",
       "processing": {
+        "source_model_name": "Statue Of Liberty",
+        "source_author": "Gravity Jack",
         "operations": [
-          "staged via scripts/sketchfab_models.py (download original archive, embed textures at 1024px)",
-          "gltf-transform weld",
-          "gltf-transform simplify --ratio 0.45 --error 0.001 (source model was 113,550 triangles as published; simplified here to 51,096)",
-          "gltf-transform quantize (adds KHR_mesh_quantization; positions/normals/tangents/uvs to normalized integers)",
-          "gltf-transform resize --width 512 --height 512 (baseColor/normal/metallicRoughness textures 1024 -> 512)",
-          "gltf-transform prune (dropped an unused emissive texture left over after resize)",
-          "gltf-transform dedup",
-          "scripts/crop_glb.py --below -0.77: remove the souvenir display base (bottom 11.5% of the mesh) and its unused vertices"
+          "Downloaded Sketchfab glTF archive under CC BY 4.0",
+          "Embedded textures resized to at most 512 px",
+          "Appended procedural tiered pedestal at runtime, dimensioned against U.S. National Park Service statue and pedestal heights"
         ],
-        "source_model_name": "Statue of Liberty Souvenir",
-        "source_author": "seifurt"
+        "pedestal_dimensions_source": "https://www.nps.gov/stli/learn/statue-of-liberty-facts.htm"
       },
-      "src": "content/visualizations/models/sketchfab-statue-of-liberty.glb",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
+      "src": "content/visualizations/models/sketchfab-liberty-gravity-jack.glb",
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 979652,
-      "sha256": "1ae3493e7e98fdeb68f32e92dc09e90082a502afa35dd504d0653903035f8fef",
-      "extensions_used": [
-        "KHR_mesh_quantization"
-      ],
-      "extensions_required": [
-        "KHR_mesh_quantization"
-      ],
+      "bytes": 2582628,
+      "sha256": "56c39383ef80766e62236d4d05c140d05b26d30a5ef4097202b3d1491cccf5b5",
+      "extensions_used": [],
+      "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
-      "mesh_count": 1,
-      "triangle_count": 34307,
+      "mesh_count": 3,
+      "triangle_count": 56931,
       "animations": 0,
       "skins": 0
     }

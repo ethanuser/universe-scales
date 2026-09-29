@@ -9,7 +9,7 @@ class UniversalScales {
         this.dimensionCatalog = [];
         this.dimensionCatalogBySlug = new Map();
         this.exchangeRates = null;
-        this.notationMode = 'scientific'; // 'scientific', 'mathematical', 'human'
+        this.notationMode = 'scientific'; // 'scientific', 'mathematical', 'human', 'si'
 
         // Initialize formatter
         this.formatter = new NumberFormatter(this.notationMode);
@@ -566,7 +566,9 @@ class UniversalScales {
     }
 
     initNotation() {
-        const savedMode = localStorage.getItem('notationMode') || 'scientific';
+        const storedMode = localStorage.getItem('notationMode') || 'scientific';
+        const savedMode = ['scientific', 'mathematical', 'human', 'si'].includes(storedMode)
+            ? storedMode : 'scientific';
         this.notationMode = savedMode;
         this.formatter.setNotationMode(savedMode);
 
@@ -644,7 +646,7 @@ class UniversalScales {
         if (this.usesLinearDisplayValues()) {
             return;
         }
-        const modes = ['scientific', 'mathematical', 'human'];
+        const modes = ['scientific', 'mathematical', 'human', 'si'];
         const currentIndex = modes.indexOf(this.notationMode);
         this.notationMode = modes[(currentIndex + 1) % modes.length];
         this.formatter.setNotationMode(this.notationMode);
@@ -711,17 +713,23 @@ class UniversalScales {
         const converted = unit.special_conversion === 'sound_intensity_db'
             ? (value > 0 ? 10 * Math.log10(value / 1e-12) : Number.NEGATIVE_INFINITY)
             : this.convertBaseValueToUnit(value, unit);
-        return unit.special_conversion === 'sound_intensity_db'
-            ? this.formatter.formatLinearNumber(converted, 2)
+        if (unit.special_conversion === 'sound_intensity_db') {
+            return this.formatter.formatLinearNumber(converted, 2);
+        }
+        return this.notationMode === 'si' && !this.isLinearScale()
+            ? this.formatter.formatSIValue(converted, unit.symbol, 2)
             : this.formatNumber(converted, 2, true);
     }
 
     formatValueInUnitHTML(value, unit) {
         const formatted = this.formatValueInUnit(value, unit);
+        if (this.notationMode === 'si' && !this.isLinearScale() && unit.special_conversion !== 'sound_intensity_db')
+            return this.formatSIValueHTML(formatted);
         const valueHtml = !this.isLinearScale() && this.notationMode === 'mathematical' &&
             unit.special_conversion !== 'sound_intensity_db'
             ? formatted : this.escapeHtml(formatted);
-        const symbolHtml = this.formatUnitSymbolHTML(unit.symbol);
+        const symbolHtml = this.notationMode === 'si' && !this.isLinearScale() && unit.special_conversion !== 'sound_intensity_db'
+            ? '' : this.formatUnitSymbolHTML(unit.symbol);
         return symbolHtml ? `${valueHtml} ${symbolHtml}` : valueHtml;
     }
 
@@ -1027,9 +1035,9 @@ class UniversalScales {
     async loadDimension(dimension) {
         const requestId = this.dimensionRequestId = (this.dimensionRequestId || 0) + 1;
         try {
-            let response = await fetch(`exports/frontend/${dimension}.yaml`);
+            let response = await fetch(`exports/frontend/${dimension}.yaml`, { cache: 'no-cache' });
             if (!response.ok) {
-                response = await fetch(`data/${dimension}.yaml`);
+                response = await fetch(`data/${dimension}.yaml`, { cache: 'no-cache' });
             }
             if (!response.ok) {
                 throw new Error(`Missing dimension payload for ${dimension}`);
@@ -1685,6 +1693,9 @@ class UniversalScales {
         if (this.isSoundIntensityDecibelUnit()) {
             return this.formatter.formatLinearNumber(convertedValue, Math.max(precision, forTooltip ? 1 : 0));
         }
+        if (this.notationMode === 'si' && !this.isLinearScale()) {
+            return this.formatter.formatSIValue(convertedValue, this.getCurrentUnitDefinition()?.symbol || '', precision);
+        }
         return this.formatNumber(convertedValue, precision, forTooltip);
     }
 
@@ -1692,6 +1703,9 @@ class UniversalScales {
         if (this.isSoundIntensityDecibelUnit()) {
             const convertedValue = value > 0 ? 10 * Math.log10(value / 1e-12) : Number.NEGATIVE_INFINITY;
             return this.formatter.formatLinearNumber(convertedValue, precision);
+        }
+        if (this.notationMode === 'si' && !this.isLinearScale()) {
+            return this.formatter.formatSIValue(value, this.getCurrentUnitDefinition()?.symbol || '', precision);
         }
         return this.formatNumber(value, precision);
     }
@@ -2019,11 +2033,20 @@ class UniversalScales {
     }
 
     formatTooltipValueHTML(formattedValue, unitSymbol) {
+        if (this.notationMode === 'si' && !this.isLinearScale() && !this.isSoundIntensityDecibelUnit()) {
+            return this.formatSIValueHTML(formattedValue);
+        }
         const valueHtml = (!this.usesLinearDisplayValues() && this.notationMode === 'mathematical')
             ? formattedValue
             : this.escapeHtml(formattedValue);
         const unitHtml = this.formatUnitSymbolHTML(unitSymbol);
         return unitHtml ? `${valueHtml} ${unitHtml}` : valueHtml;
+    }
+
+    formatSIValueHTML(formattedValue) {
+        const space = String(formattedValue).indexOf(' ');
+        if (space < 0) return this.escapeHtml(formattedValue);
+        return `${this.escapeHtml(formattedValue.slice(0, space))} ${this.formatUnitSymbolHTML(formattedValue.slice(space + 1))}`;
     }
 
     toSuperscript(value) {

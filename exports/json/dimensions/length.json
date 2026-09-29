@@ -2,22 +2,22 @@
   "base_unit": "meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 60,
+    "candidate_count": 66,
     "candidate_shortfall_to_preferred_target": 0,
     "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
     "preferred_max_items": 100,
-    "preferred_target_items": 60,
-    "raw_candidate_count": 60,
+    "preferred_target_items": 66,
+    "raw_candidate_count": 66,
     "required_min_items": 24,
-    "selected_count": 60,
+    "selected_count": 66,
     "selected_primary_count": 19,
-    "selected_secondary_count": 41,
+    "selected_secondary_count": 47,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 60
+      "secondary_reference": 66
     },
-    "target_selected_count": 60
+    "target_selected_count": 66
   },
   "description_format": "markdown",
   "dimension": "length",
@@ -352,6 +352,60 @@
     },
     {
       "caveats": null,
+      "content_status": "curated",
+      "description": "After cobalt-60 decays, its daughter nickel-60 releases a gamma ray with about 1.173 MeV of energy. The corresponding wavelength is only about 1.06 pm, calculated from $\\lambda=hc/E$. That is much shorter than an atom's diameter. This marker represents **one spectral line**, not all gamma rays. The paired 1.332 MeV line from the same decay would sit at a slightly shorter wavelength. [NIST describes the cobalt-60 gamma cascade](https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "After cobalt-60 decays, its daughter nickel-60 releases a gamma ray with about 1.173 MeV of energy. The corresponding wavelength is only about 1.06 pm, calculated from $\\lambda=hc/E$. That is much shorter than an atom's diameter. This marker represents **one spectral line**, not all gamma rays. The paired 1.332 MeV line from the same decay would sit at a slightly shorter wavelength. [NIST describes the cobalt-60 gamma cascade](https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Gamma Ray Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.057e-12",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-gamma-ray-wavelength",
+      "name": "Gamma Ray Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-nvlpubs-nist-gov-nistpubs-jres-088-3-v88-3-pdf",
+          "license_text": null,
+          "note": null,
+          "publisher": "nvlpubs.nist.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "V88-3.pdf",
+          "url": "https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The wavelength of one gamma line from cobalt-60 decay.",
+      "value": 1.057e-12,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
       "content_status": "seeded",
       "description": "The quantum mechanical 'size' of a hydrogen atom, where the electron exists in a probability cloud around the nucleus. This distance emerges from the balance between electrostatic attraction and quantum uncertainty. Remarkably, if you scaled up a hydrogen atom so its nucleus was the size of a basketball, the electron would orbit at a distance of 2.5 kilometers, illustrating the vast emptiness within atoms.",
       "description_format": "markdown",
@@ -406,11 +460,11 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
-      "description": "The van der Waals radius of carbon, defining how close non-bonded atoms can approach before repulsion dominates. This 'personal space' radius is crucial for molecular recognition - enzymes use it to distinguish between different molecules. The carbon atom's versatility comes from its ability to form four bonds, making it the backbone of all organic chemistry and life itself.",
+      "content_status": "curated",
+      "description": "The 70 pm marker is carbon's **empirical atomic radius**, a useful comparison number rather than an edge you could touch. Carbon's nonbonded, van der Waals radius is about 177 pm, so the two conventions answer different questions. In the explorer, the blue inner cloud represents its 1s electrons; the outer 2s cloud and two perpendicular, dumbbell-shaped 2p clouds show where its remaining four electrons are likely to be found. The clouds use an independent-electron approximation, not an exact six-electron solution. [WebElements lists both radii](https://webelements.co.uk/carbon/atom_sizes.html).",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The van der Waals radius of carbon, defining how close non-bonded atoms can approach before repulsion dominates. This 'personal space' radius is crucial for molecular recognition - enzymes use it to distinguish between different molecules. The carbon atom's versatility comes from its ability to form four bonds, making it the backbone of all organic chemistry and life itself.",
+      "description_medium": "The 70 pm marker is carbon's **empirical atomic radius**, a useful comparison number rather than an edge you could touch. Carbon's nonbonded, van der Waals radius is about 177 pm, so the two conventions answer different questions. In the explorer, the blue inner cloud represents its 1s electrons; the outer 2s cloud and two perpendicular, dumbbell-shaped 2p clouds show where its remaining four electrons are likely to be found. The clouds use an independent-electron approximation, not an exact six-electron solution. [WebElements lists both radii](https://webelements.co.uk/carbon/atom_sizes.html).",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -418,7 +472,7 @@
         "source_trace": {
           "method": "derived",
           "original_value_text": "7e-11",
-          "source_url": "https://en.wikipedia.org/wiki/Van_der_Waals_radius"
+          "source_url": "https://webelements.co.uk/carbon/atom_sizes.html"
         }
       },
       "hook": null,
@@ -427,19 +481,19 @@
       "qualifiers": {},
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Van_der_Waals_radius",
+      "source": "https://webelements.co.uk/carbon/atom_sizes.html",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-van-der-waals-radius",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-webelements-co-uk-carbon-atom-sizes-html",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "webelements.co.uk",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Van der Waals radius",
-          "url": "https://en.wikipedia.org/wiki/Van_der_Waals_radius"
+          "title": "atom sizes.html",
+          "url": "https://webelements.co.uk/carbon/atom_sizes.html"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -453,8 +507,62 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The van der Waals radius of carbon, defining how close non-bonded atoms can approach before repulsion dominates.",
+      "summary_short": "An empirical atomic radius, distinct from carbon's van der Waals radius.",
       "value": 7e-11,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "When an electron drops into an inner shell of a copper atom, the emitted X-ray can have a wavelength of 0.15405925 nm. This particular line matters because X-ray wavelengths are comparable with the spacing of atoms in a crystal, allowing diffraction patterns to reveal atomic structure. The number is a measured **line wavelength**, not a boundary between X-rays and other radiation. The copper K-alpha spectrum contains nearby components too; [NIST measured their distinct wavelengths](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "When an electron drops into an inner shell of a copper atom, the emitted X-ray can have a wavelength of 0.15405925 nm. This particular line matters because X-ray wavelengths are comparable with the spacing of atoms in a crystal, allowing diffraction patterns to reveal atomic structure. The number is a measured **line wavelength**, not a boundary between X-rays and other radiation. The copper K-alpha spectrum contains nearby components too; [NIST measured their distinct wavelengths](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "X-ray Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.5405925e-10",
+          "source_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-x-ray-wavelength",
+      "name": "X-ray Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-tsapps-nist-gov-publication-get-pdf-cfm-pub-id-920358",
+          "license_text": null,
+          "note": null,
+          "publisher": "tsapps.nist.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "get pdf.cfm",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The measured wavelength of copper's K-alpha-1 X-ray line.",
+      "value": 1.5405925e-10,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -734,6 +842,60 @@
     },
     {
       "caveats": null,
+      "content_status": "curated",
+      "description": "A low-pressure mercury lamp emits much of its radiation at 253.7 nm, in the ultraviolet. Germicidal lamps use that line to damage microbial genetic material in air and on surfaces. The wavelength is shorter than visible violet light, so the useful radiation itself cannot be judged by eye. The marker shows a particular lamp emission line, not the whole ultraviolet band; exposure depends on lamp design and placement. [CDC describes its wavelength and use](https://www.cdc.gov/infection-control/hcp/environmental-control/air.html).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A low-pressure mercury lamp emits much of its radiation at 253.7 nm, in the ultraviolet. Germicidal lamps use that line to damage microbial genetic material in air and on surfaces. The wavelength is shorter than visible violet light, so the useful radiation itself cannot be judged by eye. The marker shows a particular lamp emission line, not the whole ultraviolet band; exposure depends on lamp design and placement. [CDC describes its wavelength and use](https://www.cdc.gov/infection-control/hcp/environmental-control/air.html).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "UV Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.537e-07",
+          "source_url": "https://www.cdc.gov/infection-control/hcp/environmental-control/air.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-uv-wavelength",
+      "name": "UV Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.cdc.gov/infection-control/hcp/environmental-control/air.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-cdc-gov-infection-control-hcp-environmental-control-air-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.cdc.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "air.html",
+          "url": "https://www.cdc.gov/infection-control/hcp/environmental-control/air.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The dominant ultraviolet line of a low-pressure mercury lamp.",
+      "value": 2.537e-07,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
       "content_status": "seeded",
       "description": "The wavelength of green light, the peak sensitivity of human vision. This wavelength defines the resolution limit of optical microscopes and explains why we can't see individual atoms with visible light. The evolution of color vision in primates was driven by the need to distinguish ripe fruits from foliage, with green being the most common color in nature. This wavelength also determines the diffraction patterns that create the iridescent colors in butterfly wings and soap bubbles.",
       "description_format": "markdown",
@@ -891,6 +1053,60 @@
       ],
       "summary_short": "The diameter of red blood cells, the oxygen carriers of the human body.",
       "value": 8e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A body near 310 K, roughly human body temperature, emits a broad spread of thermal radiation. Wien's law puts the peak of its wavelength spectrum near 9.35 \u00b5m, deep in the infrared. This is why thermal cameras look at wavelengths far longer than visible light. The peak is only a marker within that broad spectrum, not the sole wavelength emitted, and a real body's emissivity changes its detailed spectrum. [NASA explains the temperature and peak-wavelength relation](https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A body near 310 K, roughly human body temperature, emits a broad spread of thermal radiation. Wien's law puts the peak of its wavelength spectrum near 9.35 \u00b5m, deep in the infrared. This is why thermal cameras look at wavelengths far longer than visible light. The peak is only a marker within that broad spectrum, not the sole wavelength emitted, and a real body's emissivity changes its detailed spectrum. [NASA explains the temperature and peak-wavelength relation](https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Infrared Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "9.35e-06",
+          "source_url": "https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-infrared-wavelength",
+      "name": "Infrared Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-lhea-gsfc-nasa-gov-archive-mwmw-mmw-bbody-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "mmw bbody.html",
+          "url": "https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The approximate thermal emission peak of a 310 K body.",
+      "value": 9.35e-06,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1274,6 +1490,60 @@
     },
     {
       "caveats": null,
+      "content_status": "curated",
+      "description": "Most home microwave ovens operate near 2.45 GHz. In free space, $\\lambda=c/f$ gives a wavelength of about 12.2 cm, on the scale of an oven cavity rather than a molecule of food. The appliance heats food through how its alternating field interacts with matter; this marker measures one cycle of the field **in free space**. Inside food, the wavelength is shorter because the wave travels more slowly. [FDA identifies 2.45 GHz as the home-oven frequency](https://www.fda.gov/media/103619/download).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Most home microwave ovens operate near 2.45 GHz. In free space, $\\lambda=c/f$ gives a wavelength of about 12.2 cm, on the scale of an oven cavity rather than a molecule of food. The appliance heats food through how its alternating field interacts with matter; this marker measures one cycle of the field **in free space**. Inside food, the wavelength is shorter because the wave travels more slowly. [FDA identifies 2.45 GHz as the home-oven frequency](https://www.fda.gov/media/103619/download).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Microwave Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.12236",
+          "source_url": "https://www.fda.gov/media/103619/download"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-microwave-wavelength",
+      "name": "Microwave Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.fda.gov/media/103619/download",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-fda-gov-media-103619-download",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.fda.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "download",
+          "url": "https://www.fda.gov/media/103619/download"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The free-space wavelength at a household oven's 2.45 GHz frequency.",
+      "value": 0.12236,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
       "content_status": "seeded",
       "description": "From nose to rump, a typical domestic cat is about 46 cm long; its tail adds roughly another 30 cm. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
       "description_format": "markdown",
@@ -1381,6 +1651,60 @@
       "value": 1.7,
       "value_type": "derived",
       "wikidata_qid": "Q5"
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "At 100 MHz, a radio wave travels about three meters during one oscillation: $\\lambda=c/f$. This is a familiar point inside the US FM broadcast band, which extends from 88 to 108 MHz. An antenna need not be three meters long; designs often use fractions of the wavelength and depend on surrounding conductors. The marker represents one example frequency, while radio wavelengths span many orders of magnitude. [The FM band is specified in federal regulations](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At 100 MHz, a radio wave travels about three meters during one oscillation: $\\lambda=c/f$. This is a familiar point inside the US FM broadcast band, which extends from 88 to 108 MHz. An antenna need not be three meters long; designs often use fractions of the wavelength and depend on surrounding conductors. The marker represents one example frequency, while radio wavelengths span many orders of magnitude. [The FM band is specified in federal regulations](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Radio Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.9979",
+          "source_url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-radio-wavelength",
+      "name": "Radio Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-ecfr-gov-current-title-47-chapter-i-subchapter-c-part-73-subpart-h-section-73-201",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.ecfr.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "section-73.201",
+          "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The free-space wavelength of a 100 MHz FM broadcast signal.",
+      "value": 2.9979,
+      "value_type": "derived",
+      "wikidata_qid": null
     },
     {
       "caveats": null,
@@ -3282,7 +3606,7 @@
     }
   ],
   "preferred_max_items": 100,
-  "preferred_target_items": 60,
+  "preferred_target_items": 66,
   "related_resources": [
     {
       "name": "Scale of the Universe",

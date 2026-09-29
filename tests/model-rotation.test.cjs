@@ -5,7 +5,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const source = fs.readFileSync(path.join(__dirname, '../js/experiences/models.js'), 'utf8')
-    .replace(/^import .*;\n/gm, '');
+    .replace(/^import .*;\n/gm, '').replace(/^export /gm, '');
 let now = 0;
 let nextFrame;
 const context = {

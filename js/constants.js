@@ -121,6 +121,7 @@ const CONFIG = {
     NOTATION_BUTTON_TEXTS: {
         'scientific': '1e10',
         'mathematical': '1×10^10',
-        'human': '10B'
+        'human': '10B',
+        'si': '10 km'
     }
 };

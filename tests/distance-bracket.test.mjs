@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import * as THREE from '../js/vendor/three/three.module.min.js';
-import { BRACKET_DROP, HYDROGEN_95_RADIUS, addDistanceBracket, planetPositions, proceduralScene }
+import { BRACKET_DROP, addDistanceBracket, planetPositions }
     from '../js/experiences/procedural-models.js';
 
 function diagram(left, right) {
@@ -18,7 +18,7 @@ function diagram(left, right) {
 }
 const close = (a, b) => Math.abs(a - b) < 1e-12;
 
-test('bracket marks center-to-center distance below both bodies', () => {
+test('bracket touches the facing limbs and lies below both bodies', () => {
     const earth = 6_371_000 / 384_400_000, moon = 1_737_500 / 384_400_000;
     const scene = diagram(['Earth', -0.5, earth], ['Moon', 0.5, moon]);
     addDistanceBracket(scene, { bodies: ['Earth', 'Moon'] });
@@ -27,35 +27,21 @@ test('bracket marks center-to-center distance below both bodies', () => {
         .sort((a, b) => a.position.x - b.position.x);
     const [horizontal] = lines.filter(line => line.userData.screenLine.axis === 'x');
     const bottom = -(earth + BRACKET_DROP);
-    for (const [line, x, radius] of [[vertical[0], -0.5, earth], [vertical[1], 0.5, moon]]) {
-        // Each line starts at the bottom of its body, directly below the center.
+    for (const [line, x] of [[vertical[0], -0.5 + earth], [vertical[1], 0.5 - moon]]) {
         assert.ok(close(line.position.x, x));
-        assert.ok(close(line.position.y + line.userData.screenLine.length / 2, -radius));
+        assert.ok(close(line.position.y + line.userData.screenLine.length / 2, 0));
         assert.ok(close(line.position.y - line.userData.screenLine.length / 2, bottom));
     }
     assert.ok(close(horizontal.position.y, bottom));
-    assert.ok(close(horizontal.userData.screenLine.length, 1));
+    assert.ok(close(horizontal.userData.screenLine.length, 1 - earth - moon));
     for (const name of ['Earth', 'Moon'])
-        assert.deepEqual(scene.getObjectByName(name).userData, { label: name, outline: true, sphere: true });
+        assert.deepEqual(scene.getObjectByName(name).userData, { label: name, sphere: true });
 });
 
 test('bracket skips diagrams whose named bodies are missing', () => {
     const scene = diagram(['Earth', -0.5, 0.01], ['Moon', 0.5, 0.01]);
     addDistanceBracket(scene, { bodies: ['Earth', 'Mars'] });
     assert.equal(scene.getObjectByName('distance-bracket'), undefined);
-});
-
-test('hydrogen dots stop at the 95% boundary sphere', () => {
-    const scene = proceduralScene('hydrogen-1s');
-    const cloud = scene.children.find(child => child.isPoints);
-    const position = cloud.geometry.getAttribute('position');
-    let outside = 0;
-    for (let index = 0; index < position.count; index++)
-        if (new THREE.Vector3().fromBufferAttribute(position, index).length() > HYDROGEN_95_RADIUS + 1e-9) outside++;
-    assert.equal(outside, 0);
-    // 1 - e^(-2r)(1 + 2r + 2r^2) at the boundary radius.
-    const r = HYDROGEN_95_RADIUS;
-    assert.ok(Math.abs(1 - Math.exp(-2 * r) * (1 + 2 * r + 2 * r * r) - 0.95) < 1e-4);
 });
 
 test('planet positions match known heliocentric distances', () => {

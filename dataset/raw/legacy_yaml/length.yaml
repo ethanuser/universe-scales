@@ -84,14 +84,12 @@ items:
   name: Hydrogen Atom
   source: https://en.wikipedia.org/wiki/Bohr_radius
   value: 5.3e-11
-- description: The van der Waals radius of carbon, defining how close non-bonded
-    atoms can approach before repulsion dominates. This 'personal space' radius
-    is crucial for molecular recognition - enzymes use it to distinguish between
-    different molecules. The carbon atom's versatility comes from its ability
-    to form four bonds, making it the backbone of all organic chemistry and
-    life itself.
+- description: Carbon's empirical atomic radius is about 70 picometers. It is
+    a convention for comparing atomic sizes, not a hard boundary of its
+    electron cloud. Carbon's van der Waals radius is much larger, about
+    177 picometers.
   name: Carbon Atom
-  source: https://en.wikipedia.org/wiki/Van_der_Waals_radius
+  source: https://webelements.co.uk/carbon/atom_sizes.html
   value: 7e-11
 - description: The O-H bond length in water, the most important molecule for life.
     This precise distance creates water's unique properties - its high boiling
@@ -155,6 +153,36 @@ items:
   name: Visible Light Wavelength
   source: https://en.wikipedia.org/wiki/Visible_spectrum
   value: 5e-7
+- description: A 1.173 MeV gamma ray emitted during cobalt-60 decay has a
+    wavelength of about 1.06 picometers, from wavelength equals h c over energy.
+  name: Gamma Ray Wavelength
+  source: https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf
+  value: 1.057e-12
+- description: The copper K-alpha-1 X-ray emission line, used in diffraction,
+    has a measured wavelength of 0.15405925 nanometers.
+  name: X-ray Wavelength
+  source: https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358
+  value: 1.5405925e-10
+- description: A low-pressure mercury germicidal lamp emits strongly at
+    253.7 nanometers in the ultraviolet.
+  name: UV Wavelength
+  source: https://www.cdc.gov/infection-control/hcp/environmental-control/air.html
+  value: 2.537e-7
+- description: Thermal radiation from a 310 kelvin body peaks near 9.35
+    micrometers by Wien's law, in the infrared.
+  name: Infrared Wavelength
+  source: https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html
+  value: 9.35e-6
+- description: A 2.45 gigahertz household microwave has a free-space wavelength
+    of about 12.2 centimeters, calculated from the speed of light.
+  name: Microwave Wavelength
+  source: https://www.fda.gov/media/103619/download
+  value: 0.12236
+- description: A 100 megahertz FM broadcast signal has a free-space wavelength
+    of about three meters, calculated from the speed of light.
+  name: Radio Wavelength
+  source: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201
+  value: 2.9979
 - description: The length of E. coli bacteria, the workhorse of molecular biology.
     These rod-shaped microbes can reproduce every 20 minutes under ideal
     conditions, meaning a single bacterium could theoretically produce

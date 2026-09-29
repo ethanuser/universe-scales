@@ -125,6 +125,19 @@ Build the canonical dataset and regenerate exports:
 ./venv/bin/python scripts/dataset/build_dataset.py
 ```
 
+For a change limited to one dimension, use the scoped rebuild. It builds into a
+temporary staging directory, merges only that dimension's SQLite/JSON/YAML rows,
+and preserves unrelated exported rows and files:
+
+```bash
+./venv/bin/python -m scripts.dataset.rebuild_dimension length
+./venv/bin/python -m scripts.dataset.rebuild_dimension length --dry-run
+```
+
+The full rebuild and corpus-wide verifier currently expose pre-existing drift in
+other dimensions (notably a `torque.yaml` selected-count mismatch). A scoped
+rebuild avoids altering those unrelated outputs; it does not resolve that drift.
+
 Run verification checks, including an optional determinism rebuild:
 
 ```bash
@@ -154,7 +167,7 @@ Audit generated descriptions against the museum-plaque style standard:
 2. Add or revise dimension metadata in `dataset/raw/config/dimensions.json` and `dataset/raw/config/dimension_profiles.json`.
 3. Update legacy normalization rules in `dataset/raw/config/legacy_overrides.json` when a legacy imported item needs identity, qualifier, or eligibility changes.
 4. Add or revise optional narrative descriptions in `content/descriptions/<dimension>/<item-slug>.md`.
-5. Rebuild with `scripts/dataset/build_dataset.py`.
+5. Rebuild the affected dimension with `python -m scripts.dataset.rebuild_dimension <slug>`; use the full builder only when changing shared pipeline logic or profiles.
 6. Verify with `scripts/dataset/verify_dataset.py`.
 7. Audit content with `scripts/dataset/audit_content.py`.
 8. Review `exports/json/coverage_report.json`, `exports/json/writer_packets.jsonl`, and `exports/json/dimension_catalog.json`.

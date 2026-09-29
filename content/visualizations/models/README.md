@@ -27,9 +27,11 @@ USDZ conversion, external textures, or decompression setup is required.
 | `freight-train-car.glb` | [Kenney Train Kit](https://kenney.nl/assets/train-kit) | CC0-1.0 | Open cargo railcar |
 | `shipping-container.glb` | [Kenney City Kit Industrial](https://kenney.nl/assets/city-kit-industrial) | CC0-1.0 | Intermodal container |
 | `sketchfab-housefly-v2.glb` | [Schmoldt5000's housefly](https://sketchfab.com/3d-models/housefly-5fe7cbd25f9a446d8bae005893d010dd) | CC-BY-4.0 | Adult *Musca domestica*, display pedestal hidden |
-| `sketchfab-bacterium-rod-v2.glb` | [ModuleStudios' bacterial cell](https://sketchfab.com/3d-models/bacterial-cell-bacterium-19618642dad34d0b82219c162aa522e8) | CC-BY-4.0 | Generic rod; duplicate shell and hidden organelles removed; body-length calibration |
+| `sketchfab-bacterium-piliated-v3.glb` | [andrewfrueh's bacterium](https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533) | CC-BY-4.0 | Illustrative pilose rod; species unverified; body-length calibration |
 | `coronavirus-sars-cov-2.glb` | [NIAID SARS-CoV-2 virion, NIH 3D 3DPX-013323](https://3d.nih.gov/entries/3DPX-013323) | CC-BY-4.0 | Vertex-colored virion simplified to 50k triangles; envelope calibrated |
-| `sketchfab-mitochondrion-v2.glb` | [brianj.seely's mitochondria](https://sketchfab.com/3d-models/mitochondria-7445a425050e49daa881070ca6917a91) | CC-BY-4.0 | Single cut-away organelle; second copy and text labels removed |
+| `sketchfab-mitochondrion-v2.glb` | [brianj.seely's mitochondria](https://sketchfab.com/3d-models/mitochondria-7445a425050e49daa881070ca6917a91) | CC-BY-4.0 | Retained as an unused licensed asset; the Length explorer currently prefers a procedural cristae cutaway |
+| `mapzen-everest-dem.glb` | [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) | [Mapzen/USGS attribution](https://github.com/tilezen/joerd/blob/master/docs/attribution.md) | Sampled summit terrain and opaque sea-level block |
+| `sketchfab-liberty-gravity-jack.glb` | [Gravity Jack's Statue of Liberty](https://sketchfab.com/3d-models/statue-of-liberty-84094e8d5e724b5c882cf576ca12e44e) | CC-BY-4.0 | Hand-modeled statue; runtime adds a simplified pedestal |
 | `sketchfab-isuzu-city-bus.glb` | [own.guest's Isuzu Erga Mio](https://sketchfab.com/3d-models/isuzu-erga-mio-bus-050e8acd0bbc4da0902a8a874ef10fca) | CC-BY-4.0 | Japanese city bus envelope proxy |
 | `sketchfab-teaspoon.glb` | [LordOfTheSnow's teaspoon](https://sketchfab.com/3d-models/teaspoon-96467926442342eab2c797de0ed80e6a) | CC-BY-4.0 | Uncalibrated 5 mL teaspoon proxy |
 | `ceiling-fan.glb` | [Poly Haven Ceiling Fan](https://polyhaven.com/a/ceiling_fan) | CC0-1.0 | Fan with separate blades |
@@ -172,22 +174,30 @@ The NIAID model from NIH 3D (566k triangles, one vertex-colored surface) was
 welded and simplified to about 50k triangles with glTF Transform. Its envelope is
 about 0.68 of the full spike-to-spike extent (measured by classifying vertex
 colors), so `measure_fraction: 0.68` calibrates the envelope, not the spikes.
-The bacterium is a generic rod rather than an *E. coli* specimen; its source had
-a duplicate outer shell (the "two overlaid models") that was deleted. Only its
-body is calibrated to the 2 micrometer Bacteria marker; the flagellum trails beyond.
-The mitochondrion source contained two organelles plus text labels; one cut-away
-organelle remains, so its long axis is no longer drawn at half size.
+The bacterium is a generic illustrative rod rather than a verified *E. coli*
+specimen. Its body is calibrated to the 2 micrometer Bacteria marker; pili and
+flagella extend beyond the measurement. The mitochondrion now uses an explicitly
+schematic procedural cutaway with opaque membranes and cristae; the older GLB is
+kept in the registry for provenance but is not selected by the Length explorer.
 
 ## Landmarks And Terrain
 
-The football field is a drone photogrammetry scan of Milton Frank Stadium
-(Huntsville, Alabama), cropped to the turf by sampling the base-color texture at
-each vertex. Its goal-line span (91.44 m) is 0.75 of the kept mesh length. The
-Mount Everest heightmap's 3.35 km of relief matches the drop from the summit to
-the surrounding glaciers, so it is treated as true-scale meters;
-`scripts/build_terrain_block.py` adds strata-shaded rock walls, a translucent
-plinth down to sea level, and summit/sea-level label nodes (`extras.label`), so
-the whole block is 8,848 m tall.
+The football field uses a procedural regulation-sized diagram: the 100 yd
+(91.44 m) goal-line span is the dataset length, with 10 yd end zones at each end.
+The older stadium scan remains registered but is not loaded in the Length explorer.
+
+`scripts/build_everest_dem.py` samples public Mapzen Terrarium elevation tiles
+around Everest into a compact, opaque block down to sea level. The DEM has about
+30 m native resolution here and undershoots the surveyed summit, so a localized
+height correction anchors the peak to 8,848.86 m. This is an explanatory terrain
+diagram, not a navigational or survey model. Mapzen and USGS attribution is kept
+in the registry. The source tiles are not committed; the script can fetch them.
+
+The authored Statue of Liberty mesh is licensed CC BY 4.0. A simplified pedestal
+is appended at runtime using the [NPS heights](https://www.nps.gov/stli/learn/statue-of-liberty-facts.htm):
+46.05 m for the statue, about 46.94 m below it. The listed item value remains
+the statue alone; the focus scale is widened to show the full approximately 93 m
+monument.
 
 ## Orbital Distance Diagrams
 
@@ -213,8 +223,8 @@ python3 -m unittest tests/test_orbital_distance_models.py
 ## Renderer Contract
 
 - `matches` contains case-sensitive names verified against the JSON exports.
-  The current registry has 37 GLB entries (Betelgeuse reuses the Sun file with an
-  orange emissive tint) and 45 exact-name matches across dimensions. Length and Volume imports share that registry.
+  The current registry has 40 GLB entries (Betelgeuse reuses the Sun file with an
+  orange emissive tint) and 48 exact-name matches across dimensions. Length and Volume imports share that registry.
 - NASA geometry is explicitly adapted to centered unit spheres, including removal
   of the source bodies' oblateness and the Sun's 1000x node scale. Original
   topology, UVs, material roles, and texture orientation are retained. Source

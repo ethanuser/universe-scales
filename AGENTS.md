@@ -30,7 +30,8 @@ Bump the `?v=` query of any JS/CSS file you change in `index.html`; browsers cac
 | Explorer framework (mode registry, detail panel, picker, deep link) | `js/experiences/controller.js`, `controls.js`, `math.js` |
 | Length/Area/Volume explorer (camera, layout, SVG labels) | `js/experiences/spatial.js`, `journey.js` |
 | 3D models (loading, calibration, rotation, picking, overlays) | `js/experiences/models.js` |
-| Procedural models (hydrogen, molecules, hair, light wave, solar system) and the distance bracket | `js/experiences/procedural-models.js` |
+| Procedural models (molecules, hair, solar system, field), distance bracket | `js/experiences/procedural-models.js` |
+| Orbital atom and animated electromagnetic-wave models | `js/experiences/atomic-models.js`, `wave-models.js` |
 | Other explorers | `motion.js`, `perception.js`, `audio.js` (+ `*-math.js`) |
 | Model registry (runtime + provenance) | `content/visualizations/models.json` |
 | Model files and licenses | `content/visualizations/models/` (see its README) |
@@ -40,7 +41,7 @@ Scripts: `scripts/sketchfab_models.py` (search/stage/import Sketchfab), `scripts
 (headless textured GLB preview), `scripts/screenshot_explorer.cjs` (headless screenshots of explorer
 items after the camera settles), `scripts/register_model.py` (add/replace a registry entry),
 `scripts/audit_glb_geometry.mjs` (bounds), `scripts/build_earth_moon_model.py` (orbital diagrams),
-`scripts/build_terrain_block.py` (terrain → block diagram on sea level), `scripts/texture_padding.py`
+`scripts/build_everest_dem.py` (Mapzen elevation tiles → opaque sea-level block), `scripts/texture_padding.py`
 (fix atlas seams), `scripts/fetch_model_assets.py --verify` (offline registry check).
 
 ## How a Length model is drawn
@@ -98,24 +99,24 @@ python3 scripts/fetch_model_assets.py --verify
 
 ## Known issues and traps
 
-- **Dataset rebuild drift.** `scripts/dataset/build_dataset.py` no longer reproduces the committed
-  exports: a full rebuild removes items from about 11 other dimensions (e.g. FLOPs loses the
-  PS3 Cell processor). `verify_dataset.py` also fails on a clean checkout (`torque.yaml selected count
-  mismatch`). Until someone investigates, after editing one dimension, keep only that dimension's
-  outputs plus the three `exports/json/*.jsonl` diffs, and `git checkout` the rest.
-  The 2026-09-26 Virus/Football Field edits patched their two rows into the SQLite files directly.
+- **Dataset rebuild drift.** The full builder still changes unrelated dimensions, and
+  `verify_dataset.py` fails on the pre-existing `torque.yaml` selected-count mismatch.
+  Use `./venv/bin/python -m scripts.dataset.rebuild_dimension length` for a Length-only
+  edit; it stages a full build and merges only the requested dimension. Do not use a
+  full rebuild or restore unrelated outputs as a workaround.
 - The repo is ~720 MB, mostly `images/` originals (some over 30 MB). Runtime loads thumbnails, but
   GitHub's recommended repo limit is 1 GB.
 - `models.json` mixes runtime fields with provenance (hashes, processing). Keep both; the
   site only reads a few fields.
-- The browser pane in Claude's desktop app pauses `requestAnimationFrame` while hidden, so camera
-  animations do not settle there; use `scripts/screenshot_explorer.cjs` instead.
+- Hidden browser panes can pause `requestAnimationFrame`; inspect the visible explorer
+  after the page and camera settle, not immediately after navigation.
 - `models.js` imports `./procedural-models.js?v=N`: bump N (and `models.js?v=` in `index.html`)
   when the procedural module changes.
 - Import policy is CC-BY/CC0 only (`ALLOWED_LICENSES` in `sketchfab_models.py`). The owner's chosen
   sand grain (Sketchfab 8e7caaef…, "Sand Grain scaled to 75mm") is CC BY-NC-SA, so it was not imported;
-  the CC-BY Sand Atlas scan remains. Lincoln Financial Field and the suggested Everest model are not
-  downloadable, so CC-BY alternatives were used.
+  the CC-BY Sand Atlas micro-CT grain remains. Lincoln Financial Field and the suggested Everest
+  model were not downloadable. The field is now a procedural NFL-sized diagram; Everest is derived
+  from Mapzen elevation tiles with Mapzen/USGS attribution.
 
 ## Session log
 
@@ -130,12 +131,29 @@ python3 scripts/fetch_model_assets.py --verify
   block diagram on sea level; DNA deduplicated (3.4 → 0.37 MB); new Statue of Liberty item (46.05 m)
   with a cropped replica scan (`scripts/crop_glb.py`). See the git log for details.
 
-## Open work (as of 2026-09-26)
+## 2026-09-27 continuation
 
-- Owner still wants a higher-quality bacterium (more pili/flagella), a more accurate mitochondrion
-  (more cristae), and a neuron model (item is 100 µm, described as a cell body). A sourcing run was
-  in progress; its candidates (if finished) are in the session scratchpad under `models/cells2/`,
-  otherwise redo the search with `scripts/preview_glb.cjs` comparisons and register with
-  `scripts/register_model.py`.
-- Owner's chosen sand grain is CC BY-NC-SA; import only if the owner accepts that license.
-- The owner's last message ended with "the neuron" (cut off); confirm what was wanted.
+- SI-prefix notation is capped at three significant figures; the notation toggle
+  cycles through scientific, mathematical, human-readable, and SI modes.
+- Hydrogen is bounded at one Bohr radius (about 32.3% enclosed probability), and
+  carbon has a labeled independent-electron 1s²2s²2p² orbital diagram. Seven
+  wavelength anchors were added to Length, with separate Markdown plaques.
+- The animated EM wave uses E/B unit-vector labels. The bacterium is a CC-BY
+  illustrative pilose rod, with species uncertainty stated. The mitochondrion
+  and football field use procedural illustrations instead of the prior cartoon
+  cutaway/stadium scan. Everest uses a 602 kB DEM-derived opaque terrain block.
+  The Statue of Liberty now uses a hand-modeled CC-BY asset with an illustrative
+  pedestal; its 46.05 m data value still measures the statue alone.
+- `node --test tests/*.test.cjs tests/*.test.mjs` passes, as does model verification.
+  Python dataset and Sketchfab tests pass separately under `venv` and system
+  Python respectively; the combined invocation lacks Pillow or PyYAML in one
+  environment. Full dataset verification still fails on the baseline torque drift.
+
+## Open work (as of 2026-09-27)
+
+- Improve the schematic mitochondrion's internal folds if a small CC-BY/CC0
+  scientific model is found. The current procedural cutaway is intentionally not
+  claimed to be a specimen reconstruction.
+- Consider a neuron model if the owner still wants it; no new neuron asset was
+  imported in this session.
+- Investigate the full-build drift and make the Python test dependencies coherent.
