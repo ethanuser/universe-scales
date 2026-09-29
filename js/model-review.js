@@ -163,7 +163,8 @@ function metrics() {
     const size = preciseSize(instance);
     const presentation = entry.presentation || {};
     const layout = presentation.layout_width_factor ?? 1;
-    const extent = Math.max(size.x, size.y, size.z);
+    // On-screen size: depth (toward the camera) does not crowd neighbours.
+    const extent = Math.max(size.x, size.y);
     const warnings = [];
     if (extent > 1.3) warnings.push(`renders ${extent.toFixed(2)}x the listed size`);
     if (extent < 0.6) warnings.push(`renders only ${extent.toFixed(2)}x the listed size`);

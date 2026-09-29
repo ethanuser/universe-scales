@@ -85,8 +85,8 @@ node scripts/model_lab.cjs sheet /tmp/lab/all.png      # contact sheet of all mo
 node scripts/model_lab.cjs explorer /tmp/lab "Solar System"   # the real explorer after the camera settles
 ```
 
-`audit` reports each model's rendered extent in units of its listed value (1.00x means it
-renders at the listed size) and flags anything over 1.3x, under 0.6x, wider than its
+`audit` reports each model's on-screen extent (the larger of width and height at its resting
+pose) in units of its listed value (1.00x means it renders at the listed size) and flags anything over 1.3x, under 0.6x, wider than its
 `layout_width_factor`, or failing to load, plus 404s and page errors. **Rule: a model should
 render close to its listed size**; models much larger than their value overlap neighbours
 and break framing while scrolling. Where a quantity is a radius (e.g. an atom's radius),
