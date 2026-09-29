@@ -38,8 +38,8 @@ Bump the `?v=` query of any JS/CSS file you change in `index.html`; browsers cac
 | Dataset source of truth | `dataset/raw/` → built into `exports/` and `data/` (see `DATASET_PIPELINE.md`) |
 
 Scripts: `scripts/sketchfab_models.py` (search/stage/import Sketchfab), `scripts/preview_glb.cjs`
-(headless textured GLB preview), `scripts/screenshot_explorer.cjs` (headless screenshots of explorer
-items after the camera settles), `scripts/register_model.py` (add/replace a registry entry),
+(headless textured GLB preview), `scripts/model_lab.cjs` (audit, screenshots and contact
+sheets of the production renderer; see Model lab), `scripts/register_model.py` (add/replace a registry entry),
 `scripts/audit_glb_geometry.mjs` (bounds), `scripts/build_earth_moon_model.py` (orbital diagrams),
 `scripts/build_everest_dem.py` (Mapzen elevation tiles → opaque sea-level block), `scripts/texture_padding.py`
 (fix atlas seams), `scripts/fetch_model_assets.py --verify` (offline registry check).
@@ -73,6 +73,30 @@ with the drawn model. See the header of `procedural-models.js`.
 
 The model's projected convex hull (including the bracket) is its hover/drag/click area.
 
+## Model lab (use this to see what you changed)
+
+`scripts/model_lab.cjs` serves the repo itself and drives the production renderer in
+headless Chromium, so no dev server or visible browser is needed:
+
+```sh
+node scripts/model_lab.cjs audit                       # every Length item: size vs listed value, load, triangles
+node scripts/model_lab.cjs shot /tmp/lab "Carbon Atom" --views rest,front,side --bg dark --time 1.5
+node scripts/model_lab.cjs sheet /tmp/lab/all.png      # contact sheet of all models, red = flagged
+node scripts/model_lab.cjs explorer /tmp/lab "Solar System"   # the real explorer after the camera settles
+```
+
+`audit` reports each model's rendered extent in units of its listed value (1.00x means it
+renders at the listed size) and flags anything over 1.3x, under 0.6x, wider than its
+`layout_width_factor`, or failing to load, plus 404s and page errors. **Rule: a model should
+render close to its listed size**; models much larger than their value overlap neighbours
+and break framing while scrolling. Where a quantity is a radius (e.g. an atom's radius),
+list the diameter the model shows. `model-review.html` is the same view for humans
+(`?item=&view=&bg=&time=&zoom=`), and `window.modelLab` is its automation API.
+
+After editing JS/CSS run `python3 scripts/bump_versions.py`; it sets every `?v=` to the
+file's content hash (HTML and nested module imports), so nothing is served stale and no
+module loads twice under two version strings. `--check` fails if any are stale.
+
 ## Adding or replacing a model (proven workflow)
 
 1. Find candidates: `SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/sketchfab_models.py search 'query'`
@@ -83,7 +107,7 @@ The model's projected convex hull (including the bracket) is its hover/drag/clic
    Do not use Draco/Meshopt/KTX2/WebP: the vendored GLTFLoader has no decoders.
    Budget: ideally ≤ 1.5 MB, ≤ 60k triangles, textures ≤ 1024 px.
 4. Look at it: `node scripts/preview_glb.cjs model.glb out.png` (then view the PNG), and after
-   registering, `node scripts/screenshot_explorer.cjs /tmp/shots "Item name"` with the site served.
+   registering, `node scripts/model_lab.cjs shot /tmp/lab "Item name" --views rest,side` and `audit`.
 5. Copy the GLB to `content/visualizations/models/`, add a registry entry (copy an existing
    Sketchfab entry's shape; `bytes`/`sha256`/stats come from `inspect_glb` in
    `scripts/fetch_model_assets.py`), write an honest `note`, and credit the author.
@@ -93,8 +117,10 @@ The model's projected convex hull (including the bracket) is its hover/drag/clic
 
 ```sh
 node --test tests/*.test.cjs tests/*.test.mjs
-python3 -m unittest discover -s tests -p "test_*.py"
+./venv/bin/python -m unittest discover -s tests -p "test_*.py"   # venv deps: requirements.txt
 python3 scripts/fetch_model_assets.py --verify
+python3 scripts/bump_versions.py --check
+node scripts/model_lab.cjs audit
 ```
 
 ## Known issues and traps
@@ -110,8 +136,7 @@ python3 scripts/fetch_model_assets.py --verify
   site only reads a few fields.
 - Hidden browser panes can pause `requestAnimationFrame`; inspect the visible explorer
   after the page and camera settle, not immediately after navigation.
-- `models.js` imports `./procedural-models.js?v=N`: bump N (and `models.js?v=` in `index.html`)
-  when the procedural module changes.
+- Never hand-edit `?v=` numbers; run `python3 scripts/bump_versions.py`.
 - Import policy is CC-BY/CC0 only (`ALLOWED_LICENSES` in `sketchfab_models.py`). The owner's chosen
   sand grain (Sketchfab 8e7caaef…, "Sand Grain scaled to 75mm") is CC BY-NC-SA, so it was not imported;
   the CC-BY Sand Atlas micro-CT grain remains. Lincoln Financial Field and the suggested Everest

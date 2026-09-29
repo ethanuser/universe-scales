@@ -3,9 +3,9 @@ import { GLTFLoader } from '../vendor/three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtils.js';
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
-import { layoutModelLabels } from './model-labels.js?v=1';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=8';
-import { waveAnimation } from './wave-models.js?v=2';
+import { placeLabels } from './model-labels.js?v=d45a63a3fb';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=0c63a4d5dc';
+import { waveAnimation } from './wave-models.js?v=c8432f8cec';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -137,7 +137,7 @@ async function load(entry) {
     if (!models.has(key)) models.set(key, (entry.procedural === 'molecule'
         ? moleculeData.then(data => data?.models?.[entry.molecule]
             ? { scene: moleculeScene(data.models[entry.molecule]) } : null)
-        : entry.procedural ? Promise.resolve({ scene: proceduralScene(entry.procedural) })
+        : entry.procedural ? Promise.resolve({ scene: proceduralScene(entry.procedural, entry) })
             // The content hash busts browser caches whenever a model file changes.
             : loader.loadAsync(entry.sha256 ? `${entry.src}?v=${entry.sha256.slice(0, 12)}` : entry.src)).then(gltf => {
         if (!gltf) return null;
@@ -158,9 +158,10 @@ async function load(entry) {
         );
         if (entry.presentation?.flatten_static) scene = flattenStaticScene(scene);
         if (entry.presentation?.distance_bracket) addDistanceBracket(scene, entry.presentation.distance_bracket);
-        if (entry.presentation?.liberty_pedestal) addLibertyPedestal(scene);
         scene.updateMatrixWorld(true);
-        const bounds = new THREE.Box3().setFromObject(scene);
+        // Precise (per-vertex) bounds: box-of-rotated-box estimates inflate
+        // calibration for rotated nodes and would mis-size the model.
+        const bounds = new THREE.Box3().setFromObject(scene, true);
         const center = bounds.getCenter(new THREE.Vector3());
         const size = bounds.getSize(new THREE.Vector3());
         const reference = entry.presentation?.measure_axis;
@@ -214,29 +215,6 @@ async function load(entry) {
     return models.get(key);
 }
 
-function addLibertyPedestal(scene) {
-    scene.updateMatrixWorld(true);
-    const bounds = new THREE.Box3().setFromObject(scene);
-    const statueHeight = bounds.max.y - bounds.min.y;
-    const pedestalHeight = statueHeight * (46.94 / 46.05);
-    const center = bounds.getCenter(new THREE.Vector3());
-    const base = bounds.min.y - pedestalHeight;
-    const width = statueHeight * 0.54;
-    const stone = new THREE.MeshStandardMaterial({ color: 0x8f8980, roughness: 0.94 });
-    const inset = new THREE.MeshStandardMaterial({ color: 0x736d65, roughness: 0.96 });
-    const addTier = (bottom, height, lowerWidth, upperWidth, material) => {
-        const geometry = new THREE.CylinderGeometry(upperWidth / Math.SQRT2,
-            lowerWidth / Math.SQRT2, height, 4, 1, false, Math.PI / 4);
-        const tier = new THREE.Mesh(geometry, material);
-        tier.rotation.y = Math.PI / 4;
-        tier.position.set(center.x, bottom + height / 2, center.z);
-        scene.add(tier);
-    };
-    addTier(base, pedestalHeight * 0.19, width * 1.26, width * 1.14, inset);
-    addTier(base + pedestalHeight * 0.19, pedestalHeight * 0.1, width * 1.18, width, stone);
-    addTier(base + pedestalHeight * 0.29, pedestalHeight * 0.62, width * 0.83, width * 0.57, stone);
-    addTier(base + pedestalHeight * 0.91, pedestalHeight * 0.09, width * 0.81, width * 0.81, inset);
-}
 export class ModelStage {
     constructor(ctx, redraw, onRegistryReady) {
         this.ctx = ctx; this.redraw = redraw; this.instances = new Map(); this.entries = [];
@@ -382,7 +360,8 @@ export class ModelStage {
                     instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
                         THREE.MathUtils.degToRad(pose.yaw || 0), THREE.MathUtils.degToRad(pose.roll || 0));
                     instance.updateMatrixWorld(true);
-                    const defaultBounds = new THREE.Box3().setFromObject(instance);
+                    // Precise bounds so rotated poses sit on the ground instead of floating.
+                    const defaultBounds = new THREE.Box3().setFromObject(instance, true);
                     instance.userData.anchorMinY = defaultBounds.min.y;
                     instance.userData.anchorMaxZ = defaultBounds.max.z;
                     instance.traverse(child => {
@@ -514,7 +493,10 @@ export class ModelStage {
     // stays upright and lines stay thin while the model rotates underneath.
     overlay(instance, w, h, scale, cx, view) {
         if (!instance.userData.overlays.length) return;
-        const opacity = THREE.MathUtils.clamp(instance.userData.drawSize / 80, 0, 1);
+        // Annotations fade out well before their model does, so zooming away
+        // leaves clean objects: fully visible above 240 px, gone below 120 px.
+        const drawnPixels = instance.userData.drawSize * scale;
+        const opacity = THREE.MathUtils.clamp((drawnPixels - 120) / 120, 0, 1);
         if (!opacity) return;
         const toScreen = point => {
             const ndc = point.project(this.camera);
@@ -526,7 +508,7 @@ export class ModelStage {
             this.ctx.stage.append(node);
             return node;
         };
-        const orbitLabels = [];
+        const stableLabels = [];
         for (const node of instance.userData.overlays) {
             const center = node.getWorldPosition(new THREE.Vector3());
             const at = toScreen(center.clone());
@@ -542,7 +524,8 @@ export class ModelStage {
             }
             if (node.userData.label) {
                 if (node.userData.labelLayout === 'orbit') {
-                    orbitLabels.push({ x: at.x, y: at.y, text: node.userData.label });
+                    stableLabels.push({ x: at.x, y: at.y, text: node.userData.label,
+                        priority: node.userData.labelPriority, offset: radius + 4 / scale });
                     continue;
                 }
                 const label = svgNode('text', { x: at.x, y: at.y - radius - (radius ? 6 : 0) / scale,
@@ -550,13 +533,10 @@ export class ModelStage {
                 label.textContent = node.userData.label;
             }
         }
-        for (const label of layoutModelLabels(orbitLabels, {
-            left: view.x + 8, right: view.x + view.width - 8,
-            top: view.y + 8, bottom: view.y + view.height - 36
+        for (const label of placeLabels(stableLabels, {
+            left: view.x + 4, right: view.x + view.width - 4, top: view.y + 4, bottom: view.y + view.height - 4
         })) {
-            if (Math.hypot(label.labelX - label.x, label.labelY - label.y) > 18)
-                svgNode('line', { x1: label.x, y1: label.y, x2: label.labelX, y2: label.labelY - 4,
-                    class: 'journey-model-leader', opacity });
+            if (!label.visible) continue;
             const text = svgNode('text', { x: label.labelX, y: label.labelY,
                 class: 'journey-model-label', 'text-anchor': 'middle', opacity });
             text.textContent = label.text;

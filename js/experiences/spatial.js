@@ -277,8 +277,10 @@
                         preserveAspectRatio:'xMidYMax meet' }));
                 }
                 const fontSize = 19 * extent / ScaleJourney.BASE_SIZE;
-                if (fontSize * view.scale > 0.08) {
-                    const text = svg('text',{x,y:y+fontSize*1.8,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px`},item.name);
+                // Names fade as their objects shrink: gone below 7 px text, full above 12 px.
+                const labelOpacity = clamp((fontSize * view.scale - 7) / 5, 0, 1);
+                if (labelOpacity > 0) {
+                    const text = svg('text',{x,y:y+fontSize*1.8,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px`,opacity:labelOpacity},item.name);
                     labels.push(text);
                 }
             });

@@ -1,17 +1,36 @@
 // Deliberately uses the production stage: a second preview renderer can hide
 // normalization, lighting, pose and animation integration bugs.
-import { ModelStage } from './experiences/models.js?v=36';
+//
+// URL parameters: item, view (rest|front|side|top|back), bg (light|dark|sky),
+// zoom, time (freeze animations at seconds), neighbors (1). `window.modelLab`
+// exposes the same controls plus size metrics for scripts/model_lab.cjs.
+import { ModelStage } from './experiences/models.js?v=3c2a72ba04';
 import * as THREE from './vendor/three/three.module.min.js';
 const $ = id => document.getElementById(id);
+const params = new URLSearchParams(location.search);
 const dataset = await fetch('exports/json/dimensions/length.json', { cache: 'no-cache' }).then(r => r.json());
 const items = dataset.items.filter(item => item.value > 0).sort((a, b) => a.value - b.value);
-let filtered = items, item = items.find(i => i.name === new URLSearchParams(location.search).get('item')) || items[0];
+let filtered = items, item = items.find(i => i.name === params.get('item')) || items[0];
 let localEntry, blobUrl, paused = false, seconds = 0, pending, dragging, lastStatus = 0;
 const context = { dimension: 'length', stageFrame: $('stage-frame'), stage: $('stage'), updateDetail: showDetail };
-const stage = new ModelStage(context, queueRender, () => { showDetail(); queueRender(); });
+const registryReady = new Promise(resolve => { context.registryReady = resolve; });
+const stage = new ModelStage(context, queueRender, () => { showDetail(); queueRender(); context.registryReady(); });
 const productionEntry = stage.entry.bind(stage);
 stage.entry = current => localEntry && current === item ? localEntry : productionEntry(current);
 function queueRender() { pending ||= requestAnimationFrame(render); }
+// Per-vertex bounds in units of the listed value, cached per pose because they
+// are expensive for large meshes and change only when the model rotates.
+function preciseSize(instance) {
+    const key = `${instance.rotation.x.toFixed(4)},${instance.rotation.y.toFixed(4)},${instance.rotation.z.toFixed(4)}`;
+    if (instance.userData.preciseKey !== key) {
+        const scale = instance.scale.x;
+        instance.updateMatrixWorld(true);
+        instance.userData.preciseSize = new THREE.Box3().setFromObject(instance, true)
+            .getSize(new THREE.Vector3()).divideScalar(scale);
+        instance.userData.preciseKey = key;
+    }
+    return instance.userData.preciseSize.clone();
+}
 function populate() {
     $('item').replaceChildren(...filtered.map(current => {
         const option = new Option(current.name, current.name); option.selected = current === item; return option;
@@ -30,13 +49,22 @@ function showDetail() {
     }
     $('explorer-link').href = `./?dimension=length&item=${encodeURIComponent(item.name)}`;
 }
+function syncUrl() {
+    const next = new URLSearchParams({ item: item.name });
+    if ($('view').value !== 'rest') next.set('view', $('view').value);
+    if ($('background').value !== 'light') next.set('bg', $('background').value);
+    if ($('zoom').value !== '1') next.set('zoom', $('zoom').value);
+    if (paused) next.set('time', seconds.toFixed(2));
+    if ($('neighbors').checked) next.set('neighbors', '1');
+    history.replaceState(null, '', `?${next}`);
+}
 function choose(name) {
     const next = items.find(i => i.name === name);
-    if (!next) return;
+    if (!next) return false;
     item = next; localEntry = null; $('view').value = 'rest'; $('zoom').value = '1';
     stage.rotations.clear();
-    history.replaceState(null, '', `?item=${encodeURIComponent(item.name)}`);
-    populate(); showDetail(); queueRender();
+    populate(); showDetail(); syncUrl(); queueRender();
+    return true;
 }
 function pose() {
     const entry = stage.entry(item), resting = entry?.presentation || {};
@@ -44,7 +72,7 @@ function pose() {
     const chosen = presets[$('view').value];
     stage.rotations.set(item, { yaw: chosen ? (chosen[1] - (resting.yaw || 0)) * Math.PI / 180 : 0,
         pitch: chosen ? (chosen[0] - (resting.pitch || 0)) * Math.PI / 180 : 0, velocity: 0, pitchVelocity: 0 });
-    queueRender();
+    syncUrl(); queueRender();
 }
 function render(now) {
     pending = null;
@@ -56,8 +84,7 @@ function render(now) {
     let modelsReady = 0;
     const neighbors = $('neighbors').checked;
     const instance = stage.instances.get(item);
-    const bounds = instance ? new THREE.Box3().setFromObject(instance).getSize(new THREE.Vector3())
-        .divideScalar(instance.scale.x) : null;
+    const bounds = instance ? preciseSize(instance) : null;
     const fittedSize = bounds ? Math.min(740 / bounds.x, 340 / bounds.y) : 370 / fit;
     const draws = neighbors ? ScaleJourney.layout(items, exponent, 1, {
         widthFactor: current => stage.entry(current)?.presentation?.layout_width_factor || 1,
@@ -74,7 +101,7 @@ function render(now) {
     if (now - lastStatus > 200 || paused) {
         const instance = stage.instances.get(item);
         const roots = instance?.userData.waveRoots || [];
-        const phase = roots[0]?.userData.waveAnimation.phase;
+        const phase = roots[0]?.userData.waveAnimation?.phase;
         $('status').textContent = `${modelsReady ? 'Rendered' : selectedEntry ? 'Loading' : 'No model'} | ${selectedEntry?.id || item.name} | ${stage.renderer?.info.render.triangles || 0} triangles | ${roots.length} animated wave root(s)${phase == null ? '' : ` | phase ${phase.toFixed(3)} rad`} | ${paused ? `paused at ${seconds.toFixed(2)} s` : 'playing'} | drag to rotate`;
         lastStatus = now;
     }
@@ -85,12 +112,13 @@ for (const [id, direction] of [['previous', -1], ['next', 1]]) $(id).addEventLis
     choose(filtered[Math.max(0, Math.min(filtered.length - 1, filtered.indexOf(item) + direction))]?.name);
 });
 $('view').addEventListener('change', pose);
-$('background').addEventListener('change', () => { context.stageFrame.className = `experience--spatial ${$('background').value}`; });
-for (const id of ['zoom', 'neighbors']) $(id).addEventListener('input', queueRender);
-function pauseAt(time) { seconds = time; paused = true; $('pause').textContent = 'Play animation'; queueRender(); }
+function setBackground(value) { $('background').value = value; context.stageFrame.className = `experience--spatial ${value}`; }
+$('background').addEventListener('change', () => { setBackground($('background').value); syncUrl(); });
+for (const id of ['zoom', 'neighbors']) $(id).addEventListener('input', () => { syncUrl(); queueRender(); });
+function pauseAt(time) { seconds = time; paused = true; $('pause').textContent = 'Play animation'; syncUrl(); queueRender(); }
 $('pause').addEventListener('click', () => {
     if (!paused) pauseAt((performance.now() - stage.waveStart) / 1000);
-    else { paused = false; stage.waveStart = performance.now() - seconds * 1000; $('pause').textContent = 'Pause animation'; queueRender(); }
+    else { paused = false; stage.waveStart = performance.now() - seconds * 1000; $('pause').textContent = 'Pause animation'; syncUrl(); queueRender(); }
 });
 $('step').addEventListener('click', () => pauseAt((paused ? seconds : 0) + 0.25));
 $('file').addEventListener('change', () => {
@@ -120,4 +148,57 @@ context.stageFrame.addEventListener('pointercancel', release);
 context.stageFrame.addEventListener('pointerleave', () => stage.setHover(null, null));
 new ResizeObserver(queueRender).observe(context.stageFrame);
 window.addEventListener('pagehide', () => { stage.dispose(); if (blobUrl) URL.revokeObjectURL(blobUrl); });
+
+const frames = count => new Promise(resolve => {
+    const step = () => (--count <= 0 ? resolve() : requestAnimationFrame(step));
+    requestAnimationFrame(step);
+});
+// Sizes are in units of the listed value: 1.0 means the model's extent equals it.
+function metrics() {
+    const entry = stage.entry(item), instance = stage.instances.get(item);
+    const base = { name: item.name, value: item.value, model: entry?.id || null,
+        kind: !entry ? 'photo' : entry.procedural ? 'procedural' : 'glb' };
+    if (!entry) return base;
+    if (!instance) return { ...base, loaded: false };
+    const size = preciseSize(instance);
+    const presentation = entry.presentation || {};
+    const layout = presentation.layout_width_factor ?? 1;
+    const extent = Math.max(size.x, size.y, size.z);
+    const warnings = [];
+    if (extent > 1.3) warnings.push(`renders ${extent.toFixed(2)}x the listed size`);
+    if (extent < 0.6) warnings.push(`renders only ${extent.toFixed(2)}x the listed size`);
+    if (size.x > layout * 1.15) warnings.push(`width ${size.x.toFixed(2)} exceeds layout_width_factor ${layout}`);
+    return { ...base, loaded: true, width: +size.x.toFixed(3), height: +size.y.toFixed(3), depth: +size.z.toFixed(3),
+        extent: +extent.toFixed(3), layoutWidthFactor: layout, triangles: stage.renderer.info.render.triangles,
+        drawCalls: stage.renderer.info.render.calls, warnings };
+}
+window.modelLab = {
+    items: () => items.map(current => ({ name: current.name, value: current.value,
+        model: stage.entry(current)?.id || null })),
+    async ready() { await registryReady; },
+    // Shows one item and resolves once its model has loaded and rendered.
+    async show(name, { view = 'rest', background = 'light', zoom = 1, time = null, neighbors = false, timeout = 20000 } = {}) {
+        await registryReady;
+        if (!choose(name)) throw new Error(`Unknown Length item: ${name}`);
+        setBackground(background);
+        $('zoom').value = String(zoom);
+        $('neighbors').checked = neighbors;
+        if (time == null) { paused = false; } else pauseAt(Number(time));
+        $('view').value = view; pose();
+        const started = performance.now();
+        const entry = stage.entry(item);
+        while (entry && !stage.instances.get(item) && performance.now() - started < timeout) {
+            queueRender(); await frames(2);
+        }
+        queueRender(); await frames(3);
+        return { ...metrics(), loadMs: Math.round(performance.now() - started) };
+    },
+    metrics
+};
+
+setBackground(params.get('bg') || 'light');
+if (params.get('zoom')) $('zoom').value = params.get('zoom');
+$('neighbors').checked = params.get('neighbors') === '1';
+if (params.get('time') != null) { seconds = Number(params.get('time')) || 0; paused = true; $('pause').textContent = 'Play animation'; }
 populate(); showDetail(); queueRender();
+if (params.get('view')) registryReady.then(() => { $('view').value = params.get('view'); pose(); });

@@ -2,8 +2,8 @@
 // relative three.js import resolves to the same module as the page's import map
 // and also works under Node for tests.
 import * as THREE from '../vendor/three/three.module.min.js';
-import { atomicModelMetadata, atomicScenes } from './atomic-models.js?v=2';
-import { waveModelMetadata, waveScenes } from './wave-models.js?v=2';
+import { atomicModelMetadata, atomicScenes } from './atomic-models.js?v=a0335462d6';
+import { waveModelMetadata, waveScenes } from './wave-models.js?v=c8432f8cec';
 
 // Overlay conventions read by ModelStage.finish():
 //   userData.screenLine = { axis: 'x' | 'y' | 'z', length }  box drawn at a constant pixel width
@@ -30,29 +30,32 @@ function anchor(label, position, labelClass) {
 }
 
 // Distance diagrams (Earth-Moon, AU) get a U-shaped bracket below the two
-// bodies. Uprights touch the inward-facing limbs and the joining line sits
-// below them. The bracket is part of the model and rotates with it.
+// bodies: uprights drop from below each center (the listed distances are
+// center to center) to a joining line. It is part of the model and rotates with it.
 export const BRACKET_DROP = 0.1; // below the larger body, as a fraction of the center distance
 export function addDistanceBracket(scene, config) {
     scene.updateMatrixWorld(true);
     const bodies = config.bodies.map(name => {
         const node = scene.getObjectByName(name);
         if (!node) return null;
-        Object.assign(node.userData, { label: name, sphere: true });
-        delete node.userData.outline;
+        // Outline circles keep sub-pixel bodies (Earth beside the Sun) findable.
+        Object.assign(node.userData, { label: name, outline: true, sphere: true });
         return { center: node.getWorldPosition(new THREE.Vector3()), radius: node.matrixWorld.getMaxScaleOnAxis() };
     });
     if (bodies.length !== 2 || bodies.some(body => !body)) return;
     const [left, right] = bodies[0].center.x <= bodies[1].center.x ? bodies : [bodies[1], bodies[0]];
-    const leftX = left.center.x + left.radius, rightX = right.center.x - right.radius;
+    // The listed distances are center to center, so each upright drops from
+    // directly below its body's center (starting at the body's lowest point).
     const bottom = Math.min(left.center.y - left.radius, right.center.y - right.radius)
         - BRACKET_DROP * (right.center.x - left.center.x);
     const bracket = new THREE.Group();
     bracket.name = 'distance-bracket';
-    for (const [body, x] of [[left, leftX], [right, rightX]])
-        bracket.add(screenLine('y', body.center.y - bottom,
-            new THREE.Vector3(x, (bottom + body.center.y) / 2, body.center.z)));
-    bracket.add(screenLine('x', rightX - leftX, new THREE.Vector3((leftX + rightX) / 2, bottom, 0)));
+    for (const body of [left, right]) {
+        const top = body.center.y - body.radius;
+        bracket.add(screenLine('y', top - bottom, new THREE.Vector3(body.center.x, (top + bottom) / 2, body.center.z)));
+    }
+    bracket.add(screenLine('x', right.center.x - left.center.x,
+        new THREE.Vector3((left.center.x + right.center.x) / 2, bottom, 0)));
     scene.add(bracket);
 }
 
@@ -135,7 +138,7 @@ function seeded(seed) {
 // the surface steps back down to the next scale. Edges wander around the shaft.
 function hairFiber() {
     const random = seeded(0x5eed1234);
-    const radius = 0.5, length = 2, radial = 96, rows = 224;
+    const radius = 0.5, length = 1.4, radial = 96, rows = 160;
     const step = 0.028, oval = 0.045;
     // Scale heights vary (about 5-10 micrometers on a 100 micrometer hair), and
     // each free edge meanders around the shaft with a jagged, torn look.
@@ -450,6 +453,8 @@ export function planetPositions(date = new Date()) {
 
 // Ecliptic x/y map to scene X/-Z so the orbital plane is horizontal; the
 // registry pitch tilts it toward the viewer. One scene unit is one au.
+// When planet labels would overlap, the earlier name here wins (the Sun first).
+const LABEL_PRIORITY = ['Earth', 'Jupiter', 'Saturn', 'Neptune', 'Uranus', 'Mars', 'Venus', 'Mercury', 'Pluto'];
 function solarSystem(date = new Date()) {
     const scene = new THREE.Group();
     const centuries = (date.getTime() / 86_400_000 + 2_440_587.5 - 2_451_545) / 36_525;
@@ -458,7 +463,7 @@ function solarSystem(date = new Date()) {
     const sun = new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xffd36b }));
     sun.scale.setScalar(695_700_000 / AU);
     Object.assign(sun.userData, { outline: true, sphere: true, label: 'Sun', labelLayout: 'orbit',
-        markerRadius: 1.8, markerPadding: 0.6 });
+        labelPriority: 0, markerRadius: 1.8, markerPadding: 0.6 });
     scene.add(sun);
     const positions = new Map(planetPositions(date).map(({ name, position }) => [name, position]));
     for (const [name, radius, color, elements, rates] of PLANETS) {
@@ -471,7 +476,7 @@ function solarSystem(date = new Date()) {
         planet.scale.setScalar(radius / AU);
         planet.name = name;
         Object.assign(planet.userData, { outline: true, sphere: true, label: name, labelLayout: 'orbit',
-            markerRadius: 1.5, markerPadding: 0.5 });
+            labelPriority: LABEL_PRIORITY.indexOf(name) + 1, markerRadius: 1.5, markerPadding: 0.5 });
         scene.add(line, planet);
     }
     const random = seeded(0x4a57e);
@@ -488,14 +493,14 @@ function solarSystem(date = new Date()) {
     asteroids.userData.pointSize = { max: 1.2, perPixel: 1 / 900 };
     scene.add(asteroids);
     const beltLabel = anchor('Asteroid belt', new THREE.Vector3(-2.8, 0, 0));
-    beltLabel.userData.labelLayout = 'orbit';
+    Object.assign(beltLabel.userData, { labelLayout: 'orbit', labelPriority: LABEL_PRIORITY.length + 1 });
     scene.add(beltLabel);
     return scene;
 }
 
-export function proceduralScene(kind) {
-    if (atomicScenes[kind]) return atomicScenes[kind]();
-    if (waveScenes[kind]) return waveScenes[kind]();
+export function proceduralScene(kind, entry) {
+    if (atomicScenes[kind]) return atomicScenes[kind](entry);
+    if (waveScenes[kind]) return waveScenes[kind](entry);
     if (kind === 'hair-fiber') return hairFiber();
     if (kind === 'mitochondrion-lamellar-cutaway') return mitochondrionCutaway();
     if (kind === 'regulation-football-field') return footballField();

@@ -17,6 +17,8 @@ input[type=range] { width: 130px; min-height: 32px; } input[type=file] { width: 
 #stage { z-index: 1; pointer-events: none; }
 .journey-model-label { font-size: 12px; font-weight: 600; fill: currentColor; paint-order: stroke fill; stroke: var(--halo); stroke-width: 2px; stroke-linejoin: round; }
 .journey-model-label.is-electric { fill: #c53732; }.journey-model-label.is-magnetic { fill: #276ace; }
+.journey-model-label.is-orbital-x { fill: #23805a; }
+.journey-model-label.is-orbital-y { fill: #b8414e; }
 .journey-model-leader, .journey-model-outline { fill: none; stroke: currentColor; stroke-width: .7; opacity: .6; }
 #status { display: block; min-height: 36px; padding: 10px 20px; font: 12px ui-monospace, monospace; border-bottom: 1px solid #cad3d8; }
 aside { padding: 16px 20px; max-width: 1050px; line-height: 1.5; } aside p { margin: 8px 0; } #photo { max-width: 260px; max-height: 180px; object-fit: contain; }

@@ -1,13 +1,14 @@
 // Animated schematic plane waves for representative electromagnetic wavelengths.
 import * as THREE from '../vendor/three/three.module.min.js';
 
-const presentation = Object.freeze({ reference_size: 1, layout_width_factor: 2.25,
-    focus_scale_factor: 2.6, display_extent_factor: 2.6, pitch: 38, yaw: -8 });
+// One wavelength fills the model, so it renders at the listed size.
+const presentation = Object.freeze({ reference_size: 1, layout_width_factor: 1.15,
+    focus_scale_factor: 1.35, display_extent_factor: 1.15, pitch: 24, yaw: -24 });
 const wave = (name, id, wavelength_m, band, source, sourceTitle, note, additionalSources = []) => Object.freeze({
     id, name, dimension: 'length', value: wavelength_m, unit: 'm', wavelength_m, band,
     procedural: 'traveling-em-wave', geometry: 'mesh', presentation,
     source, source_title: sourceTitle, sources: Object.freeze([source, ...additionalSources]),
-    note: `${note} Red E and blue B are perpendicular, in-phase fields propagating along +x. Their amplitudes use separate normalized units (E = cB in vacuum); this is not the path of a photon. Animation is slowed to 0.35 cycles per second for visibility.`, basis_url: source
+    note: `${note} Exactly one wavelength is shown, so the model is the listed length. Red E and blue B are perpendicular, in-phase fields starting at a shared origin and traveling along +x, the direction of E × B. Their heights are field strengths in separate normalized units (E = cB in vacuum), not lengths, and this is not the path of a photon. The animation is slowed to 0.35 cycles per second.`, basis_url: source
 });
 const nasa = 'https://imagine.gsfc.nasa.gov/science/toolbox/spectrum_chart.html';
 const nasaTitle = 'NASA Imagine: Wavelength, Frequency, and Energy';
@@ -42,11 +43,13 @@ export const waveModelMetadata = Object.freeze({
 export const additionalWavelengthRows = Object.freeze(Object.values(waveModelMetadata)
     .filter(entry => entry.name !== 'Visible Light Wavelength'));
 
-const CYCLES = 2;
-const START = -CYCLES / 2;
-const AMPLITUDE = 0.28;
+// The origin is where both fields start and the propagation axis begins.
+const CYCLES = 1;
+const START = 0;
+const AMPLITUDE = 0.26;
 const SAMPLES = 120;
 const RADIAL_SEGMENTS = 5;
+const STEMS = 16;
 const TWO_PI = 2 * Math.PI;
 
 function arrow(from, to, radius, material) {
@@ -61,6 +64,18 @@ function arrow(from, to, radius, material) {
     group.position.copy(from);
     group.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), delta.normalize());
     return group;
+}
+
+const lineMaterials = new Map();
+// Same convention as procedural-models.js: ModelStage redraws these boxes at a
+// constant pixel width every frame.
+function screenLine(axis, length, position, color) {
+    if (!lineMaterials.has(color)) lineMaterials.set(color, new THREE.MeshBasicMaterial({ color }));
+    const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), lineMaterials.get(color));
+    mesh.position.copy(position);
+    mesh.userData.screenLine = { axis, length };
+    mesh.scale.set(axis === 'x' ? length : 1e-6, axis === 'y' ? length : 1e-6, axis === 'z' ? length : 1e-6);
+    return mesh;
 }
 
 function addAnchor(scene, label, position, labelClass) {
@@ -90,6 +105,12 @@ function fieldTube(axis, color) {
     const mesh = new THREE.Mesh(geometry, material);
     mesh.name = axis === 'y' ? 'electric-field-wave' : 'magnetic-field-wave';
     mesh.userData.waveAxis = axis;
+    // Field vectors: stems from the propagation axis to the field value.
+    const stems = new THREE.LineSegments(new THREE.BufferGeometry().setAttribute('position',
+        new THREE.BufferAttribute(new Float32Array((STEMS + 1) * 6), 3)),
+    new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.55 }));
+    stems.name = `${mesh.name}-vectors`;
+    mesh.add(stems);
     return mesh;
 }
 
@@ -115,11 +136,26 @@ function writeFieldGeometry(mesh, phase) {
         }
     }
     attribute.needsUpdate = true;
+    const stems = mesh.children[0].geometry.getAttribute('position');
+    for (let stem = 0; stem <= STEMS; stem++) {
+        const fraction = stem / STEMS, x = START + CYCLES * fraction;
+        const value = AMPLITUDE * Math.sin(TWO_PI * fraction * CYCLES - phase);
+        stems.setXYZ(2 * stem, x, 0, 0);
+        stems.setXYZ(2 * stem + 1, x, axis === 'y' ? value : 0, axis === 'z' ? value : 0);
+    }
+    stems.needsUpdate = true;
+    mesh.children[0].geometry.computeBoundingSphere();
     mesh.geometry.computeVertexNormals();
     mesh.geometry.computeBoundingSphere();
 }
 
-export function waveScene() {
+const SI = [[1e3, 'km'], [1, 'm'], [1e-3, 'mm'], [1e-6, 'µm'], [1e-9, 'nm'], [1e-12, 'pm'], [1e-15, 'fm']];
+export function formatLength(meters) {
+    const [scale, unit] = SI.find(([factor]) => meters >= factor * 0.9999) || SI.at(-1);
+    return `${Number((meters / scale).toPrecision(3))} ${unit}`;
+}
+
+export function waveScene(entry = {}) {
     const scene = new THREE.Group();
     const electric = new THREE.MeshStandardMaterial({ color: 0xd94f43, roughness: 0.55 });
     const magnetic = new THREE.MeshStandardMaterial({ color: 0x3978c5, roughness: 0.55 });
@@ -128,35 +164,27 @@ export function waveScene() {
     scene.add(eWave, bWave);
     writeFieldGeometry(eWave, 0);
     writeFieldGeometry(bWave, 0);
-    const axis = new THREE.Line(new THREE.BufferGeometry().setFromPoints([
-        new THREE.Vector3(START, 0, 0), new THREE.Vector3(START + CYCLES, 0, 0)
-    ]), new THREE.LineBasicMaterial({ color: 0x88939e, transparent: true, opacity: 0.65 }));
-    axis.name = 'shared-zero-field-axis';
-    scene.add(axis);
 
-    // Compact orthogonal field-direction glyphs, with no redundant text labels.
-    const origin = new THREE.Vector3(START - 0.12, 0, 0);
-    scene.add(arrow(origin, origin.clone().add(new THREE.Vector3(0, AMPLITUDE + 0.1, 0)), 0.009, electric));
-    scene.add(arrow(origin, origin.clone().add(new THREE.Vector3(0, 0, AMPLITUDE + 0.1)), 0.009, magnetic));
-    addAnchor(scene, 'E\u0302', origin.clone().add(new THREE.Vector3(0, AMPLITUDE + 0.17, 0)), 'is-electric');
-    addAnchor(scene, 'B\u0302', origin.clone().add(new THREE.Vector3(0, 0, AMPLITUDE + 0.17)), 'is-magnetic');
-    const propagationEnd = START + CYCLES + 0.2;
-    scene.add(arrow(new THREE.Vector3(START - 0.08, -0.43, 0),
-        new THREE.Vector3(propagationEnd, -0.43, 0), 0.007, neutral));
-    addAnchor(scene, 'Direction of propagation', new THREE.Vector3(propagationEnd - 0.08, -0.53, 0));
+    // Right-handed axes from the shared origin: E along +y, B along +z, and
+    // propagation along +x (the direction of E x B), running through the waves.
+    const origin = new THREE.Vector3(START, 0, 0);
+    const propagationEnd = START + CYCLES + 0.14;
+    scene.add(arrow(origin, new THREE.Vector3(propagationEnd, 0, 0), 0.006, neutral));
+    scene.add(arrow(origin, new THREE.Vector3(START, AMPLITUDE + 0.1, 0), 0.008, electric));
+    scene.add(arrow(origin, new THREE.Vector3(START, 0, AMPLITUDE + 0.1), 0.008, magnetic));
+    addAnchor(scene, 'E', new THREE.Vector3(START, AMPLITUDE + 0.16, 0), 'is-electric');
+    addAnchor(scene, 'B', new THREE.Vector3(START, 0, AMPLITUDE + 0.18), 'is-magnetic');
+    addAnchor(scene, 'Propagation', new THREE.Vector3(propagationEnd + 0.02, 0.07, 0));
 
-    const wavelengthStart = START + 0.25, wavelengthEnd = wavelengthStart + 1;
-    const bracketY = AMPLITUDE + 0.31;
-    scene.add(new THREE.Mesh(new THREE.BoxGeometry(1, 0.008, 0.008), neutral));
-    const bracket = scene.children.at(-1);
-    bracket.position.set((wavelengthStart + wavelengthEnd) / 2, bracketY, 0);
-    for (const x of [wavelengthStart, wavelengthEnd]) {
-        const tick = new THREE.Mesh(new THREE.BoxGeometry(0.008, 0.1, 0.008), neutral);
-        tick.position.set(x, bracketY - 0.045, 0);
-        scene.add(tick);
-    }
-    addAnchor(scene, 'Wavelength \u03bb', new THREE.Vector3((wavelengthStart + wavelengthEnd) / 2,
-        bracketY + 0.12, 0));
+    // The model is exactly one wavelength long, so this bracket stays true while
+    // the crests travel: any window this long holds exactly one full cycle.
+    const bracketY = -AMPLITUDE - 0.12, ink = 0x2f3a45;
+    scene.add(screenLine('x', CYCLES, new THREE.Vector3(START + CYCLES / 2, bracketY, 0), ink));
+    for (const x of [START, START + CYCLES])
+        scene.add(screenLine('y', 0.08, new THREE.Vector3(x, bracketY + 0.04, 0), ink));
+    const wavelength = entry.wavelength_m ?? entry.value;
+    addAnchor(scene, `λ = ${wavelength ? formatLength(wavelength) : 'one wavelength'}`,
+        new THREE.Vector3(START + CYCLES / 2, bracketY - 0.09, 0));
     scene.userData.waveAnimation = { cyclesPerSecond: 0.35, phase: 0 };
     return scene;
 }

@@ -196,20 +196,18 @@
       "note": "A drone photogrammetry scan of the football field at Milton Frank Stadium in Huntsville, Alabama, cropped to the playing surface; stands, track, lights, and the noisily scanned goalposts were removed. The goal-line-to-goal-line span, 100 yards (91.44 m), is calibrated to the listed length; it is about three quarters of the mesh, which also includes both end zones and a strip of turf beyond them."
     },
     {
-      "id": "sketchfab-liberty-gravity-jack",
+      "id": "sketchfab-statue-of-liberty-monument",
       "name": "Statue of Liberty",
-      "uid": "84094e8d5e724b5c882cf576ca12e44e",
-      "author": "Gravity Jack",
+      "uid": "e899267a0951468aaa868e5daf22c290",
+      "author": "e-sfera (skolskaknjiga)",
       "license": "by",
       "presentation": {
         "measure_axis": "y",
-        "measure_fraction": 0.4952,
-        "liberty_pedestal": true,
-        "focus_scale_factor": 2.05,
-        "layout_width_factor": 0.9,
-        "pitch": 10
+        "layout_width_factor": 1.1,
+        "focus_scale_factor": 1.3,
+        "pitch": 12
       },
-      "note": "Gravity Jack's hand-modeled, PBR-textured statue, not a photogrammetric scan. A simplified tiered granite-colored pedestal and foundation are added in the explorer. The copper statue from base to torch is the listed 46.05 m; the added support is approximately 46.94 m, making the full diagram approximately 92.99 m from ground to flame. The pedestal geometry is illustrative rather than a survey of Liberty Island."
+      "note": "e-sfera's authored model of the whole monument: the copper statue on Richard Morris Hunt's granite pedestal, standing inside the star-shaped walls of Fort Wood. Its full height, from the ground at the fort to the torch, is calibrated to the listed 92.99 m; in the model the statue is half of that height, matching the real 46.05 m statue on 46.94 m of pedestal and foundation. Details are simplified for a low-poly model."
     }
   ]
 }

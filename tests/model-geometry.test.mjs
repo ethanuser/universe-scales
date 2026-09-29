@@ -1,12 +1,14 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { proceduralScene } from '../js/experiences/procedural-models.js';
-import { layoutModelLabels } from '../js/experiences/model-labels.js';
+import { placeLabels } from '../js/experiences/model-labels.js';
 
 test('hair has outward-facing skin and closed, oppositely oriented cuts', () => {
     const scene = proceduralScene('hair-fiber');
     const skin = scene.children[0], positions = skin.geometry.getAttribute('position');
     const normals = skin.geometry.getAttribute('normal');
+    skin.geometry.computeBoundingBox();
+    const half = skin.geometry.boundingBox.max.y;
     for (let index = 0; index < positions.count; index += 97)
         assert.ok(positions.getX(index) * normals.getX(index) + positions.getZ(index) * normals.getZ(index) > 0);
     for (const [name, sign] of [['hair-top-cut', 1], ['hair-bottom-cut', -1]]) {
@@ -14,7 +16,7 @@ test('hair has outward-facing skin and closed, oppositely oriented cuts', () => 
         assert.ok(cap);
         const points = cap.geometry.getAttribute('position'), normal = cap.geometry.getAttribute('normal');
         for (let index = 0; index < points.count; index++) {
-            assert.equal(points.getY(index), sign);
+            assert.ok(Math.abs(points.getY(index) - sign * half) < 1e-6);
             assert.ok(normal.getY(index) * sign > 0.999);
         }
         const bodyRow = sign > 0 ? positions.count - 97 : 0;
@@ -26,18 +28,22 @@ test('hair has outward-facing skin and closed, oppositely oriented cuts', () => 
     assert.ok(scene.children.reduce((sum, mesh) => sum + mesh.geometry.index.count / 3, 0) < 50000);
 });
 
-test('clustered planetary labels remain separated inside the viewport', () => {
-    const names = ['Sun', 'Mercury', 'Venus', 'Earth', 'Mars', 'Asteroid belt', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
-    const labels = layoutModelLabels(names.map(text => ({ text, x: 500, y: 250 })),
-        { left: 0, right: 1000, top: 0, bottom: 460 });
-    for (let index = 0; index < labels.length; index++) {
-        const a = labels[index].box;
-        assert.ok(a.left >= 0 && a.right <= 1000 && a.top >= 0 && a.bottom <= 460);
-        for (const other of labels.slice(index + 1)) {
-            const b = other.box;
-            assert.ok(a.right < b.left || b.right < a.left || a.bottom < b.top || b.bottom < a.top);
-        }
-    }
+test('planet labels stay put and hide by priority instead of moving', () => {
+    const viewport = { left: 0, right: 1000, top: 0, bottom: 460 };
+    const names = ['Sun', 'Mercury', 'Venus', 'Earth', 'Mars'];
+    const clustered = placeLabels(names.map((text, index) => ({ text, x: 500 + index, y: 250, priority: index })), viewport);
+    // Every label keeps its fixed offset above its own anchor.
+    for (const label of clustered) assert.equal(label.labelY, 250 - 6);
+    const visible = clustered.filter(label => label.visible);
+    assert.deepEqual(visible.map(label => label.text), ['Sun']);
+    // Spread out, all are visible; nudging the anchors moves labels by the same amount.
+    const spread = placeLabels(names.map((text, index) => ({ text, x: 100 + index * 150, y: 250 })), viewport);
+    assert.ok(spread.every(label => label.visible));
+    const nudged = placeLabels(names.map((text, index) => ({ text, x: 103 + index * 150, y: 251 })), viewport);
+    nudged.forEach((label, index) => assert.equal(label.labelX - spread[index].labelX, 3));
+    for (let index = 0; index < spread.length; index++)
+        for (const other of spread.slice(index + 1))
+            assert.ok(spread[index].box.right < other.box.left || other.box.right < spread[index].box.left);
 });
 
 test('solar system has planet labels and a bounded main asteroid belt', () => {

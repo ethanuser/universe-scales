@@ -61,15 +61,16 @@ test('Everest is an opaque DEM block with a surveyed-height summit', () => {
     assert.ok(model.bytes < 1_000_000);
 });
 
-test('Liberty is authored geometry with a separately calibrated pedestal', () => {
-    const model = byId('sketchfab-liberty-gravity-jack');
+test('Liberty is the whole authored monument, calibrated ground to torch', () => {
+    const model = byId('sketchfab-statue-of-liberty-monument');
     assert.deepEqual(model.matches.length, ['Statue of Liberty']);
     assert.equal(model.license, 'CC-BY-4.0');
-    assert.equal(model.presentation.liberty_pedestal, true);
-    assert.ok(Math.abs(model.presentation.measure_fraction - 46.05 / 92.99) < 0.001);
-    assert.ok(model.presentation.focus_scale_factor > 2);
-    assert.match(model.note, /illustrative/);
-    assert.ok(!byId('sketchfab-statue-of-liberty'));
+    assert.equal(model.presentation.measure_axis, 'y');
+    assert.equal(model.presentation.measure_fraction, undefined);
+    assert.match(model.note, /92\.99 m/);
+    assert.ok(!byId('sketchfab-liberty-gravity-jack'));
+    const length = JSON.parse(readFileSync(path.join(root, 'exports/json/dimensions/length.json')));
+    assert.equal(length.items.find(item => item.name === 'Statue of Liberty').value, 92.99);
 });
 
 test('mitochondrion is a single cut-away organelle without baked labels', () => {

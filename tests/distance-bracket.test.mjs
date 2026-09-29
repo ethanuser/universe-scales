@@ -18,7 +18,7 @@ function diagram(left, right) {
 }
 const close = (a, b) => Math.abs(a - b) < 1e-12;
 
-test('bracket touches the facing limbs and lies below both bodies', () => {
+test('bracket marks center-to-center distance below both bodies', () => {
     const earth = 6_371_000 / 384_400_000, moon = 1_737_500 / 384_400_000;
     const scene = diagram(['Earth', -0.5, earth], ['Moon', 0.5, moon]);
     addDistanceBracket(scene, { bodies: ['Earth', 'Moon'] });
@@ -27,15 +27,15 @@ test('bracket touches the facing limbs and lies below both bodies', () => {
         .sort((a, b) => a.position.x - b.position.x);
     const [horizontal] = lines.filter(line => line.userData.screenLine.axis === 'x');
     const bottom = -(earth + BRACKET_DROP);
-    for (const [line, x] of [[vertical[0], -0.5 + earth], [vertical[1], 0.5 - moon]]) {
+    for (const [line, x, radius] of [[vertical[0], -0.5, earth], [vertical[1], 0.5, moon]]) {
         assert.ok(close(line.position.x, x));
-        assert.ok(close(line.position.y + line.userData.screenLine.length / 2, 0));
+        assert.ok(close(line.position.y + line.userData.screenLine.length / 2, -radius));
         assert.ok(close(line.position.y - line.userData.screenLine.length / 2, bottom));
     }
     assert.ok(close(horizontal.position.y, bottom));
-    assert.ok(close(horizontal.userData.screenLine.length, 1 - earth - moon));
+    assert.ok(close(horizontal.userData.screenLine.length, 1));
     for (const name of ['Earth', 'Moon'])
-        assert.deepEqual(scene.getObjectByName(name).userData, { label: name, sphere: true });
+        assert.deepEqual(scene.getObjectByName(name).userData, { label: name, outline: true, sphere: true });
 });
 
 test('bracket skips diagrams whose named bodies are missing', () => {
