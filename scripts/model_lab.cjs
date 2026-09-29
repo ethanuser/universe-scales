@@ -8,7 +8,7 @@
 //   node scripts/model_lab.cjs shot OUT_DIR "Item" ["Item" ...]
 //       [--views rest,front,side,top,back] [--bg light|dark|sky] [--time 1.5] [--zoom 1]
 //       One PNG per item and view from model-review.html, plus printed metrics.
-//   node scripts/model_lab.cjs sheet OUT.png [--filter regex] [--cols 6] [--bg light]
+//   node scripts/model_lab.cjs sheet OUT.png [--filter regex] [--cols 6] [--bg auto|light|dark|sky]
 //       Contact sheet of every Length item that has a model, labeled with its
 //       extent ratio, for a quick visual pass over the whole scale.
 //   node scripts/model_lab.cjs explorer OUT_DIR "Item" [...] [--size 1280x800]
@@ -126,14 +126,16 @@ const commands = {
                 .filter(item => item.model && (!filter || filter.test(item.name)));
             const tiles = [];
             for (const item of items) {
+                // Match the explorer's sky: space-scale items on dark, the rest on light.
+                const background = !options.bg || options.bg === 'auto' ? (item.value > 1e7 ? 'dark' : 'light') : options.bg;
                 const metrics = await page.evaluate(([name, bg]) => window.modelLab.show(name, { background: bg }),
-                    [item.name, options.bg || 'light']);
+                    [item.name, background]);
                 const image = (await (await page.$('#stage-frame')).screenshot({ type: 'jpeg', quality: 80 })).toString('base64');
                 tiles.push({ image, caption: `${item.name}: ${metrics.loaded ? `${metrics.extent.toFixed(2)}x` : 'not loaded'}`,
                     warn: Boolean(metrics.warnings?.length || !metrics.loaded) });
             }
             const html = `<body style="margin:0;background:#1d2329;font:13px sans-serif;display:grid;
-                grid-template-columns:repeat(${columns},300px);gap:6px;padding:6px;width:max-content">${tiles.map(tile =>
+                grid-template-columns:repeat(${columns},300px);align-items:start;gap:6px;padding:6px;width:max-content">${tiles.map(tile =>
                 `<figure style="margin:0;background:#fff"><img src="data:image/jpeg;base64,${tile.image}" style="width:300px;display:block">
                 <figcaption style="padding:3px 6px;color:${tile.warn ? '#b3261e' : '#223'}">${tile.caption.replace(/</g, '&lt;')}</figcaption></figure>`).join('')}</body>`;
             await page.setViewportSize({ width: columns * 306 + 6, height: 800 });
