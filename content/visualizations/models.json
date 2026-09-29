@@ -2548,7 +2548,8 @@
           "Dropped disconnected fragments under 1,000 triangles; permuted axes (x,y,z)->(y,z,x) so the pillars' long axis is vertical and the four pillars spread horizontally; centered horizontally, base at y=0",
           "gltf-transform 4.5.0 simplify --ratio 0.07 --error 0.01 (737k to 51.6k triangles)",
           "Recomputed smooth vertex normals and assigned a dust-brown material (pillars-helpers/post.py)",
-          "gltf-transform 4.5.0 quantize"
+          "gltf-transform 4.5.0 quantize",
+          "Replaced zero-length normals (degenerate triangles) with +Y"
         ],
         "source_model_name": "All Four Pillars (Positioning Reference).stl (EaglePillars_All Pillars_reduced)",
         "source_author": "Leah Hustak, Ralf Crawford (STScI)"
@@ -2561,7 +2562,7 @@
       "format": "glb",
       "gltf_version": "2.0",
       "bytes": 723716,
-      "sha256": "6dbf58142db7bd6bfd59ff88a56efe659975e4037e3b67b87c5688b47a7f9673",
+      "sha256": "0bb09332ddd81dc54f253e85f86a089595cb75f36183e52301a7867da0aa0c5d",
       "extensions_used": [
         "KHR_mesh_quantization"
       ],
