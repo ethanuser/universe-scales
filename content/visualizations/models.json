@@ -2524,7 +2524,7 @@
         "measure_axis": "y",
         "measure_fraction": 0.973298,
         "layout_width_factor": 1.22,
-        "pitch": 16
+        "pitch": 10
       },
       "note": "A true-scale block of ocean around Challenger Deep, from public Mapzen elevation tiles whose open-ocean depths come from NOAA's ETOPO1 grid (about 1.85 km resolution, so the seafloor is smoothed). The deepest sample is anchored to the surveyed 10,935 m, and sea level to that point is calibrated to the listed 11,000 m; a thin rock slab sits below. The translucent blue is the water column: Everest, at 8.8 km, would fit inside it with more than 2 km to spare.",
       "processing": {
