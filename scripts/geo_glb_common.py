@@ -75,14 +75,21 @@ class GLB:
         self.doc["textures"].append({"source": len(self.doc["images"]) - 1, "sampler": 0})
         return len(self.doc["textures"]) - 1
 
-    def primitive(self, positions, indices, material, normals=None, colors=None, uvs=None):
+    def primitive(self, positions, indices, material, normals=None, colors=None, uvs=None, rgba8=False):
         positions = np.asarray(positions, dtype=np.float32)
         attrs = {"POSITION": self._accessor(positions, 5126, "VEC3", 34962, True)}
         if normals is not None:
             attrs["NORMAL"] = self._accessor(np.asarray(normals, dtype=np.float32), 5126, "VEC3", 34962)
         if colors is not None:
             colors = np.asarray(colors, dtype=np.float32)
-            attrs["COLOR_0"] = self._accessor(colors, 5126, "VEC4" if colors.shape[1] == 4 else "VEC3", 34962)
+            if colors.shape[1] == 3 and rgba8:
+                colors = np.concatenate((colors, np.ones((len(colors), 1), np.float32)), axis=1)
+            if rgba8:  # normalized unsigned bytes: 4 B per vertex instead of 12-16
+                attrs["COLOR_0"] = self._accessor(np.round(np.clip(colors, 0, 1) * 255).astype(np.uint8),
+                                                  5121, "VEC4", 34962)
+                self.doc["accessors"][-1]["normalized"] = True
+            else:
+                attrs["COLOR_0"] = self._accessor(colors, 5126, "VEC4" if colors.shape[1] == 4 else "VEC3", 34962)
         if uvs is not None:
             attrs["TEXCOORD_0"] = self._accessor(np.asarray(uvs, dtype=np.float32), 5126, "VEC2", 34962)
         indices = np.asarray(indices)

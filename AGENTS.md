@@ -202,8 +202,10 @@ node scripts/model_lab.cjs audit
   model spans.
 - E and B labels carry vector arrows. Pillars of Creation (NASA/STScI) added.
 - Sourcing results: no usable public model exists for Orion, Tarantula or Carina nebulae, Proxima, the
-  Heliosphere or the Oort Cloud (build procedurally). Geography models (Manhattan, Panama Canal, etc.)
-  were still being built by a subagent; its output is under the session scratchpad `models/geo/`.
+  Heliosphere or the Oort Cloud (build procedurally). Geography: Manhattan (OSM + Mapzen, value corrected to 21.6 km) and
+  the Panama Canal strip (8x vertical exaggeration) were added via `scripts/build_manhattan_block.py` and
+  `build_panama_canal_block.py`. Skipped as inaccurate at the size rule: Great Wall (route ~3,000 km of
+  21,196), Amazon, Marathon.
 
 ## Open work (as of 2026-09-28)
 

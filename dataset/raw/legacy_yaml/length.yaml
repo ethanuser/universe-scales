@@ -371,7 +371,7 @@ items:
   name: Mariana Trench
   source: https://en.wikipedia.org/wiki/Mariana_Trench
   value: 11000
-- description: The diameter of Manhattan Island, a tiny sliver of land that
+- description: The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that
     houses over 1.6 million people and generates more economic output than
     most countries. This densely packed urban environment contains 1,000
     buildings over 100 meters tall and processes 2.5 million subway riders
@@ -380,7 +380,7 @@ items:
     Manhattan's real estate value exceeds $3 trillion.
   name: Manhattan Island
   source: https://en.wikipedia.org/wiki/Manhattan
-  value: 20000
+  value: 21600
 - description: The length of marathon races, a distance born from ancient Greek
     legend. The original marathon commemorates Pheidippides' run from Marathon
     to Athens to announce victory over Persia. This distance represents the

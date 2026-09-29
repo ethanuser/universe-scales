@@ -14581,6 +14581,114 @@
         "maxInfluences": 0,
         "maxAttributes": 2
       }
+    },
+    {
+      "id": "osm-manhattan-island-block",
+      "sha256": "eb26b858a19856952b40305a8572bc68cd3c1b9da6c7eeb684157d6e16c30fee",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 2560x620.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales Manhattan block builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1870344
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 2560,
+              "height": 620,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 55809,
+        "totalTriangleCount": 47441,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "osm-panama-canal-strip",
+      "sha256": "e71511958e993df0817a33239c79c7ea508ee4a972376fe095889cde96288571",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 2560x611.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales Panama Canal strip builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1317896
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 2560,
+              "height": 611,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 23782,
+        "totalTriangleCount": 42474,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
     }
   ]
 }

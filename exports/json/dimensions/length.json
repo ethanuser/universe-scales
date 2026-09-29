@@ -2141,17 +2141,17 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The diameter of Manhattan Island, a tiny sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
+      "description": "The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The diameter of Manhattan Island, a tiny sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
+      "description_medium": "The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Manhattan Island",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "20000",
+          "original_value_text": "21600",
           "source_url": "https://en.wikipedia.org/wiki/Manhattan"
         }
       },
@@ -2187,8 +2187,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The diameter of Manhattan Island, a tiny sliver of land that houses over 1.6 million people and generates more economic output than most countries.",
-      "value": 20000.0,
+      "summary_short": "The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that houses over 1.6 million people and generates more economic output than most countries.",
+      "value": 21600.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
