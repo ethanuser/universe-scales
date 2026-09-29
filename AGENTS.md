@@ -174,6 +174,21 @@ node scripts/model_lab.cjs audit
   Python respectively; the combined invocation lacks Pillow or PyYAML in one
   environment. Full dataset verification still fails on the baseline torque drift.
 
+## 2026-09-28 (Claude)
+
+- Model lab + content-hash versioning (see above). Precise bounds for calibration/grounding.
+- Size rule applied: hydrogen and carbon are listed as diameters (106 pm, 140 pm) and drawn
+  inside those spheres (32.3% and 53.8% of electron probability inside); EM waves show one
+  wavelength; Statue of Liberty is e-sfera's whole monument at 92.99 m ground to torch.
+  Remaining intentional exceptions: DNA (one helical turn is 1.7x its 2 nm width) and the
+  virus (spikes beyond the calibrated 91 nm envelope).
+- New procedural models: iron-56 nucleus (Atomic Nucleus), Milky Way (Galaxy Diameter),
+  Milky Way-Andromeda distance diagram. Andromeda Distance corrected to 2.37e22 m (2.5 Mly).
+- Data note for the owner: Heliosphere is listed at 2.4e14 m (about 1,600 au) although the
+  heliopause is about 120 au out; left unchanged pending a decision on the definition.
+- Planet labels are placed at fixed offsets and hidden by priority (no per-frame shuffling);
+  model annotations fade out below 240 px and item names below 12 px text.
+
 ## Open work (as of 2026-09-27)
 
 - Improve the schematic mitochondrion's internal folds if a small CC-BY/CC0

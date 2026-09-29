@@ -2741,7 +2741,7 @@ items:
   qualifiers: {}
 - id: obs:length:scenario-length-andromeda-distance
   name: Andromeda Distance
-  value: 2.5e+22
+  value: 2.37e+22
   description: The distance to the Andromeda Galaxy, our nearest major galactic neighbor that's approaching us at 110 km/s. This massive spiral galaxy contains over a trillion stars and is twice the size of the Milky Way. Andromeda is visible to the naked eye as a faint smudge in the night sky. In 4.5 billion years, it will collide with our galaxy, creating a new elliptical galaxy called Milkomeda. The collision will dramatically reshape both galaxies but stars are so far apart that direct collisions are unlikely.
   description_format: markdown
   summary_short: The distance to the Andromeda Galaxy, our nearest major galactic neighbor that's approaching us at 110 km/s.
@@ -2758,7 +2758,7 @@ items:
     legacy_item_name: Andromeda Distance
     source_trace:
       method: derived
-      original_value_text: 2.5e22
+      original_value_text: 2.37e22
       source_url: https://en.wikipedia.org/wiki/Andromeda_Galaxy
   source: https://en.wikipedia.org/wiki/Andromeda_Galaxy
   source_count: 2

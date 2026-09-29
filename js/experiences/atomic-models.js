@@ -199,7 +199,64 @@ export function carbonAtomScene() {
     return scene;
 }
 
+// Iron-56 nucleus: 26 protons and 30 neutrons packed into the uniform sphere
+// implied by its measured rms charge radius, 3.7377 fm (Angeli & Marinova
+// 2013): R = sqrt(5/3) * r_rms = 4.83 fm, about 9.7 fm across. Nucleons are
+// drawn at the proton charge radius, 0.84 fm. Coordinates are femtometers.
+export const IRON_56 = Object.freeze({ protons: 26, neutrons: 30, rmsChargeRadius: 3.7377,
+    nucleonRadius: 0.8409 });
+export const IRON_56_RADIUS = Math.sqrt(5 / 3) * IRON_56.rmsChargeRadius;
+export function nucleonCenters({ protons, neutrons, nucleonRadius }, radius, seed = 0x56fe) {
+    const random = randomSource(seed), count = protons + neutrons;
+    // Jittered close packing: the lattice points nearest the center, then
+    // scaled so the outermost nucleons touch the nuclear surface.
+    const spacing = 2 * nucleonRadius * 0.93, points = [];
+    const span = Math.ceil(radius / spacing) + 2;
+    for (let i = -span; i <= span; i++) for (let j = -span; j <= span; j++) for (let k = -span; k <= span; k++) {
+        const offset = (j + k) % 2 === 0 ? 0 : 0.5; // face-centered stacking
+        points.push(new THREE.Vector3((i + offset) * spacing, j * spacing * 0.8165, (k + (j % 2) * 0.5) * spacing)
+            .add(new THREE.Vector3(random() - 0.5, random() - 0.5, random() - 0.5).multiplyScalar(0.25 * spacing)));
+    }
+    points.sort((a, b) => a.length() - b.length());
+    const chosen = points.slice(0, count);
+    const outer = Math.max(...chosen.map(point => point.length()));
+    const scale = (radius - nucleonRadius) / outer;
+    const kinds = Array.from({ length: count }, (_, index) => index < protons ? 'proton' : 'neutron');
+    for (let index = kinds.length - 1; index > 0; index--) {
+        const swap = Math.floor(random() * (index + 1));
+        [kinds[index], kinds[swap]] = [kinds[swap], kinds[index]];
+    }
+    return chosen.map((point, index) => ({ position: point.multiplyScalar(scale), kind: kinds[index] }));
+}
+export function ironNucleusScene() {
+    const scene = new THREE.Group();
+    const sphere = new THREE.SphereGeometry(IRON_56.nucleonRadius, 28, 20);
+    const materials = { proton: new THREE.MeshStandardMaterial({ color: 0xd8483f, roughness: 0.45 }),
+        neutron: new THREE.MeshStandardMaterial({ color: 0x8796ab, roughness: 0.45 }) };
+    for (const { position, kind } of nucleonCenters(IRON_56, IRON_56_RADIUS)) {
+        const nucleon = new THREE.Mesh(sphere, materials[kind]);
+        nucleon.position.copy(position);
+        nucleon.name = kind;
+        scene.add(nucleon);
+    }
+    const anchor = new THREE.Object3D();
+    anchor.position.set(0, IRON_56_RADIUS * 1.12, 0);
+    anchor.userData.label = 'Iron-56: 26 protons, 30 neutrons';
+    scene.add(anchor);
+    return scene;
+}
+export const nuclearModelMetadata = Object.freeze({
+    'Atomic Nucleus': Object.freeze({ id: 'iron-56-nucleus', procedural: 'iron-56-nucleus', geometry: 'mesh',
+        // Model units are femtometers; 10 fm is the listed typical diameter.
+        presentation: Object.freeze({ reference_size: 10, layout_width_factor: 1, focus_scale_factor: 1.3,
+            display_extent_factor: 1, yaw: 20, pitch: 10 }),
+        basis_url: 'https://doi.org/10.1016/j.adt.2011.12.006',
+        basis_label: 'Charge radii: Angeli & Marinova (2013)',
+        note: 'An iron-56 nucleus, the most tightly bound kind, drawn as 26 red protons and 30 gray neutrons packed into a sphere 9.7 fm across, the size implied by its measured charge radius. That is about 14,000 times smaller than a carbon atom. Real nucleons are not hard balls: they are fuzzy quantum objects in constant motion, so this is the conventional picture, not a snapshot.' })
+});
+
 export const atomicScenes = Object.freeze({
+    'iron-56-nucleus': ironNucleusScene,
     'hydrogen-1s-quantum': hydrogenAtomScene,
     'carbon-atom-quantum': carbonAtomScene
 });

@@ -4,7 +4,7 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels } from './model-labels.js?v=d45a63a3fb';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=0c63a4d5dc';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=0e32d573c1';
 import { waveAnimation } from './wave-models.js?v=c8432f8cec';
 
 const models = new Map();

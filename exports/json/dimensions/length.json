@@ -3237,7 +3237,7 @@
         "legacy_item_name": "Andromeda Distance",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "2.5e22",
+          "original_value_text": "2.37e22",
           "source_url": "https://en.wikipedia.org/wiki/Andromeda_Galaxy"
         }
       },
@@ -3274,7 +3274,7 @@
         }
       ],
       "summary_short": "The distance to the Andromeda Galaxy, our nearest major galactic neighbor that's approaching us at 110 km/s.",
-      "value": 2.5e+22,
+      "value": 2.37e+22,
       "value_type": "derived",
       "wikidata_qid": null
     },

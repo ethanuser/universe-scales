@@ -187,7 +187,7 @@ test('wave module supplies seven calibrated band metadata entries and a clone-sa
 
 test('module metadata and factories have stable, explicit integration keys', () => {
     assert.deepEqual(Object.keys(atomicModelMetadata), ['Hydrogen Atom', 'Carbon Atom']);
-    assert.deepEqual(Object.keys(atomicScenes), ['hydrogen-1s-quantum', 'carbon-atom-quantum']);
+    assert.deepEqual(Object.keys(atomicScenes), ['iron-56-nucleus', 'hydrogen-1s-quantum', 'carbon-atom-quantum']);
     assert.equal(atomicScenes['hydrogen-1s-quantum'], hydrogenAtomScene);
     assert.equal(atomicScenes['carbon-atom-quantum'], carbonAtomScene);
 });

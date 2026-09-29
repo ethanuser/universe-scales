@@ -2,7 +2,8 @@
 // relative three.js import resolves to the same module as the page's import map
 // and also works under Node for tests.
 import * as THREE from '../vendor/three/three.module.min.js';
-import { atomicModelMetadata, atomicScenes } from './atomic-models.js?v=a0335462d6';
+import { atomicModelMetadata, atomicScenes, nuclearModelMetadata } from './atomic-models.js?v=4affabd60c';
+import { cosmicModelMetadata, cosmicScenes } from './cosmic-models.js?v=19b9508086';
 import { waveModelMetadata, waveScenes } from './wave-models.js?v=c8432f8cec';
 
 // Overlay conventions read by ModelStage.finish():
@@ -64,6 +65,8 @@ const AU = 149_597_870_700;
 
 export const proceduralLength = {
     ...atomicModelMetadata,
+    ...nuclearModelMetadata,
+    ...cosmicModelMetadata,
     ...waveModelMetadata,
     'Water Molecule': { id: 'nist-water-molecule', procedural: 'molecule', molecule: 'water',
         geometry: 'mesh', presentation: { reference_size: 2.75 },
@@ -500,6 +503,7 @@ function solarSystem(date = new Date()) {
 
 export function proceduralScene(kind, entry) {
     if (atomicScenes[kind]) return atomicScenes[kind](entry);
+    if (cosmicScenes[kind]) return cosmicScenes[kind](entry);
     if (waveScenes[kind]) return waveScenes[kind](entry);
     if (kind === 'hair-fiber') return hairFiber();
     if (kind === 'mitochondrion-lamellar-cutaway') return mitochondrionCutaway();
