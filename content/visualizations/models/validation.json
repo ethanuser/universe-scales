@@ -739,8 +739,8 @@
       }
     },
     {
-      "id": "sketchfab-mitochondrion-v2",
-      "sha256": "f80f28dda5223192304c0f703e535d94e8f45ef758b038090be0b16fddb888d0",
+      "id": "sketchfab-mitochondrion-cristae",
+      "sha256": "c916063758ae47ff65d9d8001abcf1da06f221af60f3598faa63326463e0aa45",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -752,20 +752,39 @@
       "info": {
         "version": "2.0",
         "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_materials_ior",
+          "KHR_materials_specular",
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
         "resources": [
           {
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 214720
+            "byteLength": 681368
           },
           {
             "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
             "mimeType": "image/png",
             "storage": "buffer-view",
             "image": {
-              "width": 512,
-              "height": 512,
+              "width": 1024,
+              "height": 1024,
               "format": "rgba",
               "primaries": "srgb",
               "transfer": "srgb",
@@ -773,26 +792,28 @@
             }
           },
           {
-            "pointer": "/images/1",
-            "mimeType": "image/jpeg",
+            "pointer": "/images/2",
+            "mimeType": "image/png",
             "storage": "buffer-view",
             "image": {
-              "width": 512,
-              "height": 512,
-              "format": "rgb",
+              "width": 1024,
+              "height": 1024,
+              "format": "rgba",
+              "primaries": "srgb",
+              "transfer": "srgb",
               "bits": 8
             }
           }
         ],
         "animationCount": 0,
-        "materialCount": 2,
+        "materialCount": 1,
         "hasMorphTargets": false,
         "hasSkins": false,
         "hasTextures": true,
         "hasDefaultScene": true,
-        "drawCallCount": 2,
-        "totalVertexCount": 4423,
-        "totalTriangleCount": 6851,
+        "drawCallCount": 1,
+        "totalVertexCount": 12506,
+        "totalTriangleCount": 24432,
         "maxUVs": 1,
         "maxInfluences": 0,
         "maxAttributes": 3
@@ -14055,46 +14076,28 @@
       }
     },
     {
-      "id": "sketchfab-bacterium-piliated-v3",
-      "sha256": "9330515f23c85c94d4393c5394f18e99ae4322a19fd66ad7fc7e77d1dfcb83a0",
+      "id": "sketchfab-bacterium-teal",
+      "sha256": "ced0cb39b3b5215e74432e6750f0022facff260fd67c6c1b1756a5ae3c933346",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
-        "numInfos": 1,
+        "numInfos": 0,
         "numHints": 0,
-        "messages": [
-          {
-            "code": "UNUSED_OBJECT",
-            "message": "This object may be unused.",
-            "severity": 2,
-            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_1"
-          }
-        ],
+        "messages": [],
         "truncated": false
       },
       "info": {
         "version": "2.0",
-        "generator": "Sketchfab-15.24.0",
+        "generator": "glTF-Transform v4.5.0",
         "resources": [
           {
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 370988
+            "byteLength": 327320
           },
           {
             "pointer": "/images/0",
-            "mimeType": "image/jpeg",
-            "storage": "buffer-view",
-            "image": {
-              "width": 512,
-              "height": 512,
-              "format": "rgb",
-              "bits": 8
-            }
-          },
-          {
-            "pointer": "/images/1",
             "mimeType": "image/jpeg",
             "storage": "buffer-view",
             "image": {
@@ -14114,9 +14117,9 @@
         "drawCallCount": 3,
         "totalVertexCount": 5121,
         "totalTriangleCount": 7890,
-        "maxUVs": 2,
+        "maxUVs": 1,
         "maxInfluences": 0,
-        "maxAttributes": 5
+        "maxAttributes": 4
       }
     },
     {
@@ -14616,6 +14619,49 @@
         "maxUVs": 0,
         "maxInfluences": 0,
         "maxAttributes": 3
+      }
+    },
+    {
+      "id": "sketchfab-neuron-soma",
+      "sha256": "0564d70d3caca41a89844b07f56343c812ff514b483700e6610202a6d901d394",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_materials_specular",
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 436148
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 13,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 429,
+        "totalVertexCount": 26930,
+        "totalTriangleCount": 46869,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
       }
     }
   ]

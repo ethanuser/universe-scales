@@ -35,13 +35,13 @@ test('virus is the NIAID SARS-CoV-2 virion calibrated by envelope, not spikes', 
     assert.equal(length.items.find(item => item.name === 'Virus').value, 9.1e-8);
 });
 
-test('bacterium is a credited, pilose rod calibrated by body length, not flagellum', () => {
-    const model = byId('sketchfab-bacterium-piliated-v3');
+test('bacterium is calibrated by body length with shortened flagella', () => {
+    const model = byId('sketchfab-bacterium-teal');
     assert.deepEqual(model.matches.length, ['Bacteria']);
     assert.equal(model.presentation.measure_axis, 'x');
-    assert.ok(model.presentation.measure_fraction > 0.4 && model.presentation.measure_fraction < 0.6);
-    assert.match(model.note, /species/);
-    assert.ok(!byId('sketchfab-bacterium-rod-v2'));
+    // Body is about 79% of the full length once the flagella are shortened.
+    assert.ok(model.presentation.measure_fraction > 0.75 && model.presentation.measure_fraction < 0.85);
+    assert.match(model.note, /flagella are shortened/);
     assert.ok(model.bytes < 500_000);
 });
 
@@ -73,13 +73,16 @@ test('Liberty is the whole authored monument, calibrated ground to torch', () =>
     assert.equal(length.items.find(item => item.name === 'Statue of Liberty').value, 92.99);
 });
 
-test('mitochondrion is a single cut-away organelle without baked labels', () => {
-    const model = byId('sketchfab-mitochondrion-v2');
-    assert.deepEqual(model.matches.length, ['Mitochondrion']);
-    assert.ok(!byId('sketchfab-mitochondrion'));
-    const audit = JSON.parse(execFileSync(process.execPath,
-        ['scripts/audit_glb_geometry.mjs', model.src], { cwd: root, encoding: 'utf8' }));
-    assert.ok(!JSON.stringify(audit).includes('Labels'));
+test('cell models replace the procedural and earlier Sketchfab versions', () => {
+    for (const [id, name] of [['sketchfab-mitochondrion-cristae', 'Mitochondrion'],
+        ['sketchfab-bacterium-teal', 'Bacteria'], ['sketchfab-neuron-soma', 'Neuron']]) {
+        const model = byId(id);
+        assert.deepEqual(model.matches.length, [name]);
+        assert.equal(model.license, 'CC-BY-4.0');
+        assert.ok(model.bytes < 1_500_000, id);
+    }
+    assert.ok(!byId('sketchfab-mitochondrion-v2') && !byId('sketchfab-bacterium-piliated-v3'));
+    assert.equal(byId('sketchfab-neuron-soma').presentation.flatten_static, true);
 });
 
 test('insulin example is compact and its label does not claim a measured diameter', () => {

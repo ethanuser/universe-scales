@@ -4,7 +4,7 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels } from './model-labels.js?v=d45a63a3fb';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=0e32d573c1';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=a68dc729a6';
 import { waveAnimation } from './wave-models.js?v=c8432f8cec';
 
 const models = new Map();
@@ -94,6 +94,19 @@ function addHoverOverlay(instance) {
         return overlay;
     });
 }
+// Quantized (KHR_mesh_quantization) attributes are normalized integers; baking
+// a node transform into them clamps every coordinate to +/-1. Merge in floats.
+function dequantized(geometry) {
+    for (const [name, attribute] of Object.entries(geometry.attributes)) {
+        if (!attribute.normalized && attribute.array instanceof Float32Array && !attribute.isInterleavedBufferAttribute) continue;
+        const values = new Float32Array(attribute.count * attribute.itemSize);
+        for (let index = 0; index < attribute.count; index++)
+            for (let component = 0; component < attribute.itemSize; component++)
+                values[index * attribute.itemSize + component] = attribute.getComponent(index, component);
+        geometry.setAttribute(name, new THREE.BufferAttribute(values, attribute.itemSize));
+    }
+    return geometry;
+}
 function flattenStaticScene(scene) {
     scene.updateMatrixWorld(true);
     const meshes = [];
@@ -108,7 +121,7 @@ function flattenStaticScene(scene) {
     if (unsupported || !meshes.length) return scene;
     const groups = new Map();
     for (const child of meshes) {
-        const geometry = child.geometry.clone();
+        const geometry = dequantized(child.geometry.clone());
         geometry.applyMatrix4(child.matrixWorld);
         const attributes = Object.entries(geometry.attributes).sort(([a], [b]) => a.localeCompare(b))
             .map(([name, attribute]) => `${name}:${attribute.itemSize}:${attribute.normalized}:${attribute.array.constructor.name}`)

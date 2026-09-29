@@ -38,19 +38,18 @@
       "note": "A human insulin monomer, not an interchangeable model of every small protein. The listed 5 nm is a representative protein scale, not a measured diameter of this conformer; its longest visible mesh extent is normalized to that illustrative value."
     },
     {
-      "id": "sketchfab-bacterium-piliated-v3",
+      "id": "sketchfab-bacterium-teal",
       "name": "Bacteria",
       "uid": "75ae189551e94d59aedce00104217533",
       "author": "andrewfrueh",
       "license": "by",
       "presentation": {
         "measure_axis": "x",
-        "measure_fraction": 0.534,
-        "layout_width_factor": 2,
-        "focus_scale_factor": 1.55,
-        "display_extent_factor": 2.1
+        "measure_fraction": 0.7928,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.4
       },
-      "note": "An illustrative rod-shaped bacterium with many short pili and several long flagella. The artist did not identify a species, so it should not be read as a specimen of E. coli; its main body is calibrated to the listed representative 2-micrometer E. coli length. The flagella are outside that measurement, and the model's surface pattern is illustrative."
+      "note": "A rod-shaped bacterium bristling with short pili, in a muted teal (E. coli has no natural color; this is an illustration convention). Its body is calibrated to the listed 2 micrometer length of E. coli. Its flagella are shortened to fit the explorer; real E. coli flagella trail several times the body length."
     },
     {
       "id": "sketchfab-red-blood-cell",
@@ -67,25 +66,31 @@
       "note": "Biconcave red blood cell from an educational morphology model. The listed size refers to cell diameter."
     },
     {
-      "id": "sketchfab-mitochondrion-v2",
+      "id": "sketchfab-mitochondrion-cristae",
       "name": "Mitochondrion",
-      "uid": "7445a425050e49daa881070ca6917a91",
-      "author": "brianj.seely",
+      "uid": "c29592b6d4934b068ef6905b33b2367c",
+      "author": "winasafutri",
       "license": "by",
       "presentation": {
-        "yaw": -150
+        "measure_axis": "x",
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.3
       },
-      "note": "A cut-away mitochondrion showing the translucent outer membrane, the folded inner membrane (cristae), the matrix, and ribosomes. Mitochondrial shape varies widely between cells, so this is an illustrative example rather than a measured organelle; its long axis is calibrated to the listed length."
+      "note": "A mitochondrion cut open to show its folded inner membrane: many lamellar cristae run the organelle's length, with matrix granules and DNA inside. Its long axis is calibrated to the listed 10 micrometers; mitochondria vary widely in shape and cristae density between cell types, and this model's cross-section is flatter than a real organelle's."
     },
     {
-      "id": "sketchfab-neuron",
+      "id": "sketchfab-neuron-soma",
       "name": "Neuron",
-      "uid": "d40557a1e4154267b78117433bc51296",
-      "author": "versal",
+      "uid": "381ed0d5607c43c982b1ab47adea7b9b",
+      "author": "dgedrgegedrfg",
       "license": "by",
-      "enabled": false,
-      "deferred_reason": "The item measures cell-body size, while this model includes long neuronal processes.",
-      "note": "Illustrative neuron. Neurons can have processes much longer than the local cell-body scale listed in the dataset."
+      "presentation": {
+        "measure_axis": "x",
+        "flatten_static": true,
+        "layout_width_factor": 1.0,
+        "focus_scale_factor": 1.3
+      },
+      "note": "A multipolar neuron's cell body cut open to show its nucleus, Golgi apparatus, endoplasmic reticulum and mitochondria, with the first branches of its dendrites. The whole model is calibrated to the listed 100 micrometers, so the cell body is about 70 micrometers across, the size of a large spinal motor neuron's. Real dendrites branch much farther, and the axon, which can be a meter long, is omitted."
     },
     {
       "id": "sketchfab-black-ant",

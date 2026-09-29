@@ -189,11 +189,12 @@ node scripts/model_lab.cjs audit
 - Planet labels are placed at fixed offsets and hidden by priority (no per-frame shuffling);
   model annotations fade out below 240 px and item names below 12 px text.
 
-## Open work (as of 2026-09-27)
+## Open work (as of 2026-09-28)
 
-- Improve the schematic mitochondrion's internal folds if a small CC-BY/CC0
-  scientific model is found. The current procedural cutaway is intentionally not
-  claimed to be a specimen reconstruction.
-- Consider a neuron model if the owner still wants it; no new neuron asset was
-  imported in this session.
-- Investigate the full-build drift and make the Python test dependencies coherent.
+- Intentional size exceptions flagged by `model_lab audit`: DNA (one helical turn is 1.7x its
+  2 nm width) and the virus (spikes beyond the 91 nm envelope).
+- Owner decisions pending: Heliosphere's listed 2.4e14 m (about 1,600 au) versus a ~120 au
+  heliopause; whether to import the CC BY-NC-SA sand grain the owner originally chose.
+- Photo-only Length items that could still get models: Proton, Electron, Oort Cloud,
+  Heliosphere, Proxima Centauri, nebulae, the Local Group and larger structures.
+- Investigate the full-build dataset drift (use `scripts.dataset.rebuild_dimension` meanwhile).

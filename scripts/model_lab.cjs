@@ -135,7 +135,7 @@ const commands = {
                     warn: Boolean(metrics.warnings?.length || !metrics.loaded) });
             }
             const html = `<body style="margin:0;background:#1d2329;font:13px sans-serif;display:grid;
-                grid-template-columns:repeat(${columns},300px);align-items:start;gap:6px;padding:6px;width:max-content">${tiles.map(tile =>
+                grid-template-columns:repeat(${columns},300px);align-items:start;align-content:start;gap:6px;padding:6px;width:max-content">${tiles.map(tile =>
                 `<figure style="margin:0;background:#fff"><img src="data:image/jpeg;base64,${tile.image}" style="width:300px;display:block">
                 <figcaption style="padding:3px 6px;color:${tile.warn ? '#b3261e' : '#223'}">${tile.caption.replace(/</g, '&lt;')}</figcaption></figure>`).join('')}</body>`;
             await page.setViewportSize({ width: columns * 306 + 6, height: 800 });

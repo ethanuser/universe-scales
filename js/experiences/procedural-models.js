@@ -85,12 +85,6 @@ export const proceduralLength = {
         basis_url: 'https://wellcomecollection.org/works/wxgqyf66',
         basis_label: 'Cuticle reference: Wellcome Collection',
         note: 'A scalp hair shaft modeled on electron micrographs: overlapping cuticle scales about 8 micrometers tall, with irregular free edges pointing toward the tip, around a slightly oval shaft. Its diameter is calibrated to the listed 100 micrometers; the shaft is cropped, and its color and luster are those of medium-brown hair rather than a false-colored micrograph.' },
-    'Mitochondrion': { id: 'mitochondrion-lamellar-cutaway', procedural: 'mitochondrion-lamellar-cutaway',
-        geometry: 'mesh', presentation: { reference_size: 1, layout_width_factor: 1.15,
-            focus_scale_factor: 1.6, display_extent_factor: 1.15 },
-        basis_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2829299/',
-        basis_label: 'Electron tomography of lamellar cristae',
-        note: 'An opaque cutaway of a long, tubular mitochondrion. The outer membrane is opened toward the viewer; the inner boundary membrane and a series of lamellar cristae are visible inside. Electron tomography reveals organized inner-membrane sheets, but this surface pattern is an illustration, not a reconstruction of a measured organelle. The long axis is calibrated to the listed 10 micrometers; membrane thickness and spacing are enlarged for legibility.' },
     'Football Field': { id: 'regulation-football-field', procedural: 'regulation-football-field',
         geometry: 'mesh', presentation: { reference_size: 100, pitch: 62,
             layout_width_factor: 1.25, focus_scale_factor: 1.45, display_extent_factor: 1.25 },
@@ -214,77 +208,6 @@ function hairFiber() {
             new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.78 }));
         cap.name = sign > 0 ? 'hair-top-cut' : 'hair-bottom-cut';
         scene.add(cap);
-    }
-    return scene;
-}
-
-function mitochondrionCutaway() {
-    const scene = new THREE.Group();
-    const matrix = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 32),
-        new THREE.MeshStandardMaterial({ color: 0x576568, roughness: 0.9, metalness: 0 }));
-    matrix.scale.set(0.465, 0.154, 0.154);
-    matrix.name = 'mitochondrial-matrix';
-    scene.add(matrix);
-
-    // The near-side outer membrane is omitted as a clean cutaway. Both end
-    // poles stay closed; the darker back and the rim keep the organelle solid.
-    const positions = [], colors = [], indices = [];
-    const longitudinal = 64, around = 48;
-    const segments = [[0, 0.34], [Math.PI - 0.34, 2 * Math.PI]];
-    const base = new THREE.Color(0x9a5b53);
-    for (const [start, end] of segments) {
-        const offset = positions.length / 3;
-        for (let row = 0; row <= longitudinal; row++) {
-            const phi = Math.PI * row / longitudinal;
-            const x = 0.5 * Math.cos(phi), ring = Math.sin(phi);
-            for (let column = 0; column <= around; column++) {
-                const theta = start + (end - start) * column / around;
-                const grain = 0.985 + 0.025 * Math.sin(47 * phi + 19 * theta) * Math.sin(13 * phi - 31 * theta);
-                positions.push(x, 0.19 * ring * Math.cos(theta) * grain,
-                    0.19 * ring * Math.sin(theta) * grain);
-                const tone = base.clone().multiplyScalar(0.86 + 0.11 * Math.sin(7 * phi + 5 * theta) ** 2);
-                colors.push(tone.r, tone.g, tone.b);
-            }
-        }
-        for (let row = 0; row < longitudinal; row++)
-            for (let column = 0; column < around; column++) {
-                const a = offset + row * (around + 1) + column, b = a + around + 1;
-                indices.push(a, a + 1, b, b, a + 1, b + 1);
-            }
-    }
-    const shellGeometry = new THREE.BufferGeometry();
-    shellGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-    shellGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-    shellGeometry.setIndex(indices);
-    shellGeometry.computeVertexNormals();
-    const shell = new THREE.Mesh(shellGeometry,
-        new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.72, side: THREE.DoubleSide }));
-    shell.name = 'opaque-outer-membrane';
-    scene.add(shell);
-
-    const innerMaterial = new THREE.MeshStandardMaterial({ color: 0xc18469,
-        roughness: 0.63, metalness: 0, side: THREE.DoubleSide });
-    for (let fold = 0; fold < 11; fold++) {
-        const centerX = -0.36 + fold * 0.072;
-        const membrane = [], faces = [], steps = 24;
-        for (let step = 0; step <= steps; step++) {
-            const t = step / steps, y = (2 * t - 1) * 0.116;
-            const x = centerX + 0.009 * Math.sin(3 * Math.PI * t + fold * 0.65);
-            const core = Math.max(0.01, 1 - (x / 0.465) ** 2 - (y / 0.154) ** 2);
-            const z = 0.154 * Math.sqrt(core) + 0.009;
-            membrane.push(x - 0.006, y, z, x + 0.006, y, z);
-            if (step < steps) {
-                const a = step * 2;
-                faces.push(a, a + 1, a + 2, a + 1, a + 3, a + 2);
-            }
-        }
-        const geometry = new THREE.BufferGeometry();
-        geometry.setAttribute('position', new THREE.Float32BufferAttribute(membrane, 3));
-        geometry.setIndex(faces);
-        geometry.computeVertexNormals();
-        const crista = new THREE.Mesh(geometry, innerMaterial);
-        crista.name = `lamellar-crista-${fold + 1}`;
-        scene.add(crista);
     }
     return scene;
 }
@@ -506,7 +429,6 @@ export function proceduralScene(kind, entry) {
     if (cosmicScenes[kind]) return cosmicScenes[kind](entry);
     if (waveScenes[kind]) return waveScenes[kind](entry);
     if (kind === 'hair-fiber') return hairFiber();
-    if (kind === 'mitochondrion-lamellar-cutaway') return mitochondrionCutaway();
     if (kind === 'regulation-football-field') return footballField();
     if (kind === 'solar-system') return solarSystem();
     return new THREE.Group();

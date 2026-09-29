@@ -807,14 +807,17 @@
       "closed_volume_checked": false
     },
     {
-      "id": "sketchfab-mitochondrion-v2",
-      "source": "https://sketchfab.com/3d-models/mitochondria-7445a425050e49daa881070ca6917a91",
-      "author": "brianj.seely on Sketchfab",
+      "id": "sketchfab-mitochondrion-cristae",
+      "source": "https://sketchfab.com/3d-models/mitokondria-c29592b6d4934b068ef6905b33b2367c",
+      "author": "winasafutri on Sketchfab",
       "license": "CC-BY-4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_files": [
         "licenses/CC-BY-4.0.txt"
       ],
+      "sketchfab_uid": "c29592b6d4934b068ef6905b33b2367c",
+      "source_sha256": "9496e27420a7dad974f50a5c4f7d5f01ce780f108d4dc17985e29dc1900c5b16",
+      "source_bytes": 3489689,
       "matches": {
         "length": [
           "Mitochondrion"
@@ -822,38 +825,43 @@
       },
       "geometry": "mesh",
       "presentation": {
-        "yaw": -150
+        "measure_axis": "x",
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.3
       },
-      "note": "A cut-away mitochondrion showing the translucent outer membrane, the folded inner membrane (cristae), the matrix, and ribosomes. Mitochondrial shape varies widely between cells, so this is an illustrative example rather than a measured organelle; its long axis is calibrated to the listed length.",
-      "src": "content/visualizations/models/sketchfab-mitochondrion-v2.glb",
+      "note": "A mitochondrion cut open to show its folded inner membrane: many lamellar cristae run the organelle's length, with matrix granules and DNA inside. Its long axis is calibrated to the listed 10 micrometers; mitochondria vary widely in shape and cristae density between cell types, and this model's cross-section is flatter than a real organelle's.",
+      "src": "content/visualizations/models/sketchfab-mitochondrion-cristae.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 217748,
-      "sha256": "f80f28dda5223192304c0f703e535d94e8f45ef758b038090be0b16fddb888d0",
-      "extensions_used": [],
-      "extensions_required": [],
+      "bytes": 684228,
+      "sha256": "c916063758ae47ff65d9d8001abcf1da06f221af60f3598faa63326463e0aa45",
+      "extensions_used": [
+        "KHR_materials_ior",
+        "KHR_materials_specular",
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
       "decompression_required": [],
       "external_resources": [],
-      "mesh_count": 2,
-      "triangle_count": 6851,
+      "mesh_count": 1,
+      "triangle_count": 24432,
       "animations": 0,
       "skins": 0,
-      "sketchfab_uid": "7445a425050e49daa881070ca6917a91",
-      "source_sha256": "385618bfddc167017e873275f17c1ee267e37e6fd0a4c1d47643907290887741",
-      "source_bytes": 311774,
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
       "processing": {
         "operations": [
-          "Loaded the existing repo GLB (no re-download); identified that its 'Transparent structures' and 'Opaque structures' meshes each combined geometry from TWO spatially separate mitochondria (a whole closed one and a cut-away one) sharing one mesh/material apiece",
-          "Split each of those two meshes into connected components (union-find over shared triangle vertices) and grouped components by local-space bounding-box center into the two mitochondria; kept only the cut-away copy's components (matrix, cristae folds, ribosome markers, outer membrane) and discarded the whole copy's components",
-          "Deleted the 'Labels V004_2' node/mesh entirely (four text billboards plus their leader-line geometry) and its now-unused 'Labels_opaque_unlit' material/texture",
-          "Rotated the kept geometry (positions and normals) 90 degrees about Y so the organelle's long axis is world X instead of the source's local Z; this also fixes the original bug where the renderer's longest-extent auto-measurement was picking a foreshortened axis, drawing each mitochondrion at roughly half its intended size",
-          "glTF Transform 4.5.0: prune (drops the orphaned Labels material/texture/accessors), weld, dedup; no external geometry decoder used"
+          "Downloaded through the Sketchfab model API (uid c29592b6d4934b068ef6905b33b2367c)",
+          "Converted the source KHR_materials_pbrSpecularGlossiness material to a standard metallic-roughness material (glTF Transform metalRough) so the file needs no legacy required extension",
+          "Applied a corrective rotation so the organelle's long axis reads cleanly for display (a prior session's fix for this asset's diagonal resting pose)",
+          "glTF Transform 4.5.0: dedup, weld, prune, quantize; no Draco/Meshopt/KTX2/WebP",
+          "Verified full model extent equals the calibrated long axis (measure_axis x, no measure_fraction), so no appendage extends the rendered size beyond the listed 10 micrometers"
         ],
-        "source_model_name": "Mitochondria",
-        "source_author": "brianj.seely"
-      },
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false
+        "source_model_name": "Mitokondria",
+        "source_author": "winasafutri"
+      }
     },
     {
       "id": "sketchfab-black-ant",
@@ -2013,11 +2021,14 @@
       "closed_volume_checked": false
     },
     {
-      "id": "sketchfab-bacterium-piliated-v3",
+      "id": "sketchfab-bacterium-teal",
       "source": "https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533",
       "author": "andrewfrueh on Sketchfab",
       "license": "CC-BY-4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
       "sketchfab_uid": "75ae189551e94d59aedce00104217533",
       "source_sha256": "af7116c8b4d4b32e99fd45382024fcb8da98fdef02d8777fc80f43a0ce59bf3b",
       "source_bytes": 2714439,
@@ -2026,35 +2037,19 @@
           "Bacteria"
         ]
       },
+      "geometry": "mesh",
       "presentation": {
         "measure_axis": "x",
-        "measure_fraction": 0.534,
-        "layout_width_factor": 2,
-        "focus_scale_factor": 1.55,
-        "display_extent_factor": 2.1
+        "measure_fraction": 0.7928,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.4
       },
-      "note": "An illustrative rod-shaped bacterium with many short pili and several long flagella. The artist did not identify a species, so it should not be read as a specimen of E. coli; its main body is calibrated to the listed representative 2-micrometer E. coli length. The flagella are outside that measurement, and the model's surface pattern is illustrative.",
-      "processing": {
-        "operations": [
-          "Downloaded through the Sketchfab model API",
-          "Embedded glTF buffers and images into a GLB",
-          "Reduced base-color and normal textures to 512 pixels",
-          "Measured body-only X extent against full extent to calibrate the 2-micrometer value"
-        ],
-        "source_model_name": "Bacterium",
-        "source_author": "andrewfrueh"
-      },
-      "src": "content/visualizations/models/sketchfab-bacterium-piliated-v3.glb",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "geometry": "mesh",
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false,
+      "note": "A rod-shaped bacterium bristling with short pili, in a muted teal (E. coli has no natural color; this is an illustration convention). Its body is calibrated to the listed 2 micrometer length of E. coli. Its flagella are shortened to fit the explorer; real E. coli flagella trail several times the body length.",
+      "src": "content/visualizations/models/sketchfab-bacterium-teal.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 376276,
-      "sha256": "9330515f23c85c94d4393c5394f18e99ae4322a19fd66ad7fc7e77d1dfcb83a0",
+      "bytes": 331472,
+      "sha256": "ced0cb39b3b5215e74432e6750f0022facff260fd67c6c1b1756a5ae3c933346",
       "extensions_used": [],
       "extensions_required": [],
       "decompression_required": [],
@@ -2062,7 +2057,22 @@
       "mesh_count": 3,
       "triangle_count": 7890,
       "animations": 0,
-      "skins": 0
+      "skins": 0,
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "processing": {
+        "operations": [
+          "Started from the repo's existing sketchfab-bacterium-piliated-v3.glb (no re-download)",
+          "Identified the 5 separate flagellum strands as disconnected mesh components (union-find over shared vertices) within the 'body end' hair mesh, each 3.7-5.8 model units long versus the 7.07-unit body",
+          "Scaled each flagellum toward its base-attachment point (not a crop) so every strand's extent shrinks to about 1.5 units, keeping its tapered tip intact with no open cut; the ~218 short pili strands were left untouched",
+          "This brings the full model extent (body + shortened flagella + pili) to 8.92 units, 1.26x the calibrated body length, inside the 1.3x limit; previously the full extent (13.23 units) was 1.87x, dominated by flagella extending far past the body",
+          "Removed the body's baked red/pink base-color JPEG texture (source of the 'raw meat' look) and set a flat baseColorFactor instead; kept the normal map so the membrane still has subtle bump detail",
+          "Set the pili/flagella material to a pale cream instead of its previous light-blue tint",
+          "glTF Transform 4.5.0 prune to drop the now-unused texture and accessors"
+        ],
+        "source_model_name": "Bacterium",
+        "source_author": "andrewfrueh"
+      }
     },
     {
       "id": "coronavirus-sars-cov-2",
@@ -2566,6 +2576,63 @@
       "triangle_count": 17644,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "sketchfab-neuron-soma",
+      "source": "https://sketchfab.com/3d-models/3d-neuron-cell-381ed0d5607c43c982b1ab47adea7b9b",
+      "author": "dgedrgegedrfg on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "sketchfab_uid": "381ed0d5607c43c982b1ab47adea7b9b",
+      "source_sha256": "0297e1162e130dad7fe6e54f26847c471d76a1efca2f903d96d6b2254ecb414b",
+      "source_bytes": 925385,
+      "matches": {
+        "length": [
+          "Neuron"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "measure_axis": "x",
+        "flatten_static": true,
+        "layout_width_factor": 1.0,
+        "focus_scale_factor": 1.3
+      },
+      "note": "A multipolar neuron's cell body cut open to show its nucleus, Golgi apparatus, endoplasmic reticulum and mitochondria, with the first branches of its dendrites. The whole model is calibrated to the listed 100 micrometers, so the cell body is about 70 micrometers across, the size of a large spinal motor neuron's. Real dendrites branch much farther, and the axon, which can be a meter long, is omitted.",
+      "src": "content/visualizations/models/sketchfab-neuron-soma.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 750952,
+      "sha256": "0564d70d3caca41a89844b07f56343c812ff514b483700e6610202a6d901d394",
+      "extensions_used": [
+        "KHR_materials_specular",
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 429,
+      "triangle_count": 46869,
+      "animations": 0,
+      "skins": 0,
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "processing": {
+        "operations": [
+          "Downloaded through the Sketchfab model API (uid 381ed0d5607c43c982b1ab47adea7b9b)",
+          "Deleted the axon: all nodes named AxonHillock*, Myelin*, NodeRanvier*, AxonTerminal_d*, and SynapticBulb* (39 top-level groups), which extended the model from 5.92 units (soma+dendrites+organelles) to 9.26 units",
+          "glTF Transform 4.5.0: dedup, weld, simplify (ratio 0.28, error 0.004, reducing 130,281 to 64,365 triangles), prune, quantize; no Draco/Meshopt/KTX2/WebP; a join pass was tried to cut draw calls but was rejected after it was found to corrupt the bounding box (likely a meshoptimizer edge case with this file's many small instanced primitives), so the model keeps its original 429 meshes/591 primitives",
+          "Measured the soma-only bounding box separately (via node-name filtering) to report its 71% fraction of the full remaining extent",
+          "No color changes made; the source model's own materials were kept as-is"
+        ],
+        "source_model_name": "3D Neuron Cell",
+        "source_author": "dgedrgegedrfg"
+      }
     }
   ],
   "coverage_gaps": [
