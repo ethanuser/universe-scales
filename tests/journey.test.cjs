@@ -61,7 +61,7 @@ test('near-sized neighbors use a compact, fixed clearance',()=>{
         const entries=layout(items,exponent);
         for(let index=1;index<entries.length;index++){
             const gap=(entries[index].leftEdge-entries[index-1].rightEdge)/entries[index].size;
-            assert.ok(gap>=.08-1e-8 && gap<.09,`gap ${gap} at ${exponent}`);
+            assert.ok(gap>=.2-1e-8 && gap<.21,`gap ${gap} at ${exponent}`);
         }
     }
 });
@@ -119,6 +119,16 @@ test('camera eases over multiple frames and converges without overshooting',()=>
         if(frame===0)assert.ok(camera.value>0&&camera.value<.1);
     }
     assert.equal(camera.value,1);assert.equal(camera.velocity,0);
+});
+test('glide takes its full duration, moves monotonically, and ends exactly on target',()=>{
+    const camera=new Camera(0,-2,2);camera.glide(0.01,1);
+    let previous=0,frames=0;
+    while(camera.step(1/60)){frames++;assert.ok(camera.value>=previous&&camera.value<=0.01);previous=camera.value;}
+    assert.ok(frames>=58&&frames<=61,`frames ${frames}`);
+    assert.equal(camera.value,0.01);
+    const early=new Camera(0,-2,2);early.glide(1,1);early.step(0.25);
+    assert.ok(early.value>0.05&&early.value<0.2,'smootherstep eases in');
+    early.aim(0.5);assert.equal(early.glideTime,null);
 });
 test('camera is refresh-rate independent and clamps its target to the corpus',()=>{
     const a=new Camera(0,-2,2),b=new Camera(0,-2,2);a.aim(10);b.aim(10);

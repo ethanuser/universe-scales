@@ -1,4 +1,5 @@
 import * as THREE from '../vendor/three/three.module.min.js';
+import { labelNode, screenLine } from './model-overlay-nodes.js';
 
 export const FOOTBALL_FIELD = Object.freeze({
     playingLength: 100,
@@ -31,6 +32,7 @@ function addLine(scene, name, x, z, length, width, material, y = 0.035) {
     return addBox(scene, name, [length, 0.006, width], [x, y, z], material);
 }
 
+const numberMaterials = new Map();
 function addNumber(scene, label, x, side, material) {
     const canvasAvailable = typeof document !== 'undefined' && typeof document.createElement === 'function';
     if (canvasAvailable) {
@@ -45,12 +47,16 @@ function addNumber(scene, label, x, side, material) {
             context.textAlign = 'center';
             context.textBaseline = 'middle';
             context.fillText(label, 128, 96);
-            const texture = new THREE.CanvasTexture(canvas);
-            texture.colorSpace = THREE.SRGBColorSpace;
-            const numberMaterial = new THREE.MeshBasicMaterial({ map: texture, transparent: true,
-                side: THREE.DoubleSide, depthWrite: false, polygonOffset: true,
-                polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
-            const plane = new THREE.Mesh(new THREE.PlaneGeometry(2.7, 2), numberMaterial);
+            const numberMaterial = numberMaterials.get(label) || (() => {
+                const texture = new THREE.CanvasTexture(canvas);
+                texture.colorSpace = THREE.SRGBColorSpace;
+                const made = new THREE.MeshBasicMaterial({ map: texture, transparent: true,
+                    side: THREE.DoubleSide, depthWrite: false, polygonOffset: true,
+                    polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+                numberMaterials.set(label, made);
+                return made;
+            })();
+            const plane = new THREE.Mesh(new THREE.PlaneGeometry(4.1, 3), numberMaterial);
             plane.name = `yard-number-${label}-${side < 0 ? 'near' : 'far'}`;
             plane.rotation.x = -Math.PI / 2;
             if (side > 0) plane.rotation.y = Math.PI;
@@ -97,9 +103,10 @@ function addNumber(scene, label, x, side, material) {
 }
 
 function addGoalpost(scene, end, materials) {
+    // `materials.postRadius` lets the render scene draw posts thicker than the true 1.5 in radius.
     const x = end * 60;
     const gap = FOOTBALL_FIELD.goalpostGap;
-    const postRadius = 1.5 / 36;
+    const postRadius = materials.postRadius;
     const vertical = (name, z, from, to) => {
         const length = to - from;
         const mesh = new THREE.Mesh(new THREE.CylinderGeometry(postRadius, postRadius, length, 10), materials.goalpost);
@@ -127,7 +134,7 @@ function addGoalpost(scene, end, materials) {
     scene.add(foot);
 }
 
-export function footballFieldScene() {
+export function footballFieldScene({ postRadius = 1.5 / 36 } = {}) {
     const scene = new THREE.Group();
     scene.name = 'nfl-football-field';
     scene.userData.dimensions = { ...FOOTBALL_FIELD };
@@ -136,7 +143,8 @@ export function footballFieldScene() {
         endZone: new THREE.MeshStandardMaterial({ color: 0x194d48, roughness: 0.95 }),
         paint: new THREE.MeshBasicMaterial({ color: white, side: THREE.DoubleSide,
             polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }),
-        goalpost: new THREE.MeshStandardMaterial({ color: 0xe0a52b, roughness: 0.6, metalness: 0.05 })
+        goalpost: new THREE.MeshStandardMaterial({ color: 0xe0a52b, roughness: 0.6, metalness: 0.05 }),
+        postRadius
     };
 
     // The slab is deliberately only a few inches thick at this yard scale.
@@ -178,4 +186,63 @@ export function footballFieldScene() {
                 addNumber(scene, label, end * (50 - yard), side, materials.paint);
     }
     return scene;
+}
+
+// Dimension annotations, as model overlays so they rotate with the field: a
+// bracket beside the near sideline spanning goal line to goal line, another
+// across the end line, and a call-out on a goalpost. Lengths are yards.
+function addDimensions(scene) {
+    const ink = 0xf5f3df, y = 0.08, out = halfWidth + 2.6;
+    const bracket = (axis, length, x, z) => scene.add(screenLine(axis, length, new THREE.Vector3(x, y, z), ink));
+    bracket('x', 100, 0, -out);
+    for (const x of [-50, 50]) bracket('z', 1.6, x, -out);
+    scene.add(labelNode('100 yd = 91.44 m goal line to goal line', new THREE.Vector3(0, y + 0.5, -out - 1.2)));
+    const across = 60 + 3.4;
+    bracket('z', fieldWidth, across, 0);
+    for (const z of [-halfWidth, halfWidth]) bracket('x', 1.6, across, z);
+    scene.add(labelNode('53⅓ yd', new THREE.Vector3(across + 2.4, y + 0.5, 0)));
+    scene.add(labelNode('10 yd end zone', new THREE.Vector3(-55, y + 0.5, halfWidth + 2.6)));
+    const post = labelNode('Goalpost: crossbar 10 ft up, uprights 18½ ft apart',
+        new THREE.Vector3(72, FOOTBALL_FIELD.uprightHeight - 3, 0));
+    scene.add(post);
+}
+
+// Merges every static box and plane that shares a material into one mesh, so
+// the ~800 field marks cost a handful of draw calls; goalposts, labels and the
+// constant-width dimension lines stay separate because ModelStage animates them.
+export function footballFieldRenderScene() {
+    const source = footballFieldScene({ postRadius: 0.16 }); // about 4x the real radius, to stay visible
+    addDimensions(source);
+    source.updateMatrixWorld(true);
+    const groups = new Map(), result = new THREE.Group();
+    result.name = source.name;
+    result.userData.dimensions = source.userData.dimensions;
+    const mergeable = node => node.isMesh && !node.userData.screenLine && !node.name.startsWith('goalpost');
+    source.traverse(node => {
+        if (!mergeable(node)) return;
+        const geometry = node.geometry.index ? node.geometry.toNonIndexed() : node.geometry.clone();
+        geometry.applyMatrix4(node.matrixWorld);
+        const entry = groups.get(node.material) || { attributes: { position: [], normal: [], uv: [] } };
+        for (const name of ['position', 'normal', 'uv']) {
+            const attribute = geometry.getAttribute(name);
+            if (attribute) entry.attributes[name].push(attribute.array);
+        }
+        groups.set(node.material, entry);
+    });
+    for (const [material, { attributes }] of groups) {
+        const merged = new THREE.BufferGeometry();
+        for (const [name, arrays] of Object.entries(attributes)) {
+            if (!arrays.length) continue;
+            const total = arrays.reduce((sum, array) => sum + array.length, 0), data = new Float32Array(total);
+            let offset = 0;
+            for (const array of arrays) { data.set(array, offset); offset += array.length; }
+            merged.setAttribute(name, new THREE.BufferAttribute(data, name === 'uv' ? 2 : 3));
+        }
+        result.add(new THREE.Mesh(merged, material));
+    }
+    source.traverse(node => {
+        if (!mergeable(node) && node.isMesh) result.add(node.clone(false));
+        else if (node.userData.label && !node.isMesh) result.add(node.clone(false));
+    });
+    return result;
 }

@@ -1,8 +1,9 @@
 // Animated schematic plane waves for representative electromagnetic wavelengths.
 import * as THREE from '../vendor/three/three.module.min.js';
+import { runAnimation } from './model-animation.js';
 
 // One wavelength fills the model, so it renders at the listed size.
-const presentation = Object.freeze({ reference_size: 1, layout_width_factor: 1.15,
+const presentation = Object.freeze({ reference_size: 1, layout_width_factor: 1.4,
     focus_scale_factor: 1.35, display_extent_factor: 1.15, pitch: 24, yaw: -24 });
 const wave = (name, id, wavelength_m, band, source, sourceTitle, note, additionalSources = []) => Object.freeze({
     id, name, dimension: 'length', value: wavelength_m, unit: 'm', wavelength_m, band,
@@ -78,11 +79,13 @@ function screenLine(axis, length, position, color) {
     return mesh;
 }
 
-function addAnchor(scene, label, position, labelClass) {
+function addAnchor(scene, label, position, labelClass, vector = false) {
     const anchor = new THREE.Object3D();
     anchor.position.copy(position);
     anchor.userData.label = label;
     if (labelClass) anchor.userData.labelClass = labelClass;
+    // Draws a small arrow over the letter, the usual vector notation.
+    if (vector) anchor.userData.labelVector = true;
     scene.add(anchor);
 }
 
@@ -172,8 +175,8 @@ export function waveScene(entry = {}) {
     scene.add(arrow(origin, new THREE.Vector3(propagationEnd, 0, 0), 0.006, neutral));
     scene.add(arrow(origin, new THREE.Vector3(START, AMPLITUDE + 0.1, 0), 0.008, electric));
     scene.add(arrow(origin, new THREE.Vector3(START, 0, AMPLITUDE + 0.1), 0.008, magnetic));
-    addAnchor(scene, 'E', new THREE.Vector3(START, AMPLITUDE + 0.16, 0), 'is-electric');
-    addAnchor(scene, 'B', new THREE.Vector3(START, 0, AMPLITUDE + 0.18), 'is-magnetic');
+    addAnchor(scene, 'E', new THREE.Vector3(START, AMPLITUDE + 0.16, 0), 'is-electric', true);
+    addAnchor(scene, 'B', new THREE.Vector3(START, 0, AMPLITUDE + 0.18), 'is-magnetic', true);
     addAnchor(scene, 'Propagation', new THREE.Vector3(propagationEnd + 0.02, 0.07, 0));
 
     // The model is exactly one wavelength long, so this bracket stays true while
@@ -191,6 +194,7 @@ export function waveScene(entry = {}) {
 
 // elapsed is seconds from the caller's animation clock; state is clone-safe data.
 export function update(scene, elapsed) {
+    if (scene.userData.animation) { runAnimation(scene, elapsed); return; }
     const animation = scene.userData.waveAnimation;
     if (!animation || !Number.isFinite(elapsed)) return;
     animation.phase = TWO_PI * animation.cyclesPerSecond * elapsed;
@@ -204,7 +208,7 @@ export const waveScenes = Object.freeze({ 'traveling-em-wave': waveScene });
 // its animation descriptor is on the outer instance itself.
 export function animationRoots(instance) {
     const roots = [];
-    instance.traverse(node => { if (node.userData.waveAnimation) roots.push(node); });
+    instance.traverse(node => { if (node.userData.waveAnimation || node.userData.animation) roots.push(node); });
     return roots;
 }
 export const waveAnimation = Object.freeze({ update, animationRoots });

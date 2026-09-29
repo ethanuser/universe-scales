@@ -4,8 +4,8 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels } from './model-labels.js?v=d45a63a3fb';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=a68dc729a6';
-import { waveAnimation } from './wave-models.js?v=c8432f8cec';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=eaab4aeb18';
+import { waveAnimation } from './wave-models.js?v=20a2708008';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -429,15 +429,20 @@ export class ModelStage {
         const scale = Math.min(w / view.width, h / view.height);
         const cx = view.x + view.width / 2, cy = 500 - view.y - view.height / 2;
         const eyeY = this.eyeY;
-        const near = this.camera.near, distance = this.camera.position.z;
-        let far = distance + 1000;
+        const distance = this.camera.position.z;
+        let far = distance + 1000, nearest = Infinity;
         for (const instance of this.instances.values()) {
             if (!instance?.visible) continue;
             const bounds = new THREE.Box3().setFromObject(instance);
             far = Math.max(far, distance - bounds.min.z + 100);
+            nearest = Math.min(nearest, distance - bounds.max.z);
         }
-        // A fixed 0.1..1e7 frustum made nearly coplanar fly parts flicker.
-        // Tighten depth precision around the models actually on screen.
+        // A fixed 0.1..1e7 frustum made nearly coplanar parts flicker (fly wings,
+        // painted lines on a field). The eye sits thousands of units back, so the
+        // near plane can sit just in front of the closest model: depth precision
+        // grows about with near, which removes z-fighting on thin decals.
+        const near = Math.max(20, Math.min(nearest - 20, far / 4));
+        this.camera.near = near;
         this.camera.far = far;
         this.camera.position.set(cx,eyeY,distance);
         this.camera.projectionMatrix.makePerspective(-w/scale/2*near/distance,w/scale/2*near/distance,
@@ -544,6 +549,12 @@ export class ModelStage {
                 const label = svgNode('text', { x: at.x, y: at.y - radius - (radius ? 6 : 0) / scale,
                     class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle', opacity });
                 label.textContent = node.userData.label;
+                if (node.userData.labelVector) {
+                    // Vector hat: a short right-pointing arrow centered over the text.
+                    const x = at.x, y = at.y - radius - (radius ? 6 : 0) / scale - 12;
+                    svgNode('path', { d: `M${x - 5.5} ${y}H${x + 5.5}M${x + 2.5} ${y - 3}L${x + 5.5} ${y}L${x + 2.5} ${y + 3}`,
+                        class: `journey-model-vector ${node.userData.labelClass || ''}`, opacity });
+                }
             }
         }
         for (const label of placeLabels(stableLabels, {

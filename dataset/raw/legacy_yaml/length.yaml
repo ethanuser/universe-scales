@@ -215,12 +215,13 @@ items:
   name: Mitochondrion
   source: https://en.wikipedia.org/wiki/Mitochondrion
   value: 1e-5
-- description: The size of neuron cell bodies, the command centers of the nervous
-    system. These cells can have axons extending over a meter long while
-    maintaining electrical signals. Neurons communicate through synapses,
-    where neurotransmitters cross tiny gaps in milliseconds. The brain
-    contains about 86 billion neurons, each connecting to thousands of
-    others, creating the most complex network known in the universe.
+- description: A neuron and its local branches span roughly 100 micrometers.
+    Cell bodies range from a few micrometers to about 100 in the largest
+    motor neurons, and the dendrites around a typical cell body reach out
+    tens of micrometers, while the axon can run over a meter and carry
+    electrical signals called action potentials. Neurons pass those signals
+    across synapses in about a millisecond. The brain contains about 86
+    billion neurons, each connecting to thousands of others.
   name: Neuron
   source: https://en.wikipedia.org/wiki/Neuron
   value: 1e-4

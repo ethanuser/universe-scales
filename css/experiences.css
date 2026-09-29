@@ -560,3 +560,7 @@ body[data-experience='interactive'] .experience-live { margin: 0; padding: 8px 1
     .experience--spatial .experience-stage-frame { flex: 0 0 clamp(360px, 60dvh, 520px); min-height: 0; }
     .experience-camera-slider { width: min(240px, 52%); right: 8px; bottom: 7px; }
 }
+
+.experience--spatial .journey-model-vector { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.experience--spatial .journey-model-vector.is-electric { stroke: #d8362b; }
+.experience--spatial .journey-model-vector.is-magnetic { stroke: #2f6fd6; }

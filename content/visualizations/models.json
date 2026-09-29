@@ -807,63 +807,6 @@
       "closed_volume_checked": false
     },
     {
-      "id": "sketchfab-mitochondrion-cristae",
-      "source": "https://sketchfab.com/3d-models/mitokondria-c29592b6d4934b068ef6905b33b2367c",
-      "author": "winasafutri on Sketchfab",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "sketchfab_uid": "c29592b6d4934b068ef6905b33b2367c",
-      "source_sha256": "9496e27420a7dad974f50a5c4f7d5f01ce780f108d4dc17985e29dc1900c5b16",
-      "source_bytes": 3489689,
-      "matches": {
-        "length": [
-          "Mitochondrion"
-        ]
-      },
-      "geometry": "mesh",
-      "presentation": {
-        "measure_axis": "x",
-        "layout_width_factor": 1.05,
-        "focus_scale_factor": 1.3
-      },
-      "note": "A mitochondrion cut open to show its folded inner membrane: many lamellar cristae run the organelle's length, with matrix granules and DNA inside. Its long axis is calibrated to the listed 10 micrometers; mitochondria vary widely in shape and cristae density between cell types, and this model's cross-section is flatter than a real organelle's.",
-      "src": "content/visualizations/models/sketchfab-mitochondrion-cristae.glb",
-      "format": "glb",
-      "gltf_version": "2.0",
-      "bytes": 684228,
-      "sha256": "c916063758ae47ff65d9d8001abcf1da06f221af60f3598faa63326463e0aa45",
-      "extensions_used": [
-        "KHR_materials_ior",
-        "KHR_materials_specular",
-        "KHR_mesh_quantization"
-      ],
-      "extensions_required": [
-        "KHR_mesh_quantization"
-      ],
-      "decompression_required": [],
-      "external_resources": [],
-      "mesh_count": 1,
-      "triangle_count": 24432,
-      "animations": 0,
-      "skins": 0,
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false,
-      "processing": {
-        "operations": [
-          "Downloaded through the Sketchfab model API (uid c29592b6d4934b068ef6905b33b2367c)",
-          "Converted the source KHR_materials_pbrSpecularGlossiness material to a standard metallic-roughness material (glTF Transform metalRough) so the file needs no legacy required extension",
-          "Applied a corrective rotation so the organelle's long axis reads cleanly for display (a prior session's fix for this asset's diagonal resting pose)",
-          "glTF Transform 4.5.0: dedup, weld, prune, quantize; no Draco/Meshopt/KTX2/WebP",
-          "Verified full model extent equals the calibrated long axis (measure_axis x, no measure_fraction), so no appendage extends the rendered size beyond the listed 10 micrometers"
-        ],
-        "source_model_name": "Mitokondria",
-        "source_author": "winasafutri"
-      }
-    },
-    {
       "id": "sketchfab-black-ant",
       "presentation": {
         "tint": "#342519",
@@ -2578,37 +2521,48 @@
       "skins": 0
     },
     {
-      "id": "sketchfab-neuron-soma",
-      "source": "https://sketchfab.com/3d-models/3d-neuron-cell-381ed0d5607c43c982b1ab47adea7b9b",
-      "author": "dgedrgegedrfg on Sketchfab",
-      "license": "CC-BY-4.0",
-      "license_url": "https://creativecommons.org/licenses/by/4.0/",
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "sketchfab_uid": "381ed0d5607c43c982b1ab47adea7b9b",
-      "source_sha256": "0297e1162e130dad7fe6e54f26847c471d76a1efca2f903d96d6b2254ecb414b",
-      "source_bytes": 925385,
+      "id": "nasa-pillars-of-creation",
+      "source": "https://science.nasa.gov/asset/webb/pillars-of-creation-model-for-3d-printing/",
+      "author": "Leah Hustak and Ralf Crawford (STScI) for NASA, ESA, CSA and STScI; released June 26, 2024",
+      "license": "Public domain (NASA/STScI-produced educational material; page states no explicit license)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [],
       "matches": {
         "length": [
-          "Neuron"
+          "Pillars of Creation"
         ]
       },
       "geometry": "mesh",
       "presentation": {
-        "measure_axis": "x",
-        "flatten_static": true,
-        "layout_width_factor": 1.0,
-        "focus_scale_factor": 1.3
+        "measure_axis": "y",
+        "measure_fraction": 1,
+        "layout_width_factor": 1.3,
+        "pitch": 8,
+        "tint": "#8a5a3c"
       },
-      "note": "A multipolar neuron's cell body cut open to show its nucleus, Golgi apparatus, endoplasmic reticulum and mitochondria, with the first branches of its dendrites. The whole model is calibrated to the listed 100 micrometers, so the cell body is about 70 micrometers across, the size of a large spinal motor neuron's. Real dendrites branch much farther, and the axon, which can be a meter long, is omitted.",
-      "src": "content/visualizations/models/sketchfab-neuron-soma.glb",
+      "note": "STScI's 3D model of the Pillars of Creation in the Eagle Nebula, built from Hubble and Webb observations, showing the four separate dust clouds that overlap as three pillars in the flat image. The tallest pillar's height is calibrated to the listed 5 light-years (the four-pillar group is about 1.2 times wider). Depth is an interpretive reconstruction, the surface is schematic, and the color is a uniform dust brown rather than an observation.",
+      "processing": {
+        "operations": [
+          "Downloaded the 'All Four Pillars (Positioning Reference)' STL from the NASA Science asset page (the 3D-print base plate was not used)",
+          "Converted binary STL to GLB with pillars-helpers/stl2glb.py (welded vertices, 737,170 triangles)",
+          "Dropped disconnected fragments under 1,000 triangles; permuted axes (x,y,z)->(y,z,x) so the pillars' long axis is vertical and the four pillars spread horizontally; centered horizontally, base at y=0",
+          "gltf-transform 4.5.0 simplify --ratio 0.07 --error 0.01 (737k to 51.6k triangles)",
+          "Recomputed smooth vertex normals and assigned a dust-brown material (pillars-helpers/post.py)",
+          "gltf-transform 4.5.0 quantize"
+        ],
+        "source_model_name": "All Four Pillars (Positioning Reference).stl (EaglePillars_All Pillars_reduced)",
+        "source_author": "Leah Hustak, Ralf Crawford (STScI)"
+      },
+      "source_sha256": "7895b0b7446b5793e51b4bc560f6a90b26ef8cfef70fcc39ef5017616f5d4489",
+      "source_bytes": 36858584,
+      "src": "content/visualizations/models/nasa-pillars-of-creation.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 750952,
-      "sha256": "0564d70d3caca41a89844b07f56343c812ff514b483700e6610202a6d901d394",
+      "bytes": 723716,
+      "sha256": "6dbf58142db7bd6bfd59ff88a56efe659975e4037e3b67b87c5688b47a7f9673",
       "extensions_used": [
-        "KHR_materials_specular",
         "KHR_mesh_quantization"
       ],
       "extensions_required": [
@@ -2616,23 +2570,10 @@
       ],
       "decompression_required": [],
       "external_resources": [],
-      "mesh_count": 429,
-      "triangle_count": 46869,
+      "mesh_count": 1,
+      "triangle_count": 51600,
       "animations": 0,
-      "skins": 0,
-      "volume_semantics": "cubic_linear_equivalent_approximation",
-      "closed_volume_checked": false,
-      "processing": {
-        "operations": [
-          "Downloaded through the Sketchfab model API (uid 381ed0d5607c43c982b1ab47adea7b9b)",
-          "Deleted the axon: all nodes named AxonHillock*, Myelin*, NodeRanvier*, AxonTerminal_d*, and SynapticBulb* (39 top-level groups), which extended the model from 5.92 units (soma+dendrites+organelles) to 9.26 units",
-          "glTF Transform 4.5.0: dedup, weld, simplify (ratio 0.28, error 0.004, reducing 130,281 to 64,365 triangles), prune, quantize; no Draco/Meshopt/KTX2/WebP; a join pass was tried to cut draw calls but was rejected after it was found to corrupt the bounding box (likely a meshoptimizer edge case with this file's many small instanced primitives), so the model keeps its original 429 meshes/591 primitives",
-          "Measured the soma-only bounding box separately (via node-name filtering) to report its 71% fraction of the full remaining extent",
-          "No color changes made; the source model's own materials were kept as-is"
-        ],
-        "source_model_name": "3D Neuron Cell",
-        "source_author": "dgedrgegedrfg"
-      }
+      "skins": 0
     }
   ],
   "coverage_gaps": [

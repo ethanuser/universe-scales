@@ -66,33 +66,6 @@
       "note": "Biconcave red blood cell from an educational morphology model. The listed size refers to cell diameter."
     },
     {
-      "id": "sketchfab-mitochondrion-cristae",
-      "name": "Mitochondrion",
-      "uid": "c29592b6d4934b068ef6905b33b2367c",
-      "author": "winasafutri",
-      "license": "by",
-      "presentation": {
-        "measure_axis": "x",
-        "layout_width_factor": 1.05,
-        "focus_scale_factor": 1.3
-      },
-      "note": "A mitochondrion cut open to show its folded inner membrane: many lamellar cristae run the organelle's length, with matrix granules and DNA inside. Its long axis is calibrated to the listed 10 micrometers; mitochondria vary widely in shape and cristae density between cell types, and this model's cross-section is flatter than a real organelle's."
-    },
-    {
-      "id": "sketchfab-neuron-soma",
-      "name": "Neuron",
-      "uid": "381ed0d5607c43c982b1ab47adea7b9b",
-      "author": "dgedrgegedrfg",
-      "license": "by",
-      "presentation": {
-        "measure_axis": "x",
-        "flatten_static": true,
-        "layout_width_factor": 1.0,
-        "focus_scale_factor": 1.3
-      },
-      "note": "A multipolar neuron's cell body cut open to show its nucleus, Golgi apparatus, endoplasmic reticulum and mitochondria, with the first branches of its dendrites. The whole model is calibrated to the listed 100 micrometers, so the cell body is about 70 micrometers across, the size of a large spinal motor neuron's. Real dendrites branch much farther, and the axon, which can be a meter long, is omitted."
-    },
-    {
       "id": "sketchfab-black-ant",
       "name": "Ant",
       "uid": "54db3a0ee3c947168c7f3755ca684217",

@@ -23,3 +23,7 @@ input[type=range] { width: 130px; min-height: 32px; } input[type=file] { width: 
 #status { display: block; min-height: 36px; padding: 10px 20px; font: 12px ui-monospace, monospace; border-bottom: 1px solid #cad3d8; }
 aside { padding: 16px 20px; max-width: 1050px; line-height: 1.5; } aside p { margin: 8px 0; } #photo { max-width: 260px; max-height: 180px; object-fit: contain; }
 @media(max-width: 650px) { .toolbar { gap: 8px; padding: 12px; } #stage-frame { height: 52vh; } }
+
+.journey-model-vector { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.journey-model-vector.is-electric { stroke: #d8362b; }
+.journey-model-vector.is-magnetic { stroke: #2f6fd6; }

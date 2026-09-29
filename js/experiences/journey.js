@@ -3,12 +3,29 @@
     const BASELINE = 405;
     const BASE_SIZE = 370;
     const CENTER_X = 500;
-    // Exact critically damped spring: stable at different refresh rates, no overshoot.
+    // Two motions share one camera. Wheel and drag use an exact critically
+    // damped spring (stable at any refresh rate, no overshoot). Item-to-item
+    // hops use `glide`: a fixed-duration smootherstep, because between items of
+    // similar size the exponent barely changes while the scene slides a whole
+    // object width, and a spring would finish that slide almost instantly.
     class Camera {
-        constructor(value, min, max) { this.value = this.target = value; this.velocity = 0; this.min = min; this.max = max; }
-        aim(value) { this.target = Math.max(this.min, Math.min(this.max, value)); }
+        constructor(value, min, max) { this.value = this.target = value; this.velocity = 0; this.min = min; this.max = max; this.glideTime = null; }
+        aim(value) { this.glideTime = null; this.target = Math.max(this.min, Math.min(this.max, value)); }
         snap(value) { this.aim(value); this.value = this.target; this.velocity = 0; }
+        glide(value, seconds) {
+            this.aim(value);
+            if (this.target === this.value) return;
+            this.glideFrom = this.value; this.glideTime = 0; this.glideSeconds = Math.max(0.05, seconds);
+            this.velocity = 0;
+        }
         step(dt) {
+            if (this.glideTime != null) {
+                this.glideTime += dt;
+                const u = Math.min(1, this.glideTime / this.glideSeconds);
+                this.value = this.glideFrom + (this.target - this.glideFrom) * u * u * u * (u * (6 * u - 15) + 10);
+                if (u >= 1) { this.glideTime = null; this.value = this.target; }
+                return this.glideTime != null;
+            }
             const omega = 18, delta = this.value - this.target;
             const c = this.velocity + omega * delta, decay = Math.exp(-omega * dt);
             this.value = this.target + (delta + c * dt) * decay;
@@ -19,6 +36,9 @@
     }
     const TRAVEL_PER_DECADE = 195;
     const WORLD_GAP_FACTOR = 0.67;
+    // Similar-sized neighbors keep this clearance (in units of the larger object) so
+    // overhanging parts of one model, such as an arrow or label, do not touch the next.
+    const MIN_GAP_FACTOR = 0.2;
     function layout(items, exponent, order = 1, options = {}) {
         const logs = items.map(item => Math.log10(item.value) / order);
         const lengths = logs.map(value => 10 ** value);
@@ -30,7 +50,7 @@
             const footprint = Math.min(1, factors[index - 1], factors[index]);
             const ratio = lengths[index] / lengths[index - 1];
             const separation = Math.max(0, Math.min(1, Math.log10(ratio / 2) / Math.log10(5)));
-            const gapFactor = 0.08 + (WORLD_GAP_FACTOR - 0.08) * separation * footprint * footprint;
+            const gapFactor = MIN_GAP_FACTOR + (WORLD_GAP_FACTOR - MIN_GAP_FACTOR) * separation * footprint * footprint;
             world[index] = world[index - 1] +
                 (factors[index - 1] * lengths[index - 1] + factors[index] * lengths[index]) / 2 +
                 gapFactor * lengths[index];

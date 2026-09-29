@@ -82,6 +82,20 @@
             if (reduceMotion.matches) { camera.snap(value); apply(); }
             else if (!frame) frame = requestAnimationFrame(animate);
         };
+        // Item hops glide for a fixed time that grows with how far the scene
+        // must slide (in pixels at the current zoom), so a hop between two
+        // near-identical sizes still reads as a deliberate camera move.
+        const hop = (value, focusIndex, focusWindow = 0.3) => {
+            if (reduceMotion.matches || focusIndex == null) { aim(value, focusIndex, focusWindow); return; }
+            const options = layoutOptions();
+            const entries = ScaleJourney.layout(ctx.items, camera.value * (options.exponentFactor ?? 1),
+                options.order ?? order, { ...options, focusIndex: explicitFocusIndex,
+                    focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow });
+            const slide = Math.abs((entries[focusIndex]?.x ?? 500) - 500);
+            explicitFocusIndex = focusIndex; explicitFocusExponent = value; explicitFocusWindow = focusWindow;
+            camera.glide(value, clamp(0.75 + 0.22 * Math.log2(1 + slide / 300), 0.75, 1.7));
+            if (!frame) frame = requestAnimationFrame(animate);
+        };
         const move = amount => aim(camera.target + amount);
         zoom.input.addEventListener('input', e => {
             e.stopImmediatePropagation();
@@ -151,7 +165,7 @@
         ctx.stageFrame.tabIndex = 0;
         ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use arrow keys.');
         ctx.stageFrame.addEventListener('keydown', e => { if (['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); move(e.key === 'ArrowRight' ? 0.15 : -0.15); } });
-        return { update: () => { ctx.updateComparison(); }, frameTo: aim,
+        return { update: () => { ctx.updateComparison(); }, frameTo: hop,
             focusOptions: () => ({focusIndex: explicitFocusIndex,
                 focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow}),
             dispose: () => { disposed = true; cancelAnimationFrame(frame); delete ctx.updateComparison; } };

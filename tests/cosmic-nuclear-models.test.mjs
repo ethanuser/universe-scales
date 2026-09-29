@@ -42,3 +42,27 @@ test('iron-56 nucleus has 26 protons and 30 neutrons inside its charge-radius sp
         assert.ok(nucleon.position.length() + IRON_56.nucleonRadius <= IRON_56_RADIUS + 1e-9);
     assert.equal(nuclearModelMetadata['Atomic Nucleus'].presentation.reference_size, 10);
 });
+
+import { NEURON, membranePotential, mitochondrionScene, neuronScene, updateNeuron } from '../js/experiences/organelle-models.js';
+test('neuron spans its listed size and its spike follows the standard waveform', () => {
+    const scene = neuronScene();
+    const box = new THREE.Box3().setFromObject(scene.getObjectByName('neuron-processes'), true);
+    assert.ok(Math.abs(box.max.y - box.min.y - 102) < 8, `height ${box.max.y - box.min.y}`);
+    assert.equal(membranePotential(0), -70);
+    assert.ok(membranePotential(1.29) > -56 && membranePotential(1.29) < -54);
+    assert.ok(Math.abs(membranePotential(1.42) - 40) < 0.5);
+    assert.ok(membranePotential(1.7) < -79);
+    assert.equal(membranePotential(NEURON.period + 0.2), -70);
+    const colors = scene.getObjectByName('neuron-processes').geometry.getAttribute('color');
+    const before = colors.array.slice();
+    updateNeuron(scene, 1.6);
+    assert.notDeepEqual(colors.array, before);
+    assert.match(scene.getObjectByName('ais-readout').userData.label, /mV/);
+    assert.doesNotThrow(() => structuredClone(scene.userData));
+});
+test('mitochondrion has a double membrane and about 17 lamellar cristae', () => {
+    const scene = mitochondrionScene();
+    for (const name of ['outer-membrane', 'inner-boundary-membrane', 'cristae', 'matrix-wall']) assert.ok(scene.getObjectByName(name), name);
+    const size = new THREE.Box3().setFromObject(scene, true).getSize(new THREE.Vector3());
+    assert.ok(Math.abs(size.x - 1) < 0.01);
+});

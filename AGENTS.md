@@ -189,6 +189,22 @@ node scripts/model_lab.cjs audit
 - Planet labels are placed at fixed offsets and hidden by priority (no per-frame shuffling);
   model annotations fade out below 240 px and item names below 12 px text.
 
+## 2026-09-29 (Claude)
+
+- Camera hops between items now `glide` (fixed 0.75-1.7 s smootherstep by pixel distance) instead of the
+  spring; similar-sized neighbors previously slid a whole object width almost instantly. Similar-sized
+  items keep a 0.2 (was 0.08) clearance. The renderer's near plane now hugs the nearest model, which
+  removes z-fighting on thin decals.
+- Football field: `football-model.js` (yard numbers, goalposts, dimension brackets), merged by material.
+- Procedural `organelle-models.js`: lengthwise-cut mitochondrion (17 lamellar cristae) and a pyramidal
+  neuron with an animated action potential (animation registry: `model-animation.js`; live mV readout).
+  The Neuron dataset text now describes the neuron plus local dendrites (about 100 um), which is what the
+  model spans.
+- E and B labels carry vector arrows. Pillars of Creation (NASA/STScI) added.
+- Sourcing results: no usable public model exists for Orion, Tarantula or Carina nebulae, Proxima, the
+  Heliosphere or the Oort Cloud (build procedurally). Geography models (Manhattan, Panama Canal, etc.)
+  were still being built by a subagent; its output is under the session scratchpad `models/geo/`.
+
 ## Open work (as of 2026-09-28)
 
 - Intentional size exceptions flagged by `model_lab audit`: DNA (one helical turn is 1.7x its

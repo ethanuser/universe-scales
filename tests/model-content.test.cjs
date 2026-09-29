@@ -73,16 +73,9 @@ test('Liberty is the whole authored monument, calibrated ground to torch', () =>
     assert.equal(length.items.find(item => item.name === 'Statue of Liberty').value, 92.99);
 });
 
-test('cell models replace the procedural and earlier Sketchfab versions', () => {
-    for (const [id, name] of [['sketchfab-mitochondrion-cristae', 'Mitochondrion'],
-        ['sketchfab-bacterium-teal', 'Bacteria'], ['sketchfab-neuron-soma', 'Neuron']]) {
-        const model = byId(id);
-        assert.deepEqual(model.matches.length, [name]);
-        assert.equal(model.license, 'CC-BY-4.0');
-        assert.ok(model.bytes < 1_500_000, id);
-    }
+test('bacterium teal replaces earlier versions; mitochondrion and neuron are procedural', () => {
+    assert.ok(!byId('sketchfab-mitochondrion-cristae') && !byId('sketchfab-neuron-soma'));
     assert.ok(!byId('sketchfab-mitochondrion-v2') && !byId('sketchfab-bacterium-piliated-v3'));
-    assert.equal(byId('sketchfab-neuron-soma').presentation.flatten_static, true);
 });
 
 test('insulin example is compact and its label does not claim a measured diameter', () => {

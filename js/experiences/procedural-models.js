@@ -4,31 +4,12 @@
 import * as THREE from '../vendor/three/three.module.min.js';
 import { atomicModelMetadata, atomicScenes, nuclearModelMetadata } from './atomic-models.js?v=4affabd60c';
 import { cosmicModelMetadata, cosmicScenes } from './cosmic-models.js?v=19b9508086';
-import { waveModelMetadata, waveScenes } from './wave-models.js?v=c8432f8cec';
+import { waveModelMetadata, waveScenes } from './wave-models.js?v=20a2708008';
 
-// Overlay conventions read by ModelStage.finish():
-//   userData.screenLine = { axis: 'x' | 'y' | 'z', length }  box drawn at a constant pixel width
-//   userData.label = text, userData.labelClass = extra CSS class  upright SVG text at the node
-//   userData.outline = true (with userData.sphere = true)  thin SVG circle around a unit sphere
-//   userData.pointSize = { max, perPixel }  Points size follows the drawn model size
-export const SCREEN_LINE_PX = 1.4;
-const lineMaterials = new Map();
-const unitBox = () => (unitBox.geometry ||= new THREE.BoxGeometry(1, 1, 1));
-export function screenLine(axis, length, position, color = 0xffffff) {
-    if (!lineMaterials.has(color)) lineMaterials.set(color, new THREE.MeshBasicMaterial({ color }));
-    const mesh = new THREE.Mesh(unitBox(), lineMaterials.get(color));
-    mesh.position.copy(position);
-    mesh.userData.screenLine = { axis, length };
-    mesh.scale.set(axis === 'x' ? length : 1e-6, axis === 'y' ? length : 1e-6, axis === 'z' ? length : 1e-6);
-    return mesh;
-}
-function anchor(label, position, labelClass) {
-    const node = new THREE.Object3D();
-    node.position.copy(position);
-    node.userData.label = label;
-    if (labelClass) node.userData.labelClass = labelClass;
-    return node;
-}
+import { SCREEN_LINE_PX, labelNode as anchor, screenLine } from './model-overlay-nodes.js';
+import { footballFieldRenderScene } from './football-model.js';
+import { organelleModelMetadata, organelleScenes } from './organelle-models.js';
+export { SCREEN_LINE_PX, screenLine };
 
 // Distance diagrams (Earth-Moon, AU) get a U-shaped bracket below the two
 // bodies: uprights drop from below each center (the listed distances are
@@ -67,6 +48,7 @@ export const proceduralLength = {
     ...atomicModelMetadata,
     ...nuclearModelMetadata,
     ...cosmicModelMetadata,
+    ...organelleModelMetadata,
     ...waveModelMetadata,
     'Water Molecule': { id: 'nist-water-molecule', procedural: 'molecule', molecule: 'water',
         geometry: 'mesh', presentation: { reference_size: 2.75 },
@@ -86,11 +68,11 @@ export const proceduralLength = {
         basis_label: 'Cuticle reference: Wellcome Collection',
         note: 'A scalp hair shaft modeled on electron micrographs: overlapping cuticle scales about 8 micrometers tall, with irregular free edges pointing toward the tip, around a slightly oval shaft. Its diameter is calibrated to the listed 100 micrometers; the shaft is cropped, and its color and luster are those of medium-brown hair rather than a false-colored micrograph.' },
     'Football Field': { id: 'regulation-football-field', procedural: 'regulation-football-field',
-        geometry: 'mesh', presentation: { reference_size: 100, pitch: 62,
-            layout_width_factor: 1.25, focus_scale_factor: 1.45, display_extent_factor: 1.25 },
+        geometry: 'mesh', presentation: { reference_size: 100, pitch: 34, yaw: -6,
+            layout_width_factor: 1.4, focus_scale_factor: 1.45, display_extent_factor: 1.25 },
         basis_url: 'https://operations.nfl.com/the-rules/nfl-rulebook/',
         basis_label: 'NFL field dimensions and markings',
-        note: 'A regulation field of play, 100 yards (91.44 m) between goal lines, with a 10-yard end zone at either end. The entire rendered turf is therefore 120 yards long and 53⅓ yards wide; the listed size measures only the playing field. Five-yard lines, sidelines, and inbounds marks are included. Colors are generic, not a model of a particular stadium.' },
+        note: 'A regulation NFL field of play: 100 yards (91.44 m) between the goal lines, with a 10-yard end zone at each end, so the whole turf is 120 yards long and 53⅓ yards wide. The listed size is the goal-line-to-goal-line span, marked by the white bracket. Five-yard lines, yard numbers, hash marks and the goalposts (crossbar 10 ft high, uprights 18½ ft apart) follow the NFL rulebook. Colors are generic, not a model of a particular stadium.' },
     'Solar System': { id: 'solar-system-today', procedural: 'solar-system', geometry: 'mesh',
         presentation: { reference_size: 1.2e13 / AU, pitch: 62, layout_width_factor: 1.2,
             focus_scale_factor: 0.72 },
@@ -209,41 +191,6 @@ function hairFiber() {
         cap.name = sign > 0 ? 'hair-top-cut' : 'hair-bottom-cut';
         scene.add(cap);
     }
-    return scene;
-}
-
-function footballField() {
-    const scene = new THREE.Group();
-    const turf = [0x276b3d, 0x2c7442].map(color =>
-        new THREE.MeshBasicMaterial({ color, side: THREE.DoubleSide, polygonOffset: true,
-            polygonOffsetFactor: -1, polygonOffsetUnits: -1 }));
-    const endZone = new THREE.MeshBasicMaterial({ color: 0x143d54, side: THREE.DoubleSide,
-        polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
-    const paint = new THREE.MeshBasicMaterial({ color: 0xf2f4e9, side: THREE.DoubleSide,
-        polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
-    const width = 160 / 3;
-    const addPlane = (x, z, length, depth, y, material) => {
-        const mesh = new THREE.Mesh(new THREE.PlaneGeometry(length, depth), material);
-        mesh.rotation.x = -Math.PI / 2;
-        mesh.position.set(x, y, z);
-        scene.add(mesh);
-    };
-    const base = new THREE.Mesh(new THREE.BoxGeometry(120, 0.16, width),
-        new THREE.MeshStandardMaterial({ color: 0x1b2a24, roughness: 1 }));
-    base.position.y = -0.08;
-    scene.add(base);
-    for (let band = 0; band < 20; band++)
-        addPlane(-47.5 + 5 * band, 0, 5, width, 0.06, turf[band % 2]);
-    for (const x of [-55, 55]) addPlane(x, 0, 10, width, 0.06, endZone);
-    for (let yard = -50; yard <= 50; yard += 5)
-        addPlane(yard, 0, 0.18, width, 0.09, paint);
-    for (const z of [-width / 2 + 0.1, width / 2 - 0.1])
-        addPlane(0, z, 120, 0.25, 0.09, paint);
-    for (let yard = -49; yard <= 49; yard++) {
-        if (yard % 5 === 0) continue;
-        for (const z of [-3.083, 3.083]) addPlane(yard, z, 0.18, 0.7, 0.09, paint);
-    }
-    for (const x of [-59.9, 59.9]) addPlane(x, 0, 0.2, width, 0.09, paint);
     return scene;
 }
 
@@ -427,9 +374,10 @@ function solarSystem(date = new Date()) {
 export function proceduralScene(kind, entry) {
     if (atomicScenes[kind]) return atomicScenes[kind](entry);
     if (cosmicScenes[kind]) return cosmicScenes[kind](entry);
+    if (organelleScenes[kind]) return organelleScenes[kind](entry);
     if (waveScenes[kind]) return waveScenes[kind](entry);
     if (kind === 'hair-fiber') return hairFiber();
-    if (kind === 'regulation-football-field') return footballField();
+    if (kind === 'regulation-football-field') return footballFieldRenderScene();
     if (kind === 'solar-system') return solarSystem();
     return new THREE.Group();
 }
