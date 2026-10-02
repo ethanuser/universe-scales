@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A radio photon at tens of kilohertz carries this much energy per quantum, typical of long-range communication bands. It assumes a frequency around 100 kHz where wavelengths are about 3 km. Individually powerless, these quanta add up through enormous photon counts to drive antennas and receivers. This value anchors the low end of the electromagnetic spectrum in everyday technology.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Photon (Radio)",
@@ -44,6 +45,8 @@
       "id": "obs:energy:scenario-energy-photon-radio",
       "name": "Photon (Radio)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Photon",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A green visible photon near 550 nm holds this energy, close to the peak sensitivity of the human eye. It is the quantum that flips retinal molecules and starts your perception of color. In photosynthesis, many such photons are pooled to drive chemical work in chloroplasts. The number is per photon, not per second or per square meter.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Photon (Visible)",
@@ -95,6 +99,8 @@
       "id": "obs:energy:scenario-energy-photon-visible",
       "name": "Photon (Visible)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Photon",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical covalent bond stores this much energy per bond, averaged over common bonds like C H and C C. At room temperature thermal agitation is far too weak to break it, which is why molecules are stable. Catalysts work by lowering barriers, not by supplying this energy outright. Combustion releases many such bond energies in rapid recombination.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Chemical Bond",
@@ -146,6 +153,8 @@
       "id": "obs:energy:scenario-energy-chemical-bond",
       "name": "Chemical Bond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chemical_bond",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The ionization energy of hydrogen is the work required to liberate the electron from its ground state. It is defined at zero temperature for an isolated atom without external fields. This threshold sets the ultraviolet cutoff for neutral hydrogen in astrophysical gas. The number is exact within the nonrelativistic Bohr model with small corrections in precision measurements.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Hydrogen Ionization",
@@ -197,6 +207,8 @@
       "id": "obs:energy:scenario-energy-hydrogen-ionization",
       "name": "Hydrogen Ionization",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ionization_energy",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Oxidizing one glucose molecule to carbon dioxide and water yields this energy as chemical work potential. Cells harvest it through glycolysis and oxidative phosphorylation with finite efficiency, not as a single hot release. A marathoner turns a great many glucose molecules into steady power over hours. This number is for complete oxidation per molecule, not dietary kilocalories per gram.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Glucose Oxidation",
@@ -248,6 +261,8 @@
       "id": "obs:energy:scenario-energy-glucose-oxidation",
       "name": "Glucose Oxidation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cellular_respiration",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A medical diagnostic X ray photon around 10 keV carries this amount of energy per quantum. At this scale, photons penetrate soft tissue but are attenuated by bone, which is why contrast images form. The value here is representative for imaging, not for therapy beams which can be orders of magnitude higher. Shielding and dose limits follow directly from this per photon energy.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "X-ray Photon",
@@ -299,6 +315,8 @@
       "id": "obs:energy:scenario-energy-x-ray-photon",
       "name": "X-ray Photon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/X-ray",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dropping a 0.1 kg apple one meter gives it about a joule of kinetic energy just before impact. This estimate assumes near Earth gravity and no air drag over the short fall. It is the same scale as the energy you feel when a small object bumps your hand. Simple as it is, the number links school experiments to everyday intuition.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Apple Drop",
@@ -350,6 +369,8 @@
       "id": "obs:energy:scenario-energy-apple-drop",
       "name": "Apple Drop",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kinetic_energy",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The mechanical energy expended by one human heartbeat is on the order of a joule, averaged over an adult at rest. It accounts for pressure times stroke volume against vascular resistance. During exercise this number rises with both rate and pressure, increasing total cardiac work. Each beat is a small burst that keeps the macroscopic system in motion.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Heartbeat",
@@ -401,6 +423,8 @@
       "id": "obs:energy:scenario-energy-heartbeat",
       "name": "Heartbeat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heart",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A short ChatGPT-style response can be approximated as a few tens of joules of served-model energy once accelerator, CPU, memory, and networking overhead are rolled together. The exact number depends on batching, model size, and how much text is generated, so this is an order-of-magnitude intuition item rather than a benchmark. It helps people connect one inference call to everyday physical work. A convenient mental model is $P \\times t$ over a small fraction of a second.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "One ChatGPT-Style Response",
@@ -452,6 +477,8 @@
       "id": "obs:energy:scenario-energy-one-chatgpt-style-response",
       "name": "One ChatGPT-Style Response",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Artificial_intelligence",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lifting a 10 kilogram bag of rice onto a shoulder about one meter high costs this much work against gravity. The feeling of effort maps directly to this small energy transfer. Repeating the motion many times turns it into real exercise. The figure shows how everyday tasks accumulate to meaningful totals.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Lift Bag of Rice",
@@ -503,6 +531,8 @@
       "id": "obs:energy:scenario-energy-lift-bag-of-rice",
       "name": "Lift Bag of Rice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Work_(physics)",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The kinetic energy of a single 95 mile per hour baseball pitch is around this number at the moment it leaves the hand. Catchers wear padding because this energy must be dissipated in milliseconds. Spin and seam orientation change flight, but not the basic energy budget. Fans sense the difference between 80 and 95 in the thud.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Fastball Pitch",
@@ -554,6 +585,8 @@
       "id": "obs:energy:scenario-energy-fastball-pitch",
       "name": "Fastball Pitch",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Baseball",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical football punt imparts this energy to the ball at launch, given masses and speeds common in professional play. Air drag quickly drains it, so range is less than ideal vacuum formulas predict. Spectators intuitively sense the budget by the thump they hear across the stadium. The number depends on style and weather but sets the athletic scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Football Kick",
@@ -605,6 +639,8 @@
       "id": "obs:energy:scenario-energy-football-kick",
       "name": "Football Kick",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Projectile_motion",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A centerfire rifle cartridge delivers a few kilojoules of muzzle energy, packed into a tiny metal case and released in milliseconds. That is why the projectile\u2019s mass can stay small while the impact remains serious. Ballistics tables usually quote this number alongside muzzle velocity because the pair explains much of the projectile\u2019s behavior. The value is typical for a full-power rifle round.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Rifle Cartridge",
@@ -656,6 +693,8 @@
       "id": "obs:energy:scenario-energy-rifle-cartridge",
       "name": "Rifle Cartridge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Muzzle_energy",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A cubic meter of air heated by 10 degrees Celsius at constant pressure stores roughly this many joules more internal energy. Heating, ventilation, and air conditioning design lives on numbers like this. In winter it is what furnaces must deliver repeatedly as rooms exchange air. The figure ties thermodynamics to comfort in buildings.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Warm Room Air (1 m3, plus 10 C)",
@@ -707,6 +747,8 @@
       "id": "obs:energy:scenario-energy-warm-room-air-1-m3-plus-10-c",
       "name": "Warm Room Air (1 m3, plus 10 C)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heat_capacity",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fresh AA alkaline battery stores only a few watt-hours, yet that is enough to run clocks and remote controls for months because the loads are tiny. Thinking in joules makes the scale less mysterious: it is closer to lifting luggage than to powering a car. Chemistry and cutoff voltage decide how much of it is really usable. The value here is a typical nominal capacity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "AA Battery",
@@ -758,6 +801,8 @@
       "id": "obs:energy:scenario-energy-aa-battery",
       "name": "AA Battery",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/AA_battery",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The gravitational potential energy change for riding an elevator up 10 floors, about 30 meters, for a 70 kilogram person is here. You pay for this in calories at lunch or in electricity at the motor. Coming down, the same amount must be removed as heat or recovered in a counterweight. Stairs trade time for metabolism at the same energy accounting.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Elevator Ride (10 floors)",
@@ -809,6 +855,8 @@
       "id": "obs:energy:scenario-energy-elevator-ride-10-floors",
       "name": "Elevator Ride (10 floors)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gravitational_potential",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A smartphone battery around 12 watt hours stores this many joules when new. Streaming video drains it faster than standby because power integrates to energy over time. Cold weather reduces effective capacity by slowing chemistry. The number helps compare battery sizes without brand jargon.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Smartphone Battery",
@@ -860,6 +909,8 @@
       "id": "obs:energy:scenario-energy-smartphone-battery",
       "name": "Smartphone Battery",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Battery_(electricity)",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Heating a mug of water for tea takes tens of kilojoules, which is why kettles drawing a kilowatt or more can finish in a minute or two. Most of the energy budget goes directly into the water because the system is small and losses are limited. Kitchen routines are full of numbers like this even when nobody says them out loud. The value is for roughly 250 milliliters heated from room temperature to near boiling.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Boil a Mug of Water",
@@ -911,6 +963,8 @@
       "id": "obs:energy:scenario-energy-boil-a-mug-of-water",
       "name": "Boil a Mug of Water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heat_capacity",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Charging a laptop from empty to full often moves this many joules from the wall to the pack. The transfer is not perfectly efficient, so the wall draw is higher than what the battery stores. Heavy computing drains it faster because power tracks activity. The figure provides a practical sense of daily digital work costs.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Laptop Charge",
@@ -962,6 +1017,8 @@
       "id": "obs:energy:scenario-energy-laptop-charge",
       "name": "Laptop Charge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laptop",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Heating one liter of water from room temperature to a rolling boil takes on this order of energy. The exact amount depends on starting temperature and altitude which shifts the boiling point. Cooks feel it as waiting time on a stovetop and pay for it on the utility bill. It is a friendly mid scale benchmark for thermodynamics at home.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Boiling Kettle (1 liter)",
@@ -1013,6 +1071,8 @@
       "id": "obs:energy:scenario-energy-boiling-kettle-1-liter",
       "name": "Boiling Kettle (1 liter)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 100 watt light bulb running for one hour uses this energy, by definition of the kilowatt hour. In a home bill it is a convenient unit, because hours and hundreds of watts match appliance scales. Nearly all becomes heat eventually, even if first emitted as light. The number is exactly 3600 seconds times 100 joules per second.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Light Bulb (1 hour)",
@@ -1064,6 +1125,8 @@
       "id": "obs:energy:scenario-energy-light-bulb-1-hour",
       "name": "Light Bulb (1 hour)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Incandescent_light_bulb",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The kinetic energy of a 1500 kilogram car traveling at 27 meters per second about 60 miles per hour is of this order. It explains why stopping distances grow with speed, not linearly but as velocity squared. Seat belts and crumple zones are designed to manage the dissipation of exactly this energy. The number is for the moving car just before braking, not idling.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Car at 60 mph",
@@ -1115,6 +1179,8 @@
       "id": "obs:energy:scenario-energy-car-at-60-mph",
       "name": "Car at 60 mph",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kinetic_energy",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The energy required to bake a loaf of bread in a home oven for an hour at moderate heat is roughly this amount. Most is heat that warms metal and air rather than the dough, which is why preheating matters. Bakers tune recipes to the thermal history, not merely to temperature. The number connects culinary art with heat transfer.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Bread Baking (1 loaf)",
@@ -1166,6 +1233,8 @@
       "id": "obs:energy:scenario-energy-bread-baking-1-loaf",
       "name": "Bread Baking (1 loaf)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Baking",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A desktop computer and monitor running for an eight hour workday consume on this order of magnitude in joules. Background processes and screen brightness push it up or down. Over a year the total becomes a modest but noticeable share of a household bill. The number translates the abstract watt into daily activity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Workday Computing",
@@ -1217,6 +1287,8 @@
       "id": "obs:energy:scenario-energy-workday-computing",
       "name": "Workday Computing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Computer_energy_use",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical 12 volt 40 ampere hour car battery stores this much chemical energy when fully charged. The usable fraction depends on discharge rate and temperature, so cold mornings often feel worse. Starting an engine spends a small burst; long headlights drain it steadily. The same arithmetic sets expectations for phones and e bikes.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Car Battery",
@@ -1268,6 +1341,8 @@
       "id": "obs:energy:scenario-energy-car-battery",
       "name": "Car Battery",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Car_battery",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A city bus braking from 50 kilometers per hour to a stop sheds about this much kinetic energy, which modern systems can partially recover. Each stop converts speed to heat unless regenerative hardware stores it in a battery or flywheel. Over a day, the sum drives fuel costs and brake wear. The figure helps size energy storage for transit.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Bus Stop Recovery",
@@ -1319,6 +1395,8 @@
       "id": "obs:energy:scenario-energy-bus-stop-recovery",
       "name": "Bus Stop Recovery",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Regenerative_brake",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single high-end accelerator running near $700\\ \\mathrm{W}$ for one hour uses about $700 \\times 3600 \\approx 2.5\\ \\mathrm{MJ}$ before cooling overhead. That makes a GPU-hour a useful bridge between desktop computing and industrial loads. The value is a simple power-times-time estimate, not a lab-certified measurement. It is a good intuition anchor for AI serving and training alike.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "One H100 GPU-Hour",
@@ -1370,6 +1449,8 @@
       "id": "obs:energy:scenario-energy-one-h100-gpu-hour",
       "name": "One H100 GPU-Hour",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The chemical energy equivalent of 1 kilogram of TNT is conventionally set to this number. It is a bookkeeping convenience that lets engineers compare blast sizes and impacts. Real explosives differ in pressure profile and coupling efficiency to targets. The value here is the standard used for hazard and yield reporting.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "TNT (1 kg)",
@@ -1421,6 +1503,8 @@
       "id": "obs:energy:scenario-energy-tnt-1-kg",
       "name": "TNT (1 kg)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/TNT_equivalent",
       "source_count": 2,
       "sources": [
@@ -1459,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A person\u2019s daily metabolic intake around two thousand food kilocalories corresponds to this many joules available for heat and work. Only a fraction becomes mechanical work; most leaves as heat that keeps you warm and drives biochemistry. The value depends on diet and activity but serves as a household planning scale. Power averaged over a day is near 100 watts, like a bright bulb.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Human Daily",
@@ -1472,6 +1557,8 @@
       "id": "obs:energy:scenario-energy-human-daily",
       "name": "Human Daily",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_nutrition",
       "source_count": 2,
       "sources": [
@@ -1510,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A loaded server rack at a few kilowatts for one hour uses roughly $3\\ \\mathrm{kW} \\times 3600\\ \\mathrm{s} \\approx 11\\ \\mathrm{MJ}$. This is a decent perspective item for a typical data center rack under active load, excluding cooling plant overhead. The exact draw depends on server mix, utilization, and facility design. It is small next to annual energy totals but large next to household gadgets.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Data Center Rack-Hour",
@@ -1523,6 +1611,8 @@
       "id": "obs:energy:scenario-energy-data-center-rack-hour",
       "name": "Data Center Rack-Hour",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Data_center",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Running a marathon at amateur pace expends kinetic and metabolic energy totaling about this many joules in a few hours. Most becomes heat that must be removed through sweat and airflow. Food and body stores supply the chemical input, while muscles convert some fraction into motion. The number is a testament to endurance more than to speed.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Marathon Effort",
@@ -1574,6 +1665,8 @@
       "id": "obs:energy:scenario-energy-marathon-effort",
       "name": "Marathon Effort",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Marathon",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One liter of gasoline contains tens of megajoules of chemical energy, which is why liquid fuels remain attractive wherever range and refill speed matter. Internal combustion engines turn only part of that into motion, throwing much of the rest away as heat. The number helps compare a fuel tank with batteries or daily household electricity use. It is the lower-heating-value scale for ordinary pump gasoline.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Gasoline (1 liter)",
@@ -1625,6 +1719,8 @@
       "id": "obs:energy:scenario-energy-gasoline-1-liter",
       "name": "Gasoline (1 liter)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gasoline",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1759,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A household in an industrialized country may consume this energy per day in electricity and heating combined. The value swings with climate, insulation, and habits like laundry temperature. It translates to about a kilowatt average power per home, a community sized load in aggregate. Efficiency upgrades aim to shave this baseline without loss of comfort.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Household (Daily)",
@@ -1676,6 +1773,8 @@
       "id": "obs:energy:scenario-energy-household-daily",
       "name": "Household (Daily)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electricity",
       "source_count": 2,
       "sources": [
@@ -1714,6 +1813,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A modern electric car with a 75 kilowatt hour pack holds this energy chemically when fully charged. On the road that translates to a few hundred kilometers depending on speed and terrain. Regenerative braking recovers a portion but not all of what was spent climbing hills. The value highlights why fast charging requires serious power delivery.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "EV Battery Pack",
@@ -1727,6 +1827,8 @@
       "id": "obs:energy:scenario-energy-ev-battery-pack",
       "name": "EV Battery Pack",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electric_vehicle_battery",
       "source_count": 2,
       "sources": [
@@ -1765,6 +1867,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A commercial airliner on a transcontinental flight consumes on the order of this many joules of chemical energy per passenger. The count divides total fuel by seat kilometers and multiplies by a trip distance. It is why direct flights can be both faster and more energy efficient per person. The number varies with aircraft, load, and winds aloft.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Jet Flight (per passenger)",
@@ -1778,6 +1881,8 @@
       "id": "obs:energy:scenario-energy-jet-flight-per-passenger",
       "name": "Jet Flight (per passenger)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fuel_economy_in_aircraft",
       "source_count": 2,
       "sources": [
@@ -1816,6 +1921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single lightning bolt releases this many joules in a fraction of a second, mostly as heat and light in the channel. Peak power is enormous, but total energy is like running a kettle for a few minutes. The precise value varies by storm type and geography. It is a natural pulse generator humanity has watched since antiquity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Lightning Bolt",
@@ -1829,6 +1935,8 @@
       "id": "obs:energy:scenario-energy-lightning-bolt",
       "name": "Lightning Bolt",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -1867,6 +1975,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The annual electricity use of a small refrigerator is roughly this many joules in an efficient modern unit. The compressor cycles on to remove heat as it leaks in through insulation. Opening the door adds transient load that you can hear. The number gives a sense for appliance labels in physical terms.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Refrigerator (Annual)",
@@ -1880,6 +1989,8 @@
       "id": "obs:energy:scenario-energy-refrigerator-annual",
       "name": "Refrigerator (Annual)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Refrigerator",
       "source_count": 2,
       "sources": [
@@ -1918,6 +2029,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Planck energy is the natural energy scale made from quantum mechanics, gravity, and relativity. It marks the point where a particle's rest-energy matches the energy scale at which a quantum theory of gravity would have to live. In everyday terms it is far above accelerator physics but still tiny compared with planetary or stellar energies. This is a derived scale, not a measured one.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Planck Energy",
@@ -1931,6 +2043,8 @@
       "id": "obs:energy:scenario-energy-planck-energy",
       "name": "Planck Energy",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_units",
       "source_count": 2,
       "sources": [
@@ -1969,6 +2083,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Over a full lifetime, a human body metabolizes on the order of tens of billions of joules from food. Spread over decades it does not feel extreme, but accumulated total energy is substantial enough to compare with industrial machines. Most of it leaves again as heat while a small fraction becomes external work. The value assumes a long life near two thousand dietary kilocalories per day.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Human Lifetime Food",
@@ -1982,6 +2097,8 @@
       "id": "obs:energy:scenario-energy-human-lifetime-food",
       "name": "Human Lifetime Food",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Food_energy",
       "source_count": 2,
       "sources": [
@@ -2020,6 +2137,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One kiloton of TNT equivalent corresponds to this energy, a historical yardstick for nuclear test reporting. The conversion is linear from the 1 kilogram reference. Actual device yields can partition energy into blast, heat, and radiation differently. The number offers scale against civil engineering and seismic monitoring.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Nuclear Bomb (1 kt)",
@@ -2033,6 +2151,8 @@
       "id": "obs:energy:scenario-energy-nuclear-bomb-1-kt",
       "name": "Nuclear Bomb (1 kt)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nuclear_weapon",
       "source_count": 2,
       "sources": [
@@ -2071,6 +2191,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Hiroshima bomb released energy equivalent to only a few kilotons of TNT, yet concentrated in place and time it reshaped a city. Nuclear history is full of this contrast between moderate total energy and overwhelming destructive power density. The value is the conventional yield estimate for Little Boy. It sits cleanly between industrial blasts and the largest thermonuclear tests.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Hiroshima Bomb",
@@ -2084,6 +2205,8 @@
       "id": "obs:energy:scenario-energy-hiroshima-bomb",
       "name": "Hiroshima Bomb",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Little_Boy",
       "source_count": 2,
       "sources": [
@@ -2122,6 +2245,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tsar Bomba remains the most energetic nuclear device ever detonated, with a yield tens of millions of tons of TNT equivalent. Fireball size, blast wave, and prompt radiation all flowed from that immense energy release. It is one of the clearest markers between human engineering and geophysical-scale events. The value is the widely cited test yield.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Tsar Bomba",
@@ -2135,6 +2259,8 @@
       "id": "obs:energy:scenario-energy-tsar-bomba",
       "name": "Tsar Bomba",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tsar_Bomba",
       "source_count": 2,
       "sources": [
@@ -2173,6 +2299,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The annual electricity used by the world's data centers is large enough to matter at grid scale but still tiny compared with global electricity demand. A representative estimate in the few hundred terawatt-hour range is about $10^{18}\\ \\mathrm{J}$ per year. Cooling, networking, and utilization all move the number around. This item gives a sense for the real footprint behind the digital layer.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Global Datacenter Electricity (1 year)",
@@ -2186,6 +2313,8 @@
       "id": "obs:energy:scenario-energy-global-datacenter-electricity-1-year",
       "name": "Global Datacenter Electricity (1 year)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Data_center",
       "source_count": 2,
       "sources": [
@@ -2224,6 +2353,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Humanity's annual electricity consumption is on the order of $10^{20}\\ \\mathrm{J}$, which is why grid planning lives at the petawatt-hour scale. This is the energy behind lighting, industry, appliances, and computing rather than any one sector alone. The exact value changes by year and source definition, so treat it as a rounded world-scale benchmark. It sits far above local infrastructure and far below solar output.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "World Electricity Use (1 year)",
@@ -2237,6 +2367,8 @@
       "id": "obs:energy:scenario-energy-world-electricity-use-1-year",
       "name": "World Electricity Use (1 year)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/World_energy_supply_and_consumption",
       "source_count": 2,
       "sources": [
@@ -2275,6 +2407,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The transportation sector as a whole burns a comparable world-scale amount of energy each year, mostly in liquid fuels for road, air, and shipping. A good order-of-magnitude benchmark is around $10^{20}\\ \\mathrm{J}$ annually, which is why vehicle efficiency and mode choice matter so much. The exact split depends on whether you count only direct fuel or broader system energy. This item gives perspective on how large mobility really is.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Transportation Energy Use (1 year)",
@@ -2288,6 +2421,8 @@
       "id": "obs:energy:scenario-energy-transportation-energy-use-1-year",
       "name": "Transportation Energy Use (1 year)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Energy_in_transportation",
       "source_count": 2,
       "sources": [
@@ -2326,6 +2461,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Chicxulub impact released energy on a scale that dwarfs all human explosives and altered Earth\u2019s biosphere. Much of the devastation came not from the asteroid\u2019s mass alone but from how rapidly its kinetic energy coupled into rock, air, and ocean. This is the sort of number that turns a geological event into a planetary one. The value is a representative estimate for the dinosaur-killing impact.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Chicxulub Impact",
@@ -2339,6 +2475,8 @@
       "id": "obs:energy:scenario-energy-chicxulub-impact",
       "name": "Chicxulub Impact",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chicxulub_crater",
       "source_count": 2,
       "sources": [
@@ -2377,6 +2515,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A large solar flare can liberate this much magnetic energy into plasma and radiation over minutes to hours. The energy originates from twisted solar magnetic fields that reconnect. Effects reach Earth as aurora and sometimes as damaging space weather. The number is characteristic for major events, not quiet Sun days.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Solar Flare",
@@ -2390,6 +2529,8 @@
       "id": "obs:energy:scenario-energy-solar-flare",
       "name": "Solar Flare",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Solar_flare",
       "source_count": 2,
       "sources": [
@@ -2428,6 +2569,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun radiates this much energy into space each second, which is why life on Earth runs on a small share of it. Fusion in the core converts mass to energy with modest efficiency but colossal throughput. Only a tiny fraction intersects Earth, yet it drives weather and ecosystems. The value is known precisely from solar constant measurements.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Sun (1 second)",
@@ -2441,6 +2583,8 @@
       "id": "obs:energy:scenario-energy-sun-1-second",
       "name": "Sun (1 second)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2479,6 +2623,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A core collapse supernova radiates and ejects about this much energy, mostly carried by neutrinos that we barely detect. The optical display is only a small fraction but dominates what we see. The blast resets the chemical inventory of galaxies by forging heavy elements. This figure is for a typical event, not the rare hyper luminous outliers.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Supernova",
@@ -2492,6 +2637,8 @@
       "id": "obs:energy:scenario-energy-supernova",
       "name": "Supernova",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Supernova",
       "source_count": 2,
       "sources": [
@@ -2530,6 +2677,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A bright gamma ray burst can release this energy if beaming is corrected to an isotropic equivalent. The event unfolds over seconds to minutes and then fades through afterglows. Central engines are thought to be newly formed black holes or magnetars. The number marks the dramatic high end of transient astrophysics.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/energy.yaml",
         "legacy_item_name": "Gamma Ray Burst",
@@ -2543,6 +2691,8 @@
       "id": "obs:energy:scenario-energy-gamma-ray-burst",
       "name": "Gamma Ray Burst",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gamma-ray_burst",
       "source_count": 2,
       "sources": [

@@ -39,6 +39,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vacuum insulation panel
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -84,6 +87,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silica aerogel
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -129,6 +135,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aerogel
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -175,6 +184,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Carbon dioxide gas
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -220,6 +232,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Air
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -265,6 +280,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Polyurethane foam
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -310,6 +328,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Expanded polystyrene
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -355,6 +376,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wood
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -400,6 +424,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Helium gas
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -445,6 +472,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -490,6 +520,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brick
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -536,6 +569,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Glass
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -581,6 +617,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concrete
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -626,6 +665,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -671,6 +713,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Granite
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -716,6 +761,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Stainless steel
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -761,6 +809,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Iron
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -806,6 +857,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silicon
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -851,6 +905,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aluminum
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -896,6 +953,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Copper
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -941,6 +1001,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silver
     ingest_source: dataset/raw/curated/thermal-conductivity.json
@@ -986,6 +1049,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Diamond
     ingest_source: dataset/raw/curated/thermal-conductivity.json

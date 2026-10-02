@@ -49,6 +49,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid helium near boiling
     ingest_source: dataset/raw/curated/viscosity.json
@@ -95,6 +98,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid hydrogen
     ingest_source: dataset/raw/curated/viscosity.json
@@ -141,6 +147,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Carbon dioxide gas at room temperature
     ingest_source: dataset/raw/curated/viscosity.json
@@ -188,6 +197,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Air at room temperature
     ingest_source: dataset/raw/curated/viscosity.json
@@ -235,6 +247,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Air
     ingest_source: dataset/raw/curated/viscosity.json
@@ -281,6 +296,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Acetone
     ingest_source: dataset/raw/curated/viscosity.json
@@ -327,6 +345,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gasoline
     ingest_source: dataset/raw/curated/viscosity.json
@@ -373,6 +394,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid water at room temperature
     ingest_source: dataset/raw/curated/viscosity.json
@@ -420,6 +444,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water
     ingest_source: dataset/raw/curated/viscosity.json
@@ -466,6 +493,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seawater
     ingest_source: dataset/raw/curated/viscosity.json
@@ -512,6 +542,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ethanol
     ingest_source: dataset/raw/curated/viscosity.json
@@ -559,6 +592,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milk
     ingest_source: dataset/raw/curated/viscosity.json
@@ -605,6 +641,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human blood
     ingest_source: dataset/raw/curated/viscosity.json
@@ -651,6 +690,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood
     ingest_source: dataset/raw/curated/viscosity.json
@@ -697,6 +739,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cream
     ingest_source: dataset/raw/curated/viscosity.json
@@ -743,6 +788,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Olive oil
     ingest_source: dataset/raw/curated/viscosity.json
@@ -789,6 +837,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Motor oil at room temperature
     ingest_source: dataset/raw/curated/viscosity.json
@@ -836,6 +887,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Motor oil
     ingest_source: dataset/raw/curated/viscosity.json
@@ -882,6 +936,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Glycerol
     ingest_source: dataset/raw/curated/viscosity.json
@@ -928,6 +985,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Maple syrup
     ingest_source: dataset/raw/curated/viscosity.json
@@ -974,6 +1034,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Maple syrup
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1020,6 +1083,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Shampoo
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1066,6 +1132,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Honey
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1112,6 +1181,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ketchup
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1159,6 +1231,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Basaltic lava
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1205,6 +1280,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Peanut butter
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1251,6 +1329,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Toothpaste
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1297,6 +1378,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Andesitic lava
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1343,6 +1427,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bitumen
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1389,6 +1476,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rhyolitic lava
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1435,6 +1525,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tar
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1481,6 +1574,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pitch in the pitch-drop experiment
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1526,6 +1622,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Glacier ice
     ingest_source: dataset/raw/curated/viscosity.json
@@ -1572,6 +1671,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth mantle
     ingest_source: dataset/raw/curated/viscosity.json

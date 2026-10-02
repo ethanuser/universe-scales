@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Winning the Powerball jackpot
     ingest_source: dataset/raw/curated/probability.json
@@ -88,6 +91,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A random mutation hitting one specific DNA base in one generation
     ingest_source: dataset/raw/curated/probability.json
@@ -134,6 +140,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fatal shark attack in one year
     ingest_source: dataset/raw/curated/probability.json
@@ -179,6 +188,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Winning a 6/49 lottery jackpot
     ingest_source: dataset/raw/curated/probability.json
@@ -225,6 +237,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dying in a commercial airline crash on one flight
     ingest_source: dataset/raw/curated/probability.json
@@ -271,6 +286,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Being struck by lightning in one year in the US
     ingest_source: dataset/raw/curated/probability.json
@@ -316,6 +334,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Royal flush in five-card poker
     ingest_source: dataset/raw/curated/probability.json
@@ -361,6 +382,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Four of a kind in five-card poker
     ingest_source: dataset/raw/curated/probability.json
@@ -406,6 +430,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Leap-day birthday
     ingest_source: dataset/raw/curated/probability.json
@@ -452,6 +479,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Full house in five-card poker
     ingest_source: dataset/raw/curated/probability.json
@@ -497,6 +527,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Flush in five-card poker
     ingest_source: dataset/raw/curated/probability.json
@@ -542,6 +575,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Straight in five-card poker
     ingest_source: dataset/raw/curated/probability.json
@@ -587,6 +623,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Specific card from a shuffled deck
     ingest_source: dataset/raw/curated/probability.json
@@ -632,6 +671,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Snake eyes with two dice
     ingest_source: dataset/raw/curated/probability.json
@@ -678,6 +720,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Two pair in five-card poker
     ingest_source: dataset/raw/curated/probability.json
@@ -723,6 +768,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blackjack natural
     ingest_source: dataset/raw/curated/probability.json
@@ -769,6 +817,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Any ace from a deck
     ingest_source: dataset/raw/curated/probability.json
@@ -815,6 +866,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blue eyes worldwide
     ingest_source: dataset/raw/curated/probability.json
@@ -860,6 +914,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Left-handedness
     ingest_source: dataset/raw/curated/probability.json
@@ -905,6 +962,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Passing a weakly selective interview loop
     ingest_source: dataset/raw/curated/probability.json
@@ -951,6 +1011,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rolling a six on a fair die
     ingest_source: dataset/raw/curated/probability.json
@@ -996,6 +1059,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Exactly five heads in ten flips
     ingest_source: dataset/raw/curated/probability.json
@@ -1042,6 +1108,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Two heads in two fair flips
     ingest_source: dataset/raw/curated/probability.json
@@ -1088,6 +1157,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rain tomorrow in a typical moderate forecast
     ingest_source: dataset/raw/curated/probability.json
@@ -1134,6 +1206,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Type O-positive blood worldwide
     ingest_source: dataset/raw/curated/probability.json
@@ -1179,6 +1254,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One pair in five-card poker
     ingest_source: dataset/raw/curated/probability.json
@@ -1224,6 +1302,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fair coin heads
     ingest_source: dataset/raw/curated/probability.json
@@ -1269,6 +1350,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rolling an even number on a die
     ingest_source: dataset/raw/curated/probability.json
@@ -1315,6 +1399,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Birthday match in a room of 23 people
     ingest_source: dataset/raw/curated/probability.json
@@ -1360,6 +1447,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Male birth
     ingest_source: dataset/raw/curated/probability.json
@@ -1405,6 +1495,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: At least one head in two fair flips
     ingest_source: dataset/raw/curated/probability.json

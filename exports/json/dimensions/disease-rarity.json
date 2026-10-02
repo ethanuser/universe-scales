@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Public-health control can push disease risk into the billionth range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rabies in the United States",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -49,6 +50,8 @@
       "qualifiers": {
         "measure": "annual incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rabies_in_the_United_States",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An extreme-rarity anchor that still has a real clinical referent.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fatal familial insomnia",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -105,6 +109,8 @@
       "qualifiers": {
         "measure": "family-level prevalence estimate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fatal_insomnia",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Progeria is one of the best-known ultra-rare conditions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Progeria",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -162,6 +169,8 @@
       "qualifiers": {
         "measure": "birth incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Progeria",
       "source_count": 2,
       "sources": [
@@ -200,6 +209,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Prion disorders sit far down the rarity scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Creutzfeldt-Jakob disease",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -218,6 +228,8 @@
       "qualifiers": {
         "measure": "annual incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Creutzfeldt%E2%80%93Jakob_disease",
       "source_count": 2,
       "sources": [
@@ -256,6 +268,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "ALS sits clearly in the rare-disease region.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Amyotrophic lateral sclerosis",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -274,6 +287,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis",
       "source_count": 2,
       "sources": [
@@ -312,6 +327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Huntington disease is a familiar rare inherited disorder.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Huntington disease",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -331,6 +347,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Huntington%27s_disease",
       "source_count": 2,
       "sources": [
@@ -369,6 +387,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar birth-incidence rare syndrome.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Prader-Willi syndrome",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -388,6 +407,8 @@
       "qualifiers": {
         "measure": "birth incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Prader%E2%80%93Willi_syndrome",
       "source_count": 2,
       "sources": [
@@ -426,6 +447,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A rare disease with a strong public profile.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Duchenne muscular dystrophy",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -444,6 +466,8 @@
       "qualifiers": {
         "measure": "birth incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Duchenne_muscular_dystrophy",
       "source_count": 2,
       "sources": [
@@ -482,6 +506,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A clear rare-disease middle anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hemophilia A",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -500,6 +525,8 @@
       "qualifiers": {
         "measure": "birth incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hemophilia_A",
       "source_count": 2,
       "sources": [
@@ -538,6 +565,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cystic fibrosis is rare without being at the extreme tail.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cystic fibrosis",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -556,6 +584,8 @@
       "qualifiers": {
         "measure": "birth incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cystic_fibrosis",
       "source_count": 2,
       "sources": [
@@ -594,6 +624,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Inflammatory bowel disease gives a good low-prevalence anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Crohn disease",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -612,6 +643,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Crohn%27s_disease",
       "source_count": 2,
       "sources": [
@@ -650,6 +683,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "MS is uncommon but very far from the ultra-rare tail.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Multiple sclerosis",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -668,6 +702,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Multiple_sclerosis",
       "source_count": 2,
       "sources": [
@@ -706,6 +742,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Much rarer than type 2 diabetes but not an ultra-rare disease.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Type 1 diabetes",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -724,6 +761,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Type_1_diabetes",
       "source_count": 2,
       "sources": [
@@ -762,6 +801,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Psychiatric conditions can be rare without being ultra-rare.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Schizophrenia",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -780,6 +820,8 @@
       "qualifiers": {
         "measure": "lifetime prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Schizophrenia",
       "source_count": 2,
       "sources": [
@@ -818,6 +860,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A memorable one-in-a-hundred autoimmune condition.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Celiac disease",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -836,6 +879,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Celiac_disease",
       "source_count": 2,
       "sources": [
@@ -874,6 +919,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Asthma is common but far from universal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Asthma",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -892,6 +938,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Asthma",
       "source_count": 2,
       "sources": [
@@ -930,6 +978,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A globally important common chronic disease.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Type 2 diabetes",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -948,6 +997,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Type_2_diabetes",
       "source_count": 2,
       "sources": [
@@ -986,6 +1037,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Migraine is common enough to be socially pervasive.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Migraine",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -1004,6 +1056,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Migraine",
       "source_count": 2,
       "sources": [
@@ -1042,6 +1096,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A very common chronic condition.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dental caries",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -1060,6 +1115,8 @@
       "qualifiers": {
         "measure": "prevalence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tooth_decay",
       "source_count": 2,
       "sources": [
@@ -1098,6 +1155,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Common colds sit near the common-disease end of the rarity scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Common cold in a year",
         "ingest_source": "dataset/raw/curated/disease-rarity.json",
@@ -1116,6 +1174,8 @@
       "qualifiers": {
         "measure": "annual incidence"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Common_cold",
       "source_count": 2,
       "sources": [

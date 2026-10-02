@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative torque for the rotary molecular motor ATP synthase.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "ATP synthase rotor",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -47,6 +48,8 @@
       "id": "obs:torque:entity-atp-synthase-torque",
       "name": "ATP synthase rotor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/ATP_synthase",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative torque for a bacterial flagellar motor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bacterial flagellar motor",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -101,6 +105,8 @@
       "id": "obs:torque:entity-bacterial-flagellar-motor-torque",
       "name": "Bacterial flagellar motor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Flagellum",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tiny torsional actuator scale for MEMS mirrors.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "MEMS torsion mirror",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -155,6 +162,8 @@
       "id": "obs:torque:entity-mems-torsion-mirror",
       "name": "MEMS torsion mirror",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Microelectromechanical_systems",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The small twisting torque involved in winding a mechanical watch by hand.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Watch crown winding",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -209,6 +219,8 @@
       "id": "obs:torque:scenario-torque-watch-crown",
       "name": "Watch crown winding",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mechanical_watch",
       "source_count": 2,
       "sources": [
@@ -247,6 +259,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative torque scale for an electric toothbrush motor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Electric toothbrush motor",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -263,6 +276,8 @@
       "id": "obs:torque:entity-electric-toothbrush-motor",
       "name": "Electric toothbrush motor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electric_toothbrush",
       "source_count": 2,
       "sources": [
@@ -301,6 +316,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A laptop hinge is tuned for a small but steady opening torque.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Laptop hinge",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -317,6 +333,8 @@
       "id": "obs:torque:entity-laptop-hinge-torque",
       "name": "Laptop hinge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laptop",
       "source_count": 2,
       "sources": [
@@ -355,6 +373,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative torque setting for a precision screwdriver used on electronics.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Precision screwdriver",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -371,6 +390,8 @@
       "id": "obs:torque:scenario-torque-precision-screwdriver",
       "name": "Precision screwdriver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Screwdriver",
       "source_count": 2,
       "sources": [
@@ -409,6 +430,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Opening a bottle cap is a small but familiar torque benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bottle cap",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -427,6 +449,8 @@
       "qualifiers": {
         "measurement": "opening torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bottle_cap",
       "source_count": 2,
       "sources": [
@@ -465,6 +489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small hobby servo provides about a quarter newton-meter of torque.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "RC servo motor",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -482,6 +507,8 @@
       "id": "obs:torque:entity-rc-servo-torque",
       "name": "RC servo motor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Servo",
       "source_count": 2,
       "sources": [
@@ -520,6 +547,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A cordless electric screwdriver delivers a modest torque suitable for small fasteners.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Electric screwdriver",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -536,6 +564,8 @@
       "id": "obs:torque:scenario-torque-electric-screwdriver",
       "name": "Electric screwdriver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Screwdriver",
       "source_count": 2,
       "sources": [
@@ -574,6 +604,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A hand screwdriver delivers a modest torque suitable for small screws.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Screwdriver",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -592,6 +623,8 @@
       "qualifiers": {
         "measurement": "twisting torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Screwdriver",
       "source_count": 2,
       "sources": [
@@ -630,6 +663,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A roughly hand-scale torque for opening a stuck doorknob.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Doorknob twist",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -646,6 +680,8 @@
       "id": "obs:torque:scenario-torque-doorknob",
       "name": "Doorknob twist",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Door_handle",
       "source_count": 2,
       "sources": [
@@ -684,6 +720,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Opening or closing a jar lid uses a small but noticeable twisting moment.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hand tightening a jar lid",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -700,6 +737,8 @@
       "id": "obs:torque:scenario-torque-jar-lid",
       "name": "Hand tightening a jar lid",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Torque",
       "source_count": 2,
       "sources": [
@@ -738,6 +777,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A door knob is a very everyday torque benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Door knob",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -756,6 +796,8 @@
       "qualifiers": {
         "measurement": "turning torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Door_handle",
       "source_count": 2,
       "sources": [
@@ -794,6 +836,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A handheld power drill produces torque above manual tools but below automotive systems.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Power drill",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -812,6 +855,8 @@
       "qualifiers": {
         "measurement": "chuck torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drill",
       "source_count": 2,
       "sources": [
@@ -850,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small wrench on a fastener reaches a few newton-meters of torque.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Small wrench on a bolt",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -866,6 +912,8 @@
       "id": "obs:torque:scenario-torque-small-wrench",
       "name": "Small wrench on a bolt",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wrench",
       "source_count": 2,
       "sources": [
@@ -904,6 +952,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A spark plug is tightened at a few tens of newton-meters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Torque wrench for spark plug",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -920,6 +969,8 @@
       "id": "obs:torque:scenario-torque-spark-plug",
       "name": "Torque wrench for spark plug",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Torque_wrench",
       "source_count": 2,
       "sources": [
@@ -958,6 +1009,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative torque applied to a bicycle crank by a rider.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle crank",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -974,6 +1026,8 @@
       "id": "obs:torque:entity-bicycle-crank-torque",
       "name": "Bicycle crank",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle_crank",
       "source_count": 2,
       "sources": [
@@ -1012,6 +1066,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pedaling a bicycle uses torque in the tens of newton-meters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle pedal",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1030,6 +1085,8 @@
       "qualifiers": {
         "measurement": "crank torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle",
       "source_count": 2,
       "sources": [
@@ -1068,6 +1125,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Climbing on a bike can require sustained pedal torque comparable to a firm hand twist.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle pedal on a climb",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1084,6 +1142,8 @@
       "id": "obs:torque:scenario-torque-bicycle-pedal-climb",
       "name": "Bicycle pedal on a climb",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle",
       "source_count": 2,
       "sources": [
@@ -1122,6 +1182,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small outboard motor can put tens of newton-meters into its prop shaft.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Outboard motor prop shaft",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1138,6 +1199,8 @@
       "id": "obs:torque:scenario-torque-outboard-prop-shaft",
       "name": "Outboard motor prop shaft",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Outboard_motor",
       "source_count": 2,
       "sources": [
@@ -1176,6 +1239,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative cordless drill torque rating.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Drill driver",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1192,6 +1256,8 @@
       "id": "obs:torque:entity-drill-driver-torque",
       "name": "Drill driver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drill",
       "source_count": 2,
       "sources": [
@@ -1230,6 +1296,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A compact impact driver can deliver torque above most hand tools.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Impact driver",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1246,6 +1313,8 @@
       "id": "obs:torque:entity-impact-driver-torque",
       "name": "Impact driver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Impact_driver",
       "source_count": 2,
       "sources": [
@@ -1284,6 +1353,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mid-sized motorcycle engine produces torque a little above one hundred newton-meters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Motorcycle engine",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1300,6 +1370,8 @@
       "id": "obs:torque:entity-motorcycle-engine-torque",
       "name": "Motorcycle engine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motorcycle",
       "source_count": 2,
       "sources": [
@@ -1338,6 +1410,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar torque scale from automotive lug-nut tightening.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car wheel lug nut",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1354,6 +1427,8 @@
       "id": "obs:torque:entity-lug-nut-torque",
       "name": "Car wheel lug nut",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lug_nut",
       "source_count": 2,
       "sources": [
@@ -1392,6 +1467,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Car wheel lug nuts are tightened with a substantial but still human-scale torque.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car lug nut",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1410,6 +1486,8 @@
       "qualifiers": {
         "measurement": "tightening torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lug_nut",
       "source_count": 2,
       "sources": [
@@ -1448,6 +1526,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wheel lug nuts on passenger cars are tightened to a triple-digit torque range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Torque wrench on a car lug nut",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1464,6 +1543,8 @@
       "id": "obs:torque:scenario-torque-car-lug-nut-wrench",
       "name": "Torque wrench on a car lug nut",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lug_nut",
       "source_count": 2,
       "sources": [
@@ -1502,6 +1583,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical motorcycle engine sits well above bicycle-scale torque.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Motorcycle engine",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1520,6 +1602,8 @@
       "qualifiers": {
         "measurement": "peak engine torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motorcycle_engine",
       "source_count": 2,
       "sources": [
@@ -1558,6 +1642,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Impact drivers reach high torque by striking the fastener with repeated impulses.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Impact driver",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1574,6 +1659,8 @@
       "id": "obs:torque:scenario-torque-impact-driver",
       "name": "Impact driver",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Impact_driver",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1699,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative peak torque for a family car engine.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Family car engine",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1628,6 +1716,8 @@
       "id": "obs:torque:entity-car-engine-torque",
       "name": "Family car engine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Torque",
       "source_count": 2,
       "sources": [
@@ -1666,6 +1756,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A passenger car engine is a familiar automotive torque anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car engine",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1684,6 +1775,8 @@
       "qualifiers": {
         "measurement": "peak engine torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
       "source_count": 2,
       "sources": [
@@ -1722,6 +1815,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An electric car motor can deliver hundreds of newton-meters from zero speed.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tesla Model 3 motor",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1738,6 +1832,8 @@
       "id": "obs:torque:entity-tesla-model-3-motor-torque",
       "name": "Tesla Model 3 motor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tesla_Model_3",
       "source_count": 2,
       "sources": [
@@ -1776,6 +1872,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative peak torque for a high-performance sports car.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sports car engine",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1792,6 +1889,8 @@
       "id": "obs:torque:entity-sports-car-engine-torque",
       "name": "Sports car engine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Torque",
       "source_count": 2,
       "sources": [
@@ -1830,6 +1929,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Heavy vehicles move into the kilonewton-meter range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Truck axle",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1848,6 +1948,8 @@
       "qualifiers": {
         "measurement": "axle torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Truck",
       "source_count": 2,
       "sources": [
@@ -1886,6 +1988,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative peak torque for a large diesel truck engine.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Diesel truck engine",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1902,6 +2005,8 @@
       "id": "obs:torque:entity-diesel-truck-engine-torque",
       "name": "Diesel truck engine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Diesel_engine",
       "source_count": 2,
       "sources": [
@@ -1940,6 +2045,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rail traction motors produce torque in the thousands of newton-meters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Locomotive traction motor",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -1956,6 +2062,8 @@
       "id": "obs:torque:entity-locomotive-traction-motor-torque",
       "name": "Locomotive traction motor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Traction_motor",
       "source_count": 2,
       "sources": [
@@ -1994,6 +2102,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pitch actuators on large turbines must steer heavy blades against strong wind loads.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wind turbine pitch actuator",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -2010,6 +2119,8 @@
       "id": "obs:torque:scenario-torque-wind-turbine-pitch-actuator",
       "name": "Wind turbine pitch actuator",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wind_turbine",
       "source_count": 2,
       "sources": [
@@ -2048,6 +2159,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Construction machinery sits between vehicle torque and utility-scale machinery.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Excavator",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -2066,6 +2178,8 @@
       "qualifiers": {
         "measurement": "operating torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Excavator",
       "source_count": 2,
       "sources": [
@@ -2104,6 +2218,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A multi-megawatt wind turbine produces torque on the order of millions of newton-meters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "3 MW wind turbine shaft",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -2122,6 +2237,8 @@
       "id": "obs:torque:entity-wind-turbine-shaft-torque",
       "name": "3 MW wind turbine shaft",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wind_turbine",
       "source_count": 2,
       "sources": [
@@ -2160,6 +2277,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A utility-scale wind turbine main shaft carries torque in the millions of newton-meters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wind turbine main shaft",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -2176,6 +2294,8 @@
       "id": "obs:torque:entity-wind-turbine-main-shaft-torque",
       "name": "Wind turbine main shaft",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wind_turbine",
       "source_count": 2,
       "sources": [
@@ -2214,6 +2334,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Utility-scale wind machines operate in the mega-newton-meter range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wind turbine generator",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -2232,6 +2353,8 @@
       "qualifiers": {
         "measurement": "shaft torque"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wind_turbine",
       "source_count": 2,
       "sources": [
@@ -2270,6 +2393,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A large ship propeller shaft carries enormous torque compared with cars or tools.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ship propeller shaft",
         "ingest_source": "dataset/raw/curated/torque.json",
@@ -2286,6 +2410,8 @@
       "id": "obs:torque:entity-ship-propeller-shaft-torque",
       "name": "Ship propeller shaft",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Propeller_shaft",
       "source_count": 2,
       "sources": [

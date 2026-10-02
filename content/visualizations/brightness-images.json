@@ -1,0 +1,166 @@
+{
+  "images": {
+    "brightness": {
+      "Aurora Borealis": {
+        "src": "content/visualizations/images/brightness/aurora.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Aurora_borealis_over_Brastad_4.jpg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "author": "W.carter",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Aurora_borealis_over_Brastad_4.jpg/960px-Aurora_borealis_over_Brastad_4.jpg",
+        "sha256": "d95ee19c8daf1cd1f506e5acdc47d9404d65530e888d0d65481d9e6660a47bcd",
+        "note": "Photograph of northern lights over Brastad, Sweden. Wikimedia thumbnail, otherwise unchanged. Exposure affects the apparent glow; this is not a calibrated luminance image."
+      },
+      "Emergency Exit Sign": {
+        "src": "content/visualizations/images/brightness/exit-sign.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Glowing_exit_sign.jpg",
+        "license": "Public domain",
+        "author": "Leon Brooks",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Glowing_exit_sign.jpg/960px-Glowing_exit_sign.jpg",
+        "sha256": "da2812bc0a744daceb8c4a72f5ae9ef1fff578f6d6b1b3c32e4a3b2ea5566b21",
+        "note": "Photograph of an illuminated exit sign. Wikimedia thumbnail, otherwise unchanged. Representative subject only; the sign's luminance was not measured."
+      },
+      "E-Ink Reader": {
+        "src": "content/visualizations/images/brightness/e-ink-reader.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:2023_Amazon_Kindle_Paperwhite_(1).jpg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "author": "Jacek Halicki",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2023_Amazon_Kindle_Paperwhite_%281%29.jpg/960px-2023_Amazon_Kindle_Paperwhite_%281%29.jpg",
+        "sha256": "2f480a6841257557cfd1d05e36dfbd8a9eb17c37893b3866e76b2c35a70cf871",
+        "note": "Photograph of a Kindle Paperwhite electronic-paper display. Wikimedia thumbnail, otherwise unchanged. Ambient lighting and front-light setting are not known; not a calibrated luminance image."
+      },
+      "Laptop Screen": {
+        "src": "images/area_laptop_screen_area.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Laptop_collage.jpg",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "author": "Premeditated (top left), Tom Page (top right), Maurizio Pesce (bottom left and right)",
+        "sha256": "83da5e13c11cd00d3e5ed79bac59061f9e1d3f7480139c0a99b5ec9f9103aff9",
+        "note": "Photographic collage of laptops, reused unchanged from the Area dimension's local image. Representative screens only; none is documented at the listed luminance."
+      },
+      "Neon Sign": {
+        "src": "content/visualizations/images/brightness/neon-sign.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Boulevard_Hotel_(Neon_sign),_Miami_Beach.jpg",
+        "license": "Public domain",
+        "author": "Radomianin",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Boulevard_Hotel_%28Neon_sign%29%2C_Miami_Beach.jpg/960px-Boulevard_Hotel_%28Neon_sign%29%2C_Miami_Beach.jpg",
+        "sha256": "138e0e390ae1df991c737d0448bf4fffb127ccfbf8df78e73b19ce42192d8b5e",
+        "note": "Photograph of the Boulevard Hotel neon sign in Miami Beach. Wikimedia thumbnail, otherwise unchanged. The photograph illustrates the source type, not its measured luminance."
+      },
+      "White Paper in Sun": {
+        "src": "content/visualizations/images/brightness/white-paper.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Scattered_white_paper_(Unsplash).jpg",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "author": "Brandi Redd",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scattered_white_paper_%28Unsplash%29.jpg/960px-Scattered_white_paper_%28Unsplash%29.jpg",
+        "sha256": "d048dd43fd9f586a4aa4b4a961299bd0a0c92d1c6c0ee7d5f975fb6659701666",
+        "note": "Representative photograph of white paper, not a documented direct-sun exposure. Wikimedia thumbnail, otherwise unchanged. The source image was published under CC0 before Unsplash changed its license; no measured luminance is implied."
+      },
+      "Traffic Signal Lens": {
+        "src": "content/visualizations/images/brightness/traffic-signal.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:LED_traffic_light_on_red.jpg",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "author": "Kevin Payravi",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/LED_traffic_light_on_red.jpg/960px-LED_traffic_light_on_red.jpg",
+        "sha256": "31077ace17f91a8ec050380e3c832e52b38a97eca2abc7a62961e041de743560",
+        "note": "Photograph of a red LED traffic signal in North Carolina. Wikimedia thumbnail, otherwise unchanged. Representative illuminated lens, not a luminance measurement."
+      },
+      "Blue Sky Zenith": {
+        "src": "content/visualizations/images/brightness/clear-blue-sky.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Clear_sky_over_Riga,_2008.jpg",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "author": "Mee2ch",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Clear_sky_over_Riga%2C_2008.jpg/960px-Clear_sky_over_Riga%2C_2008.jpg",
+        "sha256": "bcf84f954b012756f510f314ae927b012257981b4e72aec72b7fb9a8a6a7d4df",
+        "note": "Photograph of clear blue sky near Riga. Wikimedia thumbnail, otherwise unchanged. A representative sky view; the source does not establish an exact zenith angle or calibrated luminance."
+      },
+      "Runway Signal Lens": {
+        "src": "content/visualizations/images/brightness/runway-signal.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Runway_Landing_Light.jpg",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Visitor7",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Runway_Landing_Light.jpg/960px-Runway_Landing_Light.jpg",
+        "sha256": "6f68d02c6f78c7b65ab6b2281cc41d5c73cf8b219b8d3fe78f094681703c2042",
+        "note": "Photograph of runway-light hardware and its lens, not a demonstrated operating brightness. Wikimedia thumbnail, otherwise unchanged. No calibrated luminance is implied."
+      },
+      "Theater Spotlight": {
+        "src": "content/visualizations/images/brightness/theater-spotlight.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Alone_in_the_Spotlight_(49711437601).jpg",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "author": "Paul Crudgington",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Alone_in_the_Spotlight_%2849711437601%29.jpg/960px-Alone_in_the_Spotlight_%2849711437601%29.jpg",
+        "sha256": "7dccff5202b9710ce0d318f6f5ce877ac3ae90959861b97dea7c9c1e05a16839",
+        "note": "Photograph of a performer in a theater spotlight. Shows the illuminated stage, not a close-up of the emitting lamp surface. Wikimedia thumbnail, otherwise unchanged; not a luminance measurement."
+      },
+      "Magnesium Flare": {
+        "src": "content/visualizations/images/brightness/magnesium.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Magnesium_ribbon_burning.jpg",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Capt. John Yossarian",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Magnesium_ribbon_burning.jpg/960px-Magnesium_ribbon_burning.jpg",
+        "sha256": "2607c6b51fe36223d856b682f907668574f5de9998fc08cba0ff36804ef7a3bd",
+        "note": "Short-exposure photograph of burning magnesium ribbon, representative of magnesium combustion rather than a manufactured flare. Wikimedia thumbnail, otherwise unchanged; not a luminance measurement."
+      },
+      "Core-Collapse Supernova": {
+        "src": "images/temperature_supernova_remnant_plasma.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Crab_Nebula.jpg",
+        "license": "Public domain",
+        "author": "NASA, ESA, J. Hester and A. Loll (Arizona State University)",
+        "sha256": "5fda88149b634b8bd24d09da0f19520f5da631a23ccdc0f3f94bd1d796a910c3",
+        "note": "Hubble observational mosaic of the Crab Nebula, the remnant of SN 1054; colors encode emission from different elements. Reused unchanged from Temperature. Shows the aftermath of core collapse, not a photograph of the peak photosphere or a calibrated luminance image."
+      },
+      "Type Ia Supernova": {
+        "src": "images/energy_supernova.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:SN1994D.jpg",
+        "license": "Public domain",
+        "author": "NASA/ESA, The Hubble Key Project Team and The High-Z Supernova Search Team",
+        "sha256": "d2d65bc1a689f7d1d02385892b07669ed08a124dd9dd97a1e52af52798dbc787",
+        "note": "Hubble photograph of Type Ia supernova SN 1994D in NGC 4526; the supernova is the bright point at lower left. Reused unchanged from Energy. The photosphere is unresolved and the image does not encode the listed luminance."
+      },
+      "Superluminous Supernova": {
+        "src": "content/visualizations/images/brightness/superluminous-supernova.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Superluminous_supernova_proclaims_the_death_of_a_star_at_cosmic_high_noon_(noaoann17007a).jpg",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "author": "Observers: D. Gerdes and S. Jouvel; inset: T. Abbott and NOAO/AURA/NSF",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Superluminous_supernova_proclaims_the_death_of_a_star_at_cosmic_high_noon_%28noaoann17007a%29.jpg",
+        "sha256": "dac2e14748a70a614bc3b7ad338896ac31b63ea93cd753fee5cf6c7d6d48781a",
+        "note": "Observational discovery image with the supernova marked and a Blanco telescope photo inset, not a resolved stellar explosion. Downloaded unchanged from Wikimedia. The image is not calibrated to the listed effective luminance."
+      },
+      "Magnetar Giant Flare": {
+        "src": "images/magnetic_field_magnetar_magnetic_field.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Artist%E2%80%99s_impression_of_the_magnetar_in_the_star_cluster_Westerlund_1.jpg",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "author": "ESO/L. Cal\u00e7ada",
+        "sha256": "3171cbf8a9843a15ed95f5e17d9ebd0d26f57fdeef507be9816474197e40a21c",
+        "note": "Artist's illustration of a magnetar in Westerlund 1, reused unchanged from Magnetic Field. Not a photograph or an observed giant flare; field lines and glow are conceptual, not calibrated luminance."
+      },
+      "Short Gamma-Ray Burst": {
+        "src": "images/temperature_neutron_star_merger_ejecta.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Eso1733s_Artist%27s_impression_of_merging_neutron_stars.jpg",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "author": "University of Warwick/Mark Garlick",
+        "sha256": "4d65a743159750d7ffce1f2d2d83c18cfb1fa23a962595170c38837c0e77e51f",
+        "note": "Artist's illustration of merging neutron stars and a kilonova, a progenitor scenario for short gamma-ray bursts. Reused unchanged from Temperature. Not a photograph of prompt gamma rays, and not calibrated luminance."
+      },
+      "Long Gamma-Ray Burst (isotropic equivalent)": {
+        "src": "content/visualizations/images/brightness/long-gamma-ray-burst.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:GammaRayBurst-20170727.jpg",
+        "license": "Public domain",
+        "author": "NASA/Goddard Space Flight Center",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/GammaRayBurst-20170727.jpg/960px-GammaRayBurst-20170727.jpg",
+        "sha256": "2df474825731b6faa40650b1866d0e2b9cc8b3b450d93e1187c819dba839cbde",
+        "note": "NASA artist's illustration of a massive-star collapse, black hole and relativistic jet. Wikimedia thumbnail, otherwise unchanged. Not a photograph: the burst is beamed, while the dataset uses an illustrative isotropic-equivalent brightness, not a measured visible surface."
+      }
+    }
+  }
+}

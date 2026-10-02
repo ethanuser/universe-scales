@@ -31,6 +31,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rolling ball bearing
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -77,6 +80,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel on ice (kinetic)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -123,6 +129,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice on ice
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -168,6 +177,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel on ice (static)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -214,6 +226,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: PTFE on PTFE
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -259,6 +274,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: PTFE on steel
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -304,6 +322,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Waxed snowboard on snow
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -350,6 +371,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lubricated steel on steel
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -395,6 +419,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ski on snow (kinetic)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -441,6 +468,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lubricated steel bearings
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -487,6 +517,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Graphite on graphite
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -532,6 +565,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rubber on ice (kinetic)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -578,6 +614,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rubber on ice (static)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -624,6 +663,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wet shoe on polished floor
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -669,6 +711,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Nylon on steel
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -714,6 +759,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Plastic slider on desk
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -759,6 +807,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brake pad on rotor
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -804,6 +855,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Leather on wood
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -849,6 +903,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wood on wood (static)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -895,6 +952,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brass on steel
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -940,6 +1000,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ceramic on ceramic
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -985,6 +1048,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Paper on paper
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1030,6 +1096,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tire on wet asphalt
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1075,6 +1144,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Chalk on blackboard
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1121,6 +1193,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bare foot on tile
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1166,6 +1241,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dry shoe on polished floor
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1211,6 +1289,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rubber on wet concrete
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1256,6 +1337,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human skin on glass
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1301,6 +1385,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel on steel dry
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1346,6 +1433,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Shoe sole on dry floor
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1392,6 +1482,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rubber on steel
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1437,6 +1530,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sandpaper on wood (kinetic)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1483,6 +1579,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Glass on glass
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1528,6 +1627,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tire on dry asphalt (static)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1574,6 +1676,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tire on asphalt (typical)
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1620,6 +1725,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rubber on dry concrete
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1665,6 +1773,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tire on dry concrete
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1711,6 +1822,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Climbing shoe on rock
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1756,6 +1870,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sticky rubber on dry track
     ingest_source: dataset/raw/curated/friction-coefficient.json
@@ -1801,6 +1918,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gecko foot adhesion
     ingest_source: dataset/raw/curated/friction-coefficient.json

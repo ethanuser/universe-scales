@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tiny dust mote has an almost negligible rotational inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dust mote sphere",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -47,6 +48,8 @@
       "id": "obs:moment-of-inertia:entity-dust-mote-moi",
       "name": "Dust mote sphere",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dust",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A ping-pong ball is a very light thin shell with tiny rotational inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ping-pong ball",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -102,6 +106,8 @@
       "id": "obs:moment-of-inertia:entity-ping-pong-ball-moi",
       "name": "Ping-pong ball",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Table_tennis_ball",
       "source_count": 2,
       "sources": [
@@ -140,6 +146,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A hard-drive platter is in the few-micro kilogram-square-meter regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hard-drive platter",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -156,6 +163,8 @@
       "id": "obs:moment-of-inertia:entity-hdd-platter-moi",
       "name": "Hard-drive platter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hard_disk_drive",
       "source_count": 2,
       "sources": [
@@ -194,6 +203,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A golf ball is compact enough that its inertia stays in the micro scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Golf ball",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -211,6 +221,8 @@
       "id": "obs:moment-of-inertia:entity-golf-ball-moi",
       "name": "Golf ball",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Golf_ball",
       "source_count": 2,
       "sources": [
@@ -249,6 +261,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A compact disc is a familiar small rigid-body moment-of-inertia reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "CD about its center",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -265,6 +278,8 @@
       "id": "obs:moment-of-inertia:entity-cd-moi",
       "name": "CD about its center",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Compact_disc",
       "source_count": 2,
       "sources": [
@@ -303,6 +318,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A yo-yo stores rotational energy with a small but tangible moment of inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Yo-yo",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -319,6 +335,8 @@
       "id": "obs:moment-of-inertia:entity-yoyo-moi",
       "name": "Yo-yo",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Yo-yo",
       "source_count": 2,
       "sources": [
@@ -357,6 +375,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A smartphone spun about its center behaves like a small rectangular plate.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smartphone about center",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -374,6 +393,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-smartphone",
       "name": "Smartphone about center",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smartphone",
       "source_count": 2,
       "sources": [
@@ -412,6 +433,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A soccer ball sits clearly above tennis and baseball on a rotational-inertia scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Soccer ball",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -429,6 +451,8 @@
       "id": "obs:moment-of-inertia:entity-soccer-ball-moi",
       "name": "Soccer ball",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ball_(association_football)",
       "source_count": 2,
       "sources": [
@@ -467,6 +491,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A solid sphere is slightly easier to spin than a disk of the same mass and radius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Solid sphere",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -483,6 +508,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-solid-sphere",
       "name": "Solid sphere",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
       "source_count": 2,
       "sources": [
@@ -521,6 +548,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A compact disk-like object resists rotation less than a ring of the same mass and radius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Solid disk",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -537,6 +565,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-solid-disk",
       "name": "Solid disk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
       "source_count": 2,
       "sources": [
@@ -575,6 +605,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A basketball larger radius dominates its moment of inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Basketball",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -592,6 +623,8 @@
       "id": "obs:moment-of-inertia:entity-basketball-moi",
       "name": "Basketball",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Basketball_(ball)",
       "source_count": 2,
       "sources": [
@@ -630,6 +663,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A thin hollow sphere puts more mass toward the outside, raising the inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hollow sphere",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -646,6 +680,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-hollow-sphere",
       "name": "Hollow sphere",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
       "source_count": 2,
       "sources": [
@@ -684,6 +720,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass pushed out to the rim makes the ring harder to spin up.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thin ring",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -700,6 +737,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-thin-ring",
       "name": "Thin ring",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
       "source_count": 2,
       "sources": [
@@ -738,6 +777,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A bowling ball is compact but still carries noticeable rotational inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bowling ball",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -756,6 +796,8 @@
       "qualifiers": {
         "measurement": "about center"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bowling_ball",
       "source_count": 2,
       "sources": [
@@ -794,6 +836,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A long thin rod spun about its middle is a clean classroom example of rotational inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Broomstick",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -814,6 +857,8 @@
         "assumption": "1 kg, 1 m rod",
         "measurement": "about center"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rod_(optics)",
       "source_count": 2,
       "sources": [
@@ -852,6 +897,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A one-kilogram, one-meter rod has a simple center-of-mass moment of inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thin rod about center",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -868,6 +914,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-thin-rod-center",
       "name": "Thin rod about center",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
       "source_count": 2,
       "sources": [
@@ -906,6 +954,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A bicycle wheel is a classic intuitive inertia example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle wheel",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -922,6 +971,8 @@
       "id": "obs:moment-of-inertia:entity-bicycle-wheel-moi",
       "name": "Bicycle wheel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle_wheel",
       "source_count": 2,
       "sources": [
@@ -960,6 +1011,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A bat is much easier to swing from the handle than from the barrel end.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Baseball bat about handle",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -976,6 +1028,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-baseball-bat-handle",
       "name": "Baseball bat about handle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Baseball_bat",
       "source_count": 2,
       "sources": [
@@ -1014,6 +1068,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Flywheels deliberately store rotational inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Engine flywheel",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1030,6 +1085,8 @@
       "id": "obs:moment-of-inertia:entity-engine-flywheel-moi",
       "name": "Engine flywheel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Flywheel",
       "source_count": 2,
       "sources": [
@@ -1068,6 +1125,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The same rod about one end is four times harder to spin.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thin rod about end",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1084,6 +1142,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-thin-rod-end",
       "name": "Thin rod about end",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/List_of_moments_of_inertia",
       "source_count": 2,
       "sources": [
@@ -1122,6 +1182,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pulling mass closer to the axis dramatically lowers the skater\u2019s moment of inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Figure skater with arms in",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1141,6 +1202,8 @@
         "measurement": "about vertical axis",
         "posture": "arms in"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Figure_skating",
       "source_count": 2,
       "sources": [
@@ -1179,6 +1242,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A motorcycle wheel carries several times the rotational inertia of a bicycle wheel.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Motorcycle wheel",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1196,6 +1260,8 @@
       "id": "obs:moment-of-inertia:entity-motorcycle-wheel-moi",
       "name": "Motorcycle wheel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motorcycle_wheel",
       "source_count": 2,
       "sources": [
@@ -1234,6 +1300,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A car wheel sits around the one-kilogram-square-meter scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car wheel",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1250,6 +1317,8 @@
       "id": "obs:moment-of-inertia:entity-car-wheel-moi",
       "name": "Car wheel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wheel",
       "source_count": 2,
       "sources": [
@@ -1288,6 +1357,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A door resists angular acceleration much more than its mass alone suggests because the mass sits far from the hinge.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Door about its hinge",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1304,6 +1374,8 @@
       "id": "obs:moment-of-inertia:entity-door-moi",
       "name": "Door about its hinge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Door",
       "source_count": 2,
       "sources": [
@@ -1342,6 +1414,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A human rotating with arms extended has a much larger inertia than a hand-held object.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Figure skater",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1360,6 +1433,8 @@
       "qualifiers": {
         "measurement": "about vertical axis"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Figure_skating",
       "source_count": 2,
       "sources": [
@@ -1398,6 +1473,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A seated human on a swivel chair is a familiar body-scale rotational inertia benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Person on swivel chair",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1414,6 +1490,8 @@
       "id": "obs:moment-of-inertia:entity-swivel-chair-person-moi",
       "name": "Person on swivel chair",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moment_of_inertia",
       "source_count": 2,
       "sources": [
@@ -1452,6 +1530,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Extending the arms moves mass outward and greatly increases rotational inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice skater with arms out",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1468,6 +1547,8 @@
       "id": "obs:moment-of-inertia:scenario-moment-of-inertia-ice-skater-arms-out",
       "name": "Ice skater with arms out",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice_dance",
       "source_count": 2,
       "sources": [
@@ -1506,6 +1587,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A heavy truck wheel pushes rotational inertia into the tens.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Truck wheel",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1523,6 +1605,8 @@
       "id": "obs:moment-of-inertia:entity-truck-wheel-moi",
       "name": "Truck wheel",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Truck",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1645,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A playground merry-go-round shows how quickly inertia grows with both mass and radius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Merry-go-round",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1577,6 +1662,8 @@
       "id": "obs:moment-of-inertia:entity-merry-go-round-moi",
       "name": "Merry-go-round",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Merry-go-round",
       "source_count": 2,
       "sources": [
@@ -1615,6 +1702,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A passenger car has much larger rotational inertia than bicycle-scale objects.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1634,6 +1722,8 @@
       "qualifiers": {
         "measurement": "about vertical axis"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Car",
       "source_count": 2,
       "sources": [
@@ -1672,6 +1762,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A helicopter rotor stores substantial rotational inertia.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Helicopter rotor",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1688,6 +1779,8 @@
       "id": "obs:moment-of-inertia:entity-helicopter-rotor-moi",
       "name": "Helicopter rotor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helicopter_rotor",
       "source_count": 2,
       "sources": [
@@ -1726,6 +1819,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The ISS has an enormous rotational inertia compared with vehicles on Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "International Space Station",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1742,6 +1836,8 @@
       "id": "obs:moment-of-inertia:entity-iss-moi",
       "name": "International Space Station",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/International_Space_Station",
       "source_count": 2,
       "sources": [
@@ -1780,6 +1876,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Planetary bodies have enormous moments of inertia even before you reach stars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon about its spin axis",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1796,6 +1893,8 @@
       "id": "obs:moment-of-inertia:entity-moon-moi",
       "name": "Moon about its spin axis",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
       "source_count": 2,
       "sources": [
@@ -1834,6 +1933,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth\u2019s spin inertia is a planetary-scale reference point on this axis.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1852,6 +1952,8 @@
       "qualifiers": {
         "measurement": "about rotation axis"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -1890,6 +1992,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Earth is a useful large-scale rotational-inertia benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth about its spin axis",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1906,6 +2009,8 @@
       "id": "obs:moment-of-inertia:entity-earth-moi",
       "name": "Earth about its spin axis",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
       "source_count": 2,
       "sources": [
@@ -1944,6 +2049,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Compact stars can have Earth-like rotational inertia despite vastly smaller radii because of their huge density.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neutron star",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -1960,6 +2066,8 @@
       "id": "obs:moment-of-inertia:entity-neutron-star-moi",
       "name": "Neutron star",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neutron_star",
       "source_count": 2,
       "sources": [
@@ -1998,6 +2106,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter sits far above terrestrial objects because of its size and mass.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jupiter",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -2016,6 +2125,8 @@
       "qualifiers": {
         "measurement": "about rotation axis"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -2054,6 +2165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun\u2019s rotational inertia is a useful stellar-scale anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -2072,6 +2184,8 @@
       "qualifiers": {
         "measurement": "about rotation axis"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2110,6 +2224,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun's rotational inertia dwarfs any planetary example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun about its spin axis",
         "ingest_source": "dataset/raw/curated/moment-of-inertia.json",
@@ -2126,6 +2241,8 @@
       "id": "obs:moment-of-inertia:entity-sun-moi",
       "name": "Sun about its spin axis",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moment_of_inertia_factor",
       "source_count": 2,
       "sources": [

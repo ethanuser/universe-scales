@@ -45,6 +45,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Patch-clamp perfusion
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -90,6 +93,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Microfluidic channel
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -135,6 +141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Inkjet nozzle
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -180,6 +189,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Insulin pump basal delivery
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -225,6 +237,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: IV drip
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -271,6 +286,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Drip irrigation emitter
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -317,6 +335,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: IV drip
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -364,6 +385,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Garden drip emitter
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -410,6 +434,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Espresso shot extraction
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -456,6 +483,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pour-over coffee dripper
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -502,6 +532,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood through the aorta
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -548,6 +581,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water-efficient shower head
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -593,6 +629,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cardiac output
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -640,6 +679,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human cardiac output
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -686,6 +728,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Kitchen faucet
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -732,6 +777,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Faucet
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -779,6 +827,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Garden sprinkler
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -824,6 +875,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human resting breathing air intake
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -870,6 +924,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Shower head
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -916,6 +973,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: CPAP machine airflow
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -962,6 +1022,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Shower
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1009,6 +1072,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Garden hose
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1056,6 +1122,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Garden hose
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1102,6 +1171,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Toilet flush peak flow
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1148,6 +1220,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fire hose
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1194,6 +1269,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fire hydrant
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1239,6 +1317,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fire hydrant
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1285,6 +1366,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Oil pipeline segment
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1330,6 +1414,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Municipal water main
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1376,6 +1463,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Old Faithful eruption
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1421,6 +1511,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thames River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1466,6 +1559,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Colorado River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1511,6 +1607,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hoover Dam penstock
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1556,6 +1655,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Niagara Falls
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1601,6 +1703,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Nile River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1646,6 +1751,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Danube River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1691,6 +1799,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mississippi River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1736,6 +1847,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Yangtze River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1781,6 +1895,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Congo River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1826,6 +1943,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Amazon River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1871,6 +1991,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Amazon River
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1917,6 +2040,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Global river discharge to oceans
     ingest_source: dataset/raw/curated/flow-rate.json
@@ -1962,6 +2088,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gulf Stream transport
     ingest_source: dataset/raw/curated/flow-rate.json

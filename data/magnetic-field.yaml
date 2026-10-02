@@ -57,6 +57,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Intergalactic magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -104,6 +107,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human brain magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -150,6 +156,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quiet-room magnetic noise floor
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -196,6 +205,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human heart magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -242,6 +254,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Galactic magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -287,6 +302,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Interstellar magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -334,6 +352,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Interplanetary magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -380,6 +401,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Solar wind magnetic field near Earth
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -425,6 +449,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth magnetic field at the magnetic equator
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -471,6 +498,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth magnetic field at the surface
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -516,6 +546,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth magnetic field near the poles
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -562,6 +595,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jupiter equatorial magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -607,6 +643,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Small refrigerator magnet surface field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -652,6 +691,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bar magnet pole field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -697,6 +739,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sunspot magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -742,6 +787,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neodymium magnet surface field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -788,6 +836,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Open MRI field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -834,6 +885,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hard-drive write head field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -879,6 +933,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Loudspeaker magnet gap field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -924,6 +981,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Clinical MRI scanner field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -969,6 +1029,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Transcranial magnetic stimulation pulse
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1015,6 +1078,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Research MRI scanner field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1060,6 +1126,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ultra-high-field MRI scanner
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1105,6 +1174,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tokamak magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1151,6 +1223,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Magnetic resonance imaging field at 11.7 tesla
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1197,6 +1272,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Magnetic field in a fusion tokamak
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1242,6 +1320,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: NMR spectrometer field at 14.1 tesla
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1288,6 +1369,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: High-field laboratory magnet
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1334,6 +1418,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Strong laboratory superconducting magnet
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1379,6 +1466,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Superconducting laboratory magnet
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1425,6 +1515,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: NMR spectrometer field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1470,6 +1563,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pulsed laboratory magnet field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1516,6 +1612,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: World-class pulsed laboratory magnet
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1561,6 +1660,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: White dwarf surface magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1606,6 +1708,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ordinary neutron-star magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1651,6 +1756,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Extreme magnetar magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json
@@ -1696,6 +1804,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Magnetar magnetic field
     ingest_source: dataset/raw/curated/magnetic-field.json

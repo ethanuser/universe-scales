@@ -20,34 +20,36 @@ items:
   name: String Length
   source: https://en.wikipedia.org/wiki/String_theory
   value: 1e-35
-- description: The smallest meaningful distance in physics, where quantum mechanics
-    and general relativity collide. At this scale, spacetime becomes a
-    seething foam of quantum fluctuations, and attempting to measure distances
-    shorter than this would require so much energy that it would create a
-    black hole. This length is derived from fundamental constants and represents
-    the ultimate limit of our current understanding of space and time.
+- description: A length constructed from the constants of quantum mechanics,
+    gravity, and relativity. It marks the scale at which we expect our separate
+    descriptions of these forces to need a quantum theory of gravity. Ideas
+    such as spacetime foam and black-hole limits on measurement make it a
+    compelling frontier, but it has not been established experimentally as
+    the smallest possible distance. The ruler shows a derived scale, not
+    an observed grain of spacetime.
   name: Planck Length
-  source: https://en.wikipedia.org/wiki/Planck_length
-  value: 1.616e-35
-- description: The experimental upper limit on quark size from high-energy collisions
-    at particle accelerators. Quarks are never found alone due to 'color
+  source: https://physics.nist.gov/cgi-bin/cuu/Value?plkl
+  value: 1.616255e-35
+- description: An experimental upper limit on an effective quark radius from
+    combined HERA electron-proton collision data, at 95% confidence within
+    the study's form-factor model. It is not a measured particle surface.
+    Quarks are never found alone due to 'color
     confinement' - the strong force becomes stronger as you try to separate
-    them, like cosmic rubber bands. This size limit represents our current
-    resolution for probing the fundamental building blocks of matter, and
-    any attempt to see smaller would require energies exceeding what
-    current accelerators can achieve.
+    them, like cosmic rubber bands. Scattering lets us probe these hidden
+    building blocks without ever holding an isolated quark in our hands.
   name: Quark
-  source: https://en.wikipedia.org/wiki/Quark
+  source: https://arxiv.org/abs/1611.03825
   value: 4.3e-19
-- description: The electromagnetic 'size' of an electron, calculated from its
-    self-energy interactions. While electrons appear point-like in experiments,
-    this radius represents the scale where electromagnetic effects dominate.
-    Interestingly, if an electron were actually this size, its electrostatic
-    self-energy would exceed its rest mass energy by a factor of 200,000,
-    highlighting the quantum mechanical nature of fundamental particles.
+- description: The classical electron radius, an electromagnetic length scale
+    derived from its charge and rest energy, not an observed electron size.
+    Electrons appear point-like in experiments. In the classical picture,
+    spreading a charge over a small sphere stores electrostatic energy;
+    equating a characteristic Coulomb energy to the electron's rest energy
+    gives this scale. The exact self-energy depends on the assumed charge
+    distribution, so it does not define a physical surface for the electron.
   name: Electron
-  source: https://en.wikipedia.org/wiki/Electron
-  value: 2.8e-15
+  source: https://physics.nist.gov/cgi-bin/cuu/Value?re
+  value: 2.8179403205e-15
 - description: The charge radius of the proton, measured through electron-proton
     scattering and muonic hydrogen spectroscopy. This measurement sparked the
     'proton radius puzzle' when muonic hydrogen gave a different result than
@@ -55,8 +57,8 @@ items:
     and hinted at possible new physics. The proton's internal structure
     contains three quarks constantly exchanging gluons in a quantum soup.
   name: Proton Radius
-  source: https://en.wikipedia.org/wiki/Proton
-  value: 8.7e-16
+  source: https://physics.nist.gov/cuu/Constants/Table/allascii.txt
+  value: 8.4075e-16
 - description: The diameter of atomic nuclei, where 99.97% of an atom's mass
     is concentrated in a space 100,000 times smaller than the atom itself.
     Nuclear size scales roughly as the cube root of atomic mass, meaning
@@ -66,33 +68,36 @@ items:
   name: Atomic Nucleus
   source: https://en.wikipedia.org/wiki/Atomic_nucleus
   value: 1e-14
-- description: The quantum mechanical 'size' of neutrinos, the most abundant
-    massive particles in the universe. Trillions of neutrinos pass through
-    your body every second from the Sun, yet they're so weakly interacting
-    that you'd need a light-year of lead to stop half of them. Their tiny
+- description: The de Broglie wavelength of a neutrino with 1 MeV of energy,
+    about 1.24 picometers in the ultrarelativistic approximation. This is
+    a wavelength, not the particle's physical size; increasing its energy
+    makes the wavelength shorter. Trillions of neutrinos pass through
+    your body every second from the Sun, and most pass through the Earth
+    without interacting. Their tiny
     mass and ghostly nature make them crucial messengers from stellar
     cores and supernova explosions.
-  name: Neutrino
-  source: https://en.wikipedia.org/wiki/Neutrino
-  value: 1e-12
-- description: The quantum mechanical 'size' of a hydrogen atom, where the electron
-    exists in a probability cloud around the nucleus. This distance emerges
-    from the balance between electrostatic attraction and quantum uncertainty.
-    Remarkably, if you scaled up a hydrogen atom so its nucleus was the size
-    of a basketball, the electron would orbit at a distance of 2.5 kilometers,
-    illustrating the vast emptiness within atoms.
+  name: 1 MeV Neutrino Wavelength
+  source: https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf
+  value: 1.239841984e-12
+- description: A hydrogen atom is about 106 picometers across if its edge is
+    drawn at the Bohr radius, 52.9 pm, the electron's most probable distance
+    from the proton. The electron has no orbit or surface; it is a probability
+    cloud, and only about 32% of it lies inside that sphere, thinning out
+    exponentially beyond. The proton at the center is roughly 60,000 times
+    smaller than the sphere, so the atom is almost entirely empty space. This
+    marker is the diameter of the Bohr-radius sphere.
   name: Hydrogen Atom
-  source: https://en.wikipedia.org/wiki/Bohr_radius
-  value: 5.3e-11
-- description: The van der Waals radius of carbon, defining how close non-bonded
-    atoms can approach before repulsion dominates. This 'personal space' radius
-    is crucial for molecular recognition - enzymes use it to distinguish between
-    different molecules. The carbon atom's versatility comes from its ability
-    to form four bonds, making it the backbone of all organic chemistry and
-    life itself.
+  source: https://physics.nist.gov/cgi-bin/cuu/Value?bohrrada0
+  value: 1.058e-10
+- description: A carbon atom is about 140 picometers across, twice its
+    empirical atomic radius of 70 pm, a convention for comparing atom sizes
+    rather than a hard edge. Its two inner 1s electrons stay very close to the
+    nucleus, while its four outer electrons, the ones that form chemical bonds,
+    spread out to about this radius. Carbon's van der Waals radius, how close a
+    non-bonded neighbor can approach, is much larger, about 170 pm.
   name: Carbon Atom
-  source: https://en.wikipedia.org/wiki/Van_der_Waals_radius
-  value: 7e-11
+  source: https://webelements.co.uk/carbon/atom_sizes.html
+  value: 1.4e-10
 - description: The O-H bond length in water, the most important molecule for life.
     This precise distance creates water's unique properties - its high boiling
     point, surface tension, and ability to dissolve salts. Water's bent geometry
@@ -133,16 +138,17 @@ items:
   name: Protein (Small)
   source: https://en.wikipedia.org/wiki/Protein
   value: 5e-9
-- description: The size of typical viruses, biological entities that blur the
-    line between living and non-living. Viruses are essentially genetic
-    material wrapped in protein coats, hijacking cellular machinery to
-    reproduce. Their small size allows them to penetrate cells through
-    endocytosis, while their protein shells protect their genetic material
-    from environmental damage. Some viruses are so small they can pass
-    through filters designed to remove bacteria.
+- description: SARS-CoV-2, the coronavirus behind COVID-19, is a roughly
+    spherical particle about 91 nm across. Its fatty envelope is studded with
+    a few dozen spike proteins that reach another 20 nm or so outward and
+    latch onto ACE2 receptors on human cells. Inside, a single strand of RNA
+    about 30,000 letters long is one of the largest genomes of any RNA virus.
+    This marker is the mean envelope diameter measured by cryo-electron
+    tomography, not counting the spikes; viruses as a group range from about
+    20 nm to more than a micrometer.
   name: Virus
-  source: https://en.wikipedia.org/wiki/Virus
-  value: 1e-8
+  source: https://www.nature.com/articles/s41586-020-2665-2
+  value: 9.1e-8
 - description: The wavelength of green light, the peak sensitivity of human vision.
     This wavelength defines the resolution limit of optical microscopes and
     explains why we can't see individual atoms with visible light. The
@@ -154,6 +160,36 @@ items:
   name: Visible Light Wavelength
   source: https://en.wikipedia.org/wiki/Visible_spectrum
   value: 5e-7
+- description: A 1.173 MeV gamma ray emitted during cobalt-60 decay has a
+    wavelength of about 1.06 picometers, from wavelength equals h c over energy.
+  name: Gamma Ray Wavelength
+  source: https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf
+  value: 1.057e-12
+- description: The copper K-alpha-1 X-ray emission line, used in diffraction,
+    has a measured wavelength of 0.15405925 nanometers.
+  name: X-ray Wavelength
+  source: https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358
+  value: 1.5405925e-10
+- description: A low-pressure mercury germicidal lamp emits strongly at
+    253.7 nanometers in the ultraviolet.
+  name: UV Wavelength
+  source: https://www.cdc.gov/infection-control/hcp/environmental-control/air.html
+  value: 2.537e-7
+- description: Thermal radiation from a 310 kelvin body peaks near 9.35
+    micrometers by Wien's law, in the infrared.
+  name: Infrared Wavelength
+  source: https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html
+  value: 9.35e-6
+- description: A 2.45 gigahertz household microwave has a free-space wavelength
+    of about 12.2 centimeters, calculated from the speed of light.
+  name: Microwave Wavelength
+  source: https://www.fda.gov/media/103619/download
+  value: 0.12236
+- description: A 100 megahertz FM broadcast signal has a free-space wavelength
+    of about three meters, calculated from the speed of light.
+  name: Radio Wavelength
+  source: https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201
+  value: 2.9979
 - description: The length of E. coli bacteria, the workhorse of molecular biology.
     These rod-shaped microbes can reproduce every 20 minutes under ideal
     conditions, meaning a single bacterium could theoretically produce
@@ -183,12 +219,13 @@ items:
   name: Mitochondrion
   source: https://en.wikipedia.org/wiki/Mitochondrion
   value: 1e-5
-- description: The size of neuron cell bodies, the command centers of the nervous
-    system. These cells can have axons extending over a meter long while
-    maintaining electrical signals. Neurons communicate through synapses,
-    where neurotransmitters cross tiny gaps in milliseconds. The brain
-    contains about 86 billion neurons, each connecting to thousands of
-    others, creating the most complex network known in the universe.
+- description: A neuron and its local branches span roughly 100 micrometers.
+    Cell bodies range from a few micrometers to about 100 in the largest
+    motor neurons, and the dendrites around a typical cell body reach out
+    tens of micrometers, while the axon can run over a meter and carry
+    electrical signals called action potentials. Neurons pass those signals
+    across synapses in about a millisecond. The brain contains about 86
+    billion neurons, each connecting to thousands of others.
   name: Neuron
   source: https://en.wikipedia.org/wiki/Neuron
   value: 1e-4
@@ -220,15 +257,15 @@ items:
   name: Ant
   source: https://en.wikipedia.org/wiki/Ant
   value: 5e-3
-- description: The length of domestic cats, perfectly sized predators that
-    have adapted to live alongside humans. Cats are obligate carnivores
+- description: From nose to rump, a typical domestic cat is about 46 cm long;
+    its tail adds roughly another 30 cm. Cats are obligate carnivores
     with retractable claws and exceptional night vision. They can rotate
     their ears 180 degrees and hear frequencies up to 65 kHz, far beyond
     human hearing. Remarkably, cats purr at frequencies that promote
     bone healing, and they spend 12-16 hours per day sleeping.
   name: Cat Length
-  source: https://en.wikipedia.org/wiki/Cat
-  value: 5e-2
+  source: https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf
+  value: 4.6e-1
 - description: The length of houseflies, masterful fliers that can hover,
     fly backwards, and perform aerial acrobatics. Their compound eyes
     contain 4,000 lenses and can detect movement 10 times faster than
@@ -277,6 +314,17 @@ items:
   name: Blue Whale
   source: https://en.wikipedia.org/wiki/Blue_whale
   value: 30
+- description: From the ground at its star-shaped fort to the tip of the torch,
+    the Statue of Liberty stands 93 m (305 ft) tall. Half of that is the copper
+    statue itself, 46 m from base to torch; the rest is Richard Morris Hunt's
+    granite pedestal and the walls of Fort Wood beneath it. The statue's skin of
+    copper sheets, only about 2.4 mm thick, hangs on an iron framework designed
+    by Gustave Eiffel, the engineer behind the Eiffel Tower, and it weathered
+    from brown to its familiar green patina within about two decades of the
+    1886 dedication.
+  name: Statue of Liberty
+  source: https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm
+  value: 92.99
 - description: The length of American football fields, standardized playing surfaces
     that have become cultural landmarks. The field's dimensions were designed
     to balance offense and defense, creating strategic depth while maintaining
@@ -286,7 +334,7 @@ items:
     most consistent measurements in professional sports.
   name: Football Field
   source: https://en.wikipedia.org/wiki/American_football_field
-  value: 100
+  value: 91.44
 - description: The height of the Eiffel Tower, an iron lattice structure that
     was initially criticized but became the symbol of Paris. Built for the
     1889 World's Fair, it was the tallest human-made structure for 41 years.
@@ -327,7 +375,7 @@ items:
   name: Mariana Trench
   source: https://en.wikipedia.org/wiki/Mariana_Trench
   value: 11000
-- description: The diameter of Manhattan Island, a tiny sliver of land that
+- description: The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that
     houses over 1.6 million people and generates more economic output than
     most countries. This densely packed urban environment contains 1,000
     buildings over 100 meters tall and processes 2.5 million subway riders
@@ -336,7 +384,7 @@ items:
     Manhattan's real estate value exceeds $3 trillion.
   name: Manhattan Island
   source: https://en.wikipedia.org/wiki/Manhattan
-  value: 20000
+  value: 21600
 - description: The length of marathon races, a distance born from ancient Greek
     legend. The original marathon commemorates Pheidippides' run from Marathon
     to Athens to announce victory over Persia. This distance represents the
@@ -345,7 +393,7 @@ items:
     has become a global phenomenon, with over 800 marathons held worldwide
     annually, attracting millions of participants.
   name: Marathon Distance
-  source: https://en.wikipedia.org/wiki/Marathon
+  source: https://worldathletics.org/disciplines/road-running-event/marathon
   value: 42195
 - description: The length of the Panama Canal, an engineering marvel that
     revolutionized global trade by eliminating the need to sail around
@@ -357,17 +405,17 @@ items:
   name: Panama Canal
   source: https://en.wikipedia.org/wiki/Panama_Canal
   value: 82000
-- description: The length of the Amazon River, Earth's mightiest waterway that
+- description: The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that
     carries more water than the next seven largest rivers combined. This
     river system drains 40% of South America and discharges 200,000
     cubic meters of water per second into the Atlantic. The Amazon
     contains 20% of the world's fresh water and supports 10% of Earth's
     biodiversity. Its length is disputed because it has multiple sources,
-    but it's generally considered the world's longest river.
+    and depends on which headwater and mouth are counted.
   name: Amazon River
-  source: https://en.wikipedia.org/wiki/Amazon_River
-  value: 7000000
-- description: The length of the Great Wall of China, a massive defensive structure
+  source: https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26
+  value: 6400000
+- description: The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system
     built over 2,000 years to protect against nomadic invasions. This ancient
     wonder is actually a series of walls built by different dynasties, with
     some sections dating back to the 7th century BC. The wall is wide enough
@@ -375,8 +423,8 @@ items:
     Despite its reputation, the wall was never completely effective at stopping
     invaders, but it remains one of humanity's most ambitious construction projects.
   name: Great Wall of China
-  source: https://en.wikipedia.org/wiki/Great_Wall_of_China
-  value: 21000000
+  source: https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html
+  value: 21196180
 - description: The diameter of Earth, our home planet that orbits the Sun
     at 67,000 mph while rotating at 1,000 mph at the equator. Earth is
     slightly flattened at the poles due to its rotation, making it an
@@ -446,26 +494,30 @@ items:
   name: Solar System
   source: https://en.wikipedia.org/wiki/Solar_System
   value: 1.2e13
-- description: The diameter of the heliosphere, the protective bubble of
-    solar wind that shields our solar system from cosmic radiation.
+- description: A representative 240-au diameter of the heliosphere's nose region,
+    twice the roughly 120-au heliopause distance measured near the Voyager
+    crossings, not the uncertain length of its tail. This protective bubble of
+    solar wind shields our solar system from cosmic radiation.
     This bubble extends far beyond Pluto and acts as a barrier against
     the harsh interstellar environment. The heliosphere's shape changes
     as the Sun moves through the galaxy, creating a comet-like tail
     that extends for billions of kilometers. Only two spacecraft,
     Voyager 1 and 2, have ever left this protective bubble.
   name: Heliosphere
-  source: https://en.wikipedia.org/wiki/Heliosphere
-  value: 2.4e14
-- description: The radius of the Oort Cloud, a vast shell of icy objects
-    that marks the true boundary of our solar system. This distant region
+  source: https://science.nasa.gov/mission/voyager/interstellar-mission/
+  value: 3.5903488968e13
+- description: A representative 200,000-au diameter of the hypothesized Oort Cloud,
+    using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range.
+    This vast reservoir of icy objects lies at the outer reaches of our solar
+    system rather than having a directly observed sharp edge. This distant region
     contains trillions of comets and extends halfway to the nearest star.
     The Oort Cloud is the source of long-period comets that occasionally
     visit the inner solar system. These icy bodies are pristine remnants
     from the solar system's formation, preserving the original composition
     of the protoplanetary disk.
   name: Oort Cloud
-  source: https://en.wikipedia.org/wiki/Oort_cloud
-  value: 1e15
+  source: https://science.nasa.gov/solar-system/oort-cloud/facts/
+  value: 2.991957414e16
 - description: The distance to Proxima Centauri, our nearest stellar neighbor
     that hosts an Earth-sized planet in its habitable zone. This red dwarf
     star is part of the Alpha Centauri triple star system and is 4.24
@@ -504,7 +556,7 @@ items:
   name: Tarantula Nebula
   source: https://en.wikipedia.org/wiki/Tarantula_Nebula
   value: 9e18
-- description: The size of the Carina Nebula, a massive stellar factory
+- description: The roughly 300-light-year span of the Carina Nebula, a massive stellar factory
     containing some of the most massive and luminous stars in our galaxy.
     This nebula is home to Eta Carinae, a binary star system that's 5
     million times brighter than the Sun and may explode as a supernova
@@ -512,8 +564,8 @@ items:
     dark dust lanes, bright star clusters, and vast regions of ionized
     gas sculpted by stellar winds.
   name: Carina Nebula
-  source: https://en.wikipedia.org/wiki/Carina_Nebula
-  value: 3e20
+  source: https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/
+  value: 2.83821914177424e18
 - description: The diameter of the Milky Way, our home galaxy containing
     100-400 billion stars orbiting a supermassive black hole. Our solar
     system orbits the galactic center at 220 km/s, completing one
@@ -534,7 +586,7 @@ items:
     are unlikely.
   name: Andromeda Distance
   source: https://en.wikipedia.org/wiki/Andromeda_Galaxy
-  value: 2.5e22
+  value: 2.37e22
 - description: The diameter of the Local Group, our galactic neighborhood
     containing about 50 galaxies bound together by gravity. This group
     is dominated by the Milky Way and Andromeda galaxies, which together
@@ -545,55 +597,62 @@ items:
   name: Local Group
   source: https://en.wikipedia.org/wiki/Local_Group
   value: 1e23
-- description: The size of the Virgo Supercluster, a massive collection of
+- description: The approximate 100-million-light-year span of the Virgo
+    (Local) Supercluster, a massive collection of
     galaxy groups containing thousands of galaxies. This structure contains
     about 100 galaxy groups and clusters with a total mass of 10^15
     solar masses. The Virgo Supercluster is falling toward the Great
     Attractor, a mysterious region of space that's pulling galaxies
-    toward it. This represents the largest coherent structures in the
-    universe before cosmic expansion dominates over gravitational
-    attraction.
+    toward it. Its irregular disk and halo of galaxy clouds are a
+    large-scale neighborhood, not one gravitationally bound object with
+    a sharply defined surface.
   name: Virgo Supercluster
-  source: https://en.wikipedia.org/wiki/Virgo_Supercluster
-  value: 1e23
-- description: The size of the Laniakea Supercluster, our cosmic home that
+  source: https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html
+  value: 9.46e23
+- description: The approximate 160-megaparsec diameter of the Laniakea Supercluster,
+    our cosmic home that
     contains 100,000 galaxies including our Milky Way. This Hawaiian-named
-    structure means 'immeasurable heaven' and represents the largest
-    gravitationally bound system we belong to. Laniakea contains a mass
+    structure means 'immeasurable heaven' and is defined by a basin of
+    peculiar galaxy velocities, not by a gravitationally bound boundary.
+    Laniakea contains a mass
     of 10^17 solar masses and shows how galaxies flow toward its center
     like water flowing downhill. This supercluster is part of an even
     larger cosmic web that spans the observable universe.
   name: Laniakea Supercluster
-  source: https://en.wikipedia.org/wiki/Laniakea_Supercluster
-  value: 5e23
+  source: https://doi.org/10.1038/nature13674
+  value: 4.937084130386187e24
 - description: The length of the Sloan Great Wall, one of the largest
     structures in the observable universe. This massive filament contains
-    thousands of galaxy clusters arranged in a wall-like formation
-    spanning billions of light-years. The wall's discovery challenged
-    our understanding of cosmic structure formation, as it seemed
-    too large to have formed in the time since the Big Bang.
+    thousands of galaxies arranged in a wall-like formation. Gott and
+    colleagues estimated its curved length as 450 megaparsecs in
+    present-epoch comoving coordinates, about 1.47 billion light-years.
+    At the epoch seen in its light, the same estimate is about 419 Mpc.
+    Such walls also occur in simulations of standard cosmology;
+    their connected extent depends on how the structure is defined.
     This structure represents the cosmic web's filamentary nature,
     where galaxies cluster along vast interconnected threads.
   name: Sloan Great Wall
-  source: https://en.wikipedia.org/wiki/Sloan_Great_Wall
-  value: 4e24
-- description: The length of the Hercules-Corona Borealis Great Wall, the
-    largest known structure in the observable universe. This immense
-    filament spans 10 billion light-years and contains billions of
-    galaxies arranged in a wall-like formation. The wall's discovery
-    challenged cosmological theories because it appeared too large
-    to have formed through gravitational collapse alone. This structure
-    represents the ultimate scale of cosmic organization and may
-    require new physics to explain its formation.
+  source: https://arxiv.org/html/astro-ph/0310571v2
+  value: 1.3885549116711151e25
+- description: A reported gamma-ray-burst concentration nicknamed the
+    Hercules-Corona Borealis Great Wall, with a proposed extent of roughly
+    2,000-3,000 megaparsecs. The marker uses the upper end, about 10 billion
+    light-years; it is not a measured edge of a mapped galaxy wall.
+    Bursts can act as distant tracers of stellar populations, but their
+    rarity and uneven detection make this an intriguing, disputed inference.
+    Studies disagree about whether selection effects can explain the
+    clustering. The question is not whether a visible wall fills this
+    span, but whether sparse flashes reveal an unusually large structure.
   name: Hercules-Corona Borealis Great Wall
-  source: https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall
-  value: 1e25
+  source: https://arxiv.org/abs/1401.0533
+  value: 9.4607304725808e25
 - description: The diameter of the observable universe, the ultimate limit
     of what we can see. This boundary exists because light has only
-    had 13.8 billion years to travel since the Big Bang. Beyond this
-    distance, objects are receding faster than light can reach us
-    due to cosmic expansion. The observable universe contains about
-    2 trillion galaxies and represents only a tiny fraction of
+    had 13.8 billion years to travel since the Big Bang. Cosmic expansion
+    has stretched the present distance to those regions to about 46.5
+    billion light-years; recession faster than light does not by itself
+    make a galaxy unobservable. The observable universe contains about
+    2 trillion galaxies and may represent only a tiny fraction of
     the entire universe, which may be infinite in extent. This
     diameter defines the horizon of human knowledge about
     cosmic reality.

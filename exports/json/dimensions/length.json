@@ -2,20 +2,22 @@
   "base_unit": "meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 59,
-    "candidate_shortfall_to_preferred_target": 1,
+    "candidate_count": 66,
+    "candidate_shortfall_to_preferred_target": 0,
+    "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
     "preferred_max_items": 100,
-    "preferred_target_items": 60,
+    "preferred_target_items": 66,
+    "raw_candidate_count": 66,
     "required_min_items": 24,
-    "selected_count": 59,
+    "selected_count": 66,
     "selected_primary_count": 19,
-    "selected_secondary_count": 40,
+    "selected_secondary_count": 47,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 59
+      "secondary_reference": 66
     },
-    "target_selected_count": 59
+    "target_selected_count": 66
   },
   "description_format": "markdown",
   "dimension": "length",
@@ -27,36 +29,42 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The smallest meaningful distance in physics, where quantum mechanics and general relativity collide. At this scale, spacetime becomes a seething foam of quantum fluctuations, and attempting to measure distances shorter than this would require so much energy that it would create a black hole. This length is derived from fundamental constants and represents the ultimate limit of our current understanding of space and time.",
+      "description": "A length constructed from the constants of quantum mechanics, gravity, and relativity. It marks the scale at which we expect our separate descriptions of these forces to need a quantum theory of gravity. Ideas such as spacetime foam and black-hole limits on measurement make it a compelling frontier, but it has not been established experimentally as the smallest possible distance. The ruler shows a derived scale, not an observed grain of spacetime.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The smallest meaningful distance in physics, where quantum mechanics and general relativity collide. At this scale, spacetime becomes a seething foam of quantum fluctuations, and attempting to measure distances shorter than this would require so much energy that it would create a black hole. This length is derived from fundamental constants and represents the ultimate limit of our current understanding of space and time.",
+      "description_medium": "A length constructed from the constants of quantum mechanics, gravity, and relativity. It marks the scale at which we expect our separate descriptions of these forces to need a quantum theory of gravity. Ideas such as spacetime foam and black-hole limits on measurement make it a compelling frontier, but it has not been established experimentally as the smallest possible distance. The ruler shows a derived scale, not an observed grain of spacetime.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Planck Length",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1.616e-35",
-          "source_url": "https://en.wikipedia.org/wiki/Planck_length"
+          "original_value_text": "1.616255e-35",
+          "source_url": "https://physics.nist.gov/cgi-bin/cuu/Value?plkl"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-planck-length",
       "name": "Planck Length",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Planck_length",
+      "qualifiers": {
+        "constants_release": "2022 CODATA",
+        "measurement": "derived Planck length; not an experimentally established minimum distance"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?plkl",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-planck-length",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-physics-nist-gov-cgi-bin-cuu-value-plkl",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "physics.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Planck length",
-          "url": "https://en.wikipedia.org/wiki/Planck_length"
+          "title": "Value",
+          "url": "https://physics.nist.gov/cgi-bin/cuu/Value?plkl"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -70,44 +78,51 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The smallest meaningful distance in physics, where quantum mechanics and general relativity collide.",
-      "value": 1.616e-35,
+      "summary_short": "A length constructed from the constants of quantum mechanics, gravity, and relativity.",
+      "value": 1.616255e-35,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The experimental upper limit on quark size from high-energy collisions at particle accelerators. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. This size limit represents our current resolution for probing the fundamental building blocks of matter, and any attempt to see smaller would require energies exceeding what current accelerators can achieve.",
+      "description": "An experimental upper limit on an effective quark radius from combined HERA electron-proton collision data, at 95% confidence within the study's form-factor model. It is not a measured particle surface. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. Scattering lets us probe these hidden building blocks without ever holding an isolated quark in our hands.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The experimental upper limit on quark size from high-energy collisions at particle accelerators. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. This size limit represents our current resolution for probing the fundamental building blocks of matter, and any attempt to see smaller would require energies exceeding what current accelerators can achieve.",
+      "description_medium": "An experimental upper limit on an effective quark radius from combined HERA electron-proton collision data, at 95% confidence within the study's form-factor model. It is not a measured particle surface. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. Scattering lets us probe these hidden building blocks without ever holding an isolated quark in our hands.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Quark",
         "source_trace": {
           "method": "derived",
           "original_value_text": "4.3e-19",
-          "source_url": "https://en.wikipedia.org/wiki/Quark"
+          "source_url": "https://arxiv.org/abs/1611.03825"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-quark",
       "name": "Quark",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Quark",
+      "qualifiers": {
+        "experiment": "combined H1 and ZEUS inclusive deep-inelastic scattering at HERA",
+        "measurement": "95% confidence upper limit on effective quark radius",
+        "model_dependence": "specified quark form-factor fit, not a universal hard-size bound"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://arxiv.org/abs/1611.03825",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-quark",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-arxiv-org-abs-1611-03825",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "arxiv.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Quark",
-          "url": "https://en.wikipedia.org/wiki/Quark"
+          "title": "1611.03825",
+          "url": "https://arxiv.org/abs/1611.03825"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -121,7 +136,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The experimental upper limit on quark size from high-energy collisions at particle accelerators.",
+      "summary_short": "An experimental upper limit on an effective quark radius from combined HERA electron-proton collision data, at 95% confidence within the study's form-factor model.",
       "value": 4.3e-19,
       "value_type": "derived",
       "wikidata_qid": null
@@ -133,32 +148,39 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The charge radius of the proton, measured through electron-proton scattering and muonic hydrogen spectroscopy. This measurement sparked the 'proton radius puzzle' when muonic hydrogen gave a different result than electronic hydrogen - a discrepancy that challenged quantum electrodynamics and hinted at possible new physics. The proton's internal structure contains three quarks constantly exchanging gluons in a quantum soup.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Proton Radius",
         "source_trace": {
-          "method": "derived",
-          "original_value_text": "8.7e-16",
-          "source_url": "https://en.wikipedia.org/wiki/Proton"
+          "method": "legacy_seed",
+          "original_value_text": "8.4075e-16",
+          "source_url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-proton-radius",
       "name": "Proton Radius",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Proton",
+      "qualifiers": {
+        "constants_release": "2022 CODATA",
+        "measurement": "rms electric charge radius, not a hard boundary",
+        "uncertainty_m": "6.4e-19"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-proton",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-physics-nist-gov-cuu-constants-table-allascii-txt",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "physics.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Proton",
-          "url": "https://en.wikipedia.org/wiki/Proton"
+          "title": "allascii.txt",
+          "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -173,43 +195,49 @@
         }
       ],
       "summary_short": "The charge radius of the proton, measured through electron-proton scattering and muonic hydrogen spectroscopy.",
-      "value": 8.7e-16,
-      "value_type": "derived",
+      "value": 8.4075e-16,
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The electromagnetic 'size' of an electron, calculated from its self-energy interactions. While electrons appear point-like in experiments, this radius represents the scale where electromagnetic effects dominate. Interestingly, if an electron were actually this size, its electrostatic self-energy would exceed its rest mass energy by a factor of 200,000, highlighting the quantum mechanical nature of fundamental particles.",
+      "description": "The classical electron radius, an electromagnetic length scale derived from its charge and rest energy, not an observed electron size. Electrons appear point-like in experiments. In the classical picture, spreading a charge over a small sphere stores electrostatic energy; equating a characteristic Coulomb energy to the electron's rest energy gives this scale. The exact self-energy depends on the assumed charge distribution, so it does not define a physical surface for the electron.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The electromagnetic 'size' of an electron, calculated from its self-energy interactions. While electrons appear point-like in experiments, this radius represents the scale where electromagnetic effects dominate. Interestingly, if an electron were actually this size, its electrostatic self-energy would exceed its rest mass energy by a factor of 200,000, highlighting the quantum mechanical nature of fundamental particles.",
+      "description_medium": "The classical electron radius, an electromagnetic length scale derived from its charge and rest energy, not an observed electron size. Electrons appear point-like in experiments. In the classical picture, spreading a charge over a small sphere stores electrostatic energy; equating a characteristic Coulomb energy to the electron's rest energy gives this scale. The exact self-energy depends on the assumed charge distribution, so it does not define a physical surface for the electron.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Electron",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "2.8e-15",
-          "source_url": "https://en.wikipedia.org/wiki/Electron"
+          "original_value_text": "2.8179403205e-15",
+          "source_url": "https://physics.nist.gov/cgi-bin/cuu/Value?re"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-electron",
       "name": "Electron",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Electron",
+      "qualifiers": {
+        "constants_release": "2022 CODATA",
+        "measurement": "classical electron radius; not a measured electron extent"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?re",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-electron",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-physics-nist-gov-cgi-bin-cuu-value-re",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "physics.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Electron",
-          "url": "https://en.wikipedia.org/wiki/Electron"
+          "title": "Value",
+          "url": "https://physics.nist.gov/cgi-bin/cuu/Value?re"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -223,8 +251,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The electromagnetic 'size' of an electron, calculated from its self-energy interactions.",
-      "value": 2.8e-15,
+      "summary_short": "The classical electron radius, an electromagnetic length scale derived from its charge and rest energy, not an observed electron size.",
+      "value": 2.8179403205e-15,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -235,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of atomic nuclei, where 99.97% of an atom's mass is concentrated in a space 100,000 times smaller than the atom itself. Nuclear size scales roughly as the cube root of atomic mass, meaning uranium nuclei are only about 6 times larger than hydrogen nuclei despite being 238 times more massive. This incredible density means nuclear matter is 100 trillion times denser than water.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Atomic Nucleus",
@@ -248,6 +277,8 @@
       "id": "obs:length:scenario-length-atomic-nucleus",
       "name": "Atomic Nucleus",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Atomic_nucleus",
       "source_count": 2,
       "sources": [
@@ -281,37 +312,40 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
-      "description": "The quantum mechanical 'size' of neutrinos, the most abundant massive particles in the universe. Trillions of neutrinos pass through your body every second from the Sun, yet they're so weakly interacting that you'd need a light-year of lead to stop half of them. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
+      "content_status": "curated",
+      "description": "After cobalt-60 decays, its daughter nickel-60 releases a gamma ray with about 1.173 MeV of energy. The corresponding wavelength is only about 1.06 pm, calculated from $\\lambda=hc/E$. That is much shorter than an atom's diameter. This marker represents **one spectral line**, not all gamma rays. The paired 1.332 MeV line from the same decay would sit at a slightly shorter wavelength. [NIST describes the cobalt-60 gamma cascade](https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf).",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The quantum mechanical 'size' of neutrinos, the most abundant massive particles in the universe. Trillions of neutrinos pass through your body every second from the Sun, yet they're so weakly interacting that you'd need a light-year of lead to stop half of them. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
+      "description_medium": "After cobalt-60 decays, its daughter nickel-60 releases a gamma ray with about 1.173 MeV of energy. The corresponding wavelength is only about 1.06 pm, calculated from $\\lambda=hc/E$. That is much shorter than an atom's diameter. This marker represents **one spectral line**, not all gamma rays. The paired 1.332 MeV line from the same decay would sit at a slightly shorter wavelength. [NIST describes the cobalt-60 gamma cascade](https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf).",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Neutrino",
+        "legacy_item_name": "Gamma Ray Wavelength",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1e-12",
-          "source_url": "https://en.wikipedia.org/wiki/Neutrino"
+          "original_value_text": "1.057e-12",
+          "source_url": "https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf"
         }
       },
       "hook": null,
-      "id": "obs:length:scenario-length-neutrino",
-      "name": "Neutrino",
+      "id": "obs:length:scenario-length-gamma-ray-wavelength",
+      "name": "Gamma Ray Wavelength",
       "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Neutrino",
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-neutrino",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-nvlpubs-nist-gov-nistpubs-jres-088-3-v88-3-pdf",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "nvlpubs.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Neutrino",
-          "url": "https://en.wikipedia.org/wiki/Neutrino"
+          "title": "V88-3.pdf",
+          "url": "https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -325,44 +359,106 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The quantum mechanical 'size' of neutrinos, the most abundant massive particles in the universe.",
-      "value": 1e-12,
+      "summary_short": "The wavelength of one gamma line from cobalt-60 decay.",
+      "value": 1.057e-12,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The quantum mechanical 'size' of a hydrogen atom, where the electron exists in a probability cloud around the nucleus. This distance emerges from the balance between electrostatic attraction and quantum uncertainty. Remarkably, if you scaled up a hydrogen atom so its nucleus was the size of a basketball, the electron would orbit at a distance of 2.5 kilometers, illustrating the vast emptiness within atoms.",
+      "description": "The de Broglie wavelength of a neutrino with 1 MeV of energy, about 1.24 picometers in the ultrarelativistic approximation. This is a wavelength, not the particle's physical size; increasing its energy makes the wavelength shorter. Trillions of neutrinos pass through your body every second from the Sun, and most pass through the Earth without interacting. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The quantum mechanical 'size' of a hydrogen atom, where the electron exists in a probability cloud around the nucleus. This distance emerges from the balance between electrostatic attraction and quantum uncertainty. Remarkably, if you scaled up a hydrogen atom so its nucleus was the size of a basketball, the electron would orbit at a distance of 2.5 kilometers, illustrating the vast emptiness within atoms.",
+      "description_medium": "The de Broglie wavelength of a neutrino with 1 MeV of energy, about 1.24 picometers in the ultrarelativistic approximation. This is a wavelength, not the particle's physical size; increasing its energy makes the wavelength shorter. Trillions of neutrinos pass through your body every second from the Sun, and most pass through the Earth without interacting. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "1 MeV Neutrino Wavelength",
+        "source_trace": {
+          "derivation_note": "lambda = h/p, approximately hc/E for an ultrarelativistic neutrino",
+          "method": "derived",
+          "original_value_text": "1.239841984e-12",
+          "source_url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-1-mev-neutrino-wavelength",
+      "name": "1 MeV Neutrino Wavelength",
+      "qualifiers": {
+        "derivation": "lambda = h/p, approximately hc/E for an ultrarelativistic neutrino",
+        "energy_MeV": "1",
+        "measurement": "de Broglie wavelength, not particle size"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-pdg-lbl-gov-2025-reviews-rpp2025-rev-phys-constants-pdf",
+          "license_text": null,
+          "note": null,
+          "publisher": "pdg.lbl.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "rpp2025-rev-phys-constants.pdf",
+          "url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The de Broglie wavelength of a neutrino with 1 MeV of energy, about 1.24 picometers in the ultrarelativistic approximation.",
+      "value": 1.239841984e-12,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A hydrogen atom is about 106 picometers across if its edge is drawn at the Bohr radius, 52.9 pm, the electron's most probable distance from the proton. The electron has no orbit or surface; it is a probability cloud, and only about 32% of it lies inside that sphere, thinning out exponentially beyond. The proton at the center is roughly 60,000 times smaller than the sphere, so the atom is almost entirely empty space. This marker is the diameter of the Bohr-radius sphere.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A hydrogen atom is about 106 picometers across if its edge is drawn at the Bohr radius, 52.9 pm, the electron's most probable distance from the proton. The electron has no orbit or surface; it is a probability cloud, and only about 32% of it lies inside that sphere, thinning out exponentially beyond. The proton at the center is roughly 60,000 times smaller than the sphere, so the atom is almost entirely empty space. This marker is the diameter of the Bohr-radius sphere.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Hydrogen Atom",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "5.3e-11",
-          "source_url": "https://en.wikipedia.org/wiki/Bohr_radius"
+          "original_value_text": "1.058e-10",
+          "source_url": "https://physics.nist.gov/cgi-bin/cuu/Value?bohrrada0"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-hydrogen-atom",
       "name": "Hydrogen Atom",
       "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Bohr_radius",
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?bohrrada0",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-bohr-radius",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-physics-nist-gov-cgi-bin-cuu-value-bohrrada0",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "physics.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Bohr radius",
-          "url": "https://en.wikipedia.org/wiki/Bohr_radius"
+          "title": "Value",
+          "url": "https://physics.nist.gov/cgi-bin/cuu/Value?bohrrada0"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -376,44 +472,47 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The quantum mechanical 'size' of a hydrogen atom, where the electron exists in a probability cloud around the nucleus.",
-      "value": 5.3e-11,
+      "summary_short": "A hydrogen atom is about 106 picometers across if its edge is drawn at the Bohr radius, 52.9 pm, the electron's most probable distance from the proton.",
+      "value": 1.058e-10,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
-      "content_status": "seeded",
-      "description": "The van der Waals radius of carbon, defining how close non-bonded atoms can approach before repulsion dominates. This 'personal space' radius is crucial for molecular recognition - enzymes use it to distinguish between different molecules. The carbon atom's versatility comes from its ability to form four bonds, making it the backbone of all organic chemistry and life itself.",
+      "content_status": "curated",
+      "description": "The 140 pm marker is twice carbon's **empirical atomic radius** of 70 pm, a useful comparison number rather than an edge you could touch. Carbon's nonbonded, van der Waals radius is about 170 pm, so the two conventions answer different questions.\n\nIn the explorer, dots sample where carbon's six electrons are likely to be and stop at the 70 pm sphere, which holds a little over half of their probability. The tight blue core is the 1s pair; the amber cloud is the 2s pair; and the green and rose dumbbells are the two occupied 2p orbitals, which point at right angles to each other and give carbon its directional bonds. The orbitals are hydrogen-like approximations with screened nuclear charges, not an exact six-electron solution. [WebElements lists both radii](https://webelements.co.uk/carbon/atom_sizes.html).",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The van der Waals radius of carbon, defining how close non-bonded atoms can approach before repulsion dominates. This 'personal space' radius is crucial for molecular recognition - enzymes use it to distinguish between different molecules. The carbon atom's versatility comes from its ability to form four bonds, making it the backbone of all organic chemistry and life itself.",
+      "description_medium": "The 140 pm marker is twice carbon's **empirical atomic radius** of 70 pm, a useful comparison number rather than an edge you could touch. Carbon's nonbonded, van der Waals radius is about 170 pm, so the two conventions answer different questions.\n\nIn the explorer, dots sample where carbon's six electrons are likely to be and stop at the 70 pm sphere, which holds a little over half of their probability. The tight blue core is the 1s pair; the amber cloud is the 2s pair; and the green and rose dumbbells are the two occupied 2p orbitals, which point at right angles to each other and give carbon its directional bonds. The orbitals are hydrogen-like approximations with screened nuclear charges, not an exact six-electron solution. [WebElements lists both radii](https://webelements.co.uk/carbon/atom_sizes.html).",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Carbon Atom",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "7e-11",
-          "source_url": "https://en.wikipedia.org/wiki/Van_der_Waals_radius"
+          "original_value_text": "1.4e-10",
+          "source_url": "https://webelements.co.uk/carbon/atom_sizes.html"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-carbon-atom",
       "name": "Carbon Atom",
       "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Van_der_Waals_radius",
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://webelements.co.uk/carbon/atom_sizes.html",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-van-der-waals-radius",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-webelements-co-uk-carbon-atom-sizes-html",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "webelements.co.uk",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Van der Waals radius",
-          "url": "https://en.wikipedia.org/wiki/Van_der_Waals_radius"
+          "title": "atom sizes.html",
+          "url": "https://webelements.co.uk/carbon/atom_sizes.html"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -427,18 +526,73 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The van der Waals radius of carbon, defining how close non-bonded atoms can approach before repulsion dominates.",
-      "value": 7e-11,
+      "summary_short": "Twice carbon's 70 pm empirical atomic radius, distinct from its van der Waals radius.",
+      "value": 1.4e-10,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
-      "content_status": "seeded",
-      "description": "The O-H bond length in water, the most important molecule for life. This precise distance creates water's unique properties - its high boiling point, surface tension, and ability to dissolve salts. Water's bent geometry makes it polar, allowing it to form hydrogen bonds that give ice its unusual property of being less dense than liquid water, crucial for aquatic life in cold climates.",
+      "content_status": "curated",
+      "description": "When an electron drops into an inner shell of a copper atom, the emitted X-ray can have a wavelength of 0.15405925 nm. This particular line matters because X-ray wavelengths are comparable with the spacing of atoms in a crystal, allowing diffraction patterns to reveal atomic structure. The number is a measured **line wavelength**, not a boundary between X-rays and other radiation. The copper K-alpha spectrum contains nearby components too; [NIST measured their distinct wavelengths](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358).",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The O-H bond length in water, the most important molecule for life. This precise distance creates water's unique properties - its high boiling point, surface tension, and ability to dissolve salts. Water's bent geometry makes it polar, allowing it to form hydrogen bonds that give ice its unusual property of being less dense than liquid water, crucial for aquatic life in cold climates.",
+      "description_medium": "When an electron drops into an inner shell of a copper atom, the emitted X-ray can have a wavelength of 0.15405925 nm. This particular line matters because X-ray wavelengths are comparable with the spacing of atoms in a crystal, allowing diffraction patterns to reveal atomic structure. The number is a measured **line wavelength**, not a boundary between X-rays and other radiation. The copper K-alpha spectrum contains nearby components too; [NIST measured their distinct wavelengths](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "X-ray Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "1.5405925e-10",
+          "source_url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-x-ray-wavelength",
+      "name": "X-ray Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-tsapps-nist-gov-publication-get-pdf-cfm-pub-id-920358",
+          "license_text": null,
+          "note": null,
+          "publisher": "tsapps.nist.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "get pdf.cfm",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920358"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The measured wavelength of copper's K-alpha-1 X-ray line.",
+      "value": 1.5405925e-10,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Water's bend matters more than its rough diameter. Its two O\u2013H bonds meet at about 104.5\u00b0, so their electrical polarities reinforce rather than cancel; neighboring molecules can then form a shifting network of hydrogen bonds. The 2.75 \u00c5 marker is an approximate overall molecular diameter, not a bond length. In an isolated molecule, each O\u2013H distance is only 0.958 \u00c5, as recorded in [NIST's experimental geometry](https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Water's bend matters more than its rough diameter. Its two O\u2013H bonds meet at about 104.5\u00b0, so their electrical polarities reinforce rather than cancel; neighboring molecules can then form a shifting network of hydrogen bonds. The 2.75 \u00c5 marker is an approximate overall molecular diameter, not a bond length. In an isolated molecule, each O\u2013H distance is only 0.958 \u00c5, as recorded in [NIST's experimental geometry](https://cccbdb.nist.gov/expgeom2x.asp?casno=7732185).",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Water Molecule",
@@ -454,6 +608,8 @@
       "qualifiers": {
         "measurement": "representative molecular diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -480,18 +636,19 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The O-H bond length in water, the most important molecule for life.",
+      "summary_short": "A representative molecular diameter, not the length of an O\u2013H bond.",
       "value": 2.75e-10,
       "value_type": "derived",
       "wikidata_qid": "Q283"
     },
     {
       "caveats": null,
-      "content_status": "seeded",
-      "description": "The size of a glucose molecule, the primary fuel for cellular respiration. This sugar's compact structure allows it to efficiently store chemical energy - one glucose molecule can power a cell for several minutes. The molecule's size is optimized for transport through cell membranes and interaction with metabolic enzymes. Interestingly, glucose exists in multiple ring forms, with this size representing the most stable configuration in solution.",
+      "content_status": "curated",
+      "description": "Glucose is not one rigid shape. In water, its carbon chain usually closes into a six-membered ring, which puckers into a chair rather than lying flat. The 3D explorer chooses [alpha-D-glucopyranose](https://pubchem.ncbi.nlm.nih.gov/compound/79025), one specific anomer and conformer, so its visible hydroxyl groups have definite positions. The 1 nm marker is a round-number molecular span, not the distance between neighboring atoms; individual C\u2013C and C\u2013O bonds are much shorter.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The size of a glucose molecule, the primary fuel for cellular respiration. This sugar's compact structure allows it to efficiently store chemical energy - one glucose molecule can power a cell for several minutes. The molecule's size is optimized for transport through cell membranes and interaction with metabolic enzymes. Interestingly, glucose exists in multiple ring forms, with this size representing the most stable configuration in solution.",
+      "description_medium": "Glucose is not one rigid shape. In water, its carbon chain usually closes into a six-membered ring, which puckers into a chair rather than lying flat. The 3D explorer chooses [alpha-D-glucopyranose](https://pubchem.ncbi.nlm.nih.gov/compound/79025), one specific anomer and conformer, so its visible hydroxyl groups have definite positions. The 1 nm marker is a round-number molecular span, not the distance between neighboring atoms; individual C\u2013C and C\u2013O bonds are much shorter.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Glucose Molecule",
@@ -505,6 +662,8 @@
       "id": "obs:length:scenario-length-glucose-molecule",
       "name": "Glucose Molecule",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Glucose",
       "source_count": 2,
       "sources": [
@@ -531,7 +690,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The size of a glucose molecule, the primary fuel for cellular respiration.",
+      "summary_short": "An approximate span of glucose; the 3D explorer shows one cyclic anomer.",
       "value": 1e-09,
       "value_type": "derived",
       "wikidata_qid": null
@@ -543,6 +702,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of DNA's double helix, the molecular blueprint of life. This remarkably consistent width accommodates the universal genetic code across all species. The helix's major groove provides access for proteins to read genetic information, while the minor groove offers binding sites for regulatory molecules. This precise dimension has remained constant through billions of years of evolution, reflecting the fundamental constraints of molecular biology.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "DNA Helix Width",
@@ -558,6 +718,8 @@
       "qualifiers": {
         "measurement": "double-helix diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA",
       "source_count": 2,
       "sources": [
@@ -596,6 +758,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of small proteins like insulin, molecular machines that perform specific cellular functions. Proteins fold into precise shapes determined by their amino acid sequence - a single wrong amino acid can cause diseases like sickle cell anemia. This size represents the optimal balance between stability and flexibility, allowing proteins to interact with other molecules while maintaining their functional structure. Remarkably, proteins can fold from random coils to precise shapes in microseconds.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Protein (Small)",
@@ -609,6 +772,8 @@
       "id": "obs:length:scenario-length-protein-small",
       "name": "Protein (Small)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Protein",
       "source_count": 2,
       "sources": [
@@ -643,36 +808,39 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The size of typical viruses, biological entities that blur the line between living and non-living. Viruses are essentially genetic material wrapped in protein coats, hijacking cellular machinery to reproduce. Their small size allows them to penetrate cells through endocytosis, while their protein shells protect their genetic material from environmental damage. Some viruses are so small they can pass through filters designed to remove bacteria.",
+      "description": "SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across. Its fatty envelope is studded with a few dozen spike proteins that reach another 20 nm or so outward and latch onto ACE2 receptors on human cells. Inside, a single strand of RNA about 30,000 letters long is one of the largest genomes of any RNA virus. This marker is the mean envelope diameter measured by cryo-electron tomography, not counting the spikes; viruses as a group range from about 20 nm to more than a micrometer.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The size of typical viruses, biological entities that blur the line between living and non-living. Viruses are essentially genetic material wrapped in protein coats, hijacking cellular machinery to reproduce. Their small size allows them to penetrate cells through endocytosis, while their protein shells protect their genetic material from environmental damage. Some viruses are so small they can pass through filters designed to remove bacteria.",
+      "description_medium": "SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across. Its fatty envelope is studded with a few dozen spike proteins that reach another 20 nm or so outward and latch onto ACE2 receptors on human cells. Inside, a single strand of RNA about 30,000 letters long is one of the largest genomes of any RNA virus. This marker is the mean envelope diameter measured by cryo-electron tomography, not counting the spikes; viruses as a group range from about 20 nm to more than a micrometer.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Virus",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1e-8",
-          "source_url": "https://en.wikipedia.org/wiki/Virus"
+          "original_value_text": "9.1e-08",
+          "source_url": "https://www.nature.com/articles/s41586-020-2665-2"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-virus",
       "name": "Virus",
       "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Virus",
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.nature.com/articles/s41586-020-2665-2",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-virus",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-www-nature-com-articles-s41586-020-2665-2",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "www.nature.com",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Virus",
-          "url": "https://en.wikipedia.org/wiki/Virus"
+          "title": "s41586-020-2665-2",
+          "url": "https://www.nature.com/articles/s41586-020-2665-2"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -686,8 +854,62 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The size of typical viruses, biological entities that blur the line between living and non-living.",
-      "value": 1e-08,
+      "summary_short": "SARS-CoV-2, the coronavirus behind COVID-19, is a roughly spherical particle about 91 nm across.",
+      "value": 9.1e-08,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "A low-pressure mercury lamp emits much of its radiation at 253.7 nm, in the ultraviolet. Germicidal lamps use that line to damage microbial genetic material in air and on surfaces. The wavelength is shorter than visible violet light, so the useful radiation itself cannot be judged by eye. The marker shows a particular lamp emission line, not the whole ultraviolet band; exposure depends on lamp design and placement. [CDC describes its wavelength and use](https://www.cdc.gov/infection-control/hcp/environmental-control/air.html).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A low-pressure mercury lamp emits much of its radiation at 253.7 nm, in the ultraviolet. Germicidal lamps use that line to damage microbial genetic material in air and on surfaces. The wavelength is shorter than visible violet light, so the useful radiation itself cannot be judged by eye. The marker shows a particular lamp emission line, not the whole ultraviolet band; exposure depends on lamp design and placement. [CDC describes its wavelength and use](https://www.cdc.gov/infection-control/hcp/environmental-control/air.html).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "UV Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.537e-07",
+          "source_url": "https://www.cdc.gov/infection-control/hcp/environmental-control/air.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-uv-wavelength",
+      "name": "UV Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.cdc.gov/infection-control/hcp/environmental-control/air.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-cdc-gov-infection-control-hcp-environmental-control-air-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.cdc.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "air.html",
+          "url": "https://www.cdc.gov/infection-control/hcp/environmental-control/air.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The dominant ultraviolet line of a low-pressure mercury lamp.",
+      "value": 2.537e-07,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -698,6 +920,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The wavelength of green light, the peak sensitivity of human vision. This wavelength defines the resolution limit of optical microscopes and explains why we can't see individual atoms with visible light. The evolution of color vision in primates was driven by the need to distinguish ripe fruits from foliage, with green being the most common color in nature. This wavelength also determines the diffraction patterns that create the iridescent colors in butterfly wings and soap bubbles.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Visible Light Wavelength",
@@ -711,6 +934,8 @@
       "id": "obs:length:scenario-length-visible-light-wavelength",
       "name": "Visible Light Wavelength",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visible_spectrum",
       "source_count": 2,
       "sources": [
@@ -749,6 +974,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of E. coli bacteria, the workhorse of molecular biology. These rod-shaped microbes can reproduce every 20 minutes under ideal conditions, meaning a single bacterium could theoretically produce more offspring than there are atoms in the observable universe in just two days. Their streamlined shape optimizes nutrient absorption and allows them to swim efficiently through viscous environments using rotating flagella.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Bacteria",
@@ -762,6 +988,8 @@
       "id": "obs:length:scenario-length-bacteria",
       "name": "Bacteria",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -800,6 +1028,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of red blood cells, the oxygen carriers of the human body. These cells lack nuclei to maximize space for hemoglobin, the protein that binds oxygen. Their biconcave shape increases surface area for gas exchange while allowing them to squeeze through capillaries narrower than their own diameter. Remarkably, an adult human has about 25 trillion red blood cells, and they complete a full circuit of the body in just 20 seconds.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Red Blood Cell",
@@ -813,6 +1042,8 @@
       "id": "obs:length:scenario-length-red-blood-cell",
       "name": "Red Blood Cell",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
       "source_count": 2,
       "sources": [
@@ -846,11 +1077,66 @@
     },
     {
       "caveats": null,
+      "content_status": "curated",
+      "description": "A body near 310 K, roughly human body temperature, emits a broad spread of thermal radiation. Wien's law puts the peak of its wavelength spectrum near 9.35 \u00b5m, deep in the infrared. This is why thermal cameras look at wavelengths far longer than visible light. The peak is only a marker within that broad spectrum, not the sole wavelength emitted, and a real body's emissivity changes its detailed spectrum. [NASA explains the temperature and peak-wavelength relation](https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A body near 310 K, roughly human body temperature, emits a broad spread of thermal radiation. Wien's law puts the peak of its wavelength spectrum near 9.35 \u00b5m, deep in the infrared. This is why thermal cameras look at wavelengths far longer than visible light. The peak is only a marker within that broad spectrum, not the sole wavelength emitted, and a real body's emissivity changes its detailed spectrum. [NASA explains the temperature and peak-wavelength relation](https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Infrared Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "9.35e-06",
+          "source_url": "https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-infrared-wavelength",
+      "name": "Infrared Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-lhea-gsfc-nasa-gov-archive-mwmw-mmw-bbody-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "mmw bbody.html",
+          "url": "https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The approximate thermal emission peak of a 310 K body.",
+      "value": 9.35e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
       "content_status": "seeded",
       "description": "The size of mitochondria, the powerhouses of cells. These organelles contain their own DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP through cellular respiration, generating enough energy to power a cell's activities. Interestingly, mitochondria can fuse together and split apart, and they're inherited only from the mother, making them useful for tracing maternal ancestry.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of mitochondria, the powerhouses of cells. These organelles contain their own DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP through cellular respiration, generating enough energy to power a cell's activities. Interestingly, mitochondria can fuse together and split apart, and they're inherited only from the mother, making them useful for tracing maternal ancestry.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Mitochondrion",
@@ -864,6 +1150,8 @@
       "id": "obs:length:scenario-length-mitochondrion",
       "name": "Mitochondrion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mitochondrion",
       "source_count": 2,
       "sources": [
@@ -902,6 +1190,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of human hair, a remarkable biological fiber that grows continuously throughout life. Hair is stronger than steel by weight and can stretch up to 30% before breaking. Each hair follicle cycles through growth phases lasting 2-7 years, which is why hair can grow so long. The diameter varies by ethnicity, with Asian hair typically being thicker than European hair, and red hair being the thickest.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Human Hair",
@@ -915,6 +1204,8 @@
       "id": "obs:length:scenario-length-human-hair",
       "name": "Human Hair",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hair",
       "source_count": 2,
       "sources": [
@@ -949,10 +1240,11 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The size of neuron cell bodies, the command centers of the nervous system. These cells can have axons extending over a meter long while maintaining electrical signals. Neurons communicate through synapses, where neurotransmitters cross tiny gaps in milliseconds. The brain contains about 86 billion neurons, each connecting to thousands of others, creating the most complex network known in the universe.",
+      "description": "A neuron and its local branches span roughly 100 micrometers. Cell bodies range from a few micrometers to about 100 in the largest motor neurons, and the dendrites around a typical cell body reach out tens of micrometers, while the axon can run over a meter and carry electrical signals called action potentials. Neurons pass those signals across synapses in about a millisecond. The brain contains about 86 billion neurons, each connecting to thousands of others.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The size of neuron cell bodies, the command centers of the nervous system. These cells can have axons extending over a meter long while maintaining electrical signals. Neurons communicate through synapses, where neurotransmitters cross tiny gaps in milliseconds. The brain contains about 86 billion neurons, each connecting to thousands of others, creating the most complex network known in the universe.",
+      "description_medium": "A neuron and its local branches span roughly 100 micrometers. Cell bodies range from a few micrometers to about 100 in the largest motor neurons, and the dendrites around a typical cell body reach out tens of micrometers, while the axon can run over a meter and carry electrical signals called action potentials. Neurons pass those signals across synapses in about a millisecond. The brain contains about 86 billion neurons, each connecting to thousands of others.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Neuron",
@@ -966,6 +1258,8 @@
       "id": "obs:length:scenario-length-neuron",
       "name": "Neuron",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neuron",
       "source_count": 2,
       "sources": [
@@ -992,7 +1286,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The size of neuron cell bodies, the command centers of the nervous system.",
+      "summary_short": "A neuron and its local branches span roughly 100 micrometers.",
       "value": 0.0001,
       "value_type": "derived",
       "wikidata_qid": null
@@ -1004,6 +1298,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of sand grains, the building blocks of beaches and deserts. Sand forms through the weathering of rocks over millions of years, with each grain representing a tiny piece of geological history. The size determines how sand behaves - fine sand flows like liquid when dry but becomes solid when wet, while coarse sand maintains its shape. Remarkably, there are more grains of sand on Earth than there are stars in the observable universe.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Grain of Sand",
@@ -1017,6 +1312,8 @@
       "id": "obs:length:scenario-length-grain-of-sand",
       "name": "Grain of Sand",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sand",
       "source_count": 2,
       "sources": [
@@ -1055,6 +1352,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of worker ants, among the most successful insects on Earth. Ants can carry objects 50 times their own weight and work together in colonies of millions. They communicate through chemical trails and can navigate using the Earth's magnetic field. Some species farm fungi, while others keep aphids as livestock. The total biomass of ants on Earth exceeds that of all humans combined.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Ant",
@@ -1068,6 +1366,8 @@
       "id": "obs:length:scenario-length-ant",
       "name": "Ant",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ant",
       "source_count": 2,
       "sources": [
@@ -1106,6 +1406,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of houseflies, masterful fliers that can hover, fly backwards, and perform aerial acrobatics. Their compound eyes contain 4,000 lenses and can detect movement 10 times faster than human eyes. Flies taste with their feet and can walk on ceilings using tiny hairs and adhesive pads. They're vectors for over 100 diseases, making them one of humanity's deadliest enemies.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Housefly",
@@ -1119,6 +1420,8 @@
       "id": "obs:length:scenario-length-housefly",
       "name": "Housefly",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Housefly",
       "source_count": 2,
       "sources": [
@@ -1153,61 +1456,11 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of domestic cats, perfectly sized predators that have adapted to live alongside humans. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The length of domestic cats, perfectly sized predators that have adapted to live alongside humans. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Cat Length",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "5e-2",
-          "source_url": "https://en.wikipedia.org/wiki/Cat"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-cat-length",
-      "name": "Cat Length",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Cat",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-cat",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Cat",
-          "url": "https://en.wikipedia.org/wiki/Cat"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "The length of domestic cats, perfectly sized predators that have adapted to live alongside humans.",
-      "value": 0.05,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "The wingspan of monarch butterflies, champions of long-distance migration. These insects travel up to 3,000 miles from Canada to Mexico, using the Sun's position and Earth's magnetic field for navigation. Their orange and black pattern warns predators of their toxicity, while their wings contain scales that create iridescent colors through light interference. Remarkably, the migration takes multiple generations to complete.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The wingspan of monarch butterflies, champions of long-distance migration. These insects travel up to 3,000 miles from Canada to Mexico, using the Sun's position and Earth's magnetic field for navigation. Their orange and black pattern warns predators of their toxicity, while their wings contain scales that create iridescent colors through light interference. Remarkably, the migration takes multiple generations to complete.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Butterfly Wingspan",
@@ -1221,6 +1474,8 @@
       "id": "obs:length:scenario-length-butterfly-wingspan",
       "name": "Butterfly Wingspan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Monarch_butterfly",
       "source_count": 2,
       "sources": [
@@ -1254,11 +1509,120 @@
     },
     {
       "caveats": null,
+      "content_status": "curated",
+      "description": "Most home microwave ovens operate near 2.45 GHz. In free space, $\\lambda=c/f$ gives a wavelength of about 12.2 cm, on the scale of an oven cavity rather than a molecule of food. The appliance heats food through how its alternating field interacts with matter; this marker measures one cycle of the field **in free space**. Inside food, the wavelength is shorter because the wave travels more slowly. [FDA identifies 2.45 GHz as the home-oven frequency](https://www.fda.gov/media/103619/download).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Most home microwave ovens operate near 2.45 GHz. In free space, $\\lambda=c/f$ gives a wavelength of about 12.2 cm, on the scale of an oven cavity rather than a molecule of food. The appliance heats food through how its alternating field interacts with matter; this marker measures one cycle of the field **in free space**. Inside food, the wavelength is shorter because the wave travels more slowly. [FDA identifies 2.45 GHz as the home-oven frequency](https://www.fda.gov/media/103619/download).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Microwave Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.12236",
+          "source_url": "https://www.fda.gov/media/103619/download"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-microwave-wavelength",
+      "name": "Microwave Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.fda.gov/media/103619/download",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-fda-gov-media-103619-download",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.fda.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "download",
+          "url": "https://www.fda.gov/media/103619/download"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The free-space wavelength at a household oven's 2.45 GHz frequency.",
+      "value": 0.12236,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "From nose to rump, a typical domestic cat is about 46 cm long; its tail adds roughly another 30 cm. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "From nose to rump, a typical domestic cat is about 46 cm long; its tail adds roughly another 30 cm. Cats are obligate carnivores with retractable claws and exceptional night vision. They can rotate their ears 180 degrees and hear frequencies up to 65 kHz, far beyond human hearing. Remarkably, cats purr at frequencies that promote bone healing, and they spend 12-16 hours per day sleeping.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Cat Length",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "0.46",
+          "source_url": "https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-cat-length",
+      "name": "Cat Length",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-govinfo-gov-content-pkg-govpub-a101-purl-gpo173402-pdf-govpub-a101-purl-gpo173402-pdf",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.govinfo.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "GOVPUB-A101-PURL-gpo173402.pdf",
+          "url": "https://www.govinfo.gov/content/pkg/GOVPUB-A101-PURL-gpo173402/pdf/GOVPUB-A101-PURL-gpo173402.pdf"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "From nose to rump, a typical domestic cat is about 46 cm long; its tail adds roughly another 30 cm.",
+      "value": 0.46,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
       "content_status": "seeded",
       "description": "The average height of humans, a species that walks upright on two legs. This bipedal stance freed our hands for tool use and allowed us to see over tall grass on the African savanna. Human height varies dramatically across populations due to genetics, nutrition, and environment. The tallest recorded human was 8 feet 11 inches, while the shortest was 1 foot 9 inches. Height affects everything from health outcomes to social perceptions and career success.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The average height of humans, a species that walks upright on two legs. This bipedal stance freed our hands for tool use and allowed us to see over tall grass on the African savanna. Human height varies dramatically across populations due to genetics, nutrition, and environment. The tallest recorded human was 8 feet 11 inches, while the shortest was 1 foot 9 inches. Height affects everything from health outcomes to social perceptions and career success.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Human Height",
@@ -1274,6 +1638,8 @@
       "qualifiers": {
         "measurement": "representative adult height"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_height",
       "source_count": 2,
       "sources": [
@@ -1307,11 +1673,66 @@
     },
     {
       "caveats": null,
+      "content_status": "curated",
+      "description": "At 100 MHz, a radio wave travels about three meters during one oscillation: $\\lambda=c/f$. This is a familiar point inside the US FM broadcast band, which extends from 88 to 108 MHz. An antenna need not be three meters long; designs often use fractions of the wavelength and depend on surrounding conductors. The marker represents one example frequency, while radio wavelengths span many orders of magnitude. [The FM band is specified in federal regulations](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201).",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "At 100 MHz, a radio wave travels about three meters during one oscillation: $\\lambda=c/f$. This is a familiar point inside the US FM broadcast band, which extends from 88 to 108 MHz. An antenna need not be three meters long; designs often use fractions of the wavelength and depend on surrounding conductors. The marker represents one example frequency, while radio wavelengths span many orders of magnitude. [The FM band is specified in federal regulations](https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201).",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Radio Wavelength",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.9979",
+          "source_url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-radio-wavelength",
+      "name": "Radio Wavelength",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-ecfr-gov-current-title-47-chapter-i-subchapter-c-part-73-subpart-h-section-73-201",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.ecfr.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "section-73.201",
+          "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.201"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The free-space wavelength of a 100 MHz FM broadcast signal.",
+      "value": 2.9979,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
       "content_status": "seeded",
       "description": "The height of male giraffes, the tallest living animals on Earth. Their incredible height allows them to browse leaves 20 feet above ground, accessing food unavailable to other herbivores. Giraffes have the same number of neck vertebrae as humans (seven), but each one is 10 inches long. Their hearts pump blood 6 feet uphill to reach their brains, requiring blood pressure twice that of humans and special valves to prevent fainting when they lower their heads.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of male giraffes, the tallest living animals on Earth. Their incredible height allows them to browse leaves 20 feet above ground, accessing food unavailable to other herbivores. Giraffes have the same number of neck vertebrae as humans (seven), but each one is 10 inches long. Their hearts pump blood 6 feet uphill to reach their brains, requiring blood pressure twice that of humans and special valves to prevent fainting when they lower their heads.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Giraffe Height",
@@ -1325,6 +1746,8 @@
       "id": "obs:length:scenario-length-giraffe-height",
       "name": "Giraffe Height",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Giraffe",
       "source_count": 2,
       "sources": [
@@ -1363,6 +1786,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of blue whales, the largest animals ever to live on Earth. These marine giants can weigh up to 200 tons and consume 4 tons of krill daily. Their hearts are the size of small cars and beat only twice per minute. Blue whales communicate across entire ocean basins using low-frequency sounds that travel thousands of miles underwater. Despite their massive size, they feed on tiny shrimp-like krill.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Blue Whale",
@@ -1376,6 +1800,8 @@
       "id": "obs:length:scenario-length-blue-whale",
       "name": "Blue Whale",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blue_whale",
       "source_count": 2,
       "sources": [
@@ -1414,12 +1840,13 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of American football fields, standardized playing surfaces that have become cultural landmarks. The field's dimensions were designed to balance offense and defense, creating strategic depth while maintaining spectator visibility. Interestingly, the field is exactly 100 yards long, but with end zones it spans 120 yards total. This length has remained constant since the sport's early days, making it one of the most consistent measurements in professional sports.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Football Field",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "100",
+          "original_value_text": "91.44",
           "source_url": "https://en.wikipedia.org/wiki/American_football_field"
         }
       },
@@ -1427,6 +1854,8 @@
       "id": "obs:length:scenario-length-football-field",
       "name": "Football Field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/American_football_field",
       "source_count": 2,
       "sources": [
@@ -1454,7 +1883,61 @@
         }
       ],
       "summary_short": "The length of American football fields, standardized playing surfaces that have become cultural landmarks.",
-      "value": 100.0,
+      "value": 91.44,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "From the ground at its star-shaped fort to the tip of the torch, the Statue of Liberty stands 93 m (305 ft) tall. Half of that is the copper statue itself, 46 m from base to torch; the rest is Richard Morris Hunt's granite pedestal and the walls of Fort Wood beneath it. The statue's skin of copper sheets, only about 2.4 mm thick, hangs on an iron framework designed by Gustave Eiffel, the engineer behind the Eiffel Tower, and it weathered from brown to its familiar green patina within about two decades of the 1886 dedication.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "From the ground at its star-shaped fort to the tip of the torch, the Statue of Liberty stands 93 m (305 ft) tall. Half of that is the copper statue itself, 46 m from base to torch; the rest is Richard Morris Hunt's granite pedestal and the walls of Fort Wood beneath it. The statue's skin of copper sheets, only about 2.4 mm thick, hangs on an iron framework designed by Gustave Eiffel, the engineer behind the Eiffel Tower, and it weathered from brown to its familiar green patina within about two decades of the 1886 dedication.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Statue of Liberty",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "92.99",
+          "source_url": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-statue-of-liberty",
+      "name": "Statue of Liberty",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-www-nps-gov-stli-learn-historyculture-statue-statistics-htm",
+          "license_text": null,
+          "note": null,
+          "publisher": "www.nps.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "statue-statistics.htm",
+          "url": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "From the ground at its star-shaped fort to the tip of the torch, the Statue of Liberty stands 93 m (305 ft) tall.",
+      "value": 92.99,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1465,6 +1948,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of the Eiffel Tower, an iron lattice structure that was initially criticized but became the symbol of Paris. Built for the 1889 World's Fair, it was the tallest human-made structure for 41 years. The tower expands 6 inches in summer heat and contracts in winter cold. It weighs 10,100 tons but exerts the same pressure on the ground as a person sitting in a chair. Over 300 million people have visited this engineering marvel.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Eiffel Tower",
@@ -1478,6 +1962,8 @@
       "id": "obs:length:scenario-length-eiffel-tower",
       "name": "Eiffel Tower",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Eiffel_Tower",
       "source_count": 2,
       "sources": [
@@ -1516,6 +2002,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of the Burj Khalifa, the world's tallest building that pierces the sky at over half a mile high. This architectural marvel uses a bundled tube design inspired by desert flowers, with setbacks that reduce wind loads. The building contains 57 elevators and can sway up to 2 meters in strong winds. At the top, temperatures are 10 degrees cooler than ground level, and the air pressure is 20% lower than at sea level.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Burj Khalifa",
@@ -1529,6 +2016,8 @@
       "id": "obs:length:scenario-length-burj-khalifa",
       "name": "Burj Khalifa",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Burj_Khalifa",
       "source_count": 2,
       "sources": [
@@ -1567,6 +2056,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The height of Mount Everest, Earth's highest peak that continues growing 1 centimeter per year due to tectonic plate collision. At this altitude, the air contains only one-third the oxygen of sea level, making it the 'death zone' where human survival becomes impossible without supplemental oxygen. The mountain's height was first measured in 1856, and over 300 people have died attempting to reach its summit. The peak is actually moving northeast at 4 centimeters per year.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Mount Everest",
@@ -1580,6 +2070,8 @@
       "id": "obs:length:scenario-length-mount-everest",
       "name": "Mount Everest",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mount_Everest",
       "source_count": 2,
       "sources": [
@@ -1618,6 +2110,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The depth of the Mariana Trench, Earth's deepest point where pressure reaches 1,000 times that at sea level. At this crushing depth, water temperature is near freezing and sunlight never reaches. Yet life thrives here - giant amphipods, pressure-resistant fish, and bacteria that feed on chemicals from hydrothermal vents. The trench is deeper than Mount Everest is tall, and only three people have ever reached its bottom.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Mariana Trench",
@@ -1631,6 +2124,8 @@
       "id": "obs:length:scenario-length-mariana-trench",
       "name": "Mariana Trench",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mariana_Trench",
       "source_count": 2,
       "sources": [
@@ -1665,16 +2160,17 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The diameter of Manhattan Island, a tiny sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
+      "description": "The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The diameter of Manhattan Island, a tiny sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
+      "description_medium": "The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that houses over 1.6 million people and generates more economic output than most countries. This densely packed urban environment contains 1,000 buildings over 100 meters tall and processes 2.5 million subway riders daily. The island's narrow shape forced vertical development, creating the iconic skyline that defines New York City. Despite its small size, Manhattan's real estate value exceeds $3 trillion.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Manhattan Island",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "20000",
+          "original_value_text": "21600",
           "source_url": "https://en.wikipedia.org/wiki/Manhattan"
         }
       },
@@ -1682,6 +2178,8 @@
       "id": "obs:length:scenario-length-manhattan-island",
       "name": "Manhattan Island",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Manhattan",
       "source_count": 2,
       "sources": [
@@ -1708,8 +2206,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The diameter of Manhattan Island, a tiny sliver of land that houses over 1.6 million people and generates more economic output than most countries.",
-      "value": 20000.0,
+      "summary_short": "The length of Manhattan Island, about 21.6 kilometers from the Battery to Inwood and only about 3.7 wide, a sliver of land that houses over 1.6 million people and generates more economic output than most countries.",
+      "value": 21600.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1720,32 +2218,38 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of marathon races, a distance born from ancient Greek legend. The original marathon commemorates Pheidippides' run from Marathon to Athens to announce victory over Persia. This distance represents the limit of human endurance without specialized equipment - most people can walk this far, but running requires months of training. The marathon has become a global phenomenon, with over 800 marathons held worldwide annually, attracting millions of participants.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Marathon Distance",
         "source_trace": {
-          "method": "derived",
+          "method": "legacy_seed",
           "original_value_text": "42195",
-          "source_url": "https://en.wikipedia.org/wiki/Marathon"
+          "source_url": "https://worldathletics.org/disciplines/road-running-event/marathon"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-marathon-distance",
       "name": "Marathon Distance",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Marathon",
+      "qualifiers": {
+        "measurement": "standard race-course distance along the shortest permitted running line",
+        "model_example": "Boston course; mapped road geometry is not a certified measurement"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://worldathletics.org/disciplines/road-running-event/marathon",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-marathon",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-worldathletics-org-disciplines-road-running-event-marathon",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "worldathletics.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Marathon",
-          "url": "https://en.wikipedia.org/wiki/Marathon"
+          "title": "marathon",
+          "url": "https://worldathletics.org/disciplines/road-running-event/marathon"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -1761,7 +2265,7 @@
       ],
       "summary_short": "The length of marathon races, a distance born from ancient Greek legend.",
       "value": 42195.0,
-      "value_type": "derived",
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -1771,6 +2275,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The length of the Panama Canal, an engineering marvel that revolutionized global trade by eliminating the need to sail around South America. This artificial waterway uses a system of locks to lift ships 26 meters above sea level, saving ships 8,000 miles of dangerous journey. The canal handles 5% of global trade and generates $2 billion annually. It took 75,000 workers and 10 years to complete, with over 25,000 deaths during construction.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Panama Canal",
@@ -1784,6 +2289,8 @@
       "id": "obs:length:scenario-length-panama-canal",
       "name": "Panama Canal",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Panama_Canal",
       "source_count": 2,
       "sources": [
@@ -1818,36 +2325,43 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, but it's generally considered the world's longest river.",
+      "description": "The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, and depends on which headwater and mouth are counted.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, but it's generally considered the world's longest river.",
+      "description_medium": "The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, and depends on which headwater and mouth are counted.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Amazon River",
         "source_trace": {
-          "method": "derived",
-          "original_value_text": "7000000",
-          "source_url": "https://en.wikipedia.org/wiki/Amazon_River"
+          "method": "legacy_seed",
+          "original_value_text": "6400000",
+          "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-amazon-river",
       "name": "Amazon River",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Amazon_River",
+      "qualifiers": {
+        "definition": "representative NASA/ESA 6,400 km estimate; headwater and mouth definitions vary",
+        "measurement": "approximate full-river path length, not straight-line span",
+        "model_coverage": "Natural Earth partial Amazonas mainstem and separate context tributaries"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-amazon-river",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-modis-gsfc-nasa-gov-gallery-individual-php-db-date-2018-10-26",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Amazon River",
-          "url": "https://en.wikipedia.org/wiki/Amazon_River"
+          "title": "individual.php",
+          "url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -1861,9 +2375,9 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined.",
-      "value": 7000000.0,
-      "value_type": "derived",
+      "summary_short": "The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined.",
+      "value": 6400000.0,
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -1873,6 +2387,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of Earth, our home planet that orbits the Sun at 67,000 mph while rotating at 1,000 mph at the equator. Earth is slightly flattened at the poles due to its rotation, making it an oblate spheroid rather than a perfect sphere. This diameter determines Earth's gravity, atmospheric retention, and climate patterns. If Earth were compressed to the size of a basketball, its surface would be smoother than the ball itself, with mountains and ocean trenches representing tiny imperfections.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Earth Diameter",
@@ -1888,6 +2403,8 @@
       "qualifiers": {
         "measurement": "mean diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -1922,36 +2439,45 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Great Wall of China, a massive defensive structure built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
+      "description": "The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Great Wall of China, a massive defensive structure built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
+      "description_medium": "The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Great Wall of China",
         "source_trace": {
-          "method": "derived",
-          "original_value_text": "21000000",
-          "source_url": "https://en.wikipedia.org/wiki/Great_Wall_of_China"
+          "method": "legacy_seed",
+          "original_value_text": "21196180",
+          "source_url": "https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-great-wall-of-china",
       "name": "Great Wall of China",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+      "qualifiers": {
+        "definition": "all periods and branches; not one continuous wall or end-to-end distance",
+        "measurement": "combined walls-and-trenches survey inventory length",
+        "model_coverage": "incomplete OpenStreetMap fragment network, not the official inventory",
+        "precision": "reported survey figure, not a claim of meter-level accuracy",
+        "reported_value_km": "21196.18"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-great-wall-of-china",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-www-greatwallheritage-cn-ccmcms-html-1-54-index-html",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "www.greatwallheritage.cn",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Great Wall of China",
-          "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China"
+          "title": "index.html",
+          "url": "https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -1965,9 +2491,9 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The length of the Great Wall of China, a massive defensive structure built over 2,000 years to protect against nomadic invasions.",
-      "value": 21000000.0,
-      "value_type": "derived",
+      "summary_short": "The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system built over 2,000 years to protect against nomadic invasions.",
+      "value": 21196180.0,
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -1977,6 +2503,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of Jupiter, the solar system's largest planet that acts as a cosmic vacuum cleaner, protecting Earth from asteroids and comets. This gas giant contains more mass than all other planets combined and has a Great Red Spot storm larger than Earth. Jupiter's massive gravity influences the orbits of other planets and has 95 known moons, including Europa, which may harbor life beneath its icy surface.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Jupiter Diameter",
@@ -1992,6 +2519,8 @@
       "qualifiers": {
         "measurement": "mean diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -2030,6 +2559,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance to the Moon, Earth's closest celestial neighbor that influences our tides, stabilizes our rotation, and lights our nights. This distance varies by 50,000 km due to the Moon's elliptical orbit, creating supermoons and micromoons. The Moon is slowly drifting away at 3.8 cm per year, meaning it was much closer in ancient times. Twelve people have walked on the Moon, and it's the only celestial body humans have visited beyond Earth.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Earth-Moon Distance",
@@ -2043,6 +2573,8 @@
       "id": "obs:length:scenario-length-earth-moon-distance",
       "name": "Earth-Moon Distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lunar_distance_(astronomy)",
       "source_count": 2,
       "sources": [
@@ -2081,6 +2613,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the Sun, our star that converts 600 million tons of hydrogen into helium every second, releasing energy equivalent to 100 billion nuclear bombs. This nuclear fusion process has been ongoing for 4.6 billion years and will continue for another 5 billion years. The Sun contains 99.86% of the solar system's mass and generates enough energy in one second to power human civilization for 500,000 years.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Sun Diameter",
@@ -2096,6 +2629,8 @@
       "qualifiers": {
         "measurement": "mean diameter"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2134,6 +2669,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance from Earth to the Sun, known as one astronomical unit - the yardstick of the solar system. This distance defines the habitable zone where liquid water can exist, making Earth perfectly positioned for life. Light takes 8 minutes and 20 seconds to travel this distance, meaning we see the Sun as it was 8 minutes ago. This distance varies by 5 million km due to Earth's elliptical orbit, affecting our seasons and climate.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Astronomical Unit",
@@ -2147,6 +2683,8 @@
       "id": "obs:length:scenario-length-astronomical-unit",
       "name": "Astronomical Unit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Astronomical_unit",
       "source_count": 2,
       "sources": [
@@ -2185,6 +2723,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of Betelgeuse, a red supergiant star that could explode as a supernova within the next 100,000 years. This massive star is so large that if placed at the center of our solar system, it would extend beyond Jupiter's orbit. Betelgeuse is one of the brightest stars in the night sky and appears red due to its cool surface temperature. When it explodes, it will be visible during daylight and brighter than the full Moon.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Betelgeuse Diameter",
@@ -2198,6 +2737,8 @@
       "id": "obs:length:scenario-length-betelgeuse-diameter",
       "name": "Betelgeuse Diameter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Betelgeuse",
       "source_count": 2,
       "sources": [
@@ -2236,6 +2777,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of our solar system, a vast region dominated by the Sun's gravitational influence. This space contains eight planets, hundreds of moons, millions of asteroids, and trillions of comets. The solar system formed 4.6 billion years ago from a collapsing cloud of gas and dust. Despite its enormous size, the solar system is just a tiny speck in our galaxy, which contains 100 billion other solar systems.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Solar System",
@@ -2249,6 +2791,8 @@
       "id": "obs:length:scenario-length-solar-system",
       "name": "Solar System",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Solar_System",
       "source_count": 2,
       "sources": [
@@ -2283,36 +2827,44 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The diameter of the heliosphere, the protective bubble of solar wind that shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
+      "description": "A representative 240-au diameter of the heliosphere's nose region, twice the roughly 120-au heliopause distance measured near the Voyager crossings, not the uncertain length of its tail. This protective bubble of solar wind shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The diameter of the heliosphere, the protective bubble of solar wind that shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
+      "description_medium": "A representative 240-au diameter of the heliosphere's nose region, twice the roughly 120-au heliopause distance measured near the Voyager crossings, not the uncertain length of its tail. This protective bubble of solar wind shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Heliosphere",
         "source_trace": {
+          "derivation_note": "2 * 120 au * 149597870700 m/au",
           "method": "derived",
-          "original_value_text": "2.4e14",
-          "source_url": "https://en.wikipedia.org/wiki/Heliosphere"
+          "original_value_text": "3.5903488968e13",
+          "source_url": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-heliosphere",
       "name": "Heliosphere",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Heliosphere",
+      "qualifiers": {
+        "derivation": "2 * 120 au * 149597870700 m/au",
+        "measurement": "representative nose-region diameter, not full-tail length",
+        "shape": "global heliosphere and tail geometry remain uncertain"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://science.nasa.gov/mission/voyager/interstellar-mission/",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-heliosphere",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-science-nasa-gov-mission-voyager-interstellar-mission",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Heliosphere",
-          "url": "https://en.wikipedia.org/wiki/Heliosphere"
+          "title": "interstellar-mission",
+          "url": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2326,44 +2878,53 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The diameter of the heliosphere, the protective bubble of solar wind that shields our solar system from cosmic radiation.",
-      "value": 240000000000000.0,
+      "summary_short": "A representative 240-au diameter of the heliosphere's nose region, twice the roughly 120-au heliopause distance measured near the Voyager crossings, not the uncertain length of its tail.",
+      "value": 35903488968000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The radius of the Oort Cloud, a vast shell of icy objects that marks the true boundary of our solar system. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
+      "description": "A representative 200,000-au diameter of the hypothesized Oort Cloud, using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range. This vast reservoir of icy objects lies at the outer reaches of our solar system rather than having a directly observed sharp edge. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The radius of the Oort Cloud, a vast shell of icy objects that marks the true boundary of our solar system. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
+      "description_medium": "A representative 200,000-au diameter of the hypothesized Oort Cloud, using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range. This vast reservoir of icy objects lies at the outer reaches of our solar system rather than having a directly observed sharp edge. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Oort Cloud",
         "source_trace": {
+          "derivation_note": "2 * 100000 au * 149597870700 m/au",
           "method": "derived",
-          "original_value_text": "1e15",
-          "source_url": "https://en.wikipedia.org/wiki/Oort_cloud"
+          "original_value_text": "2.991957414e16",
+          "source_url": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-oort-cloud",
       "name": "Oort Cloud",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Oort_cloud",
+      "qualifiers": {
+        "boundary": "hypothesized, not directly observed",
+        "derivation": "2 * 100000 au * 149597870700 m/au",
+        "measurement": "representative diameter from the upper outer-radius estimate",
+        "outer_radius_range_au": "[10000, 100000]"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://science.nasa.gov/solar-system/oort-cloud/facts/",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-oort-cloud",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-science-nasa-gov-solar-system-oort-cloud-facts",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Oort cloud",
-          "url": "https://en.wikipedia.org/wiki/Oort_cloud"
+          "title": "facts",
+          "url": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2377,8 +2938,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The radius of the Oort Cloud, a vast shell of icy objects that marks the true boundary of our solar system.",
-      "value": 1000000000000000.0,
+      "summary_short": "A representative 200,000-au diameter of the hypothesized Oort Cloud, using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range.",
+      "value": 2.991957414e+16,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -2389,6 +2950,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance to Proxima Centauri, our nearest stellar neighbor that hosts an Earth-sized planet in its habitable zone. This red dwarf star is part of the Alpha Centauri triple star system and is 4.24 light-years away. At current spacecraft speeds, it would take 75,000 years to reach Proxima Centauri. This star is much smaller and cooler than our Sun, but its planet Proxima b could potentially harbor life.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Proxima Centauri",
@@ -2402,6 +2964,8 @@
       "id": "obs:length:scenario-length-proxima-centauri",
       "name": "Proxima Centauri",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Proxima_Centauri",
       "source_count": 2,
       "sources": [
@@ -2440,6 +3004,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Orion Nebula, a stellar nursery visible to the naked eye where hundreds of new stars are being born. This massive cloud of gas and dust contains enough material to form 2,000 Sun-like stars. The nebula glows because young, hot stars ionize the surrounding hydrogen gas. It's one of the most studied objects in astronomy and provides insights into how solar systems like ours form from collapsing clouds.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Orion Nebula",
@@ -2453,6 +3018,8 @@
       "id": "obs:length:scenario-length-orion-nebula",
       "name": "Orion Nebula",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Orion_Nebula",
       "source_count": 2,
       "sources": [
@@ -2487,10 +3054,70 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "The roughly 300-light-year span of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The roughly 300-light-year span of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Carina Nebula",
+        "source_trace": {
+          "derivation_note": "300 light-years * 9.4607304725808e15 m/light-year",
+          "method": "derived",
+          "original_value_text": "2.83821914177424e18",
+          "source_url": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-carina-nebula",
+      "name": "Carina Nebula",
+      "qualifiers": {
+        "derivation": "300 light-years * 9.4607304725808e15 m/light-year",
+        "extent": "diffuse region, not a sharp physical boundary",
+        "measurement": "approximate whole-nebula span"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-missions-hubble-hubbles-sparkling-new-view-of-the-carina-nebula",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "hubbles-sparkling-new-view-of-the-carina-nebula",
+          "url": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The roughly 300-light-year span of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy.",
+      "value": 2.83821914177424e+18,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "The size of the Pillars of Creation, iconic cosmic structures made famous by the Hubble Space Telescope. These towering columns of gas and dust are being sculpted by stellar winds from nearby massive stars. The pillars contain dozens of embryonic stars hidden within their dense cores. Despite their name, these structures are actually being destroyed by radiation - they may have already been blown away by a supernova explosion 6,000 years ago.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Pillars of Creation, iconic cosmic structures made famous by the Hubble Space Telescope. These towering columns of gas and dust are being sculpted by stellar winds from nearby massive stars. The pillars contain dozens of embryonic stars hidden within their dense cores. Despite their name, these structures are actually being destroyed by radiation - they may have already been blown away by a supernova explosion 6,000 years ago.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Pillars of Creation",
@@ -2504,6 +3131,8 @@
       "id": "obs:length:scenario-length-pillars-of-creation",
       "name": "Pillars of Creation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pillars_of_Creation",
       "source_count": 2,
       "sources": [
@@ -2542,6 +3171,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The size of the Tarantula Nebula, the most active stellar nursery in our galactic neighborhood. This massive star-forming region in the Large Magellanic Cloud produces stars at a rate 10 times higher than our entire Milky Way galaxy. The nebula contains some of the most massive stars known, including R136a1, which is 300 times more massive than the Sun. This intense star formation creates spectacular light shows visible across vast distances.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Tarantula Nebula",
@@ -2555,6 +3185,8 @@
       "id": "obs:length:scenario-length-tarantula-nebula",
       "name": "Tarantula Nebula",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tarantula_Nebula",
       "source_count": 2,
       "sources": [
@@ -2589,61 +3221,11 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The size of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The size of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Carina Nebula",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "3e20",
-          "source_url": "https://en.wikipedia.org/wiki/Carina_Nebula"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-carina-nebula",
-      "name": "Carina Nebula",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Carina_Nebula",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-carina-nebula",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Carina Nebula",
-          "url": "https://en.wikipedia.org/wiki/Carina_Nebula"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "The size of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy.",
-      "value": 3e+20,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "The diameter of the Milky Way, our home galaxy containing 100-400 billion stars orbiting a supermassive black hole. Our solar system orbits the galactic center at 220 km/s, completing one revolution every 230 million years. The galaxy's spiral arms contain most of its stars and gas, while the central bulge contains older stars. The Milky Way is on a collision course with the Andromeda Galaxy, which will merge with us in 4.5 billion years.",
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the Milky Way, our home galaxy containing 100-400 billion stars orbiting a supermassive black hole. Our solar system orbits the galactic center at 220 km/s, completing one revolution every 230 million years. The galaxy's spiral arms contain most of its stars and gas, while the central bulge contains older stars. The Milky Way is on a collision course with the Andromeda Galaxy, which will merge with us in 4.5 billion years.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Galaxy Diameter",
@@ -2657,6 +3239,8 @@
       "id": "obs:length:scenario-length-galaxy-diameter",
       "name": "Galaxy Diameter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -2695,12 +3279,13 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The distance to the Andromeda Galaxy, our nearest major galactic neighbor that's approaching us at 110 km/s. This massive spiral galaxy contains over a trillion stars and is twice the size of the Milky Way. Andromeda is visible to the naked eye as a faint smudge in the night sky. In 4.5 billion years, it will collide with our galaxy, creating a new elliptical galaxy called Milkomeda. The collision will dramatically reshape both galaxies but stars are so far apart that direct collisions are unlikely.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Andromeda Distance",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "2.5e22",
+          "original_value_text": "2.37e22",
           "source_url": "https://en.wikipedia.org/wiki/Andromeda_Galaxy"
         }
       },
@@ -2708,6 +3293,8 @@
       "id": "obs:length:scenario-length-andromeda-distance",
       "name": "Andromeda Distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
       "source_count": 2,
       "sources": [
@@ -2735,7 +3322,7 @@
         }
       ],
       "summary_short": "The distance to the Andromeda Galaxy, our nearest major galactic neighbor that's approaching us at 110 km/s.",
-      "value": 2.5e+22,
+      "value": 2.37e+22,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -2746,6 +3333,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diameter of the Local Group, our galactic neighborhood containing about 50 galaxies bound together by gravity. This group is dominated by the Milky Way and Andromeda galaxies, which together contain 90% of the group's mass. The Local Group is falling toward the Virgo Cluster at 600 km/s due to dark matter's gravitational pull. Despite its name, this group spans millions of light-years and represents our cosmic backyard in the vast universe.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Local Group",
@@ -2759,6 +3347,8 @@
       "id": "obs:length:scenario-length-local-group",
       "name": "Local Group",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Local_Group",
       "source_count": 2,
       "sources": [
@@ -2793,36 +3383,43 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The size of the Virgo Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. This represents the largest coherent structures in the universe before cosmic expansion dominates over gravitational attraction.",
+      "description": "The approximate 100-million-light-year span of the Virgo (Local) Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. Its irregular disk and halo of galaxy clouds are a large-scale neighborhood, not one gravitationally bound object with a sharply defined surface.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The size of the Virgo Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. This represents the largest coherent structures in the universe before cosmic expansion dominates over gravitational attraction.",
+      "description_medium": "The approximate 100-million-light-year span of the Virgo (Local) Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. Its irregular disk and halo of galaxy clouds are a large-scale neighborhood, not one gravitationally bound object with a sharply defined surface.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Virgo Supercluster",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1e23",
-          "source_url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+          "original_value_text": "9.46e23",
+          "source_url": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-virgo-supercluster",
       "name": "Virgo Supercluster",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
+      "qualifiers": {
+        "measurement": "approximate characteristic span of the historical Local Supercluster",
+        "model_coverage": "SDSS redshift-space window, not a membership census or exact boundary",
+        "reported_span": "roughly 100 million light-years"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-virgo-supercluster",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-imagine-gsfc-nasa-gov-features-cosmic-local-supercluster-info-html",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Virgo Supercluster",
-          "url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+          "title": "local supercluster info.html",
+          "url": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2836,44 +3433,52 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The size of the Virgo Supercluster, a massive collection of galaxy groups containing thousands of galaxies.",
-      "value": 1e+23,
+      "summary_short": "The approximate 100-million-light-year span of the Virgo (Local) Supercluster, a massive collection of galaxy groups containing thousands of galaxies.",
+      "value": 9.46e+23,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The size of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and represents the largest gravitationally bound system we belong to. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
+      "description": "The approximate 160-megaparsec diameter of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and is defined by a basin of peculiar galaxy velocities, not by a gravitationally bound boundary. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The size of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and represents the largest gravitationally bound system we belong to. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
+      "description_medium": "The approximate 160-megaparsec diameter of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and is defined by a basin of peculiar galaxy velocities, not by a gravitationally bound boundary. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Laniakea Supercluster",
         "source_trace": {
+          "derivation_note": "160 Mpc * 3.085677581491367e22 m/Mpc",
           "method": "derived",
-          "original_value_text": "5e23",
-          "source_url": "https://en.wikipedia.org/wiki/Laniakea_Supercluster"
+          "original_value_text": "4.937084130386187e24",
+          "source_url": "https://doi.org/10.1038/nature13674"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-laniakea-supercluster",
       "name": "Laniakea Supercluster",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Laniakea_Supercluster",
+      "qualifiers": {
+        "boundary": "flow-defined and reconstruction-dependent, not a gravitationally bound object",
+        "derivation": "160 Mpc * 3.085677581491367e22 m/Mpc",
+        "measurement": "approximate diameter of the 2014 velocity-defined basin"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://doi.org/10.1038/nature13674",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-laniakea-supercluster",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-doi-org-10-1038-nature13674",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "doi.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Laniakea Supercluster",
-          "url": "https://en.wikipedia.org/wiki/Laniakea_Supercluster"
+          "title": "nature13674",
+          "url": "https://doi.org/10.1038/nature13674"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2887,44 +3492,53 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The size of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way.",
-      "value": 5e+23,
+      "summary_short": "The approximate 160-megaparsec diameter of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way.",
+      "value": 4.937084130386188e+24,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxy clusters arranged in a wall-like formation spanning billions of light-years. The wall's discovery challenged our understanding of cosmic structure formation, as it seemed too large to have formed in the time since the Big Bang. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
+      "description": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxies arranged in a wall-like formation. Gott and colleagues estimated its curved length as 450 megaparsecs in present-epoch comoving coordinates, about 1.47 billion light-years. At the epoch seen in its light, the same estimate is about 419 Mpc. Such walls also occur in simulations of standard cosmology; their connected extent depends on how the structure is defined. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxy clusters arranged in a wall-like formation spanning billions of light-years. The wall's discovery challenged our understanding of cosmic structure formation, as it seemed too large to have formed in the time since the Big Bang. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
+      "description_medium": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxies arranged in a wall-like formation. Gott and colleagues estimated its curved length as 450 megaparsecs in present-epoch comoving coordinates, about 1.47 billion light-years. At the epoch seen in its light, the same estimate is about 419 Mpc. Such walls also occur in simulations of standard cosmology; their connected extent depends on how the structure is defined. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Sloan Great Wall",
         "source_trace": {
+          "derivation_note": "450 Mpc * 3.085677581491367e22 m/Mpc",
           "method": "derived",
-          "original_value_text": "4e24",
-          "source_url": "https://en.wikipedia.org/wiki/Sloan_Great_Wall"
+          "original_value_text": "1.3885549116711151e25",
+          "source_url": "https://arxiv.org/html/astro-ph/0310571v2"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-sloan-great-wall",
       "name": "Sloan Great Wall",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Sloan_Great_Wall",
+      "qualifiers": {
+        "definition": "Gott et al. 2005; 419 Mpc at the observed epoch, z about 0.073",
+        "derivation": "450 Mpc * 3.085677581491367e22 m/Mpc",
+        "measurement": "estimated curved length in present-epoch comoving coordinates",
+        "model_coverage": "later SDSS DR17 sample through published slice, not certified wall members"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://arxiv.org/html/astro-ph/0310571v2",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-sloan-great-wall",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-arxiv-org-html-astro-ph-0310571v2",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "arxiv.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Sloan Great Wall",
-          "url": "https://en.wikipedia.org/wiki/Sloan_Great_Wall"
+          "title": "0310571v2",
+          "url": "https://arxiv.org/html/astro-ph/0310571v2"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2939,43 +3553,54 @@
         }
       ],
       "summary_short": "The length of the Sloan Great Wall, one of the largest structures in the observable universe.",
-      "value": 4e+24,
+      "value": 1.388554911671115e+25,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Hercules-Corona Borealis Great Wall, the largest known structure in the observable universe. This immense filament spans 10 billion light-years and contains billions of galaxies arranged in a wall-like formation. The wall's discovery challenged cosmological theories because it appeared too large to have formed through gravitational collapse alone. This structure represents the ultimate scale of cosmic organization and may require new physics to explain its formation.",
+      "description": "A reported gamma-ray-burst concentration nicknamed the Hercules-Corona Borealis Great Wall, with a proposed extent of roughly 2,000-3,000 megaparsecs. The marker uses the upper end, about 10 billion light-years; it is not a measured edge of a mapped galaxy wall. Bursts can act as distant tracers of stellar populations, but their rarity and uneven detection make this an intriguing, disputed inference. Studies disagree about whether selection effects can explain the clustering. The question is not whether a visible wall fills this span, but whether sparse flashes reveal an unusually large structure.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Hercules-Corona Borealis Great Wall, the largest known structure in the observable universe. This immense filament spans 10 billion light-years and contains billions of galaxies arranged in a wall-like formation. The wall's discovery challenged cosmological theories because it appeared too large to have formed through gravitational collapse alone. This structure represents the ultimate scale of cosmic organization and may require new physics to explain its formation.",
+      "description_medium": "A reported gamma-ray-burst concentration nicknamed the Hercules-Corona Borealis Great Wall, with a proposed extent of roughly 2,000-3,000 megaparsecs. The marker uses the upper end, about 10 billion light-years; it is not a measured edge of a mapped galaxy wall. Bursts can act as distant tracers of stellar populations, but their rarity and uneven detection make this an intriguing, disputed inference. Studies disagree about whether selection effects can explain the clustering. The question is not whether a visible wall fills this span, but whether sparse flashes reveal an unusually large structure.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Hercules-Corona Borealis Great Wall",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1e25",
-          "source_url": "https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall"
+          "original_value_text": "9.4607304725808e25",
+          "source_url": "https://arxiv.org/abs/1401.0533"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-hercules-corona-borealis-great-wall",
       "name": "Hercules-Corona Borealis Great Wall",
-      "qualifiers": {},
-      "source": "https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall",
+      "qualifiers": {
+        "display_convention": "about 10 billion light-years, near the upper reported range",
+        "evidence": "disputed statistical inference from GRBs; not a resolved galaxy wall",
+        "measurement": "approximate reported extent of a putative GRB concentration",
+        "model_coverage": "current NASA Swift tracer selection, not the original discovery sample",
+        "reported_range_Mpc": "[2000, 3000]"
+      },
+      "quality_flags": [
+        "disputed_structure"
+      ],
+      "review_status": "accepted",
+      "source": "https://arxiv.org/abs/1401.0533",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-hercules-e2-80-93corona-borealis-great-wall",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-arxiv-org-abs-1401-0533",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "arxiv.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Hercules\u2013Corona Borealis Great Wall",
-          "url": "https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall"
+          "title": "1401.0533",
+          "url": "https://arxiv.org/abs/1401.0533"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2989,18 +3614,19 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The length of the Hercules-Corona Borealis Great Wall, the largest known structure in the observable universe.",
-      "value": 1e+25,
+      "summary_short": "A reported gamma-ray-burst concentration nicknamed the Hercules-Corona Borealis Great Wall, with a proposed extent of roughly 2,000-3,000 megaparsecs.",
+      "value": 9.4607304725808e+25,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Beyond this distance, objects are receding faster than light can reach us due to cosmic expansion. The observable universe contains about 2 trillion galaxies and represents only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
+      "description": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Cosmic expansion has stretched the present distance to those regions to about 46.5 billion light-years; recession faster than light does not by itself make a galaxy unobservable. The observable universe contains about 2 trillion galaxies and may represent only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Beyond this distance, objects are receding faster than light can reach us due to cosmic expansion. The observable universe contains about 2 trillion galaxies and represents only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
+      "description_medium": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Cosmic expansion has stretched the present distance to those regions to about 46.5 billion light-years; recession faster than light does not by itself make a galaxy unobservable. The observable universe contains about 2 trillion galaxies and may represent only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Observable Universe",
@@ -3014,8 +3640,12 @@
       "id": "obs:length:entity-universe",
       "name": "Observable Universe",
       "qualifiers": {
-        "measurement": "diameter of observable universe"
+        "definition": "present-distance span, not light-travel time or a physical edge",
+        "measurement": "approximate particle-horizon diameter at the present cosmic epoch",
+        "model": "cosmology-dependent; distinct from the CMB last-scattering sphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Observable_universe",
       "source_count": 2,
       "sources": [
@@ -3049,7 +3679,7 @@
     }
   ],
   "preferred_max_items": 100,
-  "preferred_target_items": 60,
+  "preferred_target_items": 66,
   "related_resources": [
     {
       "name": "Scale of the Universe",

@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Yesterday is the smallest intuitive historical-time anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Yesterday",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -48,6 +49,8 @@
       "id": "obs:historical-time:scenario-historical-time-yesterday",
       "name": "Yesterday",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Yesterday",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A week ago is still inside ordinary memory.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Last week",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -103,6 +107,8 @@
       "id": "obs:historical-time:scenario-historical-time-last-week",
       "name": "Last week",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Week",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A month ago is a useful human-scale history anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One month ago",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -158,6 +165,8 @@
       "id": "obs:historical-time:scenario-historical-time-one-month-ago",
       "name": "One month ago",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Month",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The pandemic is recent enough to feel current but old enough to measure in years.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "COVID-19 pandemic start",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -213,6 +223,8 @@
       "id": "obs:historical-time:scenario-historical-time-covid-19-pandemic-start",
       "name": "COVID-19 pandemic start",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/COVID-19_pandemic",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Consumer-tech history makes a useful near-past anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "First iPhone release",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -268,6 +281,8 @@
       "id": "obs:historical-time:scenario-historical-time-first-iphone-release",
       "name": "First iPhone release",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A pivotal late-20th-century event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fall of the Berlin Wall",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -323,6 +339,8 @@
       "id": "obs:historical-time:scenario-historical-time-fall-of-the-berlin-wall",
       "name": "Fall of the Berlin Wall",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Berlin_Wall",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Apollo 11 is a standard recent-history anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon landing",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -378,6 +397,8 @@
       "id": "obs:historical-time:scenario-historical-time-moon-landing",
       "name": "Moon landing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Apollo_11",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The war sits just outside living-memory range for most people.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Start of World War II",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -433,6 +455,8 @@
       "id": "obs:historical-time:scenario-historical-time-start-of-world-war-ii",
       "name": "Start of World War II",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/World_War_II",
       "source_count": 2,
       "sources": [
@@ -471,6 +495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A quarter-millennium civic-history anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "US Declaration of Independence",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -488,6 +513,8 @@
       "id": "obs:historical-time:scenario-historical-time-us-declaration-of-independence",
       "name": "US Declaration of Independence",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence",
       "source_count": 2,
       "sources": [
@@ -526,6 +553,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Printing transformed information culture on a civilizational timescale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Printing press in Europe",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -543,6 +571,8 @@
       "id": "obs:historical-time:scenario-historical-time-printing-press-in-europe",
       "name": "Printing press in Europe",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Printing_press",
       "source_count": 2,
       "sources": [
@@ -581,6 +611,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Medieval legal history makes a good near-millennium anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Magna Carta",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -598,6 +629,8 @@
       "id": "obs:historical-time:scenario-historical-time-magna-carta",
       "name": "Magna Carta",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magna_Carta",
       "source_count": 2,
       "sources": [
@@ -636,6 +669,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar one-millennium-scale event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Norman conquest of England",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -653,6 +687,8 @@
       "id": "obs:historical-time:scenario-historical-time-norman-conquest-of-england",
       "name": "Norman conquest of England",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Norman_Conquest",
       "source_count": 2,
       "sources": [
@@ -691,6 +727,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An entire Mediterranean world-system fell apart on this timescale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bronze Age collapse",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -707,6 +744,8 @@
       "id": "obs:historical-time:scenario-historical-time-bronze-age-collapse",
       "name": "Bronze Age collapse",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse",
       "source_count": 2,
       "sources": [
@@ -745,6 +784,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The pyramids bridge written history and archaeology.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Construction of the Great Pyramid",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -761,6 +801,8 @@
       "id": "obs:historical-time:scenario-historical-time-construction-of-the-great-pyramid",
       "name": "Construction of the Great Pyramid",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
       "source_count": 2,
       "sources": [
@@ -799,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The site reaches back near the dawn of agriculture.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gobekli Tepe",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -815,6 +858,8 @@
       "id": "obs:historical-time:scenario-historical-time-gobekli-tepe",
       "name": "Gobekli Tepe",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe",
       "source_count": 2,
       "sources": [
@@ -853,6 +898,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Farming is recent on evolutionary timescales.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Agriculture begins",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -869,6 +915,8 @@
       "id": "obs:historical-time:scenario-historical-time-agriculture-begins",
       "name": "Agriculture begins",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neolithic_Revolution",
       "source_count": 2,
       "sources": [
@@ -907,6 +955,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Climate history quickly outruns written history.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "End of last glacial maximum",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -923,6 +972,8 @@
       "id": "obs:historical-time:scenario-historical-time-end-of-last-glacial-maximum",
       "name": "End of last glacial maximum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Last_Glacial_Maximum",
       "source_count": 2,
       "sources": [
@@ -961,6 +1012,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human symbolic culture reaches far back before cities or farming.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Oldest cave art",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -977,6 +1029,8 @@
       "id": "obs:historical-time:scenario-historical-time-oldest-cave-art",
       "name": "Oldest cave art",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cave_painting",
       "source_count": 2,
       "sources": [
@@ -1015,6 +1069,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Geologic hazards push deep into prehistory.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Toba eruption",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1031,6 +1086,8 @@
       "id": "obs:historical-time:scenario-historical-time-toba-eruption",
       "name": "Toba eruption",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Toba_catastrophe_theory",
       "source_count": 2,
       "sources": [
@@ -1069,6 +1126,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Our own species is old in historical terms but young in geological ones.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Emergence of Homo sapiens",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1085,6 +1143,8 @@
       "id": "obs:historical-time:scenario-historical-time-emergence-of-homo-sapiens",
       "name": "Emergence of Homo sapiens",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Homo_sapiens",
       "source_count": 2,
       "sources": [
@@ -1123,6 +1183,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human lineage history spans millions, not merely thousands, of years.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Genus Homo emergence",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1139,6 +1200,8 @@
       "id": "obs:historical-time:scenario-historical-time-genus-homo-emergence",
       "name": "Genus Homo emergence",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Homo",
       "source_count": 2,
       "sources": [
@@ -1177,6 +1240,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The end of the non-avian dinosaurs is a familiar deep-time anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "K-Pg extinction",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1193,6 +1257,8 @@
       "id": "obs:historical-time:scenario-historical-time-k-pg-extinction",
       "name": "K-Pg extinction",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event",
       "source_count": 2,
       "sources": [
@@ -1231,6 +1297,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dinosaurs belong to a dramatically deeper past than mammals or humans.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "First dinosaurs",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1247,6 +1314,8 @@
       "id": "obs:historical-time:scenario-historical-time-first-dinosaurs",
       "name": "First dinosaurs",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dinosaur",
       "source_count": 2,
       "sources": [
@@ -1285,6 +1354,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Complex animal diversification sits half a billion years back.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cambrian explosion",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1301,6 +1371,8 @@
       "id": "obs:historical-time:scenario-historical-time-cambrian-explosion",
       "name": "Cambrian explosion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cambrian_explosion",
       "source_count": 2,
       "sources": [
@@ -1339,6 +1411,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Life reaches far deeper into time than most geology students first expect.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "First life on Earth",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1355,6 +1428,8 @@
       "id": "obs:historical-time:scenario-historical-time-first-life-on-earth",
       "name": "First life on Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earliest_known_life_forms",
       "source_count": 2,
       "sources": [
@@ -1393,6 +1468,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Planetary history runs on multi-billion-year scales.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Formation of Earth",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1409,6 +1485,8 @@
       "id": "obs:historical-time:scenario-historical-time-formation-of-earth",
       "name": "Formation of Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Age_of_Earth",
       "source_count": 2,
       "sources": [
@@ -1447,6 +1525,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The ultimate upper anchor for backward-looking time.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Age of the universe",
         "ingest_source": "dataset/raw/curated/historical-time.json",
@@ -1463,6 +1542,8 @@
       "id": "obs:historical-time:scenario-historical-time-age-of-the-universe",
       "name": "Age of the universe",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Age_of_the_universe",
       "source_count": 2,
       "sources": [

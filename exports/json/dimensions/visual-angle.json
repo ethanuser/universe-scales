@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A microarcsecond is the sort of apparent size measured in precision astrometry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Microarcsecond apparent size",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -48,6 +49,8 @@
       "id": "obs:visual-angle:entity-visual-microarcsecond",
       "name": "Microarcsecond apparent size",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visual_angle",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Event Horizon Telescope imaged Sagittarius A* at tens of microarcseconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sagittarius A* shadow",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -103,6 +107,8 @@
       "id": "obs:visual-angle:entity-sgr-a-star-shadow-visual-angle",
       "name": "Sagittarius A* shadow",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sagittarius_A*",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A milliarcsecond is still far below ordinary naked-eye perception.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milliarcsecond apparent size",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -158,6 +165,8 @@
       "id": "obs:visual-angle:entity-visual-milliarcsecond",
       "name": "Milliarcsecond apparent size",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visual_angle",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hubble resolves details on the order of a few hundredths of an arcsecond.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hubble diffraction limit",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -213,6 +223,8 @@
       "id": "obs:visual-angle:entity-hubble-diffraction-limit-visual-angle",
       "name": "Hubble diffraction limit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An arcsecond is a classic tiny apparent angle in astronomy.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Arcsecond apparent size",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -268,6 +281,8 @@
       "id": "obs:visual-angle:entity-visual-arcsecond",
       "name": "Arcsecond apparent size",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visual_angle",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mars is usually a small reddish disk in the sky, smaller than Jupiter at favorable opposition.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mars apparent size",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -323,6 +339,8 @@
       "id": "obs:visual-angle:entity-mars-apparent-angle",
       "name": "Mars apparent size",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mars",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mars at a good opposition appears tens of arcseconds wide.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mars at opposition",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -378,6 +397,8 @@
       "id": "obs:visual-angle:entity-mars-opposition-visual-angle",
       "name": "Mars at opposition",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mars",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single smartphone pixel seen at typical reading distance subtends only a tiny angle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smartphone pixel at 30 cm",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -433,6 +455,8 @@
       "id": "obs:visual-angle:scenario-smartphone-pixel-visual-angle",
       "name": "Smartphone pixel at 30 cm",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Retina_display",
       "source_count": 2,
       "sources": [
@@ -471,6 +495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter appears as a tiny disk rather than a point, but it is still much smaller than the Moon.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jupiter apparent size",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -488,6 +513,8 @@
       "id": "obs:visual-angle:entity-jupiter-apparent-angle",
       "name": "Jupiter apparent size",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -526,6 +553,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter near opposition spans only a few dozen arcseconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jupiter at opposition",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -543,6 +571,8 @@
       "id": "obs:visual-angle:entity-jupiter-opposition-visual-angle",
       "name": "Jupiter at opposition",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -581,6 +611,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The ISS overhead subtends only a few tenths of a milliradian.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "ISS overhead apparent size",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -598,6 +629,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-iss-overhead",
       "name": "ISS overhead apparent size",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/International_Space_Station",
       "source_count": 2,
       "sources": [
@@ -636,6 +669,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Venus can grow to roughly one arcminute across when it appears as a crescent.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Venus at greatest brilliancy",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -653,6 +687,8 @@
       "id": "obs:visual-angle:entity-venus-apparent-diameter",
       "name": "Venus at greatest brilliancy",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Venus",
       "source_count": 2,
       "sources": [
@@ -691,6 +727,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human 20/20 acuity corresponds to about one arcminute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human visual acuity threshold",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -708,6 +745,8 @@
       "id": "obs:visual-angle:entity-visual-acuity-threshold",
       "name": "Human visual acuity threshold",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visual_acuity",
       "source_count": 2,
       "sources": [
@@ -746,6 +785,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At a kilometer away, a person shrinks to a tiny sliver of apparent size.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human at 1 km",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -763,6 +803,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-human-at-1km",
       "name": "Human at 1 km",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human",
       "source_count": 2,
       "sources": [
@@ -801,6 +843,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A line of ordinary body text subtends roughly a milliradian-scale angle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "12-point text at reading distance",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -817,6 +860,8 @@
       "id": "obs:visual-angle:scenario-body-text-visual-angle",
       "name": "12-point text at reading distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Point_(typography)",
       "source_count": 2,
       "sources": [
@@ -855,6 +900,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A distant airliner still spans a measurable angle even high overhead.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Airliner at 10 km",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -872,6 +918,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-airliner-at-10km",
       "name": "Airliner at 10 km",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Airliner",
       "source_count": 2,
       "sources": [
@@ -910,6 +958,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tennis ball across a court subtends only a few milliradians.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tennis ball at 10 m",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -927,6 +976,8 @@
       "id": "obs:visual-angle:scenario-tennis-ball-at-10m",
       "name": "Tennis ball at 10 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tennis_ball",
       "source_count": 2,
       "sources": [
@@ -965,6 +1016,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A wide-body jet at ten kilometers altitude spans only a few milliradians.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Boeing 747 at cruising altitude",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -982,6 +1034,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-boeing-747-overhead",
       "name": "Boeing 747 at cruising altitude",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Boeing_747",
       "source_count": 2,
       "sources": [
@@ -1020,6 +1074,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Full Moon looks about half a degree wide.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Full Moon",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1037,6 +1092,8 @@
       "id": "obs:visual-angle:entity-full-moon-visual-angle",
       "name": "Full Moon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Angular_diameter",
       "source_count": 2,
       "sources": [
@@ -1075,6 +1132,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun spans about the same visual angle as the Moon.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun in the sky",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1092,6 +1150,8 @@
       "id": "obs:visual-angle:entity-sun-visual-angle",
       "name": "Sun in the sky",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Angular_diameter",
       "source_count": 2,
       "sources": [
@@ -1130,6 +1190,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "When the ISS passes overhead it can look surprisingly large and bright for a moving point of light.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "International Space Station pass",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1147,6 +1208,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-iss-pass",
       "name": "International Space Station pass",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/International_Space_Station",
       "source_count": 2,
       "sources": [
@@ -1185,6 +1248,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 1.8-meter person at 100 meters subtends under two hundredths of a radian.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human at 100 m",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1202,6 +1266,8 @@
       "id": "obs:visual-angle:scenario-person-at-100m",
       "name": "Human at 100 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visual_angle",
       "source_count": 2,
       "sources": [
@@ -1240,6 +1306,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A U.S. penny at one meter subtends only a couple of hundredths of a radian.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Penny at 1 meter",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1257,6 +1324,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-penny-at-1m",
       "name": "Penny at 1 meter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Penny_(United_States_coin)",
       "source_count": 2,
       "sources": [
@@ -1295,6 +1364,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A basketball at 10 meters looks several times larger than a tennis ball.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Basketball at 10 m",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1312,6 +1382,8 @@
       "id": "obs:visual-angle:scenario-basketball-at-10m",
       "name": "Basketball at 10 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Basketball_(ball)",
       "source_count": 2,
       "sources": [
@@ -1350,6 +1422,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Your thumb at arm's length covers a few degrees of view.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thumb at arm's length",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1367,6 +1440,8 @@
       "id": "obs:visual-angle:scenario-thumb-at-arms-length",
       "name": "Thumb at arm's length",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visual_angle",
       "source_count": 2,
       "sources": [
@@ -1405,6 +1480,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Andromeda Galaxy spans several degrees on the sky.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Andromeda Galaxy long axis",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1422,6 +1498,8 @@
       "id": "obs:visual-angle:entity-andromeda-visual-angle",
       "name": "Andromeda Galaxy long axis",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
       "source_count": 2,
       "sources": [
@@ -1460,6 +1538,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A large mountain range remains visually prominent across a wide horizon segment.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mountain at 10 km",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1477,6 +1556,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-mountain-at-10km",
       "name": "Mountain at 10 km",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mountain",
       "source_count": 2,
       "sources": [
@@ -1515,6 +1596,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A distant scoreboard can occupy a meaningful slice of the field of view for spectators.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Stadium scoreboard",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1532,6 +1614,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-stadium-scoreboard",
       "name": "Stadium scoreboard",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Stadium",
       "source_count": 2,
       "sources": [
@@ -1570,6 +1654,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Eiffel Tower from two kilometers away subtends a surprisingly large angle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Eiffel Tower at 2 km",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1587,6 +1672,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-eiffel-tower-2km",
       "name": "Eiffel Tower at 2 km",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Eiffel_Tower",
       "source_count": 2,
       "sources": [
@@ -1625,6 +1712,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A phone screen held at reading distance occupies a noticeable chunk of vision.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smartphone screen at 30 cm",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1642,6 +1730,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-smartphone-screen-30cm",
       "name": "Smartphone screen at 30 cm",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smartphone",
       "source_count": 2,
       "sources": [
@@ -1680,6 +1770,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A credit card at arm's length is small but still easy to identify by shape.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Credit card at 30 cm",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1697,6 +1788,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-credit-card-30cm",
       "name": "Credit card at 30 cm",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Credit_card",
       "source_count": 2,
       "sources": [
@@ -1735,6 +1828,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Orion stretches across a large patch of the winter sky.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Orion constellation width",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1752,6 +1846,8 @@
       "id": "obs:visual-angle:entity-orion-width-visual-angle",
       "name": "Orion constellation width",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Orion_(constellation)",
       "source_count": 2,
       "sources": [
@@ -1790,6 +1886,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A page in a book spans a comfortable reading angle at close distance.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Book page at reading distance",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1807,6 +1904,8 @@
       "id": "obs:visual-angle:scenario-visual-angle-book-page-reading",
       "name": "Book page at reading distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Book",
       "source_count": 2,
       "sources": [
@@ -1845,6 +1944,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A doorway seen from a couple of meters away spans a substantial fraction of a radian.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Doorway at 2 m",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1862,6 +1962,8 @@
       "id": "obs:visual-angle:scenario-doorway-at-2m",
       "name": "Doorway at 2 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Door",
       "source_count": 2,
       "sources": [
@@ -1900,6 +2002,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A windshield can occupy about a radian of the driver's field of view.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car windshield from driver seat",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1916,6 +2019,8 @@
       "id": "obs:visual-angle:scenario-windshield-visual-angle",
       "name": "Car windshield from driver seat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Windshield",
       "source_count": 2,
       "sources": [
@@ -1954,6 +2059,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Wide VR headsets approach two radians of apparent horizontal span.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "VR headset field of view",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -1971,6 +2077,8 @@
       "id": "obs:visual-angle:entity-vr-headset-fov",
       "name": "VR headset field of view",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Virtual_reality_headset",
       "source_count": 2,
       "sources": [
@@ -2009,6 +2117,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human peripheral vision spans a little over three radians horizontally.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human horizontal visual field",
         "ingest_source": "dataset/raw/curated/visual-angle.json",
@@ -2026,6 +2135,8 @@
       "id": "obs:visual-angle:entity-human-horizontal-visual-field",
       "name": "Human horizontal visual field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Field_of_view",
       "source_count": 2,
       "sources": [

@@ -39,6 +39,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Geosmin
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -85,6 +88,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Skatole
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -131,6 +137,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 2-Methylisoborneol
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -177,6 +186,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Indole
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -223,6 +235,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 2-acetyl-1-pyrroline
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -269,6 +284,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Allyl methyl sulfide
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -315,6 +333,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dimethyl disulfide
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -361,6 +382,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dimethyl sulfide
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -407,6 +431,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ethanethiol
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -453,6 +480,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: p-Cresol
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -499,6 +529,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Methanethiol
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -545,6 +578,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hydrogen sulfide
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -591,6 +627,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 1-octen-3-ol
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -637,6 +676,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Benzaldehyde
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -683,6 +725,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Isovaleric acid
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -729,6 +774,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Trimethylamine
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -775,6 +823,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vanillin
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -821,6 +872,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Butyric acid
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -867,6 +921,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Eugenol
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -913,6 +970,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Linalool
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -959,6 +1019,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Menthol
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1005,6 +1068,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Limonene
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1051,6 +1117,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Limonene
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1097,6 +1166,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Methyl salicylate
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1143,6 +1215,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Isoamyl acetate
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1189,6 +1264,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pyridine
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1235,6 +1313,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Acetic acid
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1281,6 +1362,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ethyl acetate
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1327,6 +1411,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Acetone
     ingest_source: dataset/raw/curated/odor-concentration.json
@@ -1373,6 +1460,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ammonia
     ingest_source: dataset/raw/curated/odor-concentration.json

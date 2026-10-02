@@ -45,6 +45,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Anechoic chamber
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -92,6 +95,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Threshold of hearing
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -139,6 +145,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rustling leaves
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -186,6 +195,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quiet rural night
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -233,6 +245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Whisper
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -280,6 +295,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quiet bedroom
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -327,6 +345,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quiet office at desk
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -374,6 +395,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Library
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -421,6 +445,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quiet home at night
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -468,6 +495,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Refrigerator hum at 1 m
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -515,6 +545,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rainfall
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -562,6 +595,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Conversation
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -609,6 +645,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Busy restaurant
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -656,6 +695,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vacuum cleaner
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -703,6 +745,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: City traffic
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -750,6 +795,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Busy street at sidewalk distance
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -797,6 +845,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hearing damage guideline
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -844,6 +895,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Subway platform at platform edge
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -891,6 +945,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Power lawn mower
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -938,6 +995,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Motorcycle at 1 m
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -985,6 +1045,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Chainsaw
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1032,6 +1095,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Nightclub dance floor
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1079,6 +1145,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rock concert near speaker stack
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1126,6 +1195,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Threshold of discomfort
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1173,6 +1245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thunderclap
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1220,6 +1295,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Emergency siren at curbside
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1267,6 +1345,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jet takeoff at 100 m
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1314,6 +1395,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Threshold of pain at the ear
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1361,6 +1445,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jet takeoff at 30 m
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1408,6 +1495,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gunshot at the shooter ear
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1455,6 +1545,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jet engine at 30 m
     ingest_source: dataset/raw/curated/sound-intensity.json
@@ -1502,6 +1595,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rocket launch pad
     ingest_source: dataset/raw/curated/sound-intensity.json

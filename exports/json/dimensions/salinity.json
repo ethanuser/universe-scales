@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ultrapure water is the low end of practical salinity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ultrapure water",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -47,6 +48,8 @@
       "id": "obs:salinity:entity-ultrapure-water-salinity",
       "name": "Ultrapure water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ultrapure_water",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rainwater is very low salinity compared with surface waters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rainwater",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -101,6 +105,8 @@
       "id": "obs:salinity:entity-rainwater-salinity",
       "name": "Rainwater",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rain",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Desalination moves seawater back toward the freshwater end of the scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Desalinated water",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -155,6 +162,8 @@
       "id": "obs:salinity:entity-desalinated-water-salinity",
       "name": "Desalinated water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Desalination",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fresh mountain water is a useful low-salinity natural benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mountain stream freshwater",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -209,6 +219,8 @@
       "id": "obs:salinity:entity-mountain-stream-salinity",
       "name": "Mountain stream freshwater",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fresh_water",
       "source_count": 2,
       "sources": [
@@ -247,6 +259,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Large freshwater lakes are low but not zero on the salinity scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Great Lakes water",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -263,6 +276,8 @@
       "id": "obs:salinity:entity-great-lakes-salinity",
       "name": "Great Lakes water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Lakes",
       "source_count": 2,
       "sources": [
@@ -301,6 +316,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ordinary drinking water contains enough dissolved solids to show up clearly on a log scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tap water",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -317,6 +333,8 @@
       "id": "obs:salinity:entity-tap-water-salinity",
       "name": "Tap water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drinking_water",
       "source_count": 2,
       "sources": [
@@ -355,6 +373,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mineralized freshwater aquarium sits above raw tap water but well below brackish water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Freshwater aquarium",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -371,6 +390,8 @@
       "id": "obs:salinity:entity-freshwater-aquarium-salinity",
       "name": "Freshwater aquarium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aquarium",
       "source_count": 2,
       "sources": [
@@ -409,6 +430,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The upper Chesapeake is a classic mildly brackish estuary example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Upper Chesapeake Bay",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -425,6 +447,8 @@
       "id": "obs:salinity:entity-chesapeake-bay-upper-salinity",
       "name": "Upper Chesapeake Bay",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chesapeake_Bay",
       "source_count": 2,
       "sources": [
@@ -463,6 +487,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Baltic is a classic brackish-water example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Baltic Sea",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -479,6 +504,8 @@
       "id": "obs:salinity:entity-baltic-sea-salinity",
       "name": "Baltic Sea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Baltic_Sea",
       "source_count": 2,
       "sources": [
@@ -517,6 +544,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cold fjord water often stays fresher near river inflows and ice melt.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Greenland fjord water",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -533,6 +561,8 @@
       "id": "obs:salinity:entity-greenland-fjord-salinity",
       "name": "Greenland fjord water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fjord",
       "source_count": 2,
       "sources": [
@@ -571,6 +601,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human physiology depends on a salinity surprisingly close to normal saline.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood plasma",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -587,6 +618,8 @@
       "id": "obs:salinity:entity-blood-plasma-salinity",
       "name": "Blood plasma",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_plasma",
       "source_count": 2,
       "sources": [
@@ -625,6 +658,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Medical saline is a useful precise physiological benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Normal saline",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -642,6 +676,8 @@
       "id": "obs:salinity:entity-normal-saline-salinity",
       "name": "Normal saline",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saline_(medicine)",
       "source_count": 2,
       "sources": [
@@ -680,6 +716,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tears are close to isotonic saline.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human tears",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -696,6 +733,8 @@
       "id": "obs:salinity:entity-tears-salinity",
       "name": "Human tears",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tears",
       "source_count": 2,
       "sources": [
@@ -734,6 +773,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Urine is another familiar biological salty liquid.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Urine",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -750,6 +790,8 @@
       "id": "obs:salinity:entity-urine-salinity",
       "name": "Urine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Urine",
       "source_count": 2,
       "sources": [
@@ -788,6 +830,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sweat is slightly saltier than blood plasma.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human sweat",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -804,6 +847,8 @@
       "id": "obs:salinity:entity-sweat-salinity",
       "name": "Human sweat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sweat",
       "source_count": 2,
       "sources": [
@@ -842,6 +887,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Estuaries span the middle of the freshwater-to-seawater transition.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brackish estuary",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -858,6 +904,8 @@
       "id": "obs:salinity:entity-brackish-estuary-salinity",
       "name": "Brackish estuary",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brackish_water",
       "source_count": 2,
       "sources": [
@@ -896,6 +944,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An estuary like Chesapeake Bay sits between freshwater and the ocean in salinity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chesapeake Bay estuary",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -912,6 +961,8 @@
       "id": "obs:salinity:entity-chesapeake-bay-salinity",
       "name": "Chesapeake Bay estuary",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chesapeake_Bay",
       "source_count": 2,
       "sources": [
@@ -950,6 +1001,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Black Sea is less saline than the open ocean.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Black Sea",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -966,6 +1018,8 @@
       "id": "obs:salinity:entity-black-sea-salinity",
       "name": "Black Sea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Black_Sea",
       "source_count": 2,
       "sources": [
@@ -1004,6 +1058,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Average seawater is the canonical ocean-salinity benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seawater",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1021,6 +1076,8 @@
       "id": "obs:salinity:entity-seawater-salinity",
       "name": "Seawater",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Seawater",
       "source_count": 2,
       "sources": [
@@ -1059,6 +1116,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Mediterranean is slightly saltier than average open ocean water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mediterranean Sea",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1075,6 +1133,8 @@
       "id": "obs:salinity:entity-mediterranean-sea-salinity",
       "name": "Mediterranean Sea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
       "source_count": 2,
       "sources": [
@@ -1113,6 +1173,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Red Sea is a warm, salt-rich basin.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Red Sea",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1129,6 +1190,8 @@
       "id": "obs:salinity:entity-red-sea-salinity",
       "name": "Red Sea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_Sea",
       "source_count": 2,
       "sources": [
@@ -1167,6 +1230,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Food brines sit well above seawater.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pickle brine",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1183,6 +1247,8 @@
       "id": "obs:salinity:entity-pickle-brine-salinity",
       "name": "Pickle brine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brine",
       "source_count": 2,
       "sources": [
@@ -1221,6 +1287,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lake Urmia was once dramatically saline, far beyond ordinary seawater.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lake Urmia",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1237,6 +1304,8 @@
       "id": "obs:salinity:entity-lake-urmia-salinity",
       "name": "Lake Urmia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lake_Urmia",
       "source_count": 2,
       "sources": [
@@ -1275,6 +1344,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Great Salt Lake is much saltier than the open ocean.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Great Salt Lake",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1291,6 +1361,8 @@
       "id": "obs:salinity:entity-great-salt-lake-salinity",
       "name": "Great Salt Lake",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Salt_Lake",
       "source_count": 2,
       "sources": [
@@ -1329,6 +1401,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Soy sauce is an everyday hypersaline liquid.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Soy sauce",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1345,6 +1418,8 @@
       "id": "obs:salinity:entity-soy-sauce-salinity",
       "name": "Soy sauce",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Soy_sauce",
       "source_count": 2,
       "sources": [
@@ -1383,6 +1458,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Natural brine pools sit high on the salinity scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brine pool",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1399,6 +1475,8 @@
       "id": "obs:salinity:entity-brine-pool-salinity",
       "name": "Brine pool",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brine_pool",
       "source_count": 2,
       "sources": [
@@ -1437,6 +1515,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Evaporation ponds become hypersaline as water is concentrated by the sun.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Salt evaporation pond",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1453,6 +1532,8 @@
       "id": "obs:salinity:entity-salt-evaporation-pond-salinity",
       "name": "Salt evaporation pond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Salt_evaporation_pond",
       "source_count": 2,
       "sources": [
@@ -1491,6 +1572,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Saturated brine gives a clean upper everyday reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saturated salt brine",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1507,6 +1589,8 @@
       "id": "obs:salinity:entity-saturated-brine-salinity",
       "name": "Saturated salt brine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brine",
       "source_count": 2,
       "sources": [
@@ -1545,6 +1629,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A brine pool can be so dense with salt that it creates a distinct underwater layer.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hypersaline brine pool",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1561,6 +1646,8 @@
       "id": "obs:salinity:entity-hypersaline-brine-pool-salinity",
       "name": "Hypersaline brine pool",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brine_pool",
       "source_count": 2,
       "sources": [
@@ -1599,6 +1686,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Dead Sea is one of the most famous hypersaline natural waters.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dead Sea",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1615,6 +1703,8 @@
       "id": "obs:salinity:entity-dead-sea-salinity",
       "name": "Dead Sea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dead_Sea",
       "source_count": 2,
       "sources": [
@@ -1653,6 +1743,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lake Assal is one of the saltiest bodies of water on Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lake Assal",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1669,6 +1760,8 @@
       "id": "obs:salinity:entity-lake-assal-salinity",
       "name": "Lake Assal",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lake_Assal",
       "source_count": 2,
       "sources": [
@@ -1707,6 +1800,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brine pushed near saturation climbs above ordinary seawater by an order of magnitude.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Highly evaporated brine",
         "ingest_source": "dataset/raw/curated/salinity.json",
@@ -1723,6 +1817,8 @@
       "id": "obs:salinity:entity-evaporated-brine-salinity",
       "name": "Highly evaporated brine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brine",
       "source_count": 2,
       "sources": [

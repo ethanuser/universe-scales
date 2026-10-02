@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One day of perfect health is a clean QALY anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One day of perfect health",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -50,6 +51,8 @@
       "qualifiers": {
         "assumption": "perfect health"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Short illnesses have surprisingly visible QALY weights when aggregated.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Avoiding one week of influenza",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -105,6 +109,8 @@
       "id": "obs:qalys:scenario-qalys-avoiding-one-week-of-influenza",
       "name": "Avoiding one week of influenza",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Influenza",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One week of perfect health is a clean QALY anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One week of perfect health",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -162,6 +169,8 @@
       "qualifiers": {
         "assumption": "perfect health"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -200,6 +209,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pain relief adds up quickly on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Avoiding one month of severe back pain",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -217,6 +227,8 @@
       "id": "obs:qalys:scenario-qalys-avoiding-one-month-of-severe-back-pain",
       "name": "Avoiding one month of severe back pain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Back_pain",
       "source_count": 2,
       "sources": [
@@ -255,6 +267,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One month of perfect health is a clean QALY anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One month of perfect health",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -274,6 +287,8 @@
       "qualifiers": {
         "assumption": "perfect health"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -312,6 +327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A standard cost-effectiveness benchmark intervention.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Successful cataract surgery first-year gain",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -328,6 +344,8 @@
       "id": "obs:qalys:scenario-qalys-successful-cataract-surgery-first-year-gain",
       "name": "Successful cataract surgery first-year gain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cataract_surgery",
       "source_count": 2,
       "sources": [
@@ -366,6 +384,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year of severe cancer treatment places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year of severe cancer treatment",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -385,6 +404,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.3"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -423,6 +444,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year with severe disability places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with severe disability",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -442,6 +464,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.4"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -480,6 +504,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year with paraplegia places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with paraplegia",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -499,6 +524,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.5"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -537,6 +564,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year on hemodialysis places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year on hemodialysis",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -556,6 +584,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.56"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -594,6 +624,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year with moderate depression places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with moderate depression",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -613,6 +644,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.6"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -651,6 +684,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year with blindness places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with blindness",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -670,6 +704,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.7"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -708,6 +744,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year with mild chronic pain places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year with mild chronic pain",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -727,6 +764,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.8"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -765,6 +804,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year at 90 percent quality places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year at 90 percent quality",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -784,6 +824,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.9"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -822,6 +864,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year at 95 percent quality places a common health state on the QALY scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year at 95 percent quality",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -841,6 +884,8 @@
       "qualifiers": {
         "assumption": "utility weight 0.95"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -879,6 +924,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A large but intuitively grounded intervention gain.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hip replacement five-year gain",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -895,6 +941,8 @@
       "id": "obs:qalys:scenario-qalys-hip-replacement-five-year-gain",
       "name": "Hip replacement five-year gain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hip_replacement",
       "source_count": 2,
       "sources": [
@@ -933,6 +981,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One year of perfect health is a clean QALY anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One year of perfect health",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -952,6 +1001,8 @@
       "qualifiers": {
         "assumption": "perfect health"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -990,6 +1041,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Prevention can beat many acute medical treatments in total QALYs saved.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smoking cessation lifetime gain",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -1006,6 +1058,8 @@
       "id": "obs:qalys:scenario-qalys-smoking-cessation-lifetime-gain",
       "name": "Smoking cessation lifetime gain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smoking_cessation",
       "source_count": 2,
       "sources": [
@@ -1044,6 +1098,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Transplant medicine often creates very large QALY gains.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kidney transplant five-year gain",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -1060,6 +1115,8 @@
       "id": "obs:qalys:scenario-qalys-kidney-transplant-five-year-gain",
       "name": "Kidney transplant five-year gain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kidney_transplantation",
       "source_count": 2,
       "sources": [
@@ -1098,6 +1155,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Multi-year life extensions belong naturally on the QALY axis.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Five years of perfect health",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -1115,6 +1173,8 @@
       "id": "obs:qalys:scenario-qalys-five-years-of-perfect-health",
       "name": "Five years of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1213,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Chronic disease control can generate very large cumulative gains.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Antiretroviral therapy over a decade",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -1169,6 +1230,8 @@
       "id": "obs:qalys:scenario-qalys-antiretroviral-therapy-over-a-decade",
       "name": "Antiretroviral therapy over a decade",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Antiretroviral_therapy",
       "source_count": 2,
       "sources": [
@@ -1207,6 +1270,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A decade of healthy life is a large but still human-scale QALY amount.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ten years of perfect health",
         "ingest_source": "dataset/raw/curated/qalys.json",
@@ -1224,6 +1288,8 @@
       "id": "obs:qalys:scenario-qalys-ten-years-of-perfect-health",
       "name": "Ten years of perfect health",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quality-adjusted_life_year",
       "source_count": 2,
       "sources": [

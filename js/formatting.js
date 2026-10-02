@@ -1,6 +1,18 @@
 // Universal Scales - Number Formatting Utilities
 
 class NumberFormatter {
+    static SI_PREFIXES = [
+        { exponent: 24, symbol: 'Y' }, { exponent: 21, symbol: 'Z' },
+        { exponent: 18, symbol: 'E' }, { exponent: 15, symbol: 'P' },
+        { exponent: 12, symbol: 'T' }, { exponent: 9, symbol: 'G' },
+        { exponent: 6, symbol: 'M' }, { exponent: 3, symbol: 'k' },
+        { exponent: 0, symbol: '' }, { exponent: -3, symbol: 'm' },
+        { exponent: -6, symbol: 'μ' }, { exponent: -9, symbol: 'n' },
+        { exponent: -12, symbol: 'p' }, { exponent: -15, symbol: 'f' },
+        { exponent: -18, symbol: 'a' }, { exponent: -21, symbol: 'z' },
+        { exponent: -24, symbol: 'y' }
+    ];
+
     constructor(notationMode) {
         this.notationMode = notationMode;
     }
@@ -40,10 +52,133 @@ class NumberFormatter {
             case 'human':
                 // Format as human-readable numbers (billion, million, etc.)
                 return this.formatHumanReadable(value, precision);
+
+            case 'si':
+                return this.formatSINumber(value, precision);
             
             default:
                 return d3.format(`.${precision}e`)(value);
         }
+    }
+
+    formatSIValue(value, unitSymbol = '', precision = 2) {
+        const symbol = String(unitSymbol || '');
+        if (!symbol || !Number.isFinite(Number(value)) || Number(value) === 0) {
+            return `${this.formatSINumber(value, precision)}${symbol ? ` ${this.formatDisplayUnitSymbol(symbol)}` : ''}`;
+        }
+
+        // A prefix on a compound expression multiplies that entire expression.
+        // In particular, k(kg/m^3) must not be mistaken for kg/(km)^3.
+        if (/[/*·]/.test(symbol)) return this.formatSIExpression(value, symbol, precision);
+        const parsed = this.parsePrefixedUnit(symbol);
+        const unit = parsed || { prefixExponent: 0, baseSymbol: symbol, power: 1 };
+        const valueInBase = Number(value) * (10 ** (unit.prefixExponent * unit.power));
+        const step = 3 * unit.power;
+        const rawExponent = Math.floor(Math.log10(Math.abs(valueInBase)) / step) * 3;
+        const boundedExponent = Math.max(-24, Math.min(24, rawExponent));
+        const prefix = NumberFormatter.SI_PREFIXES.find(entry => entry.exponent === boundedExponent);
+        let scaled = valueInBase / (10 ** (boundedExponent * unit.power));
+        let formatted = this.formatSIScaled(scaled, precision);
+
+        // Carry rounded 1000 into the next prefix when one exists.
+        if (Math.abs(Number(formatted)) >= 1000 && boundedExponent < 24) {
+            const nextExponent = boundedExponent + 3;
+            const nextPrefix = NumberFormatter.SI_PREFIXES.find(entry => entry.exponent === nextExponent);
+            if (nextPrefix) {
+                scaled /= 10 ** (3 * unit.power);
+                formatted = this.formatSIScaled(scaled, precision);
+                if (Math.abs(Number(formatted)) >= 1 && Math.abs(Number(formatted)) < 1000) {
+                    return `${formatted} ${this.formatDisplayUnitSymbol(`${nextPrefix.symbol}${unit.baseSymbol}`)}`;
+                }
+            }
+        }
+
+        const isOutOfRange = rawExponent > 24 || rawExponent < -24;
+        if (isOutOfRange) {
+            const scientificExponent = Math.floor(Math.log10(Math.abs(scaled)));
+            const mantissa = scaled / (10 ** scientificExponent);
+            const sci = `${this.formatSIScaled(mantissa, precision)}e${scientificExponent}`;
+            return `${sci} ${this.formatDisplayUnitSymbol(`${prefix.symbol}${unit.baseSymbol}`)}`;
+        }
+        if (Math.abs(Number(formatted)) < 1 || Math.abs(Number(formatted)) >= 1000) {
+            // Centi/deci/deca/hecto also give useful conventional powered units.
+            for (const [exponent, smallPrefix] of [[2, 'h'], [1, 'da'], [-1, 'd'], [-2, 'c']]) {
+                const candidate = this.formatSIScaled(valueInBase / 10 ** (exponent * unit.power), precision);
+                if (Math.abs(Number(candidate)) >= 1 && Math.abs(Number(candidate)) < 1000)
+                    return `${candidate} ${this.formatDisplayUnitSymbol(`${smallPrefix}${unit.baseSymbol}`)}`;
+            }
+            return this.formatSIExpression(value, symbol, precision);
+        }
+        return `${formatted} ${this.formatDisplayUnitSymbol(`${prefix.symbol}${unit.baseSymbol}`)}`;
+    }
+
+    formatScientific(value, precision) {
+        const [mantissa, exponent] = Number(value).toExponential(this.siSignificantDigits(precision) - 1).split('e');
+        return `${Number(mantissa)}e${exponent}`;
+    }
+
+    formatDisplayUnitSymbol(symbol) {
+        return String(symbol).replace(/\^(?:2\b|\{2\})/g, '²').replace(/\^(?:3\b|\{3\})/g, '³');
+    }
+
+    formatSINumber(value, precision = 2) {
+        const number = Number(value);
+        if (!Number.isFinite(number) || number === 0) return String(number);
+        const exponent = Math.floor(Math.log10(Math.abs(number)) / 3) * 3;
+        const prefix = NumberFormatter.SI_PREFIXES.find(entry => entry.exponent === Math.max(-24, Math.min(24, exponent)));
+        const scaled = number / (10 ** prefix.exponent);
+        const formatted = this.formatSIScaled(scaled, precision);
+        if (exponent > 24 || exponent < -24) {
+            return `${this.formatScientific(scaled, precision)}${prefix.symbol}`;
+        }
+        if (Math.abs(Number(formatted)) >= 1000 && prefix.exponent < 24) {
+            const next = NumberFormatter.SI_PREFIXES.find(entry => entry.exponent === prefix.exponent + 3);
+            if (next) return `${this.formatSIScaled(scaled / 1000, precision)}${next.symbol}`;
+        }
+        return `${formatted}${prefix.symbol}`;
+    }
+
+    formatSIExpression(value, symbol, precision) {
+        const text = this.formatSINumber(value, precision);
+        const prefix = NumberFormatter.SI_PREFIXES.find(entry => entry.symbol && text.endsWith(entry.symbol));
+        if (!prefix) return `${text} ${this.formatDisplayUnitSymbol(symbol)}`;
+        return `${text.slice(0, -prefix.symbol.length)} ${prefix.symbol}(${this.formatDisplayUnitSymbol(symbol)})`;
+    }
+
+    siSignificantDigits(precision) {
+        return Math.min(3, Math.max(1, (Number(precision) || 0) + 1));
+    }
+
+    formatSIScaled(value, precision) {
+        return String(Number(Number(value).toPrecision(this.siSignificantDigits(precision))));
+    }
+
+    formatFixed(value, precision) {
+        const digits = Math.max(0, Math.min(12, Number(precision) || 0));
+        return Number(value).toFixed(digits).replace(/(\.\d*?[1-9])0+$|\.0+$/, '$1') || '0';
+    }
+
+    parsePrefixedUnit(symbol) {
+        const match = String(symbol).match(/(?:\^\{([23])\}|\^([23])|([²³]))$/);
+        const power = match ? Number((match[1] || match[2] || match[3]).replace('²', '2').replace('³', '3')) : 1;
+        const expression = match ? symbol.slice(0, -match[0].length) : symbol;
+        const prefixes = [
+            ...NumberFormatter.SI_PREFIXES.filter(entry => entry.symbol),
+            { exponent: -2, symbol: 'c' }, { exponent: -1, symbol: 'd' },
+            { exponent: 1, symbol: 'da' }, { exponent: 2, symbol: 'h' }
+        ].sort((a, b) => b.symbol.length - a.symbol.length);
+        const prefixedBases = new Set(['m', 's', 'g', 'A', 'K', 'mol', 'cd', 'Hz', 'N', 'Pa', 'J', 'W', 'C', 'V', 'F', 'Ω', 'S', 'Wb', 'T', 'H', 'lm', 'lx', 'B', 'L', 'Wh']);
+        for (const entry of prefixes) {
+            const baseSymbol = expression.slice(entry.symbol.length);
+            if (prefixedBases.has(baseSymbol) && expression.startsWith(entry.symbol)) {
+                return {
+                    prefixExponent: entry.exponent,
+                    baseSymbol: `${baseSymbol}${match ? match[0] : ''}`,
+                    power
+                };
+            }
+        }
+        return match ? { prefixExponent: 0, baseSymbol: symbol, power } : null;
     }
 
     formatLinearNumber(value, precision = 2) {

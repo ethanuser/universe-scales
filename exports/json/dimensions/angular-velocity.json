@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pluto sweeps around the Sun so slowly that its angular speed is below a nanoradian per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pluto orbit around the Sun",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -48,6 +49,8 @@
       "id": "obs:angular-velocity:entity-pluto-orbit-angular-velocity",
       "name": "Pluto orbit around the Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pluto",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mars takes almost two Earth years to complete one orbit.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mars orbit around the Sun",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -104,6 +108,8 @@
       "id": "obs:angular-velocity:entity-mars-orbit-angular-velocity",
       "name": "Mars orbit around the Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mars",
       "source_count": 2,
       "sources": [
@@ -142,6 +148,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Earth sweeps around the Sun very slowly in angular terms.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth orbit around the Sun",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -160,6 +167,8 @@
       "id": "obs:angular-velocity:entity-earth-orbit-angular-velocity",
       "name": "Earth orbit around the Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth%27s_orbit",
       "source_count": 2,
       "sources": [
@@ -198,6 +207,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Venus orbits more slowly than Earth because its year is longer.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Venus orbit around the Sun",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -216,6 +226,8 @@
       "id": "obs:angular-velocity:entity-venus-orbit-angular-velocity",
       "name": "Venus orbit around the Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Venus",
       "source_count": 2,
       "sources": [
@@ -254,6 +266,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mercury moves fastest around the Sun, so its orbital angular velocity is relatively large.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mercury orbit around the Sun",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -272,6 +285,8 @@
       "id": "obs:angular-velocity:entity-mercury-orbit-angular-velocity",
       "name": "Mercury orbit around the Sun",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mercury_(planet)",
       "source_count": 2,
       "sources": [
@@ -310,6 +325,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Moon\u2019s orbital motion is much slower than Earth\u2019s spin.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon orbit",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -329,6 +345,8 @@
       "qualifiers": {
         "measurement": "orbital angular velocity"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moon",
       "source_count": 2,
       "sources": [
@@ -367,6 +385,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Moon orbits Earth with an angular speed of only a few micro-radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon orbit around Earth",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -385,6 +404,8 @@
       "id": "obs:angular-velocity:entity-moon-orbit-angular-velocity",
       "name": "Moon orbit around Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Orbit_of_the_Moon",
       "source_count": 2,
       "sources": [
@@ -423,6 +444,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Earth completes one sidereal rotation in about 23 hours 56 minutes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth rotation",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -440,6 +462,8 @@
       "id": "obs:angular-velocity:entity-earth-rotation-angular-velocity",
       "name": "Earth rotation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth%27s_rotation",
       "source_count": 2,
       "sources": [
@@ -478,6 +502,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The hour hand of a clock turns slowly enough to live in the milliradian-per-second range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hour hand",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -497,6 +522,8 @@
       "qualifiers": {
         "measurement": "clock hand rotation"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clock",
       "source_count": 2,
       "sources": [
@@ -535,6 +562,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A clock hour hand completes one turn every 12 hours.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hour hand",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -553,6 +581,8 @@
       "id": "obs:angular-velocity:scenario-hour-hand-angular-velocity",
       "name": "Hour hand",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clock",
       "source_count": 2,
       "sources": [
@@ -591,6 +621,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Saturn also rotates quickly, giving it a short day.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saturn rotation",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -609,6 +640,8 @@
       "id": "obs:angular-velocity:entity-saturn-rotation-angular-velocity",
       "name": "Saturn rotation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saturn",
       "source_count": 2,
       "sources": [
@@ -647,6 +680,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter is a rapid spinner despite its enormous size.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jupiter rotation",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -665,6 +699,8 @@
       "id": "obs:angular-velocity:entity-jupiter-rotation-angular-velocity",
       "name": "Jupiter rotation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -703,6 +739,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The ISS circles Earth in roughly ninety-two minutes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "ISS orbit",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -720,6 +757,8 @@
       "id": "obs:angular-velocity:entity-iss-orbit-angular-velocity",
       "name": "ISS orbit",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/International_Space_Station",
       "source_count": 2,
       "sources": [
@@ -758,6 +797,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The minute hand provides a familiar low angular velocity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Minute hand",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -777,6 +817,8 @@
       "qualifiers": {
         "measurement": "clock hand rotation"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clock",
       "source_count": 2,
       "sources": [
@@ -815,6 +857,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A clock minute hand completes one turn per hour.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Minute hand",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -833,6 +876,8 @@
       "id": "obs:angular-velocity:scenario-minute-hand-angular-velocity",
       "name": "Minute hand",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clock",
       "source_count": 2,
       "sources": [
@@ -871,6 +916,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The London Eye turns slowly enough that riders barely notice the rotation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "London Eye",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -888,6 +934,8 @@
       "id": "obs:angular-velocity:entity-london-eye-angular-velocity",
       "name": "London Eye",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/London_Eye",
       "source_count": 2,
       "sources": [
@@ -926,6 +974,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A clock second hand completes one turn per minute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Second hand",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -943,6 +992,8 @@
       "id": "obs:angular-velocity:scenario-second-hand-angular-velocity",
       "name": "Second hand",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clock",
       "source_count": 2,
       "sources": [
@@ -981,6 +1032,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Microwave turntables rotate slowly, just enough to even out heating.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Microwave turntable",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -998,6 +1050,8 @@
       "id": "obs:angular-velocity:scenario-angular-velocity-microwave-turntable",
       "name": "Microwave turntable",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Microwave_oven",
       "source_count": 2,
       "sources": [
@@ -1036,6 +1090,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A vinyl record player speed of 33 1/3 rpm.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "33 1/3 rpm record",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1053,6 +1108,8 @@
       "id": "obs:angular-velocity:entity-record-player-33rpm",
       "name": "33 1/3 rpm record",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Phonograph_record",
       "source_count": 2,
       "sources": [
@@ -1091,6 +1148,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 45 rpm record is a familiar mid-speed spinning disc.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "45 rpm vinyl record",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1108,6 +1166,8 @@
       "id": "obs:angular-velocity:entity-vinyl-record-45rpm",
       "name": "45 rpm vinyl record",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Phonograph_record",
       "source_count": 2,
       "sources": [
@@ -1146,6 +1206,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Old shellac records spun faster than 45 rpm singles.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "78 rpm record",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1163,6 +1224,8 @@
       "id": "obs:angular-velocity:entity-shellac-record-78rpm",
       "name": "78 rpm record",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Phonograph_record",
       "source_count": 2,
       "sources": [
@@ -1201,6 +1264,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A ceiling fan is a comfortable household reference for a few radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ceiling fan",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1219,6 +1283,8 @@
       "qualifiers": {
         "measurement": "blade rotation"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fan",
       "source_count": 2,
       "sources": [
@@ -1257,6 +1323,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A household ceiling fan is a nice mid-scale angular-velocity reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ceiling fan",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1274,6 +1341,8 @@
       "id": "obs:angular-velocity:entity-ceiling-fan-angular-velocity",
       "name": "Ceiling fan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ceiling_fan",
       "source_count": 2,
       "sources": [
@@ -1312,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A road-bike wheel at city speed turns at a few tens of radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle wheel at 20 km/h",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1329,6 +1399,8 @@
       "id": "obs:angular-velocity:scenario-angular-velocity-bicycle-wheel-20kmh",
       "name": "Bicycle wheel at 20 km/h",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle_wheel",
       "source_count": 2,
       "sources": [
@@ -1367,6 +1439,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative bicycle wheel angular speed while riding through a city.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle wheel at city speed",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1384,6 +1457,8 @@
       "id": "obs:angular-velocity:scenario-bicycle-wheel-city-speed",
       "name": "Bicycle wheel at city speed",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle_wheel",
       "source_count": 2,
       "sources": [
@@ -1422,6 +1497,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A spinning bicycle wheel lands in the everyday mechanical range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle wheel",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1440,6 +1516,8 @@
       "qualifiers": {
         "measurement": "wheel spin"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle_wheel",
       "source_count": 2,
       "sources": [
@@ -1478,6 +1556,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A passenger-car wheel at highway speed spins at around eighty radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car wheel at 60 mph",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1495,6 +1574,8 @@
       "id": "obs:angular-velocity:scenario-angular-velocity-car-wheel-60mph",
       "name": "Car wheel at 60 mph",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wheel",
       "source_count": 2,
       "sources": [
@@ -1533,6 +1614,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A spin cycle is a useful bridge between everyday and industrial rotation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Washing machine spin",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1552,6 +1634,8 @@
       "qualifiers": {
         "measurement": "drum speed"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Washing_machine",
       "source_count": 2,
       "sources": [
@@ -1590,6 +1674,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 1200 rpm spin cycle is already over one hundred radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Washing machine spin cycle",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1607,6 +1692,8 @@
       "id": "obs:angular-velocity:entity-washing-machine-spin",
       "name": "Washing machine spin cycle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Washing_machine",
       "source_count": 2,
       "sources": [
@@ -1645,6 +1732,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A car engine at roughly 3000 RPM provides a high but still accessible benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Car engine",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1664,6 +1752,8 @@
       "qualifiers": {
         "measurement": "crankshaft speed"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
       "source_count": 2,
       "sources": [
@@ -1702,6 +1792,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A kitchen blender blade spins much faster than household fans.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blender blade",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1720,6 +1811,8 @@
       "qualifiers": {
         "measurement": "blade speed"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blender",
       "source_count": 2,
       "sources": [
@@ -1758,6 +1851,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 5400 rpm hard drive spins far faster than a record player.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hard drive platter at 5400 rpm",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1775,6 +1869,8 @@
       "id": "obs:angular-velocity:entity-hard-drive-5400rpm",
       "name": "Hard drive platter at 5400 rpm",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hard_disk_drive",
       "source_count": 2,
       "sources": [
@@ -1813,6 +1909,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Small drone propellers can spin at several thousand revolutions per minute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Drone propeller",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1830,6 +1927,8 @@
       "id": "obs:angular-velocity:entity-drone-propeller-angular-velocity",
       "name": "Drone propeller",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quadcopter",
       "source_count": 2,
       "sources": [
@@ -1868,6 +1967,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common hard-drive spindle speed converted to radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hard drive platter at 7200 rpm",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1885,6 +1985,8 @@
       "id": "obs:angular-velocity:entity-hard-drive-7200rpm",
       "name": "Hard drive platter at 7200 rpm",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hard_disk_drive",
       "source_count": 2,
       "sources": [
@@ -1923,6 +2025,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 7200 RPM hard drive lives deep in the hundreds of radians per second range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hard drive spindle",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1942,6 +2045,8 @@
       "qualifiers": {
         "measurement": "spindle speed"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hard_disk_drive",
       "source_count": 2,
       "sources": [
@@ -1980,6 +2085,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fast neutron stars push angular velocity far beyond familiar machinery.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pulsar",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -1999,6 +2105,8 @@
       "qualifiers": {
         "measurement": "stellar spin"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pulsar",
       "source_count": 2,
       "sources": [
@@ -2037,6 +2145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A ten-thousand-rpm gas turbine shaft is typical of fast rotating turbomachinery.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fast gas turbine",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -2054,6 +2163,8 @@
       "id": "obs:angular-velocity:entity-gas-turbine-angular-velocity",
       "name": "Fast gas turbine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gas_turbine",
       "source_count": 2,
       "sources": [
@@ -2092,6 +2203,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative blender speed of twenty thousand rpm.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blender blade",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -2109,6 +2221,8 @@
       "id": "obs:angular-velocity:entity-blender-blade-speed",
       "name": "Blender blade",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blender",
       "source_count": 2,
       "sources": [
@@ -2147,6 +2261,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A millisecond pulsar spinning at hundreds of hertz has an angular velocity in the thousands of radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fast millisecond pulsar",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -2165,6 +2280,8 @@
       "id": "obs:angular-velocity:entity-millisecond-pulsar-angular-velocity",
       "name": "Fast millisecond pulsar",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Millisecond_pulsar",
       "source_count": 2,
       "sources": [
@@ -2203,6 +2320,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The fastest known pulsar spins hundreds of times per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fastest known pulsar",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -2220,6 +2338,8 @@
       "id": "obs:angular-velocity:entity-psr-j1748-2446ad-angular-velocity",
       "name": "Fastest known pulsar",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/PSR_J1748%E2%88%922446ad",
       "source_count": 2,
       "sources": [
@@ -2258,6 +2378,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 100,000 rpm ultracentrifuge rotor reaches over ten thousand radians per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ultracentrifuge rotor",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -2275,6 +2396,8 @@
       "id": "obs:angular-velocity:entity-ultracentrifuge-rotor",
       "name": "Ultracentrifuge rotor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Centrifuge",
       "source_count": 2,
       "sources": [
@@ -2313,6 +2436,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A very fast dental drill can reach hundreds of thousands of rpm.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dentist drill turbine",
         "ingest_source": "dataset/raw/curated/angular-velocity.json",
@@ -2330,6 +2454,8 @@
       "id": "obs:angular-velocity:entity-dentist-drill-speed",
       "name": "Dentist drill turbine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dental_drill",
       "source_count": 2,
       "sources": [

@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Greenland
     ingest_source: dataset/raw/curated/population-density.json
@@ -89,6 +92,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mongolia
     ingest_source: dataset/raw/curated/population-density.json
@@ -135,6 +141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mongolia
     ingest_source: dataset/raw/curated/population-density.json
@@ -181,6 +190,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Namibia
     ingest_source: dataset/raw/curated/population-density.json
@@ -227,6 +239,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Namibia
     ingest_source: dataset/raw/curated/population-density.json
@@ -273,6 +288,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Australia
     ingest_source: dataset/raw/curated/population-density.json
@@ -319,6 +337,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Iceland
     ingest_source: dataset/raw/curated/population-density.json
@@ -365,6 +386,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Canada
     ingest_source: dataset/raw/curated/population-density.json
@@ -411,6 +435,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Russia
     ingest_source: dataset/raw/curated/population-density.json
@@ -457,6 +484,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: United States
     ingest_source: dataset/raw/curated/population-density.json
@@ -503,6 +533,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: France
     ingest_source: dataset/raw/curated/population-density.json
@@ -549,6 +582,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Germany
     ingest_source: dataset/raw/curated/population-density.json
@@ -595,6 +631,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Germany
     ingest_source: dataset/raw/curated/population-density.json
@@ -641,6 +680,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: United Kingdom
     ingest_source: dataset/raw/curated/population-density.json
@@ -687,6 +729,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Japan
     ingest_source: dataset/raw/curated/population-density.json
@@ -733,6 +778,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Belgium
     ingest_source: dataset/raw/curated/population-density.json
@@ -779,6 +827,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: India
     ingest_source: dataset/raw/curated/population-density.json
@@ -825,6 +876,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Netherlands
     ingest_source: dataset/raw/curated/population-density.json
@@ -871,6 +925,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: South Korea
     ingest_source: dataset/raw/curated/population-density.json
@@ -917,6 +974,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Taiwan
     ingest_source: dataset/raw/curated/population-density.json
@@ -963,6 +1023,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bangladesh
     ingest_source: dataset/raw/curated/population-density.json
@@ -1009,6 +1072,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vatican City
     ingest_source: dataset/raw/curated/population-density.json
@@ -1055,6 +1121,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hong Kong
     ingest_source: dataset/raw/curated/population-density.json
@@ -1101,6 +1170,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Singapore
     ingest_source: dataset/raw/curated/population-density.json
@@ -1147,6 +1219,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Singapore
     ingest_source: dataset/raw/curated/population-density.json
@@ -1193,6 +1268,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seoul
     ingest_source: dataset/raw/curated/population-density.json
@@ -1239,6 +1317,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Monaco
     ingest_source: dataset/raw/curated/population-density.json
@@ -1285,6 +1366,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Macau
     ingest_source: dataset/raw/curated/population-density.json
@@ -1331,6 +1415,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mumbai
     ingest_source: dataset/raw/curated/population-density.json
@@ -1377,6 +1464,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Paris
     ingest_source: dataset/raw/curated/population-density.json
@@ -1423,6 +1513,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Manila
     ingest_source: dataset/raw/curated/population-density.json
@@ -1469,6 +1562,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dhaka
     ingest_source: dataset/raw/curated/population-density.json

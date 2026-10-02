@@ -170,6 +170,9 @@ def cmd_observation(conn: sqlite3.Connection, args: argparse.Namespace) -> int:
             o.value_type,
             o.summary,
             o.rationale,
+            o.review_status,
+            o.display_status,
+            o.quality_flags_json,
             d.slug AS dimension_slug,
             d.base_unit,
             sub.canonical_name AS subject_name,
@@ -197,6 +200,10 @@ def cmd_observation(conn: sqlite3.Connection, args: argparse.Namespace) -> int:
             f"observation\t{row['id']}\t{row['dimension_slug']}\t{row['value_base']:.6g}\t"
             f"{row['base_unit']}\t{row['label']}\t{row['value_type']}"
         )
+        print(f"status\t{row['review_status']}\t{row['display_status']}")
+        quality_flags = json.loads(row["quality_flags_json"] or "[]")
+        if quality_flags:
+            print(f"quality_flags\t{', '.join(quality_flags)}")
         print(f"subject\t{row['subject_name']}\t{row['wikidata_qid'] or ''}")
         if row["summary_short"]:
             print(f"summary_short\t{row['summary_short']}")

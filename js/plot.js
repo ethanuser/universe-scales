@@ -613,7 +613,7 @@ class PlotRenderer {
                 if (window.matchMedia('(hover: hover)').matches) {
                     // Don't hide tooltip if it's pinned (clicked on desktop)
                     if (!this.app.tooltipPinned) {
-                        this.app.hideTooltip();
+                        this.app.scheduleTooltipHide();
                     }
                     const itemGroupElement = event.target.closest('.item-group');
                     if (itemGroupElement) {
@@ -677,6 +677,7 @@ class PlotRenderer {
     
     updatePlot() {
         if (!this.app.dimensionData) return;
+        if (this.app.experiences?.active) { this.app.experiences.refresh(); return; }
         
         // Clear existing plot elements
         this.mainGroup.selectAll('.item-group').remove();

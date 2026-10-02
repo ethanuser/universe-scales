@@ -49,6 +49,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Halley comet returns
     ingest_source: dataset/raw/curated/event-rate.json
@@ -95,6 +98,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: US presidential election
     ingest_source: dataset/raw/curated/event-rate.json
@@ -141,6 +147,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Birthday
     ingest_source: dataset/raw/curated/event-rate.json
@@ -187,6 +196,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Resting breathing
     ingest_source: dataset/raw/curated/event-rate.json
@@ -233,6 +245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Resting heartbeat
     ingest_source: dataset/raw/curated/event-rate.json
@@ -279,6 +294,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: World deaths
     ingest_source: dataset/raw/curated/event-rate.json
@@ -324,6 +342,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Walking cadence
     ingest_source: dataset/raw/curated/event-rate.json
@@ -370,6 +391,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Conversational speech
     ingest_source: dataset/raw/curated/event-rate.json
@@ -416,6 +440,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Clapping rapidly
     ingest_source: dataset/raw/curated/event-rate.json
@@ -461,6 +488,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: World births
     ingest_source: dataset/raw/curated/event-rate.json
@@ -506,6 +536,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Typing at 60 wpm
     ingest_source: dataset/raw/curated/event-rate.json
@@ -552,6 +585,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: YouTube uploads
     ingest_source: dataset/raw/curated/event-rate.json
@@ -598,6 +634,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Camera frame rate
     ingest_source: dataset/raw/curated/event-rate.json
@@ -643,6 +682,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lightning strikes on Earth
     ingest_source: dataset/raw/curated/event-rate.json
@@ -688,6 +730,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hummingbird wingbeat
     ingest_source: dataset/raw/curated/event-rate.json
@@ -733,6 +778,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: High-refresh display
     ingest_source: dataset/raw/curated/event-rate.json
@@ -778,6 +826,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Honeybee wingbeat
     ingest_source: dataset/raw/curated/event-rate.json
@@ -823,6 +874,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neuron upper-end firing rate
     ingest_source: dataset/raw/curated/event-rate.json
@@ -868,6 +922,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SSD random IOPS
     ingest_source: dataset/raw/curated/event-rate.json
@@ -913,6 +970,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: LHC bunch crossings
     ingest_source: dataset/raw/curated/event-rate.json
@@ -958,6 +1018,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human genome sequencing on one instrument
     ingest_source: dataset/raw/curated/event-rate.json
@@ -1003,6 +1066,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: CPU clock at 3 GHz
     ingest_source: dataset/raw/curated/event-rate.json
@@ -1048,6 +1114,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bitcoin network hash attempts
     ingest_source: dataset/raw/curated/event-rate.json

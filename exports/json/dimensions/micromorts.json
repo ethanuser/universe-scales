@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern air travel sits below the one-micromort line for a trip.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Commercial airline trip across the US",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -49,6 +50,8 @@
       "qualifiers": {
         "assumption": "single trip"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aviation_safety",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Commuting accumulates risk slowly but non-negligibly.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Long car commute",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -105,6 +109,8 @@
       "qualifiers": {
         "assumption": "one commute"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Traffic_collision",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cycling lives in the sub-to-low-micromort band for a typical ride.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bicycle commute",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -161,6 +168,8 @@
       "qualifiers": {
         "assumption": "one commute"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle_safety",
       "source_count": 2,
       "sources": [
@@ -199,6 +208,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tiny repeated risks accumulate substantially over time.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One pack of cigarettes",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -217,6 +227,8 @@
       "qualifiers": {
         "assumption": "order-of-magnitude risk translation"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tobacco_smoking",
       "source_count": 2,
       "sources": [
@@ -255,6 +267,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Car travel gives a useful everyday-risk benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "100 miles by car",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -273,6 +286,8 @@
       "qualifiers": {
         "assumption": "order-of-magnitude travel estimate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Micromort",
       "source_count": 2,
       "sources": [
@@ -311,6 +326,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Motorcycles jump several micromorts per trip.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Motorcycle commute",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -329,6 +345,8 @@
       "qualifiers": {
         "assumption": "one commute"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motorcycle_safety",
       "source_count": 2,
       "sources": [
@@ -367,6 +385,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Scuba is a classic moderate-risk leisure benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Scuba dive",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -385,6 +404,8 @@
       "qualifiers": {
         "assumption": "one dive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Scuba_diving_safety",
       "source_count": 2,
       "sources": [
@@ -423,6 +444,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Endurance sports can be surprisingly low risk despite their intensity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Running a marathon",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -441,6 +463,8 @@
       "qualifiers": {
         "assumption": "per event"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Marathon",
       "source_count": 2,
       "sources": [
@@ -479,6 +503,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Parachuting is a memorable midscale risk example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Skydiving jump",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -497,6 +522,8 @@
       "qualifiers": {
         "assumption": "one jump"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Skydiving",
       "source_count": 2,
       "sources": [
@@ -535,6 +562,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aviation risk depends strongly on the flight type.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Scenic helicopter ride",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -553,6 +581,8 @@
       "qualifiers": {
         "assumption": "per flight"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helicopter",
       "source_count": 2,
       "sources": [
@@ -591,6 +621,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Anesthesia is a well-known medical low-double-digit micromort event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "General anesthesia for elective surgery",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -609,6 +640,8 @@
       "qualifiers": {
         "assumption": "healthy elective patient"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/General_anaesthesia",
       "source_count": 2,
       "sources": [
@@ -647,6 +680,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Specialized technical diving belongs well above ordinary scuba.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Deep cave dive",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -665,6 +699,8 @@
       "qualifiers": {
         "assumption": "per dive"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cave_diving",
       "source_count": 2,
       "sources": [
@@ -703,6 +739,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Childbirth is one of the clearest high-stakes everyday medical risks.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Giving birth in a high-income country",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -721,6 +758,8 @@
       "qualifiers": {
         "assumption": "per birth"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Maternal_mortality",
       "source_count": 2,
       "sources": [
@@ -759,6 +798,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An extreme-sport high-risk anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "BASE jump",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -777,6 +817,8 @@
       "qualifiers": {
         "assumption": "one jump"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/BASE_jumping",
       "source_count": 2,
       "sources": [
@@ -815,6 +857,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Surgery is a standard hundreds-scale medical risk benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A major surgery",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -833,6 +876,8 @@
       "qualifiers": {
         "assumption": "single major procedure"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Surgery",
       "source_count": 2,
       "sources": [
@@ -871,6 +916,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "High-altitude mountaineering belongs in the enormous-risk tail.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Everest summit attempt from base camp",
         "ingest_source": "dataset/raw/curated/micromorts.json",
@@ -889,6 +935,8 @@
       "qualifiers": {
         "assumption": "one summit attempt"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mount_Everest",
       "source_count": 2,
       "sources": [

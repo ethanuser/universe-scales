@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rabies in the United States
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -89,6 +92,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fatal familial insomnia
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -135,6 +141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Progeria
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -182,6 +191,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Creutzfeldt-Jakob disease
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -228,6 +240,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Amyotrophic lateral sclerosis
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -274,6 +289,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Huntington disease
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -321,6 +339,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Prader-Willi syndrome
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -368,6 +389,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Duchenne muscular dystrophy
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -414,6 +438,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hemophilia A
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -460,6 +487,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cystic fibrosis
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -506,6 +536,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Crohn disease
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -552,6 +585,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Multiple sclerosis
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -598,6 +634,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Type 1 diabetes
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -644,6 +683,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Schizophrenia
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -690,6 +732,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Celiac disease
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -736,6 +781,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Asthma
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -782,6 +830,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Type 2 diabetes
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -828,6 +879,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Migraine
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -874,6 +928,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dental caries
     ingest_source: dataset/raw/curated/disease-rarity.json
@@ -920,6 +977,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Common cold in a year
     ingest_source: dataset/raw/curated/disease-rarity.json

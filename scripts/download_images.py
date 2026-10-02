@@ -902,6 +902,16 @@ class ImageDownloader:
                     self.purge_placeholder_artifacts(filename)
                 elif not self.is_valid_existing_image(image_path):
                     print(f"Corrupt image detected for {dimension}/{item_name}: {filename}; refetching")
+                    try:
+                        image_path.unlink()
+                    except Exception:
+                        pass
+                    thumb_path = self.thumbs_dir / filename
+                    if thumb_path.exists():
+                        try:
+                            thumb_path.unlink()
+                        except Exception:
+                            pass
                 else:
                     print(f"Image already exists for {dimension}/{item_name}: {filename}")
                     skipped_count += 1
@@ -966,7 +976,7 @@ class ImageDownloader:
             print("Starting automatic image download process...")
             print("Images will be named as: dimension_item_name.jpg")
             
-            # Find all YAML files in the data directory
+            # Find all YAML files in the configured data directory
             yaml_files = list(self.data_dir.glob("*.yaml"))
             if dimension_filter:
                 normalized_filter = str(dimension_filter).strip().lower()
@@ -1021,9 +1031,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--allow-placeholders", action="store_true", help="Generate local placeholder images when no source image can be found.")
     parser.add_argument("--dimension", help="Process only one exported YAML dimension, such as 'area' or 'mass'.")
+    parser.add_argument("--data-dir", default="data", help="Directory containing YAML files to process (default: data).")
     args = parser.parse_args()
 
-    downloader = ImageDownloader(allow_placeholders=args.allow_placeholders)
+    downloader = ImageDownloader(data_dir=args.data_dir, allow_placeholders=args.allow_placeholders)
     downloader.run(dimension_filter=args.dimension)
 
 if __name__ == "__main__":

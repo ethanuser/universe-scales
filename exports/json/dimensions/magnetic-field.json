@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The magnetic field between galaxies may be only around a femtotesla or less.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Intergalactic magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -50,6 +51,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intergalactic_space",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The magnetic signals measured outside the human brain are around hundreds of femtotesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human brain magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -106,6 +110,8 @@
       "qualifiers": {
         "measurement": "external field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetoencephalography",
       "source_count": 2,
       "sources": [
@@ -144,6 +150,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A well-shielded magnetic measurement environment aims for fields around a picotesla or below.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quiet-room magnetic noise floor",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -162,6 +169,8 @@
       "qualifiers": {
         "measurement": "ambient field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_shielding",
       "source_count": 2,
       "sources": [
@@ -200,6 +209,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The heart produces magnetic fields in the tens of picotesla range outside the chest.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human heart magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -218,6 +228,8 @@
       "qualifiers": {
         "measurement": "external field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetocardiography",
       "source_count": 2,
       "sources": [
@@ -256,6 +268,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Milky Way's large-scale magnetic field is often described in the tenths-of-nanotesla range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Galactic magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -272,6 +285,8 @@
       "id": "obs:magnetic-field:entity-galactic-magnetic-field",
       "name": "Galactic magnetic field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Galactic_magnetic_field",
       "source_count": 2,
       "sources": [
@@ -310,6 +325,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The diffuse interstellar medium still carries a weak magnetic field.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Interstellar magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -329,6 +345,8 @@
         "assumption": "order-of-magnitude representative value",
         "measurement": "field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Interstellar_medium",
       "source_count": 2,
       "sources": [
@@ -367,6 +385,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The magnetic field carried through the solar system is only a few nanotesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Interplanetary magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -385,6 +404,8 @@
       "qualifiers": {
         "measurement": "field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field",
       "source_count": 2,
       "sources": [
@@ -423,6 +444,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The interplanetary magnetic field near Earth is typically only a few nanotesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Solar wind magnetic field near Earth",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -439,6 +461,8 @@
       "id": "obs:magnetic-field:entity-solar-wind-field-near-earth",
       "name": "Solar wind magnetic field near Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Interplanetary_magnetic_field",
       "source_count": 2,
       "sources": [
@@ -477,6 +501,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At the magnetic equator, Earth's field is roughly tens of microtesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth magnetic field at the magnetic equator",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -495,6 +520,8 @@
       "qualifiers": {
         "measurement": "field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
       "source_count": 2,
       "sources": [
@@ -533,6 +560,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Earth's magnetic field is strong enough to steer compasses while still only tens of microtesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth magnetic field at the surface",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -549,6 +577,8 @@
       "id": "obs:magnetic-field:entity-earth-surface-magnetic-field",
       "name": "Earth magnetic field at the surface",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
       "source_count": 2,
       "sources": [
@@ -587,6 +617,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Near Earth's magnetic poles the field is a bit stronger than at the equator.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth magnetic field near the poles",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -605,6 +636,8 @@
       "qualifiers": {
         "measurement": "field strength"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth%27s_magnetic_field",
       "source_count": 2,
       "sources": [
@@ -643,6 +676,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter's cloud-top field is several hundred microtesla, much stronger than Earth's.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jupiter equatorial magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -659,6 +693,8 @@
       "id": "obs:magnetic-field:entity-jupiter-equatorial-magnetic-field",
       "name": "Jupiter equatorial magnetic field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetosphere_of_Jupiter",
       "source_count": 2,
       "sources": [
@@ -697,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A common refrigerator magnet is only a few millitesla at its surface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Small refrigerator magnet surface field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -713,6 +750,8 @@
       "id": "obs:magnetic-field:entity-fridge-magnet-field",
       "name": "Small refrigerator magnet surface field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Refrigerator_magnet",
       "source_count": 2,
       "sources": [
@@ -751,6 +790,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A modest permanent bar magnet often reaches around a few hundred gauss at the pole.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bar magnet pole field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -767,6 +807,8 @@
       "id": "obs:magnetic-field:entity-bar-magnet-field",
       "name": "Bar magnet pole field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnet",
       "source_count": 2,
       "sources": [
@@ -805,6 +847,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sunspots concentrate solar magnetic flux into fields of a few tenths of a tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sunspot magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -821,6 +864,8 @@
       "id": "obs:magnetic-field:entity-sunspot-magnetic-field",
       "name": "Sunspot magnetic field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sunspot",
       "source_count": 2,
       "sources": [
@@ -859,6 +904,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A strong neodymium magnet can reach fractions of a tesla at the surface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neodymium magnet surface field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -877,6 +923,8 @@
       "qualifiers": {
         "measurement": "surface field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neodymium_magnet",
       "source_count": 2,
       "sources": [
@@ -915,6 +963,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Low-field open MRI scanners trade image quality for patient access and comfort.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Open MRI field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -933,6 +982,8 @@
       "qualifiers": {
         "measurement": "scanner field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
       "source_count": 2,
       "sources": [
@@ -971,6 +1022,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Magnetic recording heads work with local fields approaching a tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hard-drive write head field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -987,6 +1039,8 @@
       "id": "obs:magnetic-field:entity-hard-drive-write-head-field",
       "name": "Hard-drive write head field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_storage",
       "source_count": 2,
       "sources": [
@@ -1025,6 +1079,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The narrow magnetic gap in a loudspeaker is often around a tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Loudspeaker magnet gap field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1041,6 +1096,8 @@
       "id": "obs:magnetic-field:entity-loudspeaker-gap-field",
       "name": "Loudspeaker magnet gap field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Loudspeaker",
       "source_count": 2,
       "sources": [
@@ -1079,6 +1136,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A standard clinical MRI scanner commonly operates at 1.5 tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Clinical MRI scanner field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1095,6 +1153,8 @@
       "id": "obs:magnetic-field:entity-mri-1-5t-field",
       "name": "Clinical MRI scanner field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
       "source_count": 2,
       "sources": [
@@ -1133,6 +1193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A TMS coil can briefly generate fields of a few tesla near the scalp.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Transcranial magnetic stimulation pulse",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1151,6 +1212,8 @@
       "qualifiers": {
         "measurement": "peak coil field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation",
       "source_count": 2,
       "sources": [
@@ -1189,6 +1252,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Many research and higher-end clinical MRI systems operate at 3 tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Research MRI scanner field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1205,6 +1269,8 @@
       "id": "obs:magnetic-field:entity-mri-3t-field",
       "name": "Research MRI scanner field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
       "source_count": 2,
       "sources": [
@@ -1243,6 +1309,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ultra-high-field MRI pushes into the several-tesla regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ultra-high-field MRI scanner",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1259,6 +1326,8 @@
       "id": "obs:magnetic-field:entity-mri-7t-field",
       "name": "Ultra-high-field MRI scanner",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
       "source_count": 2,
       "sources": [
@@ -1297,6 +1366,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fusion tokamaks rely on strong magnetic confinement fields.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tokamak magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1315,6 +1385,8 @@
       "qualifiers": {
         "measurement": "confinement field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tokamak",
       "source_count": 2,
       "sources": [
@@ -1353,6 +1425,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Research MRI systems can reach well beyond clinical 3 tesla scanners.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Magnetic resonance imaging field at 11.7 tesla",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1371,6 +1444,8 @@
       "qualifiers": {
         "measurement": "scanner field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_resonance_imaging",
       "source_count": 2,
       "sources": [
@@ -1409,6 +1484,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Large tokamaks use fields of order ten tesla to confine plasma.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Magnetic field in a fusion tokamak",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1425,6 +1501,8 @@
       "id": "obs:magnetic-field:entity-tokamak-magnetic-field",
       "name": "Magnetic field in a fusion tokamak",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tokamak",
       "source_count": 2,
       "sources": [
@@ -1463,6 +1541,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "High-end NMR spectrometers operate at very strong static magnetic fields.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "NMR spectrometer field at 14.1 tesla",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1481,6 +1560,8 @@
       "qualifiers": {
         "measurement": "spectrometer field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance",
       "source_count": 2,
       "sources": [
@@ -1519,6 +1600,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Specialized research magnets can exceed 20 tesla in static field.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "High-field laboratory magnet",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1537,6 +1619,8 @@
       "qualifiers": {
         "measurement": "magnet field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetic_field",
       "source_count": 2,
       "sources": [
@@ -1575,6 +1659,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A powerful steady laboratory magnet can reach tens of tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Strong laboratory superconducting magnet",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1591,6 +1676,8 @@
       "id": "obs:magnetic-field:entity-strong-lab-magnet-field",
       "name": "Strong laboratory superconducting magnet",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Superconducting_magnet",
       "source_count": 2,
       "sources": [
@@ -1629,6 +1716,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern superconducting magnets can push the static field into the low-twenties of tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Superconducting laboratory magnet",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1647,6 +1735,8 @@
       "qualifiers": {
         "measurement": "magnet field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Superconducting_magnet",
       "source_count": 2,
       "sources": [
@@ -1685,6 +1775,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "High-end NMR spectrometers operate in the tens-of-tesla regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "NMR spectrometer field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1701,6 +1792,8 @@
       "id": "obs:magnetic-field:entity-nmr-spectrometer-field",
       "name": "NMR spectrometer field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_spectroscopy",
       "source_count": 2,
       "sources": [
@@ -1739,6 +1832,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pulsed magnets can briefly reach fields far beyond continuous laboratory magnets.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pulsed laboratory magnet field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1757,6 +1851,8 @@
       "qualifiers": {
         "measurement": "pulsed field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/High_magnetic_field",
       "source_count": 2,
       "sources": [
@@ -1795,6 +1891,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The strongest pulsed laboratory magnets reach around one hundred tesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "World-class pulsed laboratory magnet",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1811,6 +1908,8 @@
       "id": "obs:magnetic-field:entity-pulsed-lab-magnet-field",
       "name": "World-class pulsed laboratory magnet",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pulsed_power",
       "source_count": 2,
       "sources": [
@@ -1849,6 +1948,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Magnetic white dwarfs can reach around one hundred kilotesla at the surface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "White dwarf surface magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1865,6 +1965,8 @@
       "id": "obs:magnetic-field:entity-white-dwarf-magnetic-field",
       "name": "White dwarf surface magnetic field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/White_dwarf",
       "source_count": 2,
       "sources": [
@@ -1903,6 +2005,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A neutron star typically carries a magnetic field around one hundred megatesla.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ordinary neutron-star magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1919,6 +2022,8 @@
       "id": "obs:magnetic-field:entity-neutron-star-magnetic-field",
       "name": "Ordinary neutron-star magnetic field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neutron_star",
       "source_count": 2,
       "sources": [
@@ -1957,6 +2062,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Magnetars reach around ten gigatesla, among the strongest known fields in the universe.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Extreme magnetar magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -1973,6 +2079,8 @@
       "id": "obs:magnetic-field:entity-magnetar-magnetic-field",
       "name": "Extreme magnetar magnetic field",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetar",
       "source_count": 2,
       "sources": [
@@ -2011,6 +2119,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Magnetars have the strongest known large-scale magnetic fields in the universe.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Magnetar magnetic field",
         "ingest_source": "dataset/raw/curated/magnetic-field.json",
@@ -2029,6 +2138,8 @@
       "qualifiers": {
         "measurement": "stellar surface field"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Magnetar",
       "source_count": 2,
       "sources": [

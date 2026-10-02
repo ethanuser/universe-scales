@@ -61,6 +61,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Inverse age of the universe
     ingest_source: dataset/raw/curated/frequency.json
@@ -110,6 +113,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Galactic year
     ingest_source: dataset/raw/curated/frequency.json
@@ -158,6 +164,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Solar cycle
     ingest_source: dataset/raw/curated/frequency.json
@@ -206,6 +215,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth orbit around the Sun
     ingest_source: dataset/raw/curated/frequency.json
@@ -254,6 +266,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Synodic month
     ingest_source: dataset/raw/curated/frequency.json
@@ -302,6 +317,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Circadian cycle
     ingest_source: dataset/raw/curated/frequency.json
@@ -350,6 +368,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Semidiurnal tide
     ingest_source: dataset/raw/curated/frequency.json
@@ -398,6 +419,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Minute hand revolution
     ingest_source: dataset/raw/curated/frequency.json
@@ -446,6 +470,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Resting breathing
     ingest_source: dataset/raw/curated/frequency.json
@@ -492,6 +519,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Slow metronome
     ingest_source: dataset/raw/curated/frequency.json
@@ -538,6 +568,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Resting heartbeat
     ingest_source: dataset/raw/curated/frequency.json
@@ -584,6 +617,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human walking cadence
     ingest_source: dataset/raw/curated/frequency.json
@@ -630,6 +666,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ceiling fan on high
     ingest_source: dataset/raw/curated/frequency.json
@@ -676,6 +715,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Schumann resonance
     ingest_source: dataset/raw/curated/frequency.json
@@ -722,6 +764,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Alpha brain waves
     ingest_source: dataset/raw/curated/frequency.json
@@ -768,6 +813,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car engine idle
     ingest_source: dataset/raw/curated/frequency.json
@@ -814,6 +862,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Washing machine spin cycle
     ingest_source: dataset/raw/curated/frequency.json
@@ -860,6 +911,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cat purr
     ingest_source: dataset/raw/curated/frequency.json
@@ -906,6 +960,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: AC mains power
     ingest_source: dataset/raw/curated/frequency.json
@@ -952,6 +1009,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hummingbird wingbeat
     ingest_source: dataset/raw/curated/frequency.json
@@ -998,6 +1058,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Male speaking pitch
     ingest_source: dataset/raw/curated/frequency.json
@@ -1044,6 +1107,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Female speaking pitch
     ingest_source: dataset/raw/curated/frequency.json
@@ -1090,6 +1156,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Honey bee wingbeat
     ingest_source: dataset/raw/curated/frequency.json
@@ -1136,6 +1205,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Middle C
     ingest_source: dataset/raw/curated/frequency.json
@@ -1182,6 +1254,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concert A4
     ingest_source: dataset/raw/curated/frequency.json
@@ -1228,6 +1303,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mosquito wingbeat
     ingest_source: dataset/raw/curated/frequency.json
@@ -1274,6 +1352,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concert A5
     ingest_source: dataset/raw/curated/frequency.json
@@ -1320,6 +1401,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Violin high E7
     ingest_source: dataset/raw/curated/frequency.json
@@ -1366,6 +1450,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Piano top C8
     ingest_source: dataset/raw/curated/frequency.json
@@ -1412,6 +1499,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dentist drill rotation
     ingest_source: dataset/raw/curated/frequency.json
@@ -1458,6 +1548,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Upper limit of human hearing
     ingest_source: dataset/raw/curated/frequency.json
@@ -1504,6 +1597,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dog whistle
     ingest_source: dataset/raw/curated/frequency.json
@@ -1551,6 +1647,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bat echolocation
     ingest_source: dataset/raw/curated/frequency.json
@@ -1598,6 +1697,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Medical ultrasound probe
     ingest_source: dataset/raw/curated/frequency.json
@@ -1645,6 +1747,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Proton NMR at 1 tesla
     ingest_source: dataset/raw/curated/frequency.json
@@ -1692,6 +1797,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: GPS L1 carrier
     ingest_source: dataset/raw/curated/frequency.json
@@ -1739,6 +1847,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bluetooth channel
     ingest_source: dataset/raw/curated/frequency.json
@@ -1786,6 +1897,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Microwave oven
     ingest_source: dataset/raw/curated/frequency.json
@@ -1833,6 +1947,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wi-Fi 5 gigahertz band
     ingest_source: dataset/raw/curated/frequency.json
@@ -1880,6 +1997,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cesium-133 clock transition
     ingest_source: dataset/raw/curated/frequency.json
@@ -1926,6 +2046,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Automotive radar
     ingest_source: dataset/raw/curated/frequency.json
@@ -1973,6 +2096,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 5G FR2 millimeter wave
     ingest_source: dataset/raw/curated/frequency.json
@@ -2020,6 +2146,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Terahertz radiation
     ingest_source: dataset/raw/curated/frequency.json
@@ -2067,6 +2196,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Carbon dioxide laser
     ingest_source: dataset/raw/curated/frequency.json
@@ -2115,6 +2247,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Red light
     ingest_source: dataset/raw/curated/frequency.json
@@ -2163,6 +2298,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Green light
     ingest_source: dataset/raw/curated/frequency.json
@@ -2211,6 +2349,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blue light
     ingest_source: dataset/raw/curated/frequency.json
@@ -2259,6 +2400,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ultraviolet radiation
     ingest_source: dataset/raw/curated/frequency.json
@@ -2306,6 +2450,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soft X-ray
     ingest_source: dataset/raw/curated/frequency.json
@@ -2352,6 +2499,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gamma ray
     ingest_source: dataset/raw/curated/frequency.json

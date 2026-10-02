@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pure water at pH 7 has a hydrogen-ion concentration of 10^-7 mol/L.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neutral water proton concentration",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -49,6 +50,8 @@
       "id": "obs:concentration:entity-neutral-water-protons",
       "name": "Neutral water proton concentration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/PH",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Natural rainwater is mildly acidic, with proton concentration above neutral water.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rainwater proton concentration",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -105,6 +109,8 @@
       "id": "obs:concentration:entity-rainwater-protons",
       "name": "Rainwater proton concentration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rain",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At current atmospheric levels, CO2 near sea level is only hundredths of a mole per cubic meter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atmospheric carbon dioxide",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -160,6 +167,8 @@
       "id": "obs:concentration:entity-atmospheric-co2-concentration",
       "name": "Atmospheric carbon dioxide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Carbon_dioxide_in_Earth%27s_atmosphere",
       "source_count": 2,
       "sources": [
@@ -198,6 +207,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At pH 4, the hydrogen-ion concentration is a thousand times higher than at neutral pH.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Acidic water proton concentration",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -216,6 +226,8 @@
       "id": "obs:concentration:entity-acidic-water-protons",
       "name": "Acidic water proton concentration",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/PH",
       "source_count": 2,
       "sources": [
@@ -254,6 +266,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Oxygen dissolved in cool freshwater is only a fraction of a mole per cubic meter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dissolved oxygen in freshwater",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -271,6 +284,8 @@
       "id": "obs:concentration:entity-dissolved-oxygen-freshwater",
       "name": "Dissolved oxygen in freshwater",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oxygen_saturation_(medicine)",
       "source_count": 2,
       "sources": [
@@ -309,6 +324,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Argon is only a trace gas, but it still has a measurable molar concentration in air.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atmospheric argon",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -326,6 +342,8 @@
       "id": "obs:concentration:entity-atmospheric-argon-concentration",
       "name": "Atmospheric argon",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
       "source_count": 2,
       "sources": [
@@ -364,6 +382,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Resting blood lactate sits near the one-millimolar scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood lactate",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -381,6 +400,8 @@
       "id": "obs:concentration:entity-blood-lactate-concentration",
       "name": "Blood lactate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lactic_acidosis",
       "source_count": 2,
       "sources": [
@@ -419,6 +440,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ionized calcium in blood plasma is a little above one millimolar.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood calcium ions",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -436,6 +458,8 @@
       "id": "obs:concentration:entity-blood-calcium-concentration",
       "name": "Blood calcium ions",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_calcium_level",
       "source_count": 2,
       "sources": [
@@ -474,6 +498,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood potassium is tightly regulated in a narrow millimolar band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood potassium",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -491,6 +516,8 @@
       "id": "obs:concentration:entity-blood-potassium-concentration",
       "name": "Blood potassium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood",
       "source_count": 2,
       "sources": [
@@ -529,6 +556,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical fasting blood glucose concentration is around five millimolar.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood glucose",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -546,6 +574,8 @@
       "id": "obs:concentration:entity-blood-glucose-concentration",
       "name": "Blood glucose",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_sugar_level",
       "source_count": 2,
       "sources": [
@@ -584,6 +614,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood urea is another familiar small-molecule concentration in the millimolar range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood urea",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -601,6 +632,8 @@
       "id": "obs:concentration:entity-blood-urea-concentration",
       "name": "Blood urea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_urea_nitrogen",
       "source_count": 2,
       "sources": [
@@ -639,6 +672,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cells maintain ATP in the low-millimolar range despite rapid turnover.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Intracellular ATP",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -656,6 +690,8 @@
       "id": "obs:concentration:entity-intracellular-atp-concentration",
       "name": "Intracellular ATP",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Adenosine_triphosphate",
       "source_count": 2,
       "sources": [
@@ -694,6 +730,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood glucose lives in the low-millimolar range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood glucose",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -713,6 +750,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_glucose",
       "source_count": 2,
       "sources": [
@@ -751,6 +790,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Oxygen makes up about a fifth of Earth's atmosphere, which becomes a molar concentration at room conditions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atmospheric oxygen",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -768,6 +808,8 @@
       "id": "obs:concentration:entity-atmospheric-oxygen-concentration",
       "name": "Atmospheric oxygen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
       "source_count": 2,
       "sources": [
@@ -806,6 +848,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bicarbonate is one of the main buffers in human blood.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood bicarbonate",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -823,6 +866,8 @@
       "id": "obs:concentration:entity-blood-bicarbonate-concentration",
       "name": "Blood bicarbonate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood_gas",
       "source_count": 2,
       "sources": [
@@ -861,6 +906,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sulfate is one of the major ions in seawater.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seawater sulfate ions",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -878,6 +924,8 @@
       "id": "obs:concentration:entity-seawater-sulfate-concentration",
       "name": "Seawater sulfate ions",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sulfate",
       "source_count": 2,
       "sources": [
@@ -916,6 +964,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Nitrogen dominates the atmosphere, giving a large molar concentration at sea level.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Atmospheric nitrogen",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -933,6 +982,8 @@
       "id": "obs:concentration:entity-atmospheric-nitrogen-concentration",
       "name": "Atmospheric nitrogen",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
       "source_count": 2,
       "sources": [
@@ -971,6 +1022,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Lemon juice is a familiar weak-acid concentration benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lemon juice",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -989,6 +1041,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lemon_juice",
       "source_count": 2,
       "sources": [
@@ -1027,6 +1081,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Stomach acid lives at a much stronger acid concentration than blood.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gastric acid",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1046,6 +1101,8 @@
       "qualifiers": {
         "measurement": "hydrogen ion concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gastric_acid",
       "source_count": 2,
       "sources": [
@@ -1084,6 +1141,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood chloride sits around the hundred-millimolar level.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood chloride",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1101,6 +1159,8 @@
       "id": "obs:concentration:entity-blood-chloride-concentration",
       "name": "Blood chloride",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chloride",
       "source_count": 2,
       "sources": [
@@ -1139,6 +1199,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blood sodium concentration is a classic physiology benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blood sodium",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1156,6 +1217,8 @@
       "id": "obs:concentration:entity-blood-sodium-concentration",
       "name": "Blood sodium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hyponatremia",
       "source_count": 2,
       "sources": [
@@ -1194,6 +1257,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Milk contains a substantial lactose concentration that shapes its sweetness.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milk lactose",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1211,6 +1275,8 @@
       "id": "obs:concentration:entity-milk-lactose-concentration",
       "name": "Milk lactose",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milk",
       "source_count": 2,
       "sources": [
@@ -1249,6 +1315,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Normal saline contains 154 millimoles of sodium chloride per liter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saline sodium chloride",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1266,6 +1333,8 @@
       "id": "obs:concentration:entity-normal-saline-nacl",
       "name": "Saline sodium chloride",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saline_(medicine)",
       "source_count": 2,
       "sources": [
@@ -1304,6 +1373,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Normal saline is a standard medical concentration reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saline solution",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1323,6 +1393,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saline",
       "source_count": 2,
       "sources": [
@@ -1361,6 +1433,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Urea is highly concentrated in urine compared with blood plasma.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Urine urea",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1378,6 +1451,8 @@
       "id": "obs:concentration:entity-urine-urea-concentration",
       "name": "Urine urea",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Urine",
       "source_count": 2,
       "sources": [
@@ -1416,6 +1491,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bleach is a useful everyday oxidizer benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Household bleach",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1434,6 +1510,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bleach",
       "source_count": 2,
       "sources": [
@@ -1472,6 +1550,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Seawater salinity corresponds to a salt concentration on the order of hundreds of moles per cubic meter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seawater sodium chloride equivalent",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1489,6 +1568,8 @@
       "id": "obs:concentration:entity-seawater-salt-concentration",
       "name": "Seawater sodium chloride equivalent",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Salinity",
       "source_count": 2,
       "sources": [
@@ -1527,6 +1608,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ocean salinity is a useful mid-range electrolyte benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seawater sodium chloride",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1545,6 +1627,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Seawater",
       "source_count": 2,
       "sources": [
@@ -1583,6 +1667,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Common bleach is a strong but not concentrated-lab-scale solution.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Household bleach sodium hypochlorite",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1600,6 +1685,8 @@
       "id": "obs:concentration:entity-bleach-hypochlorite-concentration",
       "name": "Household bleach sodium hypochlorite",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bleach",
       "source_count": 2,
       "sources": [
@@ -1638,6 +1725,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Household vinegar offers a strong everyday acid-concentration example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vinegar acetic acid",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1657,6 +1745,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vinegar",
       "source_count": 2,
       "sources": [
@@ -1695,6 +1785,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Household vinegar is a sub-molar acetic-acid solution.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Table vinegar acetic acid",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1712,6 +1803,8 @@
       "id": "obs:concentration:entity-vinegar-acetic-acid-concentration",
       "name": "Table vinegar acetic acid",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vinegar",
       "source_count": 2,
       "sources": [
@@ -1750,6 +1843,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 3 percent hydrogen peroxide solution is another useful household chemistry benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hydrogen peroxide solution",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1769,6 +1863,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen_peroxide",
       "source_count": 2,
       "sources": [
@@ -1807,6 +1903,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Household ammonia is several molar.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Household ammonia",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1824,6 +1921,8 @@
       "id": "obs:concentration:entity-household-ammonia-concentration",
       "name": "Household ammonia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ammonia_solution",
       "source_count": 2,
       "sources": [
@@ -1862,6 +1961,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Saturated salt brine sits much higher than seawater.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saturated brine",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1880,6 +1980,8 @@
       "qualifiers": {
         "measurement": "molar concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brine",
       "source_count": 2,
       "sources": [
@@ -1918,6 +2020,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Near-saturated brine reaches several moles per liter of sodium chloride.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saturated brine sodium chloride",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1935,6 +2038,8 @@
       "id": "obs:concentration:entity-saturated-brine-nacl",
       "name": "Saturated brine sodium chloride",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brine",
       "source_count": 2,
       "sources": [
@@ -1973,6 +2078,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pure acetone contains over ten thousand moles of molecules per cubic meter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pure acetone molecules",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -1990,6 +2096,8 @@
       "id": "obs:concentration:entity-pure-acetone-concentration",
       "name": "Pure acetone molecules",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Acetone",
       "source_count": 2,
       "sources": [
@@ -2028,6 +2136,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Concentrated sulfuric acid is tens of moles per liter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concentrated sulfuric acid",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -2045,6 +2154,8 @@
       "id": "obs:concentration:entity-concentrated-sulfuric-acid",
       "name": "Concentrated sulfuric acid",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sulfuric_acid",
       "source_count": 2,
       "sources": [
@@ -2083,6 +2194,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pure liquid water corresponds to about 55.5 moles of H2O per liter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pure liquid water molecules",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -2100,6 +2212,8 @@
       "id": "obs:concentration:entity-liquid-water-molarity",
       "name": "Pure liquid water molecules",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -2138,6 +2252,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid water itself is a dense fluid of about 55.5 molar.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pure water molecules",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -2155,6 +2270,8 @@
       "id": "obs:concentration:entity-pure-water-molecule-concentration",
       "name": "Pure water molecules",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -2193,6 +2310,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Liquid water itself is a dense molecular benchmark on the concentration axis.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pure water",
         "ingest_source": "dataset/raw/curated/concentration.json",
@@ -2212,6 +2330,8 @@
       "qualifiers": {
         "measurement": "molecular number concentration"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [

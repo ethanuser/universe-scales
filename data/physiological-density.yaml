@@ -39,6 +39,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Australia
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -86,6 +89,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Canada
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -133,6 +139,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Australia
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -180,6 +189,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brazil
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -227,6 +239,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: United States
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -274,6 +289,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Russia
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -321,6 +339,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: France
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -368,6 +389,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: France
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -414,6 +438,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Germany
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -460,6 +487,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ireland
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -506,6 +536,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: India
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -553,6 +586,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Kenya
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -599,6 +635,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: China
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -645,6 +684,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Japan
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -692,6 +734,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: United Kingdom
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -739,6 +784,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Japan
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -786,6 +834,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saudi Arabia
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -833,6 +884,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rwanda
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -879,6 +933,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vietnam
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -926,6 +983,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Netherlands
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -972,6 +1032,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: India
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -1019,6 +1082,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rwanda
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -1066,6 +1132,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pakistan
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -1113,6 +1182,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Egypt
     ingest_source: dataset/raw/curated/physiological-density.json
@@ -1160,6 +1232,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bangladesh
     ingest_source: dataset/raw/curated/physiological-density.json

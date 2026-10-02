@@ -45,6 +45,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: ATP synthase rotor
     ingest_source: dataset/raw/curated/torque.json
@@ -90,6 +93,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bacterial flagellar motor
     ingest_source: dataset/raw/curated/torque.json
@@ -135,6 +141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: MEMS torsion mirror
     ingest_source: dataset/raw/curated/torque.json
@@ -180,6 +189,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Watch crown winding
     ingest_source: dataset/raw/curated/torque.json
@@ -225,6 +237,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Electric toothbrush motor
     ingest_source: dataset/raw/curated/torque.json
@@ -270,6 +285,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Laptop hinge
     ingest_source: dataset/raw/curated/torque.json
@@ -315,6 +333,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Precision screwdriver
     ingest_source: dataset/raw/curated/torque.json
@@ -360,6 +381,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bottle cap
     ingest_source: dataset/raw/curated/torque.json
@@ -406,6 +430,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: RC servo motor
     ingest_source: dataset/raw/curated/torque.json
@@ -452,6 +479,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Electric screwdriver
     ingest_source: dataset/raw/curated/torque.json
@@ -497,6 +527,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Screwdriver
     ingest_source: dataset/raw/curated/torque.json
@@ -543,6 +576,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Doorknob twist
     ingest_source: dataset/raw/curated/torque.json
@@ -588,6 +624,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hand tightening a jar lid
     ingest_source: dataset/raw/curated/torque.json
@@ -633,6 +672,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Door knob
     ingest_source: dataset/raw/curated/torque.json
@@ -679,6 +721,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Power drill
     ingest_source: dataset/raw/curated/torque.json
@@ -725,6 +770,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Small wrench on a bolt
     ingest_source: dataset/raw/curated/torque.json
@@ -770,6 +818,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Torque wrench for spark plug
     ingest_source: dataset/raw/curated/torque.json
@@ -815,6 +866,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle crank
     ingest_source: dataset/raw/curated/torque.json
@@ -860,6 +914,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle pedal
     ingest_source: dataset/raw/curated/torque.json
@@ -906,6 +963,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle pedal on a climb
     ingest_source: dataset/raw/curated/torque.json
@@ -951,6 +1011,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Outboard motor prop shaft
     ingest_source: dataset/raw/curated/torque.json
@@ -996,6 +1059,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Drill driver
     ingest_source: dataset/raw/curated/torque.json
@@ -1041,6 +1107,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Impact driver
     ingest_source: dataset/raw/curated/torque.json
@@ -1086,6 +1155,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Motorcycle engine
     ingest_source: dataset/raw/curated/torque.json
@@ -1131,6 +1203,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car wheel lug nut
     ingest_source: dataset/raw/curated/torque.json
@@ -1176,6 +1251,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car lug nut
     ingest_source: dataset/raw/curated/torque.json
@@ -1222,6 +1300,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Torque wrench on a car lug nut
     ingest_source: dataset/raw/curated/torque.json
@@ -1267,6 +1348,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Motorcycle engine
     ingest_source: dataset/raw/curated/torque.json
@@ -1313,6 +1397,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Impact driver
     ingest_source: dataset/raw/curated/torque.json
@@ -1358,6 +1445,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Family car engine
     ingest_source: dataset/raw/curated/torque.json
@@ -1403,6 +1493,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car engine
     ingest_source: dataset/raw/curated/torque.json
@@ -1449,6 +1542,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tesla Model 3 motor
     ingest_source: dataset/raw/curated/torque.json
@@ -1494,6 +1590,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sports car engine
     ingest_source: dataset/raw/curated/torque.json
@@ -1539,6 +1638,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Truck axle
     ingest_source: dataset/raw/curated/torque.json
@@ -1585,6 +1687,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Diesel truck engine
     ingest_source: dataset/raw/curated/torque.json
@@ -1630,6 +1735,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Locomotive traction motor
     ingest_source: dataset/raw/curated/torque.json
@@ -1675,6 +1783,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wind turbine pitch actuator
     ingest_source: dataset/raw/curated/torque.json
@@ -1720,6 +1831,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Excavator
     ingest_source: dataset/raw/curated/torque.json
@@ -1766,6 +1880,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 3 MW wind turbine shaft
     ingest_source: dataset/raw/curated/torque.json
@@ -1813,6 +1930,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wind turbine main shaft
     ingest_source: dataset/raw/curated/torque.json
@@ -1858,6 +1978,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wind turbine generator
     ingest_source: dataset/raw/curated/torque.json
@@ -1904,6 +2027,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ship propeller shaft
     ingest_source: dataset/raw/curated/torque.json

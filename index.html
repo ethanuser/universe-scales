@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="importmap">{"imports":{"three":"./js/vendor/three/three.module.min.js"}}</script>
+    <script type="module" src="js/experiences/models.js?v=0940e1d987"></script>
     <title>Universe Scales</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="css/styles.css?v=2.5">
-    <link rel="stylesheet" href="css/mobile.css?v=2.5">
+    <link rel="stylesheet" href="css/styles.css?v=67aa0bc6d2">
+    <link rel="stylesheet" href="css/mobile.css?v=32b300cc8e">
+    <link rel="stylesheet" href="css/experiences.css?v=9169e0140a">
+    <link rel="stylesheet" href="css/audio-experience.css?v=5ff32778dc">
+    <link rel="stylesheet" href="css/perception-experience.css?v=df53354866">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -34,7 +39,7 @@
     <div class="container">
         <header class="header">
             <h1>Universe Scales</h1>
-            <p class="subtitle">Interactive logarithmic visualizations of the universe's dimensions</p>
+            <p class="subtitle">Explore the universe through scale, motion, and perspective</p>
 
             <div class="controls">
                 <div class="control-group control-group--native-selector" aria-hidden="true" hidden inert>
@@ -99,6 +104,8 @@
         </header>
 
         <main class="main">
+            <div id="view-switch" class="view-switch" role="group" aria-label="Visualization mode" hidden></div>
+            <section id="dimension-experience" class="experience" aria-label="Interactive dimension explorer" hidden></section>
             <div id="plot-container" class="plot-container">
                 <svg id="plot-svg"></svg>
                 <div class="zoom-controls" aria-label="Plot zoom and pan controls">
@@ -113,8 +120,8 @@
             <div class="unit-selector-container">
                 <label for="unit-browser-toggle">Unit:</label>
                 <div class="unit-picker">
-                    <button id="unit-browser-toggle" class="unit-browser-toggle" type="button"
-                        aria-expanded="false" aria-controls="unit-browser-panel">
+                    <button id="unit-browser-toggle" class="unit-browser-toggle" type="button" aria-expanded="false"
+                        aria-controls="unit-browser-panel">
                         <span id="unit-browser-current">meters</span>
                         <span class="unit-browser-toggle__chevron" aria-hidden="true">▾</span>
                     </button>
@@ -260,8 +267,8 @@
 
         <footer class="footer">
             <p class="footer-attribution">
-                Made by <a href="https://github.com/ethanNguyenUser" target="_blank">Ethan Nguyen</a> • 1.2 • Last
-                updated: November 29, 2025
+                Made by <a href="https://github.com/ethanuser" target="_blank">Ethan Nguyen</a> • 1.2 • Last
+                updated: April 1, 2026
             </p>
             <p class="footer-attribution">
                 Background music: <a
@@ -296,12 +303,22 @@
         </footer>
     </div>
 
-    <script src="js/constants.js?v=2.5" defer></script>
-    <script src="js/formatting.js?v=2.5" defer></script>
-    <script src="js/editor.js?v=1.9" defer></script>
-    <script src="js/plot.js?v=2.5" defer></script>
-    <script src="js/script.js?v=3.0" defer></script>
-    <script src="js/mobile.js?v=1.9" defer></script>
+    <script src="js/constants.js?v=f64d0fe1ce" defer></script>
+    <script src="js/formatting.js?v=f3379dc71b" defer></script>
+    <script src="js/editor.js?v=617fc5b26a" defer></script>
+    <script src="js/plot.js?v=14f88f7a36" defer></script>
+    <script src="js/experiences/math.js?v=54aaf7588e" defer></script>
+    <script src="js/experiences/controls.js?v=c3382a2eca" defer></script>
+    <script src="js/experiences/spatial.js?v=292f35a7e4" defer></script>
+    <script src="js/experiences/motion-math.js?v=92215d3ea4" defer></script>
+    <script src="js/experiences/motion.js?v=b702ab8126" defer></script>
+    <script src="js/experiences/perception.js?v=c8c3b660af" defer></script>
+    <script src="js/experiences/journey.js?v=65af46bb1a" defer></script>
+    <script src="js/experiences/audio-math.js?v=f55f282587" defer></script>
+    <script src="js/experiences/audio.js?v=aba4f2bb85" defer></script>
+    <script src="js/experiences/controller.js?v=1dd7390aa4" defer></script>
+    <script src="js/script.js?v=21aefc7372" defer></script>
+    <script src="js/mobile.js?v=9b915523c0" defer></script>
 </body>
 
 </html>

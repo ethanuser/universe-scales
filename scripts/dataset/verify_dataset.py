@@ -125,6 +125,11 @@ def verify_sqlite(conn: sqlite3.Connection) -> None:
                     OR COALESCE(oc.content_format, '') = ''
                     OR COALESCE(oc.summary_short, '') = ''
                     OR COALESCE(oc.description_medium, '') = ''
+                    OR COALESCE(o.review_status, '') = ''
+                    OR o.review_status NOT IN ('candidate', 'accepted', 'needs_source', 'needs_description', 'deprecated', 'excluded')
+                    OR COALESCE(o.display_status, '') = ''
+                    OR o.display_status NOT IN ('display', 'hidden')
+                    OR COALESCE(o.quality_flags_json, '') = ''
                     OR NOT EXISTS (
                         SELECT 1 FROM observation_sources os WHERE os.observation_id = o.id
                     )
@@ -202,6 +207,9 @@ def verify_json_exports() -> None:
     assert selected_packets, "writer packet export has no selected items"
     for packet in selected_packets[:10]:
         assert packet["content"]["summary_short"], "writer packet missing summary_short"
+        assert packet["observation"]["review_status"], "writer packet missing review_status"
+        assert packet["observation"]["display_status"], "writer packet missing display_status"
+        assert isinstance(packet["observation"]["quality_flags"], list), "writer packet missing quality_flags"
         assert packet["sources"], "writer packet missing sources"
         assert packet["unit_conversions"], "writer packet missing unit conversions"
         assert packet["content"]["content_format"] == "markdown", "writer packet missing content format"

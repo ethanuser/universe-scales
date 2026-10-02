@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Commercial airline trip across the US
     ingest_source: dataset/raw/curated/micromorts.json
@@ -89,6 +92,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Long car commute
     ingest_source: dataset/raw/curated/micromorts.json
@@ -135,6 +141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle commute
     ingest_source: dataset/raw/curated/micromorts.json
@@ -181,6 +190,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One pack of cigarettes
     ingest_source: dataset/raw/curated/micromorts.json
@@ -227,6 +239,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 100 miles by car
     ingest_source: dataset/raw/curated/micromorts.json
@@ -273,6 +288,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Motorcycle commute
     ingest_source: dataset/raw/curated/micromorts.json
@@ -319,6 +337,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Scuba dive
     ingest_source: dataset/raw/curated/micromorts.json
@@ -365,6 +386,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Running a marathon
     ingest_source: dataset/raw/curated/micromorts.json
@@ -411,6 +435,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Skydiving jump
     ingest_source: dataset/raw/curated/micromorts.json
@@ -457,6 +484,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Scenic helicopter ride
     ingest_source: dataset/raw/curated/micromorts.json
@@ -503,6 +533,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: General anesthesia for elective surgery
     ingest_source: dataset/raw/curated/micromorts.json
@@ -549,6 +582,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Deep cave dive
     ingest_source: dataset/raw/curated/micromorts.json
@@ -595,6 +631,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Giving birth in a high-income country
     ingest_source: dataset/raw/curated/micromorts.json
@@ -641,6 +680,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: BASE jump
     ingest_source: dataset/raw/curated/micromorts.json
@@ -687,6 +729,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A major surgery
     ingest_source: dataset/raw/curated/micromorts.json
@@ -733,6 +778,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Everest summit attempt from base camp
     ingest_source: dataset/raw/curated/micromorts.json

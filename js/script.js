@@ -9,7 +9,7 @@ class UniversalScales {
         this.dimensionCatalog = [];
         this.dimensionCatalogBySlug = new Map();
         this.exchangeRates = null;
-        this.notationMode = 'scientific'; // 'scientific', 'mathematical', 'human'
+        this.notationMode = 'scientific'; // 'scientific', 'mathematical', 'human', 'si'
 
         // Initialize formatter
         this.formatter = new NumberFormatter(this.notationMode);
@@ -59,6 +59,10 @@ class UniversalScales {
         this.musicToggle = document.getElementById('music-toggle');
         this.backgroundMusic = document.getElementById('background-music');
         this.tooltip = document.getElementById('tooltip');
+        this.tooltip?.addEventListener('pointerenter', () => this.cancelTooltipHide());
+        this.tooltip?.addEventListener('pointerleave', () => {
+            if (!this.tooltipPinned) this.scheduleTooltipHide();
+        });
         this.plotContainer = document.getElementById('plot-container');
         this.imageModal = document.getElementById('image-modal');
         this.imageModalImg = document.getElementById('image-modal-img');
@@ -101,6 +105,7 @@ class UniversalScales {
 
         // Initialize plot renderer
         this.plot = new PlotRenderer(this);
+        this.experiences = new DimensionExperiences(this);
 
         // Load dimension metadata before URL handling so the selector is populated dynamically
         await this.loadDimensionCatalog();
@@ -341,6 +346,7 @@ class UniversalScales {
     }
 
     setCurrentUnit(unitName, { closePicker = true } = {}) {
+        this.hideUnitConversions();
         this.currentUnit = unitName;
         if (this.unitSelect) {
             this.unitSelect.value = unitName;
@@ -353,6 +359,13 @@ class UniversalScales {
         this.plot.lastTickDomain = null;
         this.plot.lastTickLogRange = null;
         this.plot.updatePlot();
+        if (this.tooltip?.classList.contains('visible') && this.tooltipItem) {
+            const value = this.tooltip.querySelector('.tooltip-value');
+            value.innerHTML = this.formatTooltipValueHTML(
+                this.formatValueForCurrentUnit(this.tooltipItem.value, 2, true),
+                this.getCurrentUnitDefinition()?.symbol || '');
+            this.enableUnitConversions(value, this.tooltipItem.value);
+        }
         if (closePicker) {
             this.setUnitBrowserOpen(false);
         }
@@ -404,6 +417,8 @@ class UniversalScales {
     }
 
     async setDimension(slug) {
+        this.experiences?.pause();
+        this.hideTooltip();
         this.currentDimension = slug;
         if (this.dimensionSelect) {
             this.dimensionSelect.value = slug;
@@ -502,7 +517,9 @@ class UniversalScales {
 
         // Hide tooltips when clicking elsewhere (but allow clicks on tooltip itself)
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.plot-item') && !e.target.closest('.label-hover-area') && !e.target.closest('.tooltip') && !e.target.closest('.image-modal')) {
+            if (!e.target.closest('.plot-item') && !e.target.closest('.label-hover-area') &&
+                !e.target.closest('.tooltip') && !e.target.closest('.image-modal') &&
+                !e.target.closest('.unit-value-trigger') && !e.target.closest('.unit-conversions-popover')) {
                 this.hideTooltip();
             }
         });
@@ -549,7 +566,9 @@ class UniversalScales {
     }
 
     initNotation() {
-        const savedMode = localStorage.getItem('notationMode') || 'scientific';
+        const storedMode = localStorage.getItem('notationMode') || 'scientific';
+        const savedMode = ['scientific', 'mathematical', 'human', 'si'].includes(storedMode)
+            ? storedMode : 'scientific';
         this.notationMode = savedMode;
         this.formatter.setNotationMode(savedMode);
 
@@ -596,6 +615,7 @@ class UniversalScales {
     }
 
     toggleMusic() {
+        this.experiences?.audio.stop();
         // Remove enableAudio listeners if they exist (user is explicitly toggling)
         if (this.enableAudioHandler) {
             document.removeEventListener('click', this.enableAudioHandler);
@@ -626,7 +646,7 @@ class UniversalScales {
         if (this.usesLinearDisplayValues()) {
             return;
         }
-        const modes = ['scientific', 'mathematical', 'human'];
+        const modes = ['scientific', 'mathematical', 'human', 'si'];
         const currentIndex = modes.indexOf(this.notationMode);
         this.notationMode = modes[(currentIndex + 1) % modes.length];
         this.formatter.setNotationMode(this.notationMode);
@@ -638,6 +658,7 @@ class UniversalScales {
         localStorage.setItem('notationMode', this.notationMode);
 
         // Update plot to reflect new notation
+        this.experiences?.refresh();
         this.plot.updatePlotAfterZoom();
     }
 
@@ -680,6 +701,164 @@ class UniversalScales {
 
     getCurrentUnitDefinition() {
         return this.dimensionData?.units?.find(unit => unit.name === this.currentUnit) || null;
+    }
+
+    getAvailableUnits() {
+        return (this.dimensionData?.units || []).filter((unit, index) =>
+            !this.editor?.unitOverrides?.[this.currentDimension]?.[index]?.isDeleted &&
+            this.isUnitCompatibleWithCurrentScale(unit));
+    }
+
+    formatValueInUnit(value, unit) {
+        const converted = unit.special_conversion === 'sound_intensity_db'
+            ? (value > 0 ? 10 * Math.log10(value / 1e-12) : Number.NEGATIVE_INFINITY)
+            : this.convertBaseValueToUnit(value, unit);
+        if (unit.special_conversion === 'sound_intensity_db') {
+            return this.formatter.formatLinearNumber(converted, 2);
+        }
+        return this.notationMode === 'si' && !this.isLinearScale()
+            ? this.formatter.formatSIValue(converted, unit.symbol, 2)
+            : this.formatNumber(converted, 2, true);
+    }
+
+    formatValueInUnitHTML(value, unit) {
+        const formatted = this.formatValueInUnit(value, unit);
+        if (this.notationMode === 'si' && !this.isLinearScale() && unit.special_conversion !== 'sound_intensity_db')
+            return this.formatSIValueHTML(formatted);
+        const valueHtml = !this.isLinearScale() && this.notationMode === 'mathematical' &&
+            unit.special_conversion !== 'sound_intensity_db'
+            ? formatted : this.escapeHtml(formatted);
+        const symbolHtml = this.notationMode === 'si' && !this.isLinearScale() && unit.special_conversion !== 'sound_intensity_db'
+            ? '' : this.formatUnitSymbolHTML(unit.symbol);
+        return symbolHtml ? `${valueHtml} ${symbolHtml}` : valueHtml;
+    }
+
+    cancelTooltipHide() {
+        clearTimeout(this.tooltipHideTimer);
+        this.tooltipHideTimer = null;
+    }
+
+    scheduleTooltipHide() {
+        this.cancelTooltipHide();
+        this.tooltipHideTimer = setTimeout(() => {
+            if (!this.tooltipPinned && !this.unitPopoverSelecting && !this.isNearUnitConversions())
+                this.hideTooltip();
+        }, 220);
+    }
+
+    isNearUnitConversions() {
+        if (!this.unitPopover) return false;
+        if (this.unitPopoverSelecting || document.activeElement === this.unitPopoverTrigger) return true;
+        const pointer = this.unitPopoverPointer;
+        if (!pointer) return false;
+        const near = element => {
+            if (!element?.isConnected) return false;
+            const rect = element.getBoundingClientRect();
+            return pointer.x >= rect.left - 24 && pointer.x <= rect.right + 24 &&
+                pointer.y >= rect.top - 24 && pointer.y <= rect.bottom + 24;
+        };
+        return near(this.unitPopover) || near(this.unitPopoverTrigger);
+    }
+
+    hideUnitConversions() {
+        clearTimeout(this.unitPopoverTimer);
+        this.unitPopoverTimer = null;
+        if (this.unitPopoverPointerMove) document.removeEventListener('pointermove', this.unitPopoverPointerMove);
+        if (this.unitPopoverPointerUp) document.removeEventListener('pointerup', this.unitPopoverPointerUp);
+        this.unitPopoverPointerMove = this.unitPopoverPointerUp = null;
+        this.unitPopoverSelecting = false;
+        this.unitPopover?.remove();
+        this.unitPopover = null;
+        this.unitPopoverTrigger = null;
+    }
+
+    scheduleUnitConversionsHide() {
+        clearTimeout(this.unitPopoverTimer);
+        this.unitPopoverTimer = setTimeout(() => {
+            if (!this.isNearUnitConversions()) this.hideUnitConversions();
+        }, 450);
+    }
+
+    showUnitConversions(anchor, baseValue) {
+        const units = this.getAvailableUnits().filter(unit => unit.name !== this.currentUnit);
+        if (!units.length || !anchor.isConnected) return;
+        this.hideUnitConversions();
+        this.cancelTooltipHide();
+        const popover = document.createElement('div');
+        popover.className = 'unit-conversions-popover';
+        popover.setAttribute('role', 'tooltip');
+        popover.innerHTML = `<strong>Other units</strong><div class="unit-conversions-popover__list">${units.map(unit =>
+            `<div class="unit-conversions-popover__row"><span>${this.escapeHtml(unit.name)}</span>` +
+            `<span>${this.formatValueInUnitHTML(baseValue, unit)}</span></div>`
+        ).join('')}</div>`;
+        popover.addEventListener('pointerenter', () => {
+            clearTimeout(this.unitPopoverTimer);
+            this.cancelTooltipHide();
+        });
+        popover.addEventListener('pointerleave', () => {
+            this.scheduleUnitConversionsHide();
+            if (!this.tooltipPinned && this.tooltip.contains(anchor)) this.scheduleTooltipHide();
+        });
+        document.body.append(popover);
+        this.unitPopover = popover;
+        this.unitPopoverTrigger = anchor;
+        this.unitPopoverPointerMove = event => {
+            this.unitPopoverPointer = { x: event.clientX, y: event.clientY };
+            if (this.isNearUnitConversions()) {
+                clearTimeout(this.unitPopoverTimer);
+                this.cancelTooltipHide();
+            } else this.scheduleUnitConversionsHide();
+        };
+        this.unitPopoverPointerUp = () => {
+            this.unitPopoverSelecting = false;
+            if (!this.isNearUnitConversions()) this.scheduleUnitConversionsHide();
+        };
+        popover.addEventListener('pointerdown', () => {
+            this.unitPopoverSelecting = true;
+            clearTimeout(this.unitPopoverTimer);
+            this.cancelTooltipHide();
+        });
+        document.addEventListener('pointermove', this.unitPopoverPointerMove, { passive: true });
+        document.addEventListener('pointerup', this.unitPopoverPointerUp);
+        const rect = anchor.getBoundingClientRect();
+        const width = popover.getBoundingClientRect().width;
+        popover.style.left = `${Math.max(8, Math.min(rect.left, innerWidth - width - 8))}px`;
+        const height = popover.getBoundingClientRect().height;
+        popover.style.top = `${rect.bottom + height + 8 < innerHeight ? rect.bottom + 6 :
+            Math.max(8, rect.top - height - 6)}px`;
+        this.typesetMathIfReady(popover);
+    }
+
+    enableUnitConversions(anchor, baseValue) {
+        anchor.classList.remove('unit-value-trigger');
+        anchor.removeAttribute('role');
+        anchor.removeAttribute('aria-label');
+        anchor.removeAttribute('tabindex');
+        anchor.onpointerenter = anchor.onpointerleave = anchor.onfocus = anchor.onblur = null;
+        anchor.onkeydown = anchor.onclick = null;
+        if (this.getAvailableUnits().length < 2) return;
+        anchor.classList.add('unit-value-trigger');
+        anchor.tabIndex = 0;
+        anchor.setAttribute('role', 'button');
+        anchor.setAttribute('aria-label', 'Show this value in other units');
+        anchor.onpointerenter = event => {
+            this.unitPopoverPointer = { x: event.clientX, y: event.clientY };
+            this.showUnitConversions(anchor, baseValue);
+        };
+        anchor.onpointerleave = () => this.scheduleUnitConversionsHide();
+        anchor.onfocus = () => this.showUnitConversions(anchor, baseValue);
+        anchor.onblur = () => this.scheduleUnitConversionsHide();
+        anchor.onkeydown = event => {
+            if (event.key === 'Escape') this.hideUnitConversions();
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                this.showUnitConversions(anchor, baseValue);
+            }
+        };
+        anchor.onclick = event => {
+            event.stopPropagation();
+            this.showUnitConversions(anchor, baseValue);
+        };
     }
 
     convertBaseValueToUnit(valueBase, unit) {
@@ -854,15 +1033,17 @@ class UniversalScales {
     }
 
     async loadDimension(dimension) {
+        const requestId = this.dimensionRequestId = (this.dimensionRequestId || 0) + 1;
         try {
-            let response = await fetch(`exports/frontend/${dimension}.yaml`);
+            let response = await fetch(`exports/frontend/${dimension}.yaml`, { cache: 'no-cache' });
             if (!response.ok) {
-                response = await fetch(`data/${dimension}.yaml`);
+                response = await fetch(`data/${dimension}.yaml`, { cache: 'no-cache' });
             }
             if (!response.ok) {
                 throw new Error(`Missing dimension payload for ${dimension}`);
             }
             const yamlText = await response.text();
+            if (requestId !== this.dimensionRequestId) return;
             this.dimensionData = jsyaml.load(yamlText);
             this.normalizeDimensionUnitSymbols();
             if (dimension === 'sound-intensity' && Array.isArray(this.dimensionData.units)) {
@@ -925,6 +1106,8 @@ class UniversalScales {
             this.updateDimensionBrowserSelection();
             this.updateDimensionToggleLabel();
 
+            this.experiences?.onDimension();
+
             // Update plot
             this.plot.updatePlot();
 
@@ -943,6 +1126,7 @@ class UniversalScales {
             }
 
         } catch (error) {
+            if (requestId !== this.dimensionRequestId) return;
             console.error('Error loading dimension:', error);
             this.showError(`Failed to load ${dimension} data`);
         }
@@ -1053,6 +1237,9 @@ class UniversalScales {
     }
 
     showTooltip(event, item, pinned = false) {
+        this.cancelTooltipHide();
+        this.hideUnitConversions();
+        this.tooltipItem = item;
         const unit = this.getCurrentUnitDefinition();
 
         // Determine if this is a touch/mobile device
@@ -1080,6 +1267,7 @@ class UniversalScales {
         const unitSymbol = unit ? unit.symbol : '';
         const tooltipValueElement = this.tooltip.querySelector('.tooltip-value');
         tooltipValueElement.innerHTML = this.formatTooltipValueHTML(formattedValue, unitSymbol);
+        this.enableUnitConversions(tooltipValueElement, item.value);
 
         const descriptionElement = this.tooltip.querySelector('.tooltip-description');
         const descriptionText = item.description || item.description_long || item.description_medium || item.summary_short || '';
@@ -1089,6 +1277,7 @@ class UniversalScales {
         } else {
             descriptionElement.textContent = '';
         }
+        this.experiences?.addTooltip(item, descriptionElement);
         const sourceLink = this.tooltip.querySelector('.tooltip-source');
         // isTouchPrimary is already defined above
         const showSourceText = isTouchPrimary || pinned; // Show source on mobile or when pinned on desktop
@@ -1194,7 +1383,7 @@ class UniversalScales {
                 this.tooltip.style.transform = '';
                 // Enable pointer events when pinned so source link is clickable
                 // Also increase z-index when pinned to ensure it's on top
-                this.tooltip.style.pointerEvents = pinned ? 'auto' : 'none';
+                this.tooltip.style.pointerEvents = 'auto';
                 // Use CSS variable for z-index (matches --z-tooltip-pinned in styles.css)
                 const tooltipZIndex = getComputedStyle(document.documentElement)
                     .getPropertyValue('--z-tooltip-pinned').trim() || '4000';
@@ -1306,6 +1495,10 @@ class UniversalScales {
     }
 
     hideTooltip() {
+        this.cancelTooltipHide();
+        this.hideUnitConversions();
+        this.tooltipItem = null;
+        this.experiences?.audio.stop();
         this.tooltip.classList.remove('visible');
         // Reset mobile-specific class
         this.tooltip.classList.remove('mobile-pinned');
@@ -1500,6 +1693,9 @@ class UniversalScales {
         if (this.isSoundIntensityDecibelUnit()) {
             return this.formatter.formatLinearNumber(convertedValue, Math.max(precision, forTooltip ? 1 : 0));
         }
+        if (this.notationMode === 'si' && !this.isLinearScale()) {
+            return this.formatter.formatSIValue(convertedValue, this.getCurrentUnitDefinition()?.symbol || '', precision);
+        }
         return this.formatNumber(convertedValue, precision, forTooltip);
     }
 
@@ -1507,6 +1703,9 @@ class UniversalScales {
         if (this.isSoundIntensityDecibelUnit()) {
             const convertedValue = value > 0 ? 10 * Math.log10(value / 1e-12) : Number.NEGATIVE_INFINITY;
             return this.formatter.formatLinearNumber(convertedValue, precision);
+        }
+        if (this.notationMode === 'si' && !this.isLinearScale()) {
+            return this.formatter.formatSIValue(value, this.getCurrentUnitDefinition()?.symbol || '', precision);
         }
         return this.formatNumber(value, precision);
     }
@@ -1521,6 +1720,7 @@ class UniversalScales {
     }
 
     resizePlot() {
+        if (this.experiences?.active) { this.experiences.refresh(); return; }
         // Preserve current zoom state before resizing
         const currentDomain = this.xScale.domain();
         const wasZoomed = this.originalXDomain && this.isDomainZoomed(currentDomain, this.originalXDomain);
@@ -1660,12 +1860,12 @@ class UniversalScales {
         });
 
         // Filter out any items with invalid names or values
-        return allItems.filter(item => {
+        return ScaleMath.displayItems(allItems.filter(item => {
             const value = parseFloat(item.value);
             const hasValidName = item.name && item.name.trim().length > 0;
             const hasValidValue = !isNaN(value) && isFinite(value) && value !== 0;
             return hasValidName && hasValidValue;
-        });
+        }));
     }
 
     updateUnitDescription() {
@@ -1833,11 +2033,20 @@ class UniversalScales {
     }
 
     formatTooltipValueHTML(formattedValue, unitSymbol) {
+        if (this.notationMode === 'si' && !this.isLinearScale() && !this.isSoundIntensityDecibelUnit()) {
+            return this.formatSIValueHTML(formattedValue);
+        }
         const valueHtml = (!this.usesLinearDisplayValues() && this.notationMode === 'mathematical')
             ? formattedValue
             : this.escapeHtml(formattedValue);
         const unitHtml = this.formatUnitSymbolHTML(unitSymbol);
         return unitHtml ? `${valueHtml} ${unitHtml}` : valueHtml;
+    }
+
+    formatSIValueHTML(formattedValue) {
+        const space = String(formattedValue).indexOf(' ');
+        if (space < 0) return this.escapeHtml(formattedValue);
+        return `${this.escapeHtml(formattedValue.slice(0, space))} ${this.formatUnitSymbolHTML(formattedValue.slice(space + 1))}`;
     }
 
     toSuperscript(value) {
@@ -2199,7 +2408,8 @@ class UniversalScales {
         this.imageModalImg.style.opacity = '0.5';
 
         // Get full-resolution image path
-        const fullPath = await this.getFullImagePath(imagePath);
+        const fullPath = /\.(?:jpe?g|png|webp|svg)(?:\?|$)/i.test(imagePath)
+            ? imagePath : await this.getFullImagePath(imagePath);
         if (fullPath) {
             const img = new Image();
             img.onload = () => {
@@ -2990,6 +3200,10 @@ class UniversalScales {
 
         // Function to check visibility and update sticky axis
         const checkVisibility = () => {
+            if (this.experiences?.active) {
+                stickyAxisContainer.classList.remove('is-visible');
+                return;
+            }
             const plotRect = plotContainer.getBoundingClientRect();
             const stickyRect = stickyAxisContainer.getBoundingClientRect();
             const stickyAxisHeight = stickyRect.height || 30; // Height of sticky axis

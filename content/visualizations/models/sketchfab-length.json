@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "sketchfab-water-molecule",
+      "name": "Water Molecule",
+      "uid": "e181944932084b5dbb4d5b625a5e9b10",
+      "author": "MehdiMM",
+      "license": "by",
+      "note": "Ball-and-stick illustration of H2O. Sphere radii and bond thickness are illustrative; the listed length is the molecular span."
+    },
+    {
+      "id": "sketchfab-glucose-molecule",
+      "name": "Glucose Molecule",
+      "uid": "2b4c96af7c0c41debf1bd654c1103a00",
+      "author": "brutebandit",
+      "license": "by",
+      "note": "Molecular illustration, not an electron-density surface. The longest visible axis is used as an approximate span."
+    },
+    {
+      "id": "sketchfab-dna-helix",
+      "name": "DNA Helix Width",
+      "uid": "3e78c4697cd44d949db99d72733369c2",
+      "author": "alexanderesmith",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "flatten_static": true
+      },
+      "note": "An atom-colored segment of human B-DNA with alternating A\u2013T and C\u2013G pairs, credited to alexanderesmith. The listed 2 nm measures double-helix width, not the length of this arbitrary segment; hydrogen is white, oxygen red, nitrogen blue, carbon gray, and phosphorus yellow."
+    },
+    {
+      "id": "sketchfab-insulin-monomer",
+      "name": "Protein (Small)",
+      "uid": "d5e97a4e04194cc9878404a6b43e7362",
+      "author": "sduce",
+      "license": "by",
+      "note": "A human insulin monomer, not an interchangeable model of every small protein. The listed 5 nm is a representative protein scale, not a measured diameter of this conformer; its longest visible mesh extent is normalized to that illustrative value."
+    },
+    {
+      "id": "sketchfab-bacterium-teal",
+      "name": "Bacteria",
+      "uid": "75ae189551e94d59aedce00104217533",
+      "author": "andrewfrueh",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "measure_fraction": 0.7928,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.4
+      },
+      "note": "A rod-shaped bacterium bristling with short pili, in a muted teal (E. coli has no natural color; this is an illustration convention). Its body is calibrated to the listed 2 micrometer length of E. coli. Its flagella are shortened to fit the explorer; real E. coli flagella trail several times the body length."
+    },
+    {
+      "id": "sketchfab-red-blood-cell",
+      "presentation": {
+        "measure_axis": "x",
+        "pre_rotation": {
+          "x": 50
+        }
+      },
+      "name": "Red Blood Cell",
+      "uid": "1a1bbd5e3cd746888232fefa46b3f7d1",
+      "author": "elearning.imu",
+      "license": "by",
+      "note": "Biconcave red blood cell from an educational morphology model. The listed size refers to cell diameter."
+    },
+    {
+      "id": "sketchfab-black-ant",
+      "name": "Ant",
+      "uid": "54db3a0ee3c947168c7f3755ca684217",
+      "author": "3d-render.nl",
+      "license": "by",
+      "note": "Representative black ant; body lengths differ greatly among ant species."
+    },
+    {
+      "id": "sketchfab-housefly-v2",
+      "name": "Housefly",
+      "uid": "5fe7cbd25f9a446d8bae005893d010dd",
+      "author": "Schmoldt5000",
+      "license": "by",
+      "replaces": "sketchfab-housefly",
+      "note": "Adult Musca domestica with anatomically recognizable body, legs and wings. The source display pedestal is excluded. Its body-axis extent is an approximate proxy for the listed body length, not a measured specimen.",
+      "presentation": {
+        "remove_nodes": [
+          "Cylinder001_Material #175_0"
+        ],
+        "measure_axis": "z",
+        "yaw": 90
+      }
+    },
+    {
+      "id": "sketchfab-butterfly-open",
+      "name": "Butterfly Wingspan",
+      "uid": "c147ba066f2b449d836cb73c6cebf663",
+      "author": "victorberdugo1",
+      "license": "by",
+      "replaces": "sketchfab-butterfly",
+      "note": "Open-wing monarch illustration. The wingtip-to-wingtip mesh extent represents the listed wingspan."
+    },
+    {
+      "id": "sketchfab-human-anatomical",
+      "name": "Human Height",
+      "uid": "15a422001834483c9750ce6117d59cc1",
+      "author": "Dessen",
+      "license": "by",
+      "replaces": "sketchfab-human-scan",
+      "note": "Neutral-pose human anatomy study. The mesh is normalized to the representative 1.7 m height, not presented as a measurement of the artist's reference."
+    },
+    {
+      "id": "sketchfab-domestic-cat",
+      "name": "Cat Length",
+      "uid": "baa1120483c844e6bce9744f3f868c63",
+      "author": "rt699448",
+      "license": "by",
+      "replaces": "cat",
+      "enabled": true,
+      "note": "User-selected domestic cat; the 46 cm dataset length is nose to rump and excludes the visible tail. The modeled body is estimated as 84% of the source mesh's longest bound."
+    },
+    {
+      "id": "sketchfab-giraffe",
+      "name": "Giraffe Height",
+      "uid": "522c042aad9f4348a74c2985ec3f99f9",
+      "author": "BlueMesh",
+      "license": "by",
+      "note": "Representative standing giraffe. The model is scaled by height, not claimed to depict a measured individual."
+    },
+    {
+      "id": "sketchfab-blue-whale",
+      "name": "Blue Whale",
+      "uid": "d24d19021c724c3a9134eebcb76b0e0f",
+      "author": "ostapblendercg",
+      "license": "by",
+      "note": "Textured adult blue-whale illustration, selected for a recognizable side silhouette. The dataset value is a representative body length."
+    },
+    {
+      "id": "sketchfab-eiffel-tower-v2",
+      "presentation": {
+        "measure_axis": "y",
+        "layout_width_factor": 0.48,
+        "tint": "#9b8067",
+        "roughness": 0.3,
+        "metalness": 0.75,
+        "environment": 1.1
+      },
+      "name": "Eiffel Tower",
+      "uid": "8553f94d06e24cb4b0fde1080f281674",
+      "author": "Lambo_SC04",
+      "license": "by",
+      "replaces": "sketchfab-eiffel-tower",
+      "enabled": true,
+      "note": "User-selected lattice Eiffel Tower; vertical mesh height represents the listed 330 m landmark height."
+    },
+    {
+      "id": "sketchfab-burj-khalifa",
+      "name": "Burj Khalifa",
+      "uid": "59e6dd74e5f647158de568b5a7f9cab7",
+      "author": "noears6",
+      "license": "by",
+      "note": "Architectural illustration of Burj Khalifa. The listed dimension is total building height."
+    },
+    {
+      "id": "sketchfab-football-field",
+      "name": "Football Field",
+      "uid": "8aa98f842d5341d796f80804c86ae11a",
+      "author": "johnnokomis",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "measure_fraction": 0.75,
+        "pitch": 30,
+        "layout_width_factor": 1.4
+      },
+      "note": "A drone photogrammetry scan of the football field at Milton Frank Stadium in Huntsville, Alabama, cropped to the playing surface; stands, track, lights, and the noisily scanned goalposts were removed. The goal-line-to-goal-line span, 100 yards (91.44 m), is calibrated to the listed length; it is about three quarters of the mesh, which also includes both end zones and a strip of turf beyond them."
+    },
+    {
+      "id": "sketchfab-statue-of-liberty-monument",
+      "name": "Statue of Liberty",
+      "uid": "e899267a0951468aaa868e5daf22c290",
+      "author": "e-sfera (skolskaknjiga)",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "y",
+        "layout_width_factor": 1.1,
+        "focus_scale_factor": 1.3,
+        "pitch": 12
+      },
+      "note": "e-sfera's authored model of the whole monument: the copper statue on Richard Morris Hunt's granite pedestal, standing inside the star-shaped walls of Fort Wood. Its full height, from the ground at the fort to the torch, is calibrated to the listed 92.99 m; in the model the statue is half of that height, matching the real 46.05 m statue on 46.94 m of pedestal and foundation. Details are simplified for a low-poly model."
+    }
+  ]
+}

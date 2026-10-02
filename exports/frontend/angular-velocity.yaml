@@ -41,6 +41,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pluto orbit around the Sun
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -87,6 +90,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mars orbit around the Sun
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -134,6 +140,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth orbit around the Sun
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -181,6 +190,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Venus orbit around the Sun
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -228,6 +240,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mercury orbit around the Sun
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -275,6 +290,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon orbit
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -322,6 +340,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon orbit around Earth
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -369,6 +390,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth rotation
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -415,6 +439,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hour hand
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -462,6 +489,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hour hand
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -509,6 +539,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saturn rotation
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -556,6 +589,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jupiter rotation
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -603,6 +639,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: ISS orbit
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -649,6 +688,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Minute hand
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -696,6 +738,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Minute hand
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -743,6 +788,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: London Eye
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -789,6 +837,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Second hand
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -835,6 +886,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Microwave turntable
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -881,6 +935,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 33 1/3 rpm record
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -927,6 +984,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 45 rpm vinyl record
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -973,6 +1033,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 78 rpm record
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1019,6 +1082,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ceiling fan
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1065,6 +1131,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ceiling fan
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1111,6 +1180,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle wheel at 20 km/h
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1157,6 +1229,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle wheel at city speed
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1203,6 +1278,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bicycle wheel
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1249,6 +1327,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car wheel at 60 mph
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1295,6 +1376,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Washing machine spin
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1342,6 +1426,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Washing machine spin cycle
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1388,6 +1475,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car engine
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1435,6 +1525,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blender blade
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1481,6 +1574,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hard drive platter at 5400 rpm
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1527,6 +1623,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Drone propeller
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1573,6 +1672,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hard drive platter at 7200 rpm
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1619,6 +1721,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hard drive spindle
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1666,6 +1771,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pulsar
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1713,6 +1821,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fast gas turbine
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1759,6 +1870,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blender blade
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1805,6 +1919,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fast millisecond pulsar
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1852,6 +1969,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fastest known pulsar
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1898,6 +2018,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ultracentrifuge rotor
     ingest_source: dataset/raw/curated/angular-velocity.json
@@ -1944,6 +2067,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dentist drill turbine
     ingest_source: dataset/raw/curated/angular-velocity.json

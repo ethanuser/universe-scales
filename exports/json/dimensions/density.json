@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic baryonic density of intergalactic space.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Intergalactic medium",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -46,6 +47,8 @@
       "qualifiers": {
         "measurement": "characteristic bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intergalactic_medium",
       "source_count": 2,
       "sources": [
@@ -84,6 +87,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic density of the diffuse interstellar medium.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Interstellar medium",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -99,6 +103,8 @@
       "qualifiers": {
         "measurement": "characteristic bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Interstellar_medium",
       "source_count": 2,
       "sources": [
@@ -137,6 +143,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic mass density of an ultra-high laboratory vacuum.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Laboratory ultra-high vacuum",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -152,6 +159,8 @@
       "qualifiers": {
         "measurement": "residual gas density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vacuum",
       "source_count": 2,
       "sources": [
@@ -190,6 +199,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Order-of-magnitude density of the upper thermosphere near low Earth orbit.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thermosphere at ISS altitude",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -206,6 +216,8 @@
         "condition": "around 400 km altitude",
         "measurement": "bulk gas density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Thermosphere",
       "source_count": 2,
       "sources": [
@@ -244,6 +256,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of hydrogen gas near standard conditions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hydrogen gas",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -259,6 +272,8 @@
       "qualifiers": {
         "measurement": "gas density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen",
       "source_count": 2,
       "sources": [
@@ -297,6 +312,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of helium gas near standard conditions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Helium gas",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -312,6 +328,8 @@
       "qualifiers": {
         "measurement": "gas density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helium",
       "source_count": 2,
       "sources": [
@@ -350,6 +368,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic bulk density of a very light silica aerogel.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silica aerogel",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -365,6 +384,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aerogel",
       "source_count": 2,
       "sources": [
@@ -403,6 +424,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of dry air near sea level under standard conditions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Air at sea level",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -419,6 +441,8 @@
         "condition": "sea level standard atmosphere",
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Density_of_air",
       "source_count": 2,
       "sources": [
@@ -457,6 +481,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative density of dry air at sea level.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dry air at sea level",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -472,6 +497,8 @@
       "qualifiers": {
         "measurement": "gas density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Density_of_air",
       "source_count": 2,
       "sources": [
@@ -510,6 +537,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative bulk density of expanded polystyrene foam.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Styrofoam",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -525,6 +553,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Expanded_polystyrene",
       "source_count": 2,
       "sources": [
@@ -563,6 +593,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic bulk density of balsa wood.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Balsa wood",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -578,6 +609,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Balsa",
       "source_count": 2,
       "sources": [
@@ -616,6 +649,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic bulk density of cork.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cork",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -631,6 +665,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cork_(material)",
       "source_count": 2,
       "sources": [
@@ -669,6 +705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative bulk density of pine wood.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pine wood",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -684,6 +721,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pine",
       "source_count": 2,
       "sources": [
@@ -722,6 +761,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Average density of Saturn.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saturn average density",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -737,6 +777,8 @@
       "qualifiers": {
         "measurement": "mean density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saturn",
       "source_count": 2,
       "sources": [
@@ -775,6 +817,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic bulk density of oak wood.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Oak wood",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -790,6 +833,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oak",
       "source_count": 2,
       "sources": [
@@ -828,6 +873,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic bulk density of olive oil.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Olive oil",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -843,6 +889,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Olive_oil",
       "source_count": 2,
       "sources": [
@@ -881,6 +929,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of ordinary ice near its melting point.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -896,6 +945,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ice",
       "source_count": 2,
       "sources": [
@@ -934,6 +985,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative average density of a human body.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human body",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -949,6 +1001,8 @@
       "qualifiers": {
         "measurement": "average body density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body",
       "source_count": 2,
       "sources": [
@@ -987,6 +1041,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of liquid water near 4 C.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid water",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1003,6 +1058,8 @@
         "condition": "near 4 C",
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -1041,6 +1098,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Typical density of seawater.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sea water",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1056,6 +1114,8 @@
       "qualifiers": {
         "measurement": "liquid density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Seawater",
       "source_count": 2,
       "sources": [
@@ -1094,6 +1154,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Typical density of milk.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milk",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1109,6 +1170,8 @@
       "qualifiers": {
         "measurement": "liquid density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milk",
       "source_count": 2,
       "sources": [
@@ -1147,6 +1210,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mean density of the Sun.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun average density",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1162,6 +1226,8 @@
       "qualifiers": {
         "measurement": "mean density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -1200,6 +1266,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Typical density of honey.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Honey",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1215,6 +1282,8 @@
       "qualifiers": {
         "measurement": "liquid density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Honey",
       "source_count": 2,
       "sources": [
@@ -1253,6 +1322,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative bulk density of normal concrete.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concrete",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1268,6 +1338,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Concrete",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1378,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of aluminium metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aluminium",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1321,6 +1394,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -1359,6 +1434,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic density of granite.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Granite",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1374,6 +1450,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Granite",
       "source_count": 2,
       "sources": [
@@ -1412,6 +1490,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mean density of Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth average density",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1427,6 +1506,8 @@
       "qualifiers": {
         "measurement": "mean density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Earth",
       "source_count": 2,
       "sources": [
@@ -1465,6 +1546,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative bulk density of steel.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Steel",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1480,6 +1562,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Steel",
       "source_count": 2,
       "sources": [
@@ -1518,6 +1602,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of iron metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Iron",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1533,6 +1618,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Iron",
       "source_count": 2,
       "sources": [
@@ -1571,6 +1658,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of copper metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Copper",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1586,6 +1674,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Copper",
       "source_count": 2,
       "sources": [
@@ -1624,6 +1714,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of silver metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Silver",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1639,6 +1730,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Silver",
       "source_count": 2,
       "sources": [
@@ -1677,6 +1770,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of lead metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lead",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1692,6 +1786,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lead",
       "source_count": 2,
       "sources": [
@@ -1730,6 +1826,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of liquid mercury.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mercury",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1745,6 +1842,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mercury_(element)",
       "source_count": 2,
       "sources": [
@@ -1783,6 +1882,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of uranium metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Uranium",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1798,6 +1898,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Uranium",
       "source_count": 2,
       "sources": [
@@ -1836,6 +1938,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of tungsten metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tungsten",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1851,6 +1954,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tungsten",
       "source_count": 2,
       "sources": [
@@ -1889,6 +1994,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of gold metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gold",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1904,6 +2010,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gold",
       "source_count": 2,
       "sources": [
@@ -1942,6 +2050,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Density of osmium metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Osmium",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -1957,6 +2066,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Osmium",
       "source_count": 2,
       "sources": [
@@ -1995,6 +2106,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic density near the center of the Sun.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun core",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -2010,6 +2122,8 @@
       "qualifiers": {
         "measurement": "core density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2048,6 +2162,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic average density of white dwarf matter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "White dwarf matter",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -2063,6 +2178,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/White_dwarf",
       "source_count": 2,
       "sources": [
@@ -2101,6 +2218,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic average density of neutron star matter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neutron star matter",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -2116,6 +2234,8 @@
       "qualifiers": {
         "measurement": "bulk density"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neutron_star",
       "source_count": 2,
       "sources": [
@@ -2154,6 +2274,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Planck density is the natural density scale formed from fundamental constants.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Planck density",
         "ingest_source": "dataset/raw/curated/density.json",
@@ -2173,6 +2294,8 @@
       "qualifiers": {
         "measurement": "natural density scale"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_units",
       "source_count": 2,
       "sources": [

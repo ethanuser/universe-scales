@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Australia has relatively low physiological density because arable land is limited.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Australia",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -50,6 +51,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Canada has a low physiological density because arable land is limited relative to total area.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Canada",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -107,6 +111,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -145,6 +151,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Australia remains low when adjusted for arable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Australia",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -164,6 +171,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -202,6 +211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brazil spreads its population over a broad but still constrained arable base.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brazil",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -221,6 +231,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -259,6 +271,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The United States has moderate physiological density compared with its total land area.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "United States",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -278,6 +291,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -316,6 +331,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Russia looks denser when only arable land is counted.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Russia",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -335,6 +351,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -373,6 +391,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "France\u2019s physiological density is moderate relative to its farmland.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "France",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -392,6 +411,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -430,6 +451,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "France has moderate physiological density because it has substantial arable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "France",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -447,6 +469,8 @@
       "id": "obs:physiological-density:entity-physiological-density-france",
       "name": "France",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/France",
       "source_count": 2,
       "sources": [
@@ -485,6 +509,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Germany is moderately dense when only arable land is counted.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Germany",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -502,6 +527,8 @@
       "id": "obs:physiological-density:entity-physiological-density-germany",
       "name": "Germany",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Germany",
       "source_count": 2,
       "sources": [
@@ -540,6 +567,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ireland is a useful mid-range agricultural-land pressure example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ireland",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -557,6 +585,8 @@
       "id": "obs:physiological-density:entity-physiological-density-ireland",
       "name": "Ireland",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ireland",
       "source_count": 2,
       "sources": [
@@ -595,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "India is an essential high-pressure agricultural-land benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "India",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -614,6 +645,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -652,6 +685,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Kenya is a strong example of population pressure on arable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kenya",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -669,6 +703,8 @@
       "id": "obs:physiological-density:entity-physiological-density-kenya",
       "name": "Kenya",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kenya",
       "source_count": 2,
       "sources": [
@@ -707,6 +743,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "China has a high population load relative to arable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "China",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -724,6 +761,8 @@
       "id": "obs:physiological-density:entity-physiological-density-china",
       "name": "China",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/China",
       "source_count": 2,
       "sources": [
@@ -762,6 +801,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Japan\u2019s limited farmland makes its physiological density substantial.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Japan",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -781,6 +821,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -819,6 +861,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The UK becomes much denser under a physiological lens.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "United Kingdom",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -838,6 +881,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -876,6 +921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Japan\u2019s arable land is tight relative to its population.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Japan",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -895,6 +941,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -933,6 +981,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Saudi Arabia\u2019s arable land scarcity drives physiological density upward.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saudi Arabia",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -952,6 +1001,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -990,6 +1041,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rwanda is a classic high physiological-density country.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rwanda",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1007,6 +1059,8 @@
       "id": "obs:physiological-density:entity-physiological-density-rwanda",
       "name": "Rwanda",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rwanda",
       "source_count": 2,
       "sources": [
@@ -1045,6 +1099,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Vietnam has a high population pressure on farmable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vietnam",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1064,6 +1119,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1159,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Netherlands packs a large population onto a limited arable base.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Netherlands",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1119,6 +1177,8 @@
       "id": "obs:physiological-density:entity-physiological-density-netherlands",
       "name": "Netherlands",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Netherlands",
       "source_count": 2,
       "sources": [
@@ -1157,6 +1217,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "India\u2019s physiological density is high even before considering regional variation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "India",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1176,6 +1237,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -1214,6 +1277,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rwanda shows very high pressure on available farmland.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rwanda",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1233,6 +1297,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -1271,6 +1337,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pakistan\u2019s density is very high on arable land alone.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pakistan",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1290,6 +1357,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -1328,6 +1397,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Egypt\u2019s narrow arable strip makes its physiological density enormous.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Egypt",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1347,6 +1417,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [
@@ -1385,6 +1457,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bangladesh is an extreme example of population pressure on farmland.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bangladesh",
         "ingest_source": "dataset/raw/curated/physiological-density.json",
@@ -1404,6 +1477,8 @@
       "qualifiers": {
         "measure": "people per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Physiological_density",
       "source_count": 2,
       "sources": [

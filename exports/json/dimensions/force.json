@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Intermolecular attractions in liquids and soft solids often manifest at piconewton scales per interacting pair. This is the regime probed by optical tweezers and single molecule experiments. Such forces set surface tension and viscosity that we experience in droplets and gels. The value represents a typical cohesive tug between nearby molecules.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Molecular Force",
@@ -44,6 +45,8 @@
       "id": "obs:force:scenario-force-molecular-force",
       "name": "Molecular Force",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Intermolecular_force",
       "source_count": 2,
       "sources": [
@@ -82,6 +85,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Single kinesin motor proteins haul cargo through cells with forces of only a few piconewtons. That sounds negligible, but at molecular scales it is enough to step processively along a microtubule and move vesicles through crowded cytoplasm. Biophysicists measure these loads with optical traps. The value is the stall-force scale for one motor.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Kinesin Motor",
@@ -95,6 +99,8 @@
       "id": "obs:force:scenario-force-kinesin-motor",
       "name": "Kinesin Motor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kinesin",
       "source_count": 2,
       "sources": [
@@ -133,6 +139,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Atomic force microscopy measures nanonewton level tipsurface forces as a cantilever skims a surface. The interaction includes van der Waals, electrostatic, and sometimes chemical bonding contributions. Mapping these tiny forces builds images one atom wide. The number here is a representative contact force in gentle AFM tapping mode.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Atomic Force",
@@ -146,6 +153,8 @@
       "id": "obs:force:scenario-force-atomic-force",
       "name": "Atomic Force",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Atomic_force_microscopy",
       "source_count": 2,
       "sources": [
@@ -184,6 +193,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The solar wind imparts a minuscule steady force on a square meter of reflective sail near Earth. Over months this whisper builds real speed in deep space. Bright sunlight and high reflectivity maximize the small push. The number is the order of magnitude per square meter at 1 astronomical unit.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Solar Wind",
@@ -197,6 +207,8 @@
       "id": "obs:force:scenario-force-solar-wind",
       "name": "Solar Wind",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Solar_wind",
       "source_count": 2,
       "sources": [
@@ -235,6 +247,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An ant\u2019s leg can exert a millinewton scale force while carrying a crumb relative to its body mass. Leveraged by multiple legs the insect achieves impressive load fractions. The force per leg pulses with gait, not steady like a motor. This figure captures a single leg contact during a step.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Ant Force",
@@ -248,6 +261,8 @@
       "id": "obs:force:scenario-force-ant-force",
       "name": "Ant Force",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ant",
       "source_count": 2,
       "sources": [
@@ -286,6 +301,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pressing a key on a mechanical keyboard often requires around this force at the finger pad at actuation. Human fingertips control such forces with high precision using tactile feedback. Prolonged work comfort depends on keeping this below fatigue thresholds. The number corresponds to medium switch springs.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Keyboard Keypress",
@@ -299,6 +315,8 @@
       "id": "obs:force:scenario-force-keyboard-keypress",
       "name": "Keyboard Keypress",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Computer_keyboard",
       "source_count": 2,
       "sources": [
@@ -337,6 +355,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The weight of a medium apple on Earth is about one newton, which is why one kilogram weighs close to ten newtons in rough mental arithmetic. This is a handy anchor between tiny lab forces and the loads you feel in your hand. Classroom force sensors often start with objects like this. The number assumes ordinary Earth gravity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Apple Weight",
@@ -350,6 +369,8 @@
       "id": "obs:force:scenario-force-apple-weight",
       "name": "Apple Weight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Newton_(unit)",
       "source_count": 2,
       "sources": [
@@ -388,6 +409,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The drag force on a cyclist at racing speed is a few tens of newtons and grows with speed squared. Aerobars and tight clothing shave newtons off this budget. Hills convert the problem into gravity dominated force instead. The value assumes flat road and no wind at 12 meters per second.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Cyclist Aerodynamic Drag",
@@ -401,6 +423,8 @@
       "id": "obs:force:scenario-force-cyclist-aerodynamic-drag",
       "name": "Cyclist Aerodynamic Drag",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bicycle_performance",
       "source_count": 2,
       "sources": [
@@ -439,6 +463,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Opening a heavy door with a long handle needs only tens of newtons because torque gives leverage. Short knobs demand higher force for the same latch. Designers tune springs to balance child safety and accessibility. The number is typical for public building doors.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Door Handle Pull",
@@ -452,6 +477,8 @@
       "id": "obs:force:scenario-force-door-handle-pull",
       "name": "Door Handle Pull",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Door_handle",
       "source_count": 2,
       "sources": [
@@ -490,6 +517,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A firm handshake produces a sustained grip force of this order per hand for an average adult. Social norms modulate it within a wide comfortable band. Force sensors show brief spikes at initial contact and release. The value is a steady mid portion, not the peak squeeze.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Handshake",
@@ -503,6 +531,8 @@
       "id": "obs:force:scenario-force-handshake",
       "name": "Handshake",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Handshake",
       "source_count": 2,
       "sources": [
@@ -541,6 +571,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A house cat pushing off into a jump can drive well over its body weight into the floor for a brief instant. Fast muscle fibers and tendon recoil package that force into a surprisingly compact animal. High-speed force plates reveal it as a short pulse rather than a steady push. The number is a representative peak for a healthy adult cat.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "House Cat Jump Push-Off",
@@ -554,6 +585,8 @@
       "id": "obs:force:scenario-force-house-cat-jump-push-off",
       "name": "House Cat Jump Push-Off",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cat_righting_reflex",
       "source_count": 2,
       "sources": [
@@ -592,6 +625,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pulling a bowstring to full draw on a traditional longbow requires on this order of force at the fingers. Modern compound bows use cams to reduce peak hold. Archers condition grip and back muscles to manage the load smoothly. The value states the hold at anchor, not the initial pull.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Bow Draw",
@@ -605,6 +639,8 @@
       "id": "obs:force:scenario-force-bow-draw",
       "name": "Bow Draw",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bow_(archery)",
       "source_count": 2,
       "sources": [
@@ -643,6 +679,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A strong adult grip can squeeze with a few hundred newtons measured on a hand dynamometer. That is enough to crush fragile packaging and explains why climbing and tool work benefit so much from forearm strength. The exact figure varies with age, sex, and training. The value is a representative peak for a healthy adult.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Human Grip Strength",
@@ -656,6 +693,8 @@
       "id": "obs:force:scenario-force-human-grip-strength",
       "name": "Human Grip Strength",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Grip_strength",
       "source_count": 2,
       "sources": [
@@ -694,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "During a push-up, each arm briefly supports a few hundred newtons as the body rises and falls. Trainers care about this because shoulder and wrist joints must route the same load repeatedly without irritation. The number is lower than full body weight because the feet still carry part of the system. This value is for one arm near the bottom of a standard push-up.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Push-Up Support (per arm)",
@@ -707,6 +747,8 @@
       "id": "obs:force:scenario-force-push-up-support-per-arm",
       "name": "Push-Up Support (per arm)",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Push-up",
       "source_count": 2,
       "sources": [
@@ -745,6 +787,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Biting a carrot uses hundreds of newtons at the molars for a brief crush. Muscles generate the force through a lever system that trades distance for advantage. Diet and training affect peak values only modestly. The figure is an average adult bite under deliberate effort.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Human Bite",
@@ -758,6 +801,8 @@
       "id": "obs:force:scenario-force-human-bite",
       "name": "Human Bite",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bite_force_quotient",
       "source_count": 2,
       "sources": [
@@ -796,6 +841,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A strong gust on a pedestrian exerts around a kilonewton of horizontal drag integrated over body area. Leaning and planting feet counters this to avoid slipping. Urban canyons can funnel and amplify such forces. The number matches a stormy day that turns umbrellas inside out.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Wind Force",
@@ -809,6 +855,8 @@
       "id": "obs:force:scenario-force-wind-force",
       "name": "Wind Force",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wind",
       "source_count": 2,
       "sources": [
@@ -847,6 +895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A competitive weightlifter holding a 200 kilogram bar at rest supports roughly this downward force through the skeleton. The bar\u2019s motion adds dynamic peaks beyond the static weight. Training centers design platforms and collars with these loads in mind. The figure quotes the sustained portion during a clean hold.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Weight Lifter",
@@ -860,6 +909,8 @@
       "id": "obs:force:scenario-force-weight-lifter",
       "name": "Weight Lifter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Weightlifting",
       "source_count": 2,
       "sources": [
@@ -898,6 +949,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A hard human punch delivers force in the low-kilonewton range over a very short contact time. Technique, glove padding, and the compliance of the target all change the peak a lot, which is why lab measurements vary. Even so, the number belongs well above ordinary grip and push forces. The value is a representative straight-punch impact scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Human Punch",
@@ -911,6 +963,8 @@
       "id": "obs:force:scenario-force-human-punch",
       "name": "Human Punch",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Punch_(combat)",
       "source_count": 2,
       "sources": [
@@ -949,6 +1003,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical car brake pedal can transmit a few kilonewtons to the hydraulic system when a driver stomps in an emergency. Booster systems scale the foot input to caliper clamping force. Anti lock control modulates it rapidly to keep traction. The number is a representative pedal to master cylinder load.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Car Brake",
@@ -962,6 +1017,8 @@
       "id": "obs:force:scenario-force-car-brake",
       "name": "Car Brake",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brake",
       "source_count": 2,
       "sources": [
@@ -1000,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ground reaction forces during a jump landing can spike to several times body weight over milliseconds, totaling thousands of newtons. Good shoes and bent knees stretch the impulse out in time. Force plates in sports labs measure these peaks to tune training. The figure quotes a single foot impact for an adult athlete.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Jump Landing Peak",
@@ -1013,6 +1071,8 @@
       "id": "obs:force:scenario-force-jump-landing-peak",
       "name": "Jump Landing Peak",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ground_reaction_force",
       "source_count": 2,
       "sources": [
@@ -1051,6 +1111,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A swung sledgehammer can deliver impact forces of several kilonewtons when it meets a rigid target. The handle flex, the steel head, and the target all share the deceleration. Demolition feels dramatic because the force is concentrated into a short stopping time. The value is a plausible peak on a solid strike.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Sledgehammer Blow",
@@ -1064,6 +1125,8 @@
       "id": "obs:force:scenario-force-sledgehammer-blow",
       "name": "Sledgehammer Blow",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sledgehammer",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1165,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The tractive push at the wheels of a compact car during strong acceleration totals around this many newtons. Engine torque, gear ratio, and tire radius all contribute. Traction limits, not engine power alone, cap the usable force. The value reflects a brief burst merging into traffic.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Car Engine",
@@ -1115,6 +1179,8 @@
       "id": "obs:force:scenario-force-car-engine",
       "name": "Car Engine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
       "source_count": 2,
       "sources": [
@@ -1153,6 +1219,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Horse kicks can exceed ten kilonewtons, enough to break bone or dent metal panels. The hind legs are effectively spring-loaded levers powered by large muscle groups. Veterinarians and handlers take this seriously because the pulse arrives faster than most people can react. The value is a representative force scale for a direct kick.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Horse Kick",
@@ -1166,6 +1233,8 @@
       "id": "obs:force:scenario-force-horse-kick",
       "name": "Horse Kick",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Horse",
       "source_count": 2,
       "sources": [
@@ -1204,6 +1273,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An adult African elephant on Earth weighs tens of thousands of newtons, enough that ground pressure and foot design matter for every step. Despite the huge total force, broad padded feet spread it out and keep the animal from sinking into ordinary soil. This is a useful biological midpoint between human-scale loads and whales or heavy machinery. The value is for a large adult.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "African Elephant Weight",
@@ -1217,6 +1287,8 @@
       "id": "obs:force:scenario-force-african-elephant-weight",
       "name": "African Elephant Weight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/African_bush_elephant",
       "source_count": 2,
       "sources": [
@@ -1255,6 +1327,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A GE90 turbofan on a large Boeing 777 can produce thrust on the order of half a meganewton at takeoff power. That is why a twin-engine airliner can accelerate a massive aircraft down the runway and still retain engine-out margins. Fans, compressors, and turbines all exist to turn fuel flow into this axial force. The value is a round-number thrust rating for one engine.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "GE90 Jet Engine",
@@ -1268,6 +1341,8 @@
       "id": "obs:force:scenario-force-ge90-jet-engine",
       "name": "GE90 Jet Engine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/General_Electric_GE90",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One Merlin 1D engine on a Falcon 9 produces hundreds of kilonewtons of thrust at sea level. Nine of them together give the first stage enough upward force to clear the pad with a loaded rocket. The number is for a single engine, which makes it easier to compare with aircraft engines and smaller launchers. It is a published sea-level thrust scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Merlin 1D Engine",
@@ -1319,6 +1395,8 @@
       "id": "obs:force:scenario-force-merlin-1d-engine",
       "name": "Merlin 1D Engine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Merlin_(rocket_engine_family)",
       "source_count": 2,
       "sources": [
@@ -1357,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A shop hydraulic press concentrates input into a compressive force reaching about a meganewton on a small workpiece. Dies and fixtures must distribute it to avoid cracking. Safety cages exist because stored energy can release abruptly. The number is a practical mid size press capacity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Hydraulic Press",
@@ -1370,6 +1449,8 @@
       "id": "obs:force:scenario-force-hydraulic-press",
       "name": "Hydraulic Press",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydraulic_press",
       "source_count": 2,
       "sources": [
@@ -1408,6 +1489,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The static weight of a blue whale corresponds to well over a million newtons under Earth gravity. Water supports most of that load, which is why stranded whales suffer dangerous crushing under their own mass. This force scale helps show how biological structures rely on buoyancy. The number is for a large adult blue whale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Blue Whale Weight",
@@ -1421,6 +1503,8 @@
       "id": "obs:force:scenario-force-blue-whale-weight",
       "name": "Blue Whale Weight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blue_whale",
       "source_count": 2,
       "sources": [
@@ -1459,6 +1543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The weight of a fully loaded Boeing 747 on the runway reaches several meganewtons. Wings remove most of that load only after takeoff speed builds, which is why landing gear and pavement design are both serious engineering problems. It is a clean large-machine benchmark distinct from engine thrust. The value is a representative takeoff-weight force under Earth gravity.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Boeing 747 Weight",
@@ -1472,6 +1557,8 @@
       "id": "obs:force:scenario-force-boeing-747-weight",
       "name": "Boeing 747 Weight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Boeing_747",
       "source_count": 2,
       "sources": [
@@ -1510,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A full Falcon 9 first stage at liftoff produces several meganewtons of thrust, comfortably above its weight. Guidance and throttle schedules then steer how that force turns into acceleration over the climb. Reusability only works because the engines can be throttled and restarted within this range. The value is the approximate total sea-level thrust of the nine-engine booster.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Falcon 9 Liftoff",
@@ -1523,6 +1611,8 @@
       "id": "obs:force:scenario-force-falcon-9-liftoff",
       "name": "Falcon 9 Liftoff",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Falcon_9",
       "source_count": 2,
       "sources": [
@@ -1561,6 +1651,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tower crane can lift loads with cable tensions summing to this many newtons without overstress. Operators derate with radius because torque at the mast grows with reach. Wind side loads add vector components that must be considered. The figure is a round number for heavy picks at close radius.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Crane",
@@ -1574,6 +1665,8 @@
       "id": "obs:force:scenario-force-crane",
       "name": "Crane",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Crane_(machine)",
       "source_count": 2,
       "sources": [
@@ -1612,6 +1705,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The thrust of a large rocket engine cluster during liftoff sums to about ten meganewtons. This overcomes weight and provides margin to climb. Nozzles and turbopumps channel enormous mass flow to produce it. The number places human launch capability on a single line.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Rocket Thrust",
@@ -1625,6 +1719,8 @@
       "id": "obs:force:scenario-force-rocket-thrust",
       "name": "Rocket Thrust",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rocket_engine",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1759,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Saturn V remains one of the great force benchmarks of human engineering, with first-stage thrust in the tens of meganewtons. That force had to act through plumbing, turbomachinery, and structure while the rocket vibrated and shed mass. It is the kind of number that makes launch pads feel like industrial volcanoes. The value is the published first-stage thrust scale.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Saturn V First Stage",
@@ -1676,6 +1773,8 @@
       "id": "obs:force:scenario-force-saturn-v-first-stage",
       "name": "Saturn V First Stage",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saturn_V",
       "source_count": 2,
       "sources": [
@@ -1714,6 +1813,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A large aircraft carrier weighs about a billion newtons on Earth. That makes it a better intuition bridge than jumping directly from rockets to tides. Naval engineering, dry docks, and buoyancy calculations all live around this scale. It is a force that is enormous but still tied to a single familiar machine.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Aircraft Carrier Weight",
@@ -1727,6 +1827,8 @@
       "id": "obs:force:scenario-force-aircraft-carrier-weight",
       "name": "Aircraft Carrier Weight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aircraft_carrier",
       "source_count": 2,
       "sources": [
@@ -1765,6 +1867,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Great Pyramid is a good bridge between rockets and geophysical forces because it is an immense but still imaginable object. Converting its mass to weight under Earth gravity gives a force tens of billions of newtons. That is far beyond engines yet nowhere near planetary tides. It helps anchor the middle ground of truly huge forces.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Great Pyramid Weight",
@@ -1778,6 +1881,8 @@
       "id": "obs:force:scenario-force-great-pyramid-weight",
       "name": "Great Pyramid Weight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
       "source_count": 2,
       "sources": [
@@ -1816,6 +1921,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "If roughly eight billion people all stood on Earth at once, their combined weight would add up to trillions of newtons. This is a useful collective-human benchmark because it turns population into a mechanical force you can compare with mountains, storms, and rockets. The figure assumes an average body mass near 65 kilograms. It is an intentionally perspective-giving estimate.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "All Humans Standing on Earth",
@@ -1829,6 +1935,8 @@
       "id": "obs:force:scenario-force-all-humans-standing-on-earth",
       "name": "All Humans Standing on Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/World_population",
       "source_count": 2,
       "sources": [
@@ -1867,6 +1975,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The weight of a small asteroid under Earth gravity reaches into the quadrillion-newton range. This helps bridge the gap between human engineering and genuinely planetary-scale forces. Even a modest asteroid is mechanically far beyond anything humans can push or lift. The number assumes an object a few hundred meters across with rocky density.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Small Asteroid Weight",
@@ -1880,6 +1989,8 @@
       "id": "obs:force:scenario-force-small-asteroid-weight",
       "name": "Small Asteroid Weight",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Asteroid",
       "source_count": 2,
       "sources": [
@@ -1918,6 +2029,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tidal forces stretching Earth arise from the Moon and Sun acting across the planet\u2019s diameter. The integrated effect lifts oceans by meters despite small per kilogram forces. Engineers consider tides when scheduling marine operations. The value here is an effective global scale force budget, illustrative rather than local.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Tidal Force",
@@ -1931,6 +2043,8 @@
       "id": "obs:force:scenario-force-tidal-force",
       "name": "Tidal Force",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tidal_force",
       "source_count": 2,
       "sources": [
@@ -1969,6 +2083,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Near a black hole event horizon, gradients in gravity create extreme tidal forces on extended objects. Over short lengths the force difference can exceed anything materials can bear. Astronomers model these fields without touching them. The number is a conceptual scale, not a laboratory measurement.",
+      "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/force.yaml",
         "legacy_item_name": "Black Hole",
@@ -1982,6 +2097,8 @@
       "id": "obs:force:scenario-force-black-hole",
       "name": "Black Hole",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Black_hole",
       "source_count": 2,
       "sources": [

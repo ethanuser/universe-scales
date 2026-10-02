@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Geosmin is the classic earthy-smell compound with an extremely low threshold.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Geosmin",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -48,6 +49,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-geosmin",
       "name": "Geosmin",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Geosmin",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Skatole is one of the strongest-smelling compounds at very low concentrations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Skatole",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -103,6 +107,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-skatole",
       "name": "Skatole",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Skatole",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "2-MIB is another ultra-potent earthy odorant used in smell benchmarks.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "2-Methylisoborneol",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -158,6 +165,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-2-methylisoborneol",
       "name": "2-Methylisoborneol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/2-Methylisoborneol",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Indole is strongly associated with animal and floral odor notes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Indole",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -213,6 +223,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-indole",
       "name": "Indole",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Indole",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This rice and popcorn aroma is detectable at extremely low levels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "2-acetyl-1-pyrroline",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -268,6 +281,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-2-acetyl-1-pyrroline",
       "name": "2-acetyl-1-pyrroline",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/2-Acetyl-1-pyrroline",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Garlic breath is a familiar example of trace odor chemistry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Allyl methyl sulfide",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -323,6 +339,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-allyl-methyl-sulfide",
       "name": "Allyl methyl sulfide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Allyl_methyl_sulfide",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dimethyl disulfide is a pungent sulfur note at trace levels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dimethyl disulfide",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -378,6 +397,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-dimethyl-disulfide",
       "name": "Dimethyl disulfide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dimethyl_disulfide",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dimethyl sulfide is a strongly perceptible sulfurous odorant.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dimethyl sulfide",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -433,6 +455,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-dimethyl-sulfide",
       "name": "Dimethyl sulfide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dimethyl_sulfide",
       "source_count": 2,
       "sources": [
@@ -471,6 +495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ethanethiol is a classic foul sulfur odorant.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethanethiol",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -488,6 +513,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-ethanethiol",
       "name": "Ethanethiol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ethanethiol",
       "source_count": 2,
       "sources": [
@@ -526,6 +553,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "p-Cresol is a pungent odorant at very low concentrations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "p-Cresol",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -543,6 +571,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-p-cresol",
       "name": "p-Cresol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/p-Cresol",
       "source_count": 2,
       "sources": [
@@ -581,6 +611,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Methanethiol is pungent even at tiny concentrations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Methanethiol",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -598,6 +629,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-methanethiol",
       "name": "Methanethiol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Methanethiol",
       "source_count": 2,
       "sources": [
@@ -636,6 +669,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hydrogen sulfide is the classic rotten-egg smell benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hydrogen sulfide",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -653,6 +687,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-hydrogen-sulfide",
       "name": "Hydrogen sulfide",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen_sulfide",
       "source_count": 2,
       "sources": [
@@ -691,6 +727,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This compound is the classic mushroom odor molecule.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "1-octen-3-ol",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -708,6 +745,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-1-octen-3-ol",
       "name": "1-octen-3-ol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/1-Octen-3-ol",
       "source_count": 2,
       "sources": [
@@ -746,6 +785,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Benzaldehyde is a recognizable almond-like odorant.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Benzaldehyde",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -763,6 +803,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-benzaldehyde",
       "name": "Benzaldehyde",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Benzaldehyde",
       "source_count": 2,
       "sources": [
@@ -801,6 +843,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Isovaleric acid is the sweaty-foot smell benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Isovaleric acid",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -818,6 +861,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-isovaleric-acid",
       "name": "Isovaleric acid",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Isovaleric_acid",
       "source_count": 2,
       "sources": [
@@ -856,6 +901,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Trimethylamine is the familiar fishy odorant of decay.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Trimethylamine",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -873,6 +919,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-trimethylamine",
       "name": "Trimethylamine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Trimethylamine",
       "source_count": 2,
       "sources": [
@@ -911,6 +959,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Vanillin anchors the sweet fragrance end of the trace-odor scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vanillin",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -928,6 +977,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-vanillin",
       "name": "Vanillin",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vanillin",
       "source_count": 2,
       "sources": [
@@ -966,6 +1017,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Butyric acid is a familiar sour-rancid smell at trace levels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Butyric acid",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -983,6 +1035,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-butyric-acid",
       "name": "Butyric acid",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Butyric_acid",
       "source_count": 2,
       "sources": [
@@ -1021,6 +1075,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Eugenol is the clove-spice odor reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Eugenol",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1038,6 +1093,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-eugenol",
       "name": "Eugenol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Eugenol",
       "source_count": 2,
       "sources": [
@@ -1076,6 +1133,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Linalool gives floral and citrus notes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Linalool",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1093,6 +1151,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-linalool",
       "name": "Linalool",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Linalool",
       "source_count": 2,
       "sources": [
@@ -1131,6 +1191,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Menthol gives a cooling mint smell at low trace levels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Menthol",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1148,6 +1209,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-menthol",
       "name": "Menthol",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Menthol",
       "source_count": 2,
       "sources": [
@@ -1186,6 +1249,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Limonene is a citrus odorant with a higher threshold than the ultra-potent compounds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Limonene",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1203,6 +1267,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-limonene:2",
       "name": "Limonene",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Limonene",
       "source_count": 2,
       "sources": [
@@ -1241,6 +1307,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Limonene is a common citrus odorant.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Limonene",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1258,6 +1325,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-limonene",
       "name": "Limonene",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Limonene",
       "source_count": 2,
       "sources": [
@@ -1296,6 +1365,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Methyl salicylate is the wintergreen smell benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Methyl salicylate",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1313,6 +1383,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-methyl-salicylate",
       "name": "Methyl salicylate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Methyl_salicylate",
       "source_count": 2,
       "sources": [
@@ -1351,6 +1423,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fruit-like ester odors sit comfortably in the tens of ppbv to ppm range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Isoamyl acetate",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1368,6 +1441,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-isoamyl-acetate",
       "name": "Isoamyl acetate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Isoamyl_acetate",
       "source_count": 2,
       "sources": [
@@ -1406,6 +1481,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pyridine has a harsh, fishy solvent odor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pyridine",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1423,6 +1499,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-pyridine",
       "name": "Pyridine",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pyridine",
       "source_count": 2,
       "sources": [
@@ -1461,6 +1539,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Acetic acid is the vinegar odor anchor at higher trace concentrations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Acetic acid",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1478,6 +1557,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-acetic-acid",
       "name": "Acetic acid",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Acetic_acid",
       "source_count": 2,
       "sources": [
@@ -1516,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ethyl acetate is an everyday solvent smell at modest concentration.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethyl acetate",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1533,6 +1615,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-ethyl-acetate",
       "name": "Ethyl acetate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ethyl_acetate",
       "source_count": 2,
       "sources": [
@@ -1571,6 +1655,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Acetone is a sharp solvent odor that becomes obvious in the ppm range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Acetone",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1588,6 +1673,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-acetone",
       "name": "Acetone",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Acetone",
       "source_count": 2,
       "sources": [
@@ -1626,6 +1713,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ammonia is pungent enough to sit on the high side of the smell scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ammonia",
         "ingest_source": "dataset/raw/curated/odor-concentration.json",
@@ -1643,6 +1731,8 @@
       "id": "obs:odor-concentration:entity-odor-concentration-ammonia",
       "name": "Ammonia",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ammonia",
       "source_count": 2,
       "sources": [

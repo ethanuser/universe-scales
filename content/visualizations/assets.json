@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "images": {},
+  "audio": {
+    "Conversation": {
+      "src": "content/visualizations/audio/conversation.ogg",
+      "title": "Two Kyoto women in conversation, National Institute for Japanese Language (1964)",
+      "author": "国立国語研究所（上村幸雄、徳川宗賢）",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kyoto_women_conversation_in_1964.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Kyoto_women_conversation_in_1964.ogg",
+      "sha256": "9f6a382ddeffc9e74d9a94954b66c6ed43ae3a3ae1d2fede03747845c2e10124"
+    },
+    "Library": {
+      "src": "content/visualizations/audio/library.wav",
+      "title": "Quiet TU Delft library study room: ventilation, keyboards and occasional coughs",
+      "author": "el_mar",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20121112_TU_Delft_Library,_quiet_study_room_-_general_ambience_-_SoundCloud_-_el_mar.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/20121112_TU_Delft_Library%2C_quiet_study_room_-_general_ambience_-_SoundCloud_-_el_mar.ogg",
+      "extract": {
+        "start": 10,
+        "duration": 6
+      },
+      "changes": "Six-second mono excerpt; original license retained",
+      "source_sha256": "047c704947a9a9d96486b0d32b13665edf8e781b9d12c886df042daf3f0cff91",
+      "sha256": "b0964aa45b3969260b4c929bfebbf6910c67a6399ab7f1b15fb7f8acc199d69a"
+    },
+    "Whisper": {
+      "src": "content/visualizations/audio/whisper.ogg",
+      "title": "A speaker whispering the word whispering",
+      "author": "Mx. Granger",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Whispering-example.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Whispering-example.ogg",
+      "sha256": "bbdbe95dfe4742e27845c03fba3a8caf9f0f5ad65e34e512fd5609d155e6304e"
+    },
+    "Quiet rural night": {
+      "src": "content/visualizations/audio/rural-night.ogg",
+      "title": "Night ambience in a Taiwanese village",
+      "author": "hc",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Country_night_noise.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Country_night_noise.ogg",
+      "sha256": "91bc76aced09a35ab8fa422c032c3e07fc4fc319e70fdf1c90c5d502c7d83716"
+    },
+    "Rocket launch pad": {
+      "src": "content/visualizations/audio/rocket.wav",
+      "title": "Falcon 9 Crew-10 launch, NASA beach/causeway microphones (not at the pad)",
+      "author": "NASA Kennedy Space Center",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:SpaceX_Crew-10_Live_Launch_(Beach_LoS_-_L_-_Causeway_LoS_-_R)_(KSC-20250314-AU-ILW01-0001-SpaceX_Crew-10_Live_Launch_Beach_LoS-L_Causeway_LoS-R-M11808).wav",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/SpaceX_Crew-10_Live_Launch_%28Beach_LoS_-_L_-_Causeway_LoS_-_R%29_%28KSC-20250314-AU-ILW01-0001-SpaceX_Crew-10_Live_Launch_Beach_LoS-L_Causeway_LoS-R-M11808%29.wav",
+      "extract": {
+        "start": 45,
+        "duration": 6
+      },
+      "changes": "Six-second mono PCM excerpt from NASA's launch field recording",
+      "source_sha256": "1edb39982b49332c58fd30dc0ed5226f2aa297715118b15b8b9d682d8af80fb6",
+      "sha256": "e06ebf1652de914f8e8519cfd3da4f7454ce3a5aa4f0b202c6d64c05dc5f9f7c"
+    },
+    "Vacuum cleaner": {
+      "src": "content/visualizations/audio/vacuum.ogg",
+      "title": "Vacuum cleaner running, Netherlands Institute for Sound and Vision",
+      "author": "Beeld en Geluid",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Het_aanstaan_van_een_stofzuiger_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Het_aanstaan_van_een_stofzuiger_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+      "sha256": "a546b2685c2cd3b42243f9172247493085f57b133238cab22639a9c1cab528ed"
+    },
+    "Power lawn mower": {
+      "src": "content/visualizations/audio/mower.ogg",
+      "title": "Klippo petrol lawnmower, recorded by Leena Ahonen / Werstas",
+      "author": "Work With Sounds / Werstas",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:WWS_Lawnmower.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/WWS_Lawnmower.ogg",
+      "sha256": "392e9d9a8dfc2e69e2381caec7a501010f134d4500f1141abb010b9ca5652b82"
+    },
+    "Emergency siren at curbside": {
+      "src": "content/visualizations/audio/ambulances.ogg",
+      "title": "Two ambulances passing with sirens, Netherlands Institute for Sound and Vision",
+      "author": "Beeld en Geluid",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Het_voorbijrijden_van_twee_ambulances_met_sirenes_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Het_voorbijrijden_van_twee_ambulances_met_sirenes_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+      "sha256": "4d2db8ac192e8f1882996eef965d25e39595e33813f196f669180c68d2222a1c"
+    },
+    "Rustling leaves": {
+      "src": "content/visualizations/audio/leaves.wav",
+      "title": "Rustling leaves, Gravity Sound",
+      "author": "Gravity Sound",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rustling_leaves_(Gravity_Sound).wav",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Rustling_leaves_%28Gravity_Sound%29.wav",
+      "sha256": "b801edd2e049ba2084e8fa3f90374c2cbae16032965df6db5d32d4850d4afdb3"
+    },
+    "Busy restaurant": {
+      "src": "content/visualizations/audio/restaurant.ogg",
+      "title": "Crowded Chinese restaurant in Germany",
+      "author": "stephan",
+      "license": "Public domain",
+      "license_url": "",
+      "source": "https://commons.wikimedia.org/wiki/File:Restaurant_ambience.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Restaurant_ambience.ogg",
+      "sha256": "0aeb1fa7a3d9647d3284e97d9880b6375b54db2eda6a517c64e3bb02ac8a51cc"
+    },
+    "Subway platform at platform edge": {
+      "src": "content/visualizations/audio/subway.ogg",
+      "title": "Train arriving at General Anaya station, Mexico City Metro",
+      "author": "ProtoplasmaKid",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Arribo_del_metro_a_la_estaci%C3%B3n_General_Anaya_del_Metro_de_la_Ciudad_de_M%C3%A9xico_L%C3%ADnea_2.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Arribo_del_metro_a_la_estaci%C3%B3n_General_Anaya_del_Metro_de_la_Ciudad_de_M%C3%A9xico_L%C3%ADnea_2.ogg",
+      "sha256": "78dddd8b8a053bf8a74117ace80ddd538a7c470fdc7f8dd88002238e5f2d4154"
+    },
+    "Jet engine at 30 m": {
+      "src": "content/visualizations/audio/jet-engine.ogg",
+      "title": "Saab J35D Draken engine startup and taxiing; recording distance unspecified",
+      "author": "Work With Sounds / Torsten Nilsson",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:WWS_SaabJ35DDrakenstartengineandtaxiing.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/WWS_SaabJ35DDrakenstartengineandtaxiing.ogg",
+      "sha256": "4162d7c726e51f507b953bcfd032e70d91e0aaee2f0ac593d9192d9442c084e4"
+    },
+    "Refrigerator hum at 1 m": {
+      "src": "content/visualizations/audio/refrigerator.ogg",
+      "title": "Inside a refrigerator (interior ambience, not a recording at one metre)",
+      "author": "stephan",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Inside_of_refrigerator.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Inside_of_refrigerator.ogg",
+      "start": 6,
+      "sha256": "72931e7edfff30120bc29399a546bab4f6d73ad80f7e86adc5135680c7cb4a71"
+    },
+    "Motorcycle at 1 m": {
+      "src": "content/visualizations/audio/motorcycle.ogg",
+      "title": "TOMOS D7 motorcycle, Technical Museum of Slovenia",
+      "author": "Work With Sounds / Technical Museum of Slovenia; sound recordist Dušan Oblak",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:WWS_MotorcycleTOMOSD7.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/WWS_MotorcycleTOMOSD7.ogg",
+      "sha256": "7b7a0e97c4429ef6aa3f82e0eb04ed9eae9f11d61801bb1da8d0eee3b6a47aa2"
+    },
+    "City traffic": {
+      "src": "content/visualizations/audio/city.ogg",
+      "title": "Coastal English city: cars, vans, mopeds and birds outside a window",
+      "author": "cori",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Sunday_in_the_city_street_noise2.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Sunday_in_the_city_street_noise2.ogg",
+      "sha256": "0ddb0be7eb3427f781c8268bcbc74b8ad7e1fbf75b9f6966e65274dbe85f3d9d"
+    },
+    "Rainfall": {
+      "src": "content/visualizations/audio/rain.ogg",
+      "title": "Rain recorded in Japan",
+      "author": "ジダネ",
+      "license": "Public domain (PD-self)",
+      "source": "https://commons.wikimedia.org/wiki/File:Rain.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Rain.ogg",
+      "sha256": "c34d12243125c28f09426c076019f8321b602347a8564c38be771cb997c1a152"
+    },
+    "Thunderclap": {
+      "src": "content/visualizations/audio/thunder.ogg",
+      "title": "Thunder recorded in southern Finland",
+      "author": "Mysid",
+      "license": "Public domain (PD-self)",
+      "source": "https://commons.wikimedia.org/wiki/File:Tonitrus.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Tonitrus.ogg",
+      "sha256": "75c4d3911eedd1370db6aa30c90aee9e2eee3d18b429862eee6db221bcd0f421"
+    },
+    "Chainsaw": {
+      "src": "content/visualizations/audio/chainsaw.ogg",
+      "title": "Chainsaw cutting a tree in the neighborhood",
+      "author": "ezwa",
+      "license": "Public domain (PD-author)",
+      "source": "https://commons.wikimedia.org/wiki/File:Chainsaw_1.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Chainsaw_1.ogg",
+      "sha256": "f3c89a03a08cec376faad04ca7da3dd6e12f25f833ccf5240b33c852960f01e4"
+    },
+    "Jet takeoff at 30 m": {
+      "src": "content/visualizations/audio/jet-takeoff.wav",
+      "title": "Civil airliner taking off; shared recording, microphone distance unspecified",
+      "author": "bigpickle51",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://freesound.org/people/bigpickle51/sounds/219466/",
+      "download_url": "https://cdn.freesound.org/previews/219/219466_1986349-hq.mp3",
+      "extract": {
+        "start": 10,
+        "duration": 6
+      },
+      "changes": "Six-second mono excerpt of the public MP3 preview; same clip used for both distance examples",
+      "source_sha256": "4087e24d342e200f32282a5d771dee2bf91ebc615fdc5ecc43fd2a10584072e7",
+      "sha256": "207043ab828ec5abb4c8d27674936e03e19c13f26eed1b28668f88fbc81c451b"
+    },
+    "Jet takeoff at 100 m": {
+      "src": "content/visualizations/audio/jet-takeoff.wav",
+      "title": "Civil airliner taking off; shared recording, microphone distance unspecified",
+      "author": "bigpickle51",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://freesound.org/people/bigpickle51/sounds/219466/",
+      "download_url": "https://cdn.freesound.org/previews/219/219466_1986349-hq.mp3",
+      "extract": {
+        "start": 10,
+        "duration": 6
+      },
+      "changes": "Six-second mono excerpt of the public MP3 preview; same clip used for both distance examples",
+      "source_sha256": "4087e24d342e200f32282a5d771dee2bf91ebc615fdc5ecc43fd2a10584072e7",
+      "sha256": "207043ab828ec5abb4c8d27674936e03e19c13f26eed1b28668f88fbc81c451b"
+    },
+    "Busy street at sidewalk distance": {
+      "src": "content/visualizations/audio/street.ogg",
+      "title": "Street traffic and sellers; microphone distance unspecified",
+      "author": "Ready Street",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sounds_of_Traffic_and_Sellers.ogg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Sounds_of_Traffic_and_Sellers.ogg",
+      "sha256": "5b76d6a93d24ac005e56b23d737916267247d8f3a28533c8a9e2a6b3b73aff31"
+    }
+  }
+}

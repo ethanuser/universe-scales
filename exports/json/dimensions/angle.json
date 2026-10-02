@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A microarcsecond is an extremely small astronomical angular unit.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Microarcsecond",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -48,6 +49,8 @@
       "id": "obs:angle:entity-microarcsecond",
       "name": "Microarcsecond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Minute_and_second_of_arc",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A milliarcsecond is a common precision scale in astrometry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milliarcsecond",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -103,6 +107,8 @@
       "id": "obs:angle:entity-milliarcsecond",
       "name": "Milliarcsecond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Minute_and_second_of_arc",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Hubble can hold its pointing to a tiny angular error measured in milliarcseconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hubble pointing stability",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -158,6 +165,8 @@
       "id": "obs:angle:entity-hubble-pointing-stability-angle",
       "name": "Hubble pointing stability",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One arcsecond is a classic fine angular unit in astronomy.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Arcsecond",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -213,6 +223,8 @@
       "id": "obs:angle:entity-arcsecond",
       "name": "Arcsecond",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Minute_and_second_of_arc",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "One arcminute is a familiar small visual and astronomical angle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Arcminute",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -268,6 +281,8 @@
       "id": "obs:angle:entity-arcminute",
       "name": "Arcminute",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Minute_and_second_of_arc",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Normal 20/20 acuity is often summarized as about one arcminute.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human visual acuity",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -323,6 +339,8 @@
       "id": "obs:angle:entity-human-visual-acuity-angle",
       "name": "Human visual acuity",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Visual_acuity",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Moon spans about half a degree in the sky.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon angular diameter",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -378,6 +397,8 @@
       "id": "obs:angle:entity-moon-angular-diameter",
       "name": "Moon angular diameter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Angular_diameter",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Sun and Moon appear similar in angular size from Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun angular diameter",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -433,6 +455,8 @@
       "id": "obs:angle:entity-sun-angular-diameter",
       "name": "Sun angular diameter",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Angular_diameter",
       "source_count": 2,
       "sources": [
@@ -471,6 +495,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Jupiter spins with only a small axial tilt, so its seasons are weak.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jupiter axial tilt",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -488,6 +513,8 @@
       "id": "obs:angle:entity-jupiter-axial-tilt",
       "name": "Jupiter axial tilt",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jupiter",
       "source_count": 2,
       "sources": [
@@ -526,6 +553,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A steep interstate grade is only a few degrees when expressed as an angle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Highway grade of 6 percent",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -543,6 +571,8 @@
       "id": "obs:angle:scenario-angle-highway-grade-6-percent",
       "name": "Highway grade of 6 percent",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Grade_(slope)",
       "source_count": 2,
       "sources": [
@@ -581,6 +611,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A 1:12 accessibility ramp rises at just under five degrees.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "ADA wheelchair ramp maximum slope angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -598,6 +629,8 @@
       "id": "obs:angle:scenario-angle-ada-ramp",
       "name": "ADA wheelchair ramp maximum slope angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Wheelchair_ramp",
       "source_count": 2,
       "sources": [
@@ -636,6 +669,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A solid line-drive launch angle sits in the low tens of degrees.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Baseball launch angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -653,6 +687,8 @@
       "id": "obs:angle:scenario-angle-baseball-launch-angle",
       "name": "Baseball launch angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Launch_angle",
       "source_count": 2,
       "sources": [
@@ -691,6 +727,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Earth is tilted by about 23.4 degrees relative to its orbital plane.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth axial tilt",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -708,6 +745,8 @@
       "id": "obs:angle:entity-earth-axial-tilt",
       "name": "Earth axial tilt",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Axial_tilt",
       "source_count": 2,
       "sources": [
@@ -746,6 +785,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mars leans over by a little more than Earth, producing noticeable seasons.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mars axial tilt",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -763,6 +803,8 @@
       "id": "obs:angle:entity-mars-axial-tilt",
       "name": "Mars axial tilt",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mars",
       "source_count": 2,
       "sources": [
@@ -801,6 +843,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Each base pair in B-form DNA advances the helix by about one tenth of a full turn.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DNA helix twist per base pair",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -818,6 +861,8 @@
       "id": "obs:angle:entity-dna-helix-twist-per-base-pair",
       "name": "DNA helix twist per base pair",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA",
       "source_count": 2,
       "sources": [
@@ -856,6 +901,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative airliner wing sweep angle of about 35 degrees.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Wing sweep of a jetliner",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -873,6 +919,8 @@
       "id": "obs:angle:entity-jet-wing-sweep",
       "name": "Wing sweep of a jetliner",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Swept_wing",
       "source_count": 2,
       "sources": [
@@ -911,6 +959,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Great Pyramid sides rise at a little over fifty-one degrees.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Great Pyramid face angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -928,6 +977,8 @@
       "id": "obs:angle:entity-great-pyramid-face-angle",
       "name": "Great Pyramid face angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
       "source_count": 2,
       "sources": [
@@ -966,6 +1017,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "GPS satellites orbit in planes inclined fifty-five degrees to Earth equator.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "GPS orbital inclination",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -983,6 +1035,8 @@
       "id": "obs:angle:entity-gps-orbit-inclination",
       "name": "GPS orbital inclination",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Global_Positioning_System",
       "source_count": 2,
       "sources": [
@@ -1021,6 +1075,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Each corner of an equilateral triangle is a clean 60 degree angle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Equilateral triangle interior angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1038,6 +1093,8 @@
       "id": "obs:angle:entity-equilateral-triangle-interior-angle",
       "name": "Equilateral triangle interior angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Equilateral_triangle",
       "source_count": 2,
       "sources": [
@@ -1076,6 +1133,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A right angle is the archetypal 90 degree corner used throughout geometry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Right angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1093,6 +1151,8 @@
       "id": "obs:angle:entity-right-angle",
       "name": "Right angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Right_angle",
       "source_count": 2,
       "sources": [
@@ -1131,6 +1191,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Uranus is famously tipped far over, giving it an extreme axial orientation.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Uranus axial tilt",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1148,6 +1209,8 @@
       "id": "obs:angle:entity-uranus-axial-tilt",
       "name": "Uranus axial tilt",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Uranus",
       "source_count": 2,
       "sources": [
@@ -1186,6 +1249,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The bent geometry of a water molecule sets the H-O-H bond angle just above one hundred degrees.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water bond angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1203,6 +1267,8 @@
       "id": "obs:angle:entity-water-bond-angle",
       "name": "Water bond angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -1241,6 +1307,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A regular pentagon has 108 degree interior angles.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Regular pentagon interior angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1258,6 +1325,8 @@
       "id": "obs:angle:entity-regular-pentagon-interior-angle",
       "name": "Regular pentagon interior angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Regular_polygon",
       "source_count": 2,
       "sources": [
@@ -1296,6 +1365,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Tetrahedral carbon bonds meet at about 109.5 degrees.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Methane tetrahedral bond angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1313,6 +1383,8 @@
       "id": "obs:angle:entity-methane-tetrahedral-angle",
       "name": "Methane tetrahedral bond angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tetrahedral_molecular_geometry",
       "source_count": 2,
       "sources": [
@@ -1351,6 +1423,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The planar hexagonal bonding in graphene uses 120-degree bond angles.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Graphene bond angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1368,6 +1441,8 @@
       "id": "obs:angle:entity-graphene-bond-angle",
       "name": "Graphene bond angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Graphene",
       "source_count": 2,
       "sources": [
@@ -1406,6 +1481,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A regular hexagon opens to 120 degree interior angles.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Regular hexagon interior angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1423,6 +1499,8 @@
       "id": "obs:angle:entity-regular-hexagon-interior-angle",
       "name": "Regular hexagon interior angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Regular_polygon",
       "source_count": 2,
       "sources": [
@@ -1461,6 +1539,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A laptop lid often opens to roughly a right angle plus another third, a common working position.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Laptop lid open position",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1478,6 +1557,8 @@
       "id": "obs:angle:scenario-angle-laptop-lid-open",
       "name": "Laptop lid open position",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laptop",
       "source_count": 2,
       "sources": [
@@ -1516,6 +1597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A straight angle is a flattened 180 degree line segment.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Straight angle",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1533,6 +1615,8 @@
       "id": "obs:angle:entity-straight-angle",
       "name": "Straight angle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Straight_angle",
       "source_count": 2,
       "sources": [
@@ -1571,6 +1655,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A full turn completes a 360 degree rotation and returns to the starting direction.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Full turn",
         "ingest_source": "dataset/raw/curated/angle.json",
@@ -1588,6 +1673,8 @@
       "id": "obs:angle:entity-full-turn-angle",
       "name": "Full turn",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Turn_(angle)",
       "source_count": 2,
       "sources": [

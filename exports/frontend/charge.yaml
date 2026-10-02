@@ -61,6 +61,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Elementary charge
     ingest_source: dataset/raw/curated/charge.json
@@ -108,6 +111,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Alpha particle charge
     ingest_source: dataset/raw/curated/charge.json
@@ -155,6 +161,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Planck charge
     ingest_source: dataset/raw/curated/charge.json
@@ -202,6 +211,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Static cling from synthetic laundry
     ingest_source: dataset/raw/curated/charge.json
@@ -249,6 +261,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Static charge on a rubbed balloon
     ingest_source: dataset/raw/curated/charge.json
@@ -296,6 +311,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Doorknob static shock
     ingest_source: dataset/raw/curated/charge.json
@@ -343,6 +361,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Van de Graaff generator dome charge
     ingest_source: dataset/raw/curated/charge.json
@@ -390,6 +411,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tesla coil terminal charge
     ingest_source: dataset/raw/curated/charge.json
@@ -437,6 +461,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Electric eel discharge packet charge
     ingest_source: dataset/raw/curated/charge.json
@@ -484,6 +511,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Camera flash capacitor charge
     ingest_source: dataset/raw/curated/charge.json
@@ -531,6 +561,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Defibrillator capacitor charge
     ingest_source: dataset/raw/curated/charge.json
@@ -578,6 +611,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Small supercapacitor stored charge
     ingest_source: dataset/raw/curated/charge.json
@@ -625,6 +661,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lightning bolt charge transfer
     ingest_source: dataset/raw/curated/charge.json
@@ -672,6 +711,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cloud-to-ground lightning charge
     ingest_source: dataset/raw/curated/charge.json
@@ -719,6 +761,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Transferred charge in a lightning stroke
     ingest_source: dataset/raw/curated/charge.json
@@ -766,6 +811,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Large supercapacitor stored charge
     ingest_source: dataset/raw/curated/charge.json
@@ -813,6 +861,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Net charge in a thundercloud center
     ingest_source: dataset/raw/curated/charge.json
@@ -860,6 +911,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Storm cloud charge separation
     ingest_source: dataset/raw/curated/charge.json
@@ -907,6 +961,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Coin cell total charge
     ingest_source: dataset/raw/curated/charge.json
@@ -954,6 +1011,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: AA battery total moved charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1001,6 +1061,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: 3 Ah power-tool battery total moved charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1048,6 +1111,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Drone battery pack total charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1095,6 +1161,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Smartphone battery total moved charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1143,6 +1212,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Laptop battery total charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1190,6 +1262,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: E-bike battery total charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1237,6 +1312,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: One mole of electrons
     ingest_source: dataset/raw/curated/charge.json
@@ -1283,6 +1361,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Car battery total moved charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1330,6 +1411,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Electric vehicle battery pack total charge
     ingest_source: dataset/raw/curated/charge.json
@@ -1378,6 +1462,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Utility-scale battery container total charge
     ingest_source: dataset/raw/curated/charge.json

@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The strongest Schumann resonance is a single-digit-hertz global electromagnetic mode often compared with the lowest audible vibrations.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Schumann resonance",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -47,6 +48,8 @@
       "id": "obs:sound-frequency:entity-schumann-resonance",
       "name": "Schumann resonance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Schumann_resonances",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Elephant calls dip into infrasound below most of human hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Elephant rumbles",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -101,6 +105,8 @@
       "id": "obs:sound-frequency:entity-elephant-rumble-frequency",
       "name": "Elephant rumbles",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Elephant",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A very low musical pitch near the bottom of common hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pipe organ low C",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -155,6 +162,8 @@
       "id": "obs:sound-frequency:entity-pipe-organ-low-c",
       "name": "Pipe organ low C",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pipe_organ",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Blue whale vocalizations reach the very low end of the audible band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blue whale call",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -209,6 +219,8 @@
       "id": "obs:sound-frequency:entity-blue-whale-call-frequency",
       "name": "Blue whale call",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blue_whale",
       "source_count": 2,
       "sources": [
@@ -247,6 +259,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The conventional low-frequency edge of human hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human hearing low edge",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -263,6 +276,8 @@
       "id": "obs:sound-frequency:entity-human-hearing-low-edge",
       "name": "Human hearing low edge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hearing_range",
       "source_count": 2,
       "sources": [
@@ -301,6 +316,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The lowest A on a standard piano is a familiar low musical pitch.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lowest piano A0",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -317,6 +333,8 @@
       "id": "obs:sound-frequency:entity-piano-a0-frequency",
       "name": "Lowest piano A0",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Piano_key_frequencies",
       "source_count": 2,
       "sources": [
@@ -355,6 +373,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A tuba pedal tone reaches very low fundamentals near the edge of human hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tuba pedal tone",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -371,6 +390,8 @@
       "id": "obs:sound-frequency:entity-tuba-pedal-tone-frequency",
       "name": "Tuba pedal tone",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tuba",
       "source_count": 2,
       "sources": [
@@ -409,6 +430,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The low E string on a bass guitar is a classic low musical reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bass guitar low E",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -425,6 +447,8 @@
       "id": "obs:sound-frequency:entity-bass-guitar-low-e-frequency",
       "name": "Bass guitar low E",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bass_guitar",
       "source_count": 2,
       "sources": [
@@ -463,6 +487,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Power-line hum is a globally familiar low-frequency tone.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Power-line hum",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -479,6 +504,8 @@
       "id": "obs:sound-frequency:entity-mains-hum-frequency",
       "name": "Power-line hum",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mains_hum",
       "source_count": 2,
       "sources": [
@@ -517,6 +544,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The open A string on a bass guitar sits above the low E but still in the bass range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bass guitar A string",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -533,6 +561,8 @@
       "id": "obs:sound-frequency:entity-bass-guitar-a-frequency",
       "name": "Bass guitar A string",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bass_guitar",
       "source_count": 2,
       "sources": [
@@ -571,6 +601,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A kick drum lives in the few-dozen-hertz range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kick drum fundamental",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -587,6 +618,8 @@
       "id": "obs:sound-frequency:entity-kick-drum-fundamental",
       "name": "Kick drum fundamental",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bass_drum",
       "source_count": 2,
       "sources": [
@@ -625,6 +658,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar audio-engineering crossover point for low bass.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Subwoofer crossover",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -641,6 +675,8 @@
       "id": "obs:sound-frequency:entity-subwoofer-crossover-frequency",
       "name": "Subwoofer crossover",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Subwoofer",
       "source_count": 2,
       "sources": [
@@ -679,6 +715,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The low E string on a guitar sits a full octave above the bass low E.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Guitar low E",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -695,6 +732,8 @@
       "id": "obs:sound-frequency:entity-guitar-low-e-frequency",
       "name": "Guitar low E",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Guitar",
       "source_count": 2,
       "sources": [
@@ -733,6 +772,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative speaking fundamental frequency for an adult male voice.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Male voice fundamental",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -749,6 +789,8 @@
       "id": "obs:sound-frequency:entity-male-voice-fundamental",
       "name": "Male voice fundamental",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Voice_frequency",
       "source_count": 2,
       "sources": [
@@ -787,6 +829,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The violin's open G string anchors the lower end of the instrument.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Violin open G",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -803,6 +846,8 @@
       "id": "obs:sound-frequency:entity-violin-open-g-frequency",
       "name": "Violin open G",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Violin",
       "source_count": 2,
       "sources": [
@@ -841,6 +886,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative speaking fundamental frequency for an adult female voice.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Female voice fundamental",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -857,6 +903,8 @@
       "id": "obs:sound-frequency:entity-female-voice-fundamental",
       "name": "Female voice fundamental",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Voice_frequency",
       "source_count": 2,
       "sources": [
@@ -895,6 +943,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Middle C is a useful anchor in Western music.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Middle C",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -911,6 +960,8 @@
       "id": "obs:sound-frequency:entity-middle-c-frequency",
       "name": "Middle C",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/C_(musical_note)",
       "source_count": 2,
       "sources": [
@@ -949,6 +1000,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Many frog calls land in the low hundreds of hertz.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Frog croak",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -965,6 +1017,8 @@
       "id": "obs:sound-frequency:entity-frog-croak-frequency",
       "name": "Frog croak",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Frog",
       "source_count": 2,
       "sources": [
@@ -1003,6 +1057,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The standard orchestral tuning reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Concert A4",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1019,6 +1074,8 @@
       "id": "obs:sound-frequency:entity-concert-a4-frequency",
       "name": "Concert A4",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/A440_(pitch_standard)",
       "source_count": 2,
       "sources": [
@@ -1057,6 +1114,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dog barks cluster around several hundred hertz.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dog bark",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1073,6 +1131,8 @@
       "id": "obs:sound-frequency:entity-dog-bark-frequency",
       "name": "Dog bark",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dog",
       "source_count": 2,
       "sources": [
@@ -1111,6 +1171,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The familiar mosquito whine is a few hundred hertz.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mosquito wingbeat",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1127,6 +1188,8 @@
       "id": "obs:sound-frequency:entity-mosquito-wingbeat-frequency",
       "name": "Mosquito wingbeat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mosquito",
       "source_count": 2,
       "sources": [
@@ -1165,6 +1228,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A very high violin note in the low-kilohertz range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Violin E7",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1181,6 +1245,8 @@
       "id": "obs:sound-frequency:entity-violin-e7-frequency",
       "name": "Violin E7",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Violin",
       "source_count": 2,
       "sources": [
@@ -1219,6 +1285,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Smoke alarms use piercing tones around three kilohertz.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Smoke alarm tone",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1235,6 +1302,8 @@
       "id": "obs:sound-frequency:entity-smoke-alarm-tone-frequency",
       "name": "Smoke alarm tone",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Smoke_detector",
       "source_count": 2,
       "sources": [
@@ -1273,6 +1342,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Classic telephony passes only a few kilohertz of voice bandwidth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Telephone upper band edge",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1289,6 +1359,8 @@
       "id": "obs:sound-frequency:entity-telephone-band-edge",
       "name": "Telephone upper band edge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Voice_frequency",
       "source_count": 2,
       "sources": [
@@ -1327,6 +1399,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The piccolo reaches very high note frequencies above the standard flute range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Piccolo high C",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1343,6 +1416,8 @@
       "id": "obs:sound-frequency:entity-piccolo-high-c-frequency",
       "name": "Piccolo high C",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Piccolo",
       "source_count": 2,
       "sources": [
@@ -1381,6 +1456,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cricket chirps sit in the several-kilohertz range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cricket chirp",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1397,6 +1473,8 @@
       "id": "obs:sound-frequency:entity-cricket-chirp-frequency",
       "name": "Cricket chirp",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cricket_(insect)",
       "source_count": 2,
       "sources": [
@@ -1435,6 +1513,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Many consonant cues live in the several-kilohertz range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Speech sibilants",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1451,6 +1530,8 @@
       "id": "obs:sound-frequency:entity-speech-sibilants-frequency",
       "name": "Speech sibilants",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sibilant",
       "source_count": 2,
       "sources": [
@@ -1489,6 +1570,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Many songbirds concentrate acoustic energy in the low-kilohertz range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Canary song",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1505,6 +1587,8 @@
       "id": "obs:sound-frequency:entity-canary-song-frequency",
       "name": "Canary song",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Canary",
       "source_count": 2,
       "sources": [
@@ -1543,6 +1627,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The conventional upper-frequency edge of human hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human hearing high edge",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1559,6 +1644,8 @@
       "id": "obs:sound-frequency:entity-human-hearing-high-edge",
       "name": "Human hearing high edge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hearing_range",
       "source_count": 2,
       "sources": [
@@ -1597,6 +1684,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dog whistles sit just above common human hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dog whistle",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1613,6 +1701,8 @@
       "id": "obs:sound-frequency:entity-dog-whistle-frequency",
       "name": "Dog whistle",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dog_whistle",
       "source_count": 2,
       "sources": [
@@ -1651,6 +1741,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Quartz watches often use a 32768 hertz tuning fork crystal for timekeeping.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quartz watch crystal",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1667,6 +1758,8 @@
       "id": "obs:sound-frequency:entity-quartz-watch-crystal-frequency",
       "name": "Quartz watch crystal",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Quartz_clock",
       "source_count": 2,
       "sources": [
@@ -1705,6 +1798,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ultrasonic cleaners often operate around forty kilohertz.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ultrasonic cleaner",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1721,6 +1815,8 @@
       "id": "obs:sound-frequency:entity-ultrasonic-cleaner-frequency",
       "name": "Ultrasonic cleaner",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ultrasonic_cleaner",
       "source_count": 2,
       "sources": [
@@ -1759,6 +1855,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bats often echolocate tens of kilohertz above human hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bat echolocation",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1775,6 +1872,8 @@
       "id": "obs:sound-frequency:entity-bat-echolocation-frequency",
       "name": "Bat echolocation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bat",
       "source_count": 2,
       "sources": [
@@ -1813,6 +1912,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dolphin biosonar extends into the hundred-kilohertz regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dolphin clicks",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1829,6 +1929,8 @@
       "id": "obs:sound-frequency:entity-dolphin-click-frequency",
       "name": "Dolphin clicks",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dolphin",
       "source_count": 2,
       "sources": [
@@ -1867,6 +1969,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Consumer sonar often operates in the hundreds of kilohertz.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fish-finder sonar",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1884,6 +1987,8 @@
       "id": "obs:sound-frequency:entity-fish-finder-sonar-frequency",
       "name": "Fish-finder sonar",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Echo_sounding",
       "source_count": 2,
       "sources": [
@@ -1922,6 +2027,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Medical imaging ultrasound commonly uses a few megahertz.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Medical ultrasound",
         "ingest_source": "dataset/raw/curated/sound-frequency.json",
@@ -1939,6 +2045,8 @@
       "id": "obs:sound-frequency:entity-medical-ultrasound-frequency",
       "name": "Medical ultrasound",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Medical_ultrasound",
       "source_count": 2,
       "sources": [

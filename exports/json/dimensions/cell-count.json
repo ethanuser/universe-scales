@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single bacterium is the lower anchor for cell-count comparisons.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A bacterium",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -47,6 +48,8 @@
       "id": "obs:cell-count:entity-cell-count-a-bacterium",
       "name": "A bacterium",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cell_(biology)",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The human egg is a one-cell starting point for an organism.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A human oocyte",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -101,6 +105,8 @@
       "id": "obs:cell-count:entity-cell-count-a-human-oocyte",
       "name": "A human oocyte",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oocyte",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A red blood cell is a canonical animal cell-scale object.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A human red blood cell",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -155,6 +162,8 @@
       "id": "obs:cell-count:entity-cell-count-a-human-red-blood-cell",
       "name": "A human red blood cell",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Yeast provides a familiar eukaryotic single-cell example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A yeast cell",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -209,6 +219,8 @@
       "id": "obs:cell-count:entity-cell-count-a-yeast-cell",
       "name": "A yeast cell",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Yeast",
       "source_count": 2,
       "sources": [
@@ -247,6 +259,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The adult nematode has a famously fixed and small cell count.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Adult C. elegans hermaphrodite",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -264,6 +277,8 @@
       "id": "obs:cell-count:entity-cell-count-adult-c-elegans-hermaphrodite",
       "name": "Adult C. elegans hermaphrodite",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Caenorhabditis_elegans",
       "source_count": 2,
       "sources": [
@@ -302,6 +317,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Early embryos quickly move out of the single-cell band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A zebrafish embryo",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -321,6 +337,8 @@
       "qualifiers": {
         "assumption": "early embryo"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Zebrafish",
       "source_count": 2,
       "sources": [
@@ -359,6 +377,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fruit-fly embryo gives a compact multicellular benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Drosophila embryo at hatching",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -378,6 +397,8 @@
       "qualifiers": {
         "assumption": "embryo at hatching"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drosophila_melanogaster",
       "source_count": 2,
       "sources": [
@@ -416,6 +437,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A small drop of blood already contains hundreds of millions of cells.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A drop of blood",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -435,6 +457,8 @@
       "qualifiers": {
         "assumption": "100 microliters per drop"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blood",
       "source_count": 2,
       "sources": [
@@ -473,6 +497,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A milliliter of dense culture jumps by nine orders of magnitude from a lone bacterium.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "An E. coli culture in one milliliter",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -492,6 +517,8 @@
       "qualifiers": {
         "assumption": "dense culture"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -530,6 +557,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A milliliter of dense bacterial culture reaches into the billions of cells.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dense E. coli culture (1 mL)",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -549,6 +577,8 @@
       "qualifiers": {
         "assumption": "1 mL dense culture"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -587,6 +617,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mouse body gives a small-animal whole-organism scale anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A mouse body",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -606,6 +637,8 @@
       "qualifiers": {
         "assumption": "adult mouse"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mouse",
       "source_count": 2,
       "sources": [
@@ -644,6 +677,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The brain sits near the tens-of-billions band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "The human brain",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -663,6 +697,8 @@
       "qualifiers": {
         "assumption": "adult human brain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_brain",
       "source_count": 2,
       "sources": [
@@ -701,6 +737,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The human brain is a familiar large-cell-count reference.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human brain neurons",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -720,6 +757,8 @@
       "qualifiers": {
         "measure": "neurons"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_brain",
       "source_count": 2,
       "sources": [
@@ -758,6 +797,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mature tree moves the scale into trillion-cell territory.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A mature oak tree",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -777,6 +817,8 @@
       "qualifiers": {
         "assumption": "mature tree"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oak",
       "source_count": 2,
       "sources": [
@@ -815,6 +857,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Red blood cells are one of the largest single-cell populations in a body.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human red blood cells",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -834,6 +877,8 @@
       "qualifiers": {
         "assumption": "adult human"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
       "source_count": 2,
       "sources": [
@@ -872,6 +917,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The adult human body is a useful whole-organism reference for cell counts.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A human body",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -889,6 +935,8 @@
       "id": "obs:cell-count:entity-cell-count-a-human-body",
       "name": "A human body",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body",
       "source_count": 2,
       "sources": [
@@ -927,6 +975,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The microbiome is comparable in size to the human body itself.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "The human gut microbiome",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -946,6 +995,8 @@
       "qualifiers": {
         "assumption": "adult human gut microbiome"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_gut_microbiota",
       "source_count": 2,
       "sources": [
@@ -984,6 +1035,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A blue whale pushes the cell-count scale toward the top of animal life.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "A blue whale body",
         "ingest_source": "dataset/raw/curated/cell-count.json",
@@ -1003,6 +1055,8 @@
       "qualifiers": {
         "assumption": "adult blue whale"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blue_whale",
       "source_count": 2,
       "sources": [

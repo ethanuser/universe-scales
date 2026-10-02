@@ -85,6 +85,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Electron
     ingest_source: dataset/raw/curated/mass.json
@@ -128,6 +131,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Proton
     ingest_source: dataset/raw/curated/mass.json
@@ -171,6 +177,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water molecule
     ingest_source: dataset/raw/curated/mass.json
@@ -216,6 +225,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ribosome
     ingest_source: dataset/raw/curated/mass.json
@@ -259,6 +271,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Influenza virion
     ingest_source: dataset/raw/curated/mass.json
@@ -302,6 +317,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Escherichia coli cell
     ingest_source: dataset/raw/curated/mass.json
@@ -346,6 +364,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human ovum
     ingest_source: dataset/raw/curated/mass.json
@@ -389,6 +410,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Planck mass
     ingest_source: dataset/raw/curated/mass.json
@@ -436,6 +460,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Grain of rice
     ingest_source: dataset/raw/curated/mass.json
@@ -480,6 +507,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Honey bee
     ingest_source: dataset/raw/curated/mass.json
@@ -523,6 +553,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: House mouse
     ingest_source: dataset/raw/curated/mass.json
@@ -566,6 +599,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cat
     ingest_source: dataset/raw/curated/mass.json
@@ -609,6 +645,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human
     ingest_source: dataset/raw/curated/mass.json
@@ -652,6 +691,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Giraffe
     ingest_source: dataset/raw/curated/mass.json
@@ -695,6 +737,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Family car
     ingest_source: dataset/raw/curated/mass.json
@@ -738,6 +783,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blue whale
     ingest_source: dataset/raw/curated/mass.json
@@ -781,6 +829,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Boeing 747
     ingest_source: dataset/raw/curated/mass.json
@@ -824,6 +875,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Eiffel Tower
     ingest_source: dataset/raw/curated/mass.json
@@ -867,6 +921,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Great Pyramid of Giza
     ingest_source: dataset/raw/curated/mass.json
@@ -910,6 +967,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Halley's Comet
     ingest_source: dataset/raw/curated/mass.json
@@ -956,6 +1016,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lake Superior
     ingest_source: dataset/raw/curated/mass.json
@@ -1001,6 +1064,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ceres
     ingest_source: dataset/raw/curated/mass.json
@@ -1044,6 +1110,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pluto
     ingest_source: dataset/raw/curated/mass.json
@@ -1090,6 +1159,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon
     ingest_source: dataset/raw/curated/mass.json
@@ -1133,6 +1205,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Venus
     ingest_source: dataset/raw/curated/mass.json
@@ -1179,6 +1254,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Uranus
     ingest_source: dataset/raw/curated/mass.json
@@ -1225,6 +1303,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neptune
     ingest_source: dataset/raw/curated/mass.json
@@ -1271,6 +1352,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saturn
     ingest_source: dataset/raw/curated/mass.json
@@ -1317,6 +1401,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brown dwarf at the deuterium limit
     ingest_source: dataset/raw/curated/mass.json
@@ -1366,6 +1453,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: TRAPPIST-1
     ingest_source: dataset/raw/curated/mass.json
@@ -1413,6 +1503,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun
     ingest_source: dataset/raw/curated/mass.json
@@ -1456,6 +1549,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sirius A
     ingest_source: dataset/raw/curated/mass.json
@@ -1503,6 +1599,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cygnus X-1 black hole
     ingest_source: dataset/raw/curated/mass.json
@@ -1550,6 +1649,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Betelgeuse
     ingest_source: dataset/raw/curated/mass.json
@@ -1597,6 +1699,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: R136a1
     ingest_source: dataset/raw/curated/mass.json
@@ -1644,6 +1749,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: R136 star cluster
     ingest_source: dataset/raw/curated/mass.json
@@ -1693,6 +1801,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Messier 14
     ingest_source: dataset/raw/curated/mass.json
@@ -1742,6 +1853,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sagittarius A*
     ingest_source: dataset/raw/curated/mass.json
@@ -1789,6 +1903,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Omega Centauri
     ingest_source: dataset/raw/curated/mass.json
@@ -1836,6 +1953,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: M60-UCD1
     ingest_source: dataset/raw/curated/mass.json
@@ -1885,6 +2005,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: NGC 5474
     ingest_source: dataset/raw/curated/mass.json
@@ -1934,6 +2057,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: M87*
     ingest_source: dataset/raw/curated/mass.json
@@ -1981,6 +2107,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Large Magellanic Cloud
     ingest_source: dataset/raw/curated/mass.json
@@ -2030,6 +2159,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Triangulum Galaxy
     ingest_source: dataset/raw/curated/mass.json
@@ -2079,6 +2211,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Whirlpool Galaxy
     ingest_source: dataset/raw/curated/mass.json
@@ -2128,6 +2263,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: M60
     ingest_source: dataset/raw/curated/mass.json
@@ -2177,6 +2315,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Andromeda galaxy
     ingest_source: dataset/raw/curated/mass.json
@@ -2226,6 +2367,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milky Way
     ingest_source: dataset/raw/curated/mass.json
@@ -2269,6 +2413,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Virgo Supercluster
     ingest_source: dataset/raw/curated/mass.json
@@ -2312,6 +2459,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Observable universe
     ingest_source: dataset/raw/curated/mass.json

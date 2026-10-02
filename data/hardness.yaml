@@ -41,6 +41,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lead
     ingest_source: dataset/raw/curated/hardness.json
@@ -87,6 +90,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soft rubber
     ingest_source: dataset/raw/curated/hardness.json
@@ -133,6 +139,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice
     ingest_source: dataset/raw/curated/hardness.json
@@ -179,6 +188,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fingernail
     ingest_source: dataset/raw/curated/hardness.json
@@ -225,6 +237,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wood
     ingest_source: dataset/raw/curated/hardness.json
@@ -271,6 +286,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lead
     ingest_source: dataset/raw/curated/hardness.json
@@ -317,6 +335,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concrete
     ingest_source: dataset/raw/curated/hardness.json
@@ -363,6 +384,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fingernail
     ingest_source: dataset/raw/curated/hardness.json
@@ -409,6 +433,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Acrylic plastic
     ingest_source: dataset/raw/curated/hardness.json
@@ -455,6 +482,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gold
     ingest_source: dataset/raw/curated/hardness.json
@@ -501,6 +531,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Copper
     ingest_source: dataset/raw/curated/hardness.json
@@ -547,6 +580,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concrete
     ingest_source: dataset/raw/curated/hardness.json
@@ -593,6 +629,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brass
     ingest_source: dataset/raw/curated/hardness.json
@@ -639,6 +678,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aluminum
     ingest_source: dataset/raw/curated/hardness.json
@@ -685,6 +727,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Brass
     ingest_source: dataset/raw/curated/hardness.json
@@ -731,6 +776,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mild steel
     ingest_source: dataset/raw/curated/hardness.json
@@ -777,6 +825,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mild steel
     ingest_source: dataset/raw/curated/hardness.json
@@ -823,6 +874,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Stainless steel
     ingest_source: dataset/raw/curated/hardness.json
@@ -869,6 +923,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cast iron
     ingest_source: dataset/raw/curated/hardness.json
@@ -915,6 +972,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Glass
     ingest_source: dataset/raw/curated/hardness.json
@@ -961,6 +1021,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Window glass
     ingest_source: dataset/raw/curated/hardness.json
@@ -1007,6 +1070,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quartz
     ingest_source: dataset/raw/curated/hardness.json
@@ -1053,6 +1119,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Quartz
     ingest_source: dataset/raw/curated/hardness.json
@@ -1099,6 +1168,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silicon
     ingest_source: dataset/raw/curated/hardness.json
@@ -1145,6 +1217,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ceramic knife zirconia
     ingest_source: dataset/raw/curated/hardness.json
@@ -1191,6 +1266,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tungsten carbide
     ingest_source: dataset/raw/curated/hardness.json
@@ -1237,6 +1315,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sapphire
     ingest_source: dataset/raw/curated/hardness.json
@@ -1283,6 +1364,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tungsten carbide
     ingest_source: dataset/raw/curated/hardness.json
@@ -1329,6 +1413,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cubic boron nitride
     ingest_source: dataset/raw/curated/hardness.json
@@ -1375,6 +1462,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Diamond
     ingest_source: dataset/raw/curated/hardness.json
@@ -1421,6 +1511,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Diamond
     ingest_source: dataset/raw/curated/hardness.json

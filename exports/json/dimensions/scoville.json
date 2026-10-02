@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sweet peppers are effectively the zero point of everyday spicy food.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sweet bell pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -47,6 +48,8 @@
       "id": "obs:scoville:entity-bell-pepper-scoville",
       "name": "Sweet bell pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bell_pepper",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A very mild pepper in the low hundreds of SHU.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pimento pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -101,6 +105,8 @@
       "id": "obs:scoville:entity-pimento-scoville",
       "name": "Pimento pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pimiento",
       "source_count": 2,
       "sources": [
@@ -139,6 +145,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Banana peppers sit in the mild range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Banana pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -155,6 +162,8 @@
       "id": "obs:scoville:entity-banana-pepper-scoville",
       "name": "Banana pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Banana_pepper",
       "source_count": 2,
       "sources": [
@@ -193,6 +202,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mild chili slightly hotter than a sweet pepper.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Anaheim pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -209,6 +219,8 @@
       "id": "obs:scoville:entity-anaheim-pepper-scoville",
       "name": "Anaheim pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Anaheim_pepper",
       "source_count": 2,
       "sources": [
@@ -247,6 +259,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "New Mexico chiles are usually mild enough to sit near the low end of the scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "New Mexico chile",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -266,6 +279,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/New_Mexico_chile",
       "source_count": 2,
       "sources": [
@@ -304,6 +319,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ancho chiles are dried poblano peppers with a mild heat level.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ancho pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -323,6 +339,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ancho_chili_pepper",
       "source_count": 2,
       "sources": [
@@ -361,6 +379,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Harissa is a North African chili paste that usually lands in the mild-to-moderate range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Harissa",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -380,6 +399,8 @@
         "assumption": "representative value",
         "measurement": "sauce heat"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Harissa",
       "source_count": 2,
       "sources": [
@@ -418,6 +439,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Poblanos are often only mildly pungent.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Poblano pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -434,6 +456,8 @@
       "id": "obs:scoville:entity-poblano-scoville",
       "name": "Poblano pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Poblano",
       "source_count": 2,
       "sources": [
@@ -472,6 +496,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pasilla chiles sit in the mild end of the dried-pepper spectrum.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pasilla pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -491,6 +516,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pasilla",
       "source_count": 2,
       "sources": [
@@ -529,6 +556,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sambal oelek is a chili paste that can vary, but is generally much milder than superhots.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sambal oelek",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -548,6 +576,8 @@
         "assumption": "representative value",
         "measurement": "sauce heat"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sambal",
       "source_count": 2,
       "sources": [
@@ -586,6 +616,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A popular hot sauce that still sits well below truly hot chiles.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sriracha sauce",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -602,6 +633,8 @@
       "id": "obs:scoville:entity-sriracha-scoville",
       "name": "Sriracha sauce",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sriracha_sauce",
       "source_count": 2,
       "sources": [
@@ -640,6 +673,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cascabel chiles bring a round, nutty heat that stays relatively gentle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cascabel pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -659,6 +693,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cascabel_chili",
       "source_count": 2,
       "sources": [
@@ -697,6 +733,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Guajillo chiles are a common mild-to-moderate dried pepper in Mexican cooking.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Guajillo pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -716,6 +753,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Guajillo_chili",
       "source_count": 2,
       "sources": [
@@ -754,6 +793,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A jalapeno is a canonical entry-level hot pepper.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jalapeno pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -770,6 +810,8 @@
       "id": "obs:scoville:entity-jalapeno-scoville",
       "name": "Jalapeno pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jalape%C3%B1o",
       "source_count": 2,
       "sources": [
@@ -808,6 +850,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Piri piri sauces vary, but they are usually hotter than standard chili sauces.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Piri piri sauce",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -827,6 +870,8 @@
         "assumption": "representative value",
         "measurement": "sauce heat"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Piri_piri",
       "source_count": 2,
       "sources": [
@@ -865,6 +910,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Classic Tabasco sauce lives in the same broad heat region as jalapenos.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tabasco sauce",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -881,6 +927,8 @@
       "id": "obs:scoville:entity-tabasco-sauce-scoville",
       "name": "Tabasco sauce",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tabasco_sauce",
       "source_count": 2,
       "sources": [
@@ -919,6 +967,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Chipotle peppers are smoked ripe jalapenos and land in the low-thousands range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chipotle pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -935,6 +984,8 @@
       "id": "obs:scoville:entity-chipotle-scoville",
       "name": "Chipotle pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chipotle",
       "source_count": 2,
       "sources": [
@@ -973,6 +1024,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A medium-hot chili that bridges jalapenos and serranos.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fresno pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -989,6 +1041,8 @@
       "id": "obs:scoville:entity-fresno-pepper-scoville",
       "name": "Fresno pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fresno_chili",
       "source_count": 2,
       "sources": [
@@ -1027,6 +1081,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Peri-peri sauces range widely, but a moderate bottle sits well above ordinary condiments.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Peri-peri sauce",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1046,6 +1101,8 @@
         "assumption": "representative value",
         "measurement": "sauce heat"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Peri-peri",
       "source_count": 2,
       "sources": [
@@ -1084,6 +1141,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Serranos are noticeably hotter than jalapenos.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Serrano pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1100,6 +1158,8 @@
       "id": "obs:scoville:entity-serrano-scoville",
       "name": "Serrano pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Serrano_pepper",
       "source_count": 2,
       "sources": [
@@ -1138,6 +1198,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Chile de \u00e1rbol is a sharper dried chile with heat above the mild cooking peppers.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chile de \u00e1rbol",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1157,6 +1218,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chile_de_%C3%A1rbol",
       "source_count": 2,
       "sources": [
@@ -1195,6 +1258,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Aji amarillo is a bright Peruvian pepper with moderate heat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aji amarillo",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1214,6 +1278,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aji_amarillo",
       "source_count": 2,
       "sources": [
@@ -1252,6 +1318,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cayenne peppers sit around the tens-of-thousands SHU range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cayenne pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1268,6 +1335,8 @@
       "id": "obs:scoville:entity-cayenne-scoville",
       "name": "Cayenne pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cayenne_pepper",
       "source_count": 2,
       "sources": [
@@ -1306,6 +1375,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Thai chiles are small but much hotter than the mild cooking peppers.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thai chili",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1325,6 +1395,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Thai_chili",
       "source_count": 2,
       "sources": [
@@ -1363,6 +1435,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bird chiles move into the six-figure SHU regime.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thai bird chili",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1379,6 +1452,8 @@
       "id": "obs:scoville:entity-birds-eye-chili-scoville",
       "name": "Thai bird chili",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bird%27s_eye_chili",
       "source_count": 2,
       "sources": [
@@ -1417,6 +1492,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fatalii peppers are a notably hot yellow chili with a citrusy profile.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fatalii pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1436,6 +1512,8 @@
         "assumption": "range midpoint",
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fatalii",
       "source_count": 2,
       "sources": [
@@ -1474,6 +1552,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Habaneros are a classic quarter-million-SHU benchmark pepper.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Habanero pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1490,6 +1569,8 @@
       "id": "obs:scoville:entity-habanero-scoville",
       "name": "Habanero pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Habanero",
       "source_count": 2,
       "sources": [
@@ -1528,6 +1609,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Scotch bonnets occupy a similar heat band to habaneros.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Scotch bonnet",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1544,6 +1626,8 @@
       "id": "obs:scoville:entity-scotch-bonnet-scoville",
       "name": "Scotch bonnet",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Scotch_bonnet",
       "source_count": 2,
       "sources": [
@@ -1582,6 +1666,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An older extreme-hot cultivar from the pre-superhot era.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Red Savina habanero",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1598,6 +1683,8 @@
       "id": "obs:scoville:entity-red-savina-scoville",
       "name": "Red Savina habanero",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Habanero",
       "source_count": 2,
       "sources": [
@@ -1636,6 +1723,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The ghost pepper crossed the million-SHU threshold that once seemed extreme.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ghost pepper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1652,6 +1740,8 @@
       "id": "obs:scoville:entity-ghost-pepper-scoville",
       "name": "Ghost pepper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ghost_pepper",
       "source_count": 2,
       "sources": [
@@ -1690,6 +1780,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Trinidad Moruga Scorpion sits among the hottest widely known peppers.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Trinidad Moruga Scorpion average",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1708,6 +1799,8 @@
       "qualifiers": {
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Trinidad_Moruga_Scorpion",
       "source_count": 2,
       "sources": [
@@ -1746,6 +1839,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A superhot pepper well above one million SHU.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Trinidad Moruga Scorpion",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1762,6 +1856,8 @@
       "id": "obs:scoville:entity-trinidad-moruga-scorpion-scoville",
       "name": "Trinidad Moruga Scorpion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Trinidad_Moruga_scorpion",
       "source_count": 2,
       "sources": [
@@ -1800,6 +1896,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A benchmark superhot cultivar from the modern pepper-breeding era.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Carolina Reaper",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1816,6 +1913,8 @@
       "id": "obs:scoville:entity-carolina-reaper-scoville",
       "name": "Carolina Reaper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Carolina_Reaper",
       "source_count": 2,
       "sources": [
@@ -1854,6 +1953,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Seven Pot Douglah is one of the hotter Caribbean superhots.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Seven Pot Douglah",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1872,6 +1972,8 @@
       "qualifiers": {
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/7_Pot_Douglah",
       "source_count": 2,
       "sources": [
@@ -1910,6 +2012,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pepper spray formulations are often measured in the low millions of SHU.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pepper spray",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1926,6 +2029,8 @@
       "id": "obs:scoville:entity-pepper-spray-scoville",
       "name": "Pepper spray",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pepper_spray",
       "source_count": 2,
       "sources": [
@@ -1964,6 +2069,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An example of the multi-million-SHU superhot breeding frontier.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dragon's Breath pepper claim",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -1980,6 +2086,8 @@
       "id": "obs:scoville:entity-dragons-breath-scoville",
       "name": "Dragon's Breath pepper claim",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dragon%27s_Breath_(chili_pepper)",
       "source_count": 2,
       "sources": [
@@ -2018,6 +2126,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pepper X currently sits near the top of the known pepper heat range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pepper X",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -2036,6 +2145,8 @@
       "qualifiers": {
         "measurement": "heat level"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pepper_X",
       "source_count": 2,
       "sources": [
@@ -2074,6 +2185,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Some stronger oleoresin capsicum sprays push into several million SHU.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Police-grade OC spray",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -2090,6 +2202,8 @@
       "id": "obs:scoville:entity-police-oc-spray-scoville",
       "name": "Police-grade OC spray",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pepper_spray",
       "source_count": 2,
       "sources": [
@@ -2128,6 +2242,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pure capsaicin defines the practical top end of the Scoville scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pure capsaicin",
         "ingest_source": "dataset/raw/curated/scoville.json",
@@ -2144,6 +2259,8 @@
       "id": "obs:scoville:entity-pure-capsaicin-scoville",
       "name": "Pure capsaicin",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Capsaicin",
       "source_count": 2,
       "sources": [

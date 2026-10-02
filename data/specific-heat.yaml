@@ -43,6 +43,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lead
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -88,6 +91,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gold
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -133,6 +139,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mercury
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -178,6 +187,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silver
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -223,6 +235,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Copper
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -268,6 +283,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Iron
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -313,6 +331,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -358,6 +379,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silicon
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -403,6 +427,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Granite
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -449,6 +476,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sand
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -494,6 +524,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Glass
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -539,6 +572,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concrete
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -584,6 +620,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aluminum
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -629,6 +668,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aluminum
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -675,6 +717,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Air
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -720,6 +765,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Wood
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -765,6 +813,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Olive oil
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -810,6 +861,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vegetable oil
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -855,6 +909,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steam
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -900,6 +957,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -945,6 +1005,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Snow
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -990,6 +1053,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -1036,6 +1102,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ethanol
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -1081,6 +1150,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lithium
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -1126,6 +1198,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -1171,6 +1246,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ammonia
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -1216,6 +1294,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Helium
     ingest_source: dataset/raw/curated/specific-heat.json
@@ -1261,6 +1342,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hydrogen
     ingest_source: dataset/raw/curated/specific-heat.json

@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Landauer's principle gives a minimum entropy export per erased bit at room temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One bit erased",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -47,6 +48,8 @@
       "id": "obs:entropy:entity-one-bit-erased-entropy",
       "name": "One bit erased",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Landauer%27s_principle",
       "source_count": 2,
       "sources": [
@@ -85,6 +88,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single ideal-gas molecule doubling its accessible volume changes entropy by k_B ln 2.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One ideal-gas molecule doubling volume",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -102,6 +106,8 @@
       "id": "obs:entropy:entity-single-molecule-doubling-entropy",
       "name": "One ideal-gas molecule doubling volume",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Entropy_(statistical_thermodynamics)",
       "source_count": 2,
       "sources": [
@@ -140,6 +146,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single protein folding event sits at the frontier where chemistry becomes biology. The molecule is small, but its shape matters enough to decide whether it can bind, catalyze, or signal. This is the first place on the scale where one molecule's conformation starts to matter more than a bulk sample.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Protein folding of one molecule",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -156,6 +163,8 @@
       "id": "obs:entropy:entity-single-protein-folding-entropy",
       "name": "Protein folding of one molecule",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Protein_folding",
       "source_count": 2,
       "sources": [
@@ -194,6 +203,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "RNA does not need to be protein-sized to matter. Even a short hairpin loop can flip between folded and unfolded states, and that switch is one of the cleanest examples of a structure that is small enough to be molecular yet organized enough to carry information.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "RNA hairpin folding",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -210,6 +220,8 @@
       "id": "obs:entropy:entity-rna-hairpin-folding-entropy",
       "name": "RNA hairpin folding",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/RNA_secondary_structure",
       "source_count": 2,
       "sources": [
@@ -248,6 +260,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A single base pair is too small to look dramatic, but that is exactly why it is useful here. DNA spends part of its life in a breathing, flickering state, and those brief openings are part of how replication and repair reach the sequence underneath.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "DNA base-pair opening",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -264,6 +277,8 @@
       "id": "obs:entropy:entity-dna-base-pair-opening-entropy",
       "name": "DNA base-pair opening",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA",
       "source_count": 2,
       "sources": [
@@ -302,6 +317,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Gene regulation often turns on one protein docking event at a specific stretch of DNA. That makes the entropy change tiny in absolute terms, but the biological effect can be outsized because a single binding event can alter which genes are active.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Transcription factor binding to DNA",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -318,6 +334,8 @@
       "id": "obs:entropy:entity-transcription-factor-binding-entropy",
       "name": "Transcription factor binding to DNA",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Transcription_factor",
       "source_count": 2,
       "sources": [
@@ -356,6 +374,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Viruses are good scale anchors because they are built by self-assembly rather than by broad metabolism. A capsid snaps together from many pieces at once, which makes the entropy bookkeeping feel more like organized construction than ordinary chemistry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Virus capsid assembly",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -372,6 +391,8 @@
       "id": "obs:entropy:entity-virus-capsid-assembly-entropy",
       "name": "Virus capsid assembly",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Viral_capsid",
       "source_count": 2,
       "sources": [
@@ -410,6 +431,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Binary fission is a dramatic biological event even though the entropy change is still microscopic on the everyday scale. The point is not that the number is big, but that a whole cell can reorganize itself and split while staying far below any melting or freezing benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bacterial cell division",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -426,6 +448,8 @@
       "id": "obs:entropy:entity-bacterial-cell-division-entropy",
       "name": "Bacterial cell division",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Binary_fission",
       "source_count": 2,
       "sources": [
@@ -464,6 +488,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "This is a good middle ground between pure molecular binding and full cellular behavior. One signal arriving at the right receptor can start a cascade, so a small entropy change can carry a surprisingly large amount of biological consequence.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hormone-receptor signaling burst",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -480,6 +505,8 @@
       "id": "obs:entropy:entity-hormone-receptor-signaling-entropy",
       "name": "Hormone-receptor signaling burst",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Signal_transduction",
       "source_count": 2,
       "sources": [
@@ -518,6 +545,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Fermentation is one of the rare biological processes that is both chemically precise and immediately familiar. The same pathway that powers yeast also leaves visible bubbles, heat, and flavor, which makes the entropy change feel physical rather than abstract.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Yeast fermentation burst",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -534,6 +562,8 @@
       "id": "obs:entropy:entity-yeast-fermentation-entropy",
       "name": "Yeast fermentation burst",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Fermentation",
       "source_count": 2,
       "sources": [
@@ -572,6 +602,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A fruit fly is tiny enough to hold the biological part of this scale together. It is a whole animal, not a molecule or a cell, yet warming it by a degree still sits far below anything kitchen-sized. That makes it a good anchor for the jump from molecular biology to animal bodies.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fruit fly warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -591,6 +622,8 @@
       "qualifiers": {
         "assumption": "1 mg body mass, c \u2248 3500 J/(kg K), \u0394T = 1 K"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Drosophila_melanogaster",
       "source_count": 2,
       "sources": [
@@ -629,6 +662,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A honeybee makes the scale feel more alive than a block of metal but still much smaller than a mammal or a room. It belongs in the awkward middle where metabolism, motion, and body size all matter at once.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Honeybee warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -648,6 +682,8 @@
       "qualifiers": {
         "assumption": "100 mg body mass, c \u2248 3500 J/(kg K), \u0394T = 1 K"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Honey_bee",
       "source_count": 2,
       "sources": [
@@ -686,6 +722,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A mouse is small enough to fit in one hand, but thermodynamically it already behaves like a recognizably macroscopic animal. This is a useful bridge because it sits well above insects and cells while still far below household pots, kettles, and phase changes.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mouse warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -705,6 +742,8 @@
       "qualifiers": {
         "assumption": "20 g body mass, c \u2248 3500 J/(kg K), \u0394T = 1 K"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mouse",
       "source_count": 2,
       "sources": [
@@ -743,6 +782,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A copper block is a useful reminder that solids often resist entropy change more than liquids do. Even a one-degree shift is enough to make the bookkeeping visible, but not so much that the material stops feeling like a solid piece of metal.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Copper block warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -762,6 +802,8 @@
       "qualifiers": {
         "assumption": "copper near room temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Copper",
       "source_count": 2,
       "sources": [
@@ -800,6 +842,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Iron gives the same idea a slightly different texture: common, heavy, and still thermodynamically modest. A one-degree warming changes the state of the block, but not in a way that feels dramatic from the outside.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Iron block warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -819,6 +862,8 @@
       "qualifiers": {
         "assumption": "iron near room temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Iron",
       "source_count": 2,
       "sources": [
@@ -857,6 +902,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Air is easy to overlook because it is invisible, but a roomful of it still has thermal memory. Heating it by one degree moves entropy in a way that feels smaller than water, which is part of why air warms and cools so quickly.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Room air warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -876,6 +922,8 @@
       "qualifiers": {
         "assumption": "air near room temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
       "source_count": 2,
       "sources": [
@@ -914,6 +962,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "For a mole of ideal gas, doubling volume changes entropy by R ln 2.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "One mole ideal gas doubling volume",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -931,6 +980,8 @@
       "id": "obs:entropy:entity-one-mole-ideal-gas-doubling-entropy",
       "name": "One mole ideal gas doubling volume",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
       "source_count": 2,
       "sources": [
@@ -969,6 +1020,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At macroscopic scale, molecular events become everyday thermodynamic quantities.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Protein folding of one mole of protein",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -985,6 +1037,8 @@
       "id": "obs:entropy:entity-mole-protein-folding-entropy",
       "name": "Protein folding of one mole of protein",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Protein_folding",
       "source_count": 2,
       "sources": [
@@ -1023,6 +1077,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ideal-gas mixing provides a clean compositional entropy example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nitrogen and oxygen mixing",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1042,6 +1097,8 @@
       "qualifiers": {
         "assumption": "ideal gas mixture"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
       "source_count": 2,
       "sources": [
@@ -1080,6 +1137,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Equal mixing of one mole of ideal gas is a clean entropy-of-mixing benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Equal ideal-gas mixing",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1099,6 +1157,8 @@
       "qualifiers": {
         "assumption": "binary equal mixture"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Entropy_of_mixing",
       "source_count": 2,
       "sources": [
@@ -1137,6 +1197,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A pot of water is a better mental image than a bare kilogram because it is something you could actually heat on a stove. The number is modest, but it reminds you that entropy changes can hide in plain sight until they are multiplied by bulk.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pot of water warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1156,6 +1217,8 @@
       "qualifiers": {
         "assumption": "water near room temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Entropy",
       "source_count": 2,
       "sources": [
@@ -1194,6 +1257,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A bottle of water is a clean household benchmark: familiar, heavy enough to picture, and still small enough to handle. It sits in the everyday middle where heat capacity starts to feel like a real physical property instead of a formula.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bottle of water warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1210,6 +1274,8 @@
       "id": "obs:entropy:entity-warm-liter-water-1c-entropy",
       "name": "Bottle of water warming",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heat_capacity",
       "source_count": 2,
       "sources": [
@@ -1248,6 +1314,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A chilled soda can is one of the few entropy benchmarks you can hold in your hand and immediately recognize. It belongs on the scale because everyday cooling is the kind of change people experience constantly, even if they never name it thermodynamically.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chill a soda can",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1264,6 +1331,8 @@
       "id": "obs:entropy:entity-chill-soda-can-entropy",
       "name": "Chill a soda can",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
       "source_count": 2,
       "sources": [
@@ -1302,6 +1371,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dissolving salt in water is an everyday entropy-increasing process.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Salt dissolving into water",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1321,6 +1391,8 @@
       "qualifiers": {
         "assumption": "dilute aqueous solution"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sodium_chloride",
       "source_count": 2,
       "sources": [
@@ -1359,6 +1431,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Freezing a small kitchen ice cube is a more intuitive everyday entropy change than a laboratory gram.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice cube freezing",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1378,6 +1451,8 @@
       "qualifiers": {
         "assumption": "20 gram ice cube"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
       "source_count": 2,
       "sources": [
@@ -1416,6 +1491,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Melting a single ice cube gives a kitchen-scale entropy increase you can picture.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice cube melting",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1435,6 +1511,8 @@
       "qualifiers": {
         "assumption": "20 gram ice cube"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
       "source_count": 2,
       "sources": [
@@ -1473,6 +1551,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Salt in water is a simple, familiar system that hides a surprisingly rich rearrangement of molecules. It is a good example of entropy because nothing dramatic happens visually, yet the microscopic order changes enough to matter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dissolve table salt in water",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1490,6 +1569,8 @@
       "id": "obs:entropy:scenario-entropy-dissolve-table-salt",
       "name": "Dissolve table salt in water",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sodium_chloride",
       "source_count": 2,
       "sources": [
@@ -1528,6 +1609,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A ten-degree warming is still domestic-scale, but it makes the entropy jump feel much less subtle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kettle warming",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1547,6 +1629,8 @@
       "qualifiers": {
         "assumption": "water near room temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Entropy",
       "source_count": 2,
       "sources": [
@@ -1585,6 +1669,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cooling a liter bottle of water from room temperature to the fridge is a relatable everyday entropy change.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bottle of water chilling in a fridge",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1605,6 +1690,8 @@
         "assumption": "room temperature 20 C, fridge 4 C",
         "measurement": "entropy change magnitude"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Specific_heat_capacity",
       "source_count": 2,
       "sources": [
@@ -1643,6 +1730,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Freezing a whole tray of kitchen ice cubes is a much easier entropy benchmark to picture than a single gram or molecule count.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice tray freezing",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1663,6 +1751,8 @@
         "assumption": "12 ice cubes of about 20 g each",
         "measurement": "entropy change magnitude"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
       "source_count": 2,
       "sources": [
@@ -1701,6 +1791,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A household ice tray is a more believable mental model than a laboratory quantity because most people have seen one in a freezer. The entropy change is large enough to be unavoidable, but it is still tied to an ordinary object rather than a pure number.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Household ice tray freezing",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1718,6 +1809,8 @@
       "id": "obs:entropy:scenario-entropy-freeze-household-ice-tray",
       "name": "Household ice tray freezing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
       "source_count": 2,
       "sources": [
@@ -1756,6 +1849,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Melting a tray of ice is the same thermodynamic event in reverse, and that reversal is easy to picture because it happens in kitchens every day. It is a good reminder that entropy is often about direction as much as size.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Household ice tray melting",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1773,6 +1867,8 @@
       "id": "obs:entropy:scenario-entropy-melt-household-ice-tray",
       "name": "Household ice tray melting",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_fusion",
       "source_count": 2,
       "sources": [
@@ -1811,6 +1907,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Boiling a mug of water is a much more tangible entropy jump than a single gram sample.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mug of water boiling",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1830,6 +1927,8 @@
       "qualifiers": {
         "assumption": "250 gram mug of water"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
       "source_count": 2,
       "sources": [
@@ -1868,6 +1967,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Condensing a mug-sized amount of steam back to water is easier to picture than a one-gram laboratory sample.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mug of steam condensing",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1887,6 +1987,8 @@
       "qualifiers": {
         "assumption": "250 gram mug of water"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
       "source_count": 2,
       "sources": [
@@ -1925,6 +2027,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Dry ice is memorable because it skips liquid water entirely and goes straight from solid to gas. That makes it one of the cleanest ways to see a phase change whose entropy jump is visible before the chemistry is even explained.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sublime a block of dry ice",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1942,6 +2045,8 @@
       "id": "obs:entropy:scenario-entropy-sublime-dry-ice-block",
       "name": "Sublime a block of dry ice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dry_ice",
       "source_count": 2,
       "sources": [
@@ -1980,6 +2085,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Evaporating a liter of water exports a surprisingly large amount of entropy.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pot of water evaporating away",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -1996,6 +2102,8 @@
       "id": "obs:entropy:entity-evaporate-1l-water-entropy",
       "name": "Pot of water evaporating away",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
       "source_count": 2,
       "sources": [
@@ -2034,6 +2142,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bringing a full kettle to a rolling boil gives a more intuitive everyday benchmark than a bare laboratory kilogram.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Full kettle boiling",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -2051,6 +2160,8 @@
       "id": "obs:entropy:scenario-entropy-boil-full-kettle-of-water",
       "name": "Full kettle boiling",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
       "source_count": 2,
       "sources": [
@@ -2089,6 +2200,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The same kettle-scale water cycle runs the entropy change in reverse when the steam condenses.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kettle steam condensing",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -2106,6 +2218,8 @@
       "id": "obs:entropy:scenario-entropy-steam-from-full-kettle-condensing",
       "name": "Kettle steam condensing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Enthalpy_of_vaporization",
       "source_count": 2,
       "sources": [
@@ -2144,6 +2258,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Human metabolism exports entropy continuously as it dissipates energy at body temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Daily human metabolism",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -2160,6 +2275,8 @@
       "id": "obs:entropy:entity-daily-human-metabolism-entropy",
       "name": "Daily human metabolism",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Basal_metabolic_rate",
       "source_count": 2,
       "sources": [
@@ -2198,6 +2315,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Combustion on everyday energy scales implies very large entropy exports.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gasoline combustion",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -2214,6 +2332,8 @@
       "id": "obs:entropy:entity-burn-1l-gasoline-entropy",
       "name": "Gasoline combustion",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gasoline",
       "source_count": 2,
       "sources": [
@@ -2252,6 +2372,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sea ice formation is where an ordinary phase change becomes part of the planetary climate machine. The numbers are large because the surface area is enormous, and that is exactly why the event matters to weather, albedo, and the oceans beneath it.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Form Arctic sea ice",
         "ingest_source": "dataset/raw/curated/entropy.json",
@@ -2268,6 +2389,8 @@
       "id": "obs:entropy:entity-form-arctic-sea-ice-entropy",
       "name": "Form Arctic sea ice",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sea_ice",
       "source_count": 2,
       "sources": [

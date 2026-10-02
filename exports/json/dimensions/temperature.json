@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A Bose-Einstein condensate is one of the coldest macroscopic states ever produced in a lab.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bose-Einstein condensate",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -50,6 +51,8 @@
       "qualifiers": {
         "measurement": "ultracold atom temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Optical lattice clocks trap atoms at temperatures between ordinary laser cooling and the coldest condensates.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Optical lattice clock atoms",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -104,6 +108,8 @@
       "id": "obs:temperature:entity-optical-lattice-clock-atoms-temperature",
       "name": "Optical lattice clock atoms",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Optical_lattice_clock",
       "source_count": 2,
       "sources": [
@@ -142,6 +148,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Laser cooling routinely brings atomic gases into the microkelvin regime before deeper evaporative cooling.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Laser-cooled atom cloud",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -158,6 +165,8 @@
       "id": "obs:temperature:entity-laser-cooled-atom-cloud-temperature",
       "name": "Laser-cooled atom cloud",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Laser_cooling",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Adiabatic demagnetization bridges the gap between microkelvin atomic physics and millikelvin cryogenics.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Adiabatic demagnetization stage",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -212,6 +222,8 @@
       "id": "obs:temperature:entity-adiabatic-demagnetization-stage",
       "name": "Adiabatic demagnetization stage",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Adiabatic_demagnetization",
       "source_count": 2,
       "sources": [
@@ -250,6 +262,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A dilution refrigerator mixing chamber is the workhorse temperature scale for superconducting quantum hardware.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dilution refrigerator",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -269,6 +282,8 @@
       "qualifiers": {
         "measurement": "mixing chamber temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dilution_refrigerator",
       "source_count": 2,
       "sources": [
@@ -307,6 +322,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The effective present-day temperature associated with the cosmic neutrino background.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cosmic neutrino background",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -325,6 +341,8 @@
       "qualifiers": {
         "measurement": "effective background temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cosmic_neutrino_background",
       "source_count": 2,
       "sources": [
@@ -363,6 +381,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The normal boiling point of helium, used widely in cryogenic cooling.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid helium boiling point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -381,6 +400,8 @@
       "qualifiers": {
         "measurement": "boiling point at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Helium",
       "source_count": 2,
       "sources": [
@@ -419,6 +440,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The normal boiling point of hydrogen, important for rocket propellant handling.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid hydrogen boiling point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -437,6 +459,8 @@
       "qualifiers": {
         "measurement": "boiling point at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hydrogen",
       "source_count": 2,
       "sources": [
@@ -475,6 +499,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The frigid surface temperature of Neptune's moon Triton.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Triton surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -493,6 +518,8 @@
       "qualifiers": {
         "measurement": "surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Triton_(moon)",
       "source_count": 2,
       "sources": [
@@ -531,6 +558,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature for the surface of Pluto.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pluto surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -549,6 +577,8 @@
       "qualifiers": {
         "measurement": "surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pluto",
       "source_count": 2,
       "sources": [
@@ -587,6 +617,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature for the cloud tops of Neptune.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neptune cloud tops",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -605,6 +636,8 @@
       "qualifiers": {
         "measurement": "cloud-top temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neptune",
       "source_count": 2,
       "sources": [
@@ -643,6 +676,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The boiling point of liquid nitrogen, common in laboratory cryogenics.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid nitrogen boiling point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -661,6 +695,8 @@
       "qualifiers": {
         "measurement": "boiling point at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Liquid_nitrogen",
       "source_count": 2,
       "sources": [
@@ -699,6 +735,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The boiling point of oxygen at standard pressure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid oxygen boiling point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -717,6 +754,8 @@
       "qualifiers": {
         "measurement": "boiling point at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Oxygen",
       "source_count": 2,
       "sources": [
@@ -755,6 +794,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The approximate surface temperature of Saturn's moon Titan.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Titan surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -773,6 +813,8 @@
       "qualifiers": {
         "measurement": "surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Titan_(moon)",
       "source_count": 2,
       "sources": [
@@ -811,6 +853,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The boiling point of methane at standard pressure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Liquid methane boiling point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -829,6 +872,8 @@
       "qualifiers": {
         "measurement": "boiling point at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Methane",
       "source_count": 2,
       "sources": [
@@ -867,6 +912,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The sublimation temperature of dry ice at standard pressure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Dry ice sublimation point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -886,6 +932,8 @@
       "qualifiers": {
         "measurement": "sublimation temperature at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Dry_ice",
       "source_count": 2,
       "sources": [
@@ -924,6 +972,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative average surface temperature for Mars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mars average surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -942,6 +991,8 @@
       "qualifiers": {
         "measurement": "average surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Climate_of_Mars",
       "source_count": 2,
       "sources": [
@@ -980,6 +1031,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical household-freezer setting in the United States.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Household freezer",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -999,6 +1051,8 @@
       "qualifiers": {
         "measurement": "typical operating temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Freezer",
       "source_count": 2,
       "sources": [
@@ -1037,6 +1091,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The familiar melting point of ice at standard atmospheric pressure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ice melting point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1056,6 +1111,8 @@
       "qualifiers": {
         "measurement": "melting point at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Melting_point",
       "source_count": 2,
       "sources": [
@@ -1094,6 +1151,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A typical refrigerator interior temperature for food safety.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Refrigerator interior",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1113,6 +1171,8 @@
       "qualifiers": {
         "measurement": "typical operating temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Refrigerator",
       "source_count": 2,
       "sources": [
@@ -1151,6 +1211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative global average surface temperature for Earth.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Earth average surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1169,6 +1230,8 @@
       "qualifiers": {
         "measurement": "average surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Instrumental_temperature_record",
       "source_count": 2,
       "sources": [
@@ -1207,6 +1270,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A standard room temperature near twenty degrees Celsius.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Room temperature",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1226,6 +1290,8 @@
       "qualifiers": {
         "measurement": "typical indoor room temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Room_temperature",
       "source_count": 2,
       "sources": [
@@ -1264,6 +1330,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative human skin temperature, typically cooler than the body's core.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human skin",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1283,6 +1350,8 @@
       "qualifiers": {
         "measurement": "representative skin temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body_temperature",
       "source_count": 2,
       "sources": [
@@ -1321,6 +1390,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative healthy human core-body temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human body core",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1340,6 +1410,8 @@
       "qualifiers": {
         "measurement": "core body temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body_temperature",
       "source_count": 2,
       "sources": [
@@ -1378,6 +1450,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A high but survivable fever temperature for a human body.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "High fever",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1397,6 +1470,8 @@
       "qualifiers": {
         "measurement": "fever temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body_temperature",
       "source_count": 2,
       "sources": [
@@ -1435,6 +1510,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative serving temperature for very hot coffee.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hot coffee",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1454,6 +1530,8 @@
       "qualifiers": {
         "measurement": "serving temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Coffee",
       "source_count": 2,
       "sources": [
@@ -1492,6 +1570,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative sauna temperature in the lower end of a common operating range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sauna",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1511,6 +1590,8 @@
       "qualifiers": {
         "measurement": "room temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sauna",
       "source_count": 2,
       "sources": [
@@ -1549,6 +1630,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The boiling point of water at standard atmospheric pressure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water boiling point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1568,6 +1650,8 @@
       "qualifiers": {
         "measurement": "boiling point at 1 atmosphere"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Boiling_point",
       "source_count": 2,
       "sources": [
@@ -1606,6 +1690,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative deep-frying oil temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Deep fryer oil",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1625,6 +1710,8 @@
       "qualifiers": {
         "measurement": "cooking oil temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Deep_frying",
       "source_count": 2,
       "sources": [
@@ -1663,6 +1750,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative hot pizza-oven temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pizza oven",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1682,6 +1770,8 @@
       "qualifiers": {
         "measurement": "cooking chamber temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pizza",
       "source_count": 2,
       "sources": [
@@ -1720,6 +1810,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The melting point of lead.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lead melting point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1739,6 +1830,8 @@
       "qualifiers": {
         "measurement": "melting point"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lead",
       "source_count": 2,
       "sources": [
@@ -1777,6 +1870,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The scorching surface temperature of Venus, hot enough to melt lead.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Venus surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1795,6 +1889,8 @@
       "qualifiers": {
         "measurement": "surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Venus",
       "source_count": 2,
       "sources": [
@@ -1833,6 +1929,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The melting point of aluminum.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Aluminum melting point",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1852,6 +1949,8 @@
       "qualifiers": {
         "measurement": "melting point"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Aluminium",
       "source_count": 2,
       "sources": [
@@ -1890,6 +1989,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature where steel glows visibly red.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Red-hot steel",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1909,6 +2009,8 @@
       "qualifiers": {
         "measurement": "representative glowing steel temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Red_heat",
       "source_count": 2,
       "sources": [
@@ -1947,6 +2049,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative eruption temperature for basaltic lava.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Basalt lava",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -1966,6 +2069,8 @@
       "qualifiers": {
         "measurement": "eruption temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lava",
       "source_count": 2,
       "sources": [
@@ -2004,6 +2109,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature inside a candle flame.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Candle flame",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2022,6 +2128,8 @@
       "qualifiers": {
         "measurement": "flame temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Flame",
       "source_count": 2,
       "sources": [
@@ -2060,6 +2168,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative blue-flame gas-stove temperature.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gas stove flame",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2078,6 +2187,8 @@
       "qualifiers": {
         "measurement": "flame temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gas_stove",
       "source_count": 2,
       "sources": [
@@ -2116,6 +2227,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature inside a blast furnace.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blast furnace",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2135,6 +2247,8 @@
       "qualifiers": {
         "measurement": "furnace temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blast_furnace",
       "source_count": 2,
       "sources": [
@@ -2173,6 +2287,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The approximate operating temperature of a tungsten filament in an incandescent bulb.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Tungsten filament",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2191,6 +2306,8 @@
       "qualifiers": {
         "measurement": "operating temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Incandescent_light_bulb",
       "source_count": 2,
       "sources": [
@@ -2229,6 +2346,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The effective temperature of the Sun's visible surface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun photosphere",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2247,6 +2365,8 @@
       "qualifiers": {
         "measurement": "effective temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -2285,6 +2405,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative peak temperature of the lightning channel.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lightning channel",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2303,6 +2424,8 @@
       "qualifiers": {
         "measurement": "channel temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -2341,6 +2464,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative surface temperature for a very hot O-type star.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "O-type star surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2359,6 +2483,8 @@
       "qualifiers": {
         "measurement": "surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/O-type_star",
       "source_count": 2,
       "sources": [
@@ -2397,6 +2523,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature for a hot white-dwarf surface.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "White dwarf surface",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2415,6 +2542,8 @@
       "qualifiers": {
         "measurement": "surface temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/White_dwarf",
       "source_count": 2,
       "sources": [
@@ -2453,6 +2582,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The million-kelvin corona surrounding the Sun.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Solar corona",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2472,6 +2602,8 @@
       "qualifiers": {
         "measurement": "coronal temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Stellar_corona",
       "source_count": 2,
       "sources": [
@@ -2510,6 +2642,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature for hot plasma in a supernova remnant.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Supernova remnant plasma",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2529,6 +2662,8 @@
       "qualifiers": {
         "measurement": "X-ray emitting plasma temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Supernova_remnant",
       "source_count": 2,
       "sources": [
@@ -2567,6 +2702,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature for magnetically confined fusion plasma.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Fusion tokamak plasma",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2586,6 +2722,8 @@
       "qualifiers": {
         "measurement": "plasma temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Tokamak",
       "source_count": 2,
       "sources": [
@@ -2624,6 +2762,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature during Big Bang nucleosynthesis in the first minutes of the universe.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Big Bang nucleosynthesis era",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2643,6 +2782,8 @@
       "qualifiers": {
         "measurement": "early-universe temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Big_Bang_nucleosynthesis",
       "source_count": 2,
       "sources": [
@@ -2681,6 +2822,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative temperature scale reached in neutron-star merger matter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neutron star merger ejecta",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2700,6 +2842,8 @@
       "qualifiers": {
         "measurement": "merger temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kilonova",
       "source_count": 2,
       "sources": [
@@ -2738,6 +2882,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The effective temperature reached in heavy-ion collisions that produce quark-gluon plasma at the LHC.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "LHC quark-gluon plasma",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2756,6 +2901,8 @@
       "qualifiers": {
         "measurement": "effective collision temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://home.cern/news/news/physics/four-times-hotter-centre-sun",
       "source_count": 2,
       "sources": [
@@ -2794,6 +2941,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Planck temperature is a fun upper-end theoretical marker where existing physics stops being reliable.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Planck temperature",
         "ingest_source": "dataset/raw/curated/temperature.json",
@@ -2813,6 +2961,8 @@
         "assumption": "included as a fun upper-end theoretical marker",
         "measurement": "theoretical reference temperature"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_temperature",
       "source_count": 2,
       "sources": [

@@ -49,6 +49,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Intergalactic medium
     ingest_source: dataset/raw/curated/density.json
@@ -92,6 +95,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Interstellar medium
     ingest_source: dataset/raw/curated/density.json
@@ -135,6 +141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Laboratory ultra-high vacuum
     ingest_source: dataset/raw/curated/density.json
@@ -178,6 +187,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Thermosphere at ISS altitude
     ingest_source: dataset/raw/curated/density.json
@@ -222,6 +234,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hydrogen gas
     ingest_source: dataset/raw/curated/density.json
@@ -265,6 +280,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Helium gas
     ingest_source: dataset/raw/curated/density.json
@@ -308,6 +326,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silica aerogel
     ingest_source: dataset/raw/curated/density.json
@@ -351,6 +372,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Air at sea level
     ingest_source: dataset/raw/curated/density.json
@@ -395,6 +419,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dry air at sea level
     ingest_source: dataset/raw/curated/density.json
@@ -438,6 +465,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Styrofoam
     ingest_source: dataset/raw/curated/density.json
@@ -481,6 +511,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Balsa wood
     ingest_source: dataset/raw/curated/density.json
@@ -524,6 +557,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cork
     ingest_source: dataset/raw/curated/density.json
@@ -567,6 +603,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pine wood
     ingest_source: dataset/raw/curated/density.json
@@ -610,6 +649,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saturn average density
     ingest_source: dataset/raw/curated/density.json
@@ -653,6 +695,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Oak wood
     ingest_source: dataset/raw/curated/density.json
@@ -696,6 +741,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Olive oil
     ingest_source: dataset/raw/curated/density.json
@@ -739,6 +787,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice
     ingest_source: dataset/raw/curated/density.json
@@ -782,6 +833,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human body
     ingest_source: dataset/raw/curated/density.json
@@ -825,6 +879,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid water
     ingest_source: dataset/raw/curated/density.json
@@ -869,6 +926,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sea water
     ingest_source: dataset/raw/curated/density.json
@@ -912,6 +972,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milk
     ingest_source: dataset/raw/curated/density.json
@@ -955,6 +1018,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun average density
     ingest_source: dataset/raw/curated/density.json
@@ -998,6 +1064,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Honey
     ingest_source: dataset/raw/curated/density.json
@@ -1041,6 +1110,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concrete
     ingest_source: dataset/raw/curated/density.json
@@ -1084,6 +1156,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aluminium
     ingest_source: dataset/raw/curated/density.json
@@ -1127,6 +1202,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Granite
     ingest_source: dataset/raw/curated/density.json
@@ -1170,6 +1248,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth average density
     ingest_source: dataset/raw/curated/density.json
@@ -1213,6 +1294,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Steel
     ingest_source: dataset/raw/curated/density.json
@@ -1256,6 +1340,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Iron
     ingest_source: dataset/raw/curated/density.json
@@ -1299,6 +1386,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Copper
     ingest_source: dataset/raw/curated/density.json
@@ -1342,6 +1432,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Silver
     ingest_source: dataset/raw/curated/density.json
@@ -1385,6 +1478,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lead
     ingest_source: dataset/raw/curated/density.json
@@ -1428,6 +1524,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mercury
     ingest_source: dataset/raw/curated/density.json
@@ -1471,6 +1570,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Uranium
     ingest_source: dataset/raw/curated/density.json
@@ -1514,6 +1616,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tungsten
     ingest_source: dataset/raw/curated/density.json
@@ -1557,6 +1662,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gold
     ingest_source: dataset/raw/curated/density.json
@@ -1600,6 +1708,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Osmium
     ingest_source: dataset/raw/curated/density.json
@@ -1643,6 +1754,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun core
     ingest_source: dataset/raw/curated/density.json
@@ -1686,6 +1800,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: White dwarf matter
     ingest_source: dataset/raw/curated/density.json
@@ -1729,6 +1846,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neutron star matter
     ingest_source: dataset/raw/curated/density.json
@@ -1772,6 +1892,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Planck density
     ingest_source: dataset/raw/curated/density.json

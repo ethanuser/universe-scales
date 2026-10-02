@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Argentina\u2019s agricultural density is low by global standards.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Argentina",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -50,6 +51,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -88,6 +91,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Australia has very few farmers per unit arable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Australia",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -107,6 +111,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -145,6 +151,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Brazil has a relatively low farmer-to-arable-land ratio.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brazil",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -164,6 +171,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -202,6 +211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "France sits near the low-to-moderate agricultural-density band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "France",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -221,6 +231,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -259,6 +271,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Germany has relatively few farmers per unit arable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Germany",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -278,6 +291,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -316,6 +331,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Canada\u2019s mechanized agriculture keeps agricultural density low.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Canada",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -335,6 +351,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -373,6 +391,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Argentina has a relatively mechanized farming structure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Argentina",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -390,6 +409,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-argentina",
       "name": "Argentina",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Argentina",
       "source_count": 2,
       "sources": [
@@ -428,6 +449,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "India is one of the most intensive major agricultural-density examples.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "India",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -447,6 +469,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -485,6 +509,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rwanda is a high-density farming benchmark with intense land pressure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rwanda",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -504,6 +529,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -542,6 +569,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "South Africa sits in the low single-digit farming-density band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "South Africa",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -559,6 +587,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-south-africa",
       "name": "South Africa",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/South_Africa",
       "source_count": 2,
       "sources": [
@@ -597,6 +627,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mongolia has few farmers per arable land area because agriculture is sparse.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mongolia",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -616,6 +647,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agriculture_in_Mongolia",
       "source_count": 2,
       "sources": [
@@ -654,6 +687,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The United States has relatively few farmers per arable land area.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "United States",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -673,6 +707,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -711,6 +747,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mexico occupies a modest mechanized agriculture band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Mexico",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -728,6 +765,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-mexico",
       "name": "Mexico",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mexico",
       "source_count": 2,
       "sources": [
@@ -766,6 +805,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Spain is a useful mid-low agricultural-density country.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Spain",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -783,6 +823,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-spain",
       "name": "Spain",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Spain",
       "source_count": 2,
       "sources": [
@@ -821,6 +863,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "France is an example of moderately mechanized intensive farming.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "France",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -840,6 +883,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -878,6 +923,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Germany reflects a heavily mechanized agricultural sector.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Germany",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -895,6 +941,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-germany",
       "name": "Germany",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Germany",
       "source_count": 2,
       "sources": [
@@ -933,6 +981,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Italy sits in a moderate agricultural-density band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Italy",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -950,6 +999,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-italy",
       "name": "Italy",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Italy",
       "source_count": 2,
       "sources": [
@@ -988,6 +1039,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The Netherlands combines intensive farming with very limited farmland.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Netherlands",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1007,6 +1059,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -1045,6 +1099,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Japan\u2019s agricultural density is higher because arable land is relatively scarce.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Japan",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1064,6 +1119,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agricultural_density",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1159,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "China has a very large farming population relative to arable land.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "China",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1119,6 +1177,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-china",
       "name": "China",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/China",
       "source_count": 2,
       "sources": [
@@ -1157,6 +1217,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Ethiopia has a substantial smallholder farming base.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ethiopia",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1176,6 +1237,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agriculture_in_Ethiopia",
       "source_count": 2,
       "sources": [
@@ -1214,6 +1277,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Kenya is a strong smallholder agriculture example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Kenya",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1231,6 +1295,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-kenya",
       "name": "Kenya",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Kenya",
       "source_count": 2,
       "sources": [
@@ -1269,6 +1335,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Nigeria\u2019s farming density is high in many rural regions.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nigeria",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1288,6 +1355,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agriculture_in_Nigeria",
       "source_count": 2,
       "sources": [
@@ -1326,6 +1395,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rwanda is a dense smallholder-farming benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rwanda",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1343,6 +1413,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-rwanda",
       "name": "Rwanda",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rwanda",
       "source_count": 2,
       "sources": [
@@ -1381,6 +1453,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Pakistan has a substantial farming population density.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pakistan",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1398,6 +1471,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-pakistan",
       "name": "Pakistan",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pakistan",
       "source_count": 2,
       "sources": [
@@ -1436,6 +1511,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Nepal is a compact but labor-intensive farming example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nepal",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1453,6 +1529,8 @@
       "id": "obs:agricultural-density:entity-agricultural-density-nepal",
       "name": "Nepal",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Nepal",
       "source_count": 2,
       "sources": [
@@ -1491,6 +1569,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Vietnam has a dense smallholder farming structure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vietnam",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1510,6 +1589,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agriculture_in_Vietnam",
       "source_count": 2,
       "sources": [
@@ -1548,6 +1629,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "India\u2019s agricultural density is very high in many states.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "India",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1567,6 +1649,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agriculture_in_India",
       "source_count": 2,
       "sources": [
@@ -1605,6 +1689,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Bangladesh is a classic high agricultural-density example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bangladesh",
         "ingest_source": "dataset/raw/curated/agricultural-density.json",
@@ -1624,6 +1709,8 @@
       "qualifiers": {
         "measure": "farmers per km^2 arable"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Agriculture_in_Bangladesh",
       "source_count": 2,
       "sources": [

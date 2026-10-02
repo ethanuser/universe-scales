@@ -68,6 +68,130 @@
     }
   },
   "length": {
+    "Virgo Supercluster": {
+      "qualifiers": {
+        "measurement": "approximate characteristic span of the historical Local Supercluster",
+        "reported_span": "roughly 100 million light-years",
+        "model_coverage": "SDSS redshift-space window, not a membership census or exact boundary"
+      },
+      "value_type": "derived"
+    },
+    "Sloan Great Wall": {
+      "qualifiers": {
+        "measurement": "estimated curved length in present-epoch comoving coordinates",
+        "derivation": "450 Mpc * 3.085677581491367e22 m/Mpc",
+        "definition": "Gott et al. 2005; 419 Mpc at the observed epoch, z about 0.073",
+        "model_coverage": "later SDSS DR17 sample through published slice, not certified wall members"
+      },
+      "value_type": "derived"
+    },
+    "Hercules-Corona Borealis Great Wall": {
+      "qualifiers": {
+        "measurement": "approximate reported extent of a putative GRB concentration",
+        "reported_range_Mpc": [2000, 3000],
+        "display_convention": "about 10 billion light-years, near the upper reported range",
+        "evidence": "disputed statistical inference from GRBs; not a resolved galaxy wall",
+        "model_coverage": "current NASA Swift tracer selection, not the original discovery sample"
+      },
+      "quality_flags": ["disputed_structure"],
+      "value_type": "derived"
+    },
+    "Laniakea Supercluster": {
+      "qualifiers": {
+        "measurement": "approximate diameter of the 2014 velocity-defined basin",
+        "derivation": "160 Mpc * 3.085677581491367e22 m/Mpc",
+        "boundary": "flow-defined and reconstruction-dependent, not a gravitationally bound object"
+      },
+      "value_type": "derived"
+    },
+    "1 MeV Neutrino Wavelength": {
+      "qualifiers": {
+        "measurement": "de Broglie wavelength, not particle size",
+        "energy_MeV": 1,
+        "derivation": "lambda = h/p, approximately hc/E for an ultrarelativistic neutrino"
+      },
+      "value_type": "derived"
+    },
+    "Planck Length": {
+      "qualifiers": {
+        "measurement": "derived Planck length; not an experimentally established minimum distance",
+        "constants_release": "2022 CODATA"
+      },
+      "value_type": "derived"
+    },
+    "Quark": {
+      "qualifiers": {
+        "measurement": "95% confidence upper limit on effective quark radius",
+        "experiment": "combined H1 and ZEUS inclusive deep-inelastic scattering at HERA",
+        "model_dependence": "specified quark form-factor fit, not a universal hard-size bound"
+      },
+      "value_type": "derived"
+    },
+    "Electron": {
+      "qualifiers": {
+        "measurement": "classical electron radius; not a measured electron extent",
+        "constants_release": "2022 CODATA"
+      },
+      "value_type": "derived"
+    },
+    "Proton Radius": {
+      "qualifiers": {
+        "measurement": "rms electric charge radius, not a hard boundary",
+        "uncertainty_m": 6.4e-19,
+        "constants_release": "2022 CODATA"
+      },
+      "value_type": "measured"
+    },
+    "Amazon River": {
+      "qualifiers": {
+        "measurement": "approximate full-river path length, not straight-line span",
+        "definition": "representative NASA/ESA 6,400 km estimate; headwater and mouth definitions vary",
+        "model_coverage": "Natural Earth partial Amazonas mainstem and separate context tributaries"
+      },
+      "value_type": "measured"
+    },
+    "Great Wall of China": {
+      "qualifiers": {
+        "measurement": "combined walls-and-trenches survey inventory length",
+        "definition": "all periods and branches; not one continuous wall or end-to-end distance",
+        "reported_value_km": 21196.18,
+        "precision": "reported survey figure, not a claim of meter-level accuracy",
+        "model_coverage": "incomplete OpenStreetMap fragment network, not the official inventory"
+      },
+      "value_type": "measured"
+    },
+    "Marathon Distance": {
+      "qualifiers": {
+        "measurement": "standard race-course distance along the shortest permitted running line",
+        "model_example": "Boston course; mapped road geometry is not a certified measurement"
+      },
+      "value_type": "measured"
+    },
+    "Carina Nebula": {
+      "qualifiers": {
+        "measurement": "approximate whole-nebula span",
+        "derivation": "300 light-years * 9.4607304725808e15 m/light-year",
+        "extent": "diffuse region, not a sharp physical boundary"
+      },
+      "value_type": "derived"
+    },
+    "Heliosphere": {
+      "qualifiers": {
+        "measurement": "representative nose-region diameter, not full-tail length",
+        "derivation": "2 * 120 au * 149597870700 m/au",
+        "shape": "global heliosphere and tail geometry remain uncertain"
+      },
+      "value_type": "derived"
+    },
+    "Oort Cloud": {
+      "qualifiers": {
+        "measurement": "representative diameter from the upper outer-radius estimate",
+        "derivation": "2 * 100000 au * 149597870700 m/au",
+        "outer_radius_range_au": [10000, 100000],
+        "boundary": "hypothesized, not directly observed"
+      },
+      "value_type": "derived"
+    },
     "Cat": {
       "qualifiers": {
         "measurement": "representative body length"
@@ -115,7 +239,9 @@
     },
     "Observable Universe": {
       "qualifiers": {
-        "measurement": "diameter of observable universe"
+        "measurement": "approximate particle-horizon diameter at the present cosmic epoch",
+        "definition": "present-distance span, not light-travel time or a physical edge",
+        "model": "cosmology-dependent; distinct from the CMB last-scattering sphere"
       },
       "subject_key": "entity:universe",
       "subject_type": "entity",

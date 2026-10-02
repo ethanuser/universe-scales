@@ -49,6 +49,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neutral water proton concentration
     ingest_source: dataset/raw/curated/concentration.json
@@ -96,6 +99,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rainwater proton concentration
     ingest_source: dataset/raw/curated/concentration.json
@@ -143,6 +149,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Atmospheric carbon dioxide
     ingest_source: dataset/raw/curated/concentration.json
@@ -189,6 +198,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Acidic water proton concentration
     ingest_source: dataset/raw/curated/concentration.json
@@ -236,6 +248,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dissolved oxygen in freshwater
     ingest_source: dataset/raw/curated/concentration.json
@@ -282,6 +297,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Atmospheric argon
     ingest_source: dataset/raw/curated/concentration.json
@@ -328,6 +346,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood lactate
     ingest_source: dataset/raw/curated/concentration.json
@@ -374,6 +395,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood calcium ions
     ingest_source: dataset/raw/curated/concentration.json
@@ -420,6 +444,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood potassium
     ingest_source: dataset/raw/curated/concentration.json
@@ -466,6 +493,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood glucose
     ingest_source: dataset/raw/curated/concentration.json
@@ -512,6 +542,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood urea
     ingest_source: dataset/raw/curated/concentration.json
@@ -558,6 +591,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Intracellular ATP
     ingest_source: dataset/raw/curated/concentration.json
@@ -604,6 +640,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood glucose
     ingest_source: dataset/raw/curated/concentration.json
@@ -651,6 +690,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Atmospheric oxygen
     ingest_source: dataset/raw/curated/concentration.json
@@ -697,6 +739,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood bicarbonate
     ingest_source: dataset/raw/curated/concentration.json
@@ -743,6 +788,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seawater sulfate ions
     ingest_source: dataset/raw/curated/concentration.json
@@ -789,6 +837,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Atmospheric nitrogen
     ingest_source: dataset/raw/curated/concentration.json
@@ -835,6 +886,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lemon juice
     ingest_source: dataset/raw/curated/concentration.json
@@ -881,6 +935,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gastric acid
     ingest_source: dataset/raw/curated/concentration.json
@@ -928,6 +985,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood chloride
     ingest_source: dataset/raw/curated/concentration.json
@@ -974,6 +1034,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blood sodium
     ingest_source: dataset/raw/curated/concentration.json
@@ -1020,6 +1083,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milk lactose
     ingest_source: dataset/raw/curated/concentration.json
@@ -1066,6 +1132,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saline sodium chloride
     ingest_source: dataset/raw/curated/concentration.json
@@ -1112,6 +1181,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saline solution
     ingest_source: dataset/raw/curated/concentration.json
@@ -1159,6 +1231,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Urine urea
     ingest_source: dataset/raw/curated/concentration.json
@@ -1205,6 +1280,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Household bleach
     ingest_source: dataset/raw/curated/concentration.json
@@ -1251,6 +1329,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seawater sodium chloride equivalent
     ingest_source: dataset/raw/curated/concentration.json
@@ -1297,6 +1378,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Seawater sodium chloride
     ingest_source: dataset/raw/curated/concentration.json
@@ -1343,6 +1427,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Household bleach sodium hypochlorite
     ingest_source: dataset/raw/curated/concentration.json
@@ -1389,6 +1476,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Vinegar acetic acid
     ingest_source: dataset/raw/curated/concentration.json
@@ -1436,6 +1526,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Table vinegar acetic acid
     ingest_source: dataset/raw/curated/concentration.json
@@ -1482,6 +1575,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hydrogen peroxide solution
     ingest_source: dataset/raw/curated/concentration.json
@@ -1529,6 +1625,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Household ammonia
     ingest_source: dataset/raw/curated/concentration.json
@@ -1575,6 +1674,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saturated brine
     ingest_source: dataset/raw/curated/concentration.json
@@ -1621,6 +1723,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Saturated brine sodium chloride
     ingest_source: dataset/raw/curated/concentration.json
@@ -1667,6 +1772,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pure acetone molecules
     ingest_source: dataset/raw/curated/concentration.json
@@ -1713,6 +1821,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Concentrated sulfuric acid
     ingest_source: dataset/raw/curated/concentration.json
@@ -1759,6 +1870,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pure liquid water molecules
     ingest_source: dataset/raw/curated/concentration.json
@@ -1805,6 +1919,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pure water molecules
     ingest_source: dataset/raw/curated/concentration.json
@@ -1851,6 +1968,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pure water
     ingest_source: dataset/raw/curated/concentration.json

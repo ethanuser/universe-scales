@@ -1,0 +1,215 @@
+// Deliberately uses the production stage: a second preview renderer can hide
+// normalization, lighting, pose and animation integration bugs.
+//
+// URL parameters: item, view (rest|front|side|top|back), bg (light|dark|sky),
+// zoom, time (freeze animations at seconds), neighbors (1). `window.modelLab`
+// exposes the same controls plus size metrics for scripts/model_lab.cjs.
+import { ModelStage } from './experiences/models.js?v=0940e1d987';
+import * as THREE from './vendor/three/three.module.min.js';
+const $ = id => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+const dataset = await fetch('exports/json/dimensions/length.json', { cache: 'no-cache' }).then(r => r.json());
+const items = dataset.items.filter(item => item.value > 0).sort((a, b) => a.value - b.value);
+let filtered = items, item = items.find(i => i.name === params.get('item')) || items[0];
+let localEntry, blobUrl, paused = false, seconds = 0, pending, dragging, lastStatus = 0;
+const context = { dimension: 'length', stageFrame: $('stage-frame'), stage: $('stage'), updateDetail: showDetail };
+const registryReady = new Promise(resolve => { context.registryReady = resolve; });
+const stage = new ModelStage(context, queueRender, () => { showDetail(); queueRender(); context.registryReady(); });
+const productionEntry = stage.entry.bind(stage);
+stage.entry = current => localEntry && current === item ? localEntry : productionEntry(current);
+function queueRender() { pending ||= requestAnimationFrame(render); }
+// Per-vertex bounds in units of the listed value, cached per pose because they
+// are expensive for large meshes and change only when the model rotates.
+function preciseSize(instance) {
+    const key = `${instance.rotation.x.toFixed(4)},${instance.rotation.y.toFixed(4)},${instance.rotation.z.toFixed(4)}`;
+    if (instance.userData.preciseKey !== key) {
+        const scale = instance.scale.x;
+        instance.updateMatrixWorld(true);
+        instance.userData.preciseSize = new THREE.Box3().setFromObject(instance, true)
+            .getSize(new THREE.Vector3()).divideScalar(scale);
+        instance.userData.preciseKey = key;
+    }
+    return instance.userData.preciseSize.clone();
+}
+function populate() {
+    $('item').replaceChildren(...filtered.map(current => {
+        const option = new Option(current.name, current.name); option.selected = current === item; return option;
+    }));
+}
+function showDetail() {
+    if (!item || !stage) return;
+    const entry = stage.entry(item);
+    $('title').textContent = `${entry?.display_label || item.name} | ${item.value.toPrecision(3)} m`;
+    $('note').textContent = entry?.note || 'No registered 3D model. The explorer uses a photograph for this item.';
+    $('sources').replaceChildren();
+    for (const [label, url] of [['Model source', entry?.source || entry?.source_url || entry?.basis_url], ['Item source', item.source]]) {
+        if (!url || !/^https?:/.test(url)) continue;
+        const link = document.createElement('a'); link.textContent = label; link.href = url; link.target = '_blank'; link.rel = 'noopener';
+        $('sources').append(link, '  ');
+    }
+    $('explorer-link').href = `./?dimension=length&item=${encodeURIComponent(item.name)}`;
+}
+function syncUrl() {
+    const next = new URLSearchParams({ item: item.name });
+    if ($('view').value !== 'rest') next.set('view', $('view').value);
+    if ($('background').value !== 'light') next.set('bg', $('background').value);
+    if ($('zoom').value !== '1') next.set('zoom', $('zoom').value);
+    if (paused) next.set('time', seconds.toFixed(2));
+    if ($('neighbors').checked) next.set('neighbors', '1');
+    history.replaceState(null, '', `?${next}`);
+}
+function choose(name) {
+    const next = items.find(i => i.name === name);
+    if (!next) return false;
+    item = next; localEntry = null; $('view').value = 'rest'; $('zoom').value = '1';
+    stage.rotations.clear();
+    populate(); showDetail(); syncUrl(); queueRender();
+    return true;
+}
+function pose() {
+    const entry = stage.entry(item), resting = entry?.presentation || {};
+    const presets = { front: [0, 0], side: [0, 90], top: [90, 0], back: [0, 180] };
+    const chosen = presets[$('view').value];
+    stage.rotations.set(item, { yaw: chosen ? (chosen[1] - (resting.yaw || 0)) * Math.PI / 180 : 0,
+        pitch: chosen ? (chosen[0] - (resting.pitch || 0)) * Math.PI / 180 : 0, velocity: 0, pitchVelocity: 0 });
+    syncUrl(); queueRender();
+}
+function render(now) {
+    pending = null;
+    const selectedEntry = stage.entry(item);
+    const fit = selectedEntry?.presentation?.focus_scale_factor || 1.4;
+    const exponent = Math.log10(item.value * fit / Number($('zoom').value));
+    stage.animationTime = paused ? seconds : null;
+    context.stage.replaceChildren(); stage.begin(exponent);
+    let modelsReady = 0;
+    const neighbors = $('neighbors').checked;
+    const instance = stage.instances.get(item);
+    const bounds = instance ? preciseSize(instance) : null;
+    const fittedSize = bounds ? Math.min(740 / bounds.x, 340 / bounds.y) : 370 / fit;
+    const draws = neighbors ? ScaleJourney.layout(items, exponent, 1, {
+        widthFactor: current => stage.entry(current)?.presentation?.layout_width_factor || 1,
+        focusIndex: items.indexOf(item), focusExponent: exponent
+    }).filter(draw => draw.visible && draw.size > 0.5) : [{ item, x: 500, y: 405, size: fittedSize * Number($('zoom').value) }];
+    for (const draw of draws) {
+        if (stage.draw(draw.item, draw.x, draw.y, draw.size)) modelsReady++;
+        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', draw.x); text.setAttribute('y', 440);
+        text.setAttribute('text-anchor', 'middle'); text.setAttribute('class', 'journey-model-label');
+        text.dataset.labelPriority = draw.item === item ? '200' : '100';
+        text.textContent = stage.entry(draw.item)?.display_label || draw.item.name; context.stage.append(text);
+    }
+    stage.finish(exponent);
+    if (now - lastStatus > 200 || paused) {
+        const instance = stage.instances.get(item);
+        const roots = instance?.userData.waveRoots || [];
+        const phase = roots[0]?.userData.waveAnimation?.phase;
+        $('status').textContent = `${modelsReady ? 'Rendered' : selectedEntry ? 'Loading' : 'No model'} | ${selectedEntry?.id || item.name} | ${stage.renderer?.info.render.triangles || 0} triangles | ${roots.length} animated wave root(s)${phase == null ? '' : ` | phase ${phase.toFixed(3)} rad`} | ${paused ? `paused at ${seconds.toFixed(2)} s` : 'playing'} | drag to rotate`;
+        lastStatus = now;
+    }
+}
+$('search').addEventListener('input', () => { filtered = items.filter(i => i.name.toLowerCase().includes($('search').value.toLowerCase())); populate(); });
+$('item').addEventListener('change', () => choose($('item').value));
+for (const [id, direction] of [['previous', -1], ['next', 1]]) $(id).addEventListener('click', () => {
+    choose(filtered[Math.max(0, Math.min(filtered.length - 1, filtered.indexOf(item) + direction))]?.name);
+});
+$('view').addEventListener('change', pose);
+function setBackground(value) { $('background').value = value; context.stageFrame.className = `experience--spatial ${value}`; }
+$('background').addEventListener('change', () => { setBackground($('background').value); syncUrl(); });
+for (const id of ['zoom', 'neighbors']) $(id).addEventListener('input', () => { syncUrl(); queueRender(); });
+function pauseAt(time) { seconds = time; paused = true; $('pause').textContent = 'Play animation'; syncUrl(); queueRender(); }
+$('pause').addEventListener('click', () => {
+    if (!paused) pauseAt((performance.now() - stage.waveStart) / 1000);
+    else { paused = false; stage.waveStart = performance.now() - seconds * 1000; $('pause').textContent = 'Pause animation'; syncUrl(); queueRender(); }
+});
+$('step').addEventListener('click', () => pauseAt((paused ? seconds : 0) + 0.25));
+$('file').addEventListener('change', () => {
+    const file = $('file').files[0]; if (!file) return;
+    if (blobUrl) URL.revokeObjectURL(blobUrl);
+    blobUrl = URL.createObjectURL(file);
+    const previous = stage.instances.get(item); if (previous) stage.scene.remove(previous);
+    stage.instances.delete(item);
+    localEntry = { id: `local-${file.name}-${Date.now()}`, src: blobUrl,
+        note: `Local preview only: ${file.name}, ${(file.size / 1048576).toFixed(2)} MB. Not uploaded or registered. Uncalibrated longest extent normalized to 1.`, presentation: {} };
+    showDetail(); queueRender();
+});
+context.stageFrame.addEventListener('pointerdown', event => {
+    if (!stage.pick(event.clientX, event.clientY)) return;
+    dragging = { x: event.clientX, y: event.clientY };
+    stage.beginRotate(item, event.timeStamp); context.stageFrame.setPointerCapture(event.pointerId);
+});
+context.stageFrame.addEventListener('pointermove', event => {
+    if (dragging) {
+        stage.rotate(item, event.clientX - dragging.x, event.clientY - dragging.y, event.timeStamp);
+        dragging = { x: event.clientX, y: event.clientY };
+    } else stage.setHover(null, { x: event.clientX, y: event.clientY });
+});
+function release(event) { if (dragging) { dragging = null; stage.releaseRotate(item, event.timeStamp); } }
+context.stageFrame.addEventListener('pointerup', release);
+context.stageFrame.addEventListener('pointercancel', release);
+context.stageFrame.addEventListener('pointerleave', () => stage.setHover(null, null));
+new ResizeObserver(queueRender).observe(context.stageFrame);
+window.addEventListener('pagehide', () => { stage.dispose(); if (blobUrl) URL.revokeObjectURL(blobUrl); });
+
+const frames = count => new Promise(resolve => {
+    const step = () => (--count <= 0 ? resolve() : requestAnimationFrame(step));
+    requestAnimationFrame(step);
+});
+// Sizes are in units of the listed value: 1.0 means the model's extent equals it.
+function metrics() {
+    const entry = stage.entry(item), instance = stage.instances.get(item);
+    const base = { name: item.name, value: item.value, model: entry?.id || null,
+        kind: !entry ? 'photo' : entry.procedural ? 'procedural' : 'glb' };
+    if (!entry) return base;
+    if (!instance) return { ...base, loaded: false };
+    const size = preciseSize(instance);
+    const presentation = entry.presentation || {};
+    const layout = presentation.layout_width_factor ?? 1;
+    // On-screen size: depth (toward the camera) does not crowd neighbours.
+    const extent = Math.max(size.x, size.y);
+    const warnings = [];
+    if (extent > 1.3) warnings.push(`renders ${extent.toFixed(2)}x the listed size`);
+    if (extent < 0.6) warnings.push(`renders only ${extent.toFixed(2)}x the listed size`);
+    if (size.x > layout * 1.15) warnings.push(`width ${size.x.toFixed(2)} exceeds layout_width_factor ${layout}`);
+    return { ...base, loaded: true, width: +size.x.toFixed(3), height: +size.y.toFixed(3), depth: +size.z.toFixed(3),
+        extent: +extent.toFixed(3), layoutWidthFactor: layout, triangles: stage.renderer.info.render.triangles,
+        drawCalls: stage.renderer.info.render.calls, warnings };
+}
+window.modelLab = {
+    items: () => items.map(current => ({ name: current.name, value: current.value,
+        model: stage.entry(current)?.id || null })),
+    catalog: () => items.map(current => {
+        const entry = stage.entry(current);
+        return { name: current.name, value: current.value, observation: current.id,
+            model: entry?.id || null, kind: !entry ? 'photo' : entry.procedural ? 'procedural' : 'glb',
+            representation: entry?.representation || null, note: entry?.note || null,
+            source: entry?.source || entry?.source_url || null, basis: entry?.basis_url || null,
+            license: entry?.license || null, bytes: entry?.bytes || null,
+            valueType: current.value_type, qualifiers: current.qualifiers, qualityFlags: current.quality_flags };
+    }),
+    async ready() { await registryReady; },
+    // Shows one item and resolves once its model has loaded and rendered.
+    async show(name, { view = 'rest', background = 'light', zoom = 1, time = null, neighbors = false, timeout = 20000 } = {}) {
+        await registryReady;
+        if (!choose(name)) throw new Error(`Unknown Length item: ${name}`);
+        setBackground(background);
+        $('zoom').value = String(zoom);
+        $('neighbors').checked = neighbors;
+        if (time == null) { paused = false; } else pauseAt(Number(time));
+        $('view').value = view; pose();
+        const started = performance.now();
+        const entry = stage.entry(item);
+        while (entry && !stage.instances.get(item) && performance.now() - started < timeout) {
+            queueRender(); await frames(2);
+        }
+        queueRender(); await frames(3);
+        return { ...metrics(), loadMs: Math.round(performance.now() - started) };
+    },
+    metrics
+};
+
+setBackground(params.get('bg') || 'light');
+if (params.get('zoom')) $('zoom').value = params.get('zoom');
+$('neighbors').checked = params.get('neighbors') === '1';
+if (params.get('time') != null) { seconds = Number(params.get('time')) || 0; paused = true; $('pause').textContent = 'Play animation'; }
+populate(); showDetail(); queueRender();
+if (params.get('view')) registryReady.then(() => { $('view').value = params.get('view'); pose(); });

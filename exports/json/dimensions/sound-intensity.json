@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A world-class anechoic chamber can fall below the nominal threshold of hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Anechoic chamber",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -49,6 +50,8 @@
       "id": "obs:sound-intensity:entity-anechoic-chamber-intensity",
       "name": "Anechoic chamber",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Anechoic_chamber",
       "source_count": 2,
       "sources": [
@@ -87,6 +90,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The conventional zero-decibel reference intensity in air.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Threshold of hearing",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -105,6 +109,8 @@
       "id": "obs:sound-intensity:entity-threshold-of-hearing",
       "name": "Threshold of hearing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Threshold_of_hearing",
       "source_count": 2,
       "sources": [
@@ -143,6 +149,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A very quiet natural sound, around 10 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rustling leaves",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -161,6 +168,8 @@
       "id": "obs:sound-intensity:entity-rustling-leaves-intensity",
       "name": "Rustling leaves",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Noise_health_effects",
       "source_count": 2,
       "sources": [
@@ -199,6 +208,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A quiet rural night sits just above the acoustic floor of human hearing.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quiet rural night",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -217,6 +227,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-quiet-rural-night",
       "name": "Quiet rural night",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sound_pressure",
       "source_count": 2,
       "sources": [
@@ -255,6 +267,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A whisper is often placed near 20 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Whisper",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -273,6 +286,8 @@
       "id": "obs:sound-intensity:entity-whisper-intensity",
       "name": "Whisper",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Whisper",
       "source_count": 2,
       "sources": [
@@ -311,6 +326,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A quiet room is often around 30 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quiet bedroom",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -329,6 +345,8 @@
       "id": "obs:sound-intensity:entity-quiet-bedroom-intensity",
       "name": "Quiet bedroom",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Noise_health_effects",
       "source_count": 2,
       "sources": [
@@ -367,6 +385,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A quiet office is audible but still far from intrusive.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quiet office at desk",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -385,6 +404,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-quiet-office",
       "name": "Quiet office at desk",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sound_pressure",
       "source_count": 2,
       "sources": [
@@ -423,6 +444,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A library or quiet office is often around 40 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Library",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -441,6 +463,8 @@
       "id": "obs:sound-intensity:entity-library-sound-intensity",
       "name": "Library",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Library",
       "source_count": 2,
       "sources": [
@@ -479,6 +503,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A quiet home at night, with only distant appliances and airflow, sits near this loudness.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Quiet home at night",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -497,6 +522,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-quiet-home-night",
       "name": "Quiet home at night",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sound_pressure",
       "source_count": 2,
       "sources": [
@@ -535,6 +562,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A nearby refrigerator hum lives around the mid-forties of decibels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Refrigerator hum at 1 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -553,6 +581,8 @@
       "id": "obs:sound-intensity:entity-refrigerator-hum-intensity",
       "name": "Refrigerator hum at 1 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Refrigerator",
       "source_count": 2,
       "sources": [
@@ -591,6 +621,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Steady rainfall is often placed near 50 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rainfall",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -609,6 +640,8 @@
       "id": "obs:sound-intensity:entity-rainfall-sound-intensity",
       "name": "Rainfall",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rain",
       "source_count": 2,
       "sources": [
@@ -647,6 +680,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Normal conversation is often cited as about 60 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Conversation",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -665,6 +699,8 @@
       "id": "obs:sound-intensity:entity-conversation-sound-intensity",
       "name": "Conversation",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Speech",
       "source_count": 2,
       "sources": [
@@ -703,6 +739,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A busy restaurant sits well above conversation but below hazardous levels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Busy restaurant",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -721,6 +758,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-busy-restaurant",
       "name": "Busy restaurant",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sound_pressure_level",
       "source_count": 2,
       "sources": [
@@ -759,6 +798,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A vacuum cleaner is a good seventy-decibel household benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Vacuum cleaner",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -777,6 +817,8 @@
       "id": "obs:sound-intensity:entity-vacuum-cleaner-intensity",
       "name": "Vacuum cleaner",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Vacuum_cleaner",
       "source_count": 2,
       "sources": [
@@ -815,6 +857,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Traffic noise is a common urban background level.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "City traffic",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -833,6 +876,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-city-traffic",
       "name": "City traffic",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sound_pressure_level",
       "source_count": 2,
       "sources": [
@@ -871,6 +916,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Urban traffic is often around 80 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Busy street at sidewalk distance",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -889,6 +935,8 @@
       "id": "obs:sound-intensity:entity-busy-street-intensity",
       "name": "Busy street at sidewalk distance",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Traffic_noise",
       "source_count": 2,
       "sources": [
@@ -927,6 +975,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Occupational hearing-damage guidance often becomes serious around eighty-five decibels.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hearing damage guideline",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -945,6 +994,8 @@
       "id": "obs:sound-intensity:entity-hearing-damage-guideline-intensity",
       "name": "Hearing damage guideline",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Noise-induced_hearing_loss",
       "source_count": 2,
       "sources": [
@@ -983,6 +1034,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A subway platform or lawn mower is around 90 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Subway platform at platform edge",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1001,6 +1053,8 @@
       "id": "obs:sound-intensity:entity-subway-platform-intensity",
       "name": "Subway platform at platform edge",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Noise_health_effects",
       "source_count": 2,
       "sources": [
@@ -1039,6 +1093,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A lawn mower is loud enough to warrant hearing protection for long exposure.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Power lawn mower",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1057,6 +1112,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-lawn-mower",
       "name": "Power lawn mower",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lawn_mower",
       "source_count": 2,
       "sources": [
@@ -1095,6 +1152,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A loud motorcycle or power tool is around 100 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Motorcycle at 1 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1113,6 +1171,8 @@
       "id": "obs:sound-intensity:entity-motorcycle-sound-intensity",
       "name": "Motorcycle at 1 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Motorcycle",
       "source_count": 2,
       "sources": [
@@ -1151,6 +1211,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A chainsaw is a high-intensity mechanical sound source.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Chainsaw",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1169,6 +1230,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-chainsaw",
       "name": "Chainsaw",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Chainsaw",
       "source_count": 2,
       "sources": [
@@ -1207,6 +1270,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Standing on a nightclub dance floor is already in the hearing-protection zone.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Nightclub dance floor",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1225,6 +1289,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-nightclub-dance-floor",
       "name": "Nightclub dance floor",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Live_sound_reinforcement",
       "source_count": 2,
       "sources": [
@@ -1263,6 +1329,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rock concerts often sit around 110 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rock concert near speaker stack",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1281,6 +1348,8 @@
       "id": "obs:sound-intensity:entity-rock-concert-intensity",
       "name": "Rock concert near speaker stack",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rock_concert",
       "source_count": 2,
       "sources": [
@@ -1319,6 +1388,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Around 120 dB, sound becomes intensely uncomfortable.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Threshold of discomfort",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1337,6 +1407,8 @@
       "id": "obs:sound-intensity:entity-threshold-of-discomfort",
       "name": "Threshold of discomfort",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sound_pressure",
       "source_count": 2,
       "sources": [
@@ -1375,6 +1447,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A close thunderclap is one of the loud natural sounds most people encounter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Thunderclap",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1393,6 +1466,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-thunderclap",
       "name": "Thunderclap",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Thunder",
       "source_count": 2,
       "sources": [
@@ -1431,6 +1506,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "An air-raid siren or equivalent nearby source can reach around 130 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Emergency siren at curbside",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1449,6 +1525,8 @@
       "id": "obs:sound-intensity:entity-air-raid-siren-intensity",
       "name": "Emergency siren at curbside",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Civil_defense_siren",
       "source_count": 2,
       "sources": [
@@ -1487,6 +1565,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A jet taking off near the runway is painfully loud without protection.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jet takeoff at 100 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1505,6 +1584,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-jet-takeoff-nearby",
       "name": "Jet takeoff at 100 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jet_aircraft",
       "source_count": 2,
       "sources": [
@@ -1543,6 +1624,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "The often-cited threshold of pain is around 140 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Threshold of pain at the ear",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1561,6 +1643,8 @@
       "id": "obs:sound-intensity:entity-threshold-of-pain-sound",
       "name": "Threshold of pain at the ear",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Threshold_of_pain",
       "source_count": 2,
       "sources": [
@@ -1599,6 +1683,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Standing a few dozen meters from a jet at takeoff is immediately hazardous without protection.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jet takeoff at 30 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1617,6 +1702,8 @@
       "id": "obs:sound-intensity:scenario-sound-intensity-jet-takeoff-30m",
       "name": "Jet takeoff at 30 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jet_aircraft",
       "source_count": 2,
       "sources": [
@@ -1655,6 +1742,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A gunshot produces a very intense acoustic pulse.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Gunshot at the shooter ear",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1673,6 +1761,8 @@
       "id": "obs:sound-intensity:entity-gunshot-intensity",
       "name": "Gunshot at the shooter ear",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Gunshot",
       "source_count": 2,
       "sources": [
@@ -1711,6 +1801,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A jet engine at very close range can exceed 150 dB.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Jet engine at 30 m",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1729,6 +1820,8 @@
       "id": "obs:sound-intensity:entity-jet-engine-intensity",
       "name": "Jet engine at 30 m",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Jet_engine",
       "source_count": 2,
       "sources": [
@@ -1767,6 +1860,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "At the pad, a large rocket launch reaches acoustic intensities far beyond ordinary human tolerance.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Rocket launch pad",
         "ingest_source": "dataset/raw/curated/sound-intensity.json",
@@ -1785,6 +1879,8 @@
       "id": "obs:sound-intensity:entity-rocket-launch-pad-intensity",
       "name": "Rocket launch pad",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rocket_launch",
       "source_count": 2,
       "sources": [

@@ -59,6 +59,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Bose-Einstein condensate
     ingest_source: dataset/raw/curated/temperature.json
@@ -106,6 +109,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Optical lattice clock atoms
     ingest_source: dataset/raw/curated/temperature.json
@@ -151,6 +157,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Laser-cooled atom cloud
     ingest_source: dataset/raw/curated/temperature.json
@@ -196,6 +205,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Adiabatic demagnetization stage
     ingest_source: dataset/raw/curated/temperature.json
@@ -241,6 +253,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dilution refrigerator
     ingest_source: dataset/raw/curated/temperature.json
@@ -288,6 +303,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cosmic neutrino background
     ingest_source: dataset/raw/curated/temperature.json
@@ -334,6 +352,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid helium boiling point
     ingest_source: dataset/raw/curated/temperature.json
@@ -380,6 +401,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid hydrogen boiling point
     ingest_source: dataset/raw/curated/temperature.json
@@ -426,6 +450,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Triton surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -472,6 +499,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pluto surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -518,6 +548,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neptune cloud tops
     ingest_source: dataset/raw/curated/temperature.json
@@ -564,6 +597,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid nitrogen boiling point
     ingest_source: dataset/raw/curated/temperature.json
@@ -610,6 +646,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid oxygen boiling point
     ingest_source: dataset/raw/curated/temperature.json
@@ -656,6 +695,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Titan surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -702,6 +744,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Liquid methane boiling point
     ingest_source: dataset/raw/curated/temperature.json
@@ -748,6 +793,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Dry ice sublimation point
     ingest_source: dataset/raw/curated/temperature.json
@@ -795,6 +843,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mars average surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -841,6 +892,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Household freezer
     ingest_source: dataset/raw/curated/temperature.json
@@ -888,6 +942,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Ice melting point
     ingest_source: dataset/raw/curated/temperature.json
@@ -935,6 +992,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Refrigerator interior
     ingest_source: dataset/raw/curated/temperature.json
@@ -982,6 +1042,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth average surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -1028,6 +1091,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Room temperature
     ingest_source: dataset/raw/curated/temperature.json
@@ -1075,6 +1141,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human skin
     ingest_source: dataset/raw/curated/temperature.json
@@ -1122,6 +1191,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human body core
     ingest_source: dataset/raw/curated/temperature.json
@@ -1169,6 +1241,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: High fever
     ingest_source: dataset/raw/curated/temperature.json
@@ -1216,6 +1291,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hot coffee
     ingest_source: dataset/raw/curated/temperature.json
@@ -1263,6 +1341,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sauna
     ingest_source: dataset/raw/curated/temperature.json
@@ -1310,6 +1391,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water boiling point
     ingest_source: dataset/raw/curated/temperature.json
@@ -1357,6 +1441,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Deep fryer oil
     ingest_source: dataset/raw/curated/temperature.json
@@ -1404,6 +1491,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Pizza oven
     ingest_source: dataset/raw/curated/temperature.json
@@ -1451,6 +1541,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lead melting point
     ingest_source: dataset/raw/curated/temperature.json
@@ -1498,6 +1591,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Venus surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -1544,6 +1640,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aluminum melting point
     ingest_source: dataset/raw/curated/temperature.json
@@ -1591,6 +1690,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Red-hot steel
     ingest_source: dataset/raw/curated/temperature.json
@@ -1638,6 +1740,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Basalt lava
     ingest_source: dataset/raw/curated/temperature.json
@@ -1685,6 +1790,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Candle flame
     ingest_source: dataset/raw/curated/temperature.json
@@ -1731,6 +1839,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Gas stove flame
     ingest_source: dataset/raw/curated/temperature.json
@@ -1777,6 +1888,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Blast furnace
     ingest_source: dataset/raw/curated/temperature.json
@@ -1824,6 +1938,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tungsten filament
     ingest_source: dataset/raw/curated/temperature.json
@@ -1870,6 +1987,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun photosphere
     ingest_source: dataset/raw/curated/temperature.json
@@ -1916,6 +2036,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lightning channel
     ingest_source: dataset/raw/curated/temperature.json
@@ -1962,6 +2085,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: O-type star surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -2008,6 +2134,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: White dwarf surface
     ingest_source: dataset/raw/curated/temperature.json
@@ -2054,6 +2183,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Solar corona
     ingest_source: dataset/raw/curated/temperature.json
@@ -2101,6 +2233,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Supernova remnant plasma
     ingest_source: dataset/raw/curated/temperature.json
@@ -2148,6 +2283,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Fusion tokamak plasma
     ingest_source: dataset/raw/curated/temperature.json
@@ -2195,6 +2333,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Big Bang nucleosynthesis era
     ingest_source: dataset/raw/curated/temperature.json
@@ -2242,6 +2383,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Neutron star merger ejecta
     ingest_source: dataset/raw/curated/temperature.json
@@ -2289,6 +2433,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: LHC quark-gluon plasma
     ingest_source: dataset/raw/curated/temperature.json
@@ -2335,6 +2482,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Planck temperature
     ingest_source: dataset/raw/curated/temperature.json

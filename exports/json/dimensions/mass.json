@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rest mass of a single electron.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Electron",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -46,6 +47,8 @@
       "qualifiers": {
         "measurement": "rest mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Electron",
       "source_count": 2,
       "sources": [
@@ -84,6 +87,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Rest mass of a single proton.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Proton",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -99,6 +103,8 @@
       "qualifiers": {
         "measurement": "rest mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Proton",
       "source_count": 2,
       "sources": [
@@ -137,6 +143,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of one H2O molecule.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Water molecule",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -154,6 +161,8 @@
         "derivation": "18 u converted to kilograms",
         "measurement": "single molecule"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Water",
       "source_count": 2,
       "sources": [
@@ -192,6 +201,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Characteristic mass of a bacterial ribosome.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ribosome",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -207,6 +217,8 @@
       "qualifiers": {
         "measurement": "representative bacterial ribosome"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ribosome",
       "source_count": 2,
       "sources": [
@@ -245,6 +257,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of a single influenza virus particle.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Influenza virion",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -260,6 +273,8 @@
       "qualifiers": {
         "measurement": "single virion"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Influenza",
       "source_count": 2,
       "sources": [
@@ -298,6 +313,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate wet mass of one E. coli cell.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Escherichia coli cell",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -314,6 +330,8 @@
         "condition": "wet mass",
         "measurement": "single cell"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Escherichia_coli",
       "source_count": 2,
       "sources": [
@@ -352,6 +370,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate mass of a single human egg cell.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human ovum",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -367,6 +386,8 @@
       "qualifiers": {
         "measurement": "single cell"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Egg_cell",
       "source_count": 2,
       "sources": [
@@ -405,6 +426,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Planck mass is the natural mass scale built from quantum mechanics and gravity.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Planck mass",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -424,6 +446,8 @@
       "qualifiers": {
         "measurement": "natural mass scale"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Planck_units",
       "source_count": 2,
       "sources": [
@@ -462,6 +486,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of one dry grain of rice.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Grain of rice",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -478,6 +503,8 @@
         "condition": "dry",
         "measurement": "single grain"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Rice",
       "source_count": 2,
       "sources": [
@@ -516,6 +543,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of an adult worker honey bee.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Honey bee",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -531,6 +559,8 @@
       "qualifiers": {
         "measurement": "worker adult"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Honey_bee",
       "source_count": 2,
       "sources": [
@@ -569,6 +599,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative body mass of an adult house mouse.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "House mouse",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -584,6 +615,8 @@
       "qualifiers": {
         "measurement": "adult body mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/House_mouse",
       "source_count": 2,
       "sources": [
@@ -622,6 +655,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of an adult domestic cat.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cat",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -637,6 +671,8 @@
       "qualifiers": {
         "measurement": "adult body mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cat",
       "source_count": 2,
       "sources": [
@@ -675,6 +711,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of an adult human.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -690,6 +727,8 @@
       "qualifiers": {
         "measurement": "adult body mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Human_body_weight",
       "source_count": 2,
       "sources": [
@@ -728,6 +767,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of an adult giraffe.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Giraffe",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -743,6 +783,8 @@
       "qualifiers": {
         "measurement": "adult body mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Giraffe",
       "source_count": 2,
       "sources": [
@@ -781,6 +823,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative curb mass of a family sedan or hatchback.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Family car",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -796,6 +839,8 @@
       "qualifiers": {
         "measurement": "curb mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Car",
       "source_count": 2,
       "sources": [
@@ -834,6 +879,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of a large adult blue whale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Blue whale",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -849,6 +895,8 @@
       "qualifiers": {
         "measurement": "adult body mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Blue_whale",
       "source_count": 2,
       "sources": [
@@ -887,6 +935,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate maximum takeoff mass of a Boeing 747.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Boeing 747",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -902,6 +951,8 @@
       "qualifiers": {
         "measurement": "maximum takeoff mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Boeing_747",
       "source_count": 2,
       "sources": [
@@ -940,6 +991,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate structural mass of the Eiffel Tower.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Eiffel Tower",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -955,6 +1007,8 @@
       "qualifiers": {
         "measurement": "structural mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Eiffel_Tower",
       "source_count": 2,
       "sources": [
@@ -993,6 +1047,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate mass of the Great Pyramid of Giza.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Great Pyramid of Giza",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1008,6 +1063,8 @@
       "qualifiers": {
         "measurement": "estimated total stone mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
       "source_count": 2,
       "sources": [
@@ -1046,6 +1103,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass estimate for Halley's Comet.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Halley's Comet",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1064,6 +1122,8 @@
       "qualifiers": {
         "measurement": "estimated comet mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
       "source_count": 2,
       "sources": [
@@ -1102,6 +1162,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of Lake Superior's water using its volume and freshwater density.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lake Superior",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1119,6 +1180,8 @@
         "derivation": "volume times density",
         "measurement": "water mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lake_Superior",
       "source_count": 2,
       "sources": [
@@ -1157,6 +1220,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of the dwarf planet Ceres.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Ceres",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1172,6 +1236,8 @@
       "qualifiers": {
         "measurement": "gravitationally inferred mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)",
       "source_count": 2,
       "sources": [
@@ -1210,6 +1276,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of the dwarf planet Pluto.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Pluto",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1228,6 +1295,8 @@
       "qualifiers": {
         "measurement": "dwarf-planet mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Pluto",
       "source_count": 2,
       "sources": [
@@ -1266,6 +1335,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of Earth's Moon.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Moon",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1281,6 +1351,8 @@
       "qualifiers": {
         "measurement": "gravitationally inferred mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Moon",
       "source_count": 2,
       "sources": [
@@ -1319,6 +1391,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of Venus.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Venus",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1337,6 +1410,8 @@
       "qualifiers": {
         "measurement": "planetary mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Venus",
       "source_count": 2,
       "sources": [
@@ -1375,6 +1450,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of Uranus.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Uranus",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1393,6 +1469,8 @@
       "qualifiers": {
         "measurement": "planetary mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Uranus",
       "source_count": 2,
       "sources": [
@@ -1431,6 +1509,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of Neptune.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neptune",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1449,6 +1528,8 @@
       "qualifiers": {
         "measurement": "planetary mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Neptune",
       "source_count": 2,
       "sources": [
@@ -1487,6 +1568,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of Saturn.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Saturn",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1505,6 +1587,8 @@
       "qualifiers": {
         "measurement": "planetary mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Saturn",
       "source_count": 2,
       "sources": [
@@ -1543,6 +1627,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A representative lower-bound brown dwarf mass near the deuterium-burning limit.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Brown dwarf at the deuterium limit",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1564,6 +1649,8 @@
         "derivation": "13 jupiter_masses converted to kilograms",
         "measurement": "threshold brown-dwarf mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Brown_dwarf",
       "source_count": 2,
       "sources": [
@@ -1602,6 +1689,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of the ultracool red dwarf star TRAPPIST-1.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "TRAPPIST-1",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1621,6 +1709,8 @@
       "qualifiers": {
         "measurement": "stellar mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/TRAPPIST-1",
       "source_count": 2,
       "sources": [
@@ -1659,6 +1749,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of the Sun.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sun",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1674,6 +1765,8 @@
       "qualifiers": {
         "measurement": "stellar mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sun",
       "source_count": 2,
       "sources": [
@@ -1712,6 +1805,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sirius A is the brightest star in Earth's night sky, making this a familiar benchmark for a massive ordinary star.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sirius A",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1731,6 +1825,8 @@
       "qualifiers": {
         "measurement": "stellar mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Sirius",
       "source_count": 2,
       "sources": [
@@ -1769,6 +1865,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Cygnus X-1 became one of the first widely accepted stellar-mass black holes, so it anchors the black-hole end of the stellar scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Cygnus X-1 black hole",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1788,6 +1885,8 @@
       "qualifiers": {
         "measurement": "black hole mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://science.nasa.gov/resource/devoured-by-gravity-poster/",
       "source_count": 2,
       "sources": [
@@ -1826,6 +1925,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Betelgeuse is the famous nearby red supergiant in Orion, often used as the archetype of an enormous dying star.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Betelgeuse",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1845,6 +1945,8 @@
       "qualifiers": {
         "measurement": "stellar mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Betelgeuse",
       "source_count": 2,
       "sources": [
@@ -1883,6 +1985,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "R136a1 is one of the most massive known stars, which is why it appears here instead of being just another massive star.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "R136a1",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1902,6 +2005,8 @@
       "qualifiers": {
         "measurement": "current stellar mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.eso.org/public/images/eso1030a/",
       "source_count": 2,
       "sources": [
@@ -1940,6 +2045,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate stellar mass of the R136 cluster, using ESO's note that the region packs tens of thousands of stars on a Sun-to-nearest-star scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "R136 star cluster",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -1961,6 +2067,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.eso.org/public/images/eso1030a/",
       "source_count": 2,
       "sources": [
@@ -1999,6 +2107,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate stellar mass implied by NASA's statement that the globular cluster Messier 14 is home to over 150,000 stars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Messier 14",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2020,6 +2129,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-14/",
       "source_count": 2,
       "sources": [
@@ -2058,6 +2169,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, making it a natural anchor on the galactic scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Sagittarius A*",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2077,6 +2189,8 @@
       "qualifiers": {
         "measurement": "supermassive black hole mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/",
       "source_count": 2,
       "sources": [
@@ -2115,6 +2229,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Omega Centauri is the Milky Way's most massive globular cluster, so it is more informative than a random cluster entry.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Omega Centauri",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2134,6 +2249,8 @@
       "qualifiers": {
         "measurement": "total cluster mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.eso.org/public/images/eso9411a/",
       "source_count": 2,
       "sources": [
@@ -2172,6 +2289,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "M60-UCD1 is an ultracompact dwarf galaxy famous for being extraordinarily dense for a galaxy.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "M60-UCD1",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2193,6 +2311,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://science.nasa.gov/missions/hubble/hubble-helps-find-smallest-known-galaxy-with-a-supermassive-black-hole/",
       "source_count": 2,
       "sources": [
@@ -2231,6 +2351,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate stellar mass of the dwarf galaxy NGC 5474, using NASA's description that it contains several billion stars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "NGC 5474",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2252,6 +2373,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://science.nasa.gov/missions/hubble/hubble-sees-a-dwarf-galaxy-shaped-by-a-grand-design/",
       "source_count": 2,
       "sources": [
@@ -2290,6 +2413,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Mass of the supermassive black hole at the center of Messier 87.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "M87*",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2309,6 +2433,8 @@
       "qualifiers": {
         "measurement": "supermassive black hole mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://www.jpl.nasa.gov/edu/resources/teachable-moment/how-scientists-captured-the-first-image-of-a-black-hole/",
       "source_count": 2,
       "sources": [
@@ -2347,6 +2473,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate stellar mass of the Large Magellanic Cloud using its reported stellar count.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Large Magellanic Cloud",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2368,6 +2495,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Large_Magellanic_Cloud",
       "source_count": 2,
       "sources": [
@@ -2406,6 +2535,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate stellar mass of the Triangulum Galaxy using its reported stellar count.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Triangulum Galaxy",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2427,6 +2557,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Triangulum_Galaxy",
       "source_count": 2,
       "sources": [
@@ -2465,6 +2597,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate stellar mass of the Whirlpool Galaxy using a representative stellar count.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Whirlpool Galaxy",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2486,6 +2619,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Whirlpool_Galaxy",
       "source_count": 2,
       "sources": [
@@ -2524,6 +2659,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Approximate stellar mass of the giant elliptical galaxy M60, using NASA's estimate of 400 billion stars.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "M60",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2545,6 +2681,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://science.nasa.gov/asset/hubble/dwarf-galaxy-near-m60",
       "source_count": 2,
       "sources": [
@@ -2583,6 +2721,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Andromeda is the nearest large spiral galaxy and the Milky Way's future merger partner, so it is a much more intuitive galactic benchmark.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Andromeda galaxy",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2604,6 +2743,8 @@
         "derivation": "star_count * solar_mass",
         "measurement": "stellar mass proxy from star count"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://science.nasa.gov/missions/hubble/nasas-hubble-traces-hidden-history-of-andromeda-galaxy/",
       "source_count": 2,
       "sources": [
@@ -2642,6 +2783,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Representative mass of the Milky Way including dark matter.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Milky Way",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2657,6 +2799,8 @@
       "qualifiers": {
         "measurement": "total estimated mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Milky_Way",
       "source_count": 2,
       "sources": [
@@ -2695,6 +2839,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Order-of-magnitude mass of the Virgo Supercluster.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Virgo Supercluster",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2710,6 +2855,8 @@
       "qualifiers": {
         "measurement": "estimated total mass"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
       "source_count": 2,
       "sources": [
@@ -2748,6 +2895,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Order-of-magnitude mass of matter in the observable universe.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Observable universe",
         "ingest_source": "dataset/raw/curated/mass.json",
@@ -2763,6 +2911,8 @@
       "qualifiers": {
         "measurement": "observable universe mass estimate"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Universe",
       "source_count": 2,
       "sources": [

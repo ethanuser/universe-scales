@@ -64,7 +64,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Proton cross-section
     ingest_source: dataset/raw/curated/area.json
@@ -109,7 +112,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hydrogen atom cross-section
     ingest_source: dataset/raw/curated/area.json
@@ -154,7 +160,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Water molecule cross-section
     ingest_source: dataset/raw/curated/area.json
@@ -199,7 +208,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: DNA helix cross-section
     ingest_source: dataset/raw/curated/area.json
@@ -244,7 +256,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: SARS-CoV-2 virion cross-section
     ingest_source: dataset/raw/curated/area.json
@@ -289,7 +304,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Influenza virion surface area
     ingest_source: dataset/raw/curated/area.json
@@ -334,7 +352,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Red blood cell surface area
     ingest_source: dataset/raw/curated/area.json
@@ -377,7 +398,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Grain of salt cross-section
     ingest_source: dataset/raw/curated/area.json
@@ -422,7 +446,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Grain of sand surface area
     ingest_source: dataset/raw/curated/area.json
@@ -467,7 +494,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Postage stamp face area
     ingest_source: dataset/raw/curated/area.json
@@ -510,7 +540,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Credit card face area
     ingest_source: dataset/raw/curated/area.json
@@ -553,7 +586,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Smartphone screen area
     ingest_source: dataset/raw/curated/area.json
@@ -596,7 +632,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A5 sheet area
     ingest_source: dataset/raw/curated/area.json
@@ -639,7 +678,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Laptop screen area
     ingest_source: dataset/raw/curated/area.json
@@ -682,7 +724,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: A4 sheet area
     ingest_source: dataset/raw/curated/area.json
@@ -725,7 +770,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Human skin area
     ingest_source: dataset/raw/curated/area.json
@@ -768,7 +816,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Parking space
     ingest_source: dataset/raw/curated/area.json
@@ -811,7 +862,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Tennis court
     ingest_source: dataset/raw/curated/area.json
@@ -854,7 +908,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Basketball court
     ingest_source: dataset/raw/curated/area.json
@@ -897,7 +954,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: American football field
     ingest_source: dataset/raw/curated/area.json
@@ -940,7 +1000,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Soccer pitch
     ingest_source: dataset/raw/curated/area.json
@@ -983,7 +1046,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Central Park
     ingest_source: dataset/raw/curated/area.json
@@ -1026,7 +1092,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Manhattan
     ingest_source: dataset/raw/curated/area.json
@@ -1069,7 +1138,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Paris
     ingest_source: dataset/raw/curated/area.json
@@ -1112,7 +1184,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Lake Tahoe surface
     ingest_source: dataset/raw/curated/area.json
@@ -1155,7 +1230,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: New York City
     ingest_source: dataset/raw/curated/area.json
@@ -1198,7 +1276,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Rhode Island
     ingest_source: dataset/raw/curated/area.json
@@ -1241,7 +1322,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Caspian Sea surface
     ingest_source: dataset/raw/curated/area.json
@@ -1284,7 +1368,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Texas
     ingest_source: dataset/raw/curated/area.json
@@ -1327,7 +1414,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Greenland
     ingest_source: dataset/raw/curated/area.json
@@ -1370,7 +1460,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Australia
     ingest_source: dataset/raw/curated/area.json
@@ -1413,7 +1506,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Moon surface area
     ingest_source: dataset/raw/curated/area.json
@@ -1458,7 +1554,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Earth surface area
     ingest_source: dataset/raw/curated/area.json
@@ -1501,7 +1600,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Jupiter surface area
     ingest_source: dataset/raw/curated/area.json
@@ -1546,7 +1648,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sun surface area
     ingest_source: dataset/raw/curated/area.json
@@ -1591,7 +1696,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Solar system disk to Neptune
     ingest_source: dataset/raw/curated/area.json
@@ -1636,7 +1744,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Milky Way stellar disk area
     ingest_source: dataset/raw/curated/area.json
@@ -1681,7 +1792,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Local Group cross-sectional area
     ingest_source: dataset/raw/curated/area.json
@@ -1726,7 +1840,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Virgo Supercluster cross-sectional area
     ingest_source: dataset/raw/curated/area.json
@@ -1771,7 +1888,10 @@ items:
   description_long: null
   hook: null
   caveats: null
-  content_status: seeded
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Observable universe boundary area
     ingest_source: dataset/raw/curated/area.json

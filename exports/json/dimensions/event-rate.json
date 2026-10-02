@@ -31,6 +31,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A familiar very-slow repeating event.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Halley comet returns",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -48,6 +49,8 @@
       "id": "obs:event-rate:scenario-event-rate-halley-comet-returns",
       "name": "Halley comet returns",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Halley%27s_Comet",
       "source_count": 2,
       "sources": [
@@ -86,6 +89,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Civic life gives a good once-per-years event rate.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "US presidential election",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -103,6 +107,8 @@
       "id": "obs:event-rate:scenario-event-rate-us-presidential-election",
       "name": "US presidential election",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/United_States_presidential_election",
       "source_count": 2,
       "sources": [
@@ -141,6 +147,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Once-per-year events sit near 3e-8 per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Birthday",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -158,6 +165,8 @@
       "id": "obs:event-rate:scenario-event-rate-birthday",
       "name": "Birthday",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Birthday",
       "source_count": 2,
       "sources": [
@@ -196,6 +205,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Breathing is one of the best everyday biological rate anchors.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Resting breathing",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -213,6 +223,8 @@
       "id": "obs:event-rate:scenario-event-rate-resting-breathing",
       "name": "Resting breathing",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Respiratory_rate",
       "source_count": 2,
       "sources": [
@@ -251,6 +263,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A resting heart runs at roughly one event per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Resting heartbeat",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -268,6 +281,8 @@
       "id": "obs:event-rate:scenario-event-rate-resting-heartbeat",
       "name": "Resting heartbeat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Heart_rate",
       "source_count": 2,
       "sources": [
@@ -306,6 +321,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Global mortality is slower than global births on a per-second basis.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "World deaths",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -322,6 +338,8 @@
       "id": "obs:event-rate:scenario-event-rate-world-deaths",
       "name": "World deaths",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Mortality_rate",
       "source_count": 2,
       "sources": [
@@ -360,6 +378,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Walking sits just above the heartbeat scale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Walking cadence",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -377,6 +396,8 @@
       "id": "obs:event-rate:scenario-event-rate-walking-cadence",
       "name": "Walking cadence",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Cadence_(gait)",
       "source_count": 2,
       "sources": [
@@ -415,6 +436,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Speech is a useful information-adjacent event-rate example.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Conversational speech",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -432,6 +454,8 @@
       "id": "obs:event-rate:scenario-event-rate-conversational-speech",
       "name": "Conversational speech",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Speech",
       "source_count": 2,
       "sources": [
@@ -470,6 +494,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "A neat human-performed event-rate anchor.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Clapping rapidly",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -486,6 +511,8 @@
       "id": "obs:event-rate:scenario-event-rate-clapping-rapidly",
       "name": "Clapping rapidly",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clapping",
       "source_count": 2,
       "sources": [
@@ -524,6 +551,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Demography gives a nice few-per-second global rate.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "World births",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -540,6 +568,8 @@
       "id": "obs:event-rate:scenario-event-rate-world-births",
       "name": "World births",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Birth_rate",
       "source_count": 2,
       "sources": [
@@ -578,6 +608,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Typing lives in the low-single-digit events-per-second band.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Typing at 60 wpm",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -595,6 +626,8 @@
       "id": "obs:event-rate:scenario-event-rate-typing-at-60-wpm",
       "name": "Typing at 60 wpm",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Words_per_minute",
       "source_count": 2,
       "sources": [
@@ -633,6 +666,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Internet production rates are easier to grasp when mapped to seconds.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "YouTube uploads",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -651,6 +685,8 @@
       "qualifiers": {
         "context": "video-hour equivalents"
       },
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/YouTube",
       "source_count": 2,
       "sources": [
@@ -689,6 +725,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Film gives an accessible tens-per-second event rate.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Camera frame rate",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -705,6 +742,8 @@
       "id": "obs:event-rate:scenario-event-rate-camera-frame-rate",
       "name": "Camera frame rate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Frame_rate",
       "source_count": 2,
       "sources": [
@@ -743,6 +782,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Planetary weather is surprisingly eventful.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Lightning strikes on Earth",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -759,6 +799,8 @@
       "id": "obs:event-rate:scenario-event-rate-lightning-strikes-on-earth",
       "name": "Lightning strikes on Earth",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Lightning",
       "source_count": 2,
       "sources": [
@@ -797,6 +839,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Small animals often move far faster than human intuition expects.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Hummingbird wingbeat",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -813,6 +856,8 @@
       "id": "obs:event-rate:scenario-event-rate-hummingbird-wingbeat",
       "name": "Hummingbird wingbeat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Hummingbird",
       "source_count": 2,
       "sources": [
@@ -851,6 +896,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Display technology moves event rates into the hundreds per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "High-refresh display",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -867,6 +913,8 @@
       "id": "obs:event-rate:scenario-event-rate-high-refresh-display",
       "name": "High-refresh display",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Refresh_rate",
       "source_count": 2,
       "sources": [
@@ -905,6 +953,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Insect motion moves biological event rates into the hundreds per second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Honeybee wingbeat",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -921,6 +970,8 @@
       "id": "obs:event-rate:scenario-event-rate-honeybee-wingbeat",
       "name": "Honeybee wingbeat",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bee",
       "source_count": 2,
       "sources": [
@@ -959,6 +1010,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Neural signaling bridges biology and electronics.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Neuron upper-end firing rate",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -975,6 +1027,8 @@
       "id": "obs:event-rate:scenario-event-rate-neuron-upper-end-firing-rate",
       "name": "Neuron upper-end firing rate",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Action_potential",
       "source_count": 2,
       "sources": [
@@ -1013,6 +1067,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Storage hardware quickly enters the megascale.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "SSD random IOPS",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -1029,6 +1084,8 @@
       "id": "obs:event-rate:scenario-event-rate-ssd-random-iops",
       "name": "SSD random IOPS",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Input/output_operations_per_second",
       "source_count": 2,
       "sources": [
@@ -1067,6 +1124,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Particle physics routinely lives in the tens-of-millions-per-second range.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "LHC bunch crossings",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -1083,6 +1141,8 @@
       "id": "obs:event-rate:scenario-event-rate-lhc-bunch-crossings",
       "name": "LHC bunch crossings",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://home.cern/science/accelerators/large-hadron-collider",
       "source_count": 2,
       "sources": [
@@ -1121,6 +1181,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Biotech can rival communications hardware on event throughput.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Human genome sequencing on one instrument",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -1137,6 +1198,8 @@
       "id": "obs:event-rate:scenario-event-rate-human-genome-sequencing-on-one-instrument",
       "name": "Human genome sequencing on one instrument",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/DNA_sequencing",
       "source_count": 2,
       "sources": [
@@ -1175,6 +1238,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Modern processors make billions of identical repeated events every second.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "CPU clock at 3 GHz",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -1191,6 +1255,8 @@
       "id": "obs:event-rate:scenario-event-rate-cpu-clock-at-3-ghz",
       "name": "CPU clock at 3 GHz",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Clock_rate",
       "source_count": 2,
       "sources": [
@@ -1229,6 +1295,7 @@
       "description_format": "markdown",
       "description_long": null,
       "description_medium": "Global proof-of-work computation is a gigantic event-rate machine.",
+      "display_status": "display",
       "facts": {
         "canonical_name": "Bitcoin network hash attempts",
         "ingest_source": "dataset/raw/curated/event-rate.json",
@@ -1245,6 +1312,8 @@
       "id": "obs:event-rate:scenario-event-rate-bitcoin-network-hash-attempts",
       "name": "Bitcoin network hash attempts",
       "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
       "source": "https://en.wikipedia.org/wiki/Bitcoin_network",
       "source_count": 2,
       "sources": [

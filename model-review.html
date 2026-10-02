@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Review | Universe Scales</title>
+  <script type="importmap">{"imports":{"three":"./js/vendor/three/three.module.min.js"}}</script>
+  <link rel="stylesheet" href="css/model-review.css">
+</head>
+<body>
+  <header><h1>Model review</h1><a id="explorer-link" href="?dimension=length">Open in explorer</a></header>
+  <main>
+    <section class="toolbar" aria-label="Model review controls">
+      <label>Find item <input id="search" type="search" placeholder="Search length items"></label>
+      <label>Item <select id="item"></select></label>
+      <button id="previous">Previous</button><button id="next">Next</button>
+      <label>View <select id="view"><option value="rest">Resting pose</option><option value="front">Front</option><option value="side">Right side</option><option value="top">Above</option><option value="back">Back</option></select></label>
+      <label>Background <select id="background"><option value="light">Light</option><option value="dark">Dark</option><option value="sky">Sky</option></select></label>
+      <label><input id="neighbors" type="checkbox"> Compare neighbors</label>
+      <button id="pause">Pause animation</button><button id="step">Step 0.25 s</button>
+      <label>Zoom <input id="zoom" type="range" min="0.25" max="2" step="0.01" value="1"></label>
+      <label class="file-label">Preview local GLB <input id="file" type="file" accept=".glb"></label>
+    </section>
+    <div id="stage-frame" class="experience--spatial" aria-label="3D model preview">
+      <svg id="stage" viewBox="0 0 1000 500" role="img" aria-label="Model labels and annotations"></svg>
+    </div>
+    <output id="status" aria-live="polite">Loading renderer...</output>
+    <aside><h2 id="title"></h2><p id="note"></p><p id="sources"></p><img id="photo" alt="" hidden></aside>
+  </main>
+  <script src="js/experiences/journey.js"></script>
+  <script type="module" src="js/model-review.js?v=07c0f69f0c"></script>
+</body>
+</html>

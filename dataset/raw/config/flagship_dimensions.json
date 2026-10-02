@@ -2,7 +2,7 @@
   {
     "slug": "length",
     "required_min_items": 24,
-    "preferred_target_items": 60,
+    "preferred_target_items": 66,
     "preferred_max_items": 100,
     "selection_bin_count": 24
   },

@@ -45,6 +45,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Educational tutoring and test scores
     ingest_source: dataset/raw/curated/effect-size.json
@@ -92,6 +95,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Caffeine and vigilance
     ingest_source: dataset/raw/curated/effect-size.json
@@ -139,6 +145,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Antidepressant versus placebo
     ingest_source: dataset/raw/curated/effect-size.json
@@ -186,6 +195,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Exercise and mood
     ingest_source: dataset/raw/curated/effect-size.json
@@ -233,6 +245,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Mindfulness training and stress
     ingest_source: dataset/raw/curated/effect-size.json
@@ -280,6 +295,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Air purifier and indoor PM2.5
     ingest_source: dataset/raw/curated/effect-size.json
@@ -327,6 +345,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Statins and LDL reduction
     ingest_source: dataset/raw/curated/effect-size.json
@@ -374,6 +395,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Iron supplementation and fatigue
     ingest_source: dataset/raw/curated/effect-size.json
@@ -421,6 +445,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Aspirin and headache relief
     ingest_source: dataset/raw/curated/effect-size.json
@@ -468,6 +495,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Sleep deprivation and reaction time
     ingest_source: dataset/raw/curated/effect-size.json
@@ -515,6 +545,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cognitive behavioral therapy for depression
     ingest_source: dataset/raw/curated/effect-size.json
@@ -562,6 +595,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hearing aids and speech perception
     ingest_source: dataset/raw/curated/effect-size.json
@@ -609,6 +645,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Antibiotics for susceptible bacterial infection
     ingest_source: dataset/raw/curated/effect-size.json
@@ -656,6 +695,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Nicotine withdrawal on craving
     ingest_source: dataset/raw/curated/effect-size.json
@@ -703,6 +745,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Cataract surgery and visual acuity
     ingest_source: dataset/raw/curated/effect-size.json
@@ -750,6 +795,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Weight loss after bariatric surgery
     ingest_source: dataset/raw/curated/effect-size.json
@@ -797,6 +845,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Hearing threshold with earplugs in a loud environment
     ingest_source: dataset/raw/curated/effect-size.json
@@ -844,6 +895,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Eyeglasses for moderate myopia
     ingest_source: dataset/raw/curated/effect-size.json
@@ -891,6 +945,9 @@ items:
   hook: null
   caveats: null
   content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
   facts:
     canonical_name: Insulin for untreated type 1 diabetes
     ingest_source: dataset/raw/curated/effect-size.json

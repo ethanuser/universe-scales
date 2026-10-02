@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "sketchfab-isuzu-city-bus",
+      "name": "City bus envelope volume",
+      "uid": "050e8acd0bbc4da0902a8a874ef10fca",
+      "author": "own.guest",
+      "license": "by",
+      "note": "An Isuzu Erga Mio Japanese city bus. The listed volume is a representative exterior envelope, not the interior passenger space or the exact volume of this particular bus."
+    },
+    {
+      "id": "sketchfab-teaspoon",
+      "name": "Teaspoon",
+      "uid": "96467926442342eab2c797de0ed80e6a",
+      "author": "LordOfTheSnow",
+      "license": "by",
+      "replaces": "teaspoon",
+      "note": "A single chromium-finished teaspoon modeled from a reference photograph. It illustrates a 5 mL measuring teaspoon, but the mesh bowl was not calibrated to hold exactly 5 mL."
+    }
+  ]
+}
