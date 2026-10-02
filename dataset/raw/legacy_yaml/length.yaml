@@ -20,34 +20,36 @@ items:
   name: String Length
   source: https://en.wikipedia.org/wiki/String_theory
   value: 1e-35
-- description: The smallest meaningful distance in physics, where quantum mechanics
-    and general relativity collide. At this scale, spacetime becomes a
-    seething foam of quantum fluctuations, and attempting to measure distances
-    shorter than this would require so much energy that it would create a
-    black hole. This length is derived from fundamental constants and represents
-    the ultimate limit of our current understanding of space and time.
+- description: A length constructed from the constants of quantum mechanics,
+    gravity, and relativity. It marks the scale at which we expect our separate
+    descriptions of these forces to need a quantum theory of gravity. Ideas
+    such as spacetime foam and black-hole limits on measurement make it a
+    compelling frontier, but it has not been established experimentally as
+    the smallest possible distance. The ruler shows a derived scale, not
+    an observed grain of spacetime.
   name: Planck Length
-  source: https://en.wikipedia.org/wiki/Planck_length
-  value: 1.616e-35
-- description: The experimental upper limit on quark size from high-energy collisions
-    at particle accelerators. Quarks are never found alone due to 'color
+  source: https://physics.nist.gov/cgi-bin/cuu/Value?plkl
+  value: 1.616255e-35
+- description: An experimental upper limit on an effective quark radius from
+    combined HERA electron-proton collision data, at 95% confidence within
+    the study's form-factor model. It is not a measured particle surface.
+    Quarks are never found alone due to 'color
     confinement' - the strong force becomes stronger as you try to separate
-    them, like cosmic rubber bands. This size limit represents our current
-    resolution for probing the fundamental building blocks of matter, and
-    any attempt to see smaller would require energies exceeding what
-    current accelerators can achieve.
+    them, like cosmic rubber bands. Scattering lets us probe these hidden
+    building blocks without ever holding an isolated quark in our hands.
   name: Quark
-  source: https://en.wikipedia.org/wiki/Quark
+  source: https://arxiv.org/abs/1611.03825
   value: 4.3e-19
-- description: The electromagnetic 'size' of an electron, calculated from its
-    self-energy interactions. While electrons appear point-like in experiments,
-    this radius represents the scale where electromagnetic effects dominate.
-    Interestingly, if an electron were actually this size, its electrostatic
-    self-energy would exceed its rest mass energy by a factor of 200,000,
-    highlighting the quantum mechanical nature of fundamental particles.
+- description: The classical electron radius, an electromagnetic length scale
+    derived from its charge and rest energy, not an observed electron size.
+    Electrons appear point-like in experiments. In the classical picture,
+    spreading a charge over a small sphere stores electrostatic energy;
+    equating a characteristic Coulomb energy to the electron's rest energy
+    gives this scale. The exact self-energy depends on the assumed charge
+    distribution, so it does not define a physical surface for the electron.
   name: Electron
-  source: https://en.wikipedia.org/wiki/Electron
-  value: 2.8e-15
+  source: https://physics.nist.gov/cgi-bin/cuu/Value?re
+  value: 2.8179403205e-15
 - description: The charge radius of the proton, measured through electron-proton
     scattering and muonic hydrogen spectroscopy. This measurement sparked the
     'proton radius puzzle' when muonic hydrogen gave a different result than
@@ -55,8 +57,8 @@ items:
     and hinted at possible new physics. The proton's internal structure
     contains three quarks constantly exchanging gluons in a quantum soup.
   name: Proton Radius
-  source: https://en.wikipedia.org/wiki/Proton
-  value: 8.7e-16
+  source: https://physics.nist.gov/cuu/Constants/Table/allascii.txt
+  value: 8.4075e-16
 - description: The diameter of atomic nuclei, where 99.97% of an atom's mass
     is concentrated in a space 100,000 times smaller than the atom itself.
     Nuclear size scales roughly as the cube root of atomic mass, meaning
@@ -66,15 +68,17 @@ items:
   name: Atomic Nucleus
   source: https://en.wikipedia.org/wiki/Atomic_nucleus
   value: 1e-14
-- description: The quantum mechanical 'size' of neutrinos, the most abundant
-    massive particles in the universe. Trillions of neutrinos pass through
-    your body every second from the Sun, yet they're so weakly interacting
-    that you'd need a light-year of lead to stop half of them. Their tiny
+- description: The de Broglie wavelength of a neutrino with 1 MeV of energy,
+    about 1.24 picometers in the ultrarelativistic approximation. This is
+    a wavelength, not the particle's physical size; increasing its energy
+    makes the wavelength shorter. Trillions of neutrinos pass through
+    your body every second from the Sun, and most pass through the Earth
+    without interacting. Their tiny
     mass and ghostly nature make them crucial messengers from stellar
     cores and supernova explosions.
-  name: Neutrino
-  source: https://en.wikipedia.org/wiki/Neutrino
-  value: 1e-12
+  name: 1 MeV Neutrino Wavelength
+  source: https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf
+  value: 1.239841984e-12
 - description: A hydrogen atom is about 106 picometers across if its edge is
     drawn at the Bohr radius, 52.9 pm, the electron's most probable distance
     from the proton. The electron has no orbit or surface; it is a probability
@@ -389,7 +393,7 @@ items:
     has become a global phenomenon, with over 800 marathons held worldwide
     annually, attracting millions of participants.
   name: Marathon Distance
-  source: https://en.wikipedia.org/wiki/Marathon
+  source: https://worldathletics.org/disciplines/road-running-event/marathon
   value: 42195
 - description: The length of the Panama Canal, an engineering marvel that
     revolutionized global trade by eliminating the need to sail around
@@ -401,17 +405,17 @@ items:
   name: Panama Canal
   source: https://en.wikipedia.org/wiki/Panama_Canal
   value: 82000
-- description: The length of the Amazon River, Earth's mightiest waterway that
+- description: The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that
     carries more water than the next seven largest rivers combined. This
     river system drains 40% of South America and discharges 200,000
     cubic meters of water per second into the Atlantic. The Amazon
     contains 20% of the world's fresh water and supports 10% of Earth's
     biodiversity. Its length is disputed because it has multiple sources,
-    but it's generally considered the world's longest river.
+    and depends on which headwater and mouth are counted.
   name: Amazon River
-  source: https://en.wikipedia.org/wiki/Amazon_River
-  value: 7000000
-- description: The length of the Great Wall of China, a massive defensive structure
+  source: https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26
+  value: 6400000
+- description: The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system
     built over 2,000 years to protect against nomadic invasions. This ancient
     wonder is actually a series of walls built by different dynasties, with
     some sections dating back to the 7th century BC. The wall is wide enough
@@ -419,8 +423,8 @@ items:
     Despite its reputation, the wall was never completely effective at stopping
     invaders, but it remains one of humanity's most ambitious construction projects.
   name: Great Wall of China
-  source: https://en.wikipedia.org/wiki/Great_Wall_of_China
-  value: 21000000
+  source: https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html
+  value: 21196180
 - description: The diameter of Earth, our home planet that orbits the Sun
     at 67,000 mph while rotating at 1,000 mph at the equator. Earth is
     slightly flattened at the poles due to its rotation, making it an
@@ -490,26 +494,30 @@ items:
   name: Solar System
   source: https://en.wikipedia.org/wiki/Solar_System
   value: 1.2e13
-- description: The diameter of the heliosphere, the protective bubble of
-    solar wind that shields our solar system from cosmic radiation.
+- description: A representative 240-au diameter of the heliosphere's nose region,
+    twice the roughly 120-au heliopause distance measured near the Voyager
+    crossings, not the uncertain length of its tail. This protective bubble of
+    solar wind shields our solar system from cosmic radiation.
     This bubble extends far beyond Pluto and acts as a barrier against
     the harsh interstellar environment. The heliosphere's shape changes
     as the Sun moves through the galaxy, creating a comet-like tail
     that extends for billions of kilometers. Only two spacecraft,
     Voyager 1 and 2, have ever left this protective bubble.
   name: Heliosphere
-  source: https://en.wikipedia.org/wiki/Heliosphere
-  value: 2.4e14
-- description: The radius of the Oort Cloud, a vast shell of icy objects
-    that marks the true boundary of our solar system. This distant region
+  source: https://science.nasa.gov/mission/voyager/interstellar-mission/
+  value: 3.5903488968e13
+- description: A representative 200,000-au diameter of the hypothesized Oort Cloud,
+    using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range.
+    This vast reservoir of icy objects lies at the outer reaches of our solar
+    system rather than having a directly observed sharp edge. This distant region
     contains trillions of comets and extends halfway to the nearest star.
     The Oort Cloud is the source of long-period comets that occasionally
     visit the inner solar system. These icy bodies are pristine remnants
     from the solar system's formation, preserving the original composition
     of the protoplanetary disk.
   name: Oort Cloud
-  source: https://en.wikipedia.org/wiki/Oort_cloud
-  value: 1e15
+  source: https://science.nasa.gov/solar-system/oort-cloud/facts/
+  value: 2.991957414e16
 - description: The distance to Proxima Centauri, our nearest stellar neighbor
     that hosts an Earth-sized planet in its habitable zone. This red dwarf
     star is part of the Alpha Centauri triple star system and is 4.24
@@ -548,7 +556,7 @@ items:
   name: Tarantula Nebula
   source: https://en.wikipedia.org/wiki/Tarantula_Nebula
   value: 9e18
-- description: The size of the Carina Nebula, a massive stellar factory
+- description: The roughly 300-light-year span of the Carina Nebula, a massive stellar factory
     containing some of the most massive and luminous stars in our galaxy.
     This nebula is home to Eta Carinae, a binary star system that's 5
     million times brighter than the Sun and may explode as a supernova
@@ -556,8 +564,8 @@ items:
     dark dust lanes, bright star clusters, and vast regions of ionized
     gas sculpted by stellar winds.
   name: Carina Nebula
-  source: https://en.wikipedia.org/wiki/Carina_Nebula
-  value: 3e20
+  source: https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/
+  value: 2.83821914177424e18
 - description: The diameter of the Milky Way, our home galaxy containing
     100-400 billion stars orbiting a supermassive black hole. Our solar
     system orbits the galactic center at 220 km/s, completing one
@@ -589,55 +597,62 @@ items:
   name: Local Group
   source: https://en.wikipedia.org/wiki/Local_Group
   value: 1e23
-- description: The size of the Virgo Supercluster, a massive collection of
+- description: The approximate 100-million-light-year span of the Virgo
+    (Local) Supercluster, a massive collection of
     galaxy groups containing thousands of galaxies. This structure contains
     about 100 galaxy groups and clusters with a total mass of 10^15
     solar masses. The Virgo Supercluster is falling toward the Great
     Attractor, a mysterious region of space that's pulling galaxies
-    toward it. This represents the largest coherent structures in the
-    universe before cosmic expansion dominates over gravitational
-    attraction.
+    toward it. Its irregular disk and halo of galaxy clouds are a
+    large-scale neighborhood, not one gravitationally bound object with
+    a sharply defined surface.
   name: Virgo Supercluster
-  source: https://en.wikipedia.org/wiki/Virgo_Supercluster
-  value: 1e23
-- description: The size of the Laniakea Supercluster, our cosmic home that
+  source: https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html
+  value: 9.46e23
+- description: The approximate 160-megaparsec diameter of the Laniakea Supercluster,
+    our cosmic home that
     contains 100,000 galaxies including our Milky Way. This Hawaiian-named
-    structure means 'immeasurable heaven' and represents the largest
-    gravitationally bound system we belong to. Laniakea contains a mass
+    structure means 'immeasurable heaven' and is defined by a basin of
+    peculiar galaxy velocities, not by a gravitationally bound boundary.
+    Laniakea contains a mass
     of 10^17 solar masses and shows how galaxies flow toward its center
     like water flowing downhill. This supercluster is part of an even
     larger cosmic web that spans the observable universe.
   name: Laniakea Supercluster
-  source: https://en.wikipedia.org/wiki/Laniakea_Supercluster
-  value: 5e23
+  source: https://doi.org/10.1038/nature13674
+  value: 4.937084130386187e24
 - description: The length of the Sloan Great Wall, one of the largest
     structures in the observable universe. This massive filament contains
-    thousands of galaxy clusters arranged in a wall-like formation
-    spanning billions of light-years. The wall's discovery challenged
-    our understanding of cosmic structure formation, as it seemed
-    too large to have formed in the time since the Big Bang.
+    thousands of galaxies arranged in a wall-like formation. Gott and
+    colleagues estimated its curved length as 450 megaparsecs in
+    present-epoch comoving coordinates, about 1.47 billion light-years.
+    At the epoch seen in its light, the same estimate is about 419 Mpc.
+    Such walls also occur in simulations of standard cosmology;
+    their connected extent depends on how the structure is defined.
     This structure represents the cosmic web's filamentary nature,
     where galaxies cluster along vast interconnected threads.
   name: Sloan Great Wall
-  source: https://en.wikipedia.org/wiki/Sloan_Great_Wall
-  value: 4e24
-- description: The length of the Hercules-Corona Borealis Great Wall, the
-    largest known structure in the observable universe. This immense
-    filament spans 10 billion light-years and contains billions of
-    galaxies arranged in a wall-like formation. The wall's discovery
-    challenged cosmological theories because it appeared too large
-    to have formed through gravitational collapse alone. This structure
-    represents the ultimate scale of cosmic organization and may
-    require new physics to explain its formation.
+  source: https://arxiv.org/html/astro-ph/0310571v2
+  value: 1.3885549116711151e25
+- description: A reported gamma-ray-burst concentration nicknamed the
+    Hercules-Corona Borealis Great Wall, with a proposed extent of roughly
+    2,000-3,000 megaparsecs. The marker uses the upper end, about 10 billion
+    light-years; it is not a measured edge of a mapped galaxy wall.
+    Bursts can act as distant tracers of stellar populations, but their
+    rarity and uneven detection make this an intriguing, disputed inference.
+    Studies disagree about whether selection effects can explain the
+    clustering. The question is not whether a visible wall fills this
+    span, but whether sparse flashes reveal an unusually large structure.
   name: Hercules-Corona Borealis Great Wall
-  source: https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall
-  value: 1e25
+  source: https://arxiv.org/abs/1401.0533
+  value: 9.4607304725808e25
 - description: The diameter of the observable universe, the ultimate limit
     of what we can see. This boundary exists because light has only
-    had 13.8 billion years to travel since the Big Bang. Beyond this
-    distance, objects are receding faster than light can reach us
-    due to cosmic expansion. The observable universe contains about
-    2 trillion galaxies and represents only a tiny fraction of
+    had 13.8 billion years to travel since the Big Bang. Cosmic expansion
+    has stretched the present distance to those regions to about 46.5
+    billion light-years; recession faster than light does not by itself
+    make a galaxy unobservable. The observable universe contains about
+    2 trillion galaxies and may represent only a tiny fraction of
     the entire universe, which may be infinite in extent. This
     diameter defines the horizon of human knowledge about
     cosmic reality.

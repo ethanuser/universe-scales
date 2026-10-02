@@ -3,9 +3,10 @@ import { GLTFLoader } from '../vendor/three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtils.js';
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
-import { placeLabels } from './model-labels.js?v=d45a63a3fb';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=eaab4aeb18';
-import { waveAnimation } from './wave-models.js?v=20a2708008';
+import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=7ce287549d';
+import { waveAnimation } from './wave-models.js?v=d9360c0030';
+import { prepareModelPoints } from './model-points.js?v=2cbe25db3d';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -80,11 +81,14 @@ function addHoverOverlay(instance) {
     });
     return originals.map(child => {
         const overlay = child.clone(false);
-        overlay.userData = {}; // not a labeled or outlined node itself
+        // Keep point-size animation, but not labels, outlines or picking metadata.
+        overlay.userData = child.isPoints && child.userData.pointSize
+            ? { pointSize: { ...child.userData.pointSize } } : {};
         overlay.material = child.isPoints
             ? new THREE.PointsMaterial({ color: 0xffffff, size: child.material.size,
                 sizeAttenuation: child.material.sizeAttenuation, transparent: true,
-                opacity: 0.16, depthWrite: false })
+                opacity: 0.16, depthWrite: false, map: child.material.map,
+                alphaTest: child.material.alphaTest })
             : new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true,
                 opacity: 0.16, depthWrite: false, polygonOffset: true,
                 polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
@@ -170,6 +174,7 @@ async function load(entry) {
             THREE.MathUtils.degToRad(preRotation.z || 0)
         );
         if (entry.presentation?.flatten_static) scene = flattenStaticScene(scene);
+        prepareModelPoints(scene);
         if (entry.presentation?.distance_bracket) addDistanceBracket(scene, entry.presentation.distance_bracket);
         scene.updateMatrixWorld(true);
         // Precise (per-vertex) bounds: box-of-rotated-box estimates inflate
@@ -467,7 +472,7 @@ export class ModelStage {
             if (instance.userData.screenLines.length) {
                 const perPixel = 1 / pixelsPerUnit(distance - instance.position.z);
                 for (const line of instance.userData.screenLines) {
-                    const thickness = SCREEN_LINE_PX * perPixel / line.parent.matrixWorld.getMaxScaleOnAxis();
+                    const thickness = (line.userData.screenLine.width ?? SCREEN_LINE_PX) * perPixel / line.parent.matrixWorld.getMaxScaleOnAxis();
                     const { axis, length } = line.userData.screenLine;
                     line.scale.set(axis === 'x' ? length : thickness, axis === 'y' ? length : thickness,
                         axis === 'z' ? length : thickness);
@@ -479,6 +484,12 @@ export class ModelStage {
             for (const cloud of instance.userData.clouds) {
                 const { max, perPixel } = cloud.userData.pointSize;
                 cloud.material.size = THREE.MathUtils.clamp(drawnPixels * perPixel, 0.35, max);
+                if (cloud.userData.pointLOD) {
+                    const { fullPixels, minimum } = cloud.userData.pointLOD;
+                    const count = cloud.geometry.attributes.position.count;
+                    cloud.geometry.setDrawRange(0, Math.min(count, Math.max(minimum,
+                        Math.ceil(count * Math.min(1, drawnPixels / fullPixels)))));
+                }
             }
             this.overlay(instance, w, h, scale, cx, view);
             const projected = [];
@@ -496,6 +507,7 @@ export class ModelStage {
         for (const [item, instance] of this.instances)
             for (const overlay of instance?.userData.hoverOverlays || [])
                 overlay.visible = item === this.hovered && instance.visible;
+        resolveLabelCollisions(this.ctx.stage);
         this.renderer.render(this.scene, this.camera);
         if (visibleWave && animateWaves && this.animationTime == null && !this.waveFrame)
             this.waveFrame = requestAnimationFrame(() => {
@@ -515,7 +527,7 @@ export class ModelStage {
         // leaves clean objects: fully visible above 240 px, gone below 120 px.
         const drawnPixels = instance.userData.drawSize * scale;
         const opacity = THREE.MathUtils.clamp((drawnPixels - 120) / 120, 0, 1);
-        if (!opacity) return;
+        if (!opacity && !instance.userData.overlays.some(node => node.userData.labelRole === 'dimension')) return;
         const toScreen = point => {
             const ndc = point.project(this.camera);
             return { x: cx + (ndc.x * w / 2) / scale, y: view.y + view.height / 2 - (ndc.y * h / 2) / scale };
@@ -528,6 +540,10 @@ export class ModelStage {
         };
         const stableLabels = [];
         for (const node of instance.userData.overlays) {
+            const dimension = node.userData.labelRole === 'dimension';
+            const fontPixels = Math.min(13, drawnPixels * 0.032);
+            const labelOpacity = dimension ? THREE.MathUtils.clamp((fontPixels - 2) / 3, 0, 1) : opacity;
+            if (!labelOpacity) continue;
             const center = node.getWorldPosition(new THREE.Vector3());
             const at = toScreen(center.clone());
             let radius = 0;
@@ -541,19 +557,38 @@ export class ModelStage {
                 svgNode('circle', { cx: at.x, cy: at.y, r: radius, class: 'journey-model-outline', opacity });
             }
             if (node.userData.label) {
+                // A depth annotation is useful side-on, but unreadable end-on.
+                const labelAxis = node.userData.labelAxis;
+                if (labelAxis) {
+                    const end = new THREE.Vector3();
+                    end[labelAxis.axis] = labelAxis.length;
+                    const projected = toScreen(end.applyMatrix4(node.matrixWorld));
+                    if (Math.hypot(projected.x - at.x, projected.y - at.y) * scale
+                        < (labelAxis.minPixelLength ?? 10)) continue;
+                }
                 if (node.userData.labelLayout === 'orbit') {
                     stableLabels.push({ x: at.x, y: at.y, text: node.userData.label,
-                        priority: node.userData.labelPriority, offset: radius + 4 / scale });
+                        priority: node.userData.labelPriority, offset: radius + 4 / scale,
+                        callout: node.userData.labelOffset && { x: node.userData.labelOffset.x / scale,
+                            y: node.userData.labelOffset.y / scale } });
                     continue;
                 }
-                const label = svgNode('text', { x: at.x, y: at.y - radius - (radius ? 6 : 0) / scale,
-                    class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle', opacity });
+                const offset = node.userData.labelOffset || { x: 0, y: 0 };
+                const label = svgNode('text', { x: at.x + offset.x / scale,
+                    y: at.y - radius + (offset.y - (radius ? 6 : 0)) / scale,
+                    class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle', opacity: labelOpacity });
+                if (dimension) {
+                    label.style.fontSize = `${fontPixels / scale}px`;
+                    label.dataset.labelPriority = '80';
+                }
                 label.textContent = node.userData.label;
                 if (node.userData.labelVector) {
+                    const group = svgNode('g', { 'data-label-group': '' });
+                    group.append(label);
                     // Vector hat: a short right-pointing arrow centered over the text.
                     const x = at.x, y = at.y - radius - (radius ? 6 : 0) / scale - 12;
-                    svgNode('path', { d: `M${x - 5.5} ${y}H${x + 5.5}M${x + 2.5} ${y - 3}L${x + 5.5} ${y}L${x + 2.5} ${y + 3}`,
-                        class: `journey-model-vector ${node.userData.labelClass || ''}`, opacity });
+                    group.append(svgNode('path', { d: `M${x - 5.5} ${y}H${x + 5.5}M${x + 2.5} ${y - 3}L${x + 5.5} ${y}L${x + 2.5} ${y + 3}`,
+                        class: `journey-model-vector ${node.userData.labelClass || ''}`, opacity }));
                 }
             }
         }
@@ -561,9 +596,14 @@ export class ModelStage {
             left: view.x + 4, right: view.x + view.width - 4, top: view.y + 4, bottom: view.y + view.height - 4
         })) {
             if (!label.visible) continue;
+            const group = svgNode('g', { 'data-label-group': '' });
+            if (label.callout)
+                group.append(svgNode('line', { x1: label.x, y1: label.y, x2: label.labelX,
+                    y2: label.labelY + 3, class: 'journey-model-leader', opacity: opacity * 0.55 }));
             const text = svgNode('text', { x: label.labelX, y: label.labelY,
                 class: 'journey-model-label', 'text-anchor': 'middle', opacity });
             text.textContent = label.text;
+            group.append(text);
         }
     }
     dispose() {

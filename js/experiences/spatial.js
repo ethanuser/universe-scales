@@ -294,7 +294,8 @@
                 // Names fade as their objects shrink: gone below 7 px text, full above 12 px.
                 const labelOpacity = clamp((fontSize * view.scale - 7) / 5, 0, 1);
                 if (labelOpacity > 0) {
-                    const text = svg('text',{x,y:y+fontSize*1.8,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px`,opacity:labelOpacity},item.name);
+                    const text = svg('text',{x,y:y+fontSize*1.8,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px`,opacity:labelOpacity},entry?.display_label || item.name);
+                    text.dataset.labelPriority = item === ctx.item ? '200' : '100';
                     labels.push(text);
                 }
             });

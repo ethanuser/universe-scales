@@ -4,7 +4,8 @@
     python3 scripts/bump_versions.py          # rewrite stale versions
     python3 scripts/bump_versions.py --check  # exit 1 if any version is stale
 
-Covers the HTML entry pages and ES-module imports under js/. Because a
+Covers the HTML entry pages and ES-module imports under js/, adding missing
+versions to local first-party imports. Vendored module URLs stay unchanged. Because a
 changed module changes the import strings of the modules that import it, the
 rewrite repeats until nothing changes. Identical URLs everywhere also mean a
 module is never loaded twice under two different version strings.
@@ -18,6 +19,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCE = re.compile(r"""(?P<path>[\w./-]+\.(?:js|css))\?v=(?P<version>[\w.-]+)""")
+UNVERSIONED_IMPORT = re.compile(
+    r"""(?P<prefix>\b(?:from\s*|import\s*(?:\(\s*)?)[\"'])(?P<path>\.{1,2}/[\w./-]+\.js)(?P<suffix>[\"'])"""
+)
 
 
 def sources():
@@ -42,6 +46,16 @@ def rewrite(check):
         for source in sources():
             text = source.read_text()
 
+            def add_version(match):
+                path = target(source, match["path"])
+                if path is None or "vendor" in path.relative_to(ROOT).parts:
+                    return match[0]
+                stale.append(f"{source.relative_to(ROOT)}: {match['path']} missing version")
+                return f"{match['prefix']}{match['path']}?v={digest(path)}{match['suffix']}"
+
+            if source.suffix == ".js":
+                text = UNVERSIONED_IMPORT.sub(add_version, text)
+
             def replace(match):
                 path = target(source, match["path"])
                 if path is None:
@@ -52,7 +66,7 @@ def rewrite(check):
                 return f"{match['path']}?v={version}"
 
             updated = REFERENCE.sub(replace, text)
-            if updated != text:
+            if updated != source.read_text():
                 changed = True
                 if not check:
                     source.write_text(updated)

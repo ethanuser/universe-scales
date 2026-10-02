@@ -340,7 +340,7 @@
         updateDetail() {
             const item = this.item;
             const model = this.modelEntry?.(item);
-            const title = dom('h2', '', this.item.name);
+            const title = dom('h2', '', model?.display_label || item.name);
             const value = dom('div', 'experience-value');
             const photometry = this.dimension === 'brightness' && root.ScaleRenderers.photometry?.(this.item);
             value.innerHTML = this.app.formatTooltipValueHTML(
@@ -400,6 +400,8 @@
             const modelSource = model?.source || model?.basis_url;
             if (modelSource !== item.source)
                 addSource(model?.link_label || (model?.procedural ? 'Model basis' : '3D model'), modelSource);
+            if (model?.basis_url && model.basis_url !== modelSource && model.basis_url !== item.source)
+                addSource('Model basis', model.basis_url);
             if (sources.childNodes.length) this.detail.append(sources);
             this.detail.scrollTop = 0;
         }

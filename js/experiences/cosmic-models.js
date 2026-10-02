@@ -81,7 +81,7 @@ export function galaxyPoints(parameters, count, seed) {
 
 // Normal alpha blending keeps star colors (yellow bulge, blue arms, pink
 // nebulae) where stars crowd; additive blending saturates them to flat white.
-function galaxyCloud(parameters, count, seed, name, { brightness = 1, opacity = 0.5, maxSize = 1.6 } = {}) {
+export function galaxyCloud(parameters, count, seed, name, { brightness = 1, opacity = 0.5, maxSize = 1.6 } = {}) {
     const { positions, colors } = galaxyPoints(parameters, count, seed);
     for (let index = 0; index < colors.length; index++) colors[index] *= brightness;
     const geometry = new THREE.BufferGeometry();
@@ -91,12 +91,14 @@ function galaxyCloud(parameters, count, seed, name, { brightness = 1, opacity = 
         vertexColors: true, transparent: true, opacity, depthWrite: false }));
     points.name = name;
     points.userData.pointSize = { max: maxSize, perPixel: 1 / 160 };
+    points.userData.pointLOD = { fullPixels: 600, minimum: Math.min(600, count) };
+    points.userData.softPoints = true;
     return points;
 }
 
 export function milkyWayScene() {
     const scene = new THREE.Group();
-    scene.add(galaxyCloud(MILKY_WAY, 42000, 0x3a11, 'milky-way-stars'));
+    scene.add(galaxyCloud(MILKY_WAY, 14000, 0x3a11, 'milky-way-stars', { opacity: 0.7, maxSize: 2 }));
     // The Sun, 8.18 kpc from the center; its outline marks where we are.
     const sun = new THREE.Mesh(new THREE.SphereGeometry(1, 8, 6), new THREE.MeshBasicMaterial({ color: 0xffe08a }));
     sun.scale.setScalar(695_700_000 / KPC);

@@ -4007,6 +4007,735 @@
       "triangle_count": 42474,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "orion-hubble-blister",
+      "source": "https://science.nasa.gov/asset/hubble/hubbles-sharpest-view-of-the-orion-nebula/",
+      "download_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/releases/2006/01/STScI-01EVT7X0BR54ZWDP1AG2DA54RA.tif?w=1024",
+      "link_label": "Reference image",
+      "author": "Image: NASA, ESA, Hubble Space Telescope Orion Treasury Project Team, Massimo Robberto (STScI, ESA); inferred geometry: Universe Scales",
+      "license": "NASA/ESA credited scientific image under NASA media guidelines; authored geometry under the project code license",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "sources/orion-model.md"
+      ],
+      "matches": {
+        "length": [
+          "Orion Nebula"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "reference_size": 25.368020016590773,
+        "yaw": 22,
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.15
+      },
+      "basis_url": "https://doi.org/10.1088/0004-6256/137/1/367",
+      "basis_label": "Blister structure: O'Dell et al. (2009)",
+      "note": "Hubble's observed colors and sky-plane positions are sampled into a rotatable gas layer. The photographed field is 13 light-years wide; it is not stretched to the listed roughly 25-light-year whole nebula. The lower bracket indicates that larger contextual span, not an observed gas boundary. Inferred depth illustrates a thin ionization front behind the Trapezium, following Orion's blister interpretation; outside that inner region the depth is an artistic assumption. The four stellar markers are enlarged and schematic. This is not NASA's fly-through mesh, a tomographic reconstruction, or a measured 3D density map.",
+      "processing": {
+        "script": "scripts/build_orion_model.py",
+        "source_image_sha256": "31721848d4985cf3c93db1078b12b091a04650aaf22e08edd5237102fa5b8e9d",
+        "image_field_span_ly": 13.0,
+        "reference_span_ly": 25.368020016590773,
+        "cloud_points": 27860,
+        "depth_semantics": "inferred illustration"
+      },
+      "src": "content/visualizations/models/orion-hubble-blister.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 672008,
+      "sha256": "ab4225ee737f6202d55d707d975b9bfbbf2192d709d57d5493ef2d42673476a5",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "tarantula-eso-cloud",
+      "source": "https://www.eso.org/public/images/eso0650a/",
+      "download_url": "https://cdn.eso.org/images/screen/eso0650a.jpg",
+      "link_label": "ESO reference image",
+      "author": "ESO/R. Fosbury (ST-ECF); geometry: Universe Scales",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.eso.org/public/outreach/copyright/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/tarantula-model.md"
+      ],
+      "matches": {
+        "length": [
+          "Tarantula Nebula"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "reference_size": 951.3007506221539,
+        "yaw": 12,
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.15
+      },
+      "basis_url": "https://www.eso.org/public/news/eso0650/",
+      "basis_label": "ESO field of view and approximate nebula span",
+      "note": "ESO/R. Fosbury (ST-ECF), adapted into a rotatable illustration. Colors and projected filaments come from the MPG/ESO 2.2-metre telescope's optical B, V, H-alpha and [O III] mosaic. Its published 62.40 by 62.31 arcminute field and 170,000-light-year distance set the scale. A circular viewing aperture around the bright R136 region spans the listed approximately 951 light-years, close to ESO's approximate 1,000-light-year nebula size; the aperture is not a measured gas edge. The bowed emitting layer and its thickness are artistic depth cues, not a tomographic reconstruction. Sample points represent emission, not individual atoms or stars.",
+      "processing": {
+        "script": "scripts/build_tarantula_model.py",
+        "source_image_sha256": "7a6a323a874e48bfc98fdf9f500ab669b7f7a77e7464d39ba292df03891183f2",
+        "source_field_arcmin": [
+          62.4,
+          62.31
+        ],
+        "adopted_distance_ly": 170000,
+        "crop_box_pixels": [
+          360,
+          116,
+          754,
+          510
+        ],
+        "viewing_aperture_ly": 951.3007506221539,
+        "cloud_points": 33686,
+        "depth_semantics": "authored illustration, not measured"
+      },
+      "src": "content/visualizations/models/tarantula-eso-cloud.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 809684,
+      "sha256": "aca4442069872b644a6cf82741d9e48a227737cd39a9c824b5c2d7089ce08194",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "carina-vista-field",
+      "source": "https://www.eso.org/public/images/eso1828b/",
+      "download_url": "https://cdn.eso.org/images/screen/eso1828b.jpg",
+      "link_label": "ESO VISTA reference image",
+      "author": "ESO/J. Emerson/M. Irwin/J. Lewis; geometry: Universe Scales",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.eso.org/public/outreach/copyright/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/carina-model.md"
+      ],
+      "matches": {
+        "length": [
+          "Carina Nebula"
+        ]
+      },
+      "geometry": "mesh",
+      "volume_semantics": "not a volume measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 300,
+        "yaw": 15,
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.15
+      },
+      "basis_url": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/",
+      "basis_label": "NASA: whole-nebula size and distance",
+      "note": "ESO/J. Emerson/M. Irwin/J. Lewis, adapted into a rotatable image-derived surface. VISTA's Z, J and Ks bands show infrared structures and many foreground/background stars, not naked-eye colors. The published 88.49 by 71.78 arcminute field at about 7,500 light-years covers roughly 193 by 157 light-years. It is not stretched to the listed approximately 300-light-year nebula span: the lower bracket marks that broader context, not an observed gas edge. The observed image is mapped onto a gently bowed sheet; that bend is an artistic depth cue. This is a 2.5D illustration, not tomography or a measured gas-density volume.",
+      "processing": {
+        "script": "scripts/build_carina_model.py",
+        "source_image_sha256": "20684d2e213b796a0e008ff36bf18bed8db1fff4520eff233f03bf4613aeb6c5",
+        "source_field_arcmin": [
+          88.49,
+          71.78
+        ],
+        "adopted_distance_ly": 7500,
+        "image_span_ly": [
+          193.06589219368962,
+          156.60535681288562
+        ],
+        "whole_nebula_span_ly": 300,
+        "surface_triangles": 10400,
+        "texture_max_px": 1024,
+        "texture_encoding": "JPEG quality 90",
+        "depth_semantics": "authored illustration, not measured"
+      },
+      "src": "content/visualizations/models/carina-vista-field.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 735236,
+      "sha256": "cadd8e61e37c2050df3259101b9c5a7e1e4585889d5ff596342bcd39719a5c63",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 10400,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "observable-universe-wmap",
+      "source": "https://lambda.gsfc.nasa.gov/product/wmap/dr5/ilc_map_info.html",
+      "download_url": "https://lambda.gsfc.nasa.gov/data/map/dr5/dfp/ilc/wmap_ilc_9yr_v5.fits",
+      "link_label": "WMAP nine-year ILC map",
+      "author": "NASA/WMAP Science Team; model geometry by Universe Scales",
+      "license": "U.S. public-domain NASA scientific data; attribution requested; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "sources/observable-universe-model.md"
+      ],
+      "matches": {
+        "length": [
+          "Observable Universe"
+        ]
+      },
+      "geometry": "mesh",
+      "volume_semantics": "causal-horizon diagram, not an enclosed matter volume",
+      "basis_url": "https://www.nasa.gov/science-research/astrophysics/how-big-is-space-we-asked-a-nasa-expert-episode-61/",
+      "basis_label": "NASA: present-distance observable-universe span",
+      "presentation": {
+        "reference_size": 93016073394.16617,
+        "yaw": 0,
+        "layout_width_factor": 1.08,
+        "focus_scale_factor": 1.1
+      },
+      "note": "NASA/WMAP Science Team, via NASA LAMBDA; adapted into a causal-horizon diagram. The nine-year sky map colors temperature fluctuations, not matter density: blue is cooler and red warmer, with a display stretch of +/-0.25 mK. The Nside=64 display averages 64 original HEALPix child pixels; foreground cleaning is most reliable above about 10 degrees. The textured last-scattering shell has an approximate present-distance radius of 45.6 billion light-years. Blue guides show the slightly larger particle horizon, about 46.5 billion light-years, with their true proportional radii. The smooth amber-rimmed opening only exposes the observer; it is an authored cutaway, not a gap in the universe. Neither boundary is a material wall or the edge of all space.",
+      "processing": {
+        "script": "scripts/build_observable_universe_model.py",
+        "source_fits_sha256": "4501090f824f9140e916339f9e8e490333f6ffe4257a6ee6a02526c8640099a9",
+        "source_nside": 512,
+        "target_nside": 64,
+        "nested_child_averaging_factor": 64,
+        "source_ordering": "NESTED",
+        "source_coordinate_system": "Galactic",
+        "source_temperature_units": "mK thermodynamic",
+        "source_resolution_degrees": 1.0,
+        "source_small_scale_caveat": "LAMBDA considers full-sky ILC reliable on scales >~10 degrees",
+        "texture_sha256": "e762d4e153069922d1ca963746a918b950321f97002f8a7519db8c053e3c726a",
+        "texture": "512x256 equirectangular JPEG; Galactic longitude/latitude sampled by HEALPix ang2pix; linear temperature stretch saturated at +/-0.25 mK",
+        "cmb_last_scattering_radius_ly": 45600000000.0,
+        "particle_horizon_radius_ly": 46508036697.083084,
+        "shell_cutaway": "+Z cone, 30 degrees",
+        "vertices": 27360,
+        "triangles": 9120,
+        "depth_semantics": "diagrammatic boundaries; no volumetric claim"
+      },
+      "src": "content/visualizations/models/observable-universe-wmap.glb",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 750432,
+      "sha256": "3cd78e887713c434d8e50b4664e551850aec2e281932fe58dc91b72746029012",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 9120,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "great-wall-network-globe",
+      "source": "https://www.openstreetmap.org/relation/318110",
+      "link_label": "Geographic model source",
+      "basis_url": "https://whc.unesco.org/document/157507/",
+      "basis_label": "Survey/course definition",
+      "author": "(c) OpenStreetMap contributors; NASA VTAD Earth; diagram by Universe Scales",
+      "license": "OpenStreetMap geometry: ODbL 1.0; NASA Earth: U.S. public-domain media guidelines; authored diagram: CC-BY-4.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "license_files": [
+        "sources/route-models.md",
+        "licenses/CC-BY-4.0.txt",
+        "sources/routes/great-wall-network-globe.geojson",
+        "licenses/ODbL-1.0.txt",
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "matches": {
+        "length": [
+          "Great Wall of China"
+        ]
+      },
+      "geometry": "geographic route diagram",
+      "volume_semantics": "not a volume measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 21196.18,
+        "pitch": 0,
+        "layout_width_factor": 1.08,
+        "focus_scale_factor": 1.1
+      },
+      "note": "Mapped Great Wall fragments and branches from OpenStreetMap appear on the same NASA Earth mesh and textures as the Earth Diameter item, with north up over China in the resting view. The orange line is widened to 100 km and raised 5 km for visibility, not wall thickness or height. This community mapping is incomplete and is not the official heritage inventory. The separate ruler shows the 2012 survey total of 21,196.18 km across walls and trenches from multiple eras, not a single continuous wall or the distance across China. Visible gaps are retained. Contains information from OpenStreetMap under ODbL; the derivative source geometry is supplied with the model. NASA media usage guidelines apply to the globe.",
+      "processing": {
+        "script": "scripts/build_route_models.py",
+        "source_geometry": "sources/routes/great-wall-network-globe.geojson",
+        "land_source": "content/visualizations/land.geojson",
+        "land_sha256": "c53608b7a6865624f439579927e3457e4a498c10da2c4948bc92cd7cd41c454c",
+        "terrain_texture": "elevation tint; not aerial imagery",
+        "source_geometry_sha256": "4e1b34394514ab67fd1181b570a84936357b935bcc1e00363637ef40b9b360c7",
+        "geographic_frame": "spherical ECEF/local tangent, mean Earth radius 6371.0088 km",
+        "model_unit": "km",
+        "route_rescaled": false,
+        "mapped_segment_sum_km": 5304.489608834403,
+        "mapped_path_count": 8078,
+        "total_reference_km": 21196.18,
+        "vertical_exaggeration": 1,
+        "terrain_tiles": [],
+        "earth_asset": {
+          "source": "https://science.nasa.gov/resource/earth-3d-model/",
+          "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
+          "operations": "Original NASA geometry, atlas and normal map; geographic rotation only"
+        }
+      },
+      "src": "content/visualizations/models/great-wall-network-globe.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1146644,
+      "sha256": "e4b59a2e3a431aa15a0f58eb7e463f1bcd92f718559f66d8962ea5034d5049ff",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 20308,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "boston-marathon-course",
+      "source": "https://www.openstreetmap.org/relation/11680552",
+      "link_label": "Geographic model source",
+      "basis_url": "https://www.baa.org/races/boston-marathon/the-course/",
+      "basis_label": "Survey/course definition",
+      "author": "(c) OpenStreetMap contributors; Mapzen/USGS terrain; diagram by Universe Scales",
+      "license": "OpenStreetMap geometry: ODbL 1.0; Natural Earth: public domain; authored diagram: CC-BY-4.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "license_files": [
+        "sources/route-models.md",
+        "licenses/CC-BY-4.0.txt",
+        "sources/routes/boston-marathon-course.geojson",
+        "licenses/ODbL-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Marathon Distance"
+        ]
+      },
+      "geometry": "geographic route diagram",
+      "volume_semantics": "not a volume measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 42.195,
+        "pitch": 55,
+        "layout_width_factor": 1.08,
+        "focus_scale_factor": 1.1
+      },
+      "note": "Boston's Hopkinton-to-Copley Square course is shown from 265 connected OpenStreetMap road ways over sampled Mapzen/USGS bare-earth elevation. The source graph has one start-to-finish path without invented connectors; its 42.417 km cartographic length is not the certified shortest running line. Horizontal coordinates are not stretched to 42.195 km: the lower straightened ruler marks the standard marathon distance. The displayed ribbon is draped on the terrain mesh, not a surveyed road-deck profile, and its width is exaggerated. Bare-earth relief is exaggerated 12 times and cannot establish runner-grade hill gradients. Tint is illustrative, not aerial photography. The B.A.A. defines the course; World Athletics defines the distance. Contains information from OpenStreetMap under ODbL; source geometry is supplied with the model.",
+      "processing": {
+        "script": "scripts/build_route_models.py",
+        "source_geometry": "sources/routes/boston-marathon-course.geojson",
+        "land_source": "content/visualizations/land.geojson",
+        "land_sha256": "c53608b7a6865624f439579927e3457e4a498c10da2c4948bc92cd7cd41c454c",
+        "terrain_texture": "elevation tint; not aerial imagery",
+        "source_geometry_sha256": "3007719a2af34cd8f33dbc2f3c78de6202351f263f8203eeddfbdc1da2fc9d51",
+        "geographic_frame": "spherical ECEF/local tangent, mean Earth radius 6371.0088 km",
+        "model_unit": "km",
+        "route_rescaled": false,
+        "mapped_segment_sum_km": 42.41737550585303,
+        "mapped_path_count": 265,
+        "total_reference_km": 42.195,
+        "vertical_exaggeration": 12,
+        "terrain_tiles": [
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/616/757.png",
+            "sha256": "69d62472c912ece7f6e0343f7b9842cd337abdf0e2cfe32d2673e1acee74206d"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/617/757.png",
+            "sha256": "a2bc0d0240fc62fda0e99e39f7381af52dd9f038fb9505489218b798e56e3856"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/618/757.png",
+            "sha256": "252516d4143173a136b15a231a4c3067206fbf7b548f5e83a061f8a388e80a6a"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/619/757.png",
+            "sha256": "db7ddfe9357cc7594ceb865b03224f5026dcac3517b38b3c48d29f17e7221432"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/616/758.png",
+            "sha256": "1041c4c780f113039712ab3f4006d13aac45305980a6f1aaf8b1e7b05ffbd699"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/617/758.png",
+            "sha256": "ea780e253d0556816c2c019cf0f4fb2110098c4fb011c9bf3a7dda3d47024ebc"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/618/758.png",
+            "sha256": "a64f3aa31511bdbbb4a295558b7d31ad9e47b59f2d2f9841d84e29310be617d4"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/11/619/758.png",
+            "sha256": "92dbd978ec851658b50c7c0daf8ccead12e6e88ac2b99297eb242cc7c68b5322"
+          }
+        ]
+      },
+      "src": "content/visualizations/models/boston-marathon-course.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 639652,
+      "sha256": "e9b2fb834d958508e4cd3c54f5eecbca52c98cd6e5255a0ce9594343327aa16c",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 7,
+      "triangle_count": 23980,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "amazon-river-geography",
+      "source": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-rivers-lake-centerlines/",
+      "link_label": "Geographic model source",
+      "basis_url": "https://www.esa.int/ESA_Multimedia/Images/2020/09/Amazon_River",
+      "basis_label": "ESA: approximate full-river length",
+      "author": "Natural Earth; Mapzen/USGS terrain; diagram by Universe Scales",
+      "license": "Natural Earth: public domain; Mapzen/USGS attribution; authored diagram: CC-BY-4.0",
+      "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "license_files": [
+        "sources/route-models.md",
+        "licenses/CC-BY-4.0.txt",
+        "sources/routes/amazon-river-geography.geojson"
+      ],
+      "matches": {
+        "length": [
+          "Amazon River"
+        ]
+      },
+      "geometry": "geographic route diagram",
+      "volume_semantics": "not a volume measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 6400,
+        "pitch": 55,
+        "layout_width_factor": 1.08,
+        "focus_scale_factor": 1.1
+      },
+      "note": "A geographic Amazon-system diagram from Natural Earth centerlines and Mapzen elevation, not a full headwater-to-mouth survey. The highlighted 3,053 km cartographic reach runs from the Ucayali/Maranon confluence to an endpoint inland near the Xingu confluence region: it does not reach the Atlantic. Muted tributaries are geographic context, not part of that route. Unrepresented reaches are not joined. Heights are exaggerated 16 times; colors and river widths are illustrative. The separate approximate 6,400 km ruler follows NASA/ESA's common full-river estimate; FAO reports about 6,300-6,437 km under different source definitions. No river geometry is stretched to the total. Natural Earth cautions about imperfect basin alignments. This is a regional locator, not navigation or a measured river volume.",
+      "processing": {
+        "script": "scripts/build_route_models.py",
+        "source_geometry": "sources/routes/amazon-river-geography.geojson",
+        "land_source": "content/visualizations/land.geojson",
+        "land_sha256": "c53608b7a6865624f439579927e3457e4a498c10da2c4948bc92cd7cd41c454c",
+        "terrain_texture": "elevation tint; not aerial imagery",
+        "source_geometry_sha256": "d8b779e1855851b743a086ad6e7d8faec3ebdc5668dc4c0621be5f6a8d0a2df5",
+        "geographic_frame": "spherical ECEF/local tangent, mean Earth radius 6371.0088 km",
+        "model_unit": "km",
+        "route_rescaled": false,
+        "mapped_segment_sum_km": 45903.13633440386,
+        "mapped_path_count": 71,
+        "total_reference_km": 6400,
+        "vertical_exaggeration": 16,
+        "terrain_tiles": [
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/8/15.png",
+            "sha256": "f311e7a651cf0cb60e240074d5264d20a314317b8073b8f1c80b21130ec67de5"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/9/15.png",
+            "sha256": "2c5302926888ce50f8cf812bad9d2f8f1379a476efcf89c40d135a33ff7c2d98"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/10/15.png",
+            "sha256": "de211673bf78bce4d10d42c69d8d5a626484547b8f9791fbc82a36387f13e816"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/11/15.png",
+            "sha256": "583718cc155d56647b333f449dc58363b2943e6a29fe450097c8d963e97ab08e"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/8/16.png",
+            "sha256": "503cce260e1c792a4f1e401d873020543bf7e85e56f0188146e28ce10f638c66"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/9/16.png",
+            "sha256": "17d068dda3f88f485b08ec2d0c17525352c000c049a4d85e1c23eb48d14cdf87"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/10/16.png",
+            "sha256": "9013d4bd04ba2110ceea6e459f491396ee7799869629287433d04d6ee6480257"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/11/16.png",
+            "sha256": "536dce1af9cfd09cca5706cc649c2ca15450c072952ac4fcf110139abb3e376e"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/8/17.png",
+            "sha256": "cc4a249f0a4c27389b7dcec7d006e0e548e03b5ac447a65dfb37a3f7ca7e7cd7"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/9/17.png",
+            "sha256": "6a055942949c7557cac0dd9439280767bccfde580344c76990c5055d428dc7d4"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/10/17.png",
+            "sha256": "35938ae6b0eefbf60ff5be34b70aad4fde6e6f8c8de5ed9f10daffd230e4a3cf"
+          },
+          {
+            "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/5/11/17.png",
+            "sha256": "4eb5d124b6de41c23b921b0b3e7da3b336b8618a1e8720a9e0a74d1b531589a8"
+          }
+        ]
+      },
+      "src": "content/visualizations/models/amazon-river-geography.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 881444,
+      "sha256": "e0154765b5f7f3bb5cac28463f0e101ebac0ce0626bdb23c982d90ab1d8176dd",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 8,
+      "triangle_count": 21062,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "sloan-great-wall-sdss-window",
+      "source": "https://www.sdss4.org/dr17/",
+      "link_label": "SDSS catalog source",
+      "representation": "catalog_diagram",
+      "volume_semantics": "not_a_volume_measurement",
+      "basis_url": "https://arxiv.org/html/astro-ph/0310571v2",
+      "basis_label": "Published SDSS slice and 450 Mpc comoving wall-length estimate",
+      "selection_url": "https://arxiv.org/html/astro-ph/0310571v2",
+      "author": "Sloan Digital Sky Survey Collaboration; diagram by Universe Scales",
+      "license": "SDSS public-release catalog data: public domain; authored diagram code: CC-BY-4.0",
+      "license_url": "https://www.sdss.org/collaboration/image-use-policy/",
+      "matches": {
+        "length": [
+          "Sloan Great Wall"
+        ]
+      },
+      "geometry": "catalog-position survey-window diagram",
+      "presentation": {
+        "reference_size": 450.0,
+        "pre_rotation": {
+          "y": 90
+        },
+        "pitch": 65,
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.05
+      },
+      "note": "A catalog selection window based on the equatorial Sloan slice and 215-370 Mpc comoving interval in Gott et al.; points are not individually certified Sloan Great Wall members and the wireframe is not the wall boundary. Gott et al. report 450 Mpc comoving (419 Mpc at the observed epoch), about 1.37 billion light-years; 450 Mpc is not 450 million light-years. Coordinates are SDSS DR17 galaxy sky positions and spectroscopic redshifts. Distances are inferred from redshift in flat LCDM (H0=71 km/s/Mpc, Omega_m=0.27, Omega_Lambda=0.73); peculiar velocities, especially for Virgo, are not corrected. The cloud is only translated to its selection-window center; catalog positions retain their mutual comoving separations. Galaxy markers are enlarged point symbols, not galaxy diameters. The ruler is a separate approximate catalog quantity, not a fit to the sample's bounding box.",
+      "processing": {
+        "script": "scripts/build_large_scale_catalog_models.py",
+        "source_catalog": "content/visualizations/models/sources/catalogs/sdss-dr17-sloan-window.csv",
+        "source_catalog_sha256": "a57aa78e16f4abc628527209521118077d712ab8612171b929bb26acf5595ba6",
+        "catalog_query_endpoint": "https://skyserver.sdss.org/dr17/SkyServerWS/SearchTools/SqlSearch",
+        "catalog_release": "SDSS DR17 SpecObj",
+        "sql_selection": "select ra,dec, case when survey in ('boss','eboss') then z_noqso else z end as z, case when survey in ('boss','eboss') then class_noqso else class end as class, case when survey in ('boss','eboss') then zwarning_noqso else zwarning end as zwarning, specObjID from SpecObj where sciencePrimary=1 and (case when survey in ('boss','eboss') then class_noqso else class end)='GALAXY' and (case when survey in ('boss','eboss') then zwarning_noqso else zwarning end)=0 and (case when survey in ('boss','eboss') then z_noqso else z end) between 0.051461727 and 0.089275896 and dec between -2.000000 and 2.000000 and ra between 130.500000 and 210.000000",
+        "selection_rows": 7998,
+        "displayed_rows": 7998,
+        "coordinate_frame": "equatorial J2000 to comoving Cartesian; local translation only",
+        "distance_model": {
+          "H0_km_s_Mpc": 71.0,
+          "Omega_m": 0.27,
+          "Omega_lambda": 0.73,
+          "distance": "integral of dz/E(z), flat LCDM"
+        },
+        "window_extent_mpc_xyz": [
+          230.2263641357422,
+          25.82562828063965,
+          466.35020446777344
+        ],
+        "reference_size_model_units": 450.0,
+        "window_center_comoving_distance_mpc": 292.5,
+        "catalog_value_m": 1.388554911671115e+25,
+        "catalog_value_definition": "approximate literature characteristic span; catalog coordinates are authored in native Mpc and are not fitted to the selection-window bounds",
+        "source_license_note": "SDSS states public data-release data are public domain; cite the release and relevant science papers.",
+        "max_geometry_bytes": 1500000
+      },
+      "src": "content/visualizations/models/sloan-great-wall-sdss-window.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 199608,
+      "sha256": "1bb07715c883de70de5e574fa816527aba4ce6cd295dc2fffdcbcdbb55bd5dd3",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0,
+      "mesh_count": 2,
+      "external_resources": [],
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "closed_volume_checked": false
+    },
+    {
+      "id": "virgo-supercluster-sdss-window",
+      "source": "https://www.sdss4.org/dr17/",
+      "link_label": "SDSS catalog source",
+      "representation": "catalog_diagram",
+      "volume_semantics": "not_a_volume_measurement",
+      "basis_url": "https://doi.org/10.1086/159999",
+      "basis_label": "Local Supercluster morphology",
+      "selection_url": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html",
+      "author": "Sloan Digital Sky Survey Collaboration; diagram by Universe Scales",
+      "license": "SDSS public-release catalog data: public domain; authored diagram code: CC-BY-4.0",
+      "license_url": "https://www.sdss.org/collaboration/image-use-policy/",
+      "matches": {
+        "length": [
+          "Virgo Supercluster"
+        ]
+      },
+      "geometry": "catalog-position survey-window diagram",
+      "presentation": {
+        "reference_size": 30.657772078144,
+        "pitch": 20,
+        "yaw": 10,
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.05
+      },
+      "note": "A redshift-space window through the SDSS footprint around the Virgo direction, not a Virgo/Local Supercluster membership catalog. Tully describes the Local Supercluster as an irregular combination of the Virgo core, a flattened disk and discrete halo clouds; no hard enclosing surface is asserted. NASA describes the Local Supercluster as roughly 100 million light-years across; this is an approximate characteristic span, not a measured hard edge. Coordinates are SDSS DR17 galaxy sky positions and spectroscopic redshifts. Distances are inferred from redshift in flat LCDM (H0=71 km/s/Mpc, Omega_m=0.27, Omega_Lambda=0.73); peculiar velocities, especially for Virgo, are not corrected. The cloud is only translated to its selection-window center; catalog positions retain their mutual comoving separations. Galaxy markers are enlarged point symbols, not galaxy diameters. The ruler is a separate approximate catalog quantity, not a fit to the sample's bounding box.",
+      "processing": {
+        "script": "scripts/build_large_scale_catalog_models.py",
+        "source_catalog": "content/visualizations/models/sources/catalogs/sdss-dr17-virgo-window.csv",
+        "source_catalog_sha256": "f7bd7fe89a03f3d016f89942109d2ed83d93cb65f06a46fcb745f423230d0e76",
+        "catalog_query_endpoint": "https://skyserver.sdss.org/dr17/SkyServerWS/SearchTools/SqlSearch",
+        "catalog_release": "SDSS DR17 SpecObj",
+        "sql_selection": "select ra,dec, case when survey in ('boss','eboss') then z_noqso else z end as z, case when survey in ('boss','eboss') then class_noqso else class end as class, case when survey in ('boss','eboss') then zwarning_noqso else zwarning end as zwarning, specObjID from SpecObj where sciencePrimary=1 and (case when survey in ('boss','eboss') then class_noqso else class end)='GALAXY' and (case when survey in ('boss','eboss') then zwarning_noqso else zwarning end)=0 and (case when survey in ('boss','eboss') then z_noqso else z end) between 0.000000000 and 0.008000000 and dec between -5.000000 and 25.000000 and ra between 175.000000 and 200.000000",
+        "selection_rows": 937,
+        "displayed_rows": 937,
+        "coordinate_frame": "equatorial J2000 to comoving Cartesian; local translation only",
+        "distance_model": {
+          "H0_km_s_Mpc": 71.0,
+          "Omega_m": 0.27,
+          "Omega_lambda": 0.73,
+          "distance": "integral of dz/E(z), flat LCDM"
+        },
+        "window_extent_mpc_xyz": [
+          33.61203321888536,
+          17.191922187805176,
+          14.473783016204834
+        ],
+        "reference_size_model_units": 30.657772078144,
+        "window_center_comoving_distance_mpc": 16.86072023330425,
+        "catalog_value_m": 9.46e+23,
+        "catalog_value_definition": "approximate literature characteristic span; catalog coordinates are authored in native Mpc and are not fitted to the selection-window bounds",
+        "source_license_note": "SDSS states public data-release data are public domain; cite the release and relevant science papers.",
+        "max_geometry_bytes": 1500000
+      },
+      "src": "content/visualizations/models/virgo-supercluster-sdss-window.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 30136,
+      "sha256": "aa0e924a80d8ba53c8831d49af4b12ff60dafe71775ccd7bb2ffa165ba0b6270",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0,
+      "mesh_count": 2,
+      "external_resources": [],
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "closed_volume_checked": false
+    },
+    {
+      "id": "hercules-corona-borealis-grb-catalog",
+      "display_label": "Putative Hercules-Corona Borealis structure",
+      "source": "https://swift.gsfc.nasa.gov/archive/grb_table/fullview/",
+      "basis_url": "https://doi.org/10.1093/mnras/staa2460",
+      "basis_label": "GRB clustering analysis and selection effects",
+      "author": "NASA Swift catalog; angular diagram by Universe Scales",
+      "license": "U.S. public-domain NASA catalog facts; authored diagram CC-BY-4.0",
+      "license_url": "https://catalog.data.gov/dataset/swift-gamma-ray-bursts-catalog",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/grb-structure-model.md"
+      ],
+      "matches": {
+        "length": [
+          "Hercules-Corona Borealis Great Wall"
+        ]
+      },
+      "geometry": "points_and_lines",
+      "representation": "measurement_diagram",
+      "volume_semantics": "not_a_volume_measurement",
+      "presentation": {
+        "reference_size": 1,
+        "layout_width_factor": 1.1,
+        "focus_scale_factor": 1.3
+      },
+      "note": "A dimensionless equal-area sky chart, not a physical model of a galaxy wall. It plots 42 current Swift bursts with explicitly spectroscopic redshifts between 1.6 and 2.1; 16 are amber inside the broad Galactic quadrant shown in the 2020 analysis. That quadrant is not the original 2014 one-eighth-sky concentration or its historical sample. The lower strip maps redshift to comoving distance in flat LCDM (H0=67.4 km/s/Mpc, Omega_m=0.315); its vertical jitter is graphic. Only the separate ruler is calibrated to the approximate, reported 10-billion-light-year extent. Neither chart width nor tracer sample span measures that extent. The literature disputes whether the clustering indicates one physical structure.",
+      "processing": {
+        "script": "scripts/build_grb_structure_model.py",
+        "source_catalog": "content/visualizations/models/sources/catalogs/swift-grb-full-2026-10-01.tsv",
+        "source_catalog_sha256": "d6a29373bc808f5984653db1159bf8f1af27b5c93430549ce905799ae446bd29",
+        "redshift_range": [
+          1.6,
+          2.1
+        ],
+        "selection": "explicit absorption/emission/spectroscopic redshift; UVOT, then XRT, then BAT position",
+        "displayed_rows": 42,
+        "broad_2020_guide_rows": 16,
+        "operations": [
+          "Project Galactic directions with equal-area Mollweide map",
+          "Keep dimensionless chart independent of calibrated claimed-extent ruler",
+          "No wall surface or invented galaxy population"
+        ]
+      },
+      "src": "content/visualizations/models/hercules-corona-borealis-grb-catalog.glb",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 28608,
+      "sha256": "62f42370d956dc12a5406c2df14075105944906e1df92b53b9f02c15305e570e",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

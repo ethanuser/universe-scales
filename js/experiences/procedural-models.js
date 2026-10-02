@@ -3,12 +3,15 @@
 // and also works under Node for tests.
 import * as THREE from '../vendor/three/three.module.min.js';
 import { atomicModelMetadata, atomicScenes, nuclearModelMetadata } from './atomic-models.js?v=4affabd60c';
-import { cosmicModelMetadata, cosmicScenes } from './cosmic-models.js?v=19b9508086';
-import { waveModelMetadata, waveScenes } from './wave-models.js?v=20a2708008';
+import { cosmicModelMetadata, cosmicScenes } from './cosmic-models.js?v=bd847e9b00';
+import { waveModelMetadata, waveScenes } from './wave-models.js?v=d9360c0030';
 
-import { SCREEN_LINE_PX, labelNode as anchor, screenLine } from './model-overlay-nodes.js';
-import { footballFieldRenderScene } from './football-model.js';
-import { organelleModelMetadata, organelleScenes } from './organelle-models.js';
+import { SCREEN_LINE_PX, labelNode as anchor, screenLine } from './model-overlay-nodes.js?v=26a046c0b3';
+import { footballFieldRenderScene } from './football-model.js?v=301b45d44c';
+import { organelleModelMetadata, organelleScenes } from './organelle-models.js?v=1549ad7f4f';
+import { nearbySpaceModelMetadata, cosmicScenes as nearbySpaceScenes } from './nearby-space-models.js?v=f6aa2deeab';
+import { outerSolarModelMetadata, outerSolarScenes } from './outer-solar-models.js?v=12c9f173a0';
+import { particleScaleMetadata, particleScaleScenes } from './particle-scale-models.js?v=0e5fe37846';
 export { SCREEN_LINE_PX, screenLine };
 
 // Distance diagrams (Earth-Moon, AU) get a U-shaped bracket below the two
@@ -48,6 +51,9 @@ export const proceduralLength = {
     ...atomicModelMetadata,
     ...nuclearModelMetadata,
     ...cosmicModelMetadata,
+    ...nearbySpaceModelMetadata,
+    ...outerSolarModelMetadata,
+    ...particleScaleMetadata,
     ...organelleModelMetadata,
     ...waveModelMetadata,
     'Water Molecule': { id: 'nist-water-molecule', procedural: 'molecule', molecule: 'water',
@@ -64,9 +70,9 @@ export const proceduralLength = {
     'Human Hair': { id: 'hair-fiber', procedural: 'hair-fiber', geometry: 'mesh',
         presentation: { measure_axis: 'x', layout_width_factor: 1.1, focus_scale_factor: 2.1,
             display_extent_factor: 2 },
-        basis_url: 'https://wellcomecollection.org/works/wxgqyf66',
-        basis_label: 'Cuticle reference: Wellcome Collection',
-        note: 'A scalp hair shaft modeled on electron micrographs: overlapping cuticle scales about 8 micrometers tall, with irregular free edges pointing toward the tip, around a slightly oval shaft. Its diameter is calibrated to the listed 100 micrometers; the shaft is cropped, and its color and luster are those of medium-brown hair rather than a false-colored micrograph.' },
+        basis_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4663634/',
+        basis_label: 'Hair cuticle structure: sub-micron X-ray and electron microscopy',
+        note: 'An illustrative, cropped scalp-hair shaft, not a scan of one specimen. Its 100-micrometer width is calibrated to the dataset. Overlapping cuticle edges are spaced about 5-10 micrometers apart, with sub-micrometer relief consistent with approximately 0.5-micrometer cuticle cells. Slight ovality, brown pigment and a longitudinal keratin sheen are illustrative. Both cut ends are closed; no internal medulla is inferred.' },
     'Football Field': { id: 'regulation-football-field', procedural: 'regulation-football-field',
         geometry: 'mesh', presentation: { reference_size: 100, pitch: 34, yaw: -6,
             layout_width_factor: 1.4, focus_scale_factor: 1.45, display_extent_factor: 1.25 },
@@ -112,13 +118,13 @@ function seeded(seed) {
     return () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) + 0.5) / 4294967296;
 }
 
-// A hair shaft one unit across (x), cropped to 2.4 units tall. Cuticle scales
+// A hair shaft one unit across (x), cropped to 1.35 units tall. Cuticle scales
 // overlap like roof tiles: each rises gently toward its free upper edge, then
 // the surface steps back down to the next scale. Edges wander around the shaft.
 function hairFiber() {
     const random = seeded(0x5eed1234);
-    const radius = 0.5, length = 1.4, radial = 96, rows = 160;
-    const step = 0.028, oval = 0.045;
+    const radius = 0.5, length = 1.35, radial = 96, rows = 160;
+    const step = 0.008, oval = 0.045;
     // Scale heights vary (about 5-10 micrometers on a 100 micrometer hair), and
     // each free edge meanders around the shaft with a jagged, torn look.
     const edges = [];
@@ -136,7 +142,7 @@ function hairFiber() {
             waves.reduce((y, [n, a, phase]) => y + a * Math.sin(n * angle + phase), base))));
     });
     const positions = [], colors = [], uvs = [], indices = [];
-    const base = new THREE.Color(0x7a4a2c), shade = new THREE.Color();
+    const base = new THREE.Color(0x4b2e1e), shade = new THREE.Color();
     for (let row = 0; row <= rows; row++) {
         const s = length * row / rows;
         for (let column = 0; column <= radial; column++) {
@@ -150,7 +156,7 @@ function hairFiber() {
             const r = radius * (1 + step * (0.25 + 0.55 * t + 0.35 * lip * lip) + 0.0012 * Math.sin(angle * 41 + s * 7));
             positions.push(r * (1 + oval) * Math.cos(angle), s - length / 2, r * (1 - oval) * Math.sin(angle));
             // The overlapping edge shades the lower part of the next scale.
-            shade.copy(base).multiplyScalar(0.72 + 0.3 * Math.pow(t, 0.45) + 0.05 * Math.sin(s * 3.1 + band));
+            shade.copy(base).multiplyScalar(0.94 + 0.06 * Math.pow(t, 0.45));
             colors.push(shade.r, shade.g, shade.b);
             uvs.push(column / radial, row / rows);
         }
@@ -166,7 +172,8 @@ function hairFiber() {
     geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
     geometry.setIndex(indices);
     geometry.computeVertexNormals();
-    const cuticle = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.4, metalness: 0 });
+    const cuticle = new THREE.MeshPhysicalMaterial({ vertexColors: true, roughness: 0.36,
+        metalness: 0, anisotropy: 0.55, anisotropyRotation: Math.PI / 2 });
     cuticle.userData.environment = 0.55; // keratin has a soft sheen
     const scene = new THREE.Group();
     scene.add(new THREE.Mesh(geometry, cuticle));
@@ -374,6 +381,9 @@ function solarSystem(date = new Date()) {
 export function proceduralScene(kind, entry) {
     if (atomicScenes[kind]) return atomicScenes[kind](entry);
     if (cosmicScenes[kind]) return cosmicScenes[kind](entry);
+    if (nearbySpaceScenes[kind]) return nearbySpaceScenes[kind](entry);
+    if (outerSolarScenes[kind]) return outerSolarScenes[kind](entry);
+    if (particleScaleScenes[kind]) return particleScaleScenes[kind](entry);
     if (organelleScenes[kind]) return organelleScenes[kind](entry);
     if (waveScenes[kind]) return waveScenes[kind](entry);
     if (kind === 'hair-fiber') return hairFiber();

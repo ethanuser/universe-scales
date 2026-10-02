@@ -1,5 +1,5 @@
 import * as THREE from '../vendor/three/three.module.min.js';
-import { labelNode, screenLine } from './model-overlay-nodes.js';
+import { labelNode, screenLine } from './model-overlay-nodes.js?v=26a046c0b3';
 
 export const FOOTBALL_FIELD = Object.freeze({
     playingLength: 100,
@@ -115,10 +115,19 @@ function addGoalpost(scene, end, materials) {
         scene.add(mesh);
         return mesh;
     };
-    const stem = new THREE.Mesh(new THREE.CylinderGeometry(postRadius, postRadius, FOOTBALL_FIELD.crossbarHeight, 10), materials.goalpost);
+    const stemHeight = FOOTBALL_FIELD.crossbarHeight - 0.8;
+    const stem = new THREE.Mesh(new THREE.CylinderGeometry(postRadius, postRadius, stemHeight, 10), materials.goalpost);
     stem.name = `goalpost-stem-${end < 0 ? 'west' : 'east'}`;
-    stem.position.set(x + end, FOOTBALL_FIELD.crossbarHeight / 2, 0);
+    stem.position.set(x + end, stemHeight / 2, 0);
     scene.add(stem);
+    const elbowPath = new THREE.CubicBezierCurve3(
+        new THREE.Vector3(x + end, stemHeight, 0),
+        new THREE.Vector3(x + end, FOOTBALL_FIELD.crossbarHeight, 0),
+        new THREE.Vector3(x + end * 0.6, FOOTBALL_FIELD.crossbarHeight, 0),
+        new THREE.Vector3(x, FOOTBALL_FIELD.crossbarHeight, 0));
+    const elbow = new THREE.Mesh(new THREE.TubeGeometry(elbowPath, 16, postRadius, 10, false), materials.goalpost);
+    elbow.name = `goalpost-elbow-${end < 0 ? 'west' : 'east'}`;
+    scene.add(elbow);
     const crossbar = new THREE.Mesh(new THREE.CylinderGeometry(postRadius, postRadius, gap, 10), materials.goalpost);
     crossbar.name = `goalpost-crossbar-${end < 0 ? 'west' : 'east'}`;
     crossbar.rotation.x = Math.PI / 2;
@@ -132,6 +141,15 @@ function addGoalpost(scene, end, materials) {
     foot.name = `goalpost-foot-${end < 0 ? 'west' : 'east'}`;
     foot.position.set(x + end, 0.11, 0);
     scene.add(foot);
+    // The support is behind the end line: give its foot a closed ground pad
+    // and protective sleeve instead of leaving it suspended outside the turf.
+    addBox(scene, `goalpost-ground-pad-${end < 0 ? 'west' : 'east'}`,
+        [1.25, 0.12, 1.25], [x + end, -0.04, 0], materials.base);
+    const padding = new THREE.Mesh(new THREE.CylinderGeometry(postRadius * 2.2,
+        postRadius * 2.2, 1.8, 16), materials.padding);
+    padding.name = `goalpost-padding-${end < 0 ? 'west' : 'east'}`;
+    padding.position.set(x + end, 0.92, 0);
+    scene.add(padding);
 }
 
 export function footballFieldScene({ postRadius = 1.5 / 36 } = {}) {
@@ -144,6 +162,8 @@ export function footballFieldScene({ postRadius = 1.5 / 36 } = {}) {
         paint: new THREE.MeshBasicMaterial({ color: white, side: THREE.DoubleSide,
             polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }),
         goalpost: new THREE.MeshStandardMaterial({ color: 0xe0a52b, roughness: 0.6, metalness: 0.05 }),
+        padding: new THREE.MeshStandardMaterial({ color: 0x194d48, roughness: 0.92 }),
+        base: new THREE.MeshStandardMaterial({ color: 0x4a504d, roughness: 0.95 }),
         postRadius
     };
 

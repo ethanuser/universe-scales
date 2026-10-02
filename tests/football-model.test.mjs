@@ -90,5 +90,14 @@ test('goalposts align with the end-line plane and NFL crossbar dimensions', () =
         assert.ok(Math.abs((near.position.y + near.geometry.parameters.height / 2) - 15) < 1e-12,
             'uprights extend 35 feet above the 10-foot crossbar');
         assert.ok(mesh(scene, `goalpost-stem-${direction}`).position.x * end > 60);
+        const stem = mesh(scene, `goalpost-stem-${direction}`);
+        const curve = mesh(scene, `goalpost-elbow-${direction}`).geometry.parameters.path;
+        assert.ok(Math.abs(curve.getPoint(0).y - (stem.position.y + stem.geometry.parameters.height / 2)) < 1e-12);
+        assert.ok(curve.getPoint(1).distanceTo(crossbar.position) < 1e-12);
+        const pad = mesh(scene, `goalpost-ground-pad-${direction}`);
+        assert.ok(pad.position.y - pad.geometry.parameters.height / 2 < 0);
+        assert.ok(pad.position.y + pad.geometry.parameters.height / 2 >= 0);
+        assert.equal(pad.position.x, stem.position.x);
+        assert.ok(mesh(scene, `goalpost-padding-${direction}`));
     }
 });

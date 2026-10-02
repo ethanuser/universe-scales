@@ -4,7 +4,7 @@
 // URL parameters: item, view (rest|front|side|top|back), bg (light|dark|sky),
 // zoom, time (freeze animations at seconds), neighbors (1). `window.modelLab`
 // exposes the same controls plus size metrics for scripts/model_lab.cjs.
-import { ModelStage } from './experiences/models.js?v=e1a85cf633';
+import { ModelStage } from './experiences/models.js?v=0940e1d987';
 import * as THREE from './vendor/three/three.module.min.js';
 const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);
@@ -39,7 +39,7 @@ function populate() {
 function showDetail() {
     if (!item || !stage) return;
     const entry = stage.entry(item);
-    $('title').textContent = `${item.name} | ${item.value.toPrecision(3)} m`;
+    $('title').textContent = `${entry?.display_label || item.name} | ${item.value.toPrecision(3)} m`;
     $('note').textContent = entry?.note || 'No registered 3D model. The explorer uses a photograph for this item.';
     $('sources').replaceChildren();
     for (const [label, url] of [['Model source', entry?.source || entry?.source_url || entry?.basis_url], ['Item source', item.source]]) {
@@ -95,7 +95,8 @@ function render(now) {
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('x', draw.x); text.setAttribute('y', 440);
         text.setAttribute('text-anchor', 'middle'); text.setAttribute('class', 'journey-model-label');
-        text.textContent = draw.item.name; context.stage.append(text);
+        text.dataset.labelPriority = draw.item === item ? '200' : '100';
+        text.textContent = stage.entry(draw.item)?.display_label || draw.item.name; context.stage.append(text);
     }
     stage.finish(exponent);
     if (now - lastStatus > 200 || paused) {
@@ -176,6 +177,15 @@ function metrics() {
 window.modelLab = {
     items: () => items.map(current => ({ name: current.name, value: current.value,
         model: stage.entry(current)?.id || null })),
+    catalog: () => items.map(current => {
+        const entry = stage.entry(current);
+        return { name: current.name, value: current.value, observation: current.id,
+            model: entry?.id || null, kind: !entry ? 'photo' : entry.procedural ? 'procedural' : 'glb',
+            representation: entry?.representation || null, note: entry?.note || null,
+            source: entry?.source || entry?.source_url || null, basis: entry?.basis_url || null,
+            license: entry?.license || null, bytes: entry?.bytes || null,
+            valueType: current.value_type, qualifiers: current.qualifiers, qualityFlags: current.quality_flags };
+    }),
     async ready() { await registryReady; },
     // Shows one item and resolves once its model has loaded and rendered.
     async show(name, { view = 'rest', background = 'light', zoom = 1, time = null, neighbors = false, timeout = 20000 } = {}) {

@@ -13,12 +13,17 @@
 //       extent ratio, for a quick visual pass over the whole scale.
 //   node scripts/model_lab.cjs explorer OUT_DIR "Item" [...] [--size 1280x800]
 //       The real explorer, after the camera spring settles on each item.
+//   node scripts/model_lab.cjs coverage [--gap 1] [--json]
+//       Model provenance and largest logarithmic gaps; not a visual approval.
+//   node scripts/model_lab.cjs labels ["Item" ...] [--zooms 0.35,0.6,1,1.5] [--views rest,side]
+//       Check rendered label collisions over zoom/rotation; exits nonzero on overlap or load errors.
 //
 // Needs playwright-core and a Chromium build (see scripts/preview_glb.cjs).
 const fs = require('node:fs');
 const http = require('node:http');
 const path = require('node:path');
 const { loadPlaywright, executablePath } = require('./preview_glb.cjs');
+const { coverageReport } = require('./model_coverage.cjs');
 
 const ROOT = path.resolve(__dirname, '..');
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css',
@@ -81,6 +86,52 @@ const describe = m => `${m.name.padEnd(34)} ${String(m.model || 'photo').padEnd(
         (m.warnings.length ? `  !! ${m.warnings.join('; ')}` : '') : m.model ? 'FAILED TO LOAD' : '');
 
 const commands = {
+    async labels({ positional, options }) {
+        const zooms = String(options.zooms || '0.35,0.6,1,1.5').split(',').map(Number);
+        if (zooms.some(value => !Number.isFinite(value) || value <= 0)) throw new Error('Invalid --zooms');
+        const views = String(options.views || 'rest,side').split(',');
+        await withBrowser(options.size || '1280x800', async (page, base, errors) => {
+            await openLab(page, base);
+            const names = positional.length ? positional : (await page.evaluate(() => window.modelLab.items()))
+                .filter(item => item.model).map(item => item.name);
+            let checked = 0, failures = 0;
+            for (const name of names) for (const view of views) for (const zoom of zooms) {
+                const metrics = await page.evaluate(([name, view, zoom]) => window.modelLab.show(name, { view, zoom }),
+                    [name, view, zoom]);
+                if (!metrics.loaded) { failures++; console.log(`Not loaded: ${name}`); continue; }
+                const collisions = await page.evaluate(() => {
+                    const labels = [...document.querySelectorAll('#stage-frame .journey-object-label, #stage-frame .journey-model-label')]
+                        .filter(node => getComputedStyle(node).visibility !== 'hidden' && Number(getComputedStyle(node).opacity) > 0.1)
+                        .map(node => ({ text: node.textContent, ...Object.fromEntries(
+                            ['left','right','top','bottom'].map(key => [key, node.getBoundingClientRect()[key]])) }));
+                    return labels.flatMap((a, i) => labels.slice(i + 1).filter(b =>
+                        a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top)
+                        .map(b => [a.text, b.text]));
+                });
+                checked++;
+                if (collisions.length) { failures++; console.log(JSON.stringify({ name, view, zoom, collisions })); }
+            }
+            console.log(`${checked} rendered label checks; ${failures} failures; ${errors.length} page errors.`);
+            if (errors.length) console.log([...new Set(errors)].join('\n'));
+            if (failures || errors.length) process.exitCode = 1;
+        });
+    },
+    async coverage({ options }) {
+        const minimumGap = Number(options.gap ?? 1);
+        if (!Number.isFinite(minimumGap) || minimumGap < 0) throw new Error('--gap must be a nonnegative number of decades');
+        await withBrowser('1000x700', async (page, base, errors) => {
+            await openLab(page, base);
+            const report = coverageReport(await page.evaluate(() => window.modelLab.catalog()), minimumGap);
+            report.errors = [...new Set(errors)];
+            if (options.json) { console.log(JSON.stringify(report, null, 2)); return; }
+            console.log(`${report.modeled}/${report.total} Length items modeled; ${report.photoOnly.length} photo-only.`);
+            for (const key of ['photoOnly', 'missingModelNotes', 'missingModelReferences', 'unclassifiedRepresentations'])
+                console.log(`${key}: ${report[key].join(', ') || 'none'}`);
+            console.log(`\nGaps of at least ${minimumGap} decades (largest first):`);
+            for (const gap of report.gaps) console.log(`  ${gap.decades.toFixed(2)} decades: ${gap.lower} -> ${gap.upper}`);
+            if (report.errors.length) console.log(`Page errors:\n  ${report.errors.join('\n  ')}`);
+        });
+    },
     async audit({ options }) {
         await withBrowser('1000x700', async (page, base, errors) => {
             await openLab(page, base);

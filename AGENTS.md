@@ -32,6 +32,8 @@ Bump the `?v=` query of any JS/CSS file you change in `index.html`; browsers cac
 | 3D models (loading, calibration, rotation, picking, overlays) | `js/experiences/models.js` |
 | Procedural models (molecules, hair, solar system, field), distance bracket | `js/experiences/procedural-models.js` |
 | Orbital atom and animated electromagnetic-wave models | `js/experiences/atomic-models.js`, `wave-models.js` |
+| Particle-scale measurement diagrams (not hard particle boundaries) | `js/experiences/particle-scale-models.js` |
+| Catalog-positioned nearby-space diagrams | `js/experiences/nearby-space-models.js` |
 | Other explorers | `motion.js`, `perception.js`, `audio.js` (+ `*-math.js`) |
 | Model registry (runtime + provenance) | `content/visualizations/models.json` |
 | Model files and licenses | `content/visualizations/models/` (see its README) |
@@ -58,6 +60,8 @@ equals the item's value:
   springs back. The lowest point sits on the ground line.
 - `layout_width_factor`, `focus_scale_factor`, `display_extent_factor` adjust spacing and framing
   for models much wider than their calibrated length.
+- `display_label` optionally qualifies an explorer/review heading without renaming the
+  dataset item or breaking exact-name matches and deep links (e.g. a putative structure).
 - Material overrides: `tint`, `color_gain`, `roughness`, `metalness`, `opaque`, `double_sided`,
   `emissive` (+ `emissive_intensity`), and `environment` (reflection strength from a studio
   room map; metals look black without it).
@@ -69,7 +73,9 @@ Overlay conventions (set on any node's `userData`, including glTF `extras`):
 `screenLine: {axis, length}` draws a box at a constant 1.4 px width; `label` (+ `labelClass`)
 draws upright SVG text at the node; `outline` + `sphere` circle a unit-sphere node with a thin
 line (so sub-pixel planets stay findable); `pointSize: {max, perPixel}` scales a point cloud
-with the drawn model. See the header of `procedural-models.js`.
+with the drawn model. `softPoints: true` opts into a shared, locally generated soft
+circular sprite (`model-points.js`); hover overlays preserve it. Other clouds and
+their shared materials are unchanged. See the header of `procedural-models.js`.
 
 The model's projected convex hull (including the bracket) is its hover/drag/click area.
 
@@ -80,6 +86,7 @@ headless Chromium, so no dev server or visible browser is needed:
 
 ```sh
 node scripts/model_lab.cjs audit                       # every Length item: size vs listed value, load, triangles
+node scripts/model_lab.cjs coverage --gap 1 --json      # provenance, photo fallbacks and logarithmic gaps
 node scripts/model_lab.cjs shot /tmp/lab "Carbon Atom" --views rest,front,side --bg dark --time 1.5
 node scripts/model_lab.cjs sheet /tmp/lab/all.png      # contact sheet of all models, red = flagged
 node scripts/model_lab.cjs explorer /tmp/lab "Solar System"   # the real explorer after the camera settles
@@ -93,9 +100,17 @@ and break framing while scrolling. Where a quantity is a radius (e.g. an atom's 
 list the diameter the model shows. `model-review.html` is the same view for humans
 (`?item=&view=&bg=&time=&zoom=`), and `window.modelLab` is its automation API.
 
+`coverage` uses the production registry but does not load every mesh or certify
+accuracy. It lists absent models, missing references/notes, unclassified
+`representation` fields, large assets and adjacent gaps in decades. Use it to
+plan new anchors, then run `audit` and inspect actual explorer screenshots.
+A survey-window diagram is not a member catalog or a measured structure boundary;
+a measurement diagram must not be labeled as a literal particle surface.
+
 After editing JS/CSS run `python3 scripts/bump_versions.py`; it sets every `?v=` to the
 file's content hash (HTML and nested module imports), so nothing is served stale and no
-module loads twice under two version strings. `--check` fails if any are stale.
+module loads twice under two version strings. It also adds missing hashes to local
+first-party ES imports; vendored imports stay unchanged. `--check` fails if any are stale.
 
 ## Adding or replacing a model (proven workflow)
 
@@ -207,12 +222,183 @@ node scripts/model_lab.cjs audit
   `build_panama_canal_block.py`. Skipped as inaccurate at the size rule: Great Wall (route ~3,000 km of
   21,196), Amazon, Marathon.
 
-## Open work (as of 2026-09-28)
+## 2026-09-30 (Codex)
+
+- Goalposts now have connecting gooseneck elbows, closed ground pads and protective
+  sleeves; the old support stopped short of the crossbar and stood outside the turf.
+- Added Proxima's distance diagram (Gaia DR3 distance quoted by Lauer et al. 2025)
+  and a 16-member Local Group scene from McConnachie's catalog. Galaxy glyphs are
+  enlarged eightfold, not physically sized. Reviewed the Jan-2021 FITS subset and
+  corrected WLM/NGC 6822 distances and Leo I's coordinates. References and assumptions:
+  `content/visualizations/models/sources/nearby-space-models.md`.
+- Added a 672 kB Orion GLB sampled from the credited NASA/ESA Hubble field. The image
+  stays 13 ly across within the listed ~25 ly region; a lower bracket indicates that
+  full span. Only sky-plane color/position is observed; the shallow blister depth
+  is authored from O'Dell et al. 2009, not NASA's inaccessible fly-through geometry.
+  Rebuild with `scripts/build_orion_model.py`; provenance is `sources/orion-model.md`.
+- Fixed optional callout offsets/leader lines keep Local Group labels from collapsing
+  over the central galaxies. `labelAxis: {axis, length, minPixelLength}` hides depth
+  annotations until their projected span is legible; Orion uses a side-on depth cue.
+- GLB packing now handles valid nonindexed point/line primitives. Model source and
+  separate scientific-basis links both appear in explorer details when provided.
+- Visually inspected rest/side and actual-explorer views with the model lab. All
+  157 Node tests and 21 Python tests passed; model asset/hash verification passed.
+  No Length data/plaque text was changed. The audit has no page/load errors; its only
+  flagged resting poses remain the documented DNA/virus size exceptions.
+- Luna critic final execution/accuracy scores after three visual refinement passes:
+  Proxima 8/9, Local Group 7/8, Orion 9/8. Local Group's central satellite callouts
+  remain somewhat crowded; inferred nebula depth is explicitly not measured geometry.
+
+## 2026-09-30 next model batch (Codex)
+
+- Added an 810 kB Tarantula point cloud from ESO/R. Fosbury (ST-ECF)'s CC-BY image.
+  The published angular field and distance calibrate a ~951 ly viewing aperture;
+  sky-plane color/position is observed, depth is explicitly authored, not tomography.
+  Rebuild with `scripts/build_tarantula_model.py`; provenance is `sources/tarantula-model.md`.
+- Added AU-coordinate Oort Cloud and heliosphere scenes in `outer-solar-models.js`.
+  Oort shows a flattened inner component and a diffuse outer sample, not cataloged
+  comets. Heliosphere is a nose-side cutaway with a radial ruler and upwind arrow;
+  no downstream boundary or physical tail length is claimed. References/assumptions:
+  `content/visualizations/models/sources/outer-solar-models.md`.
+- Corrected two mismatched Length definitions and values: Oort now explicitly uses
+  the representative upper-range 200,000 AU diameter (2.991957414e16 m); heliosphere
+  uses a 240 AU nose-region proxy (3.5903488968e13 m), not a full-tail extent.
+  Existing plaque prose was retained except the necessary definition fixes.
+  `scripts.dataset.rebuild_dimension length` regenerated Length only.
+- Diffuse clouds opt into a generated 32px soft point sprite (`model-points.js`).
+  Shader/texture behavior is local and tested; the rest of the model materials remain unchanged.
+- Visually reviewed rest/side and actual-explorer screenshots. The whole-Length
+  audit reports 52/66 modeled, 14 photo-only, no page/load errors. Node tests: 163;
+  Python tests: 24; asset verification: 45 GLBs/53 exact-name registry matches.
+- Researched Cosmicflows/SDSS/Virgo scientific catalogs; no new supercluster data
+  were bundled because usable selection/redistribution rights remain unresolved.
+- Independent Luna critic scores (execution/accuracy): Tarantula 8/8; after a
+  second visual refinement, Oort 9/8 and heliosphere 9/8. All reached the requested
+  8/10 threshold. Ruler-label separation in the heliosphere is optional remaining polish.
+
+## 2026-09-30 Carina and horizon batch (Codex)
+
+- Added Carina as a 735 kB, 10,400-triangle image-derived surface from ESO/J. Emerson/
+  M. Irwin/J. Lewis's CC-BY VISTA field. The 193 by 157 ly image stays calibrated
+  within a 300 ly context bracket. It is explicitly a gently bowed 2.5D sheet,
+  not a reconstructed gas-density volume; a granular point-cloud prototype was
+  replaced after visual review. Rebuild: `scripts/build_carina_model.py`;
+  provenance: `sources/carina-model.md`.
+- Corrected Carina's erroneous 3e20 m span to an approximate 300 ly
+  (2.83821914177424e18 m) from NASA, retaining its plaque except the opening
+  size definition. Only Length outputs were rebuilt.
+- Added a 750 kB, 9,120-triangle Observable Universe cutaway with actual WMAP
+  nine-year ILC sky data. `scripts/build_observable_universe_model.py` validates
+  the original Galactic NESTED FITS, averages 64 child pixels into Nside=64,
+  and samples an embedded equirectangular texture with tested HEALPix mapping.
+  The original 24 MB FITS is a temporary build input, not a hosted asset.
+- The textured 45.6 Gly last-scattering shell and ~46.5 Gly particle-horizon
+  guides retain proportional present-distance radii. The smooth amber-rimmed
+  cone is an authored viewing cut, not a hole or edge in the universe. Polar
+  mesh UVs preserve Galactic directions and unwrap the longitude seam. Reference:
+  `sources/observable-universe-model.md`. The existing diameter is unchanged;
+  qualifiers and the plaque's misleading superluminal-recession explanation
+  were corrected without a wholesale prose rewrite.
+- Visually inspected rest/side and actual-explorer views and iterated with Luna
+  critics: Carina execution/accuracy 8/8 after three passes; horizon 8/9 after
+  two. Audit: 54/66 modeled, 12 photo-only; no page/load errors. All 163 Node
+  and 34 Python tests pass. Asset verification: 47 GLBs/55 exact-name matches;
+  content-hash version check passes. Baseline SQLite ResourceWarnings remain.
+- A CC-BY scientist-authored CF2 nearby-Universe mesh was staged outside the repo,
+  but not imported: its +/-80 Mpc/h density field is not Laniakea's boundary.
+  No verified CC-BY/CC0 geometry for the original 2014 basin was found. Do not
+  calibrate the wider field as a Laniakea model or invent a boundary around it.
+
+## Open work (as of 2026-09-30, after the horizon batch)
 
 - Intentional size exceptions flagged by `model_lab audit`: DNA (one helical turn is 1.7x its
   2 nm width) and the virus (spikes beyond the 91 nm envelope).
-- Owner decisions pending: Heliosphere's listed 2.4e14 m (about 1,600 au) versus a ~120 au
-  heliopause; whether to import the CC BY-NC-SA sand grain the owner originally chose.
-- Photo-only Length items that could still get models: Proton, Electron, Oort Cloud,
-  Heliosphere, Proxima Centauri, nebulae, the Local Group and larger structures.
+- The CC BY-NC-SA sand grain was declined; keep the existing CC-BY grain.
+- Photo-only Length items include large-scale structures, route-length geography
+  and subatomic cases without well-defined hard sizes. Carina and Observable
+  Universe now have explicitly diagrammatic, calibrated assets.
+- Cosmicflows-4 has a downloadable Laniakea watershed grid, but its data-reuse terms
+  need confirmation. Virgo/Sloan need a documented member selection and distance basis.
 - Investigate the full-build dataset drift (use `scripts.dataset.rebuild_dimension` meanwhile).
+
+## 2026-09-30 route batch (Codex)
+
+- Added three rotatable geographic GLBs with `scripts/build_route_models.py`:
+  Boston Marathon course/terrain (638 kB), partial Amazon mainstem/basin (880 kB),
+  and the mapped Great Wall network on a true-sized Earth (1.15 MB). Each is
+  below 1.5 MB and 34k triangles, embeds its textures, and has no decoder/runtime
+  source-data dependency. Inspect with `model_lab.cjs shot` and `explorer`.
+- Route/inventory length is not geographic extent. No coordinate geometry is
+  stretched to the catalog value: each has a separate straightened total-length
+  ruler. The Amazon's selected 3,053 km reach ends inland, not at the Atlantic;
+  tributaries are separate context. The Great Wall data is incomplete community
+  mapping, not the official heritage inventory or one continuous wall.
+- Boston's OSM relation has one connected 265-way start-to-finish path. Its
+  42.417 km road-centerline sum is not the certified 42.195 km shortest running
+  line. Drape on the rendered terrain triangles, not finer DEM samples that can
+  be buried by the coarse mesh. Relief is 12x and bare-earth, not road grade.
+- Minimum Length definition/source fixes only: Amazon now uses the NASA/ESA
+  approximate 6,400 km estimate; Great Wall uses the reported 21,196.18 km
+  combined walls-and-trenches survey total, explicitly not meter-level precision.
+  Marathon remains 42,195 m. Only Length outputs were rebuilt.
+- Geometry/source/license/rebuild details: `sources/route-models.md`. Compact
+  GeoJSON inputs live under `content/visualizations/models/sources/routes/`.
+  OSM-derived inputs retain ODbL and their machine-readable derivative databases;
+  these are separate from the project's CC0 quantitative facts. Natural Earth
+  land is the existing `content/visualizations/land.geojson`, public domain.
+- Three visual refinement passes and separate Luna critics: all final execution
+  and accuracy scores 8/10. Remaining limitation: exactly edge-on terrain/rulers
+  compress naturally; Amazon's inland-end label is culled in the smaller scrolling
+  view but remains visible in the isolated/rest review and stated in the note.
+- Verification: 163 Node tests, 42 Python tests, 50 self-contained GLBs/58 exact-name
+  matches. Length audit: 57/66 modeled, no page/load errors; only the previously
+  documented DNA/virus resting-size exceptions. Content-hash check passes.
+
+## 2026-10-01 remaining Length batch (Codex)
+
+- Added five explicit particle-scale measurement diagrams in
+  `particle-scale-models.js`: derived Planck length, HERA effective quark-radius
+  upper limit, proton rms charge radius, classical electron radius, and a 1 MeV
+  neutrino wavelength. They do not claim solid particle boundaries. The proton
+  profile is schematic and continues beyond its rms marker. Definitions and
+  primary sources: `sources/particle-scale-models.md`.
+- Added SDSS DR17 catalog windows for Virgo (937 galaxies, 30 kB) and Sloan
+  (7,998 galaxies, 200 kB). Native coordinates stay in comoving Mpc; calibration
+  uses the item's reference length, not a stretched bounding box. The cuts are
+  survey windows, not structure/member boundaries, explicitly labeled on stage.
+  BOSS/eBOSS use the recommended NOQSO classification/redshift/warning fields;
+  legacy spectra use their regular fields. Source CSVs and exact queries are
+  retained. Rebuild offline with `build_large_scale_catalog_models.py
+  --catalog-dir content/visualizations/models/sources/catalogs --output-dir /tmp/x`.
+- Added a 40 kB Hercules-Corona Borealis evidence diagram: actual Swift
+  spectroscopic GRB directions (42 at z=1.6-2.1), a separate comoving-distance
+  inset, and a calibrated reported-extent ruler. It is not invented wall geometry.
+  The 16 amber events are inside the broad 2020 sky guide, not the original
+  2014 one-eighth-sky membership. The explorer title says "Putative ... structure".
+  The immutable October 1 catalog snapshot and extraction/bias qualifications
+  are in `sources/catalogs/` and `sources/grb-structure-model.md`.
+- Corrected mismatched Length definitions/values for Virgo, Laniakea, Sloan,
+  the putative GRB structure and particle scales; retained existing plaque prose
+  except fact/definition corrections. Renamed the misleading intrinsic
+  "Neutrino" size to "1 MeV Neutrino Wavelength" and copied its original/thumbnail
+  to the new slug. Rebuilt Length only, not unrelated dimensions.
+- Laniakea remains photo-only. `build_laniakea_model.py` can stage the credited
+  CC-BY CF4 figure as a reference preview, but its metadata is intentionally
+  non-importable. A flat article figure is not a calibrated 3D basin; the public
+  grid's redistribution terms remain unverified. See `sources/laniakea-model.md`.
+- Added `model_lab.cjs coverage --gap 1 --json` and `model_coverage.cjs` for
+  model/provenance inventory and largest adjacent log gaps. `window.modelLab.catalog()`
+  exposes the same inventory. This supports planning 200-300 meaningful anchors,
+  not scientific approval or artificial gap-filling. Review source rights,
+  quantity definitions, calibration, rest/rotated views and actual explorer views
+  before importing; popularity/votes cannot replace those checks.
+- Independent Luna critics after two refinement passes: all five particle
+  diagrams execution/accuracy 8/9, Virgo and Sloan 8/8, GRB diagram 8/9.
+  Own visual checks used isolated/rest/side and settled production explorers.
+  Corrected a caption-transform bug: Python uses Three.js intrinsic XYZ ordering
+  and maps pitch/yaw/roll explicitly; regression-tested with mixed-axis rotation.
+- Verification: all 170 Node and 65 Python tests pass; 53 self-contained GLBs
+  and 61 exact-name registry matches verify. Whole-Length audit: 65/66 visualized,
+  only Laniakea photo-only, no load/page errors. Only the documented DNA/virus
+  size exceptions remain flagged. Content hashes and diff whitespace pass.
+  Pre-existing SQLite ResourceWarnings and full-dataset torque drift remain.

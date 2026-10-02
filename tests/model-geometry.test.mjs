@@ -7,6 +7,12 @@ test('hair has outward-facing skin and closed, oppositely oriented cuts', () => 
     const scene = proceduralScene('hair-fiber');
     const skin = scene.children[0], positions = skin.geometry.getAttribute('position');
     const normals = skin.geometry.getAttribute('normal');
+    assert.ok(skin.material.isMeshPhysicalMaterial);
+    assert.equal(skin.material.transparent, false);
+    assert.ok(skin.material.anisotropy > 0, 'hair sheen should follow the shaft');
+    const colors = skin.geometry.getAttribute('color');
+    const red = Array.from({ length: colors.count }, (_, index) => colors.getX(index));
+    assert.ok(Math.max(...red) / Math.min(...red) < 1.08, 'cuticles should not look like painted stripes');
     skin.geometry.computeBoundingBox();
     const half = skin.geometry.boundingBox.max.y;
     for (let index = 0; index < positions.count; index += 97)
@@ -56,4 +62,16 @@ test('solar system has planet labels and a bounded main asteroid belt', () => {
         const radius = Math.hypot(belt.getX(index), belt.getZ(index));
         assert.ok(radius >= 2.1 && radius <= 3.3);
     }
+});
+
+test('fixed callouts keep their offset and follow their anchor without reflow', () => {
+    const viewport = { left: 0, right: 1000, top: 0, bottom: 460 };
+    const labels = [{ text: 'Milky Way', x: 500, y: 250, callout: { x: -70, y: -20 } },
+        { text: 'LMC', x: 500, y: 250, callout: { x: -100, y: 40 } }];
+    const placed = placeLabels(labels, viewport);
+    assert.ok(placed.every(label => label.visible));
+    assert.equal(placed[0].labelX, 430);
+    assert.equal(placed[0].labelY, 230);
+    const moved = placeLabels(labels.map(label => ({ ...label, x: label.x + 5 })), viewport);
+    moved.forEach((label, index) => assert.equal(label.labelX - placed[index].labelX, 5));
 });

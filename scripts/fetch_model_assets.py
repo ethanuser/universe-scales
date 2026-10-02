@@ -288,7 +288,8 @@ def pack_glb(document, binary):
         for primitive in mesh["primitives"]:
             for index in primitive["attributes"].values():
                 document["bufferViews"][document["accessors"][index]["bufferView"]]["target"] = 34962
-            document["bufferViews"][document["accessors"][primitive["indices"]]["bufferView"]]["target"] = 34963
+            if "indices" in primitive:
+                document["bufferViews"][document["accessors"][primitive["indices"]]["bufferView"]]["target"] = 34963
     document["buffers"] = [{"byteLength": len(binary)}]
     text = json.dumps(document, separators=(",", ":"), ensure_ascii=True).encode()
     text += b" " * (-len(text) % 4)

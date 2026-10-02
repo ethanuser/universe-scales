@@ -1,6 +1,6 @@
 // Animated schematic plane waves for representative electromagnetic wavelengths.
 import * as THREE from '../vendor/three/three.module.min.js';
-import { runAnimation } from './model-animation.js';
+import { runAnimation } from './model-animation.js?v=540ebe0ea0';
 
 // One wavelength fills the model, so it renders at the listed size.
 const presentation = Object.freeze({ reference_size: 1, layout_width_factor: 1.4,

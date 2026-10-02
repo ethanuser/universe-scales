@@ -35,6 +35,37 @@ USDZ conversion, external textures, or decompression setup is required.
 | `sketchfab-isuzu-city-bus.glb` | [own.guest's Isuzu Erga Mio](https://sketchfab.com/3d-models/isuzu-erga-mio-bus-050e8acd0bbc4da0902a8a874ef10fca) | CC-BY-4.0 | Japanese city bus envelope proxy |
 | `sketchfab-teaspoon.glb` | [LordOfTheSnow's teaspoon](https://sketchfab.com/3d-models/teaspoon-96467926442342eab2c797de0ed80e6a) | CC-BY-4.0 | Uncalibrated 5 mL teaspoon proxy |
 | `ceiling-fan.glb` | [Poly Haven Ceiling Fan](https://polyhaven.com/a/ceiling_fan) | CC0-1.0 | Fan with separate blades |
+| `orion-hubble-blister.glb` | [Hubble Orion image](https://science.nasa.gov/asset/hubble/hubbles-sharpest-view-of-the-orion-nebula/), [O'Dell et al. 2009](https://doi.org/10.1088/0004-6256/137/1/367) | Credited NASA/ESA image guidelines; project-authored geometry | 672 kB point-cloud illustration; 13 ly photographed field inside the listed whole-nebula span; inferred depth |
+| `tarantula-eso-cloud.glb` | [ESO/R. Fosbury (ST-ECF), eso0650a](https://www.eso.org/public/images/eso0650a/) | CC-BY-4.0 | 810 kB observed-color cloud in a calibrated ~951 ly aperture; authored depth, not tomography |
+| `boston-marathon-course.glb` | [OSM Boston course](https://www.openstreetmap.org/relation/11680552), Mapzen/USGS | ODbL geometry; terrain attribution; authored diagram CC-BY | 638 kB course-and-terrain diagram; 12x bare-earth relief, separate 42.195 km ruler |
+| `amazon-river-geography.glb` | [Natural Earth rivers](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-rivers-lake-centerlines/), Mapzen elevation | Public-domain geometry; terrain attribution; authored diagram CC-BY | 880 kB partial mainstem and context tributaries; separate approximate 6,400 km ruler |
+| `great-wall-network-globe.glb` | [OSM Great Wall](https://www.openstreetmap.org/relation/318110), Natural Earth | ODbL geometry; public-domain land; authored diagram CC-BY | 1.15 MB mapped fragment network on a real-sized Earth; separate survey-inventory ruler |
+
+The route models deliberately **do not stretch geography to route length**.
+Their straightened rulers represent the catalog quantity; model notes identify
+partial coverage, cartographic uncertainty and exaggerated display dimensions.
+Build with `scripts/build_route_models.py`; [references, licensing and bundled
+machine-readable geometry](sources/route-models.md) preserve the distinction
+between ODbL geographic inputs and the CC0 quantitative dataset.
+
+`js/experiences/nearby-space-models.js` also supplies two small authored scenes:
+Proxima Centauri's Sun-to-star distance bracket, and a 16-member Local Group map
+from catalog coordinates. Both keep distances calibrated while explicitly
+enlarging stellar/galaxy markers for visibility. Their source checks and
+assumptions are recorded in [nearby-space-models.md](sources/nearby-space-models.md).
+The Orion build is reproducible with `scripts/build_orion_model.py`; see
+[its provenance](sources/orion-model.md). None of these authored scenes claims
+to be a downloaded scientific reconstruction.
+
+The next batch adds the Tarantula cloud, built with
+`scripts/build_tarantula_model.py` ([provenance](sources/tarantula-model.md)),
+and two AU-coordinate scenes in `js/experiences/outer-solar-models.js`:
+the hypothesized Oort reservoir and a nose-side heliosphere cutaway
+([references and definitions](sources/outer-solar-models.md)). Their listed
+sizes are explicit proxies: an upper-range 200,000 AU Oort diameter and a
+240 AU heliosphere nose-region diameter, not an unknown full-tail length.
+Diffuse samples opt into a shared 32px soft sprite through `softPoints: true`;
+it is generated locally by `model-points.js`, not an external texture.
 
 ## Quick Workflow
 
@@ -329,3 +360,61 @@ Their original GLBs still returned HTTP 200 from NASA's own asset host and were
 downloaded successfully. The NASA GitHub collection was also inspected, but its
 Moon/Earth printing files and textures were not preferable to these working GLBs.
 These outcomes are also recorded in the registry's `coverage_gaps` array.
+
+## Nebula Reference Models
+
+The Orion and Tarantula clouds and the Carina surface use credited telescope
+images with published angular fields or physical spans. Observed image colors
+and sky-plane locations are preserved; their authored depth cues are **not**
+tomographic reconstructions. Carina uses a 735 kB, 1024-pixel textured, gently
+bowed 2.5D surface to preserve VISTA's fine structures without granular particles.
+Its photographed 193 by 157 ly field sits inside a 300 ly context span; the
+photograph is not stretched to the larger dataset value.
+
+Rebuild recipes and exact image credits are in `sources/orion-model.md`,
+`sources/tarantula-model.md`, and `sources/carina-model.md`. Their builders take
+the documented source images as inputs and embed all runtime resources in GLBs.
+
+## Observable Universe Diagram
+
+`observable-universe-wmap.glb` embeds a sky-coordinate-correct WMAP nine-year
+ILC temperature map, not an imagined density field. Its smooth cutaway exposes
+the observer, while distinct guides mark the last-scattering and particle-horizon
+radii at their approximate present distances. Neither is a material wall.
+
+The 750 kB GLB has 9,120 triangles and needs no external texture or decoder.
+`scripts/build_observable_universe_model.py` builds from NASA LAMBDA's original
+NESTED FITS; the 24 MB scientific input is not served by the site. Scientific
+meaning, downsampling, assigned colors, NASA attribution and the reproducible
+build command are documented in `sources/observable-universe-model.md`.
+
+## Coverage And Review
+
+`node scripts/model_lab.cjs coverage --gap 1 --json` inventories production
+models, provenance and adjacent logarithmic gaps. It is a planning tool, not
+scientific approval. An object count alone is not a useful quality target:
+retain familiar anchors, precise definitions and documented uncertainty rather
+than inventing objects to fill theoretically inaccessible ranges.
+
+For each addition, check the listed quantity against the calibrated model part,
+record source/reuse terms, inspect rest and rotated views plus the real explorer,
+and run the existing asset/hash, dataset and rendering tests. Public voting can
+prioritize candidate objects; it cannot validate physical values or asset rights.
+
+The five particle-scale scenes in `particle-scale-models.js` are explicit
+measurement diagrams. Their rulers represent a derived Planck scale, a HERA
+effective-quark-radius bound, a proton rms charge radius, a classical electron
+radius and an energy-defined neutrino wavelength. They are not solid particle
+models. Definitions and primary references are in `sources/particle-scale-models.md`.
+
+Virgo and Sloan use actual SDSS DR17 galaxy samples with explicit survey-window
+wireframes, not invented member catalogs or solid walls. Their public-domain
+CSV snapshots, selection queries, cosmology and native-Mpc calibration are
+documented in `sources/large-scale-catalog-models.md`. The disputed Hercules-Corona
+Borealis scene is a Swift angular evidence chart plus a reported-extent ruler,
+not a physical wall mesh; see `sources/grb-structure-model.md`.
+
+Laniakea deliberately remains a photo fallback. Its reference-preview builder
+does not produce a registry entry: reusing a published figure does not grant
+permission to redistribute the underlying grid, nor turn the figure into
+calibrated 3D geometry. See `sources/laniakea-model.md` before attempting an import.

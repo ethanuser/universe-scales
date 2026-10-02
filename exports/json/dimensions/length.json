@@ -29,39 +29,42 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The smallest meaningful distance in physics, where quantum mechanics and general relativity collide. At this scale, spacetime becomes a seething foam of quantum fluctuations, and attempting to measure distances shorter than this would require so much energy that it would create a black hole. This length is derived from fundamental constants and represents the ultimate limit of our current understanding of space and time.",
+      "description": "A length constructed from the constants of quantum mechanics, gravity, and relativity. It marks the scale at which we expect our separate descriptions of these forces to need a quantum theory of gravity. Ideas such as spacetime foam and black-hole limits on measurement make it a compelling frontier, but it has not been established experimentally as the smallest possible distance. The ruler shows a derived scale, not an observed grain of spacetime.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The smallest meaningful distance in physics, where quantum mechanics and general relativity collide. At this scale, spacetime becomes a seething foam of quantum fluctuations, and attempting to measure distances shorter than this would require so much energy that it would create a black hole. This length is derived from fundamental constants and represents the ultimate limit of our current understanding of space and time.",
+      "description_medium": "A length constructed from the constants of quantum mechanics, gravity, and relativity. It marks the scale at which we expect our separate descriptions of these forces to need a quantum theory of gravity. Ideas such as spacetime foam and black-hole limits on measurement make it a compelling frontier, but it has not been established experimentally as the smallest possible distance. The ruler shows a derived scale, not an observed grain of spacetime.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Planck Length",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1.616e-35",
-          "source_url": "https://en.wikipedia.org/wiki/Planck_length"
+          "original_value_text": "1.616255e-35",
+          "source_url": "https://physics.nist.gov/cgi-bin/cuu/Value?plkl"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-planck-length",
       "name": "Planck Length",
-      "qualifiers": {},
+      "qualifiers": {
+        "constants_release": "2022 CODATA",
+        "measurement": "derived Planck length; not an experimentally established minimum distance"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Planck_length",
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?plkl",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-planck-length",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-physics-nist-gov-cgi-bin-cuu-value-plkl",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "physics.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Planck length",
-          "url": "https://en.wikipedia.org/wiki/Planck_length"
+          "title": "Value",
+          "url": "https://physics.nist.gov/cgi-bin/cuu/Value?plkl"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -75,18 +78,18 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The smallest meaningful distance in physics, where quantum mechanics and general relativity collide.",
-      "value": 1.616e-35,
+      "summary_short": "A length constructed from the constants of quantum mechanics, gravity, and relativity.",
+      "value": 1.616255e-35,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The experimental upper limit on quark size from high-energy collisions at particle accelerators. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. This size limit represents our current resolution for probing the fundamental building blocks of matter, and any attempt to see smaller would require energies exceeding what current accelerators can achieve.",
+      "description": "An experimental upper limit on an effective quark radius from combined HERA electron-proton collision data, at 95% confidence within the study's form-factor model. It is not a measured particle surface. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. Scattering lets us probe these hidden building blocks without ever holding an isolated quark in our hands.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The experimental upper limit on quark size from high-energy collisions at particle accelerators. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. This size limit represents our current resolution for probing the fundamental building blocks of matter, and any attempt to see smaller would require energies exceeding what current accelerators can achieve.",
+      "description_medium": "An experimental upper limit on an effective quark radius from combined HERA electron-proton collision data, at 95% confidence within the study's form-factor model. It is not a measured particle surface. Quarks are never found alone due to 'color confinement' - the strong force becomes stronger as you try to separate them, like cosmic rubber bands. Scattering lets us probe these hidden building blocks without ever holding an isolated quark in our hands.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -94,28 +97,32 @@
         "source_trace": {
           "method": "derived",
           "original_value_text": "4.3e-19",
-          "source_url": "https://en.wikipedia.org/wiki/Quark"
+          "source_url": "https://arxiv.org/abs/1611.03825"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-quark",
       "name": "Quark",
-      "qualifiers": {},
+      "qualifiers": {
+        "experiment": "combined H1 and ZEUS inclusive deep-inelastic scattering at HERA",
+        "measurement": "95% confidence upper limit on effective quark radius",
+        "model_dependence": "specified quark form-factor fit, not a universal hard-size bound"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Quark",
+      "source": "https://arxiv.org/abs/1611.03825",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-quark",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-arxiv-org-abs-1611-03825",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "arxiv.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Quark",
-          "url": "https://en.wikipedia.org/wiki/Quark"
+          "title": "1611.03825",
+          "url": "https://arxiv.org/abs/1611.03825"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -129,7 +136,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The experimental upper limit on quark size from high-energy collisions at particle accelerators.",
+      "summary_short": "An experimental upper limit on an effective quark radius from combined HERA electron-proton collision data, at 95% confidence within the study's form-factor model.",
       "value": 4.3e-19,
       "value_type": "derived",
       "wikidata_qid": null
@@ -146,30 +153,34 @@
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Proton Radius",
         "source_trace": {
-          "method": "derived",
-          "original_value_text": "8.7e-16",
-          "source_url": "https://en.wikipedia.org/wiki/Proton"
+          "method": "legacy_seed",
+          "original_value_text": "8.4075e-16",
+          "source_url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-proton-radius",
       "name": "Proton Radius",
-      "qualifiers": {},
+      "qualifiers": {
+        "constants_release": "2022 CODATA",
+        "measurement": "rms electric charge radius, not a hard boundary",
+        "uncertainty_m": "6.4e-19"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Proton",
+      "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-proton",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-physics-nist-gov-cuu-constants-table-allascii-txt",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "physics.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Proton",
-          "url": "https://en.wikipedia.org/wiki/Proton"
+          "title": "allascii.txt",
+          "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -184,46 +195,49 @@
         }
       ],
       "summary_short": "The charge radius of the proton, measured through electron-proton scattering and muonic hydrogen spectroscopy.",
-      "value": 8.7e-16,
-      "value_type": "derived",
+      "value": 8.4075e-16,
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The electromagnetic 'size' of an electron, calculated from its self-energy interactions. While electrons appear point-like in experiments, this radius represents the scale where electromagnetic effects dominate. Interestingly, if an electron were actually this size, its electrostatic self-energy would exceed its rest mass energy by a factor of 200,000, highlighting the quantum mechanical nature of fundamental particles.",
+      "description": "The classical electron radius, an electromagnetic length scale derived from its charge and rest energy, not an observed electron size. Electrons appear point-like in experiments. In the classical picture, spreading a charge over a small sphere stores electrostatic energy; equating a characteristic Coulomb energy to the electron's rest energy gives this scale. The exact self-energy depends on the assumed charge distribution, so it does not define a physical surface for the electron.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The electromagnetic 'size' of an electron, calculated from its self-energy interactions. While electrons appear point-like in experiments, this radius represents the scale where electromagnetic effects dominate. Interestingly, if an electron were actually this size, its electrostatic self-energy would exceed its rest mass energy by a factor of 200,000, highlighting the quantum mechanical nature of fundamental particles.",
+      "description_medium": "The classical electron radius, an electromagnetic length scale derived from its charge and rest energy, not an observed electron size. Electrons appear point-like in experiments. In the classical picture, spreading a charge over a small sphere stores electrostatic energy; equating a characteristic Coulomb energy to the electron's rest energy gives this scale. The exact self-energy depends on the assumed charge distribution, so it does not define a physical surface for the electron.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Electron",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "2.8e-15",
-          "source_url": "https://en.wikipedia.org/wiki/Electron"
+          "original_value_text": "2.8179403205e-15",
+          "source_url": "https://physics.nist.gov/cgi-bin/cuu/Value?re"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-electron",
       "name": "Electron",
-      "qualifiers": {},
+      "qualifiers": {
+        "constants_release": "2022 CODATA",
+        "measurement": "classical electron radius; not a measured electron extent"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Electron",
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?re",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-electron",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-physics-nist-gov-cgi-bin-cuu-value-re",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "physics.nist.gov",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Electron",
-          "url": "https://en.wikipedia.org/wiki/Electron"
+          "title": "Value",
+          "url": "https://physics.nist.gov/cgi-bin/cuu/Value?re"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -237,8 +251,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The electromagnetic 'size' of an electron, calculated from its self-energy interactions.",
-      "value": 2.8e-15,
+      "summary_short": "The classical electron radius, an electromagnetic length scale derived from its charge and rest energy, not an observed electron size.",
+      "value": 2.8179403205e-15,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -298,60 +312,6 @@
     },
     {
       "caveats": null,
-      "content_status": "seeded",
-      "description": "The quantum mechanical 'size' of neutrinos, the most abundant massive particles in the universe. Trillions of neutrinos pass through your body every second from the Sun, yet they're so weakly interacting that you'd need a light-year of lead to stop half of them. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The quantum mechanical 'size' of neutrinos, the most abundant massive particles in the universe. Trillions of neutrinos pass through your body every second from the Sun, yet they're so weakly interacting that you'd need a light-year of lead to stop half of them. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
-      "display_status": "display",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Neutrino",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "1e-12",
-          "source_url": "https://en.wikipedia.org/wiki/Neutrino"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-neutrino",
-      "name": "Neutrino",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Neutrino",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-neutrino",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Neutrino",
-          "url": "https://en.wikipedia.org/wiki/Neutrino"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "The quantum mechanical 'size' of neutrinos, the most abundant massive particles in the universe.",
-      "value": 1e-12,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
       "content_status": "curated",
       "description": "After cobalt-60 decays, its daughter nickel-60 releases a gamma ray with about 1.173 MeV of energy. The corresponding wavelength is only about 1.06 pm, calculated from $\\lambda=hc/E$. That is much shorter than an atom's diameter. This marker represents **one spectral line**, not all gamma rays. The paired 1.332 MeV line from the same decay would sit at a slightly shorter wavelength. [NIST describes the cobalt-60 gamma cascade](https://nvlpubs.nist.gov/nistpubs/jres/088/3/V88-3.pdf).",
       "description_format": "markdown",
@@ -401,6 +361,65 @@
       ],
       "summary_short": "The wavelength of one gamma line from cobalt-60 decay.",
       "value": 1.057e-12,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The de Broglie wavelength of a neutrino with 1 MeV of energy, about 1.24 picometers in the ultrarelativistic approximation. This is a wavelength, not the particle's physical size; increasing its energy makes the wavelength shorter. Trillions of neutrinos pass through your body every second from the Sun, and most pass through the Earth without interacting. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The de Broglie wavelength of a neutrino with 1 MeV of energy, about 1.24 picometers in the ultrarelativistic approximation. This is a wavelength, not the particle's physical size; increasing its energy makes the wavelength shorter. Trillions of neutrinos pass through your body every second from the Sun, and most pass through the Earth without interacting. Their tiny mass and ghostly nature make them crucial messengers from stellar cores and supernova explosions.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "1 MeV Neutrino Wavelength",
+        "source_trace": {
+          "derivation_note": "lambda = h/p, approximately hc/E for an ultrarelativistic neutrino",
+          "method": "derived",
+          "original_value_text": "1.239841984e-12",
+          "source_url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-1-mev-neutrino-wavelength",
+      "name": "1 MeV Neutrino Wavelength",
+      "qualifiers": {
+        "derivation": "lambda = h/p, approximately hc/E for an ultrarelativistic neutrino",
+        "energy_MeV": "1",
+        "measurement": "de Broglie wavelength, not particle size"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-pdg-lbl-gov-2025-reviews-rpp2025-rev-phys-constants-pdf",
+          "license_text": null,
+          "note": null,
+          "publisher": "pdg.lbl.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "rpp2025-rev-phys-constants.pdf",
+          "url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The de Broglie wavelength of a neutrino with 1 MeV of energy, about 1.24 picometers in the ultrarelativistic approximation.",
+      "value": 1.239841984e-12,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -2204,30 +2223,33 @@
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Marathon Distance",
         "source_trace": {
-          "method": "derived",
+          "method": "legacy_seed",
           "original_value_text": "42195",
-          "source_url": "https://en.wikipedia.org/wiki/Marathon"
+          "source_url": "https://worldathletics.org/disciplines/road-running-event/marathon"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-marathon-distance",
       "name": "Marathon Distance",
-      "qualifiers": {},
+      "qualifiers": {
+        "measurement": "standard race-course distance along the shortest permitted running line",
+        "model_example": "Boston course; mapped road geometry is not a certified measurement"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Marathon",
+      "source": "https://worldathletics.org/disciplines/road-running-event/marathon",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-marathon",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-worldathletics-org-disciplines-road-running-event-marathon",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "worldathletics.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Marathon",
-          "url": "https://en.wikipedia.org/wiki/Marathon"
+          "title": "marathon",
+          "url": "https://worldathletics.org/disciplines/road-running-event/marathon"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2243,7 +2265,7 @@
       ],
       "summary_short": "The length of marathon races, a distance born from ancient Greek legend.",
       "value": 42195.0,
-      "value_type": "derived",
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -2303,39 +2325,43 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, but it's generally considered the world's longest river.",
+      "description": "The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, and depends on which headwater and mouth are counted.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, but it's generally considered the world's longest river.",
+      "description_medium": "The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined. This river system drains 40% of South America and discharges 200,000 cubic meters of water per second into the Atlantic. The Amazon contains 20% of the world's fresh water and supports 10% of Earth's biodiversity. Its length is disputed because it has multiple sources, and depends on which headwater and mouth are counted.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Amazon River",
         "source_trace": {
-          "method": "derived",
-          "original_value_text": "7000000",
-          "source_url": "https://en.wikipedia.org/wiki/Amazon_River"
+          "method": "legacy_seed",
+          "original_value_text": "6400000",
+          "source_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-amazon-river",
       "name": "Amazon River",
-      "qualifiers": {},
+      "qualifiers": {
+        "definition": "representative NASA/ESA 6,400 km estimate; headwater and mouth definitions vary",
+        "measurement": "approximate full-river path length, not straight-line span",
+        "model_coverage": "Natural Earth partial Amazonas mainstem and separate context tributaries"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Amazon_River",
+      "source": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-amazon-river",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-modis-gsfc-nasa-gov-gallery-individual-php-db-date-2018-10-26",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Amazon River",
-          "url": "https://en.wikipedia.org/wiki/Amazon_River"
+          "title": "individual.php",
+          "url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2018-10-26"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2349,9 +2375,9 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined.",
-      "value": 7000000.0,
-      "value_type": "derived",
+      "summary_short": "The approximate 6,400 km length of the Amazon River, Earth's mightiest waterway that carries more water than the next seven largest rivers combined.",
+      "value": 6400000.0,
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -2413,39 +2439,45 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Great Wall of China, a massive defensive structure built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
+      "description": "The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Great Wall of China, a massive defensive structure built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
+      "description_medium": "The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system built over 2,000 years to protect against nomadic invasions. This ancient wonder is actually a series of walls built by different dynasties, with some sections dating back to the 7th century BC. The wall is wide enough for five horses to ride abreast and contains watchtowers every 200 meters. Despite its reputation, the wall was never completely effective at stopping invaders, but it remains one of humanity's most ambitious construction projects.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Great Wall of China",
         "source_trace": {
-          "method": "derived",
-          "original_value_text": "21000000",
-          "source_url": "https://en.wikipedia.org/wiki/Great_Wall_of_China"
+          "method": "legacy_seed",
+          "original_value_text": "21196180",
+          "source_url": "https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-great-wall-of-china",
       "name": "Great Wall of China",
-      "qualifiers": {},
+      "qualifiers": {
+        "definition": "all periods and branches; not one continuous wall or end-to-end distance",
+        "measurement": "combined walls-and-trenches survey inventory length",
+        "model_coverage": "incomplete OpenStreetMap fragment network, not the official inventory",
+        "precision": "reported survey figure, not a claim of meter-level accuracy",
+        "reported_value_km": "21196.18"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+      "source": "https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-great-wall-of-china",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-www-greatwallheritage-cn-ccmcms-html-1-54-index-html",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "www.greatwallheritage.cn",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Great Wall of China",
-          "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China"
+          "title": "index.html",
+          "url": "https://www.greatwallheritage.cn/CCMCMS/html/1/54/index.html"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2459,9 +2491,9 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The length of the Great Wall of China, a massive defensive structure built over 2,000 years to protect against nomadic invasions.",
-      "value": 21000000.0,
-      "value_type": "derived",
+      "summary_short": "The combined surveyed length of the Great Wall of China's walls and trenches, a massive defensive system built over 2,000 years to protect against nomadic invasions.",
+      "value": 21196180.0,
+      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -2795,39 +2827,44 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The diameter of the heliosphere, the protective bubble of solar wind that shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
+      "description": "A representative 240-au diameter of the heliosphere's nose region, twice the roughly 120-au heliopause distance measured near the Voyager crossings, not the uncertain length of its tail. This protective bubble of solar wind shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The diameter of the heliosphere, the protective bubble of solar wind that shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
+      "description_medium": "A representative 240-au diameter of the heliosphere's nose region, twice the roughly 120-au heliopause distance measured near the Voyager crossings, not the uncertain length of its tail. This protective bubble of solar wind shields our solar system from cosmic radiation. This bubble extends far beyond Pluto and acts as a barrier against the harsh interstellar environment. The heliosphere's shape changes as the Sun moves through the galaxy, creating a comet-like tail that extends for billions of kilometers. Only two spacecraft, Voyager 1 and 2, have ever left this protective bubble.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Heliosphere",
         "source_trace": {
+          "derivation_note": "2 * 120 au * 149597870700 m/au",
           "method": "derived",
-          "original_value_text": "2.4e14",
-          "source_url": "https://en.wikipedia.org/wiki/Heliosphere"
+          "original_value_text": "3.5903488968e13",
+          "source_url": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-heliosphere",
       "name": "Heliosphere",
-      "qualifiers": {},
+      "qualifiers": {
+        "derivation": "2 * 120 au * 149597870700 m/au",
+        "measurement": "representative nose-region diameter, not full-tail length",
+        "shape": "global heliosphere and tail geometry remain uncertain"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Heliosphere",
+      "source": "https://science.nasa.gov/mission/voyager/interstellar-mission/",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-heliosphere",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-science-nasa-gov-mission-voyager-interstellar-mission",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Heliosphere",
-          "url": "https://en.wikipedia.org/wiki/Heliosphere"
+          "title": "interstellar-mission",
+          "url": "https://science.nasa.gov/mission/voyager/interstellar-mission/"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2841,47 +2878,53 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The diameter of the heliosphere, the protective bubble of solar wind that shields our solar system from cosmic radiation.",
-      "value": 240000000000000.0,
+      "summary_short": "A representative 240-au diameter of the heliosphere's nose region, twice the roughly 120-au heliopause distance measured near the Voyager crossings, not the uncertain length of its tail.",
+      "value": 35903488968000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The radius of the Oort Cloud, a vast shell of icy objects that marks the true boundary of our solar system. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
+      "description": "A representative 200,000-au diameter of the hypothesized Oort Cloud, using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range. This vast reservoir of icy objects lies at the outer reaches of our solar system rather than having a directly observed sharp edge. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The radius of the Oort Cloud, a vast shell of icy objects that marks the true boundary of our solar system. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
+      "description_medium": "A representative 200,000-au diameter of the hypothesized Oort Cloud, using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range. This vast reservoir of icy objects lies at the outer reaches of our solar system rather than having a directly observed sharp edge. This distant region contains trillions of comets and extends halfway to the nearest star. The Oort Cloud is the source of long-period comets that occasionally visit the inner solar system. These icy bodies are pristine remnants from the solar system's formation, preserving the original composition of the protoplanetary disk.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Oort Cloud",
         "source_trace": {
+          "derivation_note": "2 * 100000 au * 149597870700 m/au",
           "method": "derived",
-          "original_value_text": "1e15",
-          "source_url": "https://en.wikipedia.org/wiki/Oort_cloud"
+          "original_value_text": "2.991957414e16",
+          "source_url": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-oort-cloud",
       "name": "Oort Cloud",
-      "qualifiers": {},
+      "qualifiers": {
+        "boundary": "hypothesized, not directly observed",
+        "derivation": "2 * 100000 au * 149597870700 m/au",
+        "measurement": "representative diameter from the upper outer-radius estimate",
+        "outer_radius_range_au": "[10000, 100000]"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Oort_cloud",
+      "source": "https://science.nasa.gov/solar-system/oort-cloud/facts/",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-oort-cloud",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-science-nasa-gov-solar-system-oort-cloud-facts",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Oort cloud",
-          "url": "https://en.wikipedia.org/wiki/Oort_cloud"
+          "title": "facts",
+          "url": "https://science.nasa.gov/solar-system/oort-cloud/facts/"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -2895,8 +2938,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The radius of the Oort Cloud, a vast shell of icy objects that marks the true boundary of our solar system.",
-      "value": 1000000000000000.0,
+      "summary_short": "A representative 200,000-au diameter of the hypothesized Oort Cloud, using the upper end of NASA's uncertain 10,000-100,000-au outer-radius range.",
+      "value": 2.991957414e+16,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -3011,6 +3054,65 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "The roughly 300-light-year span of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The roughly 300-light-year span of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Carina Nebula",
+        "source_trace": {
+          "derivation_note": "300 light-years * 9.4607304725808e15 m/light-year",
+          "method": "derived",
+          "original_value_text": "2.83821914177424e18",
+          "source_url": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-carina-nebula",
+      "name": "Carina Nebula",
+      "qualifiers": {
+        "derivation": "300 light-years * 9.4607304725808e15 m/light-year",
+        "extent": "diffuse region, not a sharp physical boundary",
+        "measurement": "approximate whole-nebula span"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-missions-hubble-hubbles-sparkling-new-view-of-the-carina-nebula",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "hubbles-sparkling-new-view-of-the-carina-nebula",
+          "url": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The roughly 300-light-year span of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy.",
+      "value": 2.83821914177424e+18,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "The size of the Pillars of Creation, iconic cosmic structures made famous by the Hubble Space Telescope. These towering columns of gas and dust are being sculpted by stellar winds from nearby massive stars. The pillars contain dozens of embryonic stars hidden within their dense cores. Despite their name, these structures are actually being destroyed by radiation - they may have already been blown away by a supernova explosion 6,000 years ago.",
       "description_format": "markdown",
       "description_long": null,
@@ -3113,60 +3215,6 @@
       ],
       "summary_short": "The size of the Tarantula Nebula, the most active stellar nursery in our galactic neighborhood.",
       "value": 9e+18,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "The size of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The size of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy. This nebula is home to Eta Carinae, a binary star system that's 5 million times brighter than the Sun and may explode as a supernova within the next million years. The nebula's complex structures include dark dust lanes, bright star clusters, and vast regions of ionized gas sculpted by stellar winds.",
-      "display_status": "display",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Carina Nebula",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "3e20",
-          "source_url": "https://en.wikipedia.org/wiki/Carina_Nebula"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-carina-nebula",
-      "name": "Carina Nebula",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Carina_Nebula",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-carina-nebula",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Carina Nebula",
-          "url": "https://en.wikipedia.org/wiki/Carina_Nebula"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "The size of the Carina Nebula, a massive stellar factory containing some of the most massive and luminous stars in our galaxy.",
-      "value": 3e+20,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -3335,39 +3383,43 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The size of the Virgo Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. This represents the largest coherent structures in the universe before cosmic expansion dominates over gravitational attraction.",
+      "description": "The approximate 100-million-light-year span of the Virgo (Local) Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. Its irregular disk and halo of galaxy clouds are a large-scale neighborhood, not one gravitationally bound object with a sharply defined surface.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The size of the Virgo Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. This represents the largest coherent structures in the universe before cosmic expansion dominates over gravitational attraction.",
+      "description_medium": "The approximate 100-million-light-year span of the Virgo (Local) Supercluster, a massive collection of galaxy groups containing thousands of galaxies. This structure contains about 100 galaxy groups and clusters with a total mass of 10^15 solar masses. The Virgo Supercluster is falling toward the Great Attractor, a mysterious region of space that's pulling galaxies toward it. Its irregular disk and halo of galaxy clouds are a large-scale neighborhood, not one gravitationally bound object with a sharply defined surface.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Virgo Supercluster",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1e23",
-          "source_url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+          "original_value_text": "9.46e23",
+          "source_url": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-virgo-supercluster",
       "name": "Virgo Supercluster",
-      "qualifiers": {},
+      "qualifiers": {
+        "measurement": "approximate characteristic span of the historical Local Supercluster",
+        "model_coverage": "SDSS redshift-space window, not a membership census or exact boundary",
+        "reported_span": "roughly 100 million light-years"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Virgo_Supercluster",
+      "source": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-virgo-supercluster",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-imagine-gsfc-nasa-gov-features-cosmic-local-supercluster-info-html",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "NASA",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Virgo Supercluster",
-          "url": "https://en.wikipedia.org/wiki/Virgo_Supercluster"
+          "title": "local supercluster info.html",
+          "url": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -3381,47 +3433,52 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The size of the Virgo Supercluster, a massive collection of galaxy groups containing thousands of galaxies.",
-      "value": 1e+23,
+      "summary_short": "The approximate 100-million-light-year span of the Virgo (Local) Supercluster, a massive collection of galaxy groups containing thousands of galaxies.",
+      "value": 9.46e+23,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The size of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and represents the largest gravitationally bound system we belong to. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
+      "description": "The approximate 160-megaparsec diameter of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and is defined by a basin of peculiar galaxy velocities, not by a gravitationally bound boundary. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The size of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and represents the largest gravitationally bound system we belong to. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
+      "description_medium": "The approximate 160-megaparsec diameter of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way. This Hawaiian-named structure means 'immeasurable heaven' and is defined by a basin of peculiar galaxy velocities, not by a gravitationally bound boundary. Laniakea contains a mass of 10^17 solar masses and shows how galaxies flow toward its center like water flowing downhill. This supercluster is part of an even larger cosmic web that spans the observable universe.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Laniakea Supercluster",
         "source_trace": {
+          "derivation_note": "160 Mpc * 3.085677581491367e22 m/Mpc",
           "method": "derived",
-          "original_value_text": "5e23",
-          "source_url": "https://en.wikipedia.org/wiki/Laniakea_Supercluster"
+          "original_value_text": "4.937084130386187e24",
+          "source_url": "https://doi.org/10.1038/nature13674"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-laniakea-supercluster",
       "name": "Laniakea Supercluster",
-      "qualifiers": {},
+      "qualifiers": {
+        "boundary": "flow-defined and reconstruction-dependent, not a gravitationally bound object",
+        "derivation": "160 Mpc * 3.085677581491367e22 m/Mpc",
+        "measurement": "approximate diameter of the 2014 velocity-defined basin"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Laniakea_Supercluster",
+      "source": "https://doi.org/10.1038/nature13674",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-laniakea-supercluster",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-doi-org-10-1038-nature13674",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "doi.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Laniakea Supercluster",
-          "url": "https://en.wikipedia.org/wiki/Laniakea_Supercluster"
+          "title": "nature13674",
+          "url": "https://doi.org/10.1038/nature13674"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -3435,47 +3492,53 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The size of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way.",
-      "value": 5e+23,
+      "summary_short": "The approximate 160-megaparsec diameter of the Laniakea Supercluster, our cosmic home that contains 100,000 galaxies including our Milky Way.",
+      "value": 4.937084130386188e+24,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxy clusters arranged in a wall-like formation spanning billions of light-years. The wall's discovery challenged our understanding of cosmic structure formation, as it seemed too large to have formed in the time since the Big Bang. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
+      "description": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxies arranged in a wall-like formation. Gott and colleagues estimated its curved length as 450 megaparsecs in present-epoch comoving coordinates, about 1.47 billion light-years. At the epoch seen in its light, the same estimate is about 419 Mpc. Such walls also occur in simulations of standard cosmology; their connected extent depends on how the structure is defined. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxy clusters arranged in a wall-like formation spanning billions of light-years. The wall's discovery challenged our understanding of cosmic structure formation, as it seemed too large to have formed in the time since the Big Bang. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
+      "description_medium": "The length of the Sloan Great Wall, one of the largest structures in the observable universe. This massive filament contains thousands of galaxies arranged in a wall-like formation. Gott and colleagues estimated its curved length as 450 megaparsecs in present-epoch comoving coordinates, about 1.47 billion light-years. At the epoch seen in its light, the same estimate is about 419 Mpc. Such walls also occur in simulations of standard cosmology; their connected extent depends on how the structure is defined. This structure represents the cosmic web's filamentary nature, where galaxies cluster along vast interconnected threads.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Sloan Great Wall",
         "source_trace": {
+          "derivation_note": "450 Mpc * 3.085677581491367e22 m/Mpc",
           "method": "derived",
-          "original_value_text": "4e24",
-          "source_url": "https://en.wikipedia.org/wiki/Sloan_Great_Wall"
+          "original_value_text": "1.3885549116711151e25",
+          "source_url": "https://arxiv.org/html/astro-ph/0310571v2"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-sloan-great-wall",
       "name": "Sloan Great Wall",
-      "qualifiers": {},
+      "qualifiers": {
+        "definition": "Gott et al. 2005; 419 Mpc at the observed epoch, z about 0.073",
+        "derivation": "450 Mpc * 3.085677581491367e22 m/Mpc",
+        "measurement": "estimated curved length in present-epoch comoving coordinates",
+        "model_coverage": "later SDSS DR17 sample through published slice, not certified wall members"
+      },
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Sloan_Great_Wall",
+      "source": "https://arxiv.org/html/astro-ph/0310571v2",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-sloan-great-wall",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-arxiv-org-html-astro-ph-0310571v2",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "arxiv.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Sloan Great Wall",
-          "url": "https://en.wikipedia.org/wiki/Sloan_Great_Wall"
+          "title": "0310571v2",
+          "url": "https://arxiv.org/html/astro-ph/0310571v2"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -3490,46 +3553,54 @@
         }
       ],
       "summary_short": "The length of the Sloan Great Wall, one of the largest structures in the observable universe.",
-      "value": 4e+24,
+      "value": 1.388554911671115e+25,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The length of the Hercules-Corona Borealis Great Wall, the largest known structure in the observable universe. This immense filament spans 10 billion light-years and contains billions of galaxies arranged in a wall-like formation. The wall's discovery challenged cosmological theories because it appeared too large to have formed through gravitational collapse alone. This structure represents the ultimate scale of cosmic organization and may require new physics to explain its formation.",
+      "description": "A reported gamma-ray-burst concentration nicknamed the Hercules-Corona Borealis Great Wall, with a proposed extent of roughly 2,000-3,000 megaparsecs. The marker uses the upper end, about 10 billion light-years; it is not a measured edge of a mapped galaxy wall. Bursts can act as distant tracers of stellar populations, but their rarity and uneven detection make this an intriguing, disputed inference. Studies disagree about whether selection effects can explain the clustering. The question is not whether a visible wall fills this span, but whether sparse flashes reveal an unusually large structure.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The length of the Hercules-Corona Borealis Great Wall, the largest known structure in the observable universe. This immense filament spans 10 billion light-years and contains billions of galaxies arranged in a wall-like formation. The wall's discovery challenged cosmological theories because it appeared too large to have formed through gravitational collapse alone. This structure represents the ultimate scale of cosmic organization and may require new physics to explain its formation.",
+      "description_medium": "A reported gamma-ray-burst concentration nicknamed the Hercules-Corona Borealis Great Wall, with a proposed extent of roughly 2,000-3,000 megaparsecs. The marker uses the upper end, about 10 billion light-years; it is not a measured edge of a mapped galaxy wall. Bursts can act as distant tracers of stellar populations, but their rarity and uneven detection make this an intriguing, disputed inference. Studies disagree about whether selection effects can explain the clustering. The question is not whether a visible wall fills this span, but whether sparse flashes reveal an unusually large structure.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Hercules-Corona Borealis Great Wall",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1e25",
-          "source_url": "https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall"
+          "original_value_text": "9.4607304725808e25",
+          "source_url": "https://arxiv.org/abs/1401.0533"
         }
       },
       "hook": null,
       "id": "obs:length:scenario-length-hercules-corona-borealis-great-wall",
       "name": "Hercules-Corona Borealis Great Wall",
-      "qualifiers": {},
-      "quality_flags": [],
+      "qualifiers": {
+        "display_convention": "about 10 billion light-years, near the upper reported range",
+        "evidence": "disputed statistical inference from GRBs; not a resolved galaxy wall",
+        "measurement": "approximate reported extent of a putative GRB concentration",
+        "model_coverage": "current NASA Swift tracer selection, not the original discovery sample",
+        "reported_range_Mpc": "[2000, 3000]"
+      },
+      "quality_flags": [
+        "disputed_structure"
+      ],
       "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall",
+      "source": "https://arxiv.org/abs/1401.0533",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-en-wikipedia-org-wiki-hercules-e2-80-93corona-borealis-great-wall",
-          "license_text": "CC BY-SA 4.0",
+          "id": "src:https-arxiv-org-abs-1401-0533",
+          "license_text": null,
           "note": null,
-          "publisher": "Wikipedia",
+          "publisher": "arxiv.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "Hercules\u2013Corona Borealis Great Wall",
-          "url": "https://en.wikipedia.org/wiki/Hercules%E2%80%93Corona_Borealis_Great_Wall"
+          "title": "1401.0533",
+          "url": "https://arxiv.org/abs/1401.0533"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -3543,18 +3614,18 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The length of the Hercules-Corona Borealis Great Wall, the largest known structure in the observable universe.",
-      "value": 1e+25,
+      "summary_short": "A reported gamma-ray-burst concentration nicknamed the Hercules-Corona Borealis Great Wall, with a proposed extent of roughly 2,000-3,000 megaparsecs.",
+      "value": 9.4607304725808e+25,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Beyond this distance, objects are receding faster than light can reach us due to cosmic expansion. The observable universe contains about 2 trillion galaxies and represents only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
+      "description": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Cosmic expansion has stretched the present distance to those regions to about 46.5 billion light-years; recession faster than light does not by itself make a galaxy unobservable. The observable universe contains about 2 trillion galaxies and may represent only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Beyond this distance, objects are receding faster than light can reach us due to cosmic expansion. The observable universe contains about 2 trillion galaxies and represents only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
+      "description_medium": "The diameter of the observable universe, the ultimate limit of what we can see. This boundary exists because light has only had 13.8 billion years to travel since the Big Bang. Cosmic expansion has stretched the present distance to those regions to about 46.5 billion light-years; recession faster than light does not by itself make a galaxy unobservable. The observable universe contains about 2 trillion galaxies and may represent only a tiny fraction of the entire universe, which may be infinite in extent. This diameter defines the horizon of human knowledge about cosmic reality.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -3569,7 +3640,9 @@
       "id": "obs:length:entity-universe",
       "name": "Observable Universe",
       "qualifiers": {
-        "measurement": "diameter of observable universe"
+        "definition": "present-distance span, not light-travel time or a physical edge",
+        "measurement": "approximate particle-horizon diameter at the present cosmic epoch",
+        "model": "cosmology-dependent; distinct from the CMB last-scattering sphere"
       },
       "quality_flags": [],
       "review_status": "accepted",
