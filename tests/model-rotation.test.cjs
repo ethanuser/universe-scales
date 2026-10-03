@@ -189,3 +189,27 @@ test('skinned model hull uses posed vertices rather than bind-pose positions', (
     const points = context.window.__sampledModelPoints(instance);
     assert.deepEqual([...new Set(points.map(point => point.x))], [10, 12]);
 });
+
+test('rapid pointer events keep all motion samples but schedule only one redraw', () => {
+    const stage = Object.create(context.window.ScaleModels.ModelStage.prototype);
+    stage.rotations = new Map();
+    let redraws = 0;
+    stage.redraw = () => { redraws++; };
+    const item = {};
+    stage.beginRotate(item);
+    const before = redraws;
+    now += 8;
+    stage.rotate(item, 5, 3);
+    const firstFrame = nextFrame;
+    now += 8;
+    stage.rotate(item, 5, 3);
+    assert.equal(nextFrame, firstFrame, 'do not enqueue another frame for the same display interval');
+    assert.equal(redraws, before);
+    assert.equal(stage.rotations.get(item).samples.length, 3);
+    assert.equal(stage.rotations.get(item).yaw, 0.08);
+    firstFrame(now);
+    assert.equal(redraws, before + 1);
+    assert.equal(stage.inputFrame, null);
+    stage.releaseRotate(item);
+    assert.ok(stage.rotations.get(item).velocity > 0, 'coalescing must not lose flick velocity');
+});

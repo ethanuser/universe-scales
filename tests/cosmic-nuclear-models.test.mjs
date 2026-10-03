@@ -18,6 +18,7 @@ test('Milky Way disk spans the listed diameter with the Sun at 8.18 kpc', () => 
     const stars = scene.getObjectByName('milky-way-stars');
     assert.ok(stars.geometry.attributes.position.count <= 14000, 'bound the galaxy point budget');
     assert.equal(stars.userData.pointLOD.fullPixels, 600);
+    assert.equal(stars.userData.pointLOD.mobileMaximum, 4500, 'mobile rendering has a bounded point budget');
     assert.ok(stars.userData.softPoints);
     assert.ok(Math.abs(scene.getObjectByName('Sun').position.length() - 8.18) < 1e-9);
     assert.equal(cosmicModelMetadata['Galaxy Diameter'].presentation.reference_size, 2 * MILKY_WAY.radius);

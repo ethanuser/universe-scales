@@ -22,6 +22,9 @@
             this.active = false;
             this.host = document.getElementById('dimension-experience');
             this.switcher = document.getElementById('view-switch');
+            this.fullscreenState = null;
+            this.fullscreenRequest = 0;
+            this.onFullscreenChange = () => this.handleFullscreenChange();
             this.assets = {};
             this.images = new Map();
             this.clock = new Clock((time) => this.renderer?.render(time));
@@ -107,6 +110,7 @@
             }
         }
         onDimension() {
+            this.exitFullscreen();
             this.renderer?.dispose?.();
             this.pause();
             this.audio.stop();
@@ -145,6 +149,7 @@
         }
         setMode(mode, save = true) {
             const wasActive = this.active;
+            this.exitFullscreen();
             this.renderer?.dispose?.();
             this.pause();
             this.audio.stop();
@@ -185,6 +190,9 @@
             this.host.replaceChildren();
             this.images.clear();
             const toolbar = dom('div', 'experience-toolbar');
+            const toolbarMain = dom('div', 'experience-toolbar__main');
+            const toolbarActions = dom('div', 'experience-toolbar__actions');
+            toolbar.append(toolbarMain, toolbarActions);
             const picker = dom('div', 'experience-picker');
             const pickerLabel = dom('span', 'experience-picker__label', 'Explore');
             this.select = dom('select', 'experience-select sr-only');
@@ -224,7 +232,7 @@
             this.pickerEmpty.hidden = true;
             this.pickerPanel.append(search, options, this.pickerEmpty);
             picker.append(pickerLabel, this.pickerToggle, this.select, this.pickerPanel);
-            toolbar.append(picker);
+            toolbarMain.append(picker);
             const closePicker = () => {
                 this.pickerPanel.hidden = true;
                 this.pickerToggle.classList.remove('is-open');
@@ -261,13 +269,20 @@
                 infoButton.setAttribute('aria-expanded', String(open));
             });
             info.append(infoButton, infoPanel);
-            this.previous = button(toolbar, 'Previous', () =>
+            this.fullscreenButton = dom('button', 'experience-fullscreen-button');
+            this.fullscreenButton.type = 'button';
+            this.fullscreenButton.title = 'Enter fullscreen';
+            this.fullscreenButton.setAttribute('aria-label', 'Enter fullscreen');
+            this.fullscreenButton.setAttribute('aria-pressed', 'false');
+            this.fullscreenButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>';
+            this.fullscreenButton.addEventListener('click', () => this.toggleFullscreen());
+            this.previous = button(toolbarActions, 'Previous', () =>
                 this.focus(this.index - 1)
             );
-            this.next = button(toolbar, 'Next', () =>
+            this.next = button(toolbarActions, 'Next', () =>
                 this.focus(this.index + 1)
             );
-            this.reset = button(toolbar, 'Frame item', () =>
+            this.reset = button(toolbarActions, 'Frame item', () =>
                 this.focus(this.index)
             );
             const body = dom('div', 'experience-body');
@@ -284,7 +299,7 @@
             this.settings = dom('div', 'experience-settings');
             this.attribution = dom('div', 'experience-attribution');
             infoPanel.append(this.caption, this.attribution);
-            toolbar.append(info);
+            toolbarMain.append(info, this.fullscreenButton);
             this.stageFrame = dom('div', 'experience-stage-frame');
             this.stageFrame.append(this.stage);
             visual.append(
@@ -306,6 +321,10 @@
             };
             const escape = (event) => {
                 if (event.key !== 'Escape') return;
+                if (this.fullscreenState?.fallback) {
+                    this.exitFullscreen();
+                    return;
+                }
                 closePicker();
                 info.classList.remove('is-open');
                 infoButton.setAttribute('aria-expanded', 'false');
@@ -316,10 +335,103 @@
             this.toolbarCleanup = () => {
                 document.removeEventListener('pointerdown', outside);
                 document.removeEventListener('keydown', escape);
+                this.fullscreenButton = null;
             };
             this.clock.reset();
             this.renderer = ScaleRenderers[this.config[1]](this);
             this.focus(this.index);
+        }
+        toggleFullscreen() {
+            if (this.fullscreenState) this.exitFullscreen();
+            else this.enterFullscreen();
+        }
+        handleFullscreenChange() {
+            if (document.fullscreenElement === this.host) {
+                if (this.fullscreenState) {
+                    this.fullscreenState.native = true;
+                    this.updateFullscreenButton(true);
+                }
+            } else if (this.fullscreenState?.native) {
+                this.restoreFullscreen();
+            }
+        }
+        enterFullscreen() {
+            if (this.fullscreenState || !this.active || !this.host) return;
+            const request = ++this.fullscreenRequest;
+            this.fullscreenState = {
+                fallback: false,
+                native: false,
+                scrollX: window.scrollX,
+                scrollY: window.scrollY,
+                htmlOverflow: document.documentElement.style.overflow,
+                bodyOverflow: document.body.style.overflow
+            };
+            document.addEventListener('fullscreenchange', this.onFullscreenChange);
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            const fallback = () => {
+                if (request !== this.fullscreenRequest || !this.fullscreenState) return;
+                this.fullscreenState.fallback = true;
+                this.host.classList.add('experience-fullscreen-fallback');
+                document.body.classList.add('experience-fullscreen-active');
+                this.updateFullscreenButton(true);
+                this.renderer?.render(this.clock.time);
+            };
+            if (typeof this.host.requestFullscreen !== 'function') {
+                fallback();
+                return;
+            }
+            try {
+                Promise.resolve(this.host.requestFullscreen()).then(() => {
+                    if (request !== this.fullscreenRequest) {
+                        if (document.fullscreenElement === this.host && typeof document.exitFullscreen === 'function') {
+                            try { Promise.resolve(document.exitFullscreen()).catch(() => {}); } catch {}
+                        }
+                        return;
+                    }
+                    if (document.fullscreenElement === this.host) {
+                        this.fullscreenState.native = true;
+                        this.updateFullscreenButton(true);
+                        this.renderer?.render(this.clock.time);
+                    } else fallback();
+                }).catch(fallback);
+            } catch {
+                fallback();
+            }
+        }
+        exitFullscreen() {
+            if (!this.fullscreenState) return;
+            const native = this.fullscreenState.native || document.fullscreenElement === this.host;
+            if (native && typeof document.exitFullscreen === 'function') {
+                try {
+                    Promise.resolve(document.exitFullscreen()).catch(() => {});
+                } catch {}
+            }
+            this.restoreFullscreen();
+        }
+        restoreFullscreen() {
+            const state = this.fullscreenState;
+            if (!state) return;
+            this.fullscreenRequest++;
+            this.fullscreenState = null;
+            document.removeEventListener('fullscreenchange', this.onFullscreenChange);
+            this.host?.classList.remove('experience-fullscreen-fallback');
+            document.body.classList.remove('experience-fullscreen-active');
+            document.documentElement.style.overflow = state.htmlOverflow;
+            document.body.style.overflow = state.bodyOverflow;
+            this.updateFullscreenButton(false);
+            window.scrollTo(state.scrollX, state.scrollY);
+            if (this.active) this.renderer?.render(this.clock.time);
+        }
+        updateFullscreenButton(active) {
+            if (!this.fullscreenButton) return;
+            const label = active ? 'Exit fullscreen' : 'Enter fullscreen';
+            this.fullscreenButton.title = label;
+            this.fullscreenButton.setAttribute('aria-label', label);
+            this.fullscreenButton.setAttribute('aria-pressed', String(active));
+            this.fullscreenButton.innerHTML = active
+                ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5" /></svg>'
+                : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>';
         }
         focus(index, frame = true) {
             this.index = clamp(index, 0, this.items.length - 1);

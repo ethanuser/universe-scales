@@ -130,7 +130,7 @@
             translating
                 ? `${notes[dim]} Both lanes start at $x=0$ and share the same distance and simulated time. Dots mark four equal time intervals, not equal distances. Each trial restarts both lanes when the selected item reaches the end; that reset is not a physical reversal or sudden braking. Images are identifiers, not scaled lengths. This is a hypothetical straight-line, constant-value model, not a reconstruction of impacts, gravity fields, or centripetal motion. A linear acceleration alone cannot determine a rotation rate without a radius and a motion model. Classical equations cease to apply near relativistic speeds. Above two trials per real second, the view shows a labeled static timing diagram instead of misleading sampled motion.`
                 : angular
-                  ? 'Angular velocity measures angle per second: $\\theta=\\omega t$. One turn is $2\\pi$ radians, so $f=\\omega/(2\\pi)$ and the period is $T=2\\pi/\\omega$. Orbital examples move around a center; spinning examples rotate about their own center. The marker shows phase, with counterclockwise chosen for illustration, not a measured direction. Where no suitable model is available, reference photos stay fixed so fixtures and backgrounds do not rotate; only the phase marker moves. Photos retain their proportions but are not measured geometries or recordings at the listed rate. Time controls change simulated time, not the recorded rate. Above eight turns per real second the diagram is static to avoid misleading aliasing.'
+                  ? 'Angular velocity measures angle per second: $\\theta=\\omega t$. One turn is $2\\pi$ radians, so $f=\\omega/(2\\pi)$ and the period is $T=2\\pi/\\omega$. Models rotate only their moving parts about the mechanical spindle; housings stay fixed. Clocks show the selected hand sweeping clockwise. Other machine directions are illustrative because the dataset gives speed magnitudes. The separate circular marker counts turns rather than depicting the model axis. Orbital examples move around a center. Where no suitable model is available, reference photos stay fixed and only the phase marker moves. Apparatus proportions are illustrative. Time controls change simulated time; Fit time to item makes very slow or fast motion visible. Above eight turns per real second the diagram is static to avoid misleading aliasing.'
                   : `${dim === 'sound-frequency' ? 'Sound frequency counts pressure cycles per second, not the movement of a pictured animal or instrument. The marker and sine wave are schematic timing guides, not a measured waveform, sound level, or wavelength. This visualization does not play sound.' : 'Frequency counts cycles per second. Explicit orbital examples revolve, rotation examples spin, and heartbeat or breathing examples pulse. Other examples use a schematic oscillator; its displacement and shape are illustrative, not measurements.'} The period is $T=1/f$ and the phase is $\\phi=2\\pi ft$. One complete orbit, pulse, or back-and-forth represents one cycle. Time controls change simulated time, not the recorded frequency. Above eight cycles per real second the diagram is static to avoid misleading aliasing.`
         );
 
@@ -242,21 +242,25 @@
             const { phase, unresolved } = state;
             const kind = visualKind(dim, item.name);
             if (kind === 'orbit' || kind === 'spin') {
+                const modeled = kind === 'spin' && modelStage?.draw(item, x, y + 120, 270, phase);
+                const markerX = modeled ? x + 170 : x;
+                const markerY = modeled ? 130 : y;
+                const radius = modeled ? 18 : 110;
                 ctx.stage.append(
                     svg('circle', {
-                        cx: x,
-                        cy: y,
-                        r: 110,
+                        cx: markerX,
+                        cy: markerY,
+                        r: radius,
                         fill: 'none',
                         stroke: 'var(--border-color)',
                         'stroke-width': 2
                     })
                 );
                 const spoke = svg('line', {
-                    x1: x + (kind === 'spin' ? 100 * Math.cos(phase) : 0),
-                    y1: y - (kind === 'spin' ? 100 * Math.sin(phase) : 0),
-                    x2: x + 110 * Math.cos(phase),
-                    y2: y - 110 * Math.sin(phase),
+                    x1: markerX + (kind === 'spin' ? (radius - 10) * Math.cos(phase) : 0),
+                    y1: markerY - (kind === 'spin' ? (radius - 10) * Math.sin(phase) : 0),
+                    x2: markerX + radius * Math.cos(phase),
+                    y2: markerY - radius * Math.sin(phase),
                     stroke: 'var(--accent-color)',
                     'stroke-width': 3,
                     class: 'motion-phase-guide'
@@ -275,8 +279,10 @@
                         50
                     );
                 } else {
-                    if (!modelStage?.draw(item, x, y + 70, 140, phase)) {
+                    if (!modeled) {
                         referencePhoto(item, x, y);
+                    } else {
+                        ctx.object(ctx.stage, item, x, y + 120, 280, 255, { image: false });
                     }
                     ctx.stage.append(spoke);
                 }
@@ -357,6 +363,8 @@
         const attachModels = () => {
             if (disposed || !angular || modelStage || !globalThis.ScaleModels) return;
             modelStage = new ScaleModels.ModelStage(ctx, () => render(ctx.clock.time));
+            ctx.modelEntry = item => modelStage.entry(item);
+            if (ctx.detail) ctx.updateDetail();
         };
         globalThis.addEventListener?.('scale-models-ready', attachModels);
         attachModels();
@@ -367,8 +375,10 @@
         });
         return {
             render,
+            get modelStage() { return modelStage; },
             dispose: () => {
                 disposed = true; modelStage?.dispose();
+                delete ctx.modelEntry;
                 globalThis.removeEventListener?.('scale-models-ready', attachModels);
             },
             focus: (frame) => {

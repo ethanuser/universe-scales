@@ -91,7 +91,7 @@ export function galaxyCloud(parameters, count, seed, name, { brightness = 1, opa
         vertexColors: true, transparent: true, opacity, depthWrite: false }));
     points.name = name;
     points.userData.pointSize = { max: maxSize, perPixel: 1 / 160 };
-    points.userData.pointLOD = { fullPixels: 600, minimum: Math.min(600, count) };
+    points.userData.pointLOD = { fullPixels: 600, minimum: Math.min(600, count), mobileMaximum: 4500 };
     points.userData.softPoints = true;
     return points;
 }

@@ -4,9 +4,11 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=7ce287549d';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=63a2e404b7';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import { prepareModelPoints } from './model-points.js?v=2cbe25db3d';
+import { angularEntry, angularScene } from './angular-models.js?v=10dce61fed';
+import { createAngularRig } from './angular-rig.js?v=834b0b1d2b';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -154,7 +156,8 @@ async function load(entry) {
     if (!models.has(key)) models.set(key, (entry.procedural === 'molecule'
         ? moleculeData.then(data => data?.models?.[entry.molecule]
             ? { scene: moleculeScene(data.models[entry.molecule]) } : null)
-        : entry.procedural ? Promise.resolve({ scene: proceduralScene(entry.procedural, entry) })
+        : entry.procedural ? Promise.resolve({ scene: entry.procedural === 'angular-machine'
+            ? angularScene(entry.angular_kind) : proceduralScene(entry.procedural, entry) })
             // The content hash busts browser caches whenever a model file changes.
             : loader.loadAsync(entry.sha256 ? `${entry.src}?v=${entry.sha256.slice(0, 12)}` : entry.src)).then(gltf => {
         if (!gltf) return null;
@@ -240,7 +243,12 @@ export class ModelStage {
         this.waveStart = performance.now();
         try {
             this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-            this.renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+            if (ctx.dimension === 'angular-velocity') {
+                this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+                this.renderer.toneMappingExposure = 0.85;
+            }
+            this.coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+            this.renderer.setPixelRatio(Math.min(devicePixelRatio, this.coarsePointer ? 1.5 : 2));
             this.renderer.domElement.className = 'experience-model-stage';
             this.renderer.domElement.setAttribute('aria-hidden', 'true');
             ctx.stageFrame.insertBefore(this.renderer.domElement, ctx.stage);
@@ -270,6 +278,7 @@ export class ModelStage {
         return this.environmentMap;
     }
     entry(item) {
+        if (this.ctx.dimension === 'angular-velocity') return angularEntry(item, this.entries);
         return (this.ctx.dimension === 'length' && proceduralLength[item.name]) ||
             this.entries.find(e => e.matches?.[this.ctx.dimension]?.includes(item.name));
     }
@@ -309,7 +318,12 @@ export class ModelStage {
         state.samples.push({ time: timestamp, yaw: state.yaw, pitch: state.pitch });
         while (state.samples.length > 2 && timestamp - state.samples[0].time > 90) state.samples.shift();
         this.rotations.set(item, state);
-        this.redraw();
+        // Pointer events can arrive faster than display frames. Keep every motion
+        // sample for release momentum, but only draw the latest pose once per frame.
+        if (!this.inputFrame) this.inputFrame = requestAnimationFrame(() => {
+            this.inputFrame = null;
+            if (!this.disposed) this.redraw();
+        });
     }
     releaseRotate(item, timestamp = performance.now()) {
         const state = this.rotations.get(item);
@@ -326,6 +340,8 @@ export class ModelStage {
         state.yaw = Math.atan2(Math.sin(state.yaw), Math.cos(state.yaw));
         state.dragging = false;
         this.draggingItem = null;
+        cancelAnimationFrame(this.inputFrame);
+        this.inputFrame = null;
         if (!this.returnFrame) this.returnFrame = requestAnimationFrame(now => this.returnToPose(now));
         this.redraw();
     }
@@ -361,7 +377,7 @@ export class ModelStage {
             + 130 * THREE.MathUtils.clamp((exponent + 1) / 7, 0, 1);
         for (const instance of this.instances.values()) if (instance) instance.visible = false;
     }
-    draw(item, x, y, size) {
+    draw(item, x, y, size, phase) {
         const entry = this.entry(item);
         if (!entry || this.unavailable || this.disposed) return false;
         if (!this.instances.has(item)) {
@@ -373,6 +389,14 @@ export class ModelStage {
                     instance.userData.waveRoots = waveAnimation.animationRoots(instance);
                     instance.userData.pickPoints = sampledModelPoints(instance);
                     instance.userData.hoverOverlays = addHoverOverlay(instance);
+                    if (entry.angular_motion) {
+                        try { instance.userData.angularRig = createAngularRig(instance, entry.angular_motion); }
+                        catch (error) {
+                            console.warn(`Cannot animate ${entry.id}: ${error.message}`);
+                            this.redraw();
+                            return;
+                        }
+                    }
                     const pose = entry.presentation || {};
                     instance.rotation.order = 'XYZ';
                     instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
@@ -380,6 +404,7 @@ export class ModelStage {
                     instance.updateMatrixWorld(true);
                     // Precise bounds so rotated poses sit on the ground instead of floating.
                     const defaultBounds = new THREE.Box3().setFromObject(instance, true);
+                    instance.userData.restExtent = defaultBounds.getSize(new THREE.Vector3());
                     instance.userData.anchorMinY = defaultBounds.min.y;
                     instance.userData.anchorMaxZ = defaultBounds.max.z;
                     instance.traverse(child => {
@@ -404,7 +429,12 @@ export class ModelStage {
         }
         const instance = this.instances.get(item);
         if (!instance) return false;
+        if (phase != null) instance.userData.angularRig?.setPhase(phase);
         instance.visible = true;
+        if (entry.angular_motion) {
+            const extent = instance.userData.restExtent;
+            size = Math.min(size, 240 / extent.y, 310 / extent.x);
+        }
         const pose = entry.presentation || {};
         const rotation = this.rotations.get(item) || { yaw: 0, pitch: 0 };
         instance.rotation.order = 'XYZ';
@@ -427,7 +457,10 @@ export class ModelStage {
         if (!this.renderer || this.disposed) return;
         const box = this.ctx.stage.getBoundingClientRect();
         const w = Math.max(1, box.width), h = Math.max(1, box.height);
-        this.renderer.setSize(w, h, false);
+        if (this.viewportWidth !== w || this.viewportHeight !== h) {
+            this.renderer.setSize(w, h, false);
+            this.viewportWidth = w; this.viewportHeight = h;
+        }
         // Off-axis frustum matches SVG at z=0. The eye is at baseline height,
         // so grounded meshes share the same horizon at every depth.
         const view = this.ctx.stage.viewBox.baseVal;
@@ -455,6 +488,7 @@ export class ModelStage {
         this.camera.projectionMatrixInverse.copy(this.camera.projectionMatrix).invert();
         this.camera.updateMatrixWorld(true);
         this.camera.matrixWorldInverse.copy(this.camera.matrixWorld).invert();
+        const viewProjection = new THREE.Matrix4().multiplyMatrices(this.camera.projectionMatrix, this.camera.matrixWorldInverse);
         this.hulls.clear();
         let visibleWave = false;
         const animateWaves = !document.hidden && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -485,20 +519,26 @@ export class ModelStage {
                 const { max, perPixel } = cloud.userData.pointSize;
                 cloud.material.size = THREE.MathUtils.clamp(drawnPixels * perPixel, 0.35, max);
                 if (cloud.userData.pointLOD) {
-                    const { fullPixels, minimum } = cloud.userData.pointLOD;
+                    const { fullPixels, minimum, mobileMaximum = Infinity } = cloud.userData.pointLOD;
                     const count = cloud.geometry.attributes.position.count;
-                    cloud.geometry.setDrawRange(0, Math.min(count, Math.max(minimum,
+                    cloud.geometry.setDrawRange(0, Math.min(count, this.coarsePointer ? mobileMaximum : Infinity, Math.max(minimum,
                         Math.ceil(count * Math.min(1, drawnPixels / fullPixels)))));
                 }
             }
             this.overlay(instance, w, h, scale, cx, view);
-            const projected = [];
-            for (const point of instance.userData.pickPoints || []) {
-                const ndc = point.clone().applyMatrix4(instance.matrixWorld).project(this.camera);
-                if (!Number.isFinite(ndc.x) || !Number.isFinite(ndc.y) || ndc.z < -1 || ndc.z > 1) continue;
-                projected.push({ x: (ndc.x + 1) * w / 2, y: (1 - ndc.y) * h / 2 });
+            const matrix = new THREE.Matrix4().multiplyMatrices(viewProjection, instance.matrixWorld);
+            let cache = instance.userData.projectedHull;
+            if (!cache || cache.width !== w || cache.height !== h || !cache.matrix.equals(matrix)) {
+                const projected = [], ndc = new THREE.Vector3();
+                for (const point of instance.userData.pickPoints || []) {
+                    ndc.copy(point).applyMatrix4(matrix);
+                    if (!Number.isFinite(ndc.x) || !Number.isFinite(ndc.y) || ndc.z < -1 || ndc.z > 1) continue;
+                    projected.push({ x: (ndc.x + 1) * w / 2, y: (1 - ndc.y) * h / 2 });
+                }
+                cache = { width: w, height: h, matrix, polygon: convexHull(projected) };
+                instance.userData.projectedHull = cache;
             }
-            const polygon = convexHull(projected);
+            const polygon = cache.polygon;
             if (polygon.length >= 3) this.hulls.set(item, { item, polygon, depth: instance.position.z });
         }
         this.hovered = this.pointer && !this.draggingItem
@@ -610,6 +650,7 @@ export class ModelStage {
         this.disposed = true;
         cancelAnimationFrame(this.returnFrame);
         cancelAnimationFrame(this.waveFrame);
+        cancelAnimationFrame(this.inputFrame);
         this.environmentMap?.dispose();
         this.renderer?.dispose();
         this.renderer?.forceContextLoss();

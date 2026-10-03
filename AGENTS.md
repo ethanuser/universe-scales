@@ -35,6 +35,7 @@ Bump the `?v=` query of any JS/CSS file you change in `index.html`; browsers cac
 | Particle-scale measurement diagrams (not hard particle boundaries) | `js/experiences/particle-scale-models.js` |
 | Catalog-positioned nearby-space diagrams | `js/experiences/nearby-space-models.js` |
 | Other explorers | `motion.js`, `perception.js`, `audio.js` (+ `*-math.js`) |
+| Angular-velocity mechanisms and rotor binding | `angular-models.js`, `angular-machine-models.js`, `angular-rig.js` in `js/experiences/` |
 | Model registry (runtime + provenance) | `content/visualizations/models.json` |
 | Model files and licenses | `content/visualizations/models/` (see its README) |
 | Dataset source of truth | `dataset/raw/` → built into `exports/` and `data/` (see `DATASET_PIPELINE.md`) |
@@ -90,6 +91,9 @@ node scripts/model_lab.cjs coverage --gap 1 --json      # provenance, photo fall
 node scripts/model_lab.cjs shot /tmp/lab "Carbon Atom" --views rest,front,side --bg dark --time 1.5
 node scripts/model_lab.cjs sheet /tmp/lab/all.png      # contact sheet of all models, red = flagged
 node scripts/model_lab.cjs explorer /tmp/lab "Solar System"   # the real explorer after the camera settles
+node scripts/model_lab.cjs angular /tmp/angular              # rest/quarter-turn screenshots and fixed-housing audit
+node scripts/model_lab.cjs mobile /tmp/mobile                # real touch gestures and fullscreen lifecycle/screenshots
+node scripts/model_lab.cjs performance "Galaxy Diameter" --mobile # continuous-rotation CPU/frame timings
 ```
 
 `audit` reports each model's on-screen extent (the larger of width and height at its resting
@@ -402,3 +406,40 @@ node scripts/model_lab.cjs audit
   only Laniakea photo-only, no load/page errors. Only the documented DNA/virus
   size exceptions remain flagged. Content hashes and diff whitespace pass.
   Pre-existing SQLite ResourceWarnings and full-dataset torque drift remain.
+
+## 2026-10-02 Angular and mobile batch (Codex)
+
+- Angular models now bind an absolute phase to named mechanical pivots through
+  `angular-rig.js`; housings, coils, brake calipers, clock faces and fixtures stay
+  fixed. Downloaded a CC-BY arsdever drone motor/propeller (338 kB, 6,300 triangles).
+  Added illustrative clock-hand, record-player, microwave, bicycle/car wheel,
+  washer, hard-drive, blender and centrifuge mechanisms. Existing fan blades and
+  NASA planet models have angular-only bindings, leaving Length poses unchanged.
+  Source and representation notes live in `sources/angular-motion.md` and
+  `sources/angular-machines.md`. High apparent rates freeze rather than alias;
+  the fitted-time control makes their rotation visible.
+- Spatial touch gestures capture one pointer immediately, preserve vertical model
+  rotation, snap the camera to the finger while panning, and retain release inertia.
+  Touch hover is disabled; native controls and normal page/detail scrolling remain
+  separate. Rotation redraws are coalesced without discarding velocity samples.
+- All explorers have a fullscreen control: native element fullscreen where supported,
+  an immersive fixed-viewport fallback otherwise. Escape, browser exit and
+  mode/dimension changes restore overflow and scroll. Mobile toolbar rows and
+  bounded detail panes keep controls reachable.
+- Renderer resizing now happens only when dimensions change; projected picking
+  hulls are cached by transform/viewport, using a combined projection matrix.
+  Coarse-pointer devices cap rendering at 1.5 device pixels per CSS pixel and
+  galaxy clouds at 4,500 points, retaining their structure and calibration. Mobile
+  Chromium Milky Way rotation CPU render times fell from about 4.2 ms to 1-2 ms;
+  this is not a physical-phone frame-rate guarantee.
+- Reusable model-lab `angular`, `mobile` and `performance` commands exercise the
+  production renderer. All 22 modeled angular labels passed rotor, fixed-fixture,
+  pivot and high-rate checks; an independent visual critic rated execution 8/10
+  and accuracy 9/10. No dataset values or plaque prose were changed in this batch.
+- Every GLB, including the new drone, verifies. Full asset verification still fails
+  on a pre-existing committed `licenses/kenney-food-kit.txt` provenance checksum
+  mismatch; the license file and its lock entry were not changed here.
+- Final checks: 198 Node tests and 11 Sketchfab Python tests pass; the mobile lab
+  passes 13 touch/fullscreen/lifecycle checks with no page errors. Content hashes
+  and diff whitespace checks pass. Chromium touch emulation is verified; actual
+  iOS/Android hardware testing remains necessary.

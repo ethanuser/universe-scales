@@ -15,6 +15,12 @@
 //       The real explorer, after the camera spring settles on each item.
 //   node scripts/model_lab.cjs coverage [--gap 1] [--json]
 //       Model provenance and largest logarithmic gaps; not a visual approval.
+//   node scripts/model_lab.cjs angular OUT_DIR ["Item" ...]
+//       Angular-model screenshots at rest/quarter turn and rotor/housing checks.
+//   node scripts/model_lab.cjs mobile OUT_DIR
+//       Real touch gestures, slider isolation, mobile/fullscreen layout and exits.
+//   node scripts/model_lab.cjs performance ["Item"] [--mobile]
+//       Continuous rotation frame timings in the production size explorer.
 //   node scripts/model_lab.cjs labels ["Item" ...] [--zooms 0.35,0.6,1,1.5] [--views rest,side]
 //       Check rendered label collisions over zoom/rotation; exits nonzero on overlap or load errors.
 //
@@ -59,14 +65,15 @@ function parse(argv) {
 }
 const slug = name => name.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
 
-async function withBrowser(size, work) {
+async function withBrowser(size, work, mobile = false) {
     const server = await serve();
     const base = `http://127.0.0.1:${server.address().port}`;
     const { chromium } = loadPlaywright();
     const browser = await chromium.launch({ executablePath: executablePath(),
         args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
     const [width, height] = (size || '1280x900').split('x').map(Number);
-    const page = await browser.newPage({ viewport: { width, height } });
+    const page = await browser.newPage({ viewport: { width, height },
+        ...(mobile ? { isMobile: true, hasTouch: true, deviceScaleFactor: 3 } : {}) });
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => {
@@ -86,6 +93,268 @@ const describe = m => `${m.name.padEnd(34)} ${String(m.model || 'photo').padEnd(
         (m.warnings.length ? `  !! ${m.warnings.join('; ')}` : '') : m.model ? 'FAILED TO LOAD' : '');
 
 const commands = {
+    async mobile({ positional }) {
+        const [out = '/tmp/mobile-model-lab'] = positional;
+        fs.mkdirSync(out, { recursive: true });
+        const results = [];
+        await withBrowser('393x852', async (page, base, errors) => {
+            await page.goto(`${base}/?dimension=length&item=Earth%20Diameter`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer && globalThis.ScaleModels);
+            await page.evaluate(() => {
+                const draw = ScaleModels.ModelStage.prototype.draw;
+                ScaleModels.ModelStage.prototype.draw = function (...args) {
+                    globalThis.mobileStage = this;
+                    return draw.apply(this, args);
+                };
+                app.experiences.renderer.render();
+            });
+            await page.waitForFunction(() => globalThis.mobileStage?.instances.get(app.experiences.item));
+            await page.waitForTimeout(2000);
+            await page.locator('.experience-stage-frame').scrollIntoViewIfNeeded();
+            const session = await page.context().newCDPSession(page);
+            const touch = (type, point) => session.send('Input.dispatchTouchEvent', {
+                type, touchPoints: type === 'touchEnd' ? [] : [{ ...point, id: 1, radiusX: 2, radiusY: 2 }]
+            });
+            const point = await page.evaluate(() => {
+                const rect = mobileStage.renderer.domElement.getBoundingClientRect();
+                const item = app.experiences.item, hull = mobileStage.hulls.get(item).polygon;
+                for (let y = Math.max(30, rect.top); y < Math.min(innerHeight - 90, rect.bottom - 90); y += 8) {
+                    for (let x = Math.max(30, rect.left); x < Math.min(innerWidth - 55, rect.right - 55); x += 8) {
+                        if (mobileStage.pick(x, y) === item) return { x, y };
+                    }
+                }
+                throw new Error(`No visible touch target: ${item.name}, ${JSON.stringify(rect.toJSON())}, ${hull.length} hull vertices`);
+            });
+            await page.evaluate(() => {
+                globalThis.touchObservations = { canceled: 0, moves: 0, capture: false };
+                const frame = app.experiences.stageFrame;
+                frame.addEventListener('pointercancel', () => touchObservations.canceled++);
+                frame.addEventListener('pointermove', event => {
+                    touchObservations.moves++;
+                    touchObservations.capture ||= frame.hasPointerCapture(event.pointerId);
+                });
+            });
+            await touch('touchStart', point);
+            for (let step = 1; step <= 4; step++) {
+                await touch('touchMove', { x: point.x + step * 9, y: point.y + step * 12 });
+                await page.waitForTimeout(16);
+            }
+            const rotation = await page.evaluate(() => ({ ...touchObservations,
+                yaw: mobileStage.rotations.get(app.experiences.item)?.yaw,
+                pitch: mobileStage.rotations.get(app.experiences.item)?.pitch,
+                hovered: Boolean(mobileStage.hovered) }));
+            await touch('touchEnd', point);
+            results.push({ test: 'touch rotation', ...rotation,
+                passed: rotation.capture && rotation.moves >= 3 && !rotation.canceled && !rotation.hovered && rotation.pitch > 0.1 && rotation.yaw > 0.1 });
+            const empty = await page.evaluate(() => {
+                const rect = app.experiences.stageFrame.getBoundingClientRect();
+                for (let y = Math.max(24, rect.top + 24); y < Math.min(innerHeight - 60, rect.bottom - 80); y += 20)
+                    for (let x = 40; x < innerWidth - 90; x += 20)
+                        if (!mobileStage.pick(x, y)) return { x, y };
+                throw new Error('No empty pan target');
+            });
+            const slider = '.experience-camera-slider input';
+            const beforePan = Number(await page.locator(slider).inputValue());
+            await touch('touchStart', empty);
+            await touch('touchMove', { x: empty.x + 45, y: empty.y + 4 });
+            const duringPan = Number(await page.locator(slider).inputValue());
+            await touch('touchEnd', empty);
+            results.push({ test: 'immediate touch pan', before: beforePan, during: duringPan, passed: duringPan < beforePan - 0.02 });
+            const range = await page.locator(slider).boundingBox();
+            await touch('touchStart', { x: range.x + range.width * 0.55, y: range.y + range.height / 2 });
+            await touch('touchMove', { x: range.x + range.width * 0.59, y: range.y + range.height / 2 });
+            const sliderDragging = await page.locator('.experience-stage-frame').evaluate(node => node.classList.contains('is-dragging'));
+            await touch('touchEnd', empty);
+            results.push({ test: 'native slider is not a background drag', passed: !sliderDragging });
+            const earthTarget = await page.evaluate(() => {
+                const view = app.experiences;
+                const index = view.items.findIndex(item => item.name === 'Earth Diameter');
+                const pose = mobileStage.entry(view.items[index])?.presentation || {};
+                const target = ScaleJourney.frameExponent(view.items, index, 1, {
+                    widthFactor: item => mobileStage.entry(item)?.presentation?.layout_width_factor ?? 1
+                }) + Math.log10(pose.focus_scale_factor || 1);
+                view.focus(index);
+                return target;
+            });
+            await page.waitForFunction(target => app.experiences.item.name === 'Earth Diameter' &&
+                Math.abs(Number(document.querySelector('.experience-camera-slider input').value) - target) < 0.0001,
+            earthTarget, { timeout: 45000 });
+            // iPhone Safari without element fullscreen follows this same fallback path.
+            await page.evaluate(() => { app.experiences.host.requestFullscreen = undefined; });
+            await page.locator('.experience-fullscreen-button').click();
+            await page.waitForFunction(() => app.experiences.fullscreenState?.fallback);
+            await page.waitForTimeout(300);
+            const fullscreen = await page.evaluate(() => {
+                const view = app.experiences, host = view.host.getBoundingClientRect(), stage = view.stageFrame.getBoundingClientRect();
+                const button = view.fullscreenButton.getBoundingClientRect();
+                return { host: { x: host.x, y: host.y, width: host.width, height: host.height },
+                    stageHeight: stage.height, overflow: view.host.scrollWidth > innerWidth + 1,
+                    buttonSize: Math.min(button.width, button.height), label: view.fullscreenButton.getAttribute('aria-label') };
+            });
+            results.push({ test: 'mobile immersive fallback', ...fullscreen,
+                passed: fullscreen.host.y === 0 && fullscreen.host.height >= 850 && fullscreen.stageHeight > 400 && !fullscreen.overflow && fullscreen.buttonSize >= 44 && fullscreen.label === 'Exit fullscreen' });
+            await page.screenshot({ path: path.join(out, 'length-fullscreen.png') });
+            await page.keyboard.press('Escape');
+            results.push({ test: 'fallback Escape restores scrolling', passed: await page.evaluate(() => !app.experiences.fullscreenState && document.body.style.overflow !== 'hidden') });
+            await page.evaluate(() => {
+                app.experiences.setMode('log');
+                app.experiences.setMode('interactive');
+            });
+            results.push({ test: 'explorer mode switch disposes touch handlers', passed: await page.evaluate(() => app.experiences.active && app.experiences.stageFrame.style.touchAction === 'none') });
+            await page.evaluate(() => {
+                app.experiences.host.requestFullscreen = undefined;
+                app.experiences.enterFullscreen();
+            });
+            await page.evaluate(() => app.setDimension('angular-velocity'));
+            results.push({ test: 'dimension switch exits fullscreen', passed: await page.evaluate(() => !app.experiences.fullscreenState && !document.body.classList.contains('experience-fullscreen-active') && document.body.style.overflow !== 'hidden') });
+            await page.goto(`${base}/?dimension=angular-velocity&item=Ceiling%20fan`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.instances.get(app.experiences.item));
+            await page.evaluate(() => { app.experiences.host.requestFullscreen = undefined; });
+            await page.locator('.experience-fullscreen-button').click();
+            await page.waitForFunction(() => app.experiences.fullscreenState?.fallback);
+            await page.screenshot({ path: path.join(out, 'angular-fullscreen.png') });
+            results.push({ test: 'angular mobile fullscreen layout', passed: await page.evaluate(() => {
+                const host = app.experiences.host;
+                return host.scrollWidth <= innerWidth + 1 && app.experiences.stageFrame.getBoundingClientRect().height >= 220;
+            }) });
+            await page.locator('.experience-fullscreen-button').click();
+            results.push({ test: 'fallback button exit', passed: await page.evaluate(() => !app.experiences.fullscreenState) });
+            results.push({ test: 'mobile page errors', errors, passed: !errors.length });
+        }, true);
+        await withBrowser('1280x900', async (page, base, errors) => {
+            await page.goto(`${base}/?dimension=length&item=Earth%20Diameter`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer);
+            await page.locator('.experience-fullscreen-button').click();
+            await page.waitForFunction(() => document.fullscreenElement === app.experiences.host);
+            results.push({ test: 'native desktop fullscreen', passed: true });
+            await page.screenshot({ path: path.join(out, 'length-desktop-fullscreen.png') });
+            await page.evaluate(() => document.exitFullscreen());
+            await page.waitForFunction(() => !app.experiences.fullscreenState);
+            results.push({ test: 'native browser exit restores UI', passed: await page.locator('.experience-fullscreen-button').getAttribute('aria-label') === 'Enter fullscreen' });
+            results.push({ test: 'desktop page errors', errors, passed: !errors.length });
+        });
+        fs.writeFileSync(path.join(out, 'audit.json'), JSON.stringify(results, null, 2));
+        console.log(JSON.stringify(results, null, 2));
+        if (results.some(result => !result.passed)) process.exitCode = 1;
+    },
+    async performance({ positional, options }) {
+        const name = positional[0] || 'Galaxy Diameter';
+        await withBrowser(options.mobile ? '393x852' : '1280x900', async (page, base, errors) => {
+            await page.goto(`${base}/?dimension=length&item=${encodeURIComponent(name)}`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer && globalThis.ScaleModels);
+            await page.evaluate(() => {
+                const draw = ScaleModels.ModelStage.prototype.draw;
+                ScaleModels.ModelStage.prototype.draw = function (...args) {
+                    globalThis.performanceStage = this;
+                    return draw.apply(this, args);
+                };
+                app.experiences.renderer.render();
+            });
+            await page.waitForFunction(() => globalThis.performanceStage?.instances.get(app.experiences.item));
+            await page.waitForTimeout(2000);
+            const result = await page.evaluate(async () => {
+                const view = app.experiences, stage = performanceStage, times = [], intervals = [];
+                let bufferResizes = 0, stationaryHullReuses = 0;
+                const setSize = stage.renderer.setSize.bind(stage.renderer);
+                stage.renderer.setSize = (...args) => { bufferResizes++; return setSize(...args); };
+                const state = { yaw: 0, pitch: 0, velocity: 0, pitchVelocity: 0, dragging: true };
+                stage.rotations.set(view.item, state);
+                let previous;
+                for (let frame = 0; frame < 65; frame++) {
+                    const now = await new Promise(requestAnimationFrame);
+                    if (frame > 5 && previous) intervals.push(now - previous);
+                    previous = now;
+                    state.yaw += 0.015;
+                    const hulls = new Map([...stage.instances].filter(([item]) => item !== view.item)
+                        .map(([item, instance]) => [item, instance?.userData.projectedHull]));
+                    const start = performance.now();
+                    view.renderer.render();
+                    if (frame > 5) times.push(performance.now() - start);
+                    for (const [item, hull] of hulls)
+                        if (hull && hull === stage.instances.get(item)?.userData.projectedHull) stationaryHullReuses++;
+                }
+                const percentile = (values, p) => [...values].sort((a, b) => a - b)[Math.floor((values.length - 1) * p)];
+                const visible = [...stage.instances].filter(([, instance]) => instance?.visible).map(([item, instance]) => {
+                    let points = 0, drawn = 0;
+                    instance.traverse(node => {
+                        if (!node.isPoints || !node.visible) return;
+                        points += node.geometry.attributes.position.count;
+                        drawn += Math.min(node.geometry.drawRange.count, node.geometry.attributes.position.count);
+                    });
+                    return { name: item.name, points, drawn, pickPoints: instance.userData.pickPoints.length };
+                });
+                return { item: view.item.name, medianMs: percentile(times, 0.5), p95Ms: percentile(times, 0.95),
+                    frameMedianMs: percentile(intervals, 0.5), bufferResizes, stationaryHullReuses,
+                    pixelRatio: stage.renderer.getPixelRatio(), visible };
+            });
+            console.log(JSON.stringify({ ...result, errors }, null, 2));
+        }, Boolean(options.mobile));
+    },
+    async angular({ positional, options }) {
+        const [out = '/tmp/angular-model-lab', ...requested] = positional;
+        fs.mkdirSync(out, { recursive: true });
+        await withBrowser(options.size || '1280x900', async (page, base, errors) => {
+            await page.goto(`${base}/?dimension=angular-velocity&item=Ceiling%20fan`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.entries.length);
+            const names = requested.length ? requested : await page.evaluate(() => {
+                const view = app.experiences;
+                return [...new Set(view.items.filter(item => view.modelEntry(item)).map(item => item.name))];
+            });
+            const results = [];
+            for (const name of names) {
+                await page.evaluate(name => {
+                    const view = app.experiences; view.pause();
+                    const index = view.items.findIndex(item => item.name === name);
+                    if (index < 0) throw new Error(`Unknown angular item: ${name}`);
+                    view.focus(index);
+                    [...view.settings.querySelectorAll('button')].find(button => button.textContent === 'Fit time to item').click();
+                }, name);
+                await page.waitForFunction(() => {
+                    const view = app.experiences;
+                    return view.renderer.modelStage.instances.get(view.item)?.userData.angularRig;
+                }, null, { timeout: 30000 });
+                const snapshots = [];
+                for (const phase of [0, Math.PI / 2]) {
+                    snapshots.push(await page.evaluate(phase => {
+                        const view = app.experiences;
+                        view.clock.time = phase / view.item.value;
+                        view.renderer.render(view.clock.time);
+                        const instance = view.renderer.modelStage.instances.get(view.item);
+                        instance.updateMatrixWorld(true);
+                        const rig = instance.userData.angularRig;
+                        const stationary = ['Housing', 'ceiling_fan', 'motor_stator', 'motor_coils']
+                            .map(name => instance.getObjectByName(name)).filter(Boolean);
+                        return { rotors: rig.rotations.map(rotation => ({ name: rotation.node.name,
+                            quaternion: rotation.node.quaternion.toArray(), pivot: rotation.node.position.toArray() })),
+                            housing: stationary.map(node => ({ name: node.name, matrix: node.matrixWorld.toArray() })) };
+                    }, phase));
+                    await page.locator('.experience-stage-frame').screenshot({ path: path.join(out,
+                        `${slug(name)}-${phase ? 'quarter' : 'rest'}.png`) });
+                }
+                const moved = snapshots[0].rotors.every((rotor, index) =>
+                    rotor.quaternion.some((value, axis) => Math.abs(value - snapshots[1].rotors[index].quaternion[axis]) > 1e-6));
+                const fixed = JSON.stringify(snapshots[0].housing) === JSON.stringify(snapshots[1].housing);
+                const pivotsFixed = snapshots[0].rotors.every((rotor, index) =>
+                    JSON.stringify(rotor.pivot) === JSON.stringify(snapshots[1].rotors[index].pivot));
+                const frozen = await page.evaluate(() => {
+                    const view = app.experiences;
+                    const rig = view.renderer.modelStage.instances.get(view.item).userData.angularRig;
+                    view.clock.rate = 32 * Math.PI / view.item.value;
+                    view.renderer.render(0);
+                    const before = rig.rotations.map(rotation => rotation.node.quaternion.toArray());
+                    view.renderer.render(1.7 / view.item.value);
+                    return JSON.stringify(before) === JSON.stringify(rig.rotations.map(rotation => rotation.node.quaternion.toArray()))
+                        && view.stage.textContent.includes('Too fast to resolve');
+                });
+                results.push({ name, moved, fixed, pivotsFixed, frozen, snapshots });
+                console.log(`${name}: rotor ${moved ? 'turns' : 'FAILED'}, housing ${fixed ? 'fixed' : 'MOVED'}, pivot ${pivotsFixed ? 'fixed' : 'MOVED'}, high-rate ${frozen ? 'static' : 'FAILED'}`);
+            }
+            fs.writeFileSync(path.join(out, 'audit.json'), JSON.stringify({ results, errors }, null, 2));
+            if (results.some(result => !result.moved || !result.fixed || !result.pivotsFixed || !result.frozen) || errors.length) {
+                console.log(errors); process.exitCode = 1;
+            }
+        });
+    },
     async labels({ positional, options }) {
         const zooms = String(options.zooms || '0.35,0.6,1,1.5').split(',').map(Number);
         if (zooms.some(value => !Number.isFinite(value) || value <= 0)) throw new Error('Invalid --zooms');

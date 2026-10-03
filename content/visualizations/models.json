@@ -4736,6 +4736,69 @@
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "sketchfab-drone-motor",
+      "sketchfab_uid": "90cbde0858584d6fb58a041600841df7",
+      "source": "https://sketchfab.com/3d-models/brushless-motor-for-a-drone-with-propellers-90cbde0858584d6fb58a041600841df7",
+      "author": "arsdever on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "matches": {
+        "angular-velocity": [
+          "Drone propeller"
+        ]
+      },
+      "representation": "authored-mechanism",
+      "note": "A low-poly brushless drone motor by arsdever. The motor bell and attached propeller rotate together around the local spindle; the mounting plate, stator and copper coils remain stationary. The speed follows this observation's listed value. The motor geometry is illustrative rather than a calibrated model of a particular drone; rotation direction is illustrative.",
+      "presentation": {
+        "pitch": 50,
+        "yaw": 5,
+        "environment": 0.7,
+        "roughness": 0.4
+      },
+      "angular_motion": {
+        "rotations": [
+          {
+            "node": "motor_rotor",
+            "axis": [
+              0,
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "processing": {
+        "source_sha256": "f3ed83d1fad531911d73a3a7ac8133a6102d79869f36d917bd24c18bf77fddbb",
+        "source_bytes": 100057,
+        "operations": [
+          "Convert source glTF to self-contained GLB; embed textures",
+          "Preserve authored node hierarchy, material assignments and local rotor pivot",
+          "Runtime adds room reflections and uses the source motor_rotor node to turn the bell and blades only"
+        ]
+      },
+      "src": "content/visualizations/models/sketchfab-drone-motor.glb",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "geometry": "mesh",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 337696,
+      "sha256": "927ec4c14fda885690d51edc95c24bb50c1d6f52235f45ed532c81271a9af955",
+      "extensions_used": [
+        "KHR_materials_specular"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 11,
+      "triangle_count": 6300,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

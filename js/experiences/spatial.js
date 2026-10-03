@@ -5,6 +5,101 @@
     const line = (x1, y1, x2, y2) => svg('line', { x1, y1, x2, y2, stroke: 'currentColor', 'stroke-width': 2 });
     let worldPromise;
     const MIN_DRAWN_PX = 0.5;
+    function createSpatialInput(element, { interaction = {}, onStart, onPan, onEnd }) {
+        const previousTouchAction = element.style.touchAction;
+        const previousUserSelect = element.style.userSelect;
+        let active = null, dragged = 0;
+        const controls = 'button,input,select,textarea,option,a,[contenteditable="true"],[role="button"],.experience-camera-slider';
+        element.style.touchAction = 'none';
+        element.style.userSelect = 'none';
+        const isControl = target => Boolean(target.closest?.(controls));
+        const hover = event => {
+            if (event?.pointerType === 'touch') return;
+            const item = event && !isControl(event.target)
+                ? interaction.pick?.(event.clientX, event.clientY) || null : null;
+            interaction.hover?.(item, event && !isControl(event.target)
+                ? { x: event.clientX, y: event.clientY } : null);
+            element.classList.toggle('is-model-hovered', Boolean(item));
+        };
+        const pointerdown = event => {
+            if (active || event.button !== 0 || isControl(event.target)) return;
+            onStart?.(event);
+            let captured = false;
+            try {
+                element.setPointerCapture(event.pointerId);
+                captured = true;
+            } catch { /* Pointer may already have become inactive. */ }
+            const rotating = interaction.pick?.(event.clientX, event.clientY) || null;
+            if (rotating) interaction.beginRotate?.(rotating, event.timeStamp);
+            interaction.hover?.(null, null);
+            active = {
+                id: event.pointerId, x: event.clientX, y: event.clientY,
+                movedAt: event.timeStamp, velocity: 0, captured,
+                rotating, pointerType: event.pointerType
+            };
+            dragged = 0;
+            event.preventDefault();
+            element.classList.remove('is-model-hovered');
+            element.classList.add('is-dragging');
+        };
+        const pointermove = event => {
+            if (!active) { hover(event); return; }
+            if (event.pointerId !== active.id) return;
+            const dx = event.clientX - active.x;
+            const dy = event.clientY - active.y;
+            active.x = event.clientX;
+            active.y = event.clientY;
+            if (!dx && !dy) return;
+            dragged += Math.hypot(dx, dy);
+            const dt = Math.max(8, event.timeStamp - active.movedAt) / 1000;
+            active.movedAt = event.timeStamp;
+            if (active.rotating) {
+                interaction.hover?.(null, { x: event.clientX, y: event.clientY });
+                interaction.rotate?.(active.rotating, dx, dy, event.timeStamp);
+            } else {
+                active.velocity = 0.65 * active.velocity + 0.35 * -dx * 0.0012 / dt;
+                onPan?.(dx, dy, event);
+            }
+            event.preventDefault();
+        };
+        const finish = (event, canceled = false) => {
+            if (!active || (event.pointerId != null && event.pointerId !== active.id)) return;
+            const gesture = active;
+            active = null;
+            if (gesture.rotating) interaction.releaseRotate?.(gesture.rotating, event.timeStamp);
+            onEnd?.(!canceled && !gesture.rotating && dragged > 5 && event.type === 'pointerup' &&
+                event.timeStamp - gesture.movedAt < 100 ? gesture.velocity : 0, event, canceled);
+            element.classList.remove('is-dragging');
+            if (gesture.captured && event.type !== 'lostpointercapture' &&
+                element.hasPointerCapture?.(gesture.id)) {
+                try { element.releasePointerCapture(gesture.id); } catch { /* Already released. */ }
+            }
+            hover(event.type === 'pointerup' && gesture.pointerType !== 'touch' ? event : null);
+        };
+        const pointerup = event => finish(event);
+        const pointercancel = event => finish(event, true);
+        const lostpointercapture = event => finish(event, true);
+        const pointerleave = () => { if (!active) hover(null); };
+        const dragstart = event => event.preventDefault();
+        const listeners = { pointerdown, pointermove, pointerup, pointercancel, lostpointercapture, pointerleave, dragstart };
+        for (const [name, listener] of Object.entries(listeners)) element.addEventListener(name, listener);
+        return {
+            isControlTarget: isControl,
+            consumeDraggedClick() {
+                const wasDragged = dragged > 5;
+                dragged = 0;
+                return wasDragged;
+            },
+            dispose() {
+                for (const [name, listener] of Object.entries(listeners)) element.removeEventListener(name, listener);
+                if (active) finish({ type: 'pointercancel', pointerId: active.id, timeStamp: active.movedAt }, true);
+                element.style.touchAction = previousTouchAction;
+                element.style.userSelect = previousUserSelect;
+                element.classList.remove('is-dragging', 'is-model-hovered');
+            }
+        };
+    }
+    R.createSpatialInput = createSpatialInput;
     function viewport(ctx) {
         const box = ctx.stage.getBoundingClientRect();
         const width = box.width < 600 ? 560 : 1000;
@@ -97,78 +192,61 @@
             if (!frame) frame = requestAnimationFrame(animate);
         };
         const move = amount => aim(camera.target + amount);
-        zoom.input.addEventListener('input', e => {
+        const sliderInput = e => {
             e.stopImmediatePropagation();
             aim(Number(zoom.input.value));
-        }, true);
-        ctx.stageFrame.addEventListener('wheel', e => {
+        };
+        const wheel = e => {
             e.preventDefault();
             const pixels = (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 400 : 1);
             move(-clamp(pixels * 0.00045, -0.16, 0.16));
-        }, { passive: false });
-        let previous, previousY, dragged = 0, velocity = 0, movedAt = 0, rotating = null;
-        const hover = e => {
-            const item = e && !e.target.closest('.experience-camera-slider')
-                ? interaction.pick?.(e.clientX, e.clientY) || null : null;
-            interaction.hover?.(item, e && !e.target.closest('.experience-camera-slider')
-                ? { x: e.clientX, y: e.clientY } : null);
-            ctx.stageFrame.classList.toggle('is-model-hovered', Boolean(item));
         };
-        ctx.stageFrame.addEventListener('pointerdown', e => {
-            if (e.button !== 0 || e.target.closest('.experience-camera-slider')) return;
-            rotating = interaction.pick?.(e.clientX, e.clientY) || null;
-            if (rotating) interaction.beginRotate?.(rotating, e.timeStamp);
-            previous = e.clientX; previousY = e.clientY; dragged = 0; velocity = 0; movedAt = e.timeStamp;
-            camera.aim(camera.value);
-            e.preventDefault();
-            ctx.stageFrame.classList.remove('is-model-hovered');
-            ctx.stageFrame.classList.add('is-dragging');
-        });
-        ctx.stageFrame.addEventListener('pointermove', e => {
-            if (previous == null) { hover(e); return; }
-            const delta = previous - e.clientX; previous = e.clientX;
-            const deltaY = e.clientY - previousY; previousY = e.clientY;
-            dragged += Math.hypot(delta, deltaY);
-            const dt = Math.max(8, e.timeStamp - movedAt) / 1000;
-            movedAt = e.timeStamp;
-            if (rotating) interaction.hover?.(null, { x: e.clientX, y: e.clientY });
-            if (!rotating) velocity = 0.65 * velocity + 0.35 * delta * 0.0012 / dt;
-            if (dragged > 5) {
-                ctx.stageFrame.setPointerCapture(e.pointerId);
-                if (rotating) interaction.rotate?.(rotating, -delta, deltaY, e.timeStamp);
-                else move(delta * 0.0012);
-                e.preventDefault();
+        zoom.input.addEventListener('input', sliderInput, true);
+        ctx.stageFrame.addEventListener('wheel', wheel, { passive: false });
+        const input = createSpatialInput(ctx.stageFrame, {
+            interaction,
+            onStart: () => {
+                if (frame) cancelAnimationFrame(frame);
+                frame = null; previousTime = null;
+                camera.snap(camera.value);
+            },
+            onPan: dx => {
+                if (frame) cancelAnimationFrame(frame);
+                frame = null; previousTime = null;
+                camera.snap(camera.value - dx * 0.0012);
+                apply();
+            },
+            onEnd: velocity => {
+                if (velocity) move(clamp(velocity * 0.16, -0.6, 0.6));
             }
         });
-        const release = e => {
-            if (previous == null) return;
-            previous = null;
-            if (!rotating && e.type === 'pointerup' && dragged > 5 && e.timeStamp - movedAt < 100) move(clamp(velocity * 0.16, -0.6, 0.6));
-            if (rotating) interaction.releaseRotate?.(rotating, e.timeStamp);
-            rotating = null;
-            if (ctx.stageFrame.hasPointerCapture(e.pointerId)) ctx.stageFrame.releasePointerCapture(e.pointerId);
-            ctx.stageFrame.classList.remove('is-dragging');
-            hover(e.type === 'pointerup' ? e : null);
-        };
-        for (const event of ['pointerup', 'pointercancel', 'lostpointercapture']) ctx.stageFrame.addEventListener(event, release);
-        ctx.stageFrame.addEventListener('pointerleave', e => {
-            hover(null);
-            if (!ctx.stageFrame.hasPointerCapture(e.pointerId)) release(e);
-        });
-        ctx.stageFrame.addEventListener('dragstart', e => e.preventDefault());
-        ctx.stageFrame.addEventListener('click', e => {
-            if (dragged > 5) { e.preventDefault(); e.stopPropagation(); dragged = 0; return; }
+        const click = e => {
+            if (input.isControlTarget(e.target)) { input.consumeDraggedClick(); return; }
+            if (input.consumeDraggedClick()) { e.preventDefault(); e.stopPropagation(); return; }
             const picked = interaction.pick?.(e.clientX, e.clientY);
             if (picked) { e.preventDefault(); e.stopPropagation(); ctx.focus(ctx.items.indexOf(picked)); }
-        }, true);
-        ctx.stageFrame.style.touchAction = 'pan-y';
+        };
+        ctx.stageFrame.addEventListener('click', click, true);
         ctx.stageFrame.tabIndex = 0;
         ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use arrow keys.');
-        ctx.stageFrame.addEventListener('keydown', e => { if (['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); move(e.key === 'ArrowRight' ? 0.15 : -0.15); } });
+        const keydown = e => {
+            if (input.isControlTarget(e.target)) { input.consumeDraggedClick(); return; }
+            if (['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); move(e.key === 'ArrowRight' ? 0.15 : -0.15); }
+        };
+        ctx.stageFrame.addEventListener('keydown', keydown);
         return { update: () => { ctx.updateComparison(); }, frameTo: hop,
             focusOptions: () => ({focusIndex: explicitFocusIndex,
                 focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow}),
-            dispose: () => { disposed = true; cancelAnimationFrame(frame); delete ctx.updateComparison; } };
+            dispose: () => {
+                disposed = true;
+                cancelAnimationFrame(frame);
+                input.dispose();
+                zoom.input.removeEventListener('input', sliderInput, true);
+                ctx.stageFrame.removeEventListener('wheel', wheel);
+                ctx.stageFrame.removeEventListener('click', click, true);
+                ctx.stageFrame.removeEventListener('keydown', keydown);
+                delete ctx.updateComparison;
+            } };
     }
     R.spatial = ctx => {
         const order = { length: 1, area: 2, volume: 3 }[ctx.dimension];
