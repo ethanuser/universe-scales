@@ -194,7 +194,6 @@
             const toolbarActions = dom('div', 'experience-toolbar__actions');
             toolbar.append(toolbarMain, toolbarActions);
             const picker = dom('div', 'experience-picker');
-            const pickerLabel = dom('span', 'experience-picker__label', 'Explore');
             this.select = dom('select', 'experience-select sr-only');
             this.select.tabIndex = -1;
             this.select.setAttribute('aria-hidden', 'true');
@@ -207,9 +206,15 @@
             this.pickerToggle = dom('button', 'experience-picker-toggle');
             this.pickerToggle.type = 'button';
             this.pickerToggle.setAttribute('aria-expanded', 'false');
+            this.pickerToggle.setAttribute('aria-keyshortcuts', 'Control+k Meta+k');
+            this.pickerToggle.title = 'Search items (Ctrl/Cmd+K)';
             this.pickerToggle.setAttribute('aria-controls', 'experience-picker-panel');
             this.pickerCurrent = dom('span', '', this.item.name);
+            this.pickerCurrent.setAttribute('aria-live', 'polite');
+            this.pickerToggle.setAttribute('aria-label', `Choose item, currently ${this.item.name}`);
             this.pickerToggle.append(this.pickerCurrent, dom('span', 'dimension-browser-toggle__chevron', '▾'));
+            this.previous = this.createNavigationButton('previous', 'Previous item', 'M15 5 8 12l7 7');
+            this.next = this.createNavigationButton('next', 'Next item', 'M9 5l7 7-7 7');
             this.pickerPanel = dom('div', 'experience-picker-panel');
             this.pickerPanel.id = 'experience-picker-panel';
             this.pickerPanel.hidden = true;
@@ -231,7 +236,7 @@
             this.pickerEmpty = dom('p', 'experience-picker-empty', 'No items match that search.');
             this.pickerEmpty.hidden = true;
             this.pickerPanel.append(search, options, this.pickerEmpty);
-            picker.append(pickerLabel, this.pickerToggle, this.select, this.pickerPanel);
+            picker.append(this.pickerToggle, this.previous, this.next, this.select, this.pickerPanel);
             toolbarMain.append(picker);
             const closePicker = () => {
                 this.pickerPanel.hidden = true;
@@ -276,12 +281,6 @@
             this.fullscreenButton.setAttribute('aria-pressed', 'false');
             this.fullscreenButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>';
             this.fullscreenButton.addEventListener('click', () => this.toggleFullscreen());
-            this.previous = button(toolbarActions, 'Previous', () =>
-                this.focus(this.index - 1)
-            );
-            this.next = button(toolbarActions, 'Next', () =>
-                this.focus(this.index + 1)
-            );
             this.reset = button(toolbarActions, 'Frame item', () =>
                 this.focus(this.index)
             );
@@ -319,7 +318,14 @@
                     infoButton.setAttribute('aria-expanded', 'false');
                 }
             };
-            const escape = (event) => {
+            const keydown = (event) => {
+                if (this.active && (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k'
+                    && !event.altKey && !event.shiftKey) {
+                    event.preventDefault();
+                    openPicker();
+                    return;
+                }
+                if (this.handleNavigationKey(event)) return;
                 if (event.key !== 'Escape') return;
                 if (this.fullscreenState?.fallback) {
                     this.exitFullscreen();
@@ -331,10 +337,10 @@
                 this.pickerToggle.focus();
             };
             document.addEventListener('pointerdown', outside);
-            document.addEventListener('keydown', escape);
+            document.addEventListener('keydown', keydown);
             this.toolbarCleanup = () => {
                 document.removeEventListener('pointerdown', outside);
-                document.removeEventListener('keydown', escape);
+                document.removeEventListener('keydown', keydown);
                 this.fullscreenButton = null;
             };
             this.clock.reset();
@@ -433,10 +439,32 @@
                 ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5" /></svg>'
                 : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>';
         }
+        createNavigationButton(direction, label, path) {
+            const control = dom('button', `experience-nav-button experience-nav-button--${direction}`);
+            control.type = 'button';
+            control.title = label;
+            control.setAttribute('aria-label', label);
+            control.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${path}" /></svg>`;
+            control.addEventListener('click', () =>
+                this.focus(this.index + (direction === 'next' ? 1 : -1))
+            );
+            return control;
+        }
+        handleNavigationKey(event) {
+            if (!this.active || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return false;
+            if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return false;
+            if (event.target?.closest?.('input, select, textarea, [contenteditable]:not([contenteditable="false"]), [role="textbox"]')) return false;
+            event.preventDefault();
+            const nextIndex = this.index + (event.key === 'ArrowRight' ? 1 : -1);
+            if (nextIndex >= 0 && nextIndex < this.items.length && nextIndex !== this.index)
+                this.focus(nextIndex);
+            return true;
+        }
         focus(index, frame = true) {
             this.index = clamp(index, 0, this.items.length - 1);
             this.select.value = this.index;
             if (this.pickerCurrent) this.pickerCurrent.textContent = this.item.name;
+            this.pickerToggle?.setAttribute('aria-label', `Choose item, currently ${this.item.name}`);
             this.pickerButtons?.forEach((option, optionIndex) => {
                 option.classList.toggle('is-active', optionIndex === this.index);
                 option.setAttribute('aria-current', optionIndex === this.index ? 'true' : 'false');

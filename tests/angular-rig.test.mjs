@@ -3,6 +3,20 @@ import assert from 'node:assert/strict';
 import * as THREE from '../js/vendor/three/three.module.min.js';
 import { createAngularRig } from '../js/experiences/angular-rig.js';
 
+test('face-on clockwise convention preserves geared counter-rotation', () => {
+    const root = new THREE.Group(), rotor = new THREE.Group(), geared = new THREE.Group();
+    rotor.name = 'Rotor'; geared.name = 'Geared'; root.add(rotor, geared);
+    root.rotation.x = Math.PI / 6;
+    const rig = createAngularRig(root, { rotations: [
+        { node: 'Rotor', axis: [0, 1, 0] }, { node: 'Geared', axis: [0, 1, 0], ratio: -0.5 }
+    ] });
+    rig.faceCamera();
+    assert.equal(rig.rotations[1].ratio / rig.rotations[0].ratio, -0.5);
+    rig.setPhase(Math.PI / 2);
+    assert.ok(Math.abs(rotor.quaternion.angleTo(new THREE.Quaternion()) - Math.PI / 2) < 1e-7);
+    assert.ok(Math.abs(geared.quaternion.angleTo(new THREE.Quaternion()) - Math.PI / 4) < 1e-7);
+});
+
 test('rotor turns about its own spindle without moving the fixture or accumulating phase', () => {
     const root = new THREE.Group(), fixture = new THREE.Group(), rotor = new THREE.Group();
     fixture.name = 'Housing'; rotor.name = 'Rotor';

@@ -6,6 +6,12 @@ moving assembly has an explicit node and a local spindle axis. Its orientation
 is computed from its authored pose on every frame, with no accumulated drift.
 Cabinets, dials, tonearms, forks, jar walls and housings stay fixed.
 
+The camera looks along the main spindle, perpendicular to the screen. Clockwise
+is a consistent display convention for the dataset's unsigned speed magnitudes.
+The same sign change applies to every geared member so relative ratios survive.
+Earth and Jupiter are viewed from the south pole, where their usual spin appears
+clockwise. The blender's lid is removed for this axial inspection view.
+
 Procedural mechanisms are authored illustrations under the repository's MIT
 code license. Their proportions are illustrative and are not length measurements.
 They are generated locally; no remote geometry or runtime API is required.
@@ -15,6 +21,28 @@ The 337,696-byte [drone motor by arsdever](https://sketchfab.com/3d-models/brush
 is CC BY 4.0. The GLB retains the authored hierarchy: motor_rotor and its blades
 turn around local Z, while motor_stator and motor_coils remain fixed. Room
 reflections are added at runtime. The shaft is Y-up after the source transforms.
+
+## October 13 sourced additions
+
+- [devkrsm's four-cylinder engine](https://sketchfab.com/3d-models/4-cylinder-engine-448e9e6fdd0c469ba14573f1a35c2ee0),
+  CC BY 4.0: retain the existing `Crank Shaft:1_4` subtree with
+  `scripts/extract_glb_node.py`, then glTF Transform 4.5.0 `prune --keep-leaves true`.
+  The 406 kB result has 7,560 triangles. Pistons and rods are omitted so they
+  cannot misleadingly remain stationary or disconnect while the crank turns.
+  The loader sanitizes the binding name to `Crank_Shaft1_4`; the local spindle
+  is Z. The front-on view emphasizes angular displacement, with depth foreshortened.
+- [NASA VTAD Saturn](https://science.nasa.gov/resource/saturn-3d-model/): source
+  globe and ring topology retained; embedded textures resized to at most 1024 px
+  with glTF Transform 4.5.0 `resize`. The self-contained GLB is 727 kB and 3,328
+  triangles. Only `Saturn001` rotates around Y; `RingsTop` and `RingsBottom` remain
+  stationary context. Ring-particle orbital motion and atmospheric differential
+  rotation are not simulated. NASA media guidelines, rather than CC0, apply.
+
+Rejected candidates remain outside the repository: the turbocharger compressor
+is not an industrial gas turbine or dentist's turbine; the low-detail helicopter
+rotor and duplicated cartoon mitochondrion do not improve the current visuals.
+The downloaded London Eye needs a separately verified wheel/cabin/support rig
+before import. No invented replacement geometry was added in this batch.
 
 ## References and representation
 
@@ -37,8 +65,7 @@ reflections are added at runtime. The shaft is Y-up after the source transforms.
 - Hard drive: [Seagate component diagram](https://www.seagate.com/support/disc/manuals/ata/1621pma.pdf).
 - Blender: [Vitamix blade/container manual](https://www.vitamix.com/media/catalog/product/file/Container-Use-and-Care-Owners-Manual.pdf).
 
-The small separate phase dial measures completed turns; its projected direction
-is not the three-dimensional spindle orientation. Above eight turns per real
+The small separate phase dial measures completed turns clockwise. Above eight turns per real
 second, both the model and phase dial freeze under the existing aliasing rule.
 The interface labels this as a static view, and Fit time to item exposes motion.
 

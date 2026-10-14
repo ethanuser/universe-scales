@@ -249,7 +249,7 @@ test('angular orbit moves its object, spin advances phase without rotating photo
     spin.renderer.render(0.25);
     const guide = spin.stage.all((node) => node.attributes.class === 'motion-phase-guide')[0];
     assert.equal(Number(guide.attributes.x2), 500);
-    assert.equal(Number(guide.attributes.y2), 110);
+    assert.equal(Number(guide.attributes.y2), 330, 'quarter turn moves downward from 3 oclock: clockwise');
     assert.equal(spin.stage.all((node) => Boolean(node.attributes.transform)).length, 0);
     const sound = fixture('sound-frequency', [1], ['Ceiling fan']).ctx;
     sound.renderer.render(0.25);
@@ -365,7 +365,7 @@ test('late registry results render current time but cannot redraw a disposed ren
         if (dispose) assert.equal(ctx.stage.children, before);
         else {
             const guide = ctx.stage.all((node) => node.attributes.class === 'motion-phase-guide')[0];
-            assert.equal(Number(guide.attributes.y2), 110);
+            assert.equal(Number(guide.attributes.y2), 330);
         }
     }
 });

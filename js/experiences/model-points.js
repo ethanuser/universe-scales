@@ -28,5 +28,23 @@ export function prepareModelPoints(scene) {
         node.material.transparent = true;
         node.material.depthWrite = false;
         node.material.alphaTest = 0.005;
+        // Points have no front/back faces. GLTF's double-sided transparent
+        // material otherwise sends the entire cloud through the GPU twice.
+        node.material.forceSinglePass = true;
+        const count = node.geometry.getAttribute('position')?.count || 0;
+        if (!node.userData.pointSize || count < 1000 || node.userData.pointLOD) return;
+        node.geometry = node.geometry.clone();
+        const indices = node.geometry.index ? Array.from(node.geometry.index.array)
+            : Array.from({ length: count }, (_, index) => index);
+        // Image-derived clouds arrive in scanline order. A deterministic
+        // permutation keeps every reduced prefix spread across the whole cloud.
+        let seed = 0x5ca1e;
+        for (let i = indices.length - 1; i > 0; i--) {
+            seed = (Math.imul(1664525, seed) + 1013904223) >>> 0;
+            const j = Math.floor(seed / 4294967296 * (i + 1));
+            [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+        node.geometry.setIndex(indices);
+        node.userData.pointLOD = { fullPixels: 240, minimum: 128, mobileMaximum: 10000 };
     });
 }

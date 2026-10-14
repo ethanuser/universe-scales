@@ -1,6 +1,43 @@
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
-const {layout,frameExponent,Camera,BASELINE}=require('../js/experiences/journey.js');
+const {layout,frameExponent,Camera,FocusTransition,BASELINE}=require('../js/experiences/journey.js');
+test('item hops blend lateral framing from the exact current pose, including equal sizes',()=>{
+    const items=[1,1,1.01,1.03,2].map(value=>({value}));
+    const focus=new FocusTransition();focus.set(0,0,1);
+    const camera=new Camera(0,-1,2);
+    const scene=()=>layout(items,camera.value,1,focus.options());
+    for(const index of [1,2,3,0]){
+        const before=scene(),target=Math.log10(items[index].value);
+        focus.glide(index,target,1,1);camera.glide(target,1);
+        assert.deepEqual(scene(),before,'button press itself changes no camera coordinates');
+        camera.step(1/60);focus.step(1/60);
+        const first=scene();
+        first.forEach((entry,i)=>assert.ok(Math.abs(entry.x-before[i].x)<1,'first frame eases in'));
+        let previous=first;
+        for(let frame=1;frame<=60;frame++){
+            camera.step(1/60);focus.step(1/60);const next=scene();
+            next.forEach((entry,i)=>{
+                assert.ok(Math.abs(entry.x-previous[i].x)<65,'no one-frame teleport');
+                assert.equal(entry.worldX,before[i].worldX,'objects keep their virtual positions');
+            });
+            previous=next;
+        }
+        assert.ok(Math.abs(scene()[index].x-500)<1e-8);
+        assert.equal(focus.moving,false);
+    }
+});
+test('redirecting and interrupting a focus glide preserves its currently displayed pose',()=>{
+    const items=[1,1,1,1].map(value=>({value}));
+    const focus=new FocusTransition();focus.set(0,0);
+    focus.glide(1,0,.3,1);focus.step(.3);
+    const before=layout(items,0,1,focus.options());
+    focus.glide(3,0,.3,1);
+    assert.deepEqual(layout(items,0,1,focus.options()),before);
+    focus.step(.2);
+    const interrupted=layout(items,0,1,focus.options());
+    focus.stop();focus.step(1);
+    assert.deepEqual(layout(items,0,1,focus.options()),interrupted);
+});
 test('tight clusters remain ordered and move continuously',()=>{
     const items=[1,1,1.5,10,100].map(value=>({value}));
     for(let exponent=-1;exponent<=2;exponent+=.01){

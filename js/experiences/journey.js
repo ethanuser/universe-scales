@@ -3,6 +3,33 @@
     const BASELINE = 405;
     const BASE_SIZE = 370;
     const CENTER_X = 500;
+    const smoothstep = u => u * u * u * (u * (6 * u - 15) + 10);
+    // Blend lateral framing alongside zoom, including interrupted hops and
+    // equal-size neighbors whose camera exponent does not change at all.
+    class FocusTransition {
+        constructor() { this.targets = []; this.moving = false; }
+        set(index, exponent, window = 0.3) {
+            this.targets = [{ focusIndex: index, focusExponent: exponent, focusWindow: window, weight: 1 }];
+            this.moving = false;
+        }
+        glide(index, exponent, window, seconds) {
+            this.from = this.targets.map(target => ({ ...target }));
+            this.to = { focusIndex: index, focusExponent: exponent, focusWindow: window, weight: 1 };
+            this.elapsed = 0; this.seconds = seconds; this.moving = true;
+        }
+        stop() { this.moving = false; }
+        step(dt) {
+            if (!this.moving) return false;
+            this.elapsed += dt;
+            const u = Math.min(1, this.elapsed / this.seconds), blend = smoothstep(u);
+            this.targets = this.from.map(target => ({ ...target, weight: target.weight * (1 - blend) }))
+                .filter(target => target.weight > 1e-12);
+            this.targets.push({ ...this.to, weight: blend });
+            if (u === 1) { this.targets = [this.to]; this.moving = false; }
+            return this.moving;
+        }
+        options() { return { focusTargets: this.targets }; }
+    }
     // Two motions share one camera. Wheel and drag use an exact critically
     // damped spring (stable at any refresh rate, no overshoot). Item-to-item
     // hops use `glide`: a fixed-duration smootherstep, because between items of
@@ -22,7 +49,7 @@
             if (this.glideTime != null) {
                 this.glideTime += dt;
                 const u = Math.min(1, this.glideTime / this.glideSeconds);
-                this.value = this.glideFrom + (this.target - this.glideFrom) * u * u * u * (u * (6 * u - 15) + 10);
+                this.value = this.glideFrom + (this.target - this.glideFrom) * smoothstep(u);
                 if (u >= 1) { this.glideTime = null; this.value = this.target; }
                 return this.glideTime != null;
             }
@@ -88,13 +115,14 @@
                 (anchors[segment + 1]?.position - anchors[segment].position || 0) * fraction;
         };
         let cameraWorld = cameraAt(cameraLength);
-        if (Number.isInteger(options.focusIndex) && world[options.focusIndex] != null) {
-            const focused = options.focusIndex;
-            const focusExponent = options.focusExponent ?? logs[focused];
+        for (const target of options.focusTargets ?? [options]) {
+            if (!Number.isInteger(target.focusIndex) || world[target.focusIndex] == null) continue;
+            const focused = target.focusIndex;
+            const focusExponent = target.focusExponent ?? logs[focused];
             const distance = Math.min(1, Math.abs(exponent - focusExponent) /
-                (options.focusWindow ?? 0.3));
+                (target.focusWindow ?? 0.3));
             const blend = (1 - distance * distance) ** 2;
-            cameraWorld += (world[focused] - cameraAt(10 ** focusExponent)) * blend;
+            cameraWorld += (world[focused] - cameraAt(10 ** focusExponent)) * blend * (target.weight ?? 1);
         }
         const pixelsPerUnit = BASE_SIZE / cameraLength;
         return items.map((item, index) => {
@@ -111,6 +139,6 @@
     function frameExponent(items, index, order = 1, options = {}) {
         return Math.log10(items[index].value) / order;
     }
-    root.ScaleJourney = { layout, frameExponent, Camera, BASELINE, BASE_SIZE, TRAVEL_PER_DECADE };
+    root.ScaleJourney = { layout, frameExponent, Camera, FocusTransition, BASELINE, BASE_SIZE, TRAVEL_PER_DECADE };
     if (typeof module !== 'undefined') module.exports = root.ScaleJourney;
 })(globalThis);

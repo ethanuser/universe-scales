@@ -149,7 +149,7 @@ const specifications = [
         'The disk platters and spindle rotate together. The exposed housing and read/write actuator stay fixed. The cover is removed for visibility; the diagram does not simulate seeking or magnetic bits.', 38, -15,
         'https://www.seagate.com/support/disc/manuals/ata/1621pma.pdf'],
     ['blender', ['Blender blade'], [0, 1, 0],
-        'Only the blade assembly and central shaft rotate. The base and jar remain fixed. The jar is an illustrative cutaway to reveal the blade, with no fluid simulation.', 25, -25,
+        'Only the blade assembly and central shaft rotate. The base and jar remain fixed. The lid is removed and the jar is an illustrative cutaway to reveal the blade, with no fluid simulation.', 25, -25,
         'https://www.vitamix.com/media/catalog/product/file/Container-Use-and-Care-Owners-Manual.pdf'],
     ['microwave', ['Microwave turntable'], [0, 1, 0],
         'The turntable, plate and food rotate together inside a stationary cavity. The roof and door are omitted to show the mechanism; this does not simulate the microwave field.', 28, -20,
@@ -162,7 +162,8 @@ export const angularModelEntries = Object.fromEntries(specifications.flatMap(([k
     const entry = { id: `angular-${kind}`, procedural: 'angular-machine', angular_kind: kind,
         geometry: 'mesh', representation: 'illustrative-mechanism', author: 'Universe Scales', license: 'MIT',
         matches: { 'angular-velocity': names }, source, note,
-        presentation: { pitch, yaw }, angular_motion: { rotations: [{ node: 'Rotor', axis,
+        presentation: { pitch, yaw, ...(kind === 'blender' ? {
+            remove_nodes: ['pitcher lid', 'lid perimeter seal', 'lid center plug'] } : {}) }, angular_motion: { rotations: [{ node: 'Rotor', axis,
             ratio: kind === 'record-player' ? -1 : 1 }] } };
     return names.map(name => [name, entry]);
 }));
@@ -183,8 +184,8 @@ export function angularEntry(item, entries) {
         angular_motion: { rotations: [{ node: 'ceiling_fan_blades', axis: [0, 1, 0] }] } };
     if (['nasa-earth', 'nasa-jupiter'].includes(entry.id)) return { ...entry,
         presentation: { ...entry.presentation, roll: -12 },
-        note: `${entry.note} The globe rotates around its polar axis at the listed angular speed. The camera tilt is for visibility; atmospheric differential rotation is not simulated.`,
-        angular_motion: { rotations: [{ node: '$model', axis: [0, 1, 0] }] } };
+        note: `${entry.note} Viewed along the polar axis from the south pole, the globe turns clockwise at the listed angular speed. Atmospheric differential rotation is not simulated.`,
+        angular_motion: { view_side: 'negative', rotations: [{ node: '$model', axis: [0, 1, 0] }] } };
     return entry.angular_motion ? entry : null;
 }
 

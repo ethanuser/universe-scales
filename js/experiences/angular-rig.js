@@ -15,6 +15,21 @@ export function createAngularRig(root, specification) {
     const delta = new THREE.Quaternion();
     return {
         rotations,
+        faceCamera(side) {
+            root.updateMatrixWorld(true);
+            const axis = rotations[0].axis.clone().transformDirection(rotations[0].node.matrixWorld);
+            // Keep the visible end of the spindle, then look straight along it.
+            const sign = side === 'negative' ? -1 : side === 'positive' ? 1 : axis.z < -1e-6 ? -1 : 1;
+            const target = new THREE.Vector3(0, 0, sign);
+            root.quaternion.premultiply(new THREE.Quaternion().setFromUnitVectors(axis, target));
+            root.updateMatrixWorld(true);
+            // Reverse the whole mechanism together, retaining gearing and any
+            // counter-rotation (e.g. level gondolas on a Ferris wheel).
+            const direction = rotations[0].axis.clone().transformDirection(rotations[0].node.matrixWorld);
+            const flip = -Math.sign(direction.z * rotations[0].ratio);
+            for (const rotation of rotations) rotation.ratio *= flip;
+            return root.quaternion.clone();
+        },
         setPhase(phase) {
             if (!Number.isFinite(phase)) throw new Error('Angular phase must be finite');
             for (const { node, axis, ratio, rest } of rotations) {

@@ -130,7 +130,7 @@
             translating
                 ? `${notes[dim]} Both lanes start at $x=0$ and share the same distance and simulated time. Dots mark four equal time intervals, not equal distances. Each trial restarts both lanes when the selected item reaches the end; that reset is not a physical reversal or sudden braking. Images are identifiers, not scaled lengths. This is a hypothetical straight-line, constant-value model, not a reconstruction of impacts, gravity fields, or centripetal motion. A linear acceleration alone cannot determine a rotation rate without a radius and a motion model. Classical equations cease to apply near relativistic speeds. Above two trials per real second, the view shows a labeled static timing diagram instead of misleading sampled motion.`
                 : angular
-                  ? 'Angular velocity measures angle per second: $\\theta=\\omega t$. One turn is $2\\pi$ radians, so $f=\\omega/(2\\pi)$ and the period is $T=2\\pi/\\omega$. Models rotate only their moving parts about the mechanical spindle; housings stay fixed. Clocks show the selected hand sweeping clockwise. Other machine directions are illustrative because the dataset gives speed magnitudes. The separate circular marker counts turns rather than depicting the model axis. Orbital examples move around a center. Where no suitable model is available, reference photos stay fixed and only the phase marker moves. Apparatus proportions are illustrative. Time controls change simulated time; Fit time to item makes very slow or fast motion visible. Above eight turns per real second the diagram is static to avoid misleading aliasing.'
+                  ? 'Angular velocity measures angle per second: $\\theta=\\omega t$. One turn is $2\\pi$ radians, so $f=\\omega/(2\\pi)$ and the period is $T=2\\pi/\\omega$. The view looks along each spindle: clockwise is the display convention for these speed magnitudes. Planets are viewed from the south pole. Only moving assemblies rotate; fixtures stay fixed. The circular marker counts turns. Orbital examples move around a center; reference photos stay fixed when no suitable model is available. Apparatus proportions are illustrative. Fit time to item makes slow or fast motion visible. Above eight turns per real second the diagram freezes to avoid misleading aliasing.'
                   : `${dim === 'sound-frequency' ? 'Sound frequency counts pressure cycles per second, not the movement of a pictured animal or instrument. The marker and sine wave are schematic timing guides, not a measured waveform, sound level, or wavelength. This visualization does not play sound.' : 'Frequency counts cycles per second. Explicit orbital examples revolve, rotation examples spin, and heartbeat or breathing examples pulse. Other examples use a schematic oscillator; its displacement and shape are illustrative, not measurements.'} The period is $T=1/f$ and the phase is $\\phi=2\\pi ft$. One complete orbit, pulse, or back-and-forth represents one cycle. Time controls change simulated time, not the recorded frequency. Above eight cycles per real second the diagram is static to avoid misleading aliasing.`
         );
 
@@ -240,6 +240,7 @@
             const y = 220;
             const state = cycleState(dim, item.value, time, ctx.clock.rate);
             const { phase, unresolved } = state;
+            const screenPhase = angular ? -phase : phase;
             const kind = visualKind(dim, item.name);
             if (kind === 'orbit' || kind === 'spin') {
                 const modeled = kind === 'spin' && modelStage?.draw(item, x, y + 120, 270, phase);
@@ -257,10 +258,10 @@
                     })
                 );
                 const spoke = svg('line', {
-                    x1: markerX + (kind === 'spin' ? (radius - 10) * Math.cos(phase) : 0),
-                    y1: markerY - (kind === 'spin' ? (radius - 10) * Math.sin(phase) : 0),
-                    x2: markerX + radius * Math.cos(phase),
-                    y2: markerY - radius * Math.sin(phase),
+                    x1: markerX + (kind === 'spin' ? (radius - 10) * Math.cos(screenPhase) : 0),
+                    y1: markerY - (kind === 'spin' ? (radius - 10) * Math.sin(screenPhase) : 0),
+                    x2: markerX + radius * Math.cos(screenPhase),
+                    y2: markerY - radius * Math.sin(screenPhase),
                     stroke: 'var(--accent-color)',
                     'stroke-width': 3,
                     class: 'motion-phase-guide'
@@ -273,8 +274,8 @@
                     ctx.object(
                         ctx.stage,
                         item,
-                        x + 110 * Math.cos(phase),
-                        y - 110 * Math.sin(phase) + 25,
+                        x + 110 * Math.cos(screenPhase),
+                        y - 110 * Math.sin(screenPhase) + 25,
                         50,
                         50
                     );

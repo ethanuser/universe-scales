@@ -4,6 +4,39 @@ Start here if you are an AI agent (Codex, Claude, ...) or a new contributor pick
 up this repo. It is the shortest path to being productive; the longer READMEs linked
 below hold the details. Keep this file current when you change workflows.
 
+## 2026-10-13 continuation
+
+- Explorer arrows are grouped after the item selector; Left/Right navigate items
+  and Ctrl/Cmd+K opens its search. Info/fullscreen controls are both 44 px. Native
+  range inputs have custom theme/sky-aware styling. Footer repository URL corrected;
+  music uses `preload="none"`.
+- `FocusTransition` in `journey.js` eases the lateral framing correction alongside
+  zoom. It preserves the current pose through equal-size hops, repeated presses,
+  and interrupted glides. Do not immediately replace the focus correction when
+  starting a camera hop: that caused the reported teleport.
+- `model_lab.cjs navigation /tmp/navigation` tests immediate position continuity,
+  held target selection, repeated keys, arrow order, equal buttons and search.
+  `performance --gpu --trace /tmp/trace.json` measures actual frame intervals,
+  isolates visible models, and captures Chromium graphics work. JS timings alone
+  missed the Milky Way slowdown. Tiny neighboring Tarantula points were submitted
+  twice; opted-in clouds now use a single pass and deterministic full-cloud LOD
+  prefixes. Full detail returns at 240 CSS px; desktop Milky Way frame intervals
+  improved from ~50 to ~33 ms in SwiftShader and mobile emulation measured ~16.7 ms.
+  These are software-renderer results, not hardware-phone guarantees.
+- Angular rigs align the spindle with the camera and use clockwise display motion,
+  retaining relative gear ratios. Earth/Jupiter/Saturn are south-polar views. The
+  blender lid is omitted to expose its blades. Imported NASA Saturn (727 kB) and
+  devkrsm's CC-BY engine crankshaft (406 kB); rings stay fixed context, and engine
+  pistons/rods are omitted. No fabricated replacement geometry was added.
+- `scripts/extract_glb_node.py` retains a named subtree and ancestor transforms;
+  follow it with glTF Transform prune. It rejects skinned/animated sources.
+- Browser navigation and 13 mobile/fullscreen checks pass. Asset GLBs verify;
+  full provenance verification still reports the pre-existing Kenney license
+  checksum mismatch. No dataset quantities or plaque prose changed.
+- Final Node suite: 207 passing tests. Length audit loads all 65 models without
+  errors, with Laniakea still photo-only; size flags are the proton profile,
+  DNA and virus representations. This batch does not revise those definitions.
+
 ## What this is
 
 A static site (no build step, GitHub Pages) that visualizes quantities across many

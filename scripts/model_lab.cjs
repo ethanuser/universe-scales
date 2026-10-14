@@ -19,8 +19,10 @@
 //       Angular-model screenshots at rest/quarter turn and rotor/housing checks.
 //   node scripts/model_lab.cjs mobile OUT_DIR
 //       Real touch gestures, slider isolation, mobile/fullscreen layout and exits.
-//   node scripts/model_lab.cjs performance ["Item"] [--mobile]
-//       Continuous rotation frame timings in the production size explorer.
+//   node scripts/model_lab.cjs navigation OUT_DIR
+//       Adjacent-item camera continuity, repeated arrow keys and toolbar/search controls.
+//   node scripts/model_lab.cjs performance ["Item"] [--mobile] [--gpu] [--trace /tmp/trace.json]
+//       Actual frame and JS timings; --gpu isolates visible models, --trace records Chromium GPU/paint work.
 //   node scripts/model_lab.cjs labels ["Item" ...] [--zooms 0.35,0.6,1,1.5] [--views rest,side]
 //       Check rendered label collisions over zoom/rotation; exits nonzero on overlap or load errors.
 //
@@ -93,6 +95,54 @@ const describe = m => `${m.name.padEnd(34)} ${String(m.model || 'photo').padEnd(
         (m.warnings.length ? `  !! ${m.warnings.join('; ')}` : '') : m.model ? 'FAILED TO LOAD' : '');
 
 const commands = {
+    async navigation({ positional }) {
+        const [out = '/tmp/navigation-model-lab'] = positional;
+        fs.mkdirSync(out, { recursive: true });
+        await withBrowser('1280x900', async (page, base, errors) => {
+            await page.goto(`${base}/?dimension=length&item=Hydrogen%20Atom`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer && globalThis.ScaleModels);
+            await page.waitForTimeout(2500);
+            const result = await page.evaluate(async () => {
+                const view = app.experiences, original = ScaleJourney.layout;
+                ScaleJourney.layout = (...args) => {
+                    const entries = original(...args);
+                    globalThis.navigationLayout = entries;
+                    return entries;
+                };
+                view.renderer.render();
+                const index = view.index, before = navigationLayout[index].x;
+                view.next.click();
+                const immediateJump = Math.abs(navigationLayout[index].x - before);
+                const samples = [];
+                for (let i = 0; i < 90; i++) {
+                    await new Promise(requestAnimationFrame);
+                    samples.push({ x: navigationLayout[index].x, index: view.index });
+                }
+                const settled = view.index;
+                document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+                await new Promise(requestAnimationFrame);
+                const during = view.index;
+                document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+                await new Promise(requestAnimationFrame);
+                const repeated = view.index;
+                const rect = element => element.getBoundingClientRect().toJSON();
+                const picker = rect(view.pickerToggle), previous = rect(view.previous), next = rect(view.next);
+                return { immediateJump, maxFrameStep: Math.max(...samples.slice(1).map((p,i)=>Math.abs(p.x-samples[i].x))),
+                    targetHeld: samples.every(p => p.index === index + 1), settled, expectedSettled: index + 1,
+                    repeatedAdvance: during === settled + 1 && repeated === settled + 2,
+                    arrowsAfterSelector: previous.left >= picker.right && next.left >= previous.right,
+                    equalButtonSizes: rect(view.fullscreenButton).height === rect(document.querySelector('.experience-info__button')).height };
+            });
+            await page.keyboard.press('Control+k');
+            result.searchFocused = await page.locator('.experience-picker-search').evaluate(node => node === document.activeElement);
+            await page.keyboard.press('Escape');
+            await page.locator('.experience-toolbar').screenshot({ path: path.join(out, 'toolbar.png') });
+            console.log(JSON.stringify({ ...result, errors }, null, 2));
+            if (result.immediateJump > 0.01 || result.maxFrameStep > 100 || !result.targetHeld ||
+                result.settled !== result.expectedSettled || !result.repeatedAdvance || !result.arrowsAfterSelector ||
+                !result.equalButtonSizes || !result.searchFocused || errors.length) process.exitCode = 1;
+        });
+    },
     async mobile({ positional }) {
         const [out = '/tmp/mobile-model-lab'] = positional;
         fs.mkdirSync(out, { recursive: true });
@@ -252,8 +302,30 @@ const commands = {
             });
             await page.waitForFunction(() => globalThis.performanceStage?.instances.get(app.experiences.item));
             await page.waitForTimeout(2000);
-            const result = await page.evaluate(async () => {
+            const session = options.trace ? await page.context().newCDPSession(page) : null;
+            if (session) await session.send('Tracing.start', { categories: 'devtools.timeline,gpu,disabled-by-default-devtools.timeline.frame', transferMode: 'ReturnAsStream' });
+            const result = await page.evaluate(async (gpu) => {
                 const view = app.experiences, stage = performanceStage, times = [], intervals = [];
+                const gpuCases = [];
+                if (gpu) {
+                    const instances = [...stage.instances].filter(([, instance]) => instance?.visible);
+                    const measure = async (label, includes) => {
+                        for (const [item, instance] of instances) instance.visible = includes(item);
+                        const durations = [];
+                        let previous;
+                        for (let i = 0; i < 25; i++) {
+                            const now = await new Promise(requestAnimationFrame);
+                            if (i > 5) durations.push(now - previous);
+                            previous = now;
+                            stage.renderer.render(stage.scene, stage.camera);
+                        }
+                        gpuCases.push({ label, frameMedianMs: durations.sort((a,b) => a-b)[Math.floor(durations.length / 2)],
+                            ...stage.renderer.info.render });
+                    };
+                    await measure('whole scene', () => true);
+                    for (const [item] of instances) await measure(item.name, other => other === item);
+                    for (const [, instance] of instances) instance.visible = true;
+                }
                 let bufferResizes = 0, stationaryHullReuses = 0;
                 const setSize = stage.renderer.setSize.bind(stage.renderer);
                 stage.renderer.setSize = (...args) => { bufferResizes++; return setSize(...args); };
@@ -276,17 +348,36 @@ const commands = {
                 const percentile = (values, p) => [...values].sort((a, b) => a - b)[Math.floor((values.length - 1) * p)];
                 const visible = [...stage.instances].filter(([, instance]) => instance?.visible).map(([item, instance]) => {
                     let points = 0, drawn = 0;
+                    const clouds = [];
                     instance.traverse(node => {
                         if (!node.isPoints || !node.visible) return;
                         points += node.geometry.attributes.position.count;
                         drawn += Math.min(node.geometry.drawRange.count, node.geometry.attributes.position.count);
+                        clouds.push({ name: node.name, pointSize: node.material.size, attenuated: node.material.sizeAttenuation });
                     });
-                    return { name: item.name, points, drawn, pickPoints: instance.userData.pickPoints.length };
+                    return { name: item.name, points, drawn, pickPoints: instance.userData.pickPoints.length, ...(gpu ? { clouds } : {}) };
                 });
                 return { item: view.item.name, medianMs: percentile(times, 0.5), p95Ms: percentile(times, 0.95),
                     frameMedianMs: percentile(intervals, 0.5), bufferResizes, stationaryHullReuses,
-                    pixelRatio: stage.renderer.getPixelRatio(), visible };
-            });
+                    pixelRatio: stage.renderer.getPixelRatio(), visible, ...(gpu ? { gpuCases } : {}) };
+            }, Boolean(options.gpu));
+            if (session) {
+                const completed = new Promise(resolve => session.once('Tracing.tracingComplete', resolve));
+                await session.send('Tracing.end');
+                const { stream } = await completed;
+                let raw = '';
+                for (;;) {
+                    const chunk = await session.send('IO.read', { handle: stream });
+                    raw += chunk.data;
+                    if (chunk.eof) break;
+                }
+                await session.send('IO.close', { handle: stream });
+                const events = JSON.parse(raw).traceEvents, totals = {};
+                for (const event of events) if (event.ph === 'X' && event.dur)
+                    totals[event.name] = (totals[event.name] || 0) + event.dur / 1000;
+                result.trace = Object.entries(totals).sort((a,b) => b[1]-a[1]).slice(0,25);
+                if (typeof options.trace === 'string') fs.writeFileSync(options.trace, raw);
+            }
             console.log(JSON.stringify({ ...result, errors }, null, 2));
         }, Boolean(options.mobile));
     },
@@ -322,10 +413,12 @@ const commands = {
                         const instance = view.renderer.modelStage.instances.get(view.item);
                         instance.updateMatrixWorld(true);
                         const rig = instance.userData.angularRig;
-                        const stationary = ['Housing', 'ceiling_fan', 'motor_stator', 'motor_coils']
+                        const stationary = ['Housing', 'ceiling_fan', 'motor_stator', 'motor_coils', 'RingsTop', 'RingsBottom']
                             .map(name => instance.getObjectByName(name)).filter(Boolean);
                         return { rotors: rig.rotations.map(rotation => ({ name: rotation.node.name,
-                            quaternion: rotation.node.quaternion.toArray(), pivot: rotation.node.position.toArray() })),
+                            quaternion: rotation.node.quaternion.toArray(), pivot: rotation.node.position.toArray(),
+                            axis: rotation.axis.clone().transformDirection(rotation.node.matrixWorld).toArray(),
+                            ratio: rotation.ratio })),
                             housing: stationary.map(node => ({ name: node.name, matrix: node.matrixWorld.toArray() })) };
                     }, phase));
                     await page.locator('.experience-stage-frame').screenshot({ path: path.join(out,
@@ -336,6 +429,8 @@ const commands = {
                 const fixed = JSON.stringify(snapshots[0].housing) === JSON.stringify(snapshots[1].housing);
                 const pivotsFixed = snapshots[0].rotors.every((rotor, index) =>
                     JSON.stringify(rotor.pivot) === JSON.stringify(snapshots[1].rotors[index].pivot));
+                const clockwiseAxial = snapshots.every(snapshot => snapshot.rotors.every(rotor =>
+                    Math.hypot(rotor.axis[0], rotor.axis[1]) < 1e-5 && rotor.axis[2] * rotor.ratio < 0));
                 const frozen = await page.evaluate(() => {
                     const view = app.experiences;
                     const rig = view.renderer.modelStage.instances.get(view.item).userData.angularRig;
@@ -346,11 +441,11 @@ const commands = {
                     return JSON.stringify(before) === JSON.stringify(rig.rotations.map(rotation => rotation.node.quaternion.toArray()))
                         && view.stage.textContent.includes('Too fast to resolve');
                 });
-                results.push({ name, moved, fixed, pivotsFixed, frozen, snapshots });
-                console.log(`${name}: rotor ${moved ? 'turns' : 'FAILED'}, housing ${fixed ? 'fixed' : 'MOVED'}, pivot ${pivotsFixed ? 'fixed' : 'MOVED'}, high-rate ${frozen ? 'static' : 'FAILED'}`);
+                results.push({ name, moved, fixed, pivotsFixed, clockwiseAxial, frozen, snapshots });
+                console.log(`${name}: rotor ${moved ? 'turns' : 'FAILED'}, housing ${fixed ? 'fixed' : 'MOVED'}, pivot ${pivotsFixed ? 'fixed' : 'MOVED'}, axial CW ${clockwiseAxial ? 'yes' : 'FAILED'}, high-rate ${frozen ? 'static' : 'FAILED'}`);
             }
             fs.writeFileSync(path.join(out, 'audit.json'), JSON.stringify({ results, errors }, null, 2));
-            if (results.some(result => !result.moved || !result.fixed || !result.pivotsFixed || !result.frozen) || errors.length) {
+            if (results.some(result => !result.moved || !result.fixed || !result.pivotsFixed || !result.clockwiseAxial || !result.frozen) || errors.length) {
                 console.log(errors); process.exitCode = 1;
             }
         });

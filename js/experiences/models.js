@@ -6,9 +6,9 @@ import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnviron
 import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
 import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=63a2e404b7';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
-import { prepareModelPoints } from './model-points.js?v=2cbe25db3d';
-import { angularEntry, angularScene } from './angular-models.js?v=10dce61fed';
-import { createAngularRig } from './angular-rig.js?v=834b0b1d2b';
+import { prepareModelPoints } from './model-points.js?v=bcd3b17a52';
+import { angularEntry, angularScene } from './angular-models.js?v=6c3dc885fc';
+import { createAngularRig } from './angular-rig.js?v=9866c0e844';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -401,6 +401,8 @@ export class ModelStage {
                     instance.rotation.order = 'XYZ';
                     instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
                         THREE.MathUtils.degToRad(pose.yaw || 0), THREE.MathUtils.degToRad(pose.roll || 0));
+                    if (instance.userData.angularRig)
+                        instance.userData.axialPose = instance.userData.angularRig.faceCamera(entry.angular_motion.view_side);
                     instance.updateMatrixWorld(true);
                     // Precise bounds so rotated poses sit on the ground instead of floating.
                     const defaultBounds = new THREE.Box3().setFromObject(instance, true);
@@ -441,6 +443,7 @@ export class ModelStage {
         instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0) + rotation.pitch,
             THREE.MathUtils.degToRad(pose.yaw || 0) + rotation.yaw,
             THREE.MathUtils.degToRad(pose.roll || 0));
+        if (instance.userData.axialPose) instance.quaternion.copy(instance.userData.axialPose);
         instance.scale.setScalar(size);
         instance.userData.drawSize = size;
         instance.position.set(0, 0, 0);

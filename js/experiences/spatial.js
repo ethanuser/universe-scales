@@ -140,14 +140,13 @@
         ctx.updateComparison = () => {};
         const camera = new ScaleJourney.Camera(zoom.value, Number(zoom.input.min), Number(zoom.input.max));
         const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-        let frame, previousTime, disposed = false, explicitFocusIndex = null;
-        let explicitFocusExponent = null, explicitFocusWindow = 0.3;
+        let frame, previousTime, disposed = false;
+        const focusTransition = new ScaleJourney.FocusTransition();
         const apply = () => {
             zoom.set(camera.value);
             const options = layoutOptions();
             const entries = ScaleJourney.layout(ctx.items,camera.value*(options.exponentFactor??1),options.order??order,
-                {...options, focusIndex: explicitFocusIndex,
-                    focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow});
+                {...options, ...focusTransition.options()});
             const focusEntries = options.maxFocusSize
                 ? entries.filter(entry => entry.visible && entry.size <= options.maxFocusSize)
                 : entries;
@@ -156,23 +155,22 @@
                 Math.abs(entry.x-500) < Math.abs(best.x-500) ? entry : best
             , focusPool[0]);
             const index = focused.index;
-            if (index !== ctx.index) ctx.focus(index, false);
+            if (!focusTransition.moving && camera.glideTime == null && index !== ctx.index) ctx.focus(index, false);
             render();
         };
         const animate = now => {
             if (disposed) return;
-            const moving = camera.step(Math.min(0.05, (now - (previousTime ?? now - 16)) / 1000));
+            const dt = Math.min(0.05, (now - (previousTime ?? now - 16)) / 1000);
+            const moving = camera.step(dt);
+            const focusing = focusTransition.step(dt);
             previousTime = now;
             apply();
-            frame = moving ? requestAnimationFrame(animate) : null;
-            if (!moving) previousTime = null;
+            frame = moving || focusing ? requestAnimationFrame(animate) : null;
+            if (!frame) previousTime = null;
         };
         const aim = (value, focusIndex, focusWindow = 0.3) => {
-            if (focusIndex != null) {
-                explicitFocusIndex = focusIndex;
-                explicitFocusExponent = value;
-                explicitFocusWindow = focusWindow;
-            }
+            focusTransition.stop();
+            if (focusIndex != null) focusTransition.set(focusIndex, value, focusWindow);
             camera.aim(value);
             if (reduceMotion.matches) { camera.snap(value); apply(); }
             else if (!frame) frame = requestAnimationFrame(animate);
@@ -184,11 +182,11 @@
             if (reduceMotion.matches || focusIndex == null) { aim(value, focusIndex, focusWindow); return; }
             const options = layoutOptions();
             const entries = ScaleJourney.layout(ctx.items, camera.value * (options.exponentFactor ?? 1),
-                options.order ?? order, { ...options, focusIndex: explicitFocusIndex,
-                    focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow });
+                options.order ?? order, { ...options, ...focusTransition.options() });
             const slide = Math.abs((entries[focusIndex]?.x ?? 500) - 500);
-            explicitFocusIndex = focusIndex; explicitFocusExponent = value; explicitFocusWindow = focusWindow;
-            camera.glide(value, clamp(0.75 + 0.22 * Math.log2(1 + slide / 300), 0.75, 1.7));
+            const seconds = clamp(0.75 + 0.22 * Math.log2(1 + slide / 300), 0.75, 1.7);
+            focusTransition.glide(focusIndex, value, focusWindow, seconds);
+            camera.glide(value, seconds);
             if (!frame) frame = requestAnimationFrame(animate);
         };
         const move = amount => aim(camera.target + amount);
@@ -208,6 +206,7 @@
             onStart: () => {
                 if (frame) cancelAnimationFrame(frame);
                 frame = null; previousTime = null;
+                focusTransition.stop();
                 camera.snap(camera.value);
             },
             onPan: dx => {
@@ -228,15 +227,9 @@
         };
         ctx.stageFrame.addEventListener('click', click, true);
         ctx.stageFrame.tabIndex = 0;
-        ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use arrow keys.');
-        const keydown = e => {
-            if (input.isControlTarget(e.target)) { input.consumeDraggedClick(); return; }
-            if (['ArrowLeft', 'ArrowRight'].includes(e.key)) { e.preventDefault(); move(e.key === 'ArrowRight' ? 0.15 : -0.15); }
-        };
-        ctx.stageFrame.addEventListener('keydown', keydown);
+        ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use the left and right arrow keys to select items.');
         return { update: () => { ctx.updateComparison(); }, frameTo: hop,
-            focusOptions: () => ({focusIndex: explicitFocusIndex,
-                focusExponent: explicitFocusExponent, focusWindow: explicitFocusWindow}),
+            focusOptions: () => focusTransition.options(),
             dispose: () => {
                 disposed = true;
                 cancelAnimationFrame(frame);
@@ -244,7 +237,6 @@
                 zoom.input.removeEventListener('input', sliderInput, true);
                 ctx.stageFrame.removeEventListener('wheel', wheel);
                 ctx.stageFrame.removeEventListener('click', click, true);
-                ctx.stageFrame.removeEventListener('keydown', keydown);
                 delete ctx.updateComparison;
             } };
     }
@@ -318,6 +310,7 @@
             const edgeSky = zoom.value <= -3 ? sky : sky.map(value => Math.max(0, value - 8));
             ctx.stageFrame.style.background = `radial-gradient(ellipse at 35% 35%,rgb(${sky.join(',')}),rgb(${edgeSky.join(',')}))`;
             ctx.stage.style.color = `rgb(${fg.join(',')})`;
+            ctx.stageFrame.style.setProperty('--journey-ink', ctx.stage.style.color);
             ctx.stage.style.setProperty('--journey-label-halo', `rgb(${sky.join(',')})`);
             ruler.style.color = ctx.stage.style.color;
             // Keep nearby offscreen objects mounted so the SVG viewport, rather than

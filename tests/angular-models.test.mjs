@@ -1,8 +1,30 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import * as THREE from '../js/vendor/three/three.module.min.js';
 import { angularModelEntries, angularScene, angularEntry } from '../js/experiences/angular-models.js';
 import { createAngularRig } from '../js/experiences/angular-rig.js';
+
+test('axial presentation keeps every spindle camera-parallel and every turn clockwise', () => {
+    for (const entry of Object.values(angularModelEntries)) {
+        const root = new THREE.Group(); root.add(angularScene(entry.angular_kind));
+        const pose = entry.presentation;
+        root.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0), THREE.MathUtils.degToRad(pose.yaw || 0), 0);
+        const rig = createAngularRig(root, entry.angular_motion);
+        rig.faceCamera();
+        const housing = root.getObjectByName('Housing');
+        const fixed = housing.matrixWorld.clone();
+        for (const phase of [0, 0.3, Math.PI / 2, 5]) {
+            rig.setPhase(phase); root.updateMatrixWorld(true);
+            assert.ok(housing.matrixWorld.equals(fixed), entry.id);
+            for (const rotation of rig.rotations) {
+                const axis = rotation.axis.clone().transformDirection(rotation.node.matrixWorld);
+                assert.ok(Math.hypot(axis.x, axis.y) < 1e-10, entry.id);
+                assert.ok(axis.z * rotation.ratio < 0, `${entry.id}: clockwise screen rotation`);
+            }
+        }
+    }
+});
 
 test('every procedural angular observation has a valid moving assembly and a fixed housing', () => {
     const corpus = fs.readFileSync(new URL('../data/angular-velocity.yaml', import.meta.url), 'utf8');
@@ -49,4 +71,27 @@ test('Sketchfab drone rotates its bell and blades while stator and coils remain 
     assert.ok(moving.includes('blades'));
     assert.ok(!moving.includes('motor_stator') && !moving.includes('motor_coils'));
     assert.ok(entry.bytes < 500000 && entry.triangle_count < 10000);
+});
+
+test('new sourced angular assets bind real components without spinning unrelated geometry', () => {
+    const registry = JSON.parse(fs.readFileSync(new URL('../content/visualizations/models.json', import.meta.url)));
+    for (const name of ['Car engine', 'Saturn rotation']) {
+        const entry = angularEntry({ name }, registry.models);
+        const bytes = fs.readFileSync(new URL(`../${entry.src}`, import.meta.url));
+        const gltf = JSON.parse(bytes.subarray(20, 20 + bytes.readUInt32LE(12)));
+        const rotation = entry.angular_motion.rotations[0];
+        const rotor = gltf.nodes.find(node => THREE.PropertyBinding.sanitizeNodeName(node.name) === rotation.node);
+        assert.ok(rotor, `${name}: binding survives loader name sanitization`);
+        assert.ok(entry.bytes < 1500000);
+        if (name === 'Car engine') {
+            assert.ok(!gltf.nodes.some(node => /Piston|Connecting Rod/.test(node.name)), 'no disconnected stationary pistons');
+        } else {
+            assert.deepEqual(rotation.axis, [0, 1, 0]);
+            assert.equal(entry.angular_motion.view_side, 'negative');
+            for (const ring of ['RingsTop', 'RingsBottom']) {
+                assert.ok(gltf.nodes.some(node => node.name === ring));
+                assert.ok(!(rotor.children || []).includes(gltf.nodes.findIndex(node => node.name === ring)));
+            }
+        }
+    }
 });
