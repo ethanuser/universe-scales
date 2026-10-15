@@ -8,7 +8,7 @@ test('item hops blend lateral framing from the exact current pose, including equ
     const scene=()=>layout(items,camera.value,1,focus.options());
     for(const index of [1,2,3,0]){
         const before=scene(),target=Math.log10(items[index].value);
-        focus.glide(index,target,1,1);camera.glide(target,1);
+        focus.glide(index,target,1,1,{exponent:camera.value,worldX:before[0].cameraWorld});camera.glide(target,1);
         assert.deepEqual(scene(),before,'button press itself changes no camera coordinates');
         camera.step(1/60);focus.step(1/60);
         const first=scene();
@@ -29,14 +29,42 @@ test('item hops blend lateral framing from the exact current pose, including equ
 test('redirecting and interrupting a focus glide preserves its currently displayed pose',()=>{
     const items=[1,1,1,1].map(value=>({value}));
     const focus=new FocusTransition();focus.set(0,0);
-    focus.glide(1,0,.3,1);focus.step(.3);
+    const pose=()=>({exponent:0,worldX:layout(items,0,1,focus.options())[0].cameraWorld});
+    focus.glide(1,0,.3,1,pose());focus.step(.3);
     const before=layout(items,0,1,focus.options());
-    focus.glide(3,0,.3,1);
+    focus.glide(3,0,.3,1,pose());
     assert.deepEqual(layout(items,0,1,focus.options()),before);
     focus.step(.2);
     const interrupted=layout(items,0,1,focus.options());
-    focus.stop();focus.step(1);
+    focus.stop(pose());focus.step(1);
     assert.deepEqual(layout(items,0,1,focus.options()),interrupted);
+});
+test('close-size hops never reverse or overshoot, including different framing scales',()=>{
+    const items=[6e-6,8e-6,9.35e-6,1.5e-5].map(value=>({value}));
+    const focus=new FocusTransition(),camera=new Camera(Math.log10(8e-6),-8,-3);
+    focus.set(1,camera.value);
+    const scene=()=>layout(items,camera.value,1,{widthFactor:()=>1.4,...focus.options()});
+    for(const [index,factor] of [[2,1.4],[1,1],[2,1.4],[3,1.5],[1,1]]){
+        const before=scene(),target=Math.log10(items[index].value*factor),duration=.45;
+        const after=layout(items,target,1,{widthFactor:()=>1.4,focusIndex:index,focusExponent:target,focusWindow:1});
+        focus.glide(index,target,1,duration,{exponent:camera.value,worldX:before[0].cameraWorld});
+        camera.glide(target,duration);
+        let previous=before;
+        for(let frame=0;frame<60;frame++){
+            camera.step(1/120);focus.step(1/120);
+            const entries=scene();
+            entries.forEach((entry,i)=>{
+                for(const key of ['x','leftEdge','rightEdge']){
+                    const direction=Math.sign(after[i][key]-before[i][key]);
+                    assert.ok((entry[key]-previous[i][key])*direction>=-1e-7,`${key} reverses for item ${i}`);
+                    assert.ok(entry[key]>=Math.min(before[i][key],after[i][key])-1e-7);
+                    assert.ok(entry[key]<=Math.max(before[i][key],after[i][key])+1e-7);
+                }
+            });
+            previous=entries;
+        }
+        assert.ok(Math.abs(scene()[index].x-500)<1e-7);
+    }
 });
 test('tight clusters remain ordered and move continuously',()=>{
     const items=[1,1,1.5,10,100].map(value=>({value}));

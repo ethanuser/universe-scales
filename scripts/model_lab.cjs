@@ -119,15 +119,44 @@ const commands = {
                     samples.push({ x: navigationLayout[index].x, index: view.index });
                 }
                 const settled = view.index;
+                const direction = Math.sign(samples.at(-1).x - before);
+                const monotonic = samples.every((point,i) => (point.x-(i ? samples[i-1].x : before))*direction >= -.01);
                 document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
                 await new Promise(requestAnimationFrame);
                 const during = view.index;
                 document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
                 await new Promise(requestAnimationFrame);
                 const repeated = view.index;
+                const closeSizeHops = [];
+                const redCell = view.items.findIndex(item => item.name === 'Red Blood Cell');
+                view.focus(redCell);
+                await new Promise(resolve => setTimeout(resolve, 1200));
+                for (const key of ['ArrowRight', 'ArrowLeft']) {
+                    const target = view.index + (key === 'ArrowRight' ? 1 : -1);
+                    const tracked = [redCell, redCell + 1];
+                    const positions = () => tracked.map(index => navigationLayout[index].x);
+                    const samples = [positions()];
+                    const start = performance.now();
+                    document.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true }));
+                    let lastMovement = start;
+                    while (performance.now() - start < 1800) {
+                        await new Promise(requestAnimationFrame);
+                        const next = positions();
+                        if (next.some((x,i) => Math.abs(x-samples.at(-1)[i]) > .01)) lastMovement = performance.now();
+                        samples.push(next);
+                    }
+                    const endpoint = samples.at(-1);
+                    const monotonic = tracked.every((_,i) => {
+                        const direction = Math.sign(endpoint[i] - samples[0][i]);
+                        return samples.slice(1).every((point,j) => (point[i]-samples[j][i])*direction >= -.01);
+                    });
+                    closeSizeHops.push({ key, monotonic, durationMs: lastMovement-start,
+                        centered: Math.abs(navigationLayout[target].x-500)<.01,
+                        selected: view.index === target });
+                }
                 const rect = element => element.getBoundingClientRect().toJSON();
                 const picker = rect(view.pickerToggle), previous = rect(view.previous), next = rect(view.next);
-                return { immediateJump, maxFrameStep: Math.max(...samples.slice(1).map((p,i)=>Math.abs(p.x-samples[i].x))),
+                return { immediateJump, monotonic, closeSizeHops, maxFrameStep: Math.max(...samples.slice(1).map((p,i)=>Math.abs(p.x-samples[i].x))),
                     targetHeld: samples.every(p => p.index === index + 1), settled, expectedSettled: index + 1,
                     repeatedAdvance: during === settled + 1 && repeated === settled + 2,
                     arrowsAfterSelector: previous.left >= picker.right && next.left >= previous.right,
@@ -138,9 +167,10 @@ const commands = {
             await page.keyboard.press('Escape');
             await page.locator('.experience-toolbar').screenshot({ path: path.join(out, 'toolbar.png') });
             console.log(JSON.stringify({ ...result, errors }, null, 2));
-            if (result.immediateJump > 0.01 || result.maxFrameStep > 100 || !result.targetHeld ||
+            if (result.immediateJump > 0.01 || !result.monotonic || !result.targetHeld ||
                 result.settled !== result.expectedSettled || !result.repeatedAdvance || !result.arrowsAfterSelector ||
-                !result.equalButtonSizes || !result.searchFocused || errors.length) process.exitCode = 1;
+                !result.equalButtonSizes || !result.searchFocused ||
+                result.closeSizeHops.some(hop => !hop.monotonic || !hop.centered || !hop.selected) || errors.length) process.exitCode = 1;
         });
     },
     async mobile({ positional }) {

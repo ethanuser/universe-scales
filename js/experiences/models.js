@@ -7,7 +7,7 @@ import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2
 import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=63a2e404b7';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import { prepareModelPoints } from './model-points.js?v=bcd3b17a52';
-import { angularEntry, angularScene } from './angular-models.js?v=6c3dc885fc';
+import { angularEntry, angularScene } from './angular-models.js?v=9445c96468';
 import { createAngularRig } from './angular-rig.js?v=9866c0e844';
 
 const models = new Map();

@@ -4876,7 +4876,10 @@
       "source": "https://science.nasa.gov/resource/saturn-3d-model/",
       "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
       "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-      "license_files": ["licenses/nasa-media-guidelines.html", "licenses/nasa-3d-resources.README.md"],
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
       "matches": {
         "angular-velocity": [
           "Saturn rotation"
@@ -4922,6 +4925,74 @@
       "external_resources": [],
       "mesh_count": 3,
       "triangle_count": 3328,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "innerscene-city-bicycle-angular",
+      "title": "City bicycle wheels",
+      "author": "Innerscene",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/city-bicycle-58a2a324",
+      "download_url": "https://www.innerscene.com/api/library/city-bicycle-58a2a324/download",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_sha256": "1c9f5b5f95a869b273c4e2023c37392d22872286efe8e0cd7f640146611ce802",
+      "source_bytes": 429940,
+      "matches": {
+        "angular-velocity": [
+          "Bicycle wheel"
+        ]
+      },
+      "representation": "authored-mechanism",
+      "geometry": "mesh",
+      "note": "Innerscene's CC0 city bicycle with nominal 700 mm tires, viewed side-on along the wheel axles. Both wheels rotate together at the dataset's illustrative angular speed; the bicycle is shown coasting, so the freewheel allows the cassette, chain and pedals to remain still. The frame is held in place for comparison rather than translated along a road. This is a nominal-scale visualization, not manufacturer CAD or a rated speed for a specific bicycle.",
+      "presentation": {
+        "yaw": 90,
+        "environment": 0.55
+      },
+      "angular_motion": {
+        "rotations": [
+          {
+            "node": "FrontWheelRotor",
+            "axis": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "node": "RearWheelRotor",
+            "axis": [
+              1,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "processing": {
+        "date": "2026-10-13",
+        "steps": [
+          "scripts/rig_city_bicycle.py groups existing hub, rim, tire and spoke meshes around the original front/rear hub centers, preserving all rest transforms and mesh buffers.",
+          "No new mesh, texture, subdivision or decoder dependency. Frame and drivetrain stay in a separate fixed Housing group."
+        ]
+      },
+      "src": "content/visualizations/models/innerscene-city-bicycle-angular.glb",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 429968,
+      "sha256": "3718c73e16225c17ade7f28da6a4090bf78e54372fcad60f1cd6746c798f054c",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 98,
+      "triangle_count": 11784,
       "animations": 0,
       "skins": 0
     }

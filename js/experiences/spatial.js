@@ -142,6 +142,12 @@
         const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
         let frame, previousTime, disposed = false;
         const focusTransition = new ScaleJourney.FocusTransition();
+        const currentPose = () => {
+            const options = layoutOptions(), exponent = camera.value * (options.exponentFactor ?? 1);
+            const entries = ScaleJourney.layout(ctx.items, exponent, options.order ?? order,
+                { ...options, ...focusTransition.options() });
+            return { exponent, worldX: entries[0].cameraWorld };
+        };
         const apply = () => {
             zoom.set(camera.value);
             const options = layoutOptions();
@@ -160,8 +166,8 @@
         };
         const animate = now => {
             if (disposed) return;
-            const dt = Math.min(0.05, (now - (previousTime ?? now - 16)) / 1000);
-            const moving = camera.step(dt);
+            const dt = Math.max(0, (now - (previousTime ?? now - 16)) / 1000);
+            const moving = camera.step(camera.glideTime != null ? dt : Math.min(0.05, dt));
             const focusing = focusTransition.step(dt);
             previousTime = now;
             apply();
@@ -169,8 +175,8 @@
             if (!frame) previousTime = null;
         };
         const aim = (value, focusIndex, focusWindow = 0.3) => {
-            focusTransition.stop();
-            if (focusIndex != null) focusTransition.set(focusIndex, value, focusWindow);
+            focusTransition.stop(currentPose());
+            if (focusIndex != null) focusTransition.set(focusIndex, value * (layoutOptions().exponentFactor ?? 1), focusWindow);
             camera.aim(value);
             if (reduceMotion.matches) { camera.snap(value); apply(); }
             else if (!frame) frame = requestAnimationFrame(animate);
@@ -179,13 +185,14 @@
         // must slide (in pixels at the current zoom), so a hop between two
         // near-identical sizes still reads as a deliberate camera move.
         const hop = (value, focusIndex, focusWindow = 0.3) => {
+            value = clamp(value, camera.min, camera.max);
             if (reduceMotion.matches || focusIndex == null) { aim(value, focusIndex, focusWindow); return; }
             const options = layoutOptions();
             const entries = ScaleJourney.layout(ctx.items, camera.value * (options.exponentFactor ?? 1),
                 options.order ?? order, { ...options, ...focusTransition.options() });
             const slide = Math.abs((entries[focusIndex]?.x ?? 500) - 500);
-            const seconds = clamp(0.75 + 0.22 * Math.log2(1 + slide / 300), 0.75, 1.7);
-            focusTransition.glide(focusIndex, value, focusWindow, seconds);
+            const seconds = clamp(0.375 + 0.11 * Math.log2(1 + slide / 300), 0.375, 0.85);
+            focusTransition.glide(focusIndex, value * (options.exponentFactor ?? 1), focusWindow, seconds, currentPose());
             camera.glide(value, seconds);
             if (!frame) frame = requestAnimationFrame(animate);
         };
@@ -206,7 +213,7 @@
             onStart: () => {
                 if (frame) cancelAnimationFrame(frame);
                 frame = null; previousTime = null;
-                focusTransition.stop();
+                focusTransition.stop(currentPose());
                 camera.snap(camera.value);
             },
             onPan: dx => {

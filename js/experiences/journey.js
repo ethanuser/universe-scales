@@ -4,31 +4,37 @@
     const BASE_SIZE = 370;
     const CENTER_X = 500;
     const smoothstep = u => u * u * u * (u * (6 * u - 15) + 10);
-    // Blend lateral framing alongside zoom, including interrupted hops and
-    // equal-size neighbors whose camera exponent does not change at all.
+    // Interpolate complete camera poses, not zoom-dependent focus corrections.
+    // The latter can pull the camera past a neighbor and then back again.
     class FocusTransition {
-        constructor() { this.targets = []; this.moving = false; }
+        constructor() { this.targets = []; this.moving = false; this.path = this.anchor = null; }
         set(index, exponent, window = 0.3) {
             this.targets = [{ focusIndex: index, focusExponent: exponent, focusWindow: window, weight: 1 }];
+            this.path = this.anchor = null;
             this.moving = false;
         }
-        glide(index, exponent, window, seconds) {
-            this.from = this.targets.map(target => ({ ...target }));
+        glide(index, exponent, window, seconds, pose) {
             this.to = { focusIndex: index, focusExponent: exponent, focusWindow: window, weight: 1 };
+            this.path = { from: pose, to: this.to, progress: 0 };
             this.elapsed = 0; this.seconds = seconds; this.moving = true;
         }
-        stop() { this.moving = false; }
+        stop(pose) {
+            if (this.path) {
+                this.anchor = { ...pose, window: this.to.focusWindow };
+                this.targets = [];
+                this.path = null;
+            }
+            this.moving = false;
+        }
         step(dt) {
             if (!this.moving) return false;
             this.elapsed += dt;
-            const u = Math.min(1, this.elapsed / this.seconds), blend = smoothstep(u);
-            this.targets = this.from.map(target => ({ ...target, weight: target.weight * (1 - blend) }))
-                .filter(target => target.weight > 1e-12);
-            this.targets.push({ ...this.to, weight: blend });
-            if (u === 1) { this.targets = [this.to]; this.moving = false; }
+            const u = Math.min(1, this.elapsed / this.seconds);
+            this.path.progress = smoothstep(u);
+            if (u === 1) { this.targets = [this.to]; this.path = this.anchor = null; this.moving = false; }
             return this.moving;
         }
-        options() { return { focusTargets: this.targets }; }
+        options() { return { focusTargets: this.targets, cameraAnchor: this.anchor, cameraPath: this.path }; }
     }
     // Two motions share one camera. Wheel and drag use an exact critically
     // damped spring (stable at any refresh rate, no overshoot). Item-to-item
@@ -124,6 +130,23 @@
             const blend = (1 - distance * distance) ** 2;
             cameraWorld += (world[focused] - cameraAt(10 ** focusExponent)) * blend * (target.weight ?? 1);
         }
+        if (options.cameraAnchor) {
+            const anchor = options.cameraAnchor;
+            const distance = Math.min(1, Math.abs(exponent - anchor.exponent) / anchor.window);
+            if (distance === 0) cameraWorld = anchor.worldX;
+            else cameraWorld += (anchor.worldX - cameraAt(10 ** anchor.exponent)) * (1 - distance * distance) ** 2;
+        }
+        if (options.cameraPath) {
+            const { from, to, progress } = options.cameraPath;
+            const delta = to.focusExponent - from.exponent;
+            // Linear interpolation of the projected transforms makes every
+            // silhouette move monotonically between its endpoint positions.
+            // expm1 keeps nearly identical sizes numerically well-conditioned.
+            const fraction = delta === 0 ? progress : Math.max(0, Math.min(1,
+                Math.expm1(-(exponent - from.exponent) * Math.LN10) / Math.expm1(-delta * Math.LN10)));
+            cameraWorld = (1 - fraction) * from.worldX * 10 ** (exponent - from.exponent) +
+                fraction * world[to.focusIndex] * 10 ** (exponent - to.focusExponent);
+        }
         const pixelsPerUnit = BASE_SIZE / cameraLength;
         return items.map((item, index) => {
             const delta = logs[index] - exponent;
@@ -132,7 +155,7 @@
             const x = CENTER_X + (world[index] - cameraWorld) * pixelsPerUnit;
             const leftEdge = x - width / 2;
             const rightEdge = leftEdge + width;
-            return {item,index,size,width,x,leftEdge,rightEdge,y:BASELINE,worldX:world[index],pixelsPerUnit,
+            return {item,index,size,width,x,leftEdge,rightEdge,y:BASELINE,worldX:world[index],cameraWorld,pixelsPerUnit,
                 visible:rightEdge >= left - overscan && leftEdge <= right + overscan};
         });
     }

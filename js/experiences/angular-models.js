@@ -177,8 +177,8 @@ for (const [name, hand] of [['Hour hand', 'HourHand'], ['Minute hand', 'MinuteHa
 }
 
 export function angularEntry(item, entries) {
-    if (angularModelEntries[item.name]) return angularModelEntries[item.name];
     const entry = entries.find(model => model.matches?.['angular-velocity']?.includes(item.name));
+    if (!entry?.angular_motion && angularModelEntries[item.name]) return angularModelEntries[item.name];
     if (!entry) return null;
     if (entry.id === 'ceiling-fan') return { ...entry, presentation: { ...entry.presentation, pitch: -26 },
         angular_motion: { rotations: [{ node: 'ceiling_fan_blades', axis: [0, 1, 0] }] } };

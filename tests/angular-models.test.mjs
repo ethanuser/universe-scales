@@ -95,3 +95,24 @@ test('new sourced angular assets bind real components without spinning unrelated
         }
     }
 });
+
+test('downloaded bicycle replaces the fallback and rotates wheels separately from its frame', () => {
+    const registry = JSON.parse(fs.readFileSync(new URL('../content/visualizations/models.json', import.meta.url)));
+    const entry = angularEntry({name: 'Bicycle wheel'}, registry.models);
+    assert.equal(entry.id, 'innerscene-city-bicycle-angular');
+    assert.equal(entry.license, 'CC0-1.0');
+    assert.ok(entry.bytes < 500000 && entry.triangle_count < 15000);
+    const bytes = fs.readFileSync(new URL(`../${entry.src}`, import.meta.url));
+    const gltf = JSON.parse(bytes.subarray(20, 20 + bytes.readUInt32LE(12)));
+    const housing = gltf.nodes.find(node => node.name === 'Housing');
+    const fixedNames = housing.children.map(index => gltf.nodes[index].name);
+    assert.ok(fixedNames.includes('Fork') && fixedNames.includes('Chain') && fixedNames.includes('Pedal'));
+    for (const side of ['Front', 'Rear']) {
+        const rotor = gltf.nodes.find(node => node.name === `${side}WheelRotor`);
+        assert.deepEqual(entry.angular_motion.rotations.find(rotation => rotation.node === rotor.name).axis, [1,0,0]);
+        assert.equal(rotor.children.length, 31);
+        const hub = rotor.children.map(index => gltf.nodes[index]).find(node => node.name === `${side} hub`);
+        assert.deepEqual(hub.translation, [0,0,0]);
+        assert.ok(rotor.children.every(index => !housing.children.includes(index)));
+    }
+});
