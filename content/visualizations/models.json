@@ -4239,8 +4239,8 @@
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 750432,
-      "sha256": "3cd78e887713c434d8e50b4664e551850aec2e281932fe58dc91b72746029012",
+      "bytes": 750472,
+      "sha256": "37fd06e932fd87e4fca0bd96f9dc0ddcef3ee3a7a8dd7e891b7ab6b06e7b8c28",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
@@ -4585,8 +4585,8 @@
       "src": "content/visualizations/models/sloan-great-wall-sdss-window.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 199608,
-      "sha256": "1bb07715c883de70de5e574fa816527aba4ce6cd295dc2fffdcbcdbb55bd5dd3",
+      "bytes": 199568,
+      "sha256": "c8b394547b632db478a7287a931d6991a454eab18f919ba53055fcb9c37755fc",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
@@ -4659,8 +4659,8 @@
       "src": "content/visualizations/models/virgo-supercluster-sdss-window.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 30136,
-      "sha256": "aa0e924a80d8ba53c8831d49af4b12ff60dafe71775ccd7bb2ffa165ba0b6270",
+      "bytes": 30096,
+      "sha256": "ee3ad1678ced446dc9b1cbb8a69328468086b06607a341c24e3ec52425878ac8",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
@@ -4724,8 +4724,8 @@
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 28608,
-      "sha256": "62f42370d956dc12a5406c2df14075105944906e1df92b53b9f02c15305e570e",
+      "bytes": 28568,
+      "sha256": "7aa8c75961dd27d68aa0c4520769956310fca236585784904f7503efb5c43419",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
