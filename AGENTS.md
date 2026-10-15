@@ -476,3 +476,18 @@ node scripts/model_lab.cjs audit
   passes 13 touch/fullscreen/lifecycle checks with no page errors. Content hashes
   and diff whitespace checks pass. Chromium touch emulation is verified; actual
   iOS/Android hardware testing remains necessary.
+
+## Handoff (Claude, 2026-10-15): nebula volumes in progress
+
+- New: `scripts/nebula_volume.py` (photo -> calibrated additive sprite layers + star split),
+  `scripts/build_pillars_model.py` (registered as `pillars-of-creation-hubble-3d`; WIP: gas is
+  still speckled and too bright vs the photo, lower warm haze missing; tune counts/alpha).
+- `scripts/repair_glb.py` fixes EMPTY_ENTITY / POSITION-bounds validator errors.
+- DATA BUG to fix: `Pillars of Creation` value is 5e18 m (528 ly); NASA SVS 30774 says about
+  5 ly = 4.7303652362904e16 m. Fix in dataset/raw/legacy_yaml/length.yaml, rewrite the description,
+  rebuild with `./venv/bin/python -m scripts.dataset.rebuild_dimension length`.
+- Next: Orion (Pabst et al. 2019: ~4 pc half-shell bubble in front of the OMC-1 ionization front;
+  Trapezium at (0.445, 0.456) of the Hubble mosaic), Carina (replace infrared VISTA with NOIRLab
+  noao0136a, CC BY 4.0, 79.95 x 132.38 arcmin, about 174 x 289 ly at 7,500 ly), Tarantula (ESO
+  eso0650a large, R136 at (0.435, 0.245)) with nebula_volume.py; then Laniakea, HCB, Electron,
+  angular spins, 4x Length items, fly brain, EM mitochondrion, human model, neuron with axon.
