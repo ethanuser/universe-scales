@@ -21,7 +21,7 @@ test('Milky Way disk spans the listed diameter with the Sun at 8.18 kpc', () => 
     assert.equal(stars.userData.pointLOD.mobileMaximum, 4500, 'mobile rendering has a bounded point budget');
     assert.ok(stars.userData.softPoints);
     assert.ok(Math.abs(scene.getObjectByName('Sun').position.length() - 8.18) < 1e-9);
-    assert.equal(cosmicModelMetadata['Galaxy Diameter'].presentation.reference_size, 2 * MILKY_WAY.radius);
+    assert.equal(cosmicModelMetadata['Galaxy Diameter'], undefined, 'the Milky Way is now the NASA/JPL disk GLB');
 });
 
 test('Andromeda diagram places both galaxies at the listed center distance', () => {

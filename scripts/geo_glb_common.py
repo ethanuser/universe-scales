@@ -13,7 +13,7 @@ from pathlib import Path
 
 import numpy as np
 
-USER_AGENT = "universe-scales-model-builder/1.0 (educational; ethanpythonemail@gmail.com)"
+USER_AGENT = "universe-scales-model-builder/1.0 (educational; https://github.com/ethanuser/universe-scales)"
 EARTH_R = 6378137.0
 
 

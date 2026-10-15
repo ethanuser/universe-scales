@@ -139,12 +139,6 @@ export function andromedaDistanceScene(entry = {}) {
 }
 
 export const cosmicModelMetadata = Object.freeze({
-    'Galaxy Diameter': Object.freeze({ id: 'milky-way-procedural', procedural: 'milky-way', geometry: 'mesh',
-        presentation: Object.freeze({ reference_size: 2 * MILKY_WAY.radius, pitch: 58, layout_width_factor: 1,
-            focus_scale_factor: 1.2, display_extent_factor: 1 }),
-        basis_url: 'https://doi.org/10.1146/annurev-astro-081915-023441',
-        basis_label: 'Structure: Bland-Hawthorn & Gerhard (2016)',
-        note: 'The Milky Way drawn to scale from its measured structure: a central bar about 10 kpc long, four spiral arms winding out at about 12 degrees, a disk whose stars thin out exponentially, and the Sun 26,700 light-years (8.2 kpc) from the center. The disk is cut at the listed 100,000-light-year diameter. The stars are a random sample shaped by those parameters, not a map, and because we see the galaxy from inside, the exact arm layout is still debated.' }),
     'Andromeda Distance': Object.freeze({ id: 'andromeda-distance-procedural', procedural: 'andromeda-distance', geometry: 'mesh',
         presentation: Object.freeze({ reference_size: 2.37e22 / KPC, distance_bracket: Object.freeze({ bodies: ['Milky Way', 'Andromeda'] }),
             layout_width_factor: 1, focus_scale_factor: 1.1, display_extent_factor: 1 }),

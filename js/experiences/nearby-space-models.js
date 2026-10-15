@@ -1,7 +1,7 @@
 // Compact, referenced depictions of nearby stars and Local Group galaxies.
 // Positions and galaxy radii use the same kpc scale in the Local Group scene.
 import * as THREE from '../vendor/three/three.module.min.js';
-import { MILKY_WAY, ANDROMEDA, galaxyCloud } from './cosmic-models.js?v=73f8fbb523';
+import { MILKY_WAY, ANDROMEDA, galaxyCloud } from './cosmic-models.js?v=ed1ef5fd83';
 
 export const KPC = 3.0856775814913673e19;
 export const PROXIMA_DISTANCE_PC = 1.301971;

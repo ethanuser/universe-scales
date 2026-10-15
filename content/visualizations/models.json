@@ -4995,6 +4995,58 @@
       "triangle_count": 11784,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "milky-way-nasa-concept",
+      "source": "https://science.nasa.gov/photojournal/our-milky-way-gets-a-makeover-artist-concept/",
+      "author": "NASA/JPL-Caltech (R. Hurt, SSC-Caltech); 3D star layer by Universe Scales",
+      "license": "NASA/JPL image use policy: free to use with credit (not CC0)",
+      "license_url": "https://www.jpl.nasa.gov/jpl-image-use-policy/",
+      "license_files": [],
+      "matches": {
+        "length": [
+          "Galaxy Diameter"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "inferred-face-on-concept",
+      "presentation": {
+        "reference_size": 32.40779289444365,
+        "pitch": 52,
+        "yaw": -8,
+        "layout_width_factor": 1.15,
+        "focus_scale_factor": 1.25,
+        "display_extent_factor": 1.15
+      },
+      "source_sha256": "aa6e5e2e96f0f7f3ab6499389a35cbf0899190f6cfc0196fe85acf4e5f9077d8",
+      "source_bytes": 2049707,
+      "note": "The Milky Way seen from above, as astronomers have pieced it together from inside it: NASA/JPL-Caltech's map shows the central bar, two major arms (Scutum-Centaurus and Perseus), fainter arms and the Orion Spur where the Sun sits 26,700 light-years from the center. About 26,000 star and nebula points are sampled from the map and lifted into a thin disk that swells into the bulge, so it has real thickness when you tilt it. No one has seen our galaxy face-on: this is a data-based concept, not a photograph, and the disk shown spans about 120,000 light-years.",
+      "processing": {
+        "operations": [
+          "PIA10748 (5600 px) cropped around the bulge peak, scaled so the Sun lies 8.18 kpc from the center (GRAVITY 2019)",
+          "Disk texture 2048 px JPEG with a soft outer fade, unlit additive",
+          "26,000 points sampled by brightness from the image, heights from a 0.3 kpc thin disk thickening to ~1.2 kpc in the bulge",
+          "scripts/build_milky_way_model.py"
+        ],
+        "source_model_name": "PIA10748 Our Milky Way Gets a Makeover"
+      },
+      "src": "content/visualizations/models/milky-way-nasa-concept.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1070604,
+      "sha256": "7efbcb5b040d7eaa202f9316b2b348d3d80e320cdfed337480d815ee56d0779b",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 8064,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

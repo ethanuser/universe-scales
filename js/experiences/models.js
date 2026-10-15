@@ -4,9 +4,9 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=63a2e404b7';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=ad10588828';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
-import { prepareModelPoints } from './model-points.js?v=bcd3b17a52';
+import { prepareModelPoints } from './model-points.js?v=1a62e15829';
 import { angularEntry, angularScene } from './angular-models.js?v=9445c96468';
 import { createAngularRig } from './angular-rig.js?v=9866c0e844';
 

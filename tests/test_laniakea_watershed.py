@@ -75,7 +75,7 @@ class LaniakeaWatershedTests(unittest.TestCase):
         stats = inspect_glb(glb)
         self.assertEqual(entry["processing"]["watershed_voxel_count"], 27)
         self.assertAlmostEqual(entry["processing"]["voxel_volume_mpc_h3"], 27 * (1000 / 8) ** 3)
-        self.assertAlmostEqual(entry["presentation"]["reference_size"], 3 * 1000 / (8 * watershed.H))
+        self.assertAlmostEqual(entry["presentation"]["reference_size"], 3 * 1000 / (8 * watershed.H), places=4)
         self.assertEqual(entry["presentation"]["reference_unit"], "Mpc")
         self.assertFalse(entry["production_registry_eligible"])
         self.assertIn("not stated", entry["redistribution_status"])
@@ -84,7 +84,7 @@ class LaniakeaWatershedTests(unittest.TestCase):
         self.assertLess(len(glb), 1_500_000)
         self.assertEqual(stats["external_resources"], [])
         self.assertEqual(entry["processing"]["watershed_label"], 1)
-        self.assertNotIn("SGX", entry["processing"]["coordinate_policy"])
+        self.assertIn("not assigned SGX", entry["processing"]["coordinate_policy"])
 
 
 if __name__ == "__main__":

@@ -20,7 +20,32 @@ export function softPointSprite() {
     return sprite;
 }
 
+// glTF extras `additive: true` (copied to userData) make a mesh or cloud glow:
+// overlapping parts add up and black is transparent, as for gas and starlight.
+function makeAdditive(node) {
+    const apply = material => {
+        const glowing = material.clone();
+        // Add color but leave canvas alpha untouched: the canvas is transparent
+        // over the CSS sky, and plain AdditiveBlending would also add alpha,
+        // turning additive black into opaque black. With premultiplied canvas
+        // compositing the color then adds onto whatever sky is behind.
+        glowing.blending = THREE.CustomBlending;
+        glowing.blendEquation = THREE.AddEquation;
+        glowing.blendSrc = THREE.SrcAlphaFactor;
+        glowing.blendDst = THREE.OneFactor;
+        glowing.blendSrcAlpha = THREE.ZeroFactor;
+        glowing.blendDstAlpha = THREE.OneFactor;
+        glowing.transparent = true;
+        glowing.depthWrite = false;
+        return glowing;
+    };
+    node.material = Array.isArray(node.material) ? node.material.map(apply) : apply(node.material);
+}
+
 export function prepareModelPoints(scene) {
+    scene.traverse(node => {
+        if ((node.isMesh || node.isPoints) && node.userData.additive) makeAdditive(node);
+    });
     scene.traverse(node => {
         if (!node.isPoints || !node.userData.softPoints) return;
         node.material = node.material.clone();

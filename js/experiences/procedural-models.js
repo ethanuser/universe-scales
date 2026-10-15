@@ -3,13 +3,13 @@
 // and also works under Node for tests.
 import * as THREE from '../vendor/three/three.module.min.js';
 import { atomicModelMetadata, atomicScenes, nuclearModelMetadata } from './atomic-models.js?v=4affabd60c';
-import { cosmicModelMetadata, cosmicScenes } from './cosmic-models.js?v=73f8fbb523';
+import { cosmicModelMetadata, cosmicScenes } from './cosmic-models.js?v=ed1ef5fd83';
 import { waveModelMetadata, waveScenes } from './wave-models.js?v=d9360c0030';
 
 import { SCREEN_LINE_PX, labelNode as anchor, screenLine } from './model-overlay-nodes.js?v=26a046c0b3';
 import { footballFieldRenderScene } from './football-model.js?v=301b45d44c';
 import { organelleModelMetadata, organelleScenes } from './organelle-models.js?v=1549ad7f4f';
-import { nearbySpaceModelMetadata, cosmicScenes as nearbySpaceScenes } from './nearby-space-models.js?v=ad0958fafa';
+import { nearbySpaceModelMetadata, cosmicScenes as nearbySpaceScenes } from './nearby-space-models.js?v=af76f82751';
 import { outerSolarModelMetadata, outerSolarScenes } from './outer-solar-models.js?v=12c9f173a0';
 import { particleScaleMetadata, particleScaleScenes } from './particle-scale-models.js?v=0e5fe37846';
 export { SCREEN_LINE_PX, screenLine };
