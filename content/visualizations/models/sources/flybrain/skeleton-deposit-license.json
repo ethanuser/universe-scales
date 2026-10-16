@@ -1,0 +1,17 @@
+{
+  "record": "https://zenodo.org/records/10877326",
+  "doi": "10.5281/zenodo.10877326",
+  "title": "Supplemental Files for Schlegel et al., Nature (2024)",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "record_updated": "2025-08-13T09:59:26.542386+00:00",
+  "verified_on": "2026-10-15",
+  "files": [
+    {
+      "key": "sk_lod1_783_healed_ds2.parquet",
+      "size": 5355543468,
+      "checksum": "md5:a4c104776f33ec539ef859064c4de3df"
+    }
+  ]
+}

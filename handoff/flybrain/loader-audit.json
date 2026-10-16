@@ -1,0 +1,16 @@
+{
+  "units": "micrometres",
+  "nativeExtent": [
+    805.9707902064984,
+    380.57953516899386,
+    272.1450218168396
+  ],
+  "restExtentRelativeTo800um": [
+    0.9792540879914589,
+    0.48080557222237386,
+    0.42728137971407737
+  ],
+  "extent": 0.9792540879914589,
+  "lineSegmentsIncludingRuler": 137212,
+  "triangles": 30768
+}
