@@ -1,0 +1,769 @@
+# Band: 1 mm to Earth's diameter (1e-3 m to 1.3e7 m). 63 proposed items.
+# Every value was read from the page named in `source` (opened with WebFetch) in this session.
+# model_idea entries name candidate sources/search terms only; no Sketchfab uid has been verified.
+
+- name: Cat Flea
+  value: 1.6e-3
+  source: https://trace.tennessee.edu/utk_agexdise/16
+  description: >-
+    An adult cat flea is only about 1.6 mm long, barely bigger than a grain of sand, yet its enlarged
+    hind legs can launch it almost 200 times its own height. A human with the same ratio would clear
+    something close to the height of the Eiffel Tower. Newly emerged adults jump to a host within
+    seconds of leaving the cocoon, so the animal sits just above the 1 mm sand grain and well below the
+    5 mm ant while behaving like a spring-loaded projectile.
+  measures: body length of an adult
+  model_idea: "procedural: laterally flattened body, spiny comb, oversized hind legs; or Sketchfab CC-BY search 'Ctenocephalides felis' (uid unverified)"
+  wonder: A mote-sized animal whose jump, scaled to a person, clears a skyscraper.
+
+- name: Fruit Fly
+  value: 2.5e-3
+  source: https://en.wikipedia.org/wiki/Drosophila_melanogaster
+  description: >-
+    A female fruit fly (Drosophila melanogaster) is about 2.5 mm long, roughly a third the length of a
+    housefly. Its short life cycle and easily studied genes made it a workhorse of biology for more than
+    a century, and its entire adult brain has now been mapped as a
+    [connectome](https://en.wikipedia.org/wiki/Connectome), a neuron-by-neuron wiring diagram. An insect
+    smaller than a grain of rice is therefore one of the few animals whose brain circuitry can be read
+    like a circuit board.
+  measures: body length of an adult female
+  model_idea: "Sketchfab CC-BY search 'Drosophila melanogaster' (uid unverified); or procedural fly with red eyes and striped abdomen"
+  wonder: The standard laboratory animal of genetics, small enough that its whole brain wiring is now known.
+
+- name: Paedophryne Amauensis
+  value: 7.7e-3
+  source: https://en.wikipedia.org/wiki/Paedophryne_amauensis
+  description: >-
+    Paedophryne amauensis, a leaf-litter frog from Papua New Guinea, averages just 7.7 mm from snout to
+    vent, a little longer than a housefly. Described in 2012, it was billed as the smallest known
+    vertebrate, and it remains among the smallest, rivaled only by a few frogs of the genus
+    Brachycephalus. A complete animal with a backbone, a brain and eyes fits in a length shorter than
+    the width of a pencil.
+  measures: average snout-to-vent length
+  model_idea: "procedural: tiny frog, 7.7 mm, shown beside the housefly item; Sketchfab search 'Paedophryne' (uid unverified)"
+  wonder: The size limit of backboned life, small enough to hide on a fingertip.
+
+- name: Honeybee
+  value: 1.25e-2
+  source: https://dimensions.com/element/western-honey-bee-apis-mellifera
+  description: >-
+    A worker western honeybee is about 10 to 15 mm long, nearly twice the length of a housefly. Workers
+    report food sources to the hive with the [waggle dance](https://en.wikipedia.org/wiki/Waggle_dance),
+    a figure-eight run whose angle and duration encode direction and distance, work that earned Karl von
+    Frisch a share of the 1973 Nobel Prize in Physiology or Medicine. A whole colony's map of the
+    countryside is built from animals this small.
+  measures: body length of a worker
+  model_idea: "Sketchfab CC-BY search 'honey bee' (uid unverified); or procedural: banded abdomen, two wing pairs"
+  wonder: A familiar insect whose dance language was decoded by a Nobel-winning experiment.
+
+- name: Human Eye
+  value: 2.4e-2
+  source: https://en.wikipedia.org/wiki/Human_eye
+  description: >-
+    The adult human eyeball is a slightly flattened sphere about 24 mm across, roughly the width of a
+    large coin. Its length is set tightly by the cornea and lens, which is why short-sightedness is
+    usually caused by an eyeball that has grown a little too long. Giant squid eyes reach at least 27 cm,
+    more than ten times wider, and rank among the largest eyes of any living animal.
+  measures: diameter of the adult eyeball (about 24 mm front to back)
+  model_idea: "NIH 3D or Sketchfab CC-BY search 'human eye anatomy' (uid unverified); or procedural sphere with cornea bulge"
+  wonder: The organ you read this with, shown against an animal eye ten times its width.
+
+- name: Bumblebee Bat
+  value: 3.1e-2
+  source: https://en.wikipedia.org/wiki/Kitti%27s_hog-nosed_bat
+  description: >-
+    Kitti's hog-nosed bat, also called the bumblebee bat, is only 29 to 33 mm long and weighs about
+    2 g, making it potentially the smallest mammal by body length. The Etruscan shrew can be lighter but
+    is longer, at 36 to 53 mm, so the title depends on whether length or mass is counted. It is about
+    half the length of a bee hummingbird, yet it is a warm-blooded, furred, flying mammal.
+  measures: body length of an adult (29 to 33 mm)
+  model_idea: "Sketchfab CC-BY search 'Craseonycteris thonglongyai' (uid unverified); or procedural bat with large wings"
+  wonder: A flying mammal shorter than your thumb.
+
+- name: Bee Hummingbird
+  value: 5.8e-2
+  source: https://en.wikipedia.org/wiki/Bee_hummingbird
+  description: >-
+    The bee hummingbird of Cuba is the smallest bird, with females about 6.1 cm long and males about
+    5.5 cm, weighing roughly 2 to 2.6 g. Its wings beat 80 to 200 times per second, and each egg is about
+    the size of a coffee bean. Nearly any insect-sized animal can fly, but few warm-blooded animals
+    this small can sustain the metabolism that powers hovering.
+  measures: body length (female 6.1 cm, male 5.5 cm; midpoint used)
+  model_idea: "Sketchfab CC-BY search 'bee hummingbird Mellisuga helenae' (uid unverified); or procedural hovering bird"
+  wonder: A bird lighter than a sheet of paper's worth of coins, flapping up to 200 times a second.
+
+- name: Credit Card
+  value: 8.56e-2
+  source: https://en.wikipedia.org/wiki/ISO/IEC_7810
+  description: >-
+    The ID-1 card format measures 85.60 by 53.98 mm and is 0.76 mm thick, thinner than a grain of sand.
+    The geometry was first designed in inches (3.370 by 2.125) and later fixed in metric by the
+    international standard. Payment cards, driving licences and European standard identity cards all
+    share it, so one rectangle of plastic fits wallets, readers and machines worldwide.
+  measures: long edge of an ISO/IEC 7810 ID-1 card
+  model_idea: "procedural: rounded rectangle 85.60 x 53.98 x 0.76 mm with a chip and magnetic stripe"
+  wonder: One standardized rectangle that every wallet and card reader on Earth is built around.
+
+- name: Smartphone
+  value: 0.1476
+  source: https://www.apple.com/iphone-16/specs/
+  description: >-
+    An iPhone 16 is 147.6 mm tall, 71.6 mm wide and 7.8 mm thick, and weighs 170 g. Inside, the
+    processor holds billions of transistors, each much smaller than a bacterium, cut from a silicon
+    wafer of the kind a few items further up the scale. The whole device is about 1.7 times the length
+    of a credit card.
+  measures: height of an iPhone 16
+  model_idea: "Sketchfab CC-BY search 'iPhone 16' or 'smartphone' (uid unverified); or procedural rounded slab 147.6 x 71.6 x 7.8 mm"
+  wonder: A pocket object that concentrates billions of nanometre-scale transistors.
+
+- name: Titan Beetle
+  value: 0.17
+  source: https://en.wikipedia.org/wiki/Titan_beetle
+  description: >-
+    The titan beetle (Titanus giganteus) of South American rainforests reaches over 170 mm, longer than
+    a smartphone is tall and well beyond the 10 cm butterfly wingspan on the scale. Adults defend
+    themselves with sharp spines and powerful jaws. It is one of the longest beetles known, a reminder
+    of how far insect body plans can be stretched when they are not limited by a spiracle breathing
+    system.
+  measures: maximum body length of an adult
+  model_idea: "Sketchfab CC-BY search 'Titanus giganteus' (uid unverified); or procedural: elongate beetle with large mandibles"
+  wonder: An insect longer than a smartphone.
+
+- name: Largest Hailstone
+  value: 0.2032
+  source: https://www.weather.gov/abr/vivianhailstone
+  description: >-
+    The record United States hailstone fell on Vivian, South Dakota, on 23 July 2010. It measured
+    8.0 inches (20.3 cm) across, 18.625 inches around and weighed 1.9375 pounds (about 0.88 kg), roughly
+    twice the width of a softball. Hailstones grow in layers as strong thunderstorm updrafts carry them
+    repeatedly through supercooled water, and a stone this size needs an updraft strong enough to hold
+    it aloft.
+  measures: diameter of the Vivian, South Dakota hailstone
+  model_idea: "procedural: layered ice sphere with irregular lobes; compare to a softball"
+  wonder: A lump of ice nearly 1 kg that fell out of the sky.
+
+- name: Queen Alexandra's Birdwing
+  value: 0.26
+  source: https://en.wikipedia.org/wiki/Queen_Alexandra%27s_birdwing
+  description: >-
+    Queen Alexandra's birdwing of Papua New Guinea is the largest butterfly. Females reach, and slightly
+    exceed, a wingspan of 25 to 28 cm, while males are smaller at roughly 16 to 20 cm. A female's wings
+    span more than two and a half times the 10 cm butterfly on the scale and are wider than a house
+    cat is long.
+  measures: wingspan of an adult female
+  model_idea: "Sketchfab CC-BY search 'Ornithoptera alexandrae' (uid unverified); or procedural butterfly with long forewings"
+  wonder: A butterfly bigger than a dinner plate's width of wing.
+
+- name: Silicon Wafer
+  value: 0.3
+  source: https://en.wikipedia.org/wiki/Wafer_(electronics)
+  description: >-
+    The 300 mm silicon wafer has been the chip industry's standard since 1999. The polished disk is
+    only 775 micrometres thick, thinner than a millimetre of sand, and weighs about 125 g, yet it is
+    patterned with features measured in nanometres. A larger 450 mm wafer was proposed but is still
+    listed as experimental and not in general use.
+  measures: diameter of a standard modern wafer
+  model_idea: "procedural: mirror-finished disk with a notch and a grid of die; many CC0 wafer renders on Sketchfab (uid unverified)"
+  wonder: The mirror-like disk from which nearly all modern chips are cut.
+
+- name: Elephant Bird Egg
+  value: 0.33
+  source: https://en.wikipedia.org/wiki/Elephant_bird
+  description: >-
+    Eggs of the extinct elephant birds (Aepyornis) of Madagascar were roughly 26 to 40 cm long and held
+    5.6 to 13 litres, among the largest eggs ever laid by any bird. The largest weighed an estimated
+    10.5 kg, with a shell about 3.3 mm thick. Their mothers stood up to 3 m tall, and a single egg is
+    close to the width of a 300 mm silicon wafer.
+  measures: typical length of an Aepyornis egg (range 26 to 40 cm; midpoint used)
+  model_idea: "procedural: large oval egg with small hen egg for scale; Sketchfab search 'Aepyornis egg' (uid unverified)"
+  wonder: A single egg that could hold more than a dozen hens' worth of yolk and white.
+
+- name: Meganeura
+  value: 0.70
+  source: https://en.wikipedia.org/wiki/Meganeura
+  description: >-
+    Meganeura, a giant dragonfly-like insect that flew about 300 million years ago in the Late
+    Carboniferous, had a wingspan of roughly 65 to 75 cm, each wing about 32 cm long. That is wider than
+    a house cat is long and seven times the wingspan of the butterfly on the scale. It was long thought
+    that higher oxygen levels let insects grow so large, but the idea has problems and is still
+    debated.
+  measures: wingspan of an adult (65 to 75 cm)
+  model_idea: "Sketchfab CC-BY search 'Meganeura' (uid unverified); or procedural: dragonfly with 70 cm span"
+  wonder: A predator with the wingspan of a hawk, from 300 million years ago.
+
+- name: Rafflesia
+  value: 1.0
+  source: https://en.wikipedia.org/wiki/Rafflesia_arnoldii
+  description: >-
+    The flower of Rafflesia arnoldii, a rainforest plant of Southeast Asia, grows to about 1 m across
+    and weighs up to 11 kg, among the largest single flowers on Earth. The plant has no leaves, stems
+    or even roots visible, living entirely inside Tetrastigma vines as a parasite until the bloom
+    breaks through. A flower about as wide as a standard doorway for a toddler to crawl through sits
+    in the middle of the human scale.
+  measures: diameter of the open flower
+  model_idea: "Sketchfab CC-BY search 'Rafflesia arnoldii' (uid unverified); or procedural: five thick petals with warty surface and central disc"
+  wonder: A flower with no leaves or roots that is as wide as a person is long.
+
+- name: Komodo Dragon
+  value: 2.6
+  source: https://en.wikipedia.org/wiki/Komodo_dragon
+  description: >-
+    The Komodo dragon, the largest living lizard, lives on a handful of Indonesian islands. Guinness
+    World Records gives an average adult male as 2.59 m long and 79 to 91 kg; the largest verified captive
+    specimen reached about 3.13 m and 166 kg. A mature male is one and a half times as long as a human
+    is tall.
+  measures: average length of an adult male
+  model_idea: "Sketchfab CC-BY search 'Komodo dragon' (uid unverified); or procedural reptile"
+  wonder: A real-life dragon that is longer than a person is tall by half.
+
+- name: African Bush Elephant
+  value: 3.2
+  source: https://en.wikipedia.org/wiki/African_bush_elephant
+  description: >-
+    A fully grown African bush elephant bull stands about 3.2 m tall at the shoulder and weighs about
+    6 tonnes on average, the largest living land animal. The tallest well-measured bull, shot in Angola
+    in 1974, was calculated to have stood 3.96 m at the shoulder with an estimated weight of 10.4
+    tonnes. An average bull's shoulder is nearly twice the height of an adult human.
+  measures: shoulder height of an average mature bull
+  model_idea: "Sketchfab CC-BY search 'African elephant' (uid unverified); or Smithsonian 3D digitization of an elephant mount"
+  wonder: A living animal whose shoulder is higher than a basketball hoop.
+
+- name: Wandering Albatross
+  value: 3.7
+  source: https://en.wikipedia.org/wiki/Wandering_albatross
+  description: >-
+    The wandering albatross has the greatest known wingspan of any living bird. Typical adults span
+    about 3 to 3.1 m, and the largest reliably measured birds reached about 3.7 m, wider than a bull
+    African elephant is tall. Reports of 4 m or more remain unverified. It is a long-range soarer over
+    the Southern Ocean, travelling vast distances with few wingbeats by extracting energy from wind
+    gradients above the waves.
+  measures: largest reliably measured wingspan
+  model_idea: "Sketchfab CC-BY search 'wandering albatross' (uid unverified); or procedural long narrow wings"
+  wonder: A bird whose wings are wider than a car is long.
+
+- name: Giant Pacific Octopus
+  value: 4.3
+  source: https://en.wikipedia.org/wiki/Giant_Pacific_octopus
+  description: >-
+    The giant Pacific octopus is the largest octopus, usually weighing around 15 kg with an arm span up
+    to about 4.3 m. Its largest suckers are about 6.4 cm wide and can support around 16 kg each. A soft
+    animal with no skeleton can flatten itself through any gap larger than its beak, which is why an
+    octopus can escape from containers that seem far too small for it.
+  measures: arm span of an adult (up to about 4.3 m)
+  model_idea: "Sketchfab CC-BY search 'giant Pacific octopus' (uid unverified); or procedural: mantle with eight tapered arms"
+  wonder: An animal with no bones, three hearts and an arm span of a small boat.
+
+- name: Lolong the Crocodile
+  value: 6.17
+  source: https://en.wikipedia.org/wiki/Saltwater_crocodile
+  description: >-
+    Lolong, a saltwater crocodile caught in the Philippines and held in captivity, was 6.17 m long and
+    weighed 1,075 kg, among the largest crocodiles ever caught alive. Typical adult males are 3.5 to
+    5 m, so Lolong was roughly a metre longer than a large specimen. The species has the highest bite
+    force quotient recorded for any animal, measured at 16,414 newtons for a 4.59 m, 531 kg individual.
+  measures: length of Lolong, the largest crocodile held in captivity
+  model_idea: "Sketchfab CC-BY search 'saltwater crocodile' (uid unverified); or procedural reptile"
+  wonder: A living animal as long as a giraffe is tall, with the strongest bite measured.
+
+- name: Tyrannosaurus Rex SUE
+  value: 12.3
+  source: https://en.wikipedia.org/wiki/Sue_(dinosaur)
+  description: >-
+    SUE, the Field Museum's Tyrannosaurus rex specimen FMNH PR 2081, measures roughly 12.3 to 12.8 m
+    along the backbone and stood about 3.66 to 3.96 m tall at the hips. It was 27 to 33 years old when it
+    died, with 33 the best-supported estimate. The skeleton is among the most complete of any T. rex, and
+    stretched out it is more than twice the height of a giraffe.
+  measures: length along the vertebral column (12.3 to 12.8 m)
+  model_idea: "Field Museum / Smithsonian 3D scans, or Sketchfab CC-BY search 'Tyrannosaurus rex skeleton' (uid unverified)"
+  wonder: The best-known predator skeleton, laid out at its true size.
+
+- name: Giant Squid
+  value: 13
+  source: https://en.wikipedia.org/wiki/Giant_squid
+  description: >-
+    The giant squid is estimated to reach about 12 to 13 m in total length for females and 10 m for
+    males, including its two long feeding tentacles, which account for roughly 10 m. The body with
+    arms is rarely more than 5 m. Reports of 20 m or more are not scientifically documented. A
+    giant squid was first filmed alive in its natural habitat only in 2012.
+  measures: estimated maximum total length of a female including feeding tentacles
+  model_idea: "Sketchfab CC-BY search 'giant squid Architeuthis' (uid unverified); or procedural: mantle, eight arms, two tentacles"
+  wonder: A deep-sea giant seen alive in the wild only in recent years.
+
+- name: Sperm Whale
+  value: 15.85
+  source: https://www.fisheries.noaa.gov/species/sperm-whale
+  description: >-
+    Male sperm whales reach about 52 feet (15.8 m) and females up to roughly 35 to 40 feet. NOAA reports
+    dives that routinely reach 2,000 feet (about 600 m) and can last 45 minutes. At about half the length
+    of a blue whale it is still the largest toothed whale, and it hunts in water so deep that no
+    sunlight reaches it.
+  measures: length of a mature male (about 52 ft)
+  model_idea: "Sketchfab CC-BY search 'sperm whale' (uid unverified); or NOAA/Smithsonian whale scans"
+  wonder: The largest toothed animal, diving for 45 minutes in the dark.
+
+- name: Titanosaur Cast
+  value: 37.2
+  source: https://www.pbs.org/newshour/amp/science/massive-titanosaur-biggest-dinosaur-ever-found-squeezes-into-museum-of-natural-history
+  description: >-
+    The American Museum of Natural History's cast of a Patagonian titanosaur (Patagotitan mayorum) is
+    122 feet (about 37 m) long, so large that its head and part of its 39-foot neck poke out of the
+    gallery doorway while the back barely grazes the 19-foot-4-inch ceiling. Estimates for the living
+    animal range from about 31 to 40 m depending on method. It is longer than a blue whale and ranks
+    among the largest land animals known.
+  measures: nose-to-tail length of the AMNH skeleton cast
+  model_idea: "Sketchfab CC-BY search 'Patagotitan' (uid unverified); or procedural long-necked sauropod"
+  wonder: A museum skeleton too long to fit in its own room.
+
+- name: Giant Siphonophore
+  value: 45.7
+  source: https://schmidtocean.org/new-species-discovered-during-exploration-of-abyssal-deep-sea-canyons-off-ningaloo/
+  description: >-
+    In 2020 the research ship Falkor filmed an estimated 150-foot (about 46 m) siphonophore in deep
+    canyons off Western Australia, seemingly the longest animal ever recorded. A siphonophore is not a
+    single body but a floating colony of many specialised clones strung along a stem, working
+    together like one animal. This one was about one and a half times the length of a blue whale.
+  measures: estimated length of the giant siphonophore filmed off Ningaloo
+  model_idea: "procedural: long spiral stem with repeating zooids; Schmidt Ocean Institute footage as reference"
+  wonder: A living string longer than a blue whale and a half.
+
+- name: Boeing 747-8
+  value: 76.25
+  source: https://en.wikipedia.org/wiki/Boeing_747-8
+  description: >-
+    The 747-8 Intercontinental is 76.25 m long with a 68.40 m wingspan, making it the longest passenger
+    airliner in service, ahead of the Airbus A340-600 by about 0.95 m. It is two and a half blue whales
+    long, and its wingspan is wider than the Statue of Liberty is far from tip to heel. It carries the
+    hump-fronted profile of the original 1960s 747 stretched into its longest form.
+  measures: fuselage length
+  model_idea: "Sketchfab CC-BY search 'Boeing 747-8' (uid unverified)"
+  wonder: A flying machine longer than two and a half blue whales.
+
+- name: International Space Station
+  value: 109
+  source: https://www.nasa.gov/international-space-station/space-station-facts-and-figures/
+  description: >-
+    NASA lists the space station at 356 feet (109 m) end to end, with a pressurized module length of
+    67 m, 1,005 cubic metres of pressurized volume and a mass of 419,725 kg. It is the largest single
+    structure humans have built in orbit, slightly longer than the 91.4 m football field, and it circles
+    Earth about every 90 minutes at five miles per second.
+  measures: overall length end to end
+  model_idea: "NASA 3D Resources ISS model (public domain; confirm at nasa3d.arc.nasa.gov, link unverified)"
+  wonder: A football-field-sized laboratory racing around Earth at 5 miles per second.
+
+- name: Saturn V
+  value: 110.6
+  source: https://en.wikipedia.org/wiki/Saturn_V
+  description: >-
+    The Saturn V that carried Apollo astronauts to the Moon stood 363 feet (about 111 m) tall with its
+    spacecraft and was 10 m wide at its base. It produced 34.5 meganewtons of thrust at liftoff. Taller
+    than the 93 m Statue of Liberty, it was almost entirely propellant tanks, built to push a few tonnes
+    of crew capsule out of Earth's gravity.
+  measures: total height with the Apollo spacecraft
+  model_idea: "NASA 3D Resources Saturn V model (public domain; confirm at nasa3d.arc.nasa.gov, link unverified)"
+  wonder: The tallest rocket ever flown to the Moon, standing taller than the Statue of Liberty.
+
+- name: Hyperion
+  value: 116.2
+  source: https://en.wikipedia.org/wiki/Hyperion_(tree)
+  description: >-
+    Hyperion, a coast redwood in Redwood National Park, was measured at 116.22 m in 2026, taller than a
+    Saturn V rocket and about 23 m above the Statue of Liberty. Its trunk holds about 530 cubic metres
+    of wood. The National Park Service closed access to the tree's location in 2022 after visitors
+    trampled the base, with penalties of up to six months in jail and a US$5,000 fine.
+  measures: height of the tallest known living tree
+  model_idea: "procedural: tapered redwood trunk with sparse crown; Sketchfab search 'coast redwood' (uid unverified)"
+  wonder: A living thing taller than a Saturn V rocket.
+
+- name: Great Pyramid of Giza
+  value: 146.6
+  source: https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza
+  description: >-
+    The Great Pyramid originally rose 146.6 m (280 royal cubits); erosion and the loss of its capstone
+    and casing have reduced it to about 138.5 m. Its base side is 230.33 m, and it is made of an
+    estimated 2.3 million large blocks. It was the tallest human-made structure on Earth for more than
+    3,700 years, a record that stood until the Middle Ages.
+  measures: original height
+  model_idea: "Sketchfab CC-BY search 'Great Pyramid of Giza' (uid unverified); or procedural square pyramid 230.33 m base, 146.6 m high"
+  wonder: The tallest structure on Earth for nearly four thousand years.
+
+- name: Hindenburg
+  value: 245
+  source: https://en.wikipedia.org/wiki/LZ_129_Hindenburg
+  description: >-
+    The airship LZ 129 Hindenburg was 245 m long and 41 m in diameter, held about 200,000 cubic metres
+    of gas and is the largest airship by envelope volume. It was only about 24 m shorter than the
+    Titanic. Lifting that size of structure through the air required a hull that was mostly hydrogen,
+    with thin framework and fabric holding the shape.
+  measures: overall length
+  model_idea: "Sketchfab CC-BY search 'Hindenburg airship' (uid unverified); or procedural cigar-shaped envelope with tail fins"
+  wonder: A flying structure nearly as long as the Titanic.
+
+- name: Titanic
+  value: 269.1
+  source: https://en.wikipedia.org/wiki/Titanic
+  description: >-
+    RMS Titanic was 882 feet 9 inches (269.1 m) long overall with a beam of 28.2 m. The hull rose 53.3 m
+    from keel to the top of the funnels. At about four fifths of the Eiffel Tower's height, the ship was
+    the largest afloat when she entered service in 1912, and she lies broken in two on the seabed of the
+    North Atlantic.
+  measures: overall length
+  model_idea: "Sketchfab CC-BY search 'RMS Titanic' (uid unverified)"
+  wonder: A building laid on its side and floated, then lost on her first voyage.
+
+- name: Ever Given
+  value: 399.94
+  source: https://en.wikipedia.org/wiki/Ever_Given
+  description: >-
+    Ever Given is a container ship 399.94 m long with a 58.8 m beam and a capacity of 20,124 TEU. When she
+    ran aground on 23 March 2021 she blocked the Suez Canal in both directions for just over six days,
+    holding up a large share of world shipping. Longer than the Eiffel Tower is tall, she is among the
+    largest ships ever built.
+  measures: overall length
+  model_idea: "Sketchfab CC-BY search 'container ship Ever Given' (uid unverified); or procedural container ship"
+  wonder: A ship longer than the Eiffel Tower is tall that jammed a canal for six days.
+
+- name: Prelude FLNG
+  value: 488
+  source: https://en.wikipedia.org/wiki/Prelude_FLNG
+  description: >-
+    Prelude FLNG is a floating gas-liquefaction plant 488 m long and 74 m wide, displacing around
+    600,000 tonnes when fully loaded. It is the largest floating liquefied-natural-gas platform and the
+    longest vessel ever built, beating Seawise Giant. Stood on end, it would reach well over half the
+    height of the Burj Khalifa.
+  measures: overall length
+  model_idea: "Sketchfab search 'Prelude FLNG' (uid unverified); or procedural long barge with process modules"
+  wonder: The longest vessel ever built, a gas factory that floats.
+
+- name: Lituya Bay Megatsunami
+  value: 524
+  source: https://en.wikipedia.org/wiki/1958_Lituya_Bay_megatsunami
+  description: >-
+    On 9 July 1958 a landslide of about 30 million cubic metres fell into Lituya Bay in Alaska, and the
+    resulting [megatsunami](https://en.wikipedia.org/wiki/Megatsunami) ran 524 m up the opposite slope
+    at Gilbert Inlet, the highest run-up of the wave on record. That is taller than the 330 m Eiffel
+    Tower and well over half the height of the Burj Khalifa.
+  measures: maximum run-up height of the wave
+  model_idea: "procedural: bay cross-section with a 524 m wave line against the Eiffel Tower; no existing model needed"
+  wonder: A wave that climbed a mountainside taller than the Eiffel Tower.
+
+- name: Angel Falls
+  value: 979
+  source: https://en.wikipedia.org/wiki/Angel_Falls
+  description: >-
+    Angel Falls in Venezuela drops 979 m in total, with an uninterrupted plunge of 807 m, almost the
+    height of the Burj Khalifa. The official height was determined by a 1949 expedition led by Ruth
+    Robertson. Because the heights were measured from a considerable distance, it remains uncertain
+    whether Angel Falls or Tugela Falls in South Africa is the tallest in the world.
+  measures: total height of the falls (807 m is the single longest drop)
+  model_idea: "Sketchfab search 'Angel Falls tepui' (uid unverified); or procedural cliff and ribbon of water"
+  wonder: Water that falls almost the height of the Burj Khalifa.
+
+- name: Golden Gate Bridge Main Span
+  value: 1280
+  source: https://www.goldengate.org/bridge/history-research/statistics-data/design-construction-stats/
+  description: >-
+    The Golden Gate Bridge's main span, the distance between its towers, is 4,200 feet (1,280 m), and
+    the towers rise 227 m above the water. Each main cable is 0.92 m thick and 2,332 m long, together
+    containing about 129,000 km of steel wire, enough to circle Earth more than three times. The span is
+    one and a half times the height of the Burj Khalifa.
+  measures: length of the main span between towers
+  model_idea: "Sketchfab CC-BY search 'Golden Gate Bridge' (uid unverified); or procedural suspension bridge"
+  wonder: Two cables whose wire could circle the Earth three times.
+
+- name: Lake Baikal Depth
+  value: 1642
+  source: https://en.wikipedia.org/wiki/Lake_Baikal
+  description: >-
+    Lake Baikal in Siberia is 1,642 m deep at its maximum, almost exactly twice the height of the Burj
+    Khalifa, and 636 km long. It is about 25 to 30 million years old, the oldest lake, and holds around
+    19 percent of the planet's unfrozen fresh water. It is the deepest lake on Earth.
+  measures: maximum depth
+  model_idea: "procedural: cross-section of lake basin beside a Burj Khalifa-height marker"
+  wonder: A lake holding a fifth of the world's unfrozen fresh water.
+
+- name: El Reno Tornado
+  value: 4184
+  source: https://www.weather.gov/oun/events-20130531
+  description: >-
+    The tornado that hit El Reno, Oklahoma, on 31 May 2013 reached a maximum width of 2.6 miles (about
+    4.2 km), the widest tornado known. Mobile radar measured winds of at least 295 miles per hour very
+    close to the ground, yet surveyors rated it EF-3 because the strongest winds occurred in small
+    sub-vortices that did not hit structures. Its width is more than three times the Golden Gate's
+    main span.
+  measures: maximum width of the tornado
+  model_idea: "procedural: funnel with debris and multi-vortex structure; NWS radar imagery as reference"
+  wonder: A tornado wider than a long bridge, with winds near 300 mph.
+
+- name: Mount Kilimanjaro
+  value: 5895
+  source: https://en.wikipedia.org/wiki/Mount_Kilimanjaro
+  description: >-
+    Uhuru Peak, the summit of Kilimanjaro in Tanzania, is 5,895 m above sea level, measured by a 1952
+    British survey; later measurements range from 5,892 to 5,902 m. The volcano rises about 4,900 m above
+    its surrounding plateau and is the highest free-standing mountain above sea level in the world. It
+    stands about two thirds the height of Everest.
+  measures: summit elevation above sea level
+  model_idea: "NASA SRTM-based terrain or Sketchfab search 'Kilimanjaro' (uid unverified)"
+  wonder: The tallest mountain that stands entirely on its own.
+
+- name: Mauna Kea
+  value: 10211
+  source: https://www.usgs.gov/faqs/how-big-are-hawaiian-volcanoes
+  description: >-
+    Mauna Kea's summit is 4,205 m above sea level, but the volcano rises nearly 10,211 m from the ocean
+    floor, according to the USGS. Measured that way it is more than a kilometre taller than Everest,
+    though the definition of a mountain's base is a loose one and different authors choose different
+    ones. About 6,000 m of it lies beneath the Pacific.
+  measures: height from the ocean floor to the summit
+  model_idea: "NOAA bathymetry plus USGS DEM; or procedural volcano profile against Everest marker"
+  wonder: A mountain measured base to peak that out-towers Everest.
+
+- name: Kola Superdeep Borehole
+  value: 12262
+  source: https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole
+  description: >-
+    The Kola Superdeep Borehole in Russia reached 12,262 m in 1989, the deepest hole drilled into the
+    Earth, and is only about 23 cm wide. It is deeper than the Mariana Trench, and temperatures of 180
+    degrees Celsius at about 11.9 km, far hotter than predicted, stopped one deeper attempt. Even this
+    reaches less than 0.2 percent of the way to Earth's centre.
+  measures: maximum true vertical depth
+  model_idea: "procedural: narrow vertical shaft with depth markers beside Everest and the Mariana Trench"
+  wonder: The deepest hole humans have made, still barely scratching the crust.
+
+- name: Strait of Gibraltar
+  value: 14200
+  source: https://en.wikipedia.org/wiki/Strait_of_Gibraltar
+  description: >-
+    At its narrowest the Strait of Gibraltar is 7.7 nautical miles (about 14.2 km) wide, with depths
+    between 300 and 900 m. Europe and Africa are visible from each other across it, and it connects the
+    Mediterranean with the Atlantic. The gap is shorter than Manhattan is long.
+  measures: width at the narrowest point
+  model_idea: "NASA satellite imagery or procedural map with two coasts 14.2 km apart"
+  wonder: Two continents separated by a gap shorter than Manhattan's length.
+
+- name: Large Hadron Collider Ring
+  value: 26659
+  source: https://home.cern/science/accelerators/large-hadron-collider
+  description: >-
+    The Large Hadron Collider is a ring 26,659 m in circumference, buried in a tunnel about 100 m
+    underground on the French-Swiss border. Its 9,593 magnets include superconducting dipoles cooled to
+    1.9 K, colder than the 2.7 K of intergalactic space. The ring is longer than Manhattan Island.
+  measures: circumference of the ring
+  model_idea: "CERN 3D models or Sketchfab CC-BY search 'Large Hadron Collider' (uid unverified); or procedural ring"
+  wonder: The largest machine ever built, colder than outer space.
+
+- name: Channel Tunnel
+  value: 50460
+  source: https://en.wikipedia.org/wiki/Channel_Tunnel
+  description: >-
+    The Channel Tunnel between England and France is 50.46 km long, of which 37.9 km is under the sea,
+    the longest undersea section of any tunnel in the world. It runs 75 m below sea level at its
+    deepest and on average 45 m below the seabed. It is longer than a marathon, and a train crosses
+    the strait in roughly the time it takes to run a mile.
+  measures: total length of the railway tunnel
+  model_idea: "procedural: tunnel cross-section map with the 37.9 km undersea section marked"
+  wonder: A tunnel that runs longer than a marathon under the sea.
+
+- name: Hunga Tonga Eruption Plume
+  value: 58000
+  source: https://en.wikipedia.org/wiki/2022_Hunga_Tonga%E2%80%93Hunga_Ha%CA%BBapai_eruption_and_tsunami
+  description: >-
+    On 15 January 2022 the Hunga Tonga-Hunga Haʻapai eruption sent a plume up to about 58 km, into the
+    mesosphere, with material also reaching the stratosphere. That is about six and a half times the
+    height of Everest and more than half the way to the Karman line. The column is a reminder that a
+    volcano can push material to the edge of space.
+  measures: peak height of the eruption column
+  model_idea: "NASA/NOAA satellite imagery; or procedural column against Everest and Karman-line markers"
+  wonder: An eruption that threw ash more than halfway to space.
+
+- name: Karman Line
+  value: 1.0e5
+  source: https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_line
+  description: >-
+    The Karman line, set by the FAI at 100 km above mean sea level, is the conventional boundary of
+    space. Aircraft can fly only where air is dense enough to give lift, and above this height a
+    vehicle would need to travel at orbital speeds to be supported by lift alone. The boundary is a
+    convention rather than a sharp edge, and the US Armed Forces award astronaut wings above 80 km.
+  measures: altitude of the conventional boundary of space
+  model_idea: "procedural: layered atmosphere diagram with the 100 km line, Everest, and ISS markers"
+  wonder: The border of space, set by convention.
+
+- name: Danyang-Kunshan Grand Bridge
+  value: 164800
+  source: https://en.wikipedia.org/wiki/Danyang%E2%80%93Kunshan_Grand_Bridge
+  description: >-
+    The Danyang-Kunshan Grand Bridge in China is 164.8 km long and was recognized by Guinness World
+    Records in 2011 as the longest bridge in the world. It is a viaduct for high-speed trains, twice
+    as long as the Panama Canal. Most of its length carries the line over rice paddies, rivers and
+    lakes of the Yangtze delta.
+  measures: total length of the viaduct
+  model_idea: "procedural: long straight viaduct on repeating piers over a flat landscape"
+  wonder: A bridge twice as long as the Panama Canal.
+
+- name: Chicxulub Crater
+  value: 1.8e5
+  source: https://en.wikipedia.org/wiki/Chicxulub_crater
+  description: >-
+    The Chicxulub crater, buried beneath about a kilometre of younger sediment on Mexico's Yucatan
+    coast, formed about 66 million years ago and is roughly 180 to 200 km across. It marks the impact
+    linked to the [Cretaceous-Paleogene extinction](https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event).
+    The transient cavity was about 100 km wide and 30 km deep, deeper than three Everests are tall.
+  measures: crater diameter (about 180 km for the inner ring, up to 200 km overall)
+  model_idea: "procedural: crater with ring structure from gravity-anomaly maps"
+  wonder: The crater behind the end of the non-avian dinosaurs.
+
+- name: ISS Orbital Altitude
+  value: 4.02e5
+  source: https://www.nasa.gov/international-space-station/
+  description: >-
+    NASA describes the International Space Station as orbiting 250 miles (about 400 km) above Earth at
+    17,500 miles per hour. That is four times the Karman line, yet only about 3 percent of Earth's
+    diameter, the equivalent of a couple of centimetres above the surface of a one-metre globe. It
+    circles the planet about every 90 minutes, so the crew sees sixteen sunrises a day.
+  measures: approximate orbital altitude above Earth's surface
+  model_idea: "procedural: Earth sphere with a thin altitude shell and ISS model"
+  wonder: A home in space only about 3 percent of Earth's width above the ground.
+
+- name: Grand Canyon Length
+  value: 4.46e5
+  source: https://nps.gov/grca/faqs.htm
+  description: >-
+    The Grand Canyon is 277 river miles (446 km) long, as measured along the Colorado River from Lees
+    Ferry to the Grand Wash Cliffs. It is up to 18 miles (29 km) wide and about 6,000 vertical feet
+    (1,829 m) deep at its deepest, so its length is about 240 times its greatest depth. The age
+    of the canyon is debated, with different segments formed at different times.
+  measures: river length of the canyon
+  model_idea: "NASA/USGS DEM terrain; or Sketchfab search 'Grand Canyon terrain' (uid unverified)"
+  wonder: A gash in the Earth 446 km long and a mile deep.
+
+- name: Mammoth Cave
+  value: 6.85e5
+  source: https://www.nps.gov/maca/learn/management/statistics.htm
+  description: >-
+    The National Park Service lists the surveyed length of Mammoth Cave in Kentucky at 426 miles
+    (685 km) to date, a figure that keeps growing as explorers link new passages. It is the longest
+    known cave system and is longer than the Grand Canyon. Stretched in a line, its passages would
+    cross several states.
+  measures: surveyed passage length to date
+  model_idea: "procedural: branching network of passages from survey maps"
+  wonder: A cave system longer than the Grand Canyon, still growing.
+
+- name: Longest Lightning Flash
+  value: 8.29e5
+  source: https://earthsky.org/earth/megaflash-lightning-record-us-texas-kansas-city/
+  description: >-
+    The World Meteorological Organization certified an 829 km megaflash on 31 July 2025, a bolt from 22
+    October 2017 that stretched from eastern Texas to near Kansas City, Missouri, with a margin of error
+    of plus or minus 8 km. It beat the previous record, 768 km across the southern United States in
+    2020. Such flashes spread sideways through huge storm systems.
+  measures: length of the longest verified lightning flash
+  model_idea: "procedural: branched bolt over a map of the central US"
+  wonder: A single lightning bolt from Texas to Missouri.
+
+- name: San Andreas Fault
+  value: 1.2e6
+  source: https://en.wikipedia.org/wiki/San_Andreas_Fault
+  description: >-
+    The San Andreas Fault runs roughly 750 miles (1,210 km) through California, marking the
+    [transform boundary](https://en.wikipedia.org/wiki/Transform_fault) where the Pacific and North
+    American plates slide past each other. Along its length the slip averages 20 to 35 mm per year,
+    about the pace at which fingernails grow. The fault is nearly three times the length of the
+    Grand Canyon.
+  measures: length of the fault through California (about 1,200 km)
+  model_idea: "USGS fault maps / DEM terrain; or procedural line on California map"
+  wonder: A crack in the continent that slides at the speed of fingernail growth.
+
+- name: Typhoon Tip
+  value: 2.22e6
+  source: https://en.wikipedia.org/wiki/Typhoon_Tip
+  description: >-
+    Typhoon Tip in 1979 reached a wind field diameter of 2,220 km (1,380 mi), the largest tropical
+    cyclone on record, and a lowest pressure of 870 hPa, also a record. That diameter is about half the
+    width of the contiguous United States. A storm that wide covers an area comparable to the whole
+    of Europe's western half.
+  measures: diameter of the wind field at peak
+  model_idea: "NOAA/JMA satellite imagery; or procedural spiral cloud system on a globe"
+  wonder: A storm half as wide as the continental United States.
+
+- name: Great Barrier Reef
+  value: 2.3e6
+  source: https://en.wikipedia.org/wiki/Great_Barrier_Reef
+  description: >-
+    The Great Barrier Reef stretches over 2,300 km along Australia's Queensland coast, with an area of
+    about 344,400 square kilometres, more than 2,900 individual reefs and 900 islands. It is the largest
+    coral reef system, built by billions of tiny polyps rather than any single organism. Its length is
+    more than five times the Grand Canyon.
+  measures: length of the reef system
+  model_idea: "NASA satellite imagery or procedural reef-chain map"
+  wonder: The largest living structure, built by animals the size of a grain of rice.
+
+- name: Earth's Inner Core
+  value: 2.442e6
+  source: https://en.wikipedia.org/wiki/Earth%27s_inner_core
+  description: >-
+    Earth's inner core is a solid ball of mostly iron and nickel about 1,221 km in radius, or 2,442 km
+    in diameter, with a radius about 70 percent that of the Moon. Its temperature is estimated at about
+    5,700 K, comparable to the surface of the Sun, but the pressure keeps it solid. It lies about 5,100
+    km beneath our feet.
+  measures: diameter of the inner core (radius 1,221 km)
+  model_idea: "cutaway Earth model; USGS/Sketchfab CC-BY search 'Earth interior layers' (uid unverified)"
+  wonder: A solid ball of iron as hot as the Sun's surface at the centre of the Earth.
+
+- name: Appalachian Trail
+  value: 3.5364e6
+  source: https://en.wikipedia.org/wiki/Appalachian_Trail
+  description: >-
+    The Appalachian Trail is 2,197.4 miles (3,536.4 km) long as of 2024, running through 14 states from
+    Georgia to Maine. Its highest point is Kuwohi at 6,643 feet (2,025 m), and it is the longest hiking-only
+    footpath in the world. The length changes slightly as the route is relocated. It is about three
+    quarters the width of the contiguous United States.
+  measures: official length of the trail (as of 2024)
+  model_idea: "procedural: line trace on a map of the eastern United States"
+  wonder: A footpath through 14 states.
+
+- name: Contiguous US Width
+  value: 4.509e6
+  source: https://en.wikipedia.org/wiki/Contiguous_United_States
+  description: >-
+    The greatest distance on a great-circle route entirely within the contiguous United States is
+    2,802 miles (4,509 km), running coast to coast between Florida and Washington state. That is more
+    than a third of Earth's diameter, and the country is so wide that a four-hour time difference
+    separates its coasts.
+  measures: longest great-circle path within the lower 48 states
+  model_idea: "procedural: great-circle arc on a map"
+  wonder: A country wide enough to cross four time zones.
+
+- name: Sahara
+  value: 4.8e6
+  source: https://en.wikipedia.org/wiki/Sahara
+  description: >-
+    The Sahara stretches roughly 4,800 km from the Atlantic Ocean to the Red Sea and covers 9.2 million
+    square kilometres, making it the largest hot desert. It is about 1,800 km wide at its widest.
+    Its east-west span is about the same as the width of the contiguous United States.
+  measures: east-west length of the desert (about 4,800 km)
+  model_idea: "NASA satellite imagery; or procedural dune-field map"
+  wonder: A desert nearly as wide as the United States.
+
+- name: Trans-Siberian Railway
+  value: 9.289e6
+  source: https://en.wikipedia.org/wiki/Trans-Siberian_Railway
+  description: >-
+    The Trans-Siberian Railway runs 9,289 km (5,772 miles) from Moscow to Vladivostok, the longest
+    railway line in the world, crossing seven time zones. That is about one and a half times the length
+    of the Amazon River. It is shorter than the Great Wall of China but runs in a nearly unbroken
+    line.
+  measures: line length between Moscow and Vladivostok
+  model_idea: "procedural: line across a map of Eurasia"
+  wonder: A single rail line across seven time zones.
+
+- name: Pole-to-Equator Distance
+  value: 1.0001966e7
+  source: https://en.wikipedia.org/wiki/Meridian_arc
+  description: >-
+    On the modern WGS84 ellipsoid, the distance from the North Pole to the equator is 10,001.966 km. The
+    metre was defined in 1791 as one ten-millionth of this distance, measured along a meridian through
+    Paris, so a quarter of Earth's meridian is about 10,000 km by design. The actual value is about 2 km
+    more, so the metre is about a fifth of a millimetre shorter than the original definition
+    intended.
+  measures: length of a quarter meridian from pole to equator
+  model_idea: "procedural: Earth globe with a meridian arc from pole to equator"
+  wonder: Earth itself was the original ruler for the metre.
