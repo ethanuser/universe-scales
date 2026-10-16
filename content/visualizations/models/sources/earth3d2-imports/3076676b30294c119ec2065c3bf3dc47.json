@@ -1,0 +1,44 @@
+{
+  "uid": "3076676b30294c119ec2065c3bf3dc47",
+  "name": "Animated Sperm Whale",
+  "author": "AneesAnimates",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "This 3D model features a highly detailed adult Sperm Whale, created with accurate proportions, clean topology, and realistic surface detail to capture the powerful and majestic look of this deep-sea giant. The model is fully rigged and animated for smooth, natural swimming and body movement, and uses high-quality PBR textures that give the skin a believable wet, organic appearance under any modern renderer, making it perfect for cinematic ocean scenes, documentaries, and ultra-realistic marine projects \ud83d\udc0b",
+  "isDownloadable": true,
+  "api_url": "https://api.sketchfab.com/v3/models/3076676b30294c119ec2065c3bf3dc47",
+  "checked": "2026-10-16",
+  "staging": {
+    "uid": "3076676b30294c119ec2065c3bf3dc47",
+    "name": "Animated Sperm Whale",
+    "author": "AneesAnimates",
+    "license": "by",
+    "source": "https://sketchfab.com/3d-models/animated-sperm-whale-3076676b30294c119ec2065c3bf3dc47",
+    "description": "This 3D model features a highly detailed adult Sperm Whale, created with accurate proportions, clean topology, and realistic surface detail to capture the powerful and majestic look of this deep-sea giant. The model is fully rigged and animated for smooth, natural swimming and body movement, and uses high-quality PBR textures that give the skin a believable wet, organic appearance under any modern renderer, making it perfect for cinematic ocean scenes, documentaries, and ultra-realistic marine projects \ud83d\udc0b",
+    "source_sha256": "3dc9391a7bfba44a2cd01c98e762965566099c319802f74a22053ce36e8dd794",
+    "source_bytes": 9578272,
+    "texture_size": 1024,
+    "format": "glb",
+    "gltf_version": "2.0",
+    "bytes": 5206608,
+    "sha256": "a4ddd3453397010520be43215e0ec8a51fdd8a72ecb1c53f63764273322df446",
+    "extensions_used": [
+      "KHR_materials_pbrSpecularGlossiness"
+    ],
+    "extensions_required": [
+      "KHR_materials_pbrSpecularGlossiness"
+    ],
+    "decompression_required": [],
+    "external_resources": [],
+    "mesh_count": 1,
+    "triangle_count": 83986,
+    "animations": 0,
+    "skins": 1
+  }
+}

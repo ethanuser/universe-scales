@@ -1,0 +1,54 @@
+{
+  "id": "earth3d2-kilimanjaro",
+  "source": "https://registry.opendata.aws/terrain-tiles/",
+  "basis_url": "https://www.tanzaniaparks.go.tz/kilimanjaro/about",
+  "basis_label": "TANAPA: Kibo summit altitude",
+  "author": "Mapzen / Tilezen; global SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey; adaptation by Universe Scales",
+  "license": "Mapzen Terrain Tiles attribution; underlying USGS public-domain terrain data",
+  "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "license_files": [
+    "sources/earth3d2-kilimanjaro.md"
+  ],
+  "matches": {
+    "length": [
+      "Mount Kilimanjaro"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dem_terrain",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "display_label": "Kilimanjaro · summit window above sea level",
+  "presentation": {
+    "reference_size": 5895,
+    "yaw": -8,
+    "pitch": 14,
+    "layout_width_factor": 1.25,
+    "remove_nodes": [
+      "Scope qualifier",
+      "Datum qualifier"
+    ]
+  },
+  "note": "Actual Kibo summit terrain, sampled from Mapzen Terrarium tiles on a 50 m grid, with no vertical exaggeration or summit correction. The authored 6.4 km square is a crop around the summit crater, not the full Kilimanjaro massif. The sides extend straight down to a sea-level display datum; they are arbitrary cuts, not cliffs, measured rock walls or the mountain’s base. Calibration uses TANAPA’s 5,895 m above-sea-level reference; the sampled grid maximum is about 5,886 m and is deliberately not forced to that reference. Elevation colors are illustrative, not observed geology, current snow or glacier boundaries. Mapzen / Tilezen; global SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey.",
+  "processing": {
+    "script": "scripts/build_earth3d2_terrain.py",
+    "units": "metres",
+    "vertical_gain": 1,
+    "source_note": "content/visualizations/models/sources/earth3d2-kilimanjaro.md",
+    "source_grid_sha256": "184777830e8cad89a48f295313efde2b84da29b4869f7d4753eb1cd40aeed6cb",
+    "provenance": "content/visualizations/models/sources/earth3d2-kilimanjaro/provenance.json"
+  },
+  "src": "content/visualizations/models/earth3d2-kilimanjaro.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 721008,
+  "sha256": "f8c4be219d984d45abf02241459cd673a165035899017ef11562dbc7c3f45adb",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 33794,
+  "animations": 0,
+  "skins": 0
+}

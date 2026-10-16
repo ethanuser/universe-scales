@@ -1,0 +1,62 @@
+{
+  "id": "earth3d2-sperm-whale",
+  "source": "https://sketchfab.com/3d-models/animated-sperm-whale-3076676b30294c119ec2065c3bf3dc47",
+  "basis_url": "https://www.fisheries.noaa.gov/species/sperm-whale",
+  "basis_label": "NOAA Fisheries: sperm whale length",
+  "sketchfab_uid": "3076676b30294c119ec2065c3bf3dc47",
+  "sketchfab_author": "AneesAnimates",
+  "author": "AneesAnimates on Sketchfab",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt",
+    "sources/earth3d2-sperm-whale.md"
+  ],
+  "matches": {
+    "length": [
+      "Sperm Whale"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "artistic_reconstruction",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "measure_axis": "z",
+    "yaw": 55,
+    "pitch": 8,
+    "layout_width_factor": 1.02
+  },
+  "note": "Sperm-whale exterior illustration by AneesAnimates, not a specimen scan or a measured individual. The original neutral bind pose is frozen, rigidly transformed and uniformly scaled nose to fluke to the catalog\u2019s 52 ft (15.8496 m) representative male length from NOAA. The source has no base-color map; gray-blue skin color is authored for this display. Source normal/roughness maps and sculpted wrinkles are retained; their local detail is illustrative rather than measured anatomy. The rig and animations are removed after baking joint transforms; the delivered model is static and remains freely rotatable. CC BY 4.0; adaptation by Universe Scales.",
+  "processing": {
+    "scripts": [
+      "scripts/prepare_earth3d2_imports.py",
+      "scripts/prepare_earth3d2_imports.mjs"
+    ],
+    "source_model_name": "Animated Sperm Whale",
+    "source_archive_sha256": "3dc9391a7bfba44a2cd01c98e762965566099c319802f74a22053ce36e8dd794",
+    "staged_glb_sha256": "a4ddd3453397010520be43215e0ec8a51fdd8a72ecb1c53f63764273322df446",
+    "source_evidence": "content/visualizations/models/sources/earth3d2-imports/3076676b30294c119ec2065c3bf3dc47.json",
+    "description": "Bake provided bind-pose skinning and normals; deduplicate, flatten, join, weld, simplify toward 45k triangles at 0.01 error; authored gray-blue base color; regenerate MikkTSpace tangents, prune and quantize. No anisotropic scaling.",
+    "source_note": "content/visualizations/models/sources/earth3d2-sperm-whale.md"
+  },
+  "src": "content/visualizations/models/earth3d2-sperm-whale.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1717968,
+  "sha256": "ebe8666b42a22572660a8a1a0e968d0aff990b0d48d997f36be63a58cb0a15fd",
+  "extensions_used": [
+    "KHR_materials_pbrSpecularGlossiness",
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_materials_pbrSpecularGlossiness",
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 45000,
+  "animations": 0,
+  "skins": 0
+}

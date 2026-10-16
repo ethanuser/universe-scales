@@ -1,0 +1,55 @@
+{
+  "id": "earth3d2-arecibo-reflector",
+  "source": "https://www.nationalacademies.org/read/1635/chapter/11",
+  "basis_url": "https://www.nationalacademies.org/read/1635/chapter/11",
+  "basis_label": "Dimensional and geometric basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Arecibo Telescope"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 305,
+    "yaw": -12,
+    "pitch": 50,
+    "layout_width_factor": 1.02,
+    "environment": 0.3,
+    "remove_nodes": [
+      "Scope qualifier"
+    ]
+  },
+  "note": "Original dimensioned diagram of the 305 m primary reflector only, as a spherical cap with 265 m curvature radius. Geometry uses equal horizontal and vertical metres. This is an idealized intact, pre-December-2020 surface, not the observatory’s present condition. The rectangular texture approximates the published 3 × 6 ft aluminum panels, but is not a survey of their layout. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
+  "processing": {
+    "script": "scripts/build_earth3d2_structures.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d2-arecibo-reflector.md",
+    "diameter_m": 305,
+    "nominal_curvature_radius_m": 265,
+    "active_deformation": false,
+    "panel_pattern": "authored, not a measured panel layout"
+  },
+  "src": "content/visualizations/models/earth3d2-arecibo-reflector.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 821696,
+  "sha256": "074939a45726797bd4387e1aeb070a7c92422026e9761f9f73f6148963174fc8",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 32512,
+  "animations": 0,
+  "skins": 0,
+  "display_label": "Arecibo · pre-collapse reflector only"
+}
