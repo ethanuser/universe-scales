@@ -1,0 +1,58 @@
+{
+  "id": "victoria-falls",
+  "grid_shape": [
+    129,
+    145
+  ],
+  "bounds_lonlat": [
+    25.848558561665005,
+    -17.933084837557075,
+    25.867441438334996,
+    -17.916915162442926
+  ],
+  "source_zoom": 15,
+  "elevation_range_m": [
+    736.0076995031817,
+    901.8316772203211
+  ],
+  "vertical_gain": 1,
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/15/18736/18042.png",
+      "sha256": "fb3d907d0793ed137965790a3f11f2bfe56c42c39d822fec237fb064d0aaffb0",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/15/18736/18043.png",
+      "sha256": "2ab272c6f4e2ed4ab3deb8bea24dc51d01a6e81927f2bffa8e5ff02fe46902c0",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/15/18737/18042.png",
+      "sha256": "b0d3de7d86848d28203727675bd573a08e1f6302eb556b1bf1113a4523f51a7f",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/15/18737/18043.png",
+      "sha256": "31baaf9ac1c702a5ff432c936ff9de0c3663f8c5ed900f0c916c76588d6af1c4",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/15/18738/18042.png",
+      "sha256": "1f77776bbfe259ba06913d0f7c143faf2034fdad72e65b2bb41cbec9a1c872f3",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/15/18738/18043.png",
+      "sha256": "bab397acc7795c88ecd907667965bde845d8b7f80b6ffe98ec7912629ee28937",
+      "headers": {}
+    }
+  ],
+  "vector_sources": [],
+  "files": {
+    "terrain.npz": "cda4fb4f46330a4eb613ef41cf98f9e2fa04ecb53d3f7cc8ec71d30a86e70c29",
+    "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5"
+  },
+  "processing": "Bilinear pixel-center elevation sampling including negative depths; no summit/depth correction, smoothing or invented relief. Source vector fragments retained separately. Authored aperture.",
+  "attribution": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "terrain3d-angel-falls",
+  "source": "https://registry.opendata.aws/terrain-tiles/",
+  "basis_url": "https://en.wikipedia.org/wiki/Angel_Falls",
+  "basis_label": "Geographic measurement and context",
+  "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+  "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "license_files": [
+    "sources/terrain3d-angel-falls.md"
+  ],
+  "matches": {
+    "length": [
+      "Angel Falls"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dem_terrain",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 979,
+    "pitch": 22,
+    "yaw": -90,
+    "roll": 0,
+    "layout_width_factor": 1.3
+  },
+  "note": "A cropped DEM of the Auyan-tepui escarpment at the published waterfall coordinate. The 1.1 km window is geographic context for the 979 m total descent, not a scan of the falling water. SRTM rounds the cliff and does not resolve an overhang, water column or each cascade. No water ribbon, artificial cliff or height correction is added. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "processing": {
+    "script": "scripts/build_terrain3d_models.py",
+    "units": "metres",
+    "vertical_gain": 1,
+    "mesh_grid_step": 1,
+    "source_note": "content/visualizations/models/sources/terrain3d-angel-falls.md",
+    "provenance": "content/visualizations/models/sources/terrain3d/angel-falls/provenance.json",
+    "source_files": {
+      "terrain.npz": "38ef7e8ede1352b58498fb8aee445166995b80c1c0182c894265f96161f67a97",
+      "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5"
+    }
+  },
+  "src": "content/visualizations/models/terrain3d-angel-falls.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 786372,
+  "sha256": "b9da4ec6e863a4e9d9900edf43dfc0d86337bd9d0ec4060e037b7862cd5e0f40",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 30240,
+  "animations": 0,
+  "skins": 0
+}

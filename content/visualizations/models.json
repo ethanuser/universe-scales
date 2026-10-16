@@ -11249,6 +11249,505 @@
       "triangle_count": 26048,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "terrain3d-angel-falls",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://en.wikipedia.org/wiki/Angel_Falls",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-angel-falls.md"
+      ],
+      "matches": {
+        "length": [
+          "Angel Falls"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 979,
+        "pitch": 22,
+        "yaw": -90,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "note": "A cropped DEM of the Auyan-tepui escarpment at the published waterfall coordinate. The 1.1 km window is geographic context for the 979 m total descent, not a scan of the falling water. SRTM rounds the cliff and does not resolve an overhang, water column or each cascade. No water ribbon, artificial cliff or height correction is added. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 1,
+        "mesh_grid_step": 1,
+        "source_note": "content/visualizations/models/sources/terrain3d-angel-falls.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/angel-falls/provenance.json",
+        "source_files": {
+          "terrain.npz": "38ef7e8ede1352b58498fb8aee445166995b80c1c0182c894265f96161f67a97",
+          "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-angel-falls.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 786372,
+      "sha256": "b9da4ec6e863a4e9d9900edf43dfc0d86337bd9d0ec4060e037b7862cd5e0f40",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 30240,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-gibraltar",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://en.wikipedia.org/wiki/Strait_of_Gibraltar",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-gibraltar.md"
+      ],
+      "matches": {
+        "length": [
+          "Strait of Gibraltar"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 14200,
+        "pitch": 63,
+        "yaw": 0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "note": "An 18 km geographic window of the narrow crossing between Spain and Morocco, with actual NOAA ETOPO1 ocean-floor relief and a flat sea-level surface. The context window is larger than the catalog 14.2 km narrowest crossing; its crop edges are not measurement endpoints. Ocean depth is sampled explicitly from the coarse 1 arc-minute ETOPO1 grid, not a detailed strait sounding survey. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 1,
+        "mesh_grid_step": 2,
+        "source_note": "content/visualizations/models/sources/terrain3d-gibraltar.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/gibraltar/provenance.json",
+        "source_files": {
+          "terrain.npz": "e8bca67da6bd0040e9c727a65160f70baf2d82f1f5777a68192564df182ff770",
+          "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5",
+          "land-mask.png": "47ed6a9e1f81930c83fe23ece648f2f9fa5a66bcc3bfa75112f7ebdcf1bc4d2d"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-gibraltar.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 615172,
+      "sha256": "b46d128ff638d22d907fc8ca560af18daa1400624d30a3fe5b2e276ce0cfca59",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 25658,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-grand-canyon",
+      "source": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+      "basis_url": "https://www.nps.gov/grca/faqs.htm",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-grand-canyon.md"
+      ],
+      "matches": {
+        "length": [
+          "Grand Canyon Length"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 446000,
+        "pitch": 58,
+        "yaw": 0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "note": "Regional terrain sampled directly from the USGS 3DEP elevation service and a clipped Natural Earth Colorado River centerline. Relief is exaggerated 5 times; the cyan line is widened for visibility and draped on the mesh, not a water-depth survey. The map window includes context beyond the canyon and does not define its rim or exact Lees Ferry-to-Grand Wash endpoints. The independent 446 km ruler represents the published river-course length; the geographic map is not stretched to that route length. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 5,
+        "mesh_grid_step": 2,
+        "source_note": "content/visualizations/models/sources/terrain3d-grand-canyon.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/grand-canyon/provenance.json",
+        "source_files": {
+          "terrain.npz": "5e8c75c7e41749b72f0d365cb043b34420b0ed315761f5e2589ec3e615dd305f",
+          "vectors.geojson.gz": "837648c7c2adb431fc9b032c41416854cbee947804c8ba76621d322c46a4d51e"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-grand-canyon.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 741700,
+      "sha256": "54caed661b4b425aec33eeaaa1ab51b145d51ac991a12923189182e3b1e7f5e2",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 8,
+      "triangle_count": 23756,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-great-barrier-reef",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://www.gbrmpa.gov.au/about-us/spatial-data-information-services",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales. Great Barrier Reef Marine Park Authority 2023.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution; Reef Authority reef data CC-BY-4.0",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-great-barrier-reef.md"
+      ],
+      "matches": {
+        "length": [
+          "Great Barrier Reef"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 2300000,
+        "pitch": 65,
+        "yaw": 0,
+        "roll": -19,
+        "layout_width_factor": 1.3
+      },
+      "note": "Actual Reef Authority reef polygons selected within the Queensland viewing aperture, in contrasting turquoise over sampled coastal terrain and NOAA ETOPO1 sea floor. These polygons are mapped reef footprints, not a live-coral census, park boundary or detailed 3D coral survey. Relief and bathymetry are exaggerated 8 times; the reef layer is a color overlay on that regional surface, not individually measured reef heights. Geographic horizontal coordinates and Earth curvature are retained. The 2,300 km catalog length refers to the broad reef system, not a straight end-to-end measurement of every polygon. Contains Great Barrier Reef Marine Park Authority 2023 data under CC BY 4.0; modified by selecting and rasterizing mapped reefs. No endorsement is implied. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales. Ocean depths are sampled explicitly from NOAA ETOPO1 (1 arc-minute), using Natural Earth coastlines to select ocean samples; coastlines and land/ocean source transitions are generalized.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 8,
+        "mesh_grid_step": 2,
+        "source_note": "content/visualizations/models/sources/terrain3d-great-barrier-reef.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/great-barrier-reef/provenance.json",
+        "source_files": {
+          "terrain.npz": "d404e605685f19c89c55e10fe642429403cfe11c1075ccb410b712414c95f51e",
+          "vectors.geojson.gz": "639c43fc53a3c6c22174da6fdffb5506eb7cc2ad24ed72ad76b68afc7bd23409",
+          "land-mask.png": "deaba50b186a1fc7edc45b9850d22e0754562ac2d31f94c05d8185c0eae872af",
+          "reef-license.json": "30eddf54a4b1d7bfa990d0fe7c7af67bcc5860cac8b85a66f8dcd1716f83da35"
+        },
+        "reef_rights_snapshot": "content/visualizations/models/sources/terrain3d/great-barrier-reef/reef-license.json"
+      },
+      "src": "content/visualizations/models/terrain3d-great-barrier-reef.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 839676,
+      "sha256": "9d7ad0367ee4a437eee1c26ecd584894d17b9c799d71c3fba6877b38b79448f1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 25920,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-sahara",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2008-05-08",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-sahara.md"
+      ],
+      "matches": {
+        "length": [
+          "Sahara"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 4800000,
+        "pitch": 62,
+        "yaw": 0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "note": "Northern Africa from Atlantic coastal terrain across the Atlas, Ahaggar and Tibesti to the Nile/Red Sea region, at geographic horizontal scale on a curved Earth. Relief is exaggerated 12 times. The rectangular viewing aperture is an authored regional crop, not a mapped climatic boundary of the Sahara; no desert-boundary polygon is invented. The 4,800 km catalog east-west span is an approximate geographic reference. Colors indicate elevation and ocean depth, not vegetation, dunes, sand cover or mapped lithology. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales. Ocean depths are sampled explicitly from NOAA ETOPO1 (1 arc-minute), using Natural Earth coastlines to select ocean samples; coastlines and land/ocean source transitions are generalized.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 12,
+        "mesh_grid_step": 2,
+        "source_note": "content/visualizations/models/sources/terrain3d-sahara.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/sahara/provenance.json",
+        "source_files": {
+          "terrain.npz": "26b09922e586f78092bdc0967b85110cee95defd5560a5c2fabb1b9904b8876c",
+          "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5",
+          "land-mask.png": "b3516442c46ba02e187909d023c9ab3da79b30ccc56037f46b38fa59d400c40f"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-sahara.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 714360,
+      "sha256": "32c5627ad3b8b225e624af4a2add037f854c4a1f486f6bb13b05374daabf8fab",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 24432,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-san-andreas",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://www.usgs.gov/programs/earthquake-hazards/faults",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-san-andreas.md"
+      ],
+      "matches": {
+        "length": [
+          "San Andreas Fault"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1210000,
+        "pitch": 64,
+        "yaw": 0,
+        "roll": -22,
+        "layout_width_factor": 1.3
+      },
+      "note": "USGS Quaternary Fault and Fold Database traces whose fault_name contains San Andreas, with original section identities and gaps retained. Line geometry is simplified with a 300 m horizontal tolerance for this regional display; original vertices and fragments are pinned in the source. The bright trace is a widened cartographic symbol, not a chasm or measured fault-zone width. Relief is exaggerated 5 times. The source includes multiple mapped strands; their aggregate linework is not a single traversable route. The separate approximate 1,210 km ruler represents the catalog system length and is not used to rescale the coordinates. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales. Ocean depths are sampled explicitly from NOAA ETOPO1 (1 arc-minute), using Natural Earth coastlines to select ocean samples; coastlines and land/ocean source transitions are generalized.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 5,
+        "mesh_grid_step": 2,
+        "source_note": "content/visualizations/models/sources/terrain3d-san-andreas.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/san-andreas/provenance.json",
+        "source_files": {
+          "terrain.npz": "bd44217da03aae1641a5d407a51cba7ba01d0a2a2041c620b10d616384c3e982",
+          "vectors.geojson.gz": "50968a22f5c21dfe65b97a4498cb0085037a411efcd70ed1fc97f5c9b77d5bb7",
+          "land-mask.png": "a5ad7a005c3e6edf4c92344642a446e41b0446b65a7883436000f532c030534e"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-san-andreas.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1784128,
+      "sha256": "c0ee2ce829bd40e0ec4f0162620846048361c93fd7caafbebb7cd717c0c7c088",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 8,
+      "triangle_count": 43672,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-suez",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalCharacteristics.aspx",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-suez.md"
+      ],
+      "matches": {
+        "length": [
+          "Suez Canal"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 193300,
+        "pitch": 66,
+        "yaw": 0,
+        "roll": 8,
+        "layout_width_factor": 1.3
+      },
+      "note": "The generalized Natural Earth Suez Canal centerlines, including their separate mapped branches, over sampled terrain between the Mediterranean and Red seas. Relief is exaggerated 3 times; line width is a visibility symbol, not canal width. The source is generalized cartography, not a current engineering plan or full port-approach inventory. The independent 193.3 km ruler marks the catalog navigation-route length; neither map nor centerlines are stretched to it. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales. Ocean depths are sampled explicitly from NOAA ETOPO1 (1 arc-minute), using Natural Earth coastlines to select ocean samples; coastlines and land/ocean source transitions are generalized.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 3,
+        "mesh_grid_step": 2,
+        "source_note": "content/visualizations/models/sources/terrain3d-suez.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/suez/provenance.json",
+        "source_files": {
+          "terrain.npz": "011c8145484fab2b5af947584fb2258fb848c4df9a53d0d4c1f2152e6b23c45e",
+          "vectors.geojson.gz": "fe960762bed97666ebd8615403492a82b9f84e4ed878a50f2f8a7c1c80a2bffa",
+          "land-mask.png": "18c57dcaa626396c90c773e521099c5fc4b22f7d4dc7c63aeaf17671e75fb704"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-suez.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 552396,
+      "sha256": "d5fe9261496a7e87b163a430c4ecea400101b4858db9dcc163be08deab5a71ba",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 8,
+      "triangle_count": 18284,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-tanganyika",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://en.wikipedia.org/wiki/Lake_Tanganyika",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-tanganyika.md"
+      ],
+      "matches": {
+        "length": [
+          "Lake Tanganyika"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 673000,
+        "pitch": 68,
+        "yaw": 0,
+        "roll": -12,
+        "layout_width_factor": 1.3
+      },
+      "note": "The actual Natural Earth Lake Tanganyika shoreline in sampled East African Rift terrain. The complete lake remains at geographic horizontal scale; relief is exaggerated 4 times. The lake is rendered at its sampled surface elevation: there is no invented lake-floor bathymetry. The 673 km reference is the catalog long-axis length, not a sum around the shoreline. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 4,
+        "mesh_grid_step": 2,
+        "source_note": "content/visualizations/models/sources/terrain3d-tanganyika.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/tanganyika/provenance.json",
+        "source_files": {
+          "terrain.npz": "750da6bc45a7af57a0dcf9847085185832573dc93f35393fae3b163c4ee3d17f",
+          "vectors.geojson.gz": "0292de3d7bd61c81c177dbaf3da53baa4f760e230c8b38ceebf2d57a6b78ba2b"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-tanganyika.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 563644,
+      "sha256": "888d4ab5fb327b959af61dd80b9f271c17bc82aaa7045edb3baf56e58ba4b1bc",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 17536,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d-victoria-falls",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://whc.unesco.org/en/list/509/",
+      "basis_label": "Geographic measurement and context",
+      "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d-victoria-falls.md"
+      ],
+      "matches": {
+        "length": [
+          "Victoria Falls"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1708,
+        "pitch": 58,
+        "yaw": 0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "note": "The present Zambezi gorge and upstream terrain around the falls, with a 2 km east-west context window. Calibration is the published 1,708 m width, not the DEM relief. SRTM smooths the narrow gorge; this is terrain, not a reconstruction of the seasonally changing water curtain. No invented waterfall surface is added. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+      "processing": {
+        "script": "scripts/build_terrain3d_models.py",
+        "units": "metres",
+        "vertical_gain": 1,
+        "mesh_grid_step": 1,
+        "source_note": "content/visualizations/models/sources/terrain3d-victoria-falls.md",
+        "provenance": "content/visualizations/models/sources/terrain3d/victoria-falls/provenance.json",
+        "source_files": {
+          "terrain.npz": "cda4fb4f46330a4eb613ef41cf98f9e2fa04ecb53d3f7cc8ec71d30a86e70c29",
+          "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5"
+        }
+      },
+      "src": "content/visualizations/models/terrain3d-victoria-falls.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 974356,
+      "sha256": "ad2ad8fcdbf694943be590e00195649cecc185794f14ad4813463694fb200e1b",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 38496,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

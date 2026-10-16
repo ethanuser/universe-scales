@@ -1,0 +1,108 @@
+{
+  "id": "tanganyika",
+  "grid_shape": [
+    257,
+    129
+  ],
+  "bounds_lonlat": [
+    28.7,
+    -9.1,
+    31.6,
+    -3.15
+  ],
+  "source_zoom": 8,
+  "elevation_range_m": [
+    743.1345924927006,
+    3145.4921623842893
+  ],
+  "vertical_gain": 4,
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/148/130.png",
+      "sha256": "dc518ccb6f443486e39992e47d3080f916eb428e701f7ae2fffab8eb51b5964c",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/148/131.png",
+      "sha256": "15365090e17cc58e29979c74a71581a05cdc0e753391c86fd78902b3304cb506",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/148/132.png",
+      "sha256": "f43fc3e30749066b2c74c926ccd6892d058d14b68b6656ea0606349e484a6140",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/148/133.png",
+      "sha256": "94338c386fa8567ca19a1a4357ce0cef6bb61020b0aa9337f698e6204f92d5fc",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/148/134.png",
+      "sha256": "6fe36d68618b809b800ad9b4f74295d60f19724133413c9e3f41ae7d72761c05",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/149/130.png",
+      "sha256": "2b300fd5ac8079e30f80bd37a7e38863b2a1644d0d78926f95387b7d637000e5",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/149/131.png",
+      "sha256": "09d26b44725a4ae6b74d5a64abe32a9de55520b8a02c8eb2c99db9e4fd07f4e8",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/149/132.png",
+      "sha256": "54fb70b8ab39419bd0b2840144076cf3c3dc96da63393b4ccd7d1d280a253bae",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/149/133.png",
+      "sha256": "3596d711b150826d560eab464010f81e6631a809b40b629481a6e63cdb0414a0",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/149/134.png",
+      "sha256": "d8488a1de0f14ca6b4818538b6fa5f3377dbab8c7dc07a67ed140898de153bf8",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/150/130.png",
+      "sha256": "8c70f6e681f2c0df4d224b34b170b39705d12528719a7b4dd6628b885499b084",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/150/131.png",
+      "sha256": "c84c2a87b0a4c59fc0520f915e0b621583690bdddd3c3da19381a4c46e705c7a",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/150/132.png",
+      "sha256": "04515902cf63357626ca7a53a62dba95d43968d3fef9ddc43dffec6aa498d6a3",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/150/133.png",
+      "sha256": "f4e376ad7ca8fcb337669bcc08bdfd1e063d87fc0c6c0229136aa501d96b9983",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/8/150/134.png",
+      "sha256": "6225f5e5b3dbe5a93056ec0ae70fd55fc31a9d7d7a11d05a3a1c9d2072ba2174",
+      "headers": {}
+    }
+  ],
+  "vector_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_lakes.geojson",
+      "sha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9"
+    }
+  ],
+  "files": {
+    "terrain.npz": "750da6bc45a7af57a0dcf9847085185832573dc93f35393fae3b163c4ee3d17f",
+    "vectors.geojson.gz": "0292de3d7bd61c81c177dbaf3da53baa4f760e230c8b38ceebf2d57a6b78ba2b"
+  },
+  "processing": "Bilinear pixel-center elevation sampling including negative depths; no summit/depth correction, smoothing or invented relief. Source vector fragments retained separately. Authored aperture.",
+  "attribution": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales."
+}
