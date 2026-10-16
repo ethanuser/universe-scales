@@ -576,7 +576,14 @@ Codex workflow (the owner has spare Codex capacity):
   the lead commits each worktree, runs model_lab on it, then merges into main. Version-hash merge
   conflicts: keep either side and rerun scripts/bump_versions.py. models.json conflicts: keep main's
   and re-register from handoff/<job>/<id>.entry.json. Registering needs the dataset item to exist.
-- Queued (started 03:30 2026-10-16 by run-after-reset.sh): space3d, bio3d, earth3d, images2.
+- Round 2 (2026-10-16, merged): earth3d (14 models), bio3d (9 PDB/COD molecules), space3d (29 NASA
+  bodies/spacecraft + MOLA terrain; no report, Codex hit its usage limit), images2 (17 photos).
+  The lead browser-checked every model (model_lab shots; extents 0.8-1.3x) before merging.
+  129 of 257 Length items now have models; 6 still have no photo.
+- Round 3 queued by run-after-reset.sh at 09:20 2026-10-16: space3d2, bio3d2, earth3d2, images3
+  (worktrees from d52ff0a). Merge the same way; models.json: keep main's, re-register entries.
+- Note: the Hindenburg model keeps its historical swastika tail markings; the owner may want them
+  removed. The 747 carries an Air China livery from the CC BY source.
 
 Open questions for the owner: CF4 Laniakea basin mesh rights (unused; galaxies used instead);
 alternative human models (X-ray skeleton, walking woman) available on request; public repo history
