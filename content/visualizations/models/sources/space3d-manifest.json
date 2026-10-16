@@ -1,0 +1,613 @@
+{
+  "models": [
+    {
+      "id": "nasa-mercury",
+      "source": "https://science.nasa.gov/resource/mercury-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Mercury_1_4878.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Mercury"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "calibration": "longest-extent",
+      "prepared_file": "mercury.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+      "source_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+      "source_bytes": 3048920
+    },
+    {
+      "id": "nasa-venus",
+      "source": "https://science.nasa.gov/resource/venus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/v/Venus_1_12103.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Venus"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "The appearance depicts the cloud-covered planet, not exposed surface terrain.",
+      "calibration": "longest-extent",
+      "prepared_file": "venus.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "6aa26809feeb74fee371c43e9904112a76ebb3df15696e6e75297c0fce063bf9",
+      "source_sha256": "6aa26809feeb74fee371c43e9904112a76ebb3df15696e6e75297c0fce063bf9",
+      "source_bytes": 298748
+    },
+    {
+      "id": "nasa-uranus",
+      "source": "https://science.nasa.gov/resource/uranus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/u/Uranus_1_51118.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Uranus"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "Cloud appearance is an idealized NASA visualization; the sphere is not a time-resolved weather map.",
+      "calibration": "longest-extent",
+      "prepared_file": "uranus.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+      "source_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+      "source_bytes": 172652
+    },
+    {
+      "id": "nasa-neptune",
+      "source": "https://science.nasa.gov/resource/neptune-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/n/Neptune_1_49528.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Neptune"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "The blue atmospheric texture is NASA's visualization, not a current or strictly natural-color weather map.",
+      "calibration": "longest-extent",
+      "prepared_file": "neptune.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+      "source_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+      "source_bytes": 585104
+    },
+    {
+      "id": "nasa-pluto",
+      "source": "https://science.nasa.gov/resource/pluto-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/l/Pluto_1_2374.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Pluto"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "New Horizons coverage is uneven: sharp encounter-hemisphere detail and lower-resolution or filled regions elsewhere are part of the NASA map.",
+      "calibration": "longest-extent",
+      "prepared_file": "pluto.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+      "source_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+      "source_bytes": 7009348
+    },
+    {
+      "id": "nasa-charon",
+      "source": "https://science.nasa.gov/resource/charon-3d-model/",
+      "download_url": "https://science.nasa.gov/wp-content/uploads/2023/09/Charon_1_2.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Charon"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "Encounter coverage and map resolution are uneven; the unobserved or poorly observed regions are not measured high-resolution terrain.",
+      "calibration": "longest-extent",
+      "prepared_file": "charon.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "3677525ff10e15f3d9cd0f0152801ed27ac3c277f8aad15056fe01cba20b2dbe",
+      "source_sha256": "3677525ff10e15f3d9cd0f0152801ed27ac3c277f8aad15056fe01cba20b2dbe",
+      "source_bytes": 473760
+    },
+    {
+      "id": "nasa-io",
+      "source": "https://science.nasa.gov/resource/io-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/i/Io_1_3643.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Io"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "calibration": "longest-extent",
+      "prepared_file": "io.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "118a6bf7eda476ea6b454039f621778189141a82acb3ad0aaa762f1771c5a723",
+      "source_sha256": "118a6bf7eda476ea6b454039f621778189141a82acb3ad0aaa762f1771c5a723",
+      "source_bytes": 17479700
+    },
+    {
+      "id": "nasa-europa",
+      "source": "https://science.nasa.gov/resource/europa-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Europa_1_3138.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Europa"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "calibration": "longest-extent",
+      "prepared_file": "europa.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "fe88cbe326574a658c9d3b0885d1a38deea3ebfb354772eb3b95fe0f3f3d542c",
+      "source_sha256": "fe88cbe326574a658c9d3b0885d1a38deea3ebfb354772eb3b95fe0f3f3d542c",
+      "source_bytes": 12287068
+    },
+    {
+      "id": "nasa-ganymede",
+      "source": "https://science.nasa.gov/resource/ganymede-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/g/Ganymede_1_5268.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Ganymede"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "calibration": "longest-extent",
+      "prepared_file": "ganymede.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "367bc128197bf1d25ef5af5269f2d1902aababaae167c3c8d6529443b0100d6f",
+      "source_sha256": "367bc128197bf1d25ef5af5269f2d1902aababaae167c3c8d6529443b0100d6f",
+      "source_bytes": 4075564
+    },
+    {
+      "id": "nasa-callisto",
+      "source": "https://science.nasa.gov/resource/callisto-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/c/Callisto_1_4821.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Callisto"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "calibration": "longest-extent",
+      "prepared_file": "callisto.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "0bdbd5600a4be4bef4bd85e53f6226f49e73a66c85310219402627e59457c303",
+      "source_sha256": "0bdbd5600a4be4bef4bd85e53f6226f49e73a66c85310219402627e59457c303",
+      "source_bytes": 4452928
+    },
+    {
+      "id": "nasa-titan",
+      "source": "https://science.nasa.gov/resource/titan-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/t/Titan_1_5150.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Titan"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "This opaque NASA appearance does not expose a reconstructed global solid surface beneath the atmosphere.",
+      "calibration": "longest-extent",
+      "prepared_file": "titan.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "9e92e30902a26130895bf2558172d7f36186eb4a51368a60bc3ec1d01134fde4",
+      "source_sha256": "9e92e30902a26130895bf2558172d7f36186eb4a51368a60bc3ec1d01134fde4",
+      "source_bytes": 686348
+    },
+    {
+      "id": "nasa-enceladus",
+      "source": "https://science.nasa.gov/resource/enceladus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Enceladus_1_504.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Enceladus"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "calibration": "longest-extent",
+      "prepared_file": "enceladus.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "7548234bae15047d6c1af6bec4f348748b1acae7d4e7bfbe50e5bb3dda75506f",
+      "source_sha256": "7548234bae15047d6c1af6bec4f348748b1acae7d4e7bfbe50e5bb3dda75506f",
+      "source_bytes": 17925448
+    },
+    {
+      "id": "nasa-triton",
+      "source": "https://science.nasa.gov/resource/triton-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/t/Triton_1_2707.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Triton"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "Voyager coverage is incomplete. Do not interpret map filling outside the observed encounter hemisphere as measured surface detail.",
+      "calibration": "longest-extent",
+      "prepared_file": "triton.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "a25df7ee7fe8679e3da8cca7f1a09ec7241ad5e0c7ad97a39f057b8c1a0043ce",
+      "source_sha256": "a25df7ee7fe8679e3da8cca7f1a09ec7241ad5e0c7ad97a39f057b8c1a0043ce",
+      "source_bytes": 6865548
+    },
+    {
+      "id": "nasa-ceres",
+      "source": "https://science.nasa.gov/resource/ceres-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/c/Ceres_1_1000.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Ceres"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's oblate globe and normal map are retained. This is not a high-resolution reconstructed terrain mesh. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "calibration": "volume-equivalent-diameter",
+      "prepared_file": "ceres.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "c43ec43aa8fb90aa8cf30660c2f2853cfac408d38149d1dc470490f4f4aa9899",
+      "source_sha256": "c43ec43aa8fb90aa8cf30660c2f2853cfac408d38149d1dc470490f4f4aa9899",
+      "source_bytes": 9529028
+    },
+    {
+      "id": "nasa-vesta",
+      "source": "https://science.nasa.gov/resource/vesta-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/v/Vesta_1_100.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Vesta"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's irregular shape and source normal map are retained; fine normal-map detail does not change the calibrated mesh volume. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "calibration": "volume-equivalent-diameter",
+      "prepared_file": "vesta.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "6f00df4977c211a75fce65dd2badc9f39b12b58d3386e130c89f491dbc8f530b",
+      "source_sha256": "6f00df4977c211a75fce65dd2badc9f39b12b58d3386e130c89f491dbc8f530b",
+      "source_bytes": 5073448
+    },
+    {
+      "id": "nasa-phobos",
+      "source": "https://science.nasa.gov/resource/phobos-mars-moon-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24878_Phobos_1_1000.glb",
+      "author": "NASA/JPL-Caltech",
+      "matches": {
+        "length": [
+          "Phobos"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA/JPL-Caltech's irregular Phobos mesh is retained. The mean-diameter item is calibrated by the mesh's equivalent-volume diameter, not its longest dimension. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "calibration": "volume-equivalent-diameter",
+      "prepared_file": "phobos.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "757712101e4fbcf9527942ee664a3bc6dfe3ab460466b760f4bf51ee85dbd8d3",
+      "source_sha256": "757712101e4fbcf9527942ee664a3bc6dfe3ab460466b760f4bf51ee85dbd8d3",
+      "source_bytes": 3855016
+    },
+    {
+      "id": "nasa-deimos",
+      "source": "https://science.nasa.gov/resource/deimos-mars-moon-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24879_Deimos_1_1000.glb",
+      "author": "NASA/JPL-Caltech",
+      "matches": {
+        "length": [
+          "Deimos"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA/JPL-Caltech's irregular Deimos mesh is retained. The mean-diameter item is calibrated by the mesh's equivalent-volume diameter, not its longest dimension. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "calibration": "volume-equivalent-diameter",
+      "prepared_file": "deimos.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "5d5da763970acffe88aac26d3c3bd0fa66c5bef251d1bb4bfe2ae5fd723507e4",
+      "source_sha256": "5d5da763970acffe88aac26d3c3bd0fa66c5bef251d1bb4bfe2ae5fd723507e4",
+      "source_bytes": 1600012
+    },
+    {
+      "id": "nasa-eros",
+      "source": "https://science.nasa.gov/resource/eros-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Eros_1_10.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Eros"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's low-polygon elongated mesh is retained, without substituting a sphere. Longest world-axis extent is calibrated to the item's long-axis length.",
+      "calibration": "longest-extent",
+      "prepared_file": "eros.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "4e4eab5ebf3553f78713b48db7dde601634094e85363caa5b48fbd869933b7b2",
+      "source_sha256": "4e4eab5ebf3553f78713b48db7dde601634094e85363caa5b48fbd869933b7b2",
+      "source_bytes": 2392188
+    },
+    {
+      "id": "nasa-bennu",
+      "source": "https://science.nasa.gov/resource/bennu-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/b/Bennu_1_1.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "matches": {
+        "length": [
+          "Bennu"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "The low-polygon NASA shape retains Bennu's irregular spinning-top outline; the texture does not resolve individual boulders in relief. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "calibration": "volume-equivalent-diameter",
+      "prepared_file": "bennu.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0
+      },
+      "prepared_sha256": "b7740b53a77ff538082d26e7079510ef7810fc3de9a5ff0fa316b393d2cf700e",
+      "source_sha256": "b7740b53a77ff538082d26e7079510ef7810fc3de9a5ff0fa316b393d2cf700e",
+      "source_bytes": 859980
+    },
+    {
+      "id": "nasa-hubble-space-telescope",
+      "source": "https://science.nasa.gov/resource/hubble-space-telescope-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/h/Hubble.glb",
+      "author": "NASA (individual model artist not identified)",
+      "matches": {
+        "length": [
+          "Hubble Space Telescope"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "The open aperture door and solar arrays are retained. The source body has an approximately 13.2-unit axial barrel; the open door extends beyond it. Calibration uses that barrel length, with the extent overhead documented separately.",
+      "calibration": "explicit",
+      "prepared_file": "hubble-space-telescope.glb",
+      "operations": [
+        "Retain original NASA geometry, node transforms, UVs and materials",
+        "Remove the helper cube mesh on _root, preserving the root transform and all Hubble children"
+      ],
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0.15,
+        "reference_size": 13.2,
+        "yaw": -25,
+        "roll": 20,
+        "environment": 0.7
+      },
+      "prepared_sha256": "e6a40640d6846e8f5d9438821ebe2d7de730c8dadba1cc9dfdbcc148ff1052cd",
+      "source_sha256": "e6a40640d6846e8f5d9438821ebe2d7de730c8dadba1cc9dfdbcc148ff1052cd",
+      "source_bytes": 11463124,
+      "remove_meshes_on_nodes": [
+        "_root"
+      ]
+    },
+    {
+      "id": "nasa-webb-sunshield",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/James%20Webb%20Space%20Telescope%20%28B%29",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/James%20Webb%20Space%20Telescope%20%28B%29/James%20Webb%20Space%20Telescope%20%28B%29.glb",
+      "author": "NASA (individual model artist not identified in source metadata)",
+      "matches": {
+        "length": [
+          "James Webb Sunshield"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's deployed Webb engineering model, with mirrors and bus retained as context. The shield's long axis, not mirror diameter, sets the scale. Five layers are represented by the source mesh; this is a visualization rather than a current thermal or deformation model.",
+      "prepared_file": "webb-clean.glb",
+      "source_sha256": "4958e61e5a564f2efcc32cd516b9d36ea0b9bc644f64dbcfe182ce8a422ae526",
+      "source_bytes": 1004248,
+      "prepared_sha256": "af550f95e3d05c35bb177aae35627d807a2d3761679594fbc5403eae6b5ae8c7",
+      "calibration": "axis",
+      "presentation": {
+        "yaw": 65,
+        "pitch": 18,
+        "roughness": 0.55,
+        "metalness": 0.25,
+        "environment": 0.7
+      },
+      "operations": [
+        "Decode source Draco offline",
+        "Remove unused UVs and split normals; weld positions within each material",
+        "glTF Transform 4.5.0 simplify --ratio 0.2 --error 0.001; prune",
+        "Recompute area-weighted normals"
+      ],
+      "measure_axis": "z"
+    },
+    {
+      "id": "nasa-space-shuttle-orbiter",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Space%20Shuttle%20%28D%29",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Space%20Shuttle%20%28D%29/Space%20Shuttle%20%28D%29.glb",
+      "author": "NASA (individual model artist not identified in source metadata)",
+      "matches": {
+        "length": [
+          "Space Shuttle Orbiter"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's orbiter alone, without the external tank or boosters. The source nose-to-tail axis sets the scale. Original shape, thermal-tile maps and markings are retained; this is a historic engineering visualization.",
+      "prepared_file": "shuttle-decoded.glb",
+      "source_sha256": "d0015681ff092d36062fdfed78e2bd1ca0f86e90862840d25bae11c686ce3549",
+      "source_bytes": 2471932,
+      "prepared_sha256": "3ea189d3592db234440195724b003314ef2c70c6f04427c33e4f78380d13ec17",
+      "calibration": "axis",
+      "presentation": {
+        "pre_rotation": {
+          "x": -90
+        },
+        "yaw": -15,
+        "pitch": 12,
+        "roughness": 0.9,
+        "metalness": 0
+      },
+      "operations": [
+        "Decode source Draco offline; convert WebP images to PNG/JPEG"
+      ],
+      "measure_axis": "x",
+      "texture_max": 512
+    },
+    {
+      "id": "nasa-iss-length",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/International%20Space%20Station%20%28ISS%29%20%28B%29",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20%28ISS%29%20%28B%29/International%20Space%20Station%20%28ISS%29%20%28B%29.glb",
+      "author": "NASA (individual model artist not identified in source metadata)",
+      "matches": {
+        "length": [
+          "International Space Station"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "note": "NASA's compact historic ISS engineering model. Original solar arrays, truss, modules and radiator geometry are retained, with source material colors. This is a historic configuration, not the present station or its newer roll-out arrays. The maximum source span is uniformly calibrated to the catalog end-to-end length.",
+      "prepared_file": "iss-b-ready.glb",
+      "source_sha256": "2ba4427413b0dd89a33d2acaf962dea8a96a3b1d8dceda05cc7aad547ffd3d16",
+      "source_bytes": 476992,
+      "prepared_sha256": "a83d16162f4d5686b591ce67999e3123063a770850f0bd2f5a34117fdfda19cd",
+      "calibration": "longest-extent",
+      "presentation": {
+        "pre_rotation": {
+          "x": 90
+        },
+        "pitch": 25,
+        "yaw": 75,
+        "roll": 10,
+        "roughness": 0.7,
+        "metalness": 0.15,
+        "environment": 0.7
+      },
+      "operations": [
+        "Decode source Draco offline",
+        "Remove unused UVs and split normals; weld positions within each material",
+        "glTF Transform 4.5.0 simplify --ratio 0.2 --error 0.001; prune",
+        "Recompute area-weighted normals",
+        "Remove separate source display-plaque meshes bendedtru1, bendedtru2, bendedtru3, bendedtrus, pCylinder1, pCylinder2, pCylinder8; retain station meshes",
+        "Prune unused plaque geometry and its animations"
+      ]
+    }
+  ]
+}

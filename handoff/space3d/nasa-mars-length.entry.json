@@ -1,0 +1,51 @@
+{
+  "id": "nasa-mars-length",
+  "author": "NASA; sphere assembled by Universe Scales",
+  "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Mars",
+  "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Mars/Mars.jpg",
+  "source_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+  "source_bytes": 972896,
+  "matches": {
+    "length": [
+      "Mars"
+    ]
+  },
+  "representation": "textured-sphere",
+  "presentation": {
+    "reference_size": 2,
+    "yaw": 125,
+    "roughness": 1,
+    "metalness": 0
+  },
+  "note": "An idealized spherical Mars with the global Mars map distributed by NASA 3D Resources. The catalog mean diameter sets the sphere diameter. Surface colors come from the NASA map; no terrain relief or independent global elevation reconstruction is implied.",
+  "processing": {
+    "operations": [
+      "Create latitude-longitude sphere of radius 1",
+      "Apply NASA global Mars image without invented surface markings",
+      "Embed JPEG texture at 2048 x 1024 maximum"
+    ],
+    "source_texture_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780"
+  },
+  "src": "content/visualizations/models/nasa-mars-length.glb",
+  "geometry": "mesh",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 551228,
+  "sha256": "6eff4a3d7b1c1ea49b5028cf2a64e0f22586d927be35a1e3e140b82a0c4c71c1",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 9024,
+  "animations": 0,
+  "skins": 0
+}

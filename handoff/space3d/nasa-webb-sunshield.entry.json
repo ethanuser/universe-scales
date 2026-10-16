@@ -1,0 +1,70 @@
+{
+  "id": "nasa-webb-sunshield",
+  "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/James%20Webb%20Space%20Telescope%20%28B%29",
+  "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/James%20Webb%20Space%20Telescope%20%28B%29/James%20Webb%20Space%20Telescope%20%28B%29.glb",
+  "author": "NASA (individual model artist not identified in source metadata)",
+  "note": "NASA's deployed Webb engineering model, with mirrors and bus retained as context. The shield's long axis, not mirror diameter, sets the scale. Five layers are represented by the source mesh; this is a visualization rather than a current thermal or deformation model.",
+  "matches": {
+    "length": [
+      "James Webb Sunshield"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-webb-sunshield.glb",
+  "presentation": {
+    "yaw": 65,
+    "pitch": 18,
+    "roughness": 0.55,
+    "metalness": 0.25,
+    "environment": 0.7,
+    "reference_size": 20.996150970458984
+  },
+  "reference": "content/visualizations/models/sources/nasa-webb-sunshield.md",
+  "source_sha256": "4958e61e5a564f2efcc32cd516b9d36ea0b9bc644f64dbcfe182ce8a422ae526",
+  "source_bytes": 1004248,
+  "processing": {
+    "operations": [
+      "Decode source Draco offline",
+      "Remove unused UVs and split normals; weld positions within each material",
+      "glTF Transform 4.5.0 simplify --ratio 0.2 --error 0.001; prune",
+      "Recompute area-weighted normals",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "af550f95e3d05c35bb177aae35627d807a2d3761679594fbc5403eae6b5ae8c7",
+    "textures": [],
+    "calibration": "axis",
+    "source_bounds": {
+      "min": [
+        -6.435308933258057,
+        -3.1614186763763428,
+        -10.597030639648438
+      ],
+      "max": [
+        6.435615062713623,
+        8.095489501953125,
+        10.399120330810547
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 646952,
+  "sha256": "e2a851bcc5c2e600f7bf8525d2175c2bba3b4d66e548a6b382b9f6c09c883317",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 26751,
+  "animations": 0,
+  "skins": 0
+}

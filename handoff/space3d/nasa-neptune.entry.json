@@ -1,0 +1,77 @@
+{
+  "id": "nasa-neptune",
+  "source": "https://science.nasa.gov/resource/neptune-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/n/Neptune_1_49528.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "The blue atmospheric texture is NASA's visualization, not a current or strictly natural-color weather map.",
+  "matches": {
+    "length": [
+      "Neptune"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-neptune.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0
+  },
+  "reference": "content/visualizations/models/sources/nasa-neptune.md",
+  "source_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+  "source_bytes": 585104,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+    "textures": [
+      {
+        "name": "Image_0",
+        "original_size": [
+          1024,
+          512
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -499.9960021972656,
+        -491.459486352006,
+        -500.0005045648383
+      ],
+      "max": [
+        500.0039978027344,
+        491.4594863516026,
+        499.99946696721753
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 194076,
+  "sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 6048,
+  "animations": 0,
+  "skins": 0
+}

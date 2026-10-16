@@ -1,0 +1,77 @@
+{
+  "id": "nasa-bennu",
+  "source": "https://science.nasa.gov/resource/bennu-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/b/Bennu_1_1.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "The low-polygon NASA shape retains Bennu's irregular spinning-top outline; the texture does not resolve individual boulders in relief. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+  "matches": {
+    "length": [
+      "Bennu"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-bennu.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 491.7746025040408
+  },
+  "reference": "content/visualizations/models/sources/nasa-bennu.md",
+  "source_sha256": "b7740b53a77ff538082d26e7079510ef7810fc3de9a5ff0fa316b393d2cf700e",
+  "source_bytes": 859980,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "b7740b53a77ff538082d26e7079510ef7810fc3de9a5ff0fa316b393d2cf700e",
+    "textures": [
+      {
+        "name": "bennu_diff.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "volume-equivalent-diameter",
+    "source_bounds": {
+      "min": [
+        -277.864990234375,
+        -263.166015625,
+        -265.5740051269531
+      ],
+      "max": [
+        287.1719970703125,
+        245.0590057373047,
+        269.54901123046875
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": true,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 278912,
+  "sha256": "f6e6151d7969c3d8e1db4f925d5e0c5f234fee22ff1a38fa9f630921a398d241",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 2692,
+  "animations": 0,
+  "skins": 0
+}

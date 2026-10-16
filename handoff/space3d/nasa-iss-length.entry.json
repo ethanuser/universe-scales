@@ -1,0 +1,78 @@
+{
+  "id": "nasa-iss-length",
+  "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/International%20Space%20Station%20%28ISS%29%20%28B%29",
+  "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20%28ISS%29%20%28B%29/International%20Space%20Station%20%28ISS%29%20%28B%29.glb",
+  "author": "NASA (individual model artist not identified in source metadata)",
+  "note": "NASA's compact historic ISS engineering model. Original solar arrays, truss, modules and radiator geometry are retained, with source material colors. This is a historic configuration, not the present station or its newer roll-out arrays. The maximum source span is uniformly calibrated to the catalog end-to-end length.",
+  "matches": {
+    "length": [
+      "International Space Station"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-iss-length.glb",
+  "presentation": {
+    "pre_rotation": {
+      "x": 90
+    },
+    "pitch": 25,
+    "yaw": 75,
+    "roll": 10,
+    "roughness": 0.7,
+    "metalness": 0.15,
+    "environment": 0.7,
+    "reference_size": 45.54436492919922
+  },
+  "reference": "content/visualizations/models/sources/nasa-iss-length.md",
+  "source_sha256": "2ba4427413b0dd89a33d2acaf962dea8a96a3b1d8dceda05cc7aad547ffd3d16",
+  "source_bytes": 476992,
+  "processing": {
+    "operations": [
+      "Decode source Draco offline",
+      "Remove unused UVs and split normals; weld positions within each material",
+      "glTF Transform 4.5.0 simplify --ratio 0.2 --error 0.001; prune",
+      "Recompute area-weighted normals",
+      "Remove separate source display-plaque meshes bendedtru1, bendedtru2, bendedtru3, bendedtrus, pCylinder1, pCylinder2, pCylinder8; retain station meshes",
+      "Prune unused plaque geometry and its animations",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "a83d16162f4d5686b591ce67999e3123063a770850f0bd2f5a34117fdfda19cd",
+    "textures": [],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -2.830271005630493,
+        -4.168513774871826,
+        -22.86463165283203
+      ],
+      "max": [
+        3.28794527053833,
+        25.771839141845703,
+        22.679733276367188
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 848600,
+  "sha256": "7007133694aa0bf5250972d023040e82b81eb2ba6944f72749ca02c4ef217ea6",
+  "extensions_used": [
+    "KHR_materials_specular"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 39289,
+  "animations": 4,
+  "skins": 0
+}

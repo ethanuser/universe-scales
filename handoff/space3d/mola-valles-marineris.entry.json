@@ -1,0 +1,63 @@
+{
+  "id": "mola-valles-marineris",
+  "src": "content/visualizations/models/mola-valles-marineris.glb",
+  "author": "NASA/MGS MOLA Science Team; surface assembled by Universe Scales",
+  "source": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+  "download_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg016/megt90n000eb.img",
+  "source_sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+  "source_bytes": 33177600,
+  "basis_url": "https://www.usgs.gov/centers/astrogeology-science-center/science/valles-marineris-grand-canyon-mars",
+  "basis_label": "Feature definition and location",
+  "license": "U.S. public-domain NASA scientific data; credit MGS MOLA Science Team",
+  "license_url": "https://pds.nasa.gov/datastandards/citing/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html"
+  ],
+  "matches": {
+    "length": [
+      "Valles Marineris"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "measured-terrain-window",
+  "presentation": {
+    "reference_size": 4000000,
+    "pitch": 58,
+    "yaw": 0,
+    "roughness": 1,
+    "metalness": 0
+  },
+  "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1\u00d7 vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The catalog value is the approximate canyon-system length, not a traced centerline or the crop width.",
+  "processing": {
+    "source_crop": "content/visualizations/models/sources/mola/mola-valles-marineris.npz",
+    "source_crop_sha256": "4ca37e15daf025a53efe85a5d4f4469b18e3183528db7d573171e179640ac040",
+    "center_lonlat_degrees": [
+      286.90625,
+      -8.90625
+    ],
+    "source_resolution_samples_per_degree": 16,
+    "sample_stride": 4,
+    "reference_radius_m": 3396000,
+    "vertical_gain": 1,
+    "operations": [
+      "Read exact retained MOLA sample centers and int16 heights",
+      "Map into a spherical local east/up/south frame",
+      "Keep true relief; color by elevation",
+      "Triangulate retained samples; compute geometric normals"
+    ]
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1207260,
+  "sha256": "4ecfe6f2d1743edc12ab9d2ea11fef84ca9bd3180e8896155b6590eedde6418c",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 48546,
+  "animations": 0,
+  "skins": 0
+}

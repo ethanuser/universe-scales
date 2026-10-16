@@ -1,0 +1,77 @@
+{
+  "id": "nasa-triton",
+  "source": "https://science.nasa.gov/resource/triton-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/t/Triton_1_2707.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "Voyager coverage is incomplete. Do not interpret map filling outside the observed encounter hemisphere as measured surface detail.",
+  "matches": {
+    "length": [
+      "Triton"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-triton.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0
+  },
+  "reference": "content/visualizations/models/sources/nasa-triton.md",
+  "source_sha256": "a25df7ee7fe8679e3da8cca7f1a09ec7241ad5e0c7ad97a39f057b8c1a0043ce",
+  "source_bytes": 6865548,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "a25df7ee7fe8679e3da8cca7f1a09ec7241ad5e0c7ad97a39f057b8c1a0043ce",
+    "textures": [
+      {
+        "name": "color_2016_03_08.jpg",
+        "original_size": [
+          4096,
+          2048
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -499.99798583984375,
+        -499.9887390136719,
+        -500.0009765625
+      ],
+      "max": [
+        500.0019836425781,
+        500.0112609863281,
+        499.9989929199219
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 539680,
+  "sha256": "47867d0f2d433d5f8603b188e13c4456dbf6d372895d16844cb3924325e49b2c",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 20508,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,77 @@
+{
+  "id": "nasa-europa",
+  "source": "https://science.nasa.gov/resource/europa-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Europa_1_3138.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+  "matches": {
+    "length": [
+      "Europa"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-europa.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0
+  },
+  "reference": "content/visualizations/models/sources/nasa-europa.md",
+  "source_sha256": "fe88cbe326574a658c9d3b0885d1a38deea3ebfb354772eb3b95fe0f3f3d542c",
+  "source_bytes": 12287068,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "fe88cbe326574a658c9d3b0885d1a38deea3ebfb354772eb3b95fe0f3f3d542c",
+    "textures": [
+      {
+        "name": "color_2016_03_10.jpg",
+        "original_size": [
+          4096,
+          2048
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -499.99798583984375,
+        -499.9887390136719,
+        -500.0009765625
+      ],
+      "max": [
+        500.0019836425781,
+        500.0112609863281,
+        499.9989929199219
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 585008,
+  "sha256": "c7aac7a9b40a8d82e5060e43828b06c7d97589645feeb168a5df42e910318435",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 20508,
+  "animations": 0,
+  "skins": 0
+}

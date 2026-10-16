@@ -1,0 +1,337 @@
+{
+  "id": "nasa-space-shuttle-orbiter",
+  "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Space%20Shuttle%20%28D%29",
+  "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Space%20Shuttle%20%28D%29/Space%20Shuttle%20%28D%29.glb",
+  "author": "NASA (individual model artist not identified in source metadata)",
+  "note": "NASA's orbiter alone, without the external tank or boosters. The source nose-to-tail axis sets the scale. Original shape, thermal-tile maps and markings are retained; this is a historic engineering visualization.",
+  "matches": {
+    "length": [
+      "Space Shuttle Orbiter"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-space-shuttle-orbiter.glb",
+  "presentation": {
+    "pre_rotation": {
+      "x": -90
+    },
+    "yaw": -15,
+    "pitch": 12,
+    "roughness": 0.9,
+    "metalness": 0,
+    "reference_size": 1471.0699462890625
+  },
+  "reference": "content/visualizations/models/sources/nasa-space-shuttle-orbiter.md",
+  "source_sha256": "d0015681ff092d36062fdfed78e2bd1ca0f86e90862840d25bae11c686ce3549",
+  "source_bytes": 2471932,
+  "processing": {
+    "operations": [
+      "Decode source Draco offline; convert WebP images to PNG/JPEG",
+      "Resize embedded images; preserve alpha and lossless normal maps",
+      "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+    ],
+    "prepared_sha256": "3ea189d3592db234440195724b003314ef2c70c6f04427c33e4f78380d13ec17",
+    "textures": [
+      {
+        "name": "baytile",
+        "original_size": [
+          640,
+          664
+        ],
+        "size": [
+          493,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "baytile",
+        "original_size": [
+          640,
+          664
+        ],
+        "size": [
+          493,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "belly",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "belly",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "wingtop",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "wingtop",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "wing-flap-top",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "wing-flap-top",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "fusolage-aft-engines",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "fusolage-aft-engines",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "tmptop",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "tmptop",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "side-stb",
+        "original_size": [
+          640,
+          92
+        ],
+        "size": [
+          512,
+          74
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "side-stb",
+        "original_size": [
+          640,
+          92
+        ],
+        "size": [
+          512,
+          74
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "side-prt",
+        "original_size": [
+          640,
+          92
+        ],
+        "size": [
+          512,
+          74
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "side-prt",
+        "original_size": [
+          640,
+          92
+        ],
+        "size": [
+          512,
+          74
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "OMS-pod-stb",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "OMS-pod-stb",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "OMS-pod-prt",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "OMS-pod-prt",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "tail",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "tail",
+        "original_size": [
+          640,
+          640
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "axis",
+    "source_bounds": {
+      "min": [
+        -706.0700073242188,
+        -468.5,
+        -139.64999389648438
+      ],
+      "max": [
+        764.9999389648438,
+        468.5150146484375,
+        415.7232666015625
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 900464,
+  "sha256": "bed3f8cdfa45570d040ec11827ffb09bd03b1b6f9b64e60d9622999818ad994f",
+  "extensions_used": [
+    "KHR_materials_specular"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 19378,
+  "animations": 2,
+  "skins": 0
+}

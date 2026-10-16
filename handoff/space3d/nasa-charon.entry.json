@@ -1,0 +1,77 @@
+{
+  "id": "nasa-charon",
+  "source": "https://science.nasa.gov/resource/charon-3d-model/",
+  "download_url": "https://science.nasa.gov/wp-content/uploads/2023/09/Charon_1_2.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "Encounter coverage and map resolution are uneven; the unobserved or poorly observed regions are not measured high-resolution terrain.",
+  "matches": {
+    "length": [
+      "Charon"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-charon.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 604.0
+  },
+  "reference": "content/visualizations/models/sources/nasa-charon.md",
+  "source_sha256": "3677525ff10e15f3d9cd0f0152801ed27ac3c277f8aad15056fe01cba20b2dbe",
+  "source_bytes": 473760,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "3677525ff10e15f3d9cd0f0152801ed27ac3c277f8aad15056fe01cba20b2dbe",
+    "textures": [
+      {
+        "name": "color_2016_03_09.jpg",
+        "original_size": [
+          1264,
+          632
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -301.9975891113281,
+        -302.0,
+        -302.0006103515625
+      ],
+      "max": [
+        302.0024108886719,
+        302.0,
+        301.9993896484375
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 167212,
+  "sha256": "e7b0a6622248f3b35e893122eb014e5ee558109a0a7d637acfa57888aabbf13b",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 5184,
+  "animations": 0,
+  "skins": 0
+}

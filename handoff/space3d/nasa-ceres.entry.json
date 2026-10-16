@@ -1,0 +1,90 @@
+{
+  "id": "nasa-ceres",
+  "source": "https://science.nasa.gov/resource/ceres-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/c/Ceres_1_1000.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "NASA's oblate globe and normal map are retained. This is not a high-resolution reconstructed terrain mesh. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+  "matches": {
+    "length": [
+      "Ceres"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-ceres.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 920.9462120623467
+  },
+  "reference": "content/visualizations/models/sources/nasa-ceres.md",
+  "source_sha256": "c43ec43aa8fb90aa8cf30660c2f2853cfac408d38149d1dc470490f4f4aa9899",
+  "source_bytes": 9529028,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps",
+      "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+    ],
+    "prepared_sha256": "c43ec43aa8fb90aa8cf30660c2f2853cfac408d38149d1dc470490f4f4aa9899",
+    "textures": [
+      {
+        "name": "ceres_norm.png",
+        "original_size": [
+          2048,
+          1024
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "name": "ceres_diff.jpg",
+        "original_size": [
+          4096,
+          2048
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "volume-equivalent-diameter",
+    "source_bounds": {
+      "min": [
+        -472.99810791015625,
+        -436.7261962890625,
+        -473.0009460449219
+      ],
+      "max": [
+        473.00189208984375,
+        436.745849609375,
+        472.9990539550781
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": true,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1189352,
+  "sha256": "07e48afda4a27d72ab69710af2fb422bd64be8b6dfb8fa1aa7f67b8219bb00fa",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 20508,
+  "animations": 0,
+  "skins": 0
+}

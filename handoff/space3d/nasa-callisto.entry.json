@@ -1,0 +1,77 @@
+{
+  "id": "nasa-callisto",
+  "source": "https://science.nasa.gov/resource/callisto-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/c/Callisto_1_4821.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+  "matches": {
+    "length": [
+      "Callisto"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-callisto.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0
+  },
+  "reference": "content/visualizations/models/sources/nasa-callisto.md",
+  "source_sha256": "0bdbd5600a4be4bef4bd85e53f6226f49e73a66c85310219402627e59457c303",
+  "source_bytes": 4452928,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "0bdbd5600a4be4bef4bd85e53f6226f49e73a66c85310219402627e59457c303",
+    "textures": [
+      {
+        "name": "color_2016_03_10.jpg",
+        "original_size": [
+          2048,
+          1024
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -499.99798583984375,
+        -499.9887390136719,
+        -500.0009765625
+      ],
+      "max": [
+        500.0019836425781,
+        500.0112609863281,
+        499.9989929199219
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 637992,
+  "sha256": "2a95ccf65f1182665683814ab41ea54218974f8715e26f4045dceb434ed246ea",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 20508,
+  "animations": 0,
+  "skins": 0
+}

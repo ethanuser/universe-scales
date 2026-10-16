@@ -1,0 +1,118 @@
+[
+  {
+    "id": "mola-olympus-mons",
+    "orthographic_extent_ratio": 1.2579736645299144
+  },
+  {
+    "id": "mola-valles-marineris",
+    "orthographic_extent_ratio": 0.97139525
+  },
+  {
+    "id": "nasa-bennu",
+    "orthographic_extent_ratio": 1.1489755355961977
+  },
+  {
+    "id": "nasa-callisto",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-ceres",
+    "orthographic_extent_ratio": 1.027204398703751
+  },
+  {
+    "id": "nasa-charon",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-deimos",
+    "orthographic_extent_ratio": 1.2759373259146474
+  },
+  {
+    "id": "nasa-enceladus",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-eros",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-europa",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-ganymede",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-hubble-space-telescope",
+    "orthographic_extent_ratio": 1.2403601920197473
+  },
+  {
+    "id": "nasa-io",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-iss-length",
+    "orthographic_extent_ratio": 0.896666090798676
+  },
+  {
+    "id": "nasa-mars-length",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-mercury",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-moon",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-neptune",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-parker-perihelion-distance",
+    "orthographic_extent_ratio": 1.2305199885805789
+  },
+  {
+    "id": "nasa-phobos",
+    "orthographic_extent_ratio": 1.042594018820715
+  },
+  {
+    "id": "nasa-pluto",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-space-shuttle-orbiter",
+    "orthographic_extent_ratio": 0.9662804450681515
+  },
+  {
+    "id": "nasa-titan",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-triton",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-uranus",
+    "orthographic_extent_ratio": 1.0
+  },
+  {
+    "id": "nasa-venus",
+    "orthographic_extent_ratio": 0.9999999694824228
+  },
+  {
+    "id": "nasa-vesta",
+    "orthographic_extent_ratio": 1.0960239503782945
+  },
+  {
+    "id": "nasa-webb-sunshield",
+    "orthographic_extent_ratio": 0.9465050488003318
+  },
+  {
+    "id": "rosetta-67p-shape",
+    "orthographic_extent_ratio": 0.9768139457252003
+  }
+]

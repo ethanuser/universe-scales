@@ -1,0 +1,64 @@
+{
+ "id": "mola-olympus-mons",
+ "src": "content/visualizations/models/mola-olympus-mons.glb",
+ "author": "NASA/MGS MOLA Science Team; surface assembled by Universe Scales",
+ "source": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+ "download_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg016/megt90n000eb.img",
+ "source_sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+ "source_bytes": 33177600,
+ "basis_url": "https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=27_Mons&Target=20_Mars",
+ "basis_label": "Feature definition and location",
+ "license": "U.S. public-domain NASA scientific data; credit MGS MOLA Science Team",
+ "license_url": "https://pds.nasa.gov/datastandards/citing/",
+ "license_files": [
+  "licenses/nasa-media-guidelines.html"
+ ],
+ "matches": {
+  "length": [
+   "Olympus Mons Width"
+  ]
+ },
+ "geometry": "mesh",
+ "representation": "measured-terrain-window",
+ "presentation": {
+  "reference_size": 585000,
+  "pitch": 58,
+  "yaw": 0,
+  "roughness": 1,
+  "metalness": 0,
+  "layout_width_factor": 1.35
+ },
+ "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1\u00d7 vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The approximate catalog volcano width is smaller than this surrounding terrain window.",
+ "processing": {
+  "source_crop": "content/visualizations/models/sources/mola/mola-olympus-mons.npz",
+  "source_crop_sha256": "bca04a104addc9aa8d53ed38b367aee9915b4f680adf505ee6b96762fac5d843",
+  "center_lonlat_degrees": [
+   226.21875,
+   18.53125
+  ],
+  "source_resolution_samples_per_degree": 16,
+  "sample_stride": 2,
+  "reference_radius_m": 3396000,
+  "vertical_gain": 1,
+  "operations": [
+   "Read exact retained MOLA sample centers and int16 heights",
+   "Map into a spherical local east/up/south frame",
+   "Keep true relief; color by elevation",
+   "Triangulate retained samples; compute geometric normals"
+  ]
+ },
+ "volume_semantics": "not_applicable",
+ "closed_volume_checked": false,
+ "format": "glb",
+ "gltf_version": "2.0",
+ "bytes": 470528,
+ "sha256": "8aa30e8278cd6498f1a095fec397daa79a502bc68fe6f66a12db533f679eec17",
+ "extensions_used": [],
+ "extensions_required": [],
+ "decompression_required": [],
+ "external_resources": [],
+ "mesh_count": 1,
+ "triangle_count": 19380,
+ "animations": 0,
+ "skins": 0
+}

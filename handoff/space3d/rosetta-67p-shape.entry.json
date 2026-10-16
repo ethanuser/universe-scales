@@ -1,0 +1,64 @@
+{
+  "id": "rosetta-67p-shape",
+  "src": "content/visualizations/models/rosetta-67p-shape.glb",
+  "author": "ESA/Rosetta/NAVCAM team (SPC SHAP2); archived by NASA PDS Small Bodies Node",
+  "source": "https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=RO-C-MULTI-5-67P-SHAPE-V2.0",
+  "download_url": "https://sbn.psi.edu/pds/shape-models/files/67P/cg_mspcd_shap2_001m_cart.obj",
+  "license": "Public-domain scientific data (NASA archive catalog license declaration)",
+  "license_url": "https://catalog.data.gov/dataset/shape-models-of-67p-churyumov-gerasimenko-v2-0",
+  "license_files": [
+    "licenses/67p-pds-rights.md"
+  ],
+  "matches": {
+    "length": [
+      "Comet 67P"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "spacecraft-derived-shape",
+  "note": "Rosetta's measured two-lobed comet shape from the PDS SPC SHAP2 Cartesian model. Uniform scale follows the catalog's approximate longest overall length. Neutral gray is an authored material, not a measured albedo map; terrain relief comes from the source shape. No coma or gas jets are implied.",
+  "presentation": {
+    "reference_size": 5.02707314491272,
+    "yaw": -20,
+    "pitch": 10,
+    "roughness": 1,
+    "metalness": 0
+  },
+  "source_sha256": "0ab476af0552bf9a58429c209094e01934edd39f33e48f2cf0c6922a5bb5e0c8",
+  "source_bytes": 49412414,
+  "processing": {
+    "prepared_file": "67p-ready.glb",
+    "prepared_sha256": "00a8e4c02e4197d3cb47c9048b7a06ce1b88943f5a78d02f249bfdf06edf3292",
+    "operations": [
+      "Parse original OBJ triangles without changing coordinates",
+      "glTF Transform 4.5.0 simplify --ratio 0.04 --error 0.0005",
+      "Recompute area-weighted vertex normals; neutral gray material"
+    ],
+    "source_bounds": {
+      "min": [
+        -2.4405410289764404,
+        -1.7483199834823608,
+        -1.4294689893722534
+      ],
+      "max": [
+        2.5865321159362793,
+        1.9454460144042969,
+        1.6048389673233032
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 944332,
+  "sha256": "2f1c1f6dd253e23e63f36a6217c34fb220025869dfa068e720d89936d3f83c46",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 52398,
+  "animations": 0,
+  "skins": 0
+}

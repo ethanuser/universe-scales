@@ -1,0 +1,77 @@
+{
+  "id": "nasa-titan",
+  "source": "https://science.nasa.gov/resource/titan-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/t/Titan_1_5150.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "This opaque NASA appearance does not expose a reconstructed global solid surface beneath the atmosphere.",
+  "matches": {
+    "length": [
+      "Titan"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-titan.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0
+  },
+  "reference": "content/visualizations/models/sources/nasa-titan.md",
+  "source_sha256": "9e92e30902a26130895bf2558172d7f36186eb4a51368a60bc3ec1d01134fde4",
+  "source_bytes": 686348,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "9e92e30902a26130895bf2558172d7f36186eb4a51368a60bc3ec1d01134fde4",
+    "textures": [
+      {
+        "name": "color_2016_03_24.jpg",
+        "original_size": [
+          4096,
+          2048
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -499.99798583984375,
+        -499.9887390136719,
+        -500.0009765625
+      ],
+      "max": [
+        500.0019836425781,
+        500.0112609863281,
+        499.9989929199219
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 473224,
+  "sha256": "54ac85004fc6da8b668d70351529a5c2a772e1fc3b3ca169380a197d038c2abc",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 20508,
+  "animations": 0,
+  "skins": 0
+}

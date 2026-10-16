@@ -1,0 +1,77 @@
+{
+  "id": "nasa-mercury",
+  "source": "https://science.nasa.gov/resource/mercury-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Mercury_1_4878.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+  "matches": {
+    "length": [
+      "Mercury"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-mercury.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0000610351562
+  },
+  "reference": "content/visualizations/models/sources/nasa-mercury.md",
+  "source_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+  "source_bytes": 3048920,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+    "textures": [
+      {
+        "name": "mercury_diff.jpg",
+        "original_size": [
+          2048,
+          1536
+        ],
+        "size": [
+          1024,
+          768
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -500.0000305175781,
+        -500.0000305175781,
+        -500.0000305175781
+      ],
+      "max": [
+        500.0000305175781,
+        500.0000305175781,
+        500.0000305175781
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 241844,
+  "sha256": "8fc027684b074e73f4beb378b22a0ca168f782b6e2afc16e53a6e746deb7e7cf",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 3072,
+  "animations": 0,
+  "skins": 0
+}

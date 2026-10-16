@@ -58,7 +58,7 @@ def celestial(body, filename, length, area, volume):
 
 MODELS = [
     celestial("earth", "Earth_1_12756", ["Earth Diameter"], "Earth surface area", ["Earth volume"]),
-    celestial("moon", "Moon_1_3474", [], "Moon surface area", ["Moon volume"]),
+    celestial("moon", "Moon_1_3474", ["Moon"], "Moon surface area", ["Moon volume"]),
     celestial("jupiter", "Jupiter_1_142984", ["Jupiter Diameter"], "Jupiter surface area", []),
     celestial("sun", "Sun_1_1391000", ["Sun Diameter"], "Sun surface area", ["Sun volume"]),
     {

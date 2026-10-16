@@ -112,7 +112,9 @@
         "licenses/nasa-3d-resources.README.md"
       ],
       "matches": {
-        "length": [],
+        "length": [
+          "Moon"
+        ],
         "area": [
           "Moon surface area"
         ],
@@ -177,7 +179,8 @@
       },
       "volume_semantics": "analytic_sphere",
       "closed_volume_checked": false,
-      "normalized_radius": 1
+      "normalized_radius": 1,
+      "representation": "scientific-agency-illustration"
     },
     {
       "id": "nasa-jupiter",
@@ -6843,6 +6846,2484 @@
       "basis_url": "https://doi.org/10.1126/science.abm9506",
       "basis_label": "PDB 7R5K structure paper",
       "link_label": "PDB 7R5K coordinates"
+    },
+    {
+      "id": "mola-olympus-mons",
+      "src": "content/visualizations/models/mola-olympus-mons.glb",
+      "author": "NASA/MGS MOLA Science Team; surface assembled by Universe Scales",
+      "source": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "download_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg016/megt90n000eb.img",
+      "source_sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+      "source_bytes": 33177600,
+      "basis_url": "https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=27_Mons&Target=20_Mars",
+      "basis_label": "Feature definition and location",
+      "license": "U.S. public-domain NASA scientific data; credit MGS MOLA Science Team",
+      "license_url": "https://pds.nasa.gov/datastandards/citing/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "matches": {
+        "length": [
+          "Olympus Mons Width"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measured-terrain-window",
+      "presentation": {
+        "reference_size": 585000,
+        "pitch": 58,
+        "yaw": 0,
+        "roughness": 1,
+        "metalness": 0,
+        "layout_width_factor": 1.35
+      },
+      "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1\u00d7 vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The approximate catalog volcano width is smaller than this surrounding terrain window.",
+      "processing": {
+        "source_crop": "content/visualizations/models/sources/mola/mola-olympus-mons.npz",
+        "source_crop_sha256": "bca04a104addc9aa8d53ed38b367aee9915b4f680adf505ee6b96762fac5d843",
+        "center_lonlat_degrees": [
+          226.21875,
+          18.53125
+        ],
+        "source_resolution_samples_per_degree": 16,
+        "sample_stride": 2,
+        "reference_radius_m": 3396000,
+        "vertical_gain": 1,
+        "operations": [
+          "Read exact retained MOLA sample centers and int16 heights",
+          "Map into a spherical local east/up/south frame",
+          "Keep true relief; color by elevation",
+          "Triangulate retained samples; compute geometric normals"
+        ]
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 470528,
+      "sha256": "8aa30e8278cd6498f1a095fec397daa79a502bc68fe6f66a12db533f679eec17",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 19380,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "mola-valles-marineris",
+      "src": "content/visualizations/models/mola-valles-marineris.glb",
+      "author": "NASA/MGS MOLA Science Team; surface assembled by Universe Scales",
+      "source": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "download_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg016/megt90n000eb.img",
+      "source_sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+      "source_bytes": 33177600,
+      "basis_url": "https://www.usgs.gov/centers/astrogeology-science-center/science/valles-marineris-grand-canyon-mars",
+      "basis_label": "Feature definition and location",
+      "license": "U.S. public-domain NASA scientific data; credit MGS MOLA Science Team",
+      "license_url": "https://pds.nasa.gov/datastandards/citing/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "matches": {
+        "length": [
+          "Valles Marineris"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measured-terrain-window",
+      "presentation": {
+        "reference_size": 4000000,
+        "pitch": 58,
+        "yaw": 0,
+        "roughness": 1,
+        "metalness": 0
+      },
+      "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1\u00d7 vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The catalog value is the approximate canyon-system length, not a traced centerline or the crop width.",
+      "processing": {
+        "source_crop": "content/visualizations/models/sources/mola/mola-valles-marineris.npz",
+        "source_crop_sha256": "4ca37e15daf025a53efe85a5d4f4469b18e3183528db7d573171e179640ac040",
+        "center_lonlat_degrees": [
+          286.90625,
+          -8.90625
+        ],
+        "source_resolution_samples_per_degree": 16,
+        "sample_stride": 4,
+        "reference_radius_m": 3396000,
+        "vertical_gain": 1,
+        "operations": [
+          "Read exact retained MOLA sample centers and int16 heights",
+          "Map into a spherical local east/up/south frame",
+          "Keep true relief; color by elevation",
+          "Triangulate retained samples; compute geometric normals"
+        ]
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1207260,
+      "sha256": "4ecfe6f2d1743edc12ab9d2ea11fef84ca9bd3180e8896155b6590eedde6418c",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 48546,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-bennu",
+      "source": "https://science.nasa.gov/resource/bennu-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/b/Bennu_1_1.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "The low-polygon NASA shape retains Bennu's irregular spinning-top outline; the texture does not resolve individual boulders in relief. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "matches": {
+        "length": [
+          "Bennu"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-bennu.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 491.7746025040408
+      },
+      "reference": "content/visualizations/models/sources/nasa-bennu.md",
+      "source_sha256": "b7740b53a77ff538082d26e7079510ef7810fc3de9a5ff0fa316b393d2cf700e",
+      "source_bytes": 859980,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "b7740b53a77ff538082d26e7079510ef7810fc3de9a5ff0fa316b393d2cf700e",
+        "textures": [
+          {
+            "name": "bennu_diff.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "volume-equivalent-diameter",
+        "source_bounds": {
+          "min": [
+            -277.864990234375,
+            -263.166015625,
+            -265.5740051269531
+          ],
+          "max": [
+            287.1719970703125,
+            245.0590057373047,
+            269.54901123046875
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 278912,
+      "sha256": "f6e6151d7969c3d8e1db4f925d5e0c5f234fee22ff1a38fa9f630921a398d241",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 2692,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-callisto",
+      "source": "https://science.nasa.gov/resource/callisto-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/c/Callisto_1_4821.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "matches": {
+        "length": [
+          "Callisto"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-callisto.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-callisto.md",
+      "source_sha256": "0bdbd5600a4be4bef4bd85e53f6226f49e73a66c85310219402627e59457c303",
+      "source_bytes": 4452928,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "0bdbd5600a4be4bef4bd85e53f6226f49e73a66c85310219402627e59457c303",
+        "textures": [
+          {
+            "name": "color_2016_03_10.jpg",
+            "original_size": [
+              2048,
+              1024
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.99798583984375,
+            -499.9887390136719,
+            -500.0009765625
+          ],
+          "max": [
+            500.0019836425781,
+            500.0112609863281,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 637992,
+      "sha256": "2a95ccf65f1182665683814ab41ea54218974f8715e26f4045dceb434ed246ea",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-ceres",
+      "source": "https://science.nasa.gov/resource/ceres-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/c/Ceres_1_1000.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's oblate globe and normal map are retained. This is not a high-resolution reconstructed terrain mesh. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "matches": {
+        "length": [
+          "Ceres"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-ceres.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 920.9462120623467
+      },
+      "reference": "content/visualizations/models/sources/nasa-ceres.md",
+      "source_sha256": "c43ec43aa8fb90aa8cf30660c2f2853cfac408d38149d1dc470490f4f4aa9899",
+      "source_bytes": 9529028,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps",
+          "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+        ],
+        "prepared_sha256": "c43ec43aa8fb90aa8cf30660c2f2853cfac408d38149d1dc470490f4f4aa9899",
+        "textures": [
+          {
+            "name": "ceres_norm.png",
+            "original_size": [
+              2048,
+              1024
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/png"
+          },
+          {
+            "name": "ceres_diff.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "volume-equivalent-diameter",
+        "source_bounds": {
+          "min": [
+            -472.99810791015625,
+            -436.7261962890625,
+            -473.0009460449219
+          ],
+          "max": [
+            473.00189208984375,
+            436.745849609375,
+            472.9990539550781
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1189352,
+      "sha256": "07e48afda4a27d72ab69710af2fb422bd64be8b6dfb8fa1aa7f67b8219bb00fa",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-charon",
+      "source": "https://science.nasa.gov/resource/charon-3d-model/",
+      "download_url": "https://science.nasa.gov/wp-content/uploads/2023/09/Charon_1_2.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "Encounter coverage and map resolution are uneven; the unobserved or poorly observed regions are not measured high-resolution terrain.",
+      "matches": {
+        "length": [
+          "Charon"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-charon.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 604.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-charon.md",
+      "source_sha256": "3677525ff10e15f3d9cd0f0152801ed27ac3c277f8aad15056fe01cba20b2dbe",
+      "source_bytes": 473760,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "3677525ff10e15f3d9cd0f0152801ed27ac3c277f8aad15056fe01cba20b2dbe",
+        "textures": [
+          {
+            "name": "color_2016_03_09.jpg",
+            "original_size": [
+              1264,
+              632
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -301.9975891113281,
+            -302.0,
+            -302.0006103515625
+          ],
+          "max": [
+            302.0024108886719,
+            302.0,
+            301.9993896484375
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 167212,
+      "sha256": "e7b0a6622248f3b35e893122eb014e5ee558109a0a7d637acfa57888aabbf13b",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 5184,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-deimos",
+      "source": "https://science.nasa.gov/resource/deimos-mars-moon-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24879_Deimos_1_1000.glb",
+      "author": "NASA/JPL-Caltech",
+      "note": "NASA/JPL-Caltech's irregular Deimos mesh is retained. The mean-diameter item is calibrated by the mesh's equivalent-volume diameter, not its longest dimension. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "matches": {
+        "length": [
+          "Deimos"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-deimos.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 11.765826258871545,
+        "layout_width_factor": 1.35
+      },
+      "reference": "content/visualizations/models/sources/nasa-deimos.md",
+      "source_sha256": "5d5da763970acffe88aac26d3c3bd0fa66c5bef251d1bb4bfe2ae5fd723507e4",
+      "source_bytes": 1600012,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "5d5da763970acffe88aac26d3c3bd0fa66c5bef251d1bb4bfe2ae5fd723507e4",
+        "textures": [
+          {
+            "name": "deimos_tex_01.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "volume-equivalent-diameter",
+        "source_bounds": {
+          "min": [
+            -7.231721878051758,
+            -6.287788391113281,
+            -5.431387424468994
+          ],
+          "max": [
+            7.780735015869141,
+            5.581928730010986,
+            5.074018955230713
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 837388,
+      "sha256": "a1b4db5340dd9c564e871223d7b143529f789c1a80cd7a86d0c4ff88e3b19ba8",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 32512,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-enceladus",
+      "source": "https://science.nasa.gov/resource/enceladus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Enceladus_1_504.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "matches": {
+        "length": [
+          "Enceladus"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-enceladus.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-enceladus.md",
+      "source_sha256": "7548234bae15047d6c1af6bec4f348748b1acae7d4e7bfbe50e5bb3dda75506f",
+      "source_bytes": 17925448,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "7548234bae15047d6c1af6bec4f348748b1acae7d4e7bfbe50e5bb3dda75506f",
+        "textures": [
+          {
+            "name": "color_2016_03_09.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.99798583984375,
+            -499.9887390136719,
+            -500.0009765625
+          ],
+          "max": [
+            500.0019836425781,
+            500.0112609863281,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 659316,
+      "sha256": "7f6eb2f0002d9fd88fe590313ceed908e5d10240196ff8d2adbc93987962a5c4",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-eros",
+      "source": "https://science.nasa.gov/resource/eros-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Eros_1_10.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's low-polygon elongated mesh is retained, without substituting a sphere. Longest world-axis extent is calibrated to the item's long-axis length.",
+      "matches": {
+        "length": [
+          "Eros"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-eros.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 3260.121826171875
+      },
+      "reference": "content/visualizations/models/sources/nasa-eros.md",
+      "source_sha256": "4e4eab5ebf3553f78713b48db7dde601634094e85363caa5b48fbd869933b7b2",
+      "source_bytes": 2392188,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps",
+          "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+        ],
+        "prepared_sha256": "4e4eab5ebf3553f78713b48db7dde601634094e85363caa5b48fbd869933b7b2",
+        "textures": [
+          {
+            "name": "eros_norm.png",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/png"
+          },
+          {
+            "name": "eros_diff.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -1756.4544677734375,
+            -826.4843139648438,
+            -604.22119140625
+          ],
+          "max": [
+            1503.6673583984375,
+            854.3292846679688,
+            580.5714111328125
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 995724,
+      "sha256": "6c453ffd568adc0ab3904cc93ff3ecea3c8283e112f013657ae24da611e91f10",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 1536,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-europa",
+      "source": "https://science.nasa.gov/resource/europa-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Europa_1_3138.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "matches": {
+        "length": [
+          "Europa"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-europa.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-europa.md",
+      "source_sha256": "fe88cbe326574a658c9d3b0885d1a38deea3ebfb354772eb3b95fe0f3f3d542c",
+      "source_bytes": 12287068,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "fe88cbe326574a658c9d3b0885d1a38deea3ebfb354772eb3b95fe0f3f3d542c",
+        "textures": [
+          {
+            "name": "color_2016_03_10.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.99798583984375,
+            -499.9887390136719,
+            -500.0009765625
+          ],
+          "max": [
+            500.0019836425781,
+            500.0112609863281,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 585008,
+      "sha256": "c7aac7a9b40a8d82e5060e43828b06c7d97589645feeb168a5df42e910318435",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-ganymede",
+      "source": "https://science.nasa.gov/resource/ganymede-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/g/Ganymede_1_5268.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "matches": {
+        "length": [
+          "Ganymede"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-ganymede.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-ganymede.md",
+      "source_sha256": "367bc128197bf1d25ef5af5269f2d1902aababaae167c3c8d6529443b0100d6f",
+      "source_bytes": 4075564,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "367bc128197bf1d25ef5af5269f2d1902aababaae167c3c8d6529443b0100d6f",
+        "textures": [
+          {
+            "name": "color_2016_03_10.jpg",
+            "original_size": [
+              2048,
+              1024
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.99798583984375,
+            -499.9887390136719,
+            -500.0009765625
+          ],
+          "max": [
+            500.0019836425781,
+            500.0112609863281,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 605696,
+      "sha256": "d7c77293fedc61c495fc487fe859bdabea236280dd3c114fca23de6301c3fe0b",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-hubble-space-telescope",
+      "source": "https://science.nasa.gov/resource/hubble-space-telescope-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/h/Hubble.glb",
+      "author": "NASA (individual model artist not identified)",
+      "note": "The open aperture door and solar arrays are retained. The source body has an approximately 13.2-unit axial barrel; the open door extends beyond it. Calibration uses that barrel length, with the extent overhead documented separately.",
+      "matches": {
+        "length": [
+          "Hubble Space Telescope"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-hubble-space-telescope.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0.15,
+        "reference_size": 13.2,
+        "yaw": -25,
+        "roll": 20,
+        "environment": 0.7
+      },
+      "reference": "content/visualizations/models/sources/nasa-hubble-space-telescope.md",
+      "source_sha256": "e6a40640d6846e8f5d9438821ebe2d7de730c8dadba1cc9dfdbcc148ff1052cd",
+      "source_bytes": 11463124,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps",
+          "Remove the untextured helper cube mesh attached to _root; retain all Hubble children",
+          "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+        ],
+        "prepared_sha256": "e6a40640d6846e8f5d9438821ebe2d7de730c8dadba1cc9dfdbcc148ff1052cd",
+        "textures": [
+          {
+            "name": "hubble_tex_01.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "hubble_AO_1.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "hubble_AO_light.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "foil_n.jpg",
+            "original_size": [
+              512,
+              512
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/png"
+          },
+          {
+            "name": "hubble_tex_01.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "hubble_tex_03.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "hubble_tex_01.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "hubble_tex_02.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "hubble_tex_03.jpg",
+            "original_size": [
+              1024,
+              1024
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "clear.png.001",
+            "original_size": [
+              128,
+              128
+            ],
+            "size": [
+              128,
+              128
+            ],
+            "mime_type": "image/png"
+          }
+        ],
+        "calibration": "explicit",
+        "source_bounds": {
+          "min": [
+            -5.5334738351703,
+            -6.214977327909992,
+            -6.343234488968063
+          ],
+          "max": [
+            5.5334654798313405,
+            10.511965688464784,
+            6.017541792966906
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2751768,
+      "sha256": "584011de3b7f3002f2f1106faa104ef9f9cd12824af9c891cfc72bd41ab84fa2",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 10,
+      "triangle_count": 21117,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-io",
+      "source": "https://science.nasa.gov/resource/io-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/i/Io_1_3643.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "matches": {
+        "length": [
+          "Io"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-io.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-io.md",
+      "source_sha256": "118a6bf7eda476ea6b454039f621778189141a82acb3ad0aaa762f1771c5a723",
+      "source_bytes": 17479700,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "118a6bf7eda476ea6b454039f621778189141a82acb3ad0aaa762f1771c5a723",
+        "textures": [
+          {
+            "name": "color_2016_04_28.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.99798583984375,
+            -499.9887390136719,
+            -500.0009765625
+          ],
+          "max": [
+            500.0019836425781,
+            500.0112609863281,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 611248,
+      "sha256": "2bc593dd5a0788bf97a0ff19d8e784f14bb82e39e297da17f200188c7ef9e427",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-iss-length",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/International%20Space%20Station%20%28ISS%29%20%28B%29",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/International%20Space%20Station%20%28ISS%29%20%28B%29/International%20Space%20Station%20%28ISS%29%20%28B%29.glb",
+      "author": "NASA (individual model artist not identified in source metadata)",
+      "note": "NASA's compact historic ISS engineering model. Original solar arrays, truss, modules and radiator geometry are retained, with source material colors. This is a historic configuration, not the present station or its newer roll-out arrays. The maximum source span is uniformly calibrated to the catalog end-to-end length.",
+      "matches": {
+        "length": [
+          "International Space Station"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-iss-length.glb",
+      "presentation": {
+        "pre_rotation": {
+          "x": 90
+        },
+        "pitch": 25,
+        "yaw": 75,
+        "roll": 10,
+        "roughness": 0.7,
+        "metalness": 0.15,
+        "environment": 0.7,
+        "reference_size": 45.54436492919922
+      },
+      "reference": "content/visualizations/models/sources/nasa-iss-length.md",
+      "source_sha256": "2ba4427413b0dd89a33d2acaf962dea8a96a3b1d8dceda05cc7aad547ffd3d16",
+      "source_bytes": 476992,
+      "processing": {
+        "operations": [
+          "Decode source Draco offline",
+          "Remove unused UVs and split normals; weld positions within each material",
+          "glTF Transform 4.5.0 simplify --ratio 0.2 --error 0.001; prune",
+          "Recompute area-weighted normals",
+          "Remove separate source display-plaque meshes bendedtru1, bendedtru2, bendedtru3, bendedtrus, pCylinder1, pCylinder2, pCylinder8; retain station meshes",
+          "Prune unused plaque geometry and its animations",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "a83d16162f4d5686b591ce67999e3123063a770850f0bd2f5a34117fdfda19cd",
+        "textures": [],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -2.830271005630493,
+            -4.168513774871826,
+            -22.86463165283203
+          ],
+          "max": [
+            3.28794527053833,
+            25.771839141845703,
+            22.679733276367188
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 848600,
+      "sha256": "7007133694aa0bf5250972d023040e82b81eb2ba6944f72749ca02c4ef217ea6",
+      "extensions_used": [
+        "KHR_materials_specular"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 39289,
+      "animations": 4,
+      "skins": 0
+    },
+    {
+      "id": "nasa-mars-length",
+      "author": "NASA; sphere assembled by Universe Scales",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Mars",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Mars/Mars.jpg",
+      "source_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+      "source_bytes": 972896,
+      "matches": {
+        "length": [
+          "Mars"
+        ]
+      },
+      "representation": "textured-sphere",
+      "presentation": {
+        "reference_size": 2,
+        "yaw": 125,
+        "roughness": 1,
+        "metalness": 0
+      },
+      "note": "An idealized spherical Mars with the global Mars map distributed by NASA 3D Resources. The catalog mean diameter sets the sphere diameter. Surface colors come from the NASA map; no terrain relief or independent global elevation reconstruction is implied.",
+      "processing": {
+        "operations": [
+          "Create latitude-longitude sphere of radius 1",
+          "Apply NASA global Mars image without invented surface markings",
+          "Embed JPEG texture at 2048 x 1024 maximum"
+        ],
+        "source_texture_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780"
+      },
+      "src": "content/visualizations/models/nasa-mars-length.glb",
+      "geometry": "mesh",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 551228,
+      "sha256": "6eff4a3d7b1c1ea49b5028cf2a64e0f22586d927be35a1e3e140b82a0c4c71c1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 9024,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-mercury",
+      "source": "https://science.nasa.gov/resource/mercury-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Mercury_1_4878.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction.",
+      "matches": {
+        "length": [
+          "Mercury"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-mercury.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0000610351562
+      },
+      "reference": "content/visualizations/models/sources/nasa-mercury.md",
+      "source_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+      "source_bytes": 3048920,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+        "textures": [
+          {
+            "name": "mercury_diff.jpg",
+            "original_size": [
+              2048,
+              1536
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -500.0000305175781,
+            -500.0000305175781,
+            -500.0000305175781
+          ],
+          "max": [
+            500.0000305175781,
+            500.0000305175781,
+            500.0000305175781
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 241844,
+      "sha256": "8fc027684b074e73f4beb378b22a0ca168f782b6e2afc16e53a6e746deb7e7cf",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-neptune",
+      "source": "https://science.nasa.gov/resource/neptune-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/n/Neptune_1_49528.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "The blue atmospheric texture is NASA's visualization, not a current or strictly natural-color weather map.",
+      "matches": {
+        "length": [
+          "Neptune"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-neptune.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-neptune.md",
+      "source_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+      "source_bytes": 585104,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+        "textures": [
+          {
+            "name": "Image_0",
+            "original_size": [
+              1024,
+              512
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9960021972656,
+            -491.459486352006,
+            -500.0005045648383
+          ],
+          "max": [
+            500.0039978027344,
+            491.4594863516026,
+            499.99946696721753
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 194076,
+      "sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6048,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-parker-perihelion-distance",
+      "author": "NASA; diagram assembled by Universe Scales",
+      "source": "https://svs.gsfc.nasa.gov/14741/",
+      "basis_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+      "basis_label": "NASA solar radius",
+      "matches": {
+        "length": [
+          "Parker Solar Probe Closest Approach"
+        ]
+      },
+      "representation": "measurement-diagram",
+      "presentation": {
+        "reference_size": 1,
+        "roughness": 1,
+        "metalness": 0,
+        "layout_width_factor": 1.35
+      },
+      "note": "A Sun-to-encounter distance diagram for 24 December 2024. The ruler starts at the visible solar surface and spans the catalog altitude of about 6.1 million km; it does not start at the Sun's center. The Sun has the same physical scale. The amber point only marks the encounter location and is not the probe's size. The direction is illustrative, with no claim of orbital orientation or a full trajectory.",
+      "processing": {
+        "altitude_m": 6115507200,
+        "solar_radius_m": 695700000,
+        "source_models": [
+          {
+            "id": "nasa-sun",
+            "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+            "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+          }
+        ],
+        "operations": [
+          "Reuse the existing NASA Sun mesh and texture",
+          "Place a location marker one altitude beyond the photosphere",
+          "Author a surface-to-marker ruler; retain physical Sun/altitude proportions"
+        ]
+      },
+      "src": "content/visualizations/models/nasa-parker-perihelion-distance.glb",
+      "geometry": "mesh",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 364000,
+      "sha256": "4072c0c43e1894c65942def8eab0198f97dd1f361cb401979ffec64a92445cc4",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 3296,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-phobos",
+      "source": "https://science.nasa.gov/resource/phobos-mars-moon-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24878_Phobos_1_1000.glb",
+      "author": "NASA/JPL-Caltech",
+      "note": "NASA/JPL-Caltech's irregular Phobos mesh is retained. The mean-diameter item is calibrated by the mesh's equivalent-volume diameter, not its longest dimension. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "matches": {
+        "length": [
+          "Phobos"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-phobos.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 23.37549105003315
+      },
+      "reference": "content/visualizations/models/sources/nasa-phobos.md",
+      "source_sha256": "757712101e4fbcf9527942ee664a3bc6dfe3ab460466b760f4bf51ee85dbd8d3",
+      "source_bytes": 3855016,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "757712101e4fbcf9527942ee664a3bc6dfe3ab460466b760f4bf51ee85dbd8d3",
+        "textures": [
+          {
+            "name": "phobos_tex_01.jpg",
+            "original_size": [
+              2048,
+              2048
+            ],
+            "size": [
+              1024,
+              1024
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "volume-equivalent-diameter",
+        "source_bounds": {
+          "min": [
+            -12.317031860351562,
+            -9.982095718383789,
+            -14.236000061035156
+          ],
+          "max": [
+            12.054115295410156,
+            10.538873672485352,
+            12.80151653289795
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 872112,
+      "sha256": "5ce0a4516b898c98b8202d630eb8e2634a29b430a6d32c51bfd11d5d95b074bc",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 32040,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-pluto",
+      "source": "https://science.nasa.gov/resource/pluto-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/l/Pluto_1_2374.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "New Horizons coverage is uneven: sharp encounter-hemisphere detail and lower-resolution or filled regions elsewhere are part of the NASA map.",
+      "matches": {
+        "length": [
+          "Pluto"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-pluto.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0000305175781
+      },
+      "reference": "content/visualizations/models/sources/nasa-pluto.md",
+      "source_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+      "source_bytes": 7009348,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+        "textures": [
+          {
+            "name": "pluto_equi.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9980163574219,
+            -499.989013671875,
+            -500.0010070800781
+          ],
+          "max": [
+            500.00201416015625,
+            500.0110168457031,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 554360,
+      "sha256": "b66471a0e831862b61acdc2984cc0aa9fb624f5d9fbc41cc73e3b1cd60198493",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20448,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-space-shuttle-orbiter",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Space%20Shuttle%20%28D%29",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/Space%20Shuttle%20%28D%29/Space%20Shuttle%20%28D%29.glb",
+      "author": "NASA (individual model artist not identified in source metadata)",
+      "note": "NASA's orbiter alone, without the external tank or boosters. The source nose-to-tail axis sets the scale. Original shape, thermal-tile maps and markings are retained; this is a historic engineering visualization.",
+      "matches": {
+        "length": [
+          "Space Shuttle Orbiter"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-space-shuttle-orbiter.glb",
+      "presentation": {
+        "pre_rotation": {
+          "x": -90
+        },
+        "yaw": -15,
+        "pitch": 12,
+        "roughness": 0.9,
+        "metalness": 0,
+        "reference_size": 1471.0699462890625
+      },
+      "reference": "content/visualizations/models/sources/nasa-space-shuttle-orbiter.md",
+      "source_sha256": "d0015681ff092d36062fdfed78e2bd1ca0f86e90862840d25bae11c686ce3549",
+      "source_bytes": 2471932,
+      "processing": {
+        "operations": [
+          "Decode source Draco offline; convert WebP images to PNG/JPEG",
+          "Resize embedded images; preserve alpha and lossless normal maps",
+          "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+        ],
+        "prepared_sha256": "3ea189d3592db234440195724b003314ef2c70c6f04427c33e4f78380d13ec17",
+        "textures": [
+          {
+            "name": "baytile",
+            "original_size": [
+              640,
+              664
+            ],
+            "size": [
+              493,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "baytile",
+            "original_size": [
+              640,
+              664
+            ],
+            "size": [
+              493,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "belly",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "belly",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "wingtop",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "wingtop",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "wing-flap-top",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "wing-flap-top",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "fusolage-aft-engines",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "fusolage-aft-engines",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "tmptop",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "tmptop",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "side-stb",
+            "original_size": [
+              640,
+              92
+            ],
+            "size": [
+              512,
+              74
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "side-stb",
+            "original_size": [
+              640,
+              92
+            ],
+            "size": [
+              512,
+              74
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "side-prt",
+            "original_size": [
+              640,
+              92
+            ],
+            "size": [
+              512,
+              74
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "side-prt",
+            "original_size": [
+              640,
+              92
+            ],
+            "size": [
+              512,
+              74
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "OMS-pod-stb",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "OMS-pod-stb",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "OMS-pod-prt",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "OMS-pod-prt",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "tail",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          },
+          {
+            "name": "tail",
+            "original_size": [
+              640,
+              640
+            ],
+            "size": [
+              512,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "axis",
+        "source_bounds": {
+          "min": [
+            -706.0700073242188,
+            -468.5,
+            -139.64999389648438
+          ],
+          "max": [
+            764.9999389648438,
+            468.5150146484375,
+            415.7232666015625
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 900464,
+      "sha256": "bed3f8cdfa45570d040ec11827ffb09bd03b1b6f9b64e60d9622999818ad994f",
+      "extensions_used": [
+        "KHR_materials_specular"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 19378,
+      "animations": 2,
+      "skins": 0
+    },
+    {
+      "id": "nasa-titan",
+      "source": "https://science.nasa.gov/resource/titan-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/t/Titan_1_5150.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "This opaque NASA appearance does not expose a reconstructed global solid surface beneath the atmosphere.",
+      "matches": {
+        "length": [
+          "Titan"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-titan.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-titan.md",
+      "source_sha256": "9e92e30902a26130895bf2558172d7f36186eb4a51368a60bc3ec1d01134fde4",
+      "source_bytes": 686348,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "9e92e30902a26130895bf2558172d7f36186eb4a51368a60bc3ec1d01134fde4",
+        "textures": [
+          {
+            "name": "color_2016_03_24.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.99798583984375,
+            -499.9887390136719,
+            -500.0009765625
+          ],
+          "max": [
+            500.0019836425781,
+            500.0112609863281,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 473224,
+      "sha256": "54ac85004fc6da8b668d70351529a5c2a772e1fc3b3ca169380a197d038c2abc",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-triton",
+      "source": "https://science.nasa.gov/resource/triton-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/t/Triton_1_2707.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "Voyager coverage is incomplete. Do not interpret map filling outside the observed encounter hemisphere as measured surface detail.",
+      "matches": {
+        "length": [
+          "Triton"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-triton.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-triton.md",
+      "source_sha256": "a25df7ee7fe8679e3da8cca7f1a09ec7241ad5e0c7ad97a39f057b8c1a0043ce",
+      "source_bytes": 6865548,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "a25df7ee7fe8679e3da8cca7f1a09ec7241ad5e0c7ad97a39f057b8c1a0043ce",
+        "textures": [
+          {
+            "name": "color_2016_03_08.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.99798583984375,
+            -499.9887390136719,
+            -500.0009765625
+          ],
+          "max": [
+            500.0019836425781,
+            500.0112609863281,
+            499.9989929199219
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 539680,
+      "sha256": "47867d0f2d433d5f8603b188e13c4456dbf6d372895d16844cb3924325e49b2c",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20508,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-uranus",
+      "source": "https://science.nasa.gov/resource/uranus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/u/Uranus_1_51118.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "Cloud appearance is an idealized NASA visualization; the sphere is not a time-resolved weather map.",
+      "matches": {
+        "length": [
+          "Uranus"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-uranus.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0
+      },
+      "reference": "content/visualizations/models/sources/nasa-uranus.md",
+      "source_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+      "source_bytes": 172652,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+        "textures": [
+          {
+            "name": "Image_0",
+            "original_size": [
+              1024,
+              512
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9960021972656,
+            -488.53648230166556,
+            -500.00050454770746
+          ],
+          "max": [
+            500.0039978027344,
+            488.53648230126214,
+            499.9994669500867
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 152404,
+      "sha256": "0d0b8cdb16495c6319cc377871e6d84d235c60be02a5c4ebe3e241a747c80ffa",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6048,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-venus",
+      "source": "https://science.nasa.gov/resource/venus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/v/Venus_1_12103.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "The appearance depicts the cloud-covered planet, not exposed surface terrain.",
+      "matches": {
+        "length": [
+          "Venus"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-venus.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1000.0000305175781
+      },
+      "reference": "content/visualizations/models/sources/nasa-venus.md",
+      "source_sha256": "6aa26809feeb74fee371c43e9904112a76ebb3df15696e6e75297c0fce063bf9",
+      "source_bytes": 298748,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "6aa26809feeb74fee371c43e9904112a76ebb3df15696e6e75297c0fce063bf9",
+        "textures": [
+          {
+            "name": "color_2016_04_26.jpg",
+            "original_size": [
+              1440,
+              720
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9959716796875,
+            -500.0,
+            -500.00054931640625
+          ],
+          "max": [
+            500.0039978027344,
+            500.0,
+            499.9994812011719
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 159180,
+      "sha256": "b1329976fd34ce56dce8842d31e6d6e2ade3dda75d146eb6ced1eb9ec37ce5ea",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6048,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-vesta",
+      "source": "https://science.nasa.gov/resource/vesta-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/v/Vesta_1_100.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's irregular shape and source normal map are retained; fine normal-map detail does not change the calibrated mesh volume. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+      "matches": {
+        "length": [
+          "Vesta"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-vesta.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 5230.542455489969
+      },
+      "reference": "content/visualizations/models/sources/nasa-vesta.md",
+      "source_sha256": "6f00df4977c211a75fce65dd2badc9f39b12b58d3386e130c89f491dbc8f530b",
+      "source_bytes": 5073448,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps",
+          "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+        ],
+        "prepared_sha256": "6f00df4977c211a75fce65dd2badc9f39b12b58d3386e130c89f491dbc8f530b",
+        "textures": [
+          {
+            "name": "vesta_n.png",
+            "original_size": [
+              2048,
+              1024
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/png"
+          },
+          {
+            "name": "vesta_diff.jpg",
+            "original_size": [
+              2048,
+              1024
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "volume-equivalent-diameter",
+        "source_bounds": {
+          "min": [
+            -2824.76953125,
+            -2307.293701171875,
+            -2748.428955078125
+          ],
+          "max": [
+            2908.0302734375,
+            2321.3359375,
+            2813.850830078125
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1692952,
+      "sha256": "7244a7ee2fba6c7186bab1f9fcba346ec8dca98632a5a535da87773aefdf5c6a",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 34560,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-webb-sunshield",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/James%20Webb%20Space%20Telescope%20%28B%29",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/3D%20Models/James%20Webb%20Space%20Telescope%20%28B%29/James%20Webb%20Space%20Telescope%20%28B%29.glb",
+      "author": "NASA (individual model artist not identified in source metadata)",
+      "note": "NASA's deployed Webb engineering model, with mirrors and bus retained as context. The shield's long axis, not mirror diameter, sets the scale. Five layers are represented by the source mesh; this is a visualization rather than a current thermal or deformation model.",
+      "matches": {
+        "length": [
+          "James Webb Sunshield"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-webb-sunshield.glb",
+      "presentation": {
+        "yaw": 65,
+        "pitch": 18,
+        "roughness": 0.55,
+        "metalness": 0.25,
+        "environment": 0.7,
+        "reference_size": 20.996150970458984
+      },
+      "reference": "content/visualizations/models/sources/nasa-webb-sunshield.md",
+      "source_sha256": "4958e61e5a564f2efcc32cd516b9d36ea0b9bc644f64dbcfe182ce8a422ae526",
+      "source_bytes": 1004248,
+      "processing": {
+        "operations": [
+          "Decode source Draco offline",
+          "Remove unused UVs and split normals; weld positions within each material",
+          "glTF Transform 4.5.0 simplify --ratio 0.2 --error 0.001; prune",
+          "Recompute area-weighted normals",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "af550f95e3d05c35bb177aae35627d807a2d3761679594fbc5403eae6b5ae8c7",
+        "textures": [],
+        "calibration": "axis",
+        "source_bounds": {
+          "min": [
+            -6.435308933258057,
+            -3.1614186763763428,
+            -10.597030639648438
+          ],
+          "max": [
+            6.435615062713623,
+            8.095489501953125,
+            10.399120330810547
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 646952,
+      "sha256": "e2a851bcc5c2e600f7bf8525d2175c2bba3b4d66e548a6b382b9f6c09c883317",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 26751,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "rosetta-67p-shape",
+      "src": "content/visualizations/models/rosetta-67p-shape.glb",
+      "author": "ESA/Rosetta/NAVCAM team (SPC SHAP2); archived by NASA PDS Small Bodies Node",
+      "source": "https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=RO-C-MULTI-5-67P-SHAPE-V2.0",
+      "download_url": "https://sbn.psi.edu/pds/shape-models/files/67P/cg_mspcd_shap2_001m_cart.obj",
+      "license": "Public-domain scientific data (NASA archive catalog license declaration)",
+      "license_url": "https://catalog.data.gov/dataset/shape-models-of-67p-churyumov-gerasimenko-v2-0",
+      "license_files": [
+        "licenses/67p-pds-rights.md"
+      ],
+      "matches": {
+        "length": [
+          "Comet 67P"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "spacecraft-derived-shape",
+      "note": "Rosetta's measured two-lobed comet shape from the PDS SPC SHAP2 Cartesian model. Uniform scale follows the catalog's approximate longest overall length. Neutral gray is an authored material, not a measured albedo map; terrain relief comes from the source shape. No coma or gas jets are implied.",
+      "presentation": {
+        "reference_size": 5.02707314491272,
+        "yaw": -20,
+        "pitch": 10,
+        "roughness": 1,
+        "metalness": 0
+      },
+      "source_sha256": "0ab476af0552bf9a58429c209094e01934edd39f33e48f2cf0c6922a5bb5e0c8",
+      "source_bytes": 49412414,
+      "processing": {
+        "prepared_file": "67p-ready.glb",
+        "prepared_sha256": "00a8e4c02e4197d3cb47c9048b7a06ce1b88943f5a78d02f249bfdf06edf3292",
+        "operations": [
+          "Parse original OBJ triangles without changing coordinates",
+          "glTF Transform 4.5.0 simplify --ratio 0.04 --error 0.0005",
+          "Recompute area-weighted vertex normals; neutral gray material"
+        ],
+        "source_bounds": {
+          "min": [
+            -2.4405410289764404,
+            -1.7483199834823608,
+            -1.4294689893722534
+          ],
+          "max": [
+            2.5865321159362793,
+            1.9454460144042969,
+            1.6048389673233032
+          ]
+        }
+      },
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 944332,
+      "sha256": "2f1c1f6dd253e23e63f36a6217c34fb220025869dfa068e720d89936d3f83c46",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 52398,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [
