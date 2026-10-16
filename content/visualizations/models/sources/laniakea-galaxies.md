@@ -19,3 +19,10 @@ a membership boundary. Cluster labels use literature RA/Dec/cz values in the bui
 
 Rebuild: `./venv/bin/python scripts/build_laniakea_galaxies.py 2mrs.tsv OUT.glb` (catalog hash in
 models.json).
+
+## Virgo (Local) Supercluster (virgo-supercluster-2mrs-galaxies)
+
+Same builder with `--region virgo`: the 869 2MRS galaxies within 15.3 Mpc (soft edge to 17.3) of
+the point midway between the Milky Way and the Virgo Cluster (RA 187.70, Dec +12.39, cz 1079 km/s),
+about the listed 100 million ly. Rests near edge-on so the flattened supergalactic sheet shows.
+Replaces the earlier SDSS-window cone, whose sky coverage was partial.

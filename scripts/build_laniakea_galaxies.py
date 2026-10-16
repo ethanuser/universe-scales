@@ -31,7 +31,14 @@ from nebula_volume import add_cloud  # noqa: E402
 from volume_glb import VolumeGLB  # noqa: E402
 
 H0 = 75.0
-RADIUS_MPC = 80.0
+# Region: (cluster the center lies toward, fraction of its distance, radius Mpc, edge Mpc, labels).
+REGIONS = {
+    "laniakea": ("Great Attractor (Norma Cluster)", 0.55, 80.0, 6.0,
+                 ["Virgo Cluster", "Great Attractor (Norma Cluster)", "Centaurus Cluster", "Hydra Cluster",
+                  "Coma Cluster", "Perseus Cluster"]),
+    # The Local (Virgo) Supercluster, about 33 Mpc across with the Milky Way on its outskirts.
+    "virgo": ("Virgo Cluster", 0.5, 15.3, 2.0, ["Virgo Cluster"]),
+}
 # Galactic coordinates of the supergalactic north pole and of SGL = 0 (de Vaucouleurs).
 SG_POLE = (47.37, 6.32)
 SG_ZERO = (137.37, 0.0)
@@ -43,6 +50,7 @@ CLUSTERS = {
     "Hydra Cluster": (159.18, -27.53, 3777),
     "Coma Cluster": (194.95, 27.98, 6925),
     "Perseus Cluster": (49.95, 41.51, 5366),
+    "Fornax Cluster": (54.62, -35.45, 1379),
 }
 
 
@@ -88,7 +96,8 @@ def load(path):
     return np.array(rows)
 
 
-def build(catalog, output, seed=0x1A71):
+def build(catalog, output, region="laniakea", seed=0x1A71):
+    toward, fraction, radius_mpc, edge_mpc, labels = REGIONS[region]
     rng = np.random.default_rng(seed)
     data = load(catalog)
     glon, glat, kmag, cz = data.T
@@ -102,9 +111,9 @@ def build(catalog, output, seed=0x1A71):
         l, b = equatorial_to_galactic(ra, dec)
         return to_model((galactic_unit(l, b) * velocity / H0) @ sg_rotation.T)
 
-    center = 0.55 * cluster_position("Great Attractor (Norma Cluster)")
+    center = fraction * cluster_position(toward)
     offset = np.linalg.norm(positions - center, axis=1)
-    fade = np.clip((RADIUS_MPC + 6 - offset) / 18, 0, 1)
+    fade = np.clip((radius_mpc + edge_mpc - offset) / (3 * edge_mpc), 0, 1)
     keep = (fade > 0) & (cz > 0)
     positions, kmag, distance, fade = positions[keep] - center, kmag[keep], distance[keep], fade[keep]
     # Absolute K magnitude -> relative luminosity, compressed for display.
@@ -115,13 +124,15 @@ def build(catalog, output, seed=0x1A71):
     colors = (1 - warm) * np.array([1.0, 0.86, 0.62]) + warm * np.array([0.72, 0.82, 1.0])
 
     glb = VolumeGLB("Universe Scales Laniakea galaxy builder")
-    add_cloud(glb, "galaxies", positions, colors, brightness, 1 / 260, 3.2, alpha_floor=0.05)
+    sparse = region == "virgo"  # fewer galaxies: larger, brighter points
+    add_cloud(glb, "galaxies", positions, colors, brightness * (1.3 if sparse else 1),
+              1 / (150 if sparse else 260), 4.5 if sparse else 3.2, alpha_floor=0.05)
     order = rng.permutation(len(positions))[: min(len(positions), 14000)]
     add_cloud(glb, "cosmic-web-glow", positions[order], np.tile([0.55, 0.62, 1.0], (len(order), 1)),
-              np.full(len(order), 0.11) * fade[order], 1 / 55, 26, alpha_floor=0.012)
+              np.full(len(order), 0.2 if sparse else 0.11) * fade[order], 1 / (35 if sparse else 55), 26, alpha_floor=0.012)
     glb.node("Milky Way", translation=-center, scale=0.6, extras={
         "label": "Milky Way (you are here)", "outline": True, "sphere": True, "markerRadius": 3, "markerPadding": 0.5})
-    for name in CLUSTERS:
+    for name in labels:
         position = cluster_position(name) - center
         glb.node(f"label-{name}", translation=position, extras={"label": name})
     size = glb.write(output)
@@ -133,8 +144,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("catalog")
     parser.add_argument("output")
+    parser.add_argument("--region", choices=sorted(REGIONS), default="laniakea")
     args = parser.parse_args()
-    print(json.dumps(build(args.catalog, args.output)))
+    print(json.dumps(build(args.catalog, args.output, args.region)))
 
 
 if __name__ == "__main__":

@@ -4582,78 +4582,55 @@
       "closed_volume_checked": false
     },
     {
-      "id": "virgo-supercluster-sdss-window",
-      "source": "https://www.sdss4.org/dr17/",
-      "link_label": "SDSS catalog source",
-      "representation": "catalog_diagram",
-      "volume_semantics": "not_a_volume_measurement",
-      "basis_url": "https://doi.org/10.1086/159999",
-      "basis_label": "Local Supercluster morphology",
-      "selection_url": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html",
-      "author": "Sloan Digital Sky Survey Collaboration; diagram by Universe Scales",
-      "license": "SDSS public-release catalog data: public domain; authored diagram code: CC-BY-4.0",
-      "license_url": "https://www.sdss.org/collaboration/image-use-policy/",
+      "id": "virgo-supercluster-2mrs-galaxies",
+      "source": "https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=J/ApJS/199/26",
+      "link_label": "2MASS Redshift Survey catalog",
+      "author": "Galaxy catalog: Huchra et al. 2012, 2MASS Redshift Survey (VizieR J/ApJS/199/26); 3D assembly: Universe Scales",
+      "license": "Scientific catalog used with citation (CDS/VizieR terms); model under the project code license",
+      "license_url": "https://cds.unistra.fr/vizier-org/licences_vizier.html",
+      "license_files": [
+        "sources/laniakea-galaxies.md"
+      ],
       "matches": {
         "length": [
           "Virgo Supercluster"
         ]
       },
-      "geometry": "catalog-position survey-window diagram",
+      "geometry": "mesh",
+      "basis_url": "https://imagine.gsfc.nasa.gov/features/cosmic/local_supercluster_info.html",
+      "basis_label": "NASA: the Local (Virgo) Supercluster",
       "presentation": {
-        "reference_size": 30.657772078144,
-        "pitch": 20,
-        "yaw": 10,
-        "layout_width_factor": 1.05,
-        "focus_scale_factor": 1.05
+        "reference_size": 30.67,
+        "layout_width_factor": 1.1,
+        "focus_scale_factor": 1.2,
+        "pitch": 14,
+        "yaw": 90
       },
-      "note": "A redshift-space window through the SDSS footprint around the Virgo direction, not a Virgo/Local Supercluster membership catalog. Tully describes the Local Supercluster as an irregular combination of the Virgo core, a flattened disk and discrete halo clouds; no hard enclosing surface is asserted. NASA describes the Local Supercluster as roughly 100 million light-years across; this is an approximate characteristic span, not a measured hard edge. Coordinates are SDSS DR17 galaxy sky positions and spectroscopic redshifts. Distances are inferred from redshift in flat LCDM (H0=71 km/s/Mpc, Omega_m=0.27, Omega_Lambda=0.73); peculiar velocities, especially for Virgo, are not corrected. The cloud is only translated to its selection-window center; catalog positions retain their mutual comoving separations. Galaxy markers are enlarged point symbols, not galaxy diameters. The ruler is a separate approximate catalog quantity, not a fit to the sample's bounding box.",
+      "note": "The 869 galaxies of the 2MASS Redshift Survey within about 15 megaparsecs of the point midway between the Milky Way and the Virgo Cluster: the Local, or Virgo, Supercluster, about 100 million light-years across, with the Milky Way on its outskirts. Each glowing point is a real galaxy placed by its redshift (H0 = 75 km/s/Mpc) in supergalactic coordinates, so its flattened sheet lies horizontal. Positions are in redshift space (clusters stretch toward us) and the Milky Way's dust hides a wedge of sky. Only galaxies bright enough for the survey are shown; fainter ones are far more numerous.",
       "processing": {
-        "script": "scripts/build_large_scale_catalog_models.py",
-        "source_catalog": "content/visualizations/models/sources/catalogs/sdss-dr17-virgo-window.csv",
-        "source_catalog_sha256": "f7bd7fe89a03f3d016f89942109d2ed83d93cb65f06a46fcb745f423230d0e76",
-        "catalog_query_endpoint": "https://skyserver.sdss.org/dr17/SkyServerWS/SearchTools/SqlSearch",
-        "catalog_release": "SDSS DR17 SpecObj",
-        "sql_selection": "select ra,dec, case when survey in ('boss','eboss') then z_noqso else z end as z, case when survey in ('boss','eboss') then class_noqso else class end as class, case when survey in ('boss','eboss') then zwarning_noqso else zwarning end as zwarning, specObjID from SpecObj where sciencePrimary=1 and (case when survey in ('boss','eboss') then class_noqso else class end)='GALAXY' and (case when survey in ('boss','eboss') then zwarning_noqso else zwarning end)=0 and (case when survey in ('boss','eboss') then z_noqso else z end) between 0.000000000 and 0.008000000 and dec between -5.000000 and 25.000000 and ra between 175.000000 and 200.000000",
-        "selection_rows": 937,
-        "displayed_rows": 937,
-        "coordinate_frame": "equatorial J2000 to comoving Cartesian; local translation only",
-        "distance_model": {
-          "H0_km_s_Mpc": 71.0,
-          "Omega_m": 0.27,
-          "Omega_lambda": 0.73,
-          "distance": "integral of dz/E(z), flat LCDM"
-        },
-        "window_extent_mpc_xyz": [
-          33.61203321888536,
-          17.191922187805176,
-          14.473783016204834
-        ],
-        "reference_size_model_units": 30.657772078144,
-        "window_center_comoving_distance_mpc": 16.86072023330425,
-        "catalog_value_m": 9.46e+23,
-        "catalog_value_definition": "approximate literature characteristic span; catalog coordinates are authored in native Mpc and are not fitted to the selection-window bounds",
-        "source_license_note": "SDSS states public data-release data are public domain; cite the release and relevant science papers.",
-        "max_geometry_bytes": 1500000
+        "script": "scripts/build_laniakea_galaxies.py",
+        "catalog_sha256": "3ed9e506cf91639302e84af8f74c4e5af518b66150687c5a1a0b303193ea8f84",
+        "hubble_constant": 75,
+        "selection_radius_mpc": 15.3,
+        "region": "virgo"
       },
-      "src": "content/visualizations/models/virgo-supercluster-sdss-window.glb",
+      "src": "content/visualizations/models/virgo-supercluster-2mrs-galaxies.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 30096,
-      "sha256": "ee3ad1678ced446dc9b1cbb8a69328468086b06607a341c24e3ec52425878ac8",
+      "bytes": 29352,
+      "sha256": "c26d45ce4460fa93cffc49ebcd0bfb7d9e517e5a33352ad9ce30fd57598bc538",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
       "extensions_required": [],
       "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
       "triangle_count": 0,
       "animations": 0,
-      "skins": 0,
-      "mesh_count": 2,
-      "external_resources": [],
-      "license_files": [
-        "licenses/CC-BY-4.0.txt"
-      ],
-      "closed_volume_checked": false
+      "skins": 0
     },
     {
       "id": "hercules-corona-borealis-lightcone",
