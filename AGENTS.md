@@ -605,8 +605,27 @@ Codex workflow (the owner has spare Codex capacity):
   bodies/spacecraft + MOLA terrain; no report, Codex hit its usage limit), images2 (17 photos).
   The lead browser-checked every model (model_lab shots; extents 0.8-1.3x) before merging.
   129 of 257 Length items now have models; 6 still have no photo.
-- Round 3 queued by run-after-reset.sh at 09:20 2026-10-16: space3d2, bio3d2, earth3d2, images3
-  (worktrees from d52ff0a). Merge the same way; models.json: keep main's, re-register entries.
+- Round 3 (merged 2026-10-16): space3d2 (15), earth3d2 (7; caveat labels hidden via
+  presentation.remove_nodes, display labels plain), bio3d2 (12; OpenAI's bio filter refused a brief
+  that listed viruses/bacteria, so keep microbes out of Codex briefs), images3 (4 CC0 diagrams plus a
+  review of every Length photo: see handoff/images3/REPORT.md for wrong-subject findings).
+  163 of 258 items now have models. Merge helper used: a script that keeps main's models.json /
+  validation.json, union-merges sketchfab-length.json, appends AGENTS.md sections and re-registers
+  handoff entries.
+- Round 4 queued at 14:25 2026-10-16: earth3d3, terrain3d, space3d3, micro3d, images4.
+
+## 2026-10-16 radial Length explorer (Claude)
+
+- journey.js `radialLayout`/`radialPlacement`/`radialFocus`: Scale-of-the-Universe layout. Each item
+  sits at a fixed position whose distance from the center is proportional to its size (golden-angle
+  directions; deterministic search over nearby angles and radii so boxes, including labels, of items
+  within 60x in size never overlap; cached per item set and aspect). The camera only zooms; the
+  selected item is the one at the camera's scale; hops glide the zoom. Used for Length only
+  (spatial.js `radial`); area/volume/counts keep the linear layout. tests/radial-layout.test.cjs.
+- Labels: readable minimum (11 px), max 26 px, fade in from 28-56 px objects, greedy collision culling.
+  Objects under 14 px show photos instead of loading 3D models.
+- Clip planes use a per-model bounding sphere (models.js boundRadius); additive glow writes
+  premultiplied color with alpha = brightness (model-points.js) so Safari/Firefox show it.
 - Note: the Hindenburg model keeps its historical swastika tail markings; the owner may want them
   removed. The 747 carries an Air China livery from the CC BY source.
 
