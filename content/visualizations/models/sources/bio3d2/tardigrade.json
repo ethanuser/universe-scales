@@ -1,0 +1,11 @@
+{
+  "upstream_url": "https://tardigraph.meow-meow.io/resources/files/tardigrade-organs-glb.glb",
+  "upstream_sha256": "8d654f93346dedd7a03d5978b14ef8c354bf186c22bbd176e6bc6908ee43cc36",
+  "upstream_bytes": 12093160,
+  "license": "CC-BY-4.0",
+  "license_verified_at": "https://tardigraph.meow-meow.io/resources/",
+  "basis": "https://doi.org/10.1186/s40851-019-0130-6",
+  "body_length_um": 152,
+  "unit": "um",
+  "retrieved": "2026-10-16"
+}

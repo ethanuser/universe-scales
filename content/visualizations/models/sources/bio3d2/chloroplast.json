@@ -1,0 +1,22 @@
+{
+  "uid": "4c02b0c865d440f0a0b971d77d6e315e",
+  "name": "Chloroplast",
+  "author": "montanhabio",
+  "display_name": "montanhabio",
+  "source": "https://sketchfab.com/3d-models/chloroplast-4c02b0c865d440f0a0b971d77d6e315e",
+  "isDownloadable": true,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "Vegetable Cell Organele",
+  "source_archive_sha256": "33c4fe64ca684ace6afcb43ff1ce88991d3e96b7b2693ac0272ebce3a4cc0c88",
+  "source_archive_bytes": 2728716,
+  "staged_glb_sha256": "479a32c7522216202ea825c008c18e9cfe1dc4a8e5e292616dfedfc06cdb9727",
+  "texture_size": 1024,
+  "retrieved": "2026-10-16"
+}

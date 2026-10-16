@@ -19845,6 +19845,967 @@
         "maxInfluences": 0,
         "maxAttributes": 2
       }
+    },
+    {
+      "id": "earth3d2-african-elephant",
+      "sha256": "d694dca55d95a0c8c530208193404e46c543c65555e38b27f537f7e68f337278",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_materials_specular",
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 426328
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 3030,
+        "totalTriangleCount": 4806,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "earth3d2-arecibo-reflector",
+      "sha256": "074939a45726797bd4387e1aeb070a7c92422026e9761f9f73f6148963174fc8",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: ARECIBO nominal spherical primary reflector",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 819972
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 16705,
+        "totalTriangleCount": 32512,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "earth3d2-ever-given",
+      "sha256": "6c4ee2751afd3a407c252a1a06f570824888c8ad00274b1634749f8dd7f76eb9",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: original dimensioned Ever Given exterior illustration",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 2002076
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 256,
+              "height": 64,
+              "format": "rgb",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 15,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 18,
+        "totalVertexCount": 57848,
+        "totalTriangleCount": 28546,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "earth3d2-fast-reflector",
+      "sha256": "6de125ec1a1fa0b3ef05c10f78e7c2afe9a964a3a62fa0877b194d00fb29995a",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: FAST nominal spherical primary reflector",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 869784
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 16705,
+        "totalTriangleCount": 32512,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "earth3d2-golden-gate-main-span",
+      "sha256": "f16c0f025e992242aced74acbbc54e481b2628575a97afcd1194ee61400ce604",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: Golden Gate main-span exterior diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1738464
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 5,
+        "totalVertexCount": 66864,
+        "totalTriangleCount": 22288,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "earth3d2-kilimanjaro",
+      "sha256": "f8c4be219d984d45abf02241459cd673a165035899017ef11562dbc7c3f45adb",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: Kilimanjaro summit DEM window, sea-level datum, relief 1x",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 717960
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 18693,
+        "totalTriangleCount": 33794,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "earth3d2-sperm-whale",
+      "sha256": "ebe8666b42a22572660a8a1a0e968d0aff990b0d48d997f36be63a58cb0a15fd",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_materials_pbrSpecularGlossiness",
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_materials_pbrSpecularGlossiness",
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1715248
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgba",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/2",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/3",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 24576,
+        "totalTriangleCount": 45000,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 4
+      }
+    },
+    {
+      "id": "bio3d2-capillary",
+      "sha256": "cd72b6d14617818f297ff5fe13aefcded82a94083771357cdc1d5ee3ba426cc6",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 3,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/2"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/4"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: sourced explanatory cell diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 101016
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 3175,
+        "totalTriangleCount": 4136,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-chloroplast",
+      "sha256": "23e50d2a0aa3803aecb01d445c2e58dccccc426abc60494ab7865c29fb75d40a",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 917664
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 3,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 37412,
+        "totalTriangleCount": 53178,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-cone",
+      "sha256": "ad20fdb3dda475327509ef2f2037484dbb06504b398dac7f02a857b037ef1275",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/3"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: sourced explanatory cell diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 737016
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 12,
+        "totalVertexCount": 21713,
+        "totalTriangleCount": 35984,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-egg",
+      "sha256": "95022fd14d97cf618429833408494b759c57b7075732a4abd8afd610795118e1",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: sourced explanatory cell diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1005000
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 6,
+        "totalVertexCount": 29826,
+        "totalTriangleCount": 48196,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-eye",
+      "sha256": "471b34809da205326a3946aa7e7e133680c4257b6020f58784e946b4b73de26b",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_materials_ior",
+          "KHR_materials_specular",
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 392880
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 4,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 5120,
+        "totalTriangleCount": 9216,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "bio3d2-honeybee",
+      "sha256": "acea4502352c8e8cb41441630abaf8a5c6df7e5d1a0082c0852a2be5bb51e107",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 732768
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 27048,
+        "totalTriangleCount": 50000,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-membrane",
+      "sha256": "a17f335166dd23eebc0d5b2f423931d3cf6aece1f28bd1c46c94352831fb3157",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 3,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/3"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/4"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: sourced explanatory cell diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 385920
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 11568,
+        "totalTriangleCount": 18048,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-neutrophil",
+      "sha256": "65371cc4908d63d8b51b17a2168f30e743612e38b45d8e4bda48e238a8c09ba4",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 2,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/4"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: sourced explanatory cell diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 729768
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 21787,
+        "totalTriangleCount": 34480,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-platelet",
+      "sha256": "9b10e7655b1df42a2f8bc536d0955cf3333faf73fb020eb0ba042e69ece043f5",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 2,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/1"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/3"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: sourced explanatory cell diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 385608
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 11223,
+        "totalTriangleCount": 19376,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-rotifer",
+      "sha256": "87763644fa7d08e77fbd42752e6825ef421867ba64df7d9ffd2411f9a7027140",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 713800
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 14326,
+        "totalTriangleCount": 23360,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 4
+      }
+    },
+    {
+      "id": "bio3d2-tardigrade",
+      "sha256": "95bf7ddcd136c3917829731439cfed3afb952c334668b4c7582063f8b5745d88",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: native-scale Gross et al. nanoCT via Tardigraph",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1143920
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 18,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 18,
+        "totalVertexCount": 31937,
+        "totalTriangleCount": 62905,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bio3d2-yeast",
+      "sha256": "c28487ee4f13809bcf5c62f1cc145ef2bf48192335d8b1a76b282ecfdda35fcf",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/materials/3"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales: sourced explanatory cell diagram",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 499440
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 5,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 5,
+        "totalVertexCount": 14298,
+        "totalTriangleCount": 26048,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
     }
   ]
 }

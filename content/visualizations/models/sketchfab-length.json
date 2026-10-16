@@ -279,6 +279,66 @@
         "layout_width_factor": 1.15
       },
       "note": "African-elephant exterior illustration by jimmyho905, uniformly calibrated to the catalog\u2019s 3.2 m representative adult-male shoulder height. In this neutral pose the highest mesh point is the dorsal withers above the forelegs; the head, ears and trunk are lower, so the Y extent measures foot to shoulder rather than body length or head height. A predominantly frontal resting view preserves the shoulder-height size comparison; drag to inspect the whole, longer body. The artist identifies the model as African Elephant; this is an illustrative savanna-elephant appearance, not a specimen scan, verified individual or measured male. Source geometry and textures are retained, the neutral skin bind pose is baked and the rig removed, and tangents are regenerated. No independent-axis scaling, shortened body or cropped anatomy. CC BY 4.0; adaptation by Universe Scales."
+    },
+    {
+      "id": "bio3d2-chloroplast",
+      "name": "Chloroplast",
+      "uid": "4c02b0c865d440f0a0b971d77d6e315e",
+      "author": "montanhabio",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "yaw": -12,
+        "pitch": 8,
+        "layout_width_factor": 1.3,
+        "display_label": "Chloroplast (illustration)"
+      },
+      "note": "Authored chloroplast cutaway by montanhabio, uniformly calibrated to the representative 5 \u00b5m long axis. The model shows envelope, thylakoid stacks and stromal connections with DNA indicated. It is a teaching illustration, not segmented EM or measured internal architecture. Green/gold false colours were added and the floating title removed. Internal proportions and disc counts are illustrative."
+    },
+    {
+      "id": "bio3d2-rotifer",
+      "name": "Rotifer",
+      "uid": "f300e988fa5d4e749b04445efebfba8a",
+      "author": ".hapto",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "y",
+        "yaw": -18,
+        "pitch": 5,
+        "layout_width_factor": 1.3,
+        "display_label": "Rotifer (illustration)"
+      },
+      "note": "A bdelloid rotifer illustration by .hapto GmbH for Senckenberg\u2019s soil-life project, uniformly calibrated corona-to-toes to the catalog\u2019s representative 200 \u00b5m length. The paired ciliated corona and telescoping body are authored anatomy, not a scan or an identified measured specimen. Original painted colours are retained in a light-responsive material; the cilia are static."
+    },
+    {
+      "id": "bio3d2-eye",
+      "name": "Human Eye",
+      "uid": "7621abd3b4604d95bad90f9a1aaac51f",
+      "author": "maskutfab",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "yaw": 160,
+        "pitch": 8,
+        "layout_width_factor": 1.3,
+        "display_label": "Human Eye (illustration)"
+      },
+      "note": "Authored external human-eye illustration by ScannerDev (maskutfab), uniformly calibrated to a representative 24 mm transverse eyeball diameter. The source sclera, iris, pupil and corneal surface are retained with their textures. It is not a patient scan or an optical/vascular reconstruction; the painted vessels are illustrative and no internal anatomy is claimed."
+    },
+    {
+      "id": "bio3d2-honeybee",
+      "name": "Honeybee",
+      "uid": "ee629bd30e4a47899de1b30b9b71c905",
+      "author": "etainproject",
+      "license": "by",
+      "presentation": {
+        "reference_size": 12.5,
+        "yaw": -12,
+        "pitch": 8,
+        "layout_width_factor": 1.3,
+        "display_label": "Honeybee (worker micro-CT)"
+      },
+      "note": "ETAIN / Arno Thielens worker honeybee micro-CT surface, in native millimetres. Its approximately 11 mm body is preserved within the catalog\u2019s representative 12.5 mm scale, rather than enlarged to fill it. The preserved compact pose and unresolved/absent wing and leg detail remain as in the scan; no flying pose, hair or missing appendages are invented. Amber false colour is for inspection, not measured pigmentation."
     }
   ]
 }

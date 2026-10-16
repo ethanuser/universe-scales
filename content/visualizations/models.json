@@ -10601,6 +10601,654 @@
       "triangle_count": 45000,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "bio3d2-capillary",
+      "name": "Human Capillary",
+      "source": "https://www.histologyguide.org/EM-view/EM-213-capillary/09-photo-1.html",
+      "basis_url": "https://www.histologyguide.org/EM-view/EM-213-capillary/09-photo-1.html",
+      "basis_label": "Biological basis and representative dimension",
+      "author": "Universe Scales contributors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Human Capillary"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 7,
+        "yaw": -18,
+        "pitch": 12,
+        "layout_width_factor": 1.3,
+        "display_label": "Human Capillary (diagram)"
+      },
+      "note": "A short cutaway segment of a continuous capillary with a representative 7 \u00b5m outer diameter. The hollow lumen, endothelial wall, basal lamina and one endothelial nucleus are explanatory. Segment ends and viewing opening are authored cuts; segment length is not the catalog quantity. Wall/lamina thickness, nucleus size and cell seams are display proxies, not measurements from the cited TEM.",
+      "processing": {
+        "script": "scripts/build_bio3d2_cells.py",
+        "model_unit": "um",
+        "calibrated_quantity": "outer vessel diameter",
+        "provenance": "content/visualizations/models/sources/bio3d2-capillary.md"
+      },
+      "src": "content/visualizations/models/bio3d2-capillary.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 104244,
+      "sha256": "cd72b6d14617818f297ff5fe13aefcded82a94083771357cdc1d5ee3ba426cc6",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 4136,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-chloroplast",
+      "source": "https://sketchfab.com/3d-models/chloroplast-4c02b0c865d440f0a0b971d77d6e315e",
+      "sketchfab_uid": "4c02b0c865d440f0a0b971d77d6e315e",
+      "author": "montanhabio on Sketchfab",
+      "sketchfab_author": "montanhabio",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Chloroplast"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "basis_url": "https://www.ncbi.nlm.nih.gov/books/NBK9905/",
+      "basis_label": "Biological context / dimension source",
+      "presentation": {
+        "measure_axis": "x",
+        "yaw": -12,
+        "pitch": 8,
+        "layout_width_factor": 1.3,
+        "display_label": "Chloroplast (illustration)"
+      },
+      "note": "Authored chloroplast cutaway by montanhabio, uniformly calibrated to the representative 5 \u00b5m long axis. The model shows envelope, thylakoid stacks and stromal connections with DNA indicated. It is a teaching illustration, not segmented EM or measured internal architecture. Green/gold false colours were added and the floating title removed. Internal proportions and disc counts are illustrative.",
+      "processing": {
+        "script": "scripts/prepare_bio3d2_imports.mjs",
+        "source_model_name": "Chloroplast",
+        "source_sha256": "33c4fe64ca684ace6afcb43ff1ce88991d3e96b7b2693ac0272ebce3a4cc0c88",
+        "source_bytes": 2728716,
+        "texture_size": 1024,
+        "operations": [
+          "Convert legacy specular-glossiness materials to supported metallic-roughness",
+          "Static-scene deduplication, flatten, join, weld",
+          "Simplify toward 50k triangles; error tolerance 0.005; preserve relative geometry",
+          "Prune and quantize positions/normals/UVs; no compressed mesh decoder"
+        ],
+        "provenance": "content/visualizations/models/sources/bio3d2-chloroplast.md"
+      },
+      "src": "content/visualizations/models/bio3d2-chloroplast.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 921940,
+      "sha256": "23e50d2a0aa3803aecb01d445c2e58dccccc426abc60494ab7865c29fb75d40a",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 53178,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-cone",
+      "name": "Human Cone Cell",
+      "source": "https://en.wikipedia.org/wiki/Cone_cell",
+      "basis_url": "https://en.wikipedia.org/wiki/Cone_cell",
+      "basis_label": "Biological basis and representative dimension",
+      "author": "Universe Scales contributors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Human Cone Cell"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 45,
+        "yaw": -10,
+        "pitch": 0,
+        "layout_width_factor": 1.3,
+        "roll": -16,
+        "display_label": "Human Cone Cell (diagram)"
+      },
+      "note": "A representative 45 \u00b5m retinal cone-cell diagram, with a tapered folded-membrane outer segment, connecting cilium, mitochondria-rich inner segment, nucleus and synaptic pedicel. The total length follows the catalog\u2019s approximate convention; regional proportions vary across the retina. Internal lengths, visible fold count, mitochondria, colours and cutaway are authored explanatory geometry, not a human cell reconstruction.",
+      "processing": {
+        "script": "scripts/build_bio3d2_cells.py",
+        "model_unit": "um",
+        "calibrated_quantity": "total cell length",
+        "provenance": "content/visualizations/models/sources/bio3d2-cone.md"
+      },
+      "src": "content/visualizations/models/bio3d2-cone.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 746372,
+      "sha256": "ad20fdb3dda475327509ef2f2037484dbb06504b398dac7f02a857b037ef1275",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 12,
+      "triangle_count": 35984,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-egg",
+      "name": "Human Egg Cell",
+      "source": "https://www.nichd.nih.gov/research/atNICHD/Investigators/gomez-lobo/research/nomenclature-workshop-2021",
+      "basis_url": "https://www.nichd.nih.gov/research/atNICHD/Investigators/gomez-lobo/research/nomenclature-workshop-2021",
+      "basis_label": "Biological basis and representative dimension",
+      "author": "Universe Scales contributors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Human Egg Cell"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 120,
+        "yaw": -15,
+        "pitch": 10,
+        "layout_width_factor": 1.3,
+        "display_label": "Human Egg Cell (diagram)"
+      },
+      "note": "A representative 120 \u00b5m human MII oocyte (cell diameter, excluding the zona pellucida). A cutaway zona surrounds the oocyte, with a small first polar body in the perivitelline space and an indicated peripheral meiotic spindle. No interphase nucleus is shown. Coat thickness, spindle, granules and polar-body geometry/positions are illustrative, not a patient scan; cumulus cells are omitted.",
+      "processing": {
+        "script": "scripts/build_bio3d2_cells.py",
+        "model_unit": "um",
+        "calibrated_quantity": "cell diameter",
+        "provenance": "content/visualizations/models/sources/bio3d2-egg.md"
+      },
+      "src": "content/visualizations/models/bio3d2-egg.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1010216,
+      "sha256": "95022fd14d97cf618429833408494b759c57b7075732a4abd8afd610795118e1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 48196,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-eye",
+      "source": "https://sketchfab.com/3d-models/human-eye-7621abd3b4604d95bad90f9a1aaac51f",
+      "sketchfab_uid": "7621abd3b4604d95bad90f9a1aaac51f",
+      "author": "ScannerDev on Sketchfab",
+      "sketchfab_author": "maskutfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Human Eye"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "basis_url": "https://doi.org/10.1155/2014/503645",
+      "basis_label": "Biological context / dimension source",
+      "presentation": {
+        "measure_axis": "x",
+        "yaw": 160,
+        "pitch": 8,
+        "layout_width_factor": 1.3,
+        "display_label": "Human Eye (illustration)"
+      },
+      "note": "Authored external human-eye illustration by ScannerDev (maskutfab), uniformly calibrated to a representative 24 mm transverse eyeball diameter. The source sclera, iris, pupil and corneal surface are retained with their textures. It is not a patient scan or an optical/vascular reconstruction; the painted vessels are illustrative and no internal anatomy is claimed.",
+      "processing": {
+        "script": "scripts/prepare_bio3d2_imports.mjs",
+        "source_model_name": "Human Eye",
+        "source_sha256": "e4e95628a8a0efbd244c7088bf025be31e2d02dca02301103443f10d3376ff4e",
+        "source_bytes": 870013,
+        "texture_size": 1024,
+        "operations": [
+          "Convert legacy specular-glossiness materials to supported metallic-roughness",
+          "Static-scene deduplication, flatten, join, weld",
+          "Simplify toward 50k triangles; error tolerance 0.005; preserve relative geometry",
+          "Prune and quantize positions/normals/UVs; no compressed mesh decoder"
+        ],
+        "provenance": "content/visualizations/models/sources/bio3d2-eye.md"
+      },
+      "src": "content/visualizations/models/bio3d2-eye.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 397912,
+      "sha256": "471b34809da205326a3946aa7e7e133680c4257b6020f58784e946b4b73de26b",
+      "extensions_used": [
+        "KHR_materials_ior",
+        "KHR_materials_specular",
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 9216,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-honeybee",
+      "source": "https://sketchfab.com/3d-models/western-honeybee-adult-worker-ct-scan-ee629bd30e4a47899de1b30b9b71c905",
+      "sketchfab_uid": "ee629bd30e4a47899de1b30b9b71c905",
+      "author": "etainproject on Sketchfab",
+      "sketchfab_author": "etainproject",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Honeybee"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "scan",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "basis_url": "https://www.nature.com/articles/s41598-019-56948-0",
+      "basis_label": "Biological context / dimension source",
+      "presentation": {
+        "reference_size": 12.5,
+        "yaw": -12,
+        "pitch": 8,
+        "layout_width_factor": 1.3,
+        "display_label": "Honeybee (worker micro-CT)"
+      },
+      "note": "ETAIN / Arno Thielens worker honeybee micro-CT surface, in native millimetres. Its approximately 11 mm body is preserved within the catalog\u2019s representative 12.5 mm scale, rather than enlarged to fill it. The preserved compact pose and unresolved/absent wing and leg detail remain as in the scan; no flying pose, hair or missing appendages are invented. Amber false colour is for inspection, not measured pigmentation.",
+      "processing": {
+        "script": "scripts/prepare_bio3d2_imports.mjs",
+        "source_model_name": "Western Honeybee - Adult Worker - CT Scan",
+        "source_sha256": "3764f5b78dd4d087da5d3a8650893383c4789fe3d756fbff01657e1cf950dbcc",
+        "source_bytes": 15443132,
+        "texture_size": 1024,
+        "operations": [
+          "Convert legacy specular-glossiness materials to supported metallic-roughness",
+          "Static-scene deduplication, flatten, join, weld",
+          "Simplify toward 50k triangles; error tolerance 0.005; preserve relative geometry",
+          "Prune and quantize positions/normals/UVs; no compressed mesh decoder"
+        ],
+        "provenance": "content/visualizations/models/sources/bio3d2-honeybee.md"
+      },
+      "src": "content/visualizations/models/bio3d2-honeybee.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 734404,
+      "sha256": "acea4502352c8e8cb41441630abaf8a5c6df7e5d1a0082c0852a2be5bb51e107",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 50000,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-membrane",
+      "name": "Cell Membrane",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/29689220/",
+      "basis_url": "https://pubmed.ncbi.nlm.nih.gov/29689220/",
+      "basis_label": "Biological basis and representative dimension",
+      "author": "Universe Scales contributors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Cell Membrane"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 4,
+        "yaw": -22,
+        "pitch": 12,
+        "layout_width_factor": 1.3,
+        "display_label": "Cell Membrane (diagram)"
+      },
+      "note": "A 4 nm-thick schematic phospholipid bilayer patch. Teal hydrophilic heads face water on both sides; paired gold hydrophobic tails face inward. The small lateral window is authored to keep the thickness legible at true scale. Regular spacing, molecular shape, lipid count and colours are schematic, not atomic coordinates or an MD snapshot. Proteins, sterols and glycans are omitted.",
+      "processing": {
+        "script": "scripts/build_bio3d2_cells.py",
+        "model_unit": "nm",
+        "calibrated_quantity": "bilayer thickness",
+        "provenance": "content/visualizations/models/sources/bio3d2-membrane.md"
+      },
+      "src": "content/visualizations/models/bio3d2-membrane.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 388432,
+      "sha256": "a17f335166dd23eebc0d5b2f423931d3cf6aece1f28bd1c46c94352831fb3157",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 18048,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-neutrophil",
+      "name": "Neutrophil",
+      "source": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+      "basis_url": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+      "basis_label": "Biological basis and representative dimension",
+      "author": "Universe Scales contributors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Neutrophil"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 12,
+        "yaw": -15,
+        "pitch": 10,
+        "layout_width_factor": 1.3,
+        "display_label": "Neutrophil (diagram)"
+      },
+      "note": "A 12 \u00b5m representative neutrophil diagram with a connected three-lobed nucleus and cytoplasmic granules. The catalog diameter is a blood-smear convention; this rounded explanatory cutaway is not a measured smear or a reconstructed cell. Lobe shape, granule count, organelle proportions and colours are authored.",
+      "processing": {
+        "script": "scripts/build_bio3d2_cells.py",
+        "model_unit": "um",
+        "calibrated_quantity": "cell diameter",
+        "provenance": "content/visualizations/models/sources/bio3d2-neutrophil.md"
+      },
+      "src": "content/visualizations/models/bio3d2-neutrophil.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 733728,
+      "sha256": "65371cc4908d63d8b51b17a2168f30e743612e38b45d8e4bda48e238a8c09ba4",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 34480,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-platelet",
+      "name": "Human Platelet",
+      "source": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+      "basis_url": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+      "basis_label": "Biological basis and representative dimension",
+      "author": "Universe Scales contributors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Human Platelet"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 2.5,
+        "yaw": -20,
+        "pitch": 22,
+        "layout_width_factor": 1.3,
+        "display_label": "Human Platelet (diagram)"
+      },
+      "note": "Resting discoid platelet, 2.5 \u00b5m across. An explanatory cutaway exposes granules and the peripheral microtubule band; no nucleus. Disc thickness, granule placement/count and band geometry are authored, not measurements or an EM reconstruction. Colours distinguish structures; they are not natural colours.",
+      "processing": {
+        "script": "scripts/build_bio3d2_cells.py",
+        "model_unit": "um",
+        "calibrated_quantity": "cell diameter",
+        "provenance": "content/visualizations/models/sources/bio3d2-platelet.md"
+      },
+      "src": "content/visualizations/models/bio3d2-platelet.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 388884,
+      "sha256": "9b10e7655b1df42a2f8bc536d0955cf3333faf73fb020eb0ba042e69ece043f5",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 19376,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-rotifer",
+      "source": "https://sketchfab.com/3d-models/rotifera-f300e988fa5d4e749b04445efebfba8a",
+      "sketchfab_uid": "f300e988fa5d4e749b04445efebfba8a",
+      "author": ".hapto GmbH on Sketchfab",
+      "sketchfab_author": ".hapto",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Rotifer"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "basis_url": "https://vr-bodenleben.senckenberg.de/",
+      "basis_label": "Biological context / dimension source",
+      "presentation": {
+        "measure_axis": "y",
+        "yaw": -18,
+        "pitch": 5,
+        "layout_width_factor": 1.3,
+        "display_label": "Rotifer (illustration)"
+      },
+      "note": "A bdelloid rotifer illustration by .hapto GmbH for Senckenberg\u2019s soil-life project, uniformly calibrated corona-to-toes to the catalog\u2019s representative 200 \u00b5m length. The paired ciliated corona and telescoping body are authored anatomy, not a scan or an identified measured specimen. Original painted colours are retained in a light-responsive material; the cilia are static.",
+      "processing": {
+        "script": "scripts/prepare_bio3d2_imports.mjs",
+        "source_model_name": "Rotifera",
+        "source_sha256": "f2dc61d2b96c8e70403244c76f1355135686337bb9b70ebc1e5941175233c6f0",
+        "source_bytes": 4016914,
+        "texture_size": 1024,
+        "operations": [
+          "Convert legacy specular-glossiness materials to supported metallic-roughness",
+          "Static-scene deduplication, flatten, join, weld",
+          "Simplify toward 50k triangles; error tolerance 0.005; preserve relative geometry",
+          "Prune and quantize positions/normals/UVs; no compressed mesh decoder"
+        ],
+        "provenance": "content/visualizations/models/sources/bio3d2-rotifer.md"
+      },
+      "src": "content/visualizations/models/bio3d2-rotifer.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 715928,
+      "sha256": "87763644fa7d08e77fbd42752e6825ef421867ba64df7d9ffd2411f9a7027140",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 23360,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-tardigrade",
+      "source": "https://tardigraph.meow-meow.io/resources/",
+      "author": "Tardigraph / Meow-Ludo; Gross, M\u00fcller, Hehn, Ferstl, Allner, Dierolf, Achterhold, Mayer and Pfeiffer (2019)",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Tardigrade"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "scan",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "basis_url": "https://doi.org/10.1186/s40851-019-0130-6",
+      "basis_label": "Nano-CT specimen and 152 \u00b5m body-length definition",
+      "presentation": {
+        "reference_size": 152,
+        "yaw": -12,
+        "pitch": 10,
+        "layout_width_factor": 1.3,
+        "display_label": "Tardigrade (152 \u00b5m nano-CT specimen)"
+      },
+      "note": "Native-micrometre nano-CT reconstruction of one fixed, dried Hypsibius exemplaris from Gross et al. (2019), via Tardigraph\u2019s organ meshes and CT-traced body surface. The published 152 \u00b5m body length excludes the fourth leg pair; those legs remain in the mesh. The dorsal/front shell quarter is removed to expose original whole-body organ segmentations, with false colours. The independently registered head scan is omitted; labels identified as probable by Tardigraph remain interpretive. Drying shrinkage and resolution limit fine detail; this is one small specimen, not a species-wide standard. Dataset integration must use the 152 \u00b5m specimen definition.",
+      "processing": {
+        "script": "scripts/build_bio3d2_tardigrade.py",
+        "model_unit": "um",
+        "body_length_um": 152,
+        "operations": [
+          "Retain whole-body scan structures and CT-derived external tracing",
+          "Omit independently registered higher-resolution head scan",
+          "Remove dorsal/front quarter of external shell for inspection; retain organs at original positions",
+          "Simplify each structure; recompute normals; no coordinate scaling"
+        ],
+        "provenance": "content/visualizations/models/sources/bio3d2-tardigrade.md"
+      },
+      "src": "content/visualizations/models/bio3d2-tardigrade.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1159420,
+      "sha256": "95bf7ddcd136c3917829731439cfed3afb952c334668b4c7582063f8b5745d88",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 18,
+      "triangle_count": 62905,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bio3d2-yeast",
+      "name": "Budding Yeast Cell",
+      "source": "https://www.open.edu/openlearncreate/mod/oucontent/view.php?id=160725&section=3.9",
+      "basis_url": "https://www.open.edu/openlearncreate/mod/oucontent/view.php?id=160725&section=3.9",
+      "basis_label": "Biological basis and representative dimension",
+      "author": "Universe Scales contributors",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Budding Yeast Cell"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 5,
+        "yaw": -15,
+        "pitch": 10,
+        "layout_width_factor": 1.3,
+        "display_label": "Budding Yeast Cell (diagram)"
+      },
+      "note": "A 5 \u00b5m mother cell with a small early bud. The bud extends beyond the calibrated mother-cell diameter. Cutaway wall, vacuole, nucleus and mitochondria are a sourced explanatory illustration, not segmented microscopy. Internal sizes, counts and positions are authored; wall thickness is a display proxy.",
+      "processing": {
+        "script": "scripts/build_bio3d2_cells.py",
+        "model_unit": "um",
+        "calibrated_quantity": "mother-cell diameter",
+        "provenance": "content/visualizations/models/sources/bio3d2-yeast.md"
+      },
+      "src": "content/visualizations/models/bio3d2-yeast.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 504076,
+      "sha256": "c28487ee4f13809bcf5c62f1cc145ef2bf48192335d8b1a76b282ecfdda35fcf",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 26048,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

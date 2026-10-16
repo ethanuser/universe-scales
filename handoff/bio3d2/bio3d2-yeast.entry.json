@@ -1,0 +1,49 @@
+{
+  "id": "bio3d2-yeast",
+  "name": "Budding Yeast Cell",
+  "source": "https://www.open.edu/openlearncreate/mod/oucontent/view.php?id=160725&section=3.9",
+  "basis_url": "https://www.open.edu/openlearncreate/mod/oucontent/view.php?id=160725&section=3.9",
+  "basis_label": "Biological basis and representative dimension",
+  "author": "Universe Scales contributors",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Budding Yeast Cell"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 5,
+    "yaw": -15,
+    "pitch": 10,
+    "layout_width_factor": 1.3,
+    "display_label": "Budding Yeast Cell (diagram)"
+  },
+  "note": "A 5 µm mother cell with a small early bud. The bud extends beyond the calibrated mother-cell diameter. Cutaway wall, vacuole, nucleus and mitochondria are a sourced explanatory illustration, not segmented microscopy. Internal sizes, counts and positions are authored; wall thickness is a display proxy.",
+  "processing": {
+    "script": "scripts/build_bio3d2_cells.py",
+    "model_unit": "um",
+    "calibrated_quantity": "mother-cell diameter",
+    "provenance": "content/visualizations/models/sources/bio3d2-yeast.md"
+  },
+  "src": "content/visualizations/models/bio3d2-yeast.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 504076,
+  "sha256": "c28487ee4f13809bcf5c62f1cc145ef2bf48192335d8b1a76b282ecfdda35fcf",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 5,
+  "triangle_count": 26048,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,50 @@
+{
+  "id": "bio3d2-cone",
+  "name": "Human Cone Cell",
+  "source": "https://en.wikipedia.org/wiki/Cone_cell",
+  "basis_url": "https://en.wikipedia.org/wiki/Cone_cell",
+  "basis_label": "Biological basis and representative dimension",
+  "author": "Universe Scales contributors",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Human Cone Cell"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 45,
+    "yaw": -10,
+    "pitch": 0,
+    "layout_width_factor": 1.3,
+    "roll": -16,
+    "display_label": "Human Cone Cell (diagram)"
+  },
+  "note": "A representative 45 µm retinal cone-cell diagram, with a tapered folded-membrane outer segment, connecting cilium, mitochondria-rich inner segment, nucleus and synaptic pedicel. The total length follows the catalog’s approximate convention; regional proportions vary across the retina. Internal lengths, visible fold count, mitochondria, colours and cutaway are authored explanatory geometry, not a human cell reconstruction.",
+  "processing": {
+    "script": "scripts/build_bio3d2_cells.py",
+    "model_unit": "um",
+    "calibrated_quantity": "total cell length",
+    "provenance": "content/visualizations/models/sources/bio3d2-cone.md"
+  },
+  "src": "content/visualizations/models/bio3d2-cone.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 746372,
+  "sha256": "ad20fdb3dda475327509ef2f2037484dbb06504b398dac7f02a857b037ef1275",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 12,
+  "triangle_count": 35984,
+  "animations": 0,
+  "skins": 0
+}
