@@ -1,0 +1,62 @@
+{
+  "id": "earth3d2-african-elephant",
+  "source": "https://sketchfab.com/3d-models/african-elephant-b960467b14f34cfc84feeb3361a21f54",
+  "basis_url": "https://animals.sandiegozoo.org/animals/elephant",
+  "basis_label": "San Diego Zoo: African elephant shoulder height and morphology",
+  "sketchfab_uid": "b960467b14f34cfc84feeb3361a21f54",
+  "sketchfab_author": "jimmyho905",
+  "author": "jimmyho905 on Sketchfab",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt",
+    "sources/earth3d2-african-elephant.md"
+  ],
+  "matches": {
+    "length": [
+      "African Bush Elephant"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "artistic_reconstruction",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "measure_axis": "y",
+    "yaw": -12,
+    "pitch": 0,
+    "layout_width_factor": 1.15
+  },
+  "note": "African-elephant exterior illustration by jimmyho905, uniformly calibrated to the catalog\u2019s 3.2 m representative adult-male shoulder height. In this neutral pose the highest mesh point is the dorsal withers above the forelegs; the head, ears and trunk are lower, so the Y extent measures foot to shoulder rather than body length or head height. A predominantly frontal resting view preserves the shoulder-height size comparison; drag to inspect the whole, longer body. The artist identifies the model as African Elephant; this is an illustrative savanna-elephant appearance, not a specimen scan, verified individual or measured male. Source geometry and textures are retained, the neutral skin bind pose is baked and the rig removed, and tangents are regenerated. No independent-axis scaling, shortened body or cropped anatomy. CC BY 4.0; adaptation by Universe Scales.",
+  "processing": {
+    "scripts": [
+      "scripts/prepare_earth3d2_imports.py",
+      "scripts/prepare_earth3d2_imports.mjs"
+    ],
+    "source_model_name": "African Elephant",
+    "source_archive_sha256": "0fdba3baa1aa14d641ff4ddae939c9c0bb26a288dc7c60172257e46087f593c1",
+    "staged_glb_sha256": "3d5f15498d9dc8c8084812eccee167e1099e93ca36c7450fba8b1adae51c5dba",
+    "source_evidence": "content/visualizations/models/sources/earth3d2-imports/b960467b14f34cfc84feeb3361a21f54.json",
+    "description": "Bake neutral bind pose; deduplicate, flatten, join, weld; regenerate MikkTSpace tangents; prune and quantize. Preserve source textures and all body geometry. No simplification needed.",
+    "withers_landmark": "Highest dorsal midline point over forelegs; centered world-space X near 0, Z between 0 and 0.007 source units, above minimum foot Y.",
+    "source_note": "content/visualizations/models/sources/earth3d2-african-elephant.md"
+  },
+  "src": "content/visualizations/models/earth3d2-african-elephant.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 428368,
+  "sha256": "d694dca55d95a0c8c530208193404e46c543c65555e38b27f537f7e68f337278",
+  "extensions_used": [
+    "KHR_materials_specular",
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 4806,
+  "animations": 0,
+  "skins": 0
+}

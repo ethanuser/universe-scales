@@ -1,0 +1,52 @@
+{
+  "id": "earth3d2-fast-reflector",
+  "source": "https://arxiv.org/html/2012.11167v1",
+  "basis_url": "https://arxiv.org/html/2012.11167v1",
+  "basis_label": "Dimensional and geometric basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "FAST Radio Telescope"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 500,
+    "yaw": -12,
+    "pitch": 50,
+    "layout_width_factor": 1.02,
+    "environment": 0.3
+  },
+  "note": "Original dimensioned diagram of the 500 m primary reflector only, as a spherical cap with 300 m curvature radius. Geometry uses equal horizontal and vertical metres. FAST\u2019s 500 m physical reflector is larger than its approximately 300 m illuminated aperture. This is its nominal spherical reference shape, not the actively deformed paraboloid during an observation. The triangular panel texture is an authored visual cue, not the measured panel layout or a panel-count claim. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
+  "processing": {
+    "script": "scripts/build_earth3d2_structures.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d2-fast-reflector.md",
+    "diameter_m": 500,
+    "nominal_curvature_radius_m": 300,
+    "active_deformation": false,
+    "panel_pattern": "authored, not a measured panel layout"
+  },
+  "src": "content/visualizations/models/earth3d2-fast-reflector.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 871512,
+  "sha256": "6de125ec1a1fa0b3ef05c10f78e7c2afe9a964a3a62fa0877b194d00fb29995a",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 32512,
+  "animations": 0,
+  "skins": 0,
+  "display_label": "FAST \u00b7 nominal reflector only"
+}

@@ -4,6 +4,30 @@ Start here if you are an AI agent (Codex, Claude, ...) or a new contributor pick
 up this repo. It is the shortest path to being productive; the longer READMEs linked
 below hold the details. Keep this file current when you change workflows.
 
+## 2026-10-16 earth3d2 handoff
+
+- Added seven Length assets: African elephant and sperm-whale artistic exteriors,
+  an original dimensioned Ever Given, Golden Gate **main span only**, Arecibo's
+  **pre-collapse reflector only**, FAST's **nominal spherical reflector only**,
+  and a true-relief Kilimanjaro **summit window above sea level**. No existing
+  models replaced and no dataset/exports/images/runtime JS/CSS edits.
+- Offline builders: `build_earth3d2_structures.py`, `build_earth3d2_ship.py`,
+  `build_earth3d2_terrain.py`. Imported animals use the Python bind-pose bake and
+  JS optimization in `prepare_earth3d2_imports.*`. The JS tool takes an optional
+  `elephant` argument to preserve its original base color/textures. Regenerate
+  tangents after skin baking. `display_label` belongs at registry top level.
+- The elephant measures Y because its neutral pose's highest point is the withers,
+  not the head; rest is almost frontal. Broadside body length is naturally larger
+  than shoulder height. Kilimanjaro's sea-level walls are arbitrary display cuts,
+  not real cliffs or the mountain's base. Telescope panel patterns are illustrative.
+- Seven GLBs under 3 MB, zero validator errors/warnings; all CPU resting extents
+  within 0.6–1.3×. Node: 225 passing; Python: 104 tests with one existing skip.
+  All assets and version references verify. Browser/commit sandbox failures were
+  not retried per the lead. CPU previews are not WebGL approval; production shots,
+  size/picking/grounding audit, actual explorer and mobile review remain pending.
+- Final entries, sources, deferred targets, integration and review details:
+  `handoff/earth3d2/REPORT.md`. Official SUE scan is CC BY-NC and was excluded.
+
 ## 2026-10-16 earth3d handoff
 
 - Added 14 Length models: eight dimensioned everyday/optical objects, four

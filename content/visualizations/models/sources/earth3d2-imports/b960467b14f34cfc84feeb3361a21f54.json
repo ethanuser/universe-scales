@@ -1,0 +1,42 @@
+{
+  "uid": "b960467b14f34cfc84feeb3361a21f54",
+  "name": "African Elephant",
+  "author": "jimmyho905",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "A Elephant model",
+  "isDownloadable": true,
+  "api_url": "https://api.sketchfab.com/v3/models/b960467b14f34cfc84feeb3361a21f54",
+  "checked": "2026-10-16",
+  "staging": {
+    "uid": "b960467b14f34cfc84feeb3361a21f54",
+    "name": "African Elephant",
+    "author": "jimmyho905",
+    "license": "by",
+    "source": "https://sketchfab.com/3d-models/african-elephant-b960467b14f34cfc84feeb3361a21f54",
+    "description": "A Elephant model",
+    "source_sha256": "0fdba3baa1aa14d641ff4ddae939c9c0bb26a288dc7c60172257e46087f593c1",
+    "source_bytes": 6146941,
+    "texture_size": 1024,
+    "format": "glb",
+    "gltf_version": "2.0",
+    "bytes": 8557640,
+    "sha256": "3d5f15498d9dc8c8084812eccee167e1099e93ca36c7450fba8b1adae51c5dba",
+    "extensions_used": [
+      "KHR_materials_specular"
+    ],
+    "extensions_required": [],
+    "decompression_required": [],
+    "external_resources": [],
+    "mesh_count": 1,
+    "triangle_count": 4806,
+    "animations": 0,
+    "skins": 1
+  }
+}

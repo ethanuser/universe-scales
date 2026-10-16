@@ -1,0 +1,72 @@
+[
+  {
+    "id": "earth3d2-african-elephant",
+    "source_bounds": [
+      0.02768930463155404,
+      0.0327618109077991,
+      0.04606729854593202
+    ],
+    "rest_extent": 1.0,
+    "side_extent": 1.4082072574510378
+  },
+  {
+    "id": "earth3d2-arecibo-reflector",
+    "source_bounds": [
+      305.0,
+      48.277252197265625,
+      305.0
+    ],
+    "rest_extent": 0.999934384292079,
+    "side_extent": 0.7659941785705437
+  },
+  {
+    "id": "earth3d2-ever-given",
+    "source_bounds": [
+      399.9800109863281,
+      71.0,
+      58.79999923706055
+    ],
+    "rest_extent": 0.8445768692478285,
+    "side_extent": 0.6092863286323016
+  },
+  {
+    "id": "earth3d2-fast-reflector",
+    "source_bounds": [
+      500.0,
+      134.16876220703125,
+      500.0
+    ],
+    "rest_extent": 0.9999344252230549,
+    "side_extent": 0.7697819383716606
+  },
+  {
+    "id": "earth3d2-golden-gate-main-span",
+    "source_bounds": [
+      1298.1600341796875,
+      227.80235290527344,
+      43.400001525878906
+    ],
+    "rest_extent": 0.8191034787921644,
+    "side_extent": 0.6685366175939316
+  },
+  {
+    "id": "earth3d2-kilimanjaro",
+    "source_bounds": [
+      6400.0,
+      5885.66796875,
+      6400.0
+    ],
+    "rest_extent": 1.2261956719407072,
+    "side_extent": 1.375563500844068
+  },
+  {
+    "id": "earth3d2-sperm-whale",
+    "source_bounds": [
+      2.25298430596107,
+      1.8327745141441159,
+      10.057702114033429
+    ],
+    "rest_extent": 0.8905426761723015,
+    "side_extent": 0.6902950772436123
+  }
+]

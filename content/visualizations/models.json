@@ -9324,6 +9324,392 @@
       "triangle_count": 52398,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "earth3d2-arecibo-reflector",
+      "source": "https://www.nationalacademies.org/read/1635/chapter/11",
+      "basis_url": "https://www.nationalacademies.org/read/1635/chapter/11",
+      "basis_label": "Dimensional and geometric basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Arecibo Telescope"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 305,
+        "yaw": -12,
+        "pitch": 50,
+        "layout_width_factor": 1.02,
+        "environment": 0.3
+      },
+      "note": "Original dimensioned diagram of the 305 m primary reflector only, as a spherical cap with 265 m curvature radius. Geometry uses equal horizontal and vertical metres. This is an idealized intact, pre-December-2020 surface, not the observatory\u2019s present condition. The rectangular texture approximates the published 3 \u00d7 6 ft aluminum panels, but is not a survey of their layout. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
+      "processing": {
+        "script": "scripts/build_earth3d2_structures.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d2-arecibo-reflector.md",
+        "diameter_m": 305,
+        "nominal_curvature_radius_m": 265,
+        "active_deformation": false,
+        "panel_pattern": "authored, not a measured panel layout"
+      },
+      "src": "content/visualizations/models/earth3d2-arecibo-reflector.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 821696,
+      "sha256": "074939a45726797bd4387e1aeb070a7c92422026e9761f9f73f6148963174fc8",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 32512,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "Arecibo \u00b7 pre-collapse reflector only"
+    },
+    {
+      "id": "earth3d2-ever-given",
+      "source": "https://gcaptain.com/wp-content/uploads/2023/07/Final-Investigation-Report-Ever-Given-23-March-2021.pdf",
+      "basis_url": "https://gcaptain.com/wp-content/uploads/2023/07/Final-Investigation-Report-Ever-Given-23-March-2021.pdf",
+      "basis_label": "Panama Maritime Authority: vessel particulars and arrangement",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Ever Given"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 399.98,
+        "yaw": -35,
+        "pitch": 17,
+        "layout_width_factor": 1.02
+      },
+      "note": "Original exterior illustration of Ever Given. Hull envelope uses the Panama Maritime Authority\u2019s 399.98 m length, 58.80 m moulded beam and 32.90 m moulded depth; the explorer uniformly calibrates to the catalog\u2019s 399.94 m length (a 0.01% difference), without independently stretching any axis. Accommodation and funnel locations are approximate readings of the report\u2019s general-arrangement drawing. Hull sections, keel/bow curves, superstructure dimensions, colors and machinery are authored simplifications, not shipyard measurements. The partial above-deck load uses nominal 40 ft high-cube boxes; its arrangement and colors are illustrative, not a container manifest or reconstruction of the 2021 grounding. Propeller, rudder, holds, interior, water and canal are omitted. This is not a naval-architecture or stability model.",
+      "processing": {
+        "script": "scripts/build_earth3d2_ship.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d2-ever-given.md",
+        "envelope_m": [
+          399.98,
+          32.9,
+          58.8
+        ],
+        "partial_load_boxes": 2302,
+        "container_envelope_m": [
+          12.192,
+          2.896,
+          2.438
+        ],
+        "details": "Authored geometry; no copied ship mesh, drawing pixels, photo or logos."
+      },
+      "src": "content/visualizations/models/earth3d2-ever-given.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2018644,
+      "sha256": "6c4ee2751afd3a407c252a1a06f570824888c8ad00274b1634749f8dd7f76eb9",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 18,
+      "triangle_count": 28546,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d2-fast-reflector",
+      "source": "https://arxiv.org/html/2012.11167v1",
+      "basis_url": "https://arxiv.org/html/2012.11167v1",
+      "basis_label": "Dimensional and geometric basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "FAST Radio Telescope"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 500,
+        "yaw": -12,
+        "pitch": 50,
+        "layout_width_factor": 1.02,
+        "environment": 0.3
+      },
+      "note": "Original dimensioned diagram of the 500 m primary reflector only, as a spherical cap with 300 m curvature radius. Geometry uses equal horizontal and vertical metres. FAST\u2019s 500 m physical reflector is larger than its approximately 300 m illuminated aperture. This is its nominal spherical reference shape, not the actively deformed paraboloid during an observation. The triangular panel texture is an authored visual cue, not the measured panel layout or a panel-count claim. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
+      "processing": {
+        "script": "scripts/build_earth3d2_structures.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d2-fast-reflector.md",
+        "diameter_m": 500,
+        "nominal_curvature_radius_m": 300,
+        "active_deformation": false,
+        "panel_pattern": "authored, not a measured panel layout"
+      },
+      "src": "content/visualizations/models/earth3d2-fast-reflector.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 871512,
+      "sha256": "6de125ec1a1fa0b3ef05c10f78e7c2afe9a964a3a62fa0877b194d00fb29995a",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 32512,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "FAST \u00b7 nominal reflector only"
+    },
+    {
+      "id": "earth3d2-golden-gate-main-span",
+      "source": "https://www.goldengate.org/bridge/history-research/statistics-data/design-construction-stats/",
+      "basis_url": "https://www.goldengate.org/bridge/history-research/statistics-data/design-construction-stats/",
+      "basis_label": "Dimensional and geometric basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Golden Gate Bridge Main Span"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1280,
+        "yaw": -38,
+        "pitch": 12,
+        "layout_width_factor": 1.04
+      },
+      "note": "Original dimensioned exterior diagram of the Golden Gate Bridge main span only. Tower centers are 4,200 ft (1,280.16 m) apart; the catalog rounds this to 1,280 m. The 90 ft deck width, 746 ft tower height, 500 ft tower height above the deck, main cable diameter and 50 ft suspender spacing follow the Bridge District. The main cable is a parabolic approximation with 144 m sag from the District-hosted statics chapter. Tower taper, bracing, trusses, deck profile, road markings and colors are authored exterior simplifications. The cut stops at the main towers; side spans, anchorages, terrain, submerged foundations and internal construction are omitted. This is not a structural engineering model.",
+      "processing": {
+        "script": "scripts/build_earth3d2_structures.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d2-golden-gate-main-span.md",
+        "tower_center_span_m": 1280.16,
+        "cable_sag_m": 144,
+        "minor_geometry": "authored exterior simplification"
+      },
+      "src": "content/visualizations/models/earth3d2-golden-gate-main-span.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1743284,
+      "sha256": "f16c0f025e992242aced74acbbc54e481b2628575a97afcd1194ee61400ce604",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 22288,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "Golden Gate Bridge \u00b7 main span only"
+    },
+    {
+      "id": "earth3d2-kilimanjaro",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://www.tanzaniaparks.go.tz/kilimanjaro/about",
+      "basis_label": "TANAPA: Kibo summit altitude",
+      "author": "Mapzen / Tilezen; global SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey; adaptation by Universe Scales",
+      "license": "Mapzen Terrain Tiles attribution; underlying USGS public-domain terrain data",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/earth3d2-kilimanjaro.md"
+      ],
+      "matches": {
+        "length": [
+          "Mount Kilimanjaro"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "display_label": "Kilimanjaro \u00b7 summit window above sea level",
+      "presentation": {
+        "reference_size": 5895,
+        "yaw": -8,
+        "pitch": 14,
+        "layout_width_factor": 1.25
+      },
+      "note": "Actual Kibo summit terrain, sampled from Mapzen Terrarium tiles on a 50 m grid, with no vertical exaggeration or summit correction. The authored 6.4 km square is a crop around the summit crater, not the full Kilimanjaro massif. The sides extend straight down to a sea-level display datum; they are arbitrary cuts, not cliffs, measured rock walls or the mountain\u2019s base. Calibration uses TANAPA\u2019s 5,895 m above-sea-level reference; the sampled grid maximum is about 5,886 m and is deliberately not forced to that reference. Elevation colors are illustrative, not observed geology, current snow or glacier boundaries. Mapzen / Tilezen; global SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey.",
+      "processing": {
+        "script": "scripts/build_earth3d2_terrain.py",
+        "units": "metres",
+        "vertical_gain": 1,
+        "source_note": "content/visualizations/models/sources/earth3d2-kilimanjaro.md",
+        "source_grid_sha256": "184777830e8cad89a48f295313efde2b84da29b4869f7d4753eb1cd40aeed6cb",
+        "provenance": "content/visualizations/models/sources/earth3d2-kilimanjaro/provenance.json"
+      },
+      "src": "content/visualizations/models/earth3d2-kilimanjaro.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 721008,
+      "sha256": "f8c4be219d984d45abf02241459cd673a165035899017ef11562dbc7c3f45adb",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 33794,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d2-sperm-whale",
+      "source": "https://sketchfab.com/3d-models/animated-sperm-whale-3076676b30294c119ec2065c3bf3dc47",
+      "basis_url": "https://www.fisheries.noaa.gov/species/sperm-whale",
+      "basis_label": "NOAA Fisheries: sperm whale length",
+      "sketchfab_uid": "3076676b30294c119ec2065c3bf3dc47",
+      "sketchfab_author": "AneesAnimates",
+      "author": "AneesAnimates on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/earth3d2-sperm-whale.md"
+      ],
+      "matches": {
+        "length": [
+          "Sperm Whale"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "artistic_reconstruction",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "measure_axis": "z",
+        "yaw": 55,
+        "pitch": 8,
+        "layout_width_factor": 1.02
+      },
+      "note": "Sperm-whale exterior illustration by AneesAnimates, not a specimen scan or a measured individual. The original neutral bind pose is frozen, rigidly transformed and uniformly scaled nose to fluke to the catalog\u2019s 52 ft (15.8496 m) representative male length from NOAA. The source has no base-color map; gray-blue skin color is authored for this display. Source normal/roughness maps and sculpted wrinkles are retained; their local detail is illustrative rather than measured anatomy. The rig and animations are removed after baking joint transforms; the delivered model is static and remains freely rotatable. CC BY 4.0; adaptation by Universe Scales.",
+      "processing": {
+        "scripts": [
+          "scripts/prepare_earth3d2_imports.py",
+          "scripts/prepare_earth3d2_imports.mjs"
+        ],
+        "source_model_name": "Animated Sperm Whale",
+        "source_archive_sha256": "3dc9391a7bfba44a2cd01c98e762965566099c319802f74a22053ce36e8dd794",
+        "staged_glb_sha256": "a4ddd3453397010520be43215e0ec8a51fdd8a72ecb1c53f63764273322df446",
+        "source_evidence": "content/visualizations/models/sources/earth3d2-imports/3076676b30294c119ec2065c3bf3dc47.json",
+        "description": "Bake provided bind-pose skinning and normals; deduplicate, flatten, join, weld, simplify toward 45k triangles at 0.01 error; authored gray-blue base color; regenerate MikkTSpace tangents, prune and quantize. No anisotropic scaling.",
+        "source_note": "content/visualizations/models/sources/earth3d2-sperm-whale.md"
+      },
+      "src": "content/visualizations/models/earth3d2-sperm-whale.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1717968,
+      "sha256": "ebe8666b42a22572660a8a1a0e968d0aff990b0d48d997f36be63a58cb0a15fd",
+      "extensions_used": [
+        "KHR_materials_pbrSpecularGlossiness",
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_materials_pbrSpecularGlossiness",
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 45000,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d2-african-elephant",
+      "source": "https://sketchfab.com/3d-models/african-elephant-b960467b14f34cfc84feeb3361a21f54",
+      "basis_url": "https://animals.sandiegozoo.org/animals/elephant",
+      "basis_label": "San Diego Zoo: African elephant shoulder height and morphology",
+      "sketchfab_uid": "b960467b14f34cfc84feeb3361a21f54",
+      "sketchfab_author": "jimmyho905",
+      "author": "jimmyho905 on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/earth3d2-african-elephant.md"
+      ],
+      "matches": {
+        "length": [
+          "African Bush Elephant"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "artistic_reconstruction",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "measure_axis": "y",
+        "yaw": -12,
+        "pitch": 0,
+        "layout_width_factor": 1.15
+      },
+      "note": "African-elephant exterior illustration by jimmyho905, uniformly calibrated to the catalog\u2019s 3.2 m representative adult-male shoulder height. In this neutral pose the highest mesh point is the dorsal withers above the forelegs; the head, ears and trunk are lower, so the Y extent measures foot to shoulder rather than body length or head height. A predominantly frontal resting view preserves the shoulder-height size comparison; drag to inspect the whole, longer body. The artist identifies the model as African Elephant; this is an illustrative savanna-elephant appearance, not a specimen scan, verified individual or measured male. Source geometry and textures are retained, the neutral skin bind pose is baked and the rig removed, and tangents are regenerated. No independent-axis scaling, shortened body or cropped anatomy. CC BY 4.0; adaptation by Universe Scales.",
+      "processing": {
+        "scripts": [
+          "scripts/prepare_earth3d2_imports.py",
+          "scripts/prepare_earth3d2_imports.mjs"
+        ],
+        "source_model_name": "African Elephant",
+        "source_archive_sha256": "0fdba3baa1aa14d641ff4ddae939c9c0bb26a288dc7c60172257e46087f593c1",
+        "staged_glb_sha256": "3d5f15498d9dc8c8084812eccee167e1099e93ca36c7450fba8b1adae51c5dba",
+        "source_evidence": "content/visualizations/models/sources/earth3d2-imports/b960467b14f34cfc84feeb3361a21f54.json",
+        "description": "Bake neutral bind pose; deduplicate, flatten, join, weld; regenerate MikkTSpace tangents; prune and quantize. Preserve source textures and all body geometry. No simplification needed.",
+        "withers_landmark": "Highest dorsal midline point over forelegs; centered world-space X near 0, Z between 0 and 0.007 source units, above minimum foot Y.",
+        "source_note": "content/visualizations/models/sources/earth3d2-african-elephant.md"
+      },
+      "src": "content/visualizations/models/earth3d2-african-elephant.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 428368,
+      "sha256": "d694dca55d95a0c8c530208193404e46c543c65555e38b27f537f7e68f337278",
+      "extensions_used": [
+        "KHR_materials_specular",
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 4806,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

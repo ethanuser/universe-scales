@@ -1,0 +1,58 @@
+{
+  "id": "earth3d2-ever-given",
+  "source": "https://gcaptain.com/wp-content/uploads/2023/07/Final-Investigation-Report-Ever-Given-23-March-2021.pdf",
+  "basis_url": "https://gcaptain.com/wp-content/uploads/2023/07/Final-Investigation-Report-Ever-Given-23-March-2021.pdf",
+  "basis_label": "Panama Maritime Authority: vessel particulars and arrangement",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Ever Given"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 399.98,
+    "yaw": -35,
+    "pitch": 17,
+    "layout_width_factor": 1.02
+  },
+  "note": "Original exterior illustration of Ever Given. Hull envelope uses the Panama Maritime Authority\u2019s 399.98 m length, 58.80 m moulded beam and 32.90 m moulded depth; the explorer uniformly calibrates to the catalog\u2019s 399.94 m length (a 0.01% difference), without independently stretching any axis. Accommodation and funnel locations are approximate readings of the report\u2019s general-arrangement drawing. Hull sections, keel/bow curves, superstructure dimensions, colors and machinery are authored simplifications, not shipyard measurements. The partial above-deck load uses nominal 40 ft high-cube boxes; its arrangement and colors are illustrative, not a container manifest or reconstruction of the 2021 grounding. Propeller, rudder, holds, interior, water and canal are omitted. This is not a naval-architecture or stability model.",
+  "processing": {
+    "script": "scripts/build_earth3d2_ship.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d2-ever-given.md",
+    "envelope_m": [
+      399.98,
+      32.9,
+      58.8
+    ],
+    "partial_load_boxes": 2302,
+    "container_envelope_m": [
+      12.192,
+      2.896,
+      2.438
+    ],
+    "details": "Authored geometry; no copied ship mesh, drawing pixels, photo or logos."
+  },
+  "src": "content/visualizations/models/earth3d2-ever-given.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 2018644,
+  "sha256": "6c4ee2751afd3a407c252a1a06f570824888c8ad00274b1634749f8dd7f76eb9",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 18,
+  "triangle_count": 28546,
+  "animations": 0,
+  "skins": 0
+}
