@@ -1,0 +1,322 @@
+{
+  "id": "angular-observation-wheel",
+  "procedural": "angular-machine",
+  "angular_kind": "observation-wheel",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "London Eye"
+    ]
+  },
+  "source": "https://www.londoneye.com/plan-your-visit/information-and-support/faqs/",
+  "note": "A schematic of the London Eye with its full complement of 32 capsules. The wheel and capsule positions rotate about the fixed axle; capsule floors remain level through equal counter-rotation. The support stays fixed. Proportions and cable layout are illustrative, not surveyed geometry; temporary capsule removals are not represented.",
+  "presentation": {
+    "pitch": 0,
+    "yaw": 0
+  },
+  "angular_motion": {
+    "repetitions": 32,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": 1
+      },
+      {
+        "node": "Capsule0",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule1",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule2",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule3",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule4",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule5",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule6",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule7",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule8",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule9",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule10",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule11",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule12",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule13",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule14",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule15",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule16",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule17",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule18",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule19",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule20",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule21",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule22",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule23",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule24",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule25",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule26",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule27",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule28",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule29",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule30",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      },
+      {
+        "node": "Capsule31",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": -1
+      }
+    ]
+  }
+}

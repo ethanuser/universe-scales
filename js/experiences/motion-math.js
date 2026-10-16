@@ -72,12 +72,15 @@
             fit: bounded(fit)
         };
     }
-    function cycleState(dimension, value, time, rate = 1) {
+    function cycleState(dimension, value, time, rate = 1, repetitions = 1) {
         const period = duration(dimension, value);
         const hz =
             dimension === 'angular-velocity' ? value / (2 * Math.PI) : value;
         const visibleHz = hz * rate;
-        const unresolved = visibleHz > 8;
+        // Spokes/blades can appear to reverse long before whole turns alias.
+        // This conservative pattern limit is a display policy, not a promise
+        // about a device's actual frame rate. Fitted time gives 0.25 turns/s.
+        const unresolved = visibleHz * repetitions > 8 + 1e-10;
         return {
             hz,
             period,

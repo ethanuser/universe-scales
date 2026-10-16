@@ -1,0 +1,34 @@
+{
+  "id": "angular-dental-turbine",
+  "procedural": "angular-machine",
+  "angular_kind": "dental-turbine",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "Dentist drill turbine"
+    ]
+  },
+  "source": "https://www.wh.com/en_global/dental-products/restoration-prosthetics/turbines/alegra",
+  "note": "An opened air-turbine dental handpiece. The bucket rotor, chuck and bur rotate together; the handpiece body, air nozzle and bearing outer races stay fixed. The head cap is omitted. Geometry and blade count are illustrative, not a reconstruction or speed specification for a branded handpiece.",
+  "presentation": {
+    "pitch": 0,
+    "yaw": 0
+  },
+  "angular_motion": {
+    "repetitions": 8,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": 1
+      }
+    ]
+  }
+}

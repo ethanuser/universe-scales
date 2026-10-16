@@ -300,6 +300,7 @@ test('downloaded models get first refusal and retain the shared phase indicator'
     const draws = [];
     let disposed = false;
     class ModelStage {
+        entry() { return null; }
         begin() {}
         finish() {}
         draw(...args) { draws.push(args); return true; }
@@ -319,6 +320,7 @@ test('downloaded models get first refusal and retain the shared phase indicator'
 
 test('failed models and registry requests retain real photos rather than drawn substitutes', async () => {
     class ModelStage {
+        entry() { return null; }
         begin() {}
         finish() {}
         draw() { return false; }

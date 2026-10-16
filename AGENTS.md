@@ -37,6 +37,24 @@ below hold the details. Keep this file current when you change workflows.
   errors, with Laniakea still photo-only; size flags are the proton profile,
   DNA and virus representations. This batch does not revise those definitions.
 
+## 2026-10-15 angular inspection continuation
+
+- Angular framing uses `angularSweepBounds` across a full turn, fixing the thin
+  drone propeller's large change in projected height. The engine has an oblique
+  inspection view (`angular_motion.view_tilt`) to expose its journals.
+- `angular-additional-models.js` adds original observation-wheel, gas-turbine,
+  dental-turbine and pulsar diagrams. Capsules counter-rotate to keep floors level.
+  All bicycle labels reuse the existing CC0 city bicycle. Source/limitations:
+  `content/visualizations/models/sources/angular-inspection.md`.
+- `angular_motion.repetitions` freezes repeated spoke/blade patterns above the
+  display threshold; Fit time still gives a quarter turn per real second.
+- `model_lab.cjs angular OUT --times 0.1,1,2` now preserves all observations,
+  including duplicate labels and orbital diagrams, and samples multiple phases.
+  Chromium launch was blocked by the macOS sandbox in this worktree session.
+  Browser-free geometry audit: `node scripts/audit_angular_models.mjs OUT --previews`,
+  then `./venv/bin/python scripts/render_angular_preview.py OUT`. Those flat
+  previews do not verify WebGL materials, perspective or UI. See handoff/angular.
+
 ## What this is
 
 A static site (no build step, GitHub Pages) that visualizes quantities across many

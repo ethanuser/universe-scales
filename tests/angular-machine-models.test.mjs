@@ -71,7 +71,7 @@ test('machine-specific fixed and rotating details are assigned to the correct hi
         ['washing-machine', 'perforated drum rear plate', 'stationary door bezel'],
         ['hard-drive', 'aluminum platter 1', 'stationary actuator arm'],
         ['record-player', 'vinyl record', 'fixed tubular tonearm'],
-        ['bicycle-wheel', 'black pneumatic tire', 'fixed fork blade -0.045'],
+        ['bicycle-wheel', 'black pneumatic tire', 'fixed fork blade -0.06'],
         ['blender', 'pitched stainless blade 1', 'transparent tapered pitcher cutaway wall']
     ];
     for (const [kind, movingName, fixedName] of checks) {
@@ -93,7 +93,7 @@ test('machine-specific fixed and rotating details are assigned to the correct hi
     assert.ok(buildAngularMachine('hard-drive').getObjectByName('off-axis spindle witness tab'));
     assert.ok(buildAngularMachine('record-player').getObjectByName('offset label rule'));
     const wheel = buildAngularMachine('bicycle-wheel');
-    assert.ok(Math.abs(wheel.getObjectByName('fork dropout -0.045').position.y) < 0.01,
+    assert.ok(Math.abs(wheel.getObjectByName('fork dropout -0.06').position.y) < 0.01,
         'fixed fork terminates at the axle, not at the tire bottom');
     const blender = buildAngularMachine('blender');
     const handle = blender.getObjectByName('side pitcher handle');

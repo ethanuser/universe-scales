@@ -1,0 +1,36 @@
+{
+  "id": "angular-record-player",
+  "procedural": "angular-machine",
+  "angular_kind": "record-player",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "33 1/3 rpm record",
+      "45 rpm vinyl record",
+      "78 rpm record"
+    ]
+  },
+  "source": "https://docs.audio-technica.com/eu/AT-LPA2-UM-EN.pdf",
+  "note": "The record and platter turn together. The plinth, spindle axis and tonearm stay fixed; the three records use their own listed rpm. The grooves and surface markings are illustrative.",
+  "presentation": {
+    "pitch": 28,
+    "yaw": -15
+  },
+  "angular_motion": {
+    "repetitions": 1,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": -1
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@ import * as THREE from '../js/vendor/three/three.module.min.js';
 import { angularModelEntries, angularScene, angularEntry } from '../js/experiences/angular-models.js';
 import { createAngularRig } from '../js/experiences/angular-rig.js';
 
-test('axial presentation keeps every spindle camera-parallel and every turn clockwise', () => {
+test('axial presentation keeps spindles camera-parallel and primary rotation clockwise', () => {
     for (const entry of Object.values(angularModelEntries)) {
         const root = new THREE.Group(); root.add(angularScene(entry.angular_kind));
         const pose = entry.presentation;
@@ -20,7 +20,7 @@ test('axial presentation keeps every spindle camera-parallel and every turn cloc
             for (const rotation of rig.rotations) {
                 const axis = rotation.axis.clone().transformDirection(rotation.node.matrixWorld);
                 assert.ok(Math.hypot(axis.x, axis.y) < 1e-10, entry.id);
-                assert.ok(axis.z * rotation.ratio < 0, `${entry.id}: clockwise screen rotation`);
+                if (rotation === rig.rotations[0]) assert.ok(axis.z * rotation.ratio < 0, `${entry.id}: clockwise screen rotation`);
             }
         }
     }

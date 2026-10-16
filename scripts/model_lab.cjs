@@ -16,7 +16,9 @@
 //   node scripts/model_lab.cjs coverage [--gap 1] [--json]
 //       Model provenance and largest logarithmic gaps; not a visual approval.
 //   node scripts/model_lab.cjs angular OUT_DIR ["Item" ...]
-//       Angular-model screenshots at rest/quarter turn and rotor/housing checks.
+//       Every observation (including duplicate names and orbital diagrams) at
+//       rest/quarter/half/three-quarter/0.37 rad; rotor/housing checks.
+//       --times 0.1,1,2 adds screenshots at these simulated seconds per item.
 //   node scripts/model_lab.cjs mobile OUT_DIR
 //       Real touch gestures, slider isolation, mobile/fullscreen layout and exits.
 //   node scripts/model_lab.cjs navigation OUT_DIR
@@ -417,25 +419,44 @@ const commands = {
         await withBrowser(options.size || '1280x900', async (page, base, errors) => {
             await page.goto(`${base}/?dimension=angular-velocity&item=Ceiling%20fan`);
             await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.entries.length);
-            const names = requested.length ? requested : await page.evaluate(() => {
+            const observations = await page.evaluate(requested => {
                 const view = app.experiences;
-                return [...new Set(view.items.filter(item => view.modelEntry(item)).map(item => item.name))];
-            });
+                return view.items.map((item, index) => ({ index, name: item.name, id: item.id, value: item.value }))
+                    .filter(item => !requested.length || requested.includes(item.name));
+            }, requested);
+            for (const name of requested) if (!observations.some(item => item.name === name)) throw new Error(`Unknown angular item: ${name}`);
+            const times = options.times || options.time;
+            const seconds = times == null ? [] : String(times).split(',').map(Number);
+            if (seconds.some(time => !Number.isFinite(time) || time < 0)) throw new Error('--times must contain nonnegative simulated seconds');
             const results = [];
-            for (const name of names) {
-                await page.evaluate(name => {
+            for (const observation of observations) {
+                const { name, index } = observation;
+                const prefix = `${String(index).padStart(2, '0')}-${slug(name)}`;
+                const modeled = await page.evaluate(index => {
                     const view = app.experiences; view.pause();
-                    const index = view.items.findIndex(item => item.name === name);
-                    if (index < 0) throw new Error(`Unknown angular item: ${name}`);
                     view.focus(index);
                     [...view.settings.querySelectorAll('button')].find(button => button.textContent === 'Fit time to item').click();
-                }, name);
+                    return !!view.modelEntry(view.item);
+                }, index);
+                if (!modeled) {
+                    const orbital = /\borbit\b/i.test(name);
+                    for (const [sample, phase] of [0, Math.PI / 2, Math.PI, 3 * Math.PI / 2, ...seconds.map(time => time * observation.value)].entries()) {
+                        await page.evaluate(phase => {
+                            const view = app.experiences;
+                            view.clock.time = phase / view.item.value; view.renderer.render(view.clock.time);
+                        }, phase);
+                        await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, `${prefix}-${sample}.png`) });
+                    }
+                    results.push({ ...observation, orbital, missingModel: !orbital });
+                    console.log(`${index}: ${name}: ${orbital ? 'circular mean-speed orbit diagram' : 'MISSING MODEL'}`);
+                    continue;
+                }
                 await page.waitForFunction(() => {
                     const view = app.experiences;
                     return view.renderer.modelStage.instances.get(view.item)?.userData.angularRig;
                 }, null, { timeout: 30000 });
                 const snapshots = [];
-                for (const phase of [0, Math.PI / 2]) {
+                for (const [sample, phase] of [0, Math.PI / 2, Math.PI, 3 * Math.PI / 2, 0.37, ...seconds.map(time => time * observation.value)].entries()) {
                     snapshots.push(await page.evaluate(phase => {
                         const view = app.experiences;
                         view.clock.time = phase / view.item.value;
@@ -443,24 +464,29 @@ const commands = {
                         const instance = view.renderer.modelStage.instances.get(view.item);
                         instance.updateMatrixWorld(true);
                         const rig = instance.userData.angularRig;
-                        const stationary = ['Housing', 'ceiling_fan', 'motor_stator', 'motor_coils', 'RingsTop', 'RingsBottom']
-                            .map(name => instance.getObjectByName(name)).filter(Boolean);
+                        const moving = new Set();
+                        rig.rotations.forEach(({ node }) => node.traverse(child => moving.add(child)));
+                        const stationary = [];
+                        instance.traverse(node => { if (node.isMesh && !moving.has(node)) stationary.push(node); });
                         return { rotors: rig.rotations.map(rotation => ({ name: rotation.node.name,
                             quaternion: rotation.node.quaternion.toArray(), pivot: rotation.node.position.toArray(),
                             axis: rotation.axis.clone().transformDirection(rotation.node.matrixWorld).toArray(),
                             ratio: rotation.ratio })),
+                            tilt: view.modelEntry(view.item).angular_motion.view_tilt || 0,
                             housing: stationary.map(node => ({ name: node.name, matrix: node.matrixWorld.toArray() })) };
                     }, phase));
                     await page.locator('.experience-stage-frame').screenshot({ path: path.join(out,
-                        `${slug(name)}-${phase ? 'quarter' : 'rest'}.png`) });
+                        `${prefix}-${sample}.png`) });
                 }
                 const moved = snapshots[0].rotors.every((rotor, index) =>
                     rotor.quaternion.some((value, axis) => Math.abs(value - snapshots[1].rotors[index].quaternion[axis]) > 1e-6));
-                const fixed = JSON.stringify(snapshots[0].housing) === JSON.stringify(snapshots[1].housing);
-                const pivotsFixed = snapshots[0].rotors.every((rotor, index) =>
-                    JSON.stringify(rotor.pivot) === JSON.stringify(snapshots[1].rotors[index].pivot));
-                const clockwiseAxial = snapshots.every(snapshot => snapshot.rotors.every(rotor =>
-                    Math.hypot(rotor.axis[0], rotor.axis[1]) < 1e-5 && rotor.axis[2] * rotor.ratio < 0));
+                const fixed = snapshots.every(snapshot => JSON.stringify(snapshots[0].housing) === JSON.stringify(snapshot.housing));
+                const pivotsFixed = snapshots.every(snapshot => snapshots[0].rotors.every((rotor, index) =>
+                    JSON.stringify(rotor.pivot) === JSON.stringify(snapshot.rotors[index].pivot)));
+                // Capsule leveling deliberately counter-rotates about the same axis.
+                const clockwiseAxial = snapshots.every(snapshot => snapshot.rotors.every((rotor, index) =>
+                    Math.abs(Math.abs(rotor.axis[2]) - Math.cos(snapshot.tilt * Math.PI / 180)) < 1e-5 &&
+                    (index > 0 || rotor.axis[2] * rotor.ratio < 0)));
                 const frozen = await page.evaluate(() => {
                     const view = app.experiences;
                     const rig = view.renderer.modelStage.instances.get(view.item).userData.angularRig;
@@ -471,11 +497,12 @@ const commands = {
                     return JSON.stringify(before) === JSON.stringify(rig.rotations.map(rotation => rotation.node.quaternion.toArray()))
                         && view.stage.textContent.includes('Too fast to resolve');
                 });
-                results.push({ name, moved, fixed, pivotsFixed, clockwiseAxial, frozen, snapshots });
+                results.push({ ...observation, moved, fixed, pivotsFixed, clockwiseAxial, frozen, snapshots });
                 console.log(`${name}: rotor ${moved ? 'turns' : 'FAILED'}, housing ${fixed ? 'fixed' : 'MOVED'}, pivot ${pivotsFixed ? 'fixed' : 'MOVED'}, axial CW ${clockwiseAxial ? 'yes' : 'FAILED'}, high-rate ${frozen ? 'static' : 'FAILED'}`);
             }
             fs.writeFileSync(path.join(out, 'audit.json'), JSON.stringify({ results, errors }, null, 2));
-            if (results.some(result => !result.moved || !result.fixed || !result.pivotsFixed || !result.clockwiseAxial || !result.frozen) || errors.length) {
+            if (results.some(result => result.missingModel || (!result.orbital &&
+                (!result.moved || !result.fixed || !result.pivotsFixed || !result.clockwiseAxial || !result.frozen))) || errors.length) {
                 console.log(errors); process.exitCode = 1;
             }
         });

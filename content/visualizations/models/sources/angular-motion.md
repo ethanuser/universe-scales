@@ -6,11 +6,13 @@ moving assembly has an explicit node and a local spindle axis. Its orientation
 is computed from its authored pose on every frame, with no accumulated drift.
 Cabinets, dials, tonearms, forks, jar walls and housings stay fixed.
 
-The camera looks along the main spindle, perpendicular to the screen. Clockwise
+The camera normally looks along the main spindle, perpendicular to the screen. Clockwise
 is a consistent display convention for the dataset's unsigned speed magnitudes.
 The same sign change applies to every geared member so relative ratios survive.
 Earth and Jupiter are viewed from the south pole, where their usual spin appears
 clockwise. The blender's lid is removed for this axial inspection view.
+The engine uses an authored 55-degree inspection tilt to expose the crank
+journals beyond its end flange; projected rotation keeps the same clockwise sense.
 
 Procedural mechanisms are authored illustrations under the repository's MIT
 code license. Their proportions are illustrative and are not length measurements.
@@ -30,7 +32,8 @@ reflections are added at runtime. The shaft is Y-up after the source transforms.
   The 406 kB result has 7,560 triangles. Pistons and rods are omitted so they
   cannot misleadingly remain stationary or disconnect while the crank turns.
   The loader sanitizes the binding name to `Crank_Shaft1_4`; the local spindle
-  is Z. The front-on view emphasizes angular displacement, with depth foreshortened.
+  is Z. The October 15 inspection pose is oblique so journals remain visible
+  beyond the end flange.
 - [NASA VTAD Saturn](https://science.nasa.gov/resource/saturn-3d-model/): source
   globe and ring topology retained; embedded textures resized to at most 1024 px
   with glTF Transform 4.5.0 `resize`. The self-contained GLB is 727 kB and 3,328
@@ -65,14 +68,32 @@ before import. No invented replacement geometry was added in this batch.
 - Hard drive: [Seagate component diagram](https://www.seagate.com/support/disc/manuals/ata/1621pma.pdf).
 - Blender: [Vitamix blade/container manual](https://www.vitamix.com/media/catalog/product/file/Container-Use-and-Care-Owners-Manual.pdf).
 
-The small separate phase dial measures completed turns clockwise. Above eight turns per real
-second, both the model and phase dial freeze under the existing aliasing rule.
+The small separate phase dial measures completed turns clockwise. Above eight
+repeating patterns per real second, both the model and phase dial freeze. An
+`angular_motion.repetitions` hint accounts for repeated spokes or blades: a
+wheel can alias well below eight complete turns per second. These counts are
+display-policy hints taken from the rendered geometry, not measured machine
+specifications. Fitted time remains one complete turn per four real seconds.
 The interface labels this as a static view, and Fit time to item exposes motion.
 
 ## Verification
 
-`node scripts/model_lab.cjs angular /tmp/angular-review` opens every available
-angular model in the production explorer, saves rest/quarter-turn screenshots,
+`node scripts/model_lab.cjs angular /tmp/angular-review` opens every observation
+in the production explorer, preserving duplicate names and orbital diagrams,
 and records rotor quaternions, local pivots and stationary housing matrices in
 audit.json. Names can follow the output directory to restrict the review.
+Five phase screenshots include a non-symmetric 0.37-radian sample;
+`--times 0.1,1,2` adds samples at explicit simulated seconds. Counter-rotating
+capsules are allowed; only the primary rotor must turn clockwise.
 Use the screenshots for visual review; matrix checks alone do not certify a model.
+
+Angular framing measures a full rotation once, rather than fitting the rest
+pose. This fixes the thin drone propeller's almost fourfold growth in projected
+height as it turns. `angular_motion.view_tilt` optionally exposes a long shaft.
+
+If Chromium cannot launch, `node scripts/audit_angular_models.mjs /tmp/angular
+--previews` checks every dataset observation with the vendored glTF loader and
+production rig/builders. `./venv/bin/python scripts/render_angular_preview.py
+/tmp/angular` makes flat geometry phase sheets. These omit textures, reflections,
+perspective, labels and production UI, and do not replace browser review.
+See [the October 15 source notes](angular-inspection.md) for the new illustrations.

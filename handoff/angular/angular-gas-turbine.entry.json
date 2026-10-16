@@ -1,0 +1,34 @@
+{
+  "id": "angular-gas-turbine",
+  "procedural": "angular-machine",
+  "angular_kind": "gas-turbine",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "Fast gas turbine"
+    ]
+  },
+  "source": "https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/powturba.html",
+  "note": "An exposed axial gas-turbine stage. The turbine disk, blades and shaft rotate together; the casing and nozzle guide vanes stay fixed. Blade counts and profiles are illustrative, not a particular machine. Compressor, combustor, gas flow and thermal effects are omitted.",
+  "presentation": {
+    "pitch": 0,
+    "yaw": 0
+  },
+  "angular_motion": {
+    "repetitions": 24,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": 1
+      }
+    ]
+  }
+}
