@@ -1,0 +1,84 @@
+{
+  "id": "gibraltar",
+  "grid_shape": [
+    161,
+    161
+  ],
+  "bounds_lonlat": [
+    -5.669870805228658,
+    35.86915162442924,
+    -5.470129194771342,
+    36.03084837557076
+  ],
+  "source_zoom": 12,
+  "elevation_range_m": [
+    -931.2572021484375,
+    232.3367917435909
+  ],
+  "vertical_gain": 1,
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1983/1608.png",
+      "sha256": "d43fc559fbeecf35eab6fce7aa26d8108f5f5f2cab21a28a1f2501d3ae5bafcf",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1983/1609.png",
+      "sha256": "4fcfdd8fbc702879e491242fc08d77e6305ca6c6847fb360c6e0994e40adf9bc",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1983/1610.png",
+      "sha256": "2bddf9f65025dd57ed599e3121afffd2dcaec38085fd04a73f51e97d246cb366",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1984/1608.png",
+      "sha256": "6f18c2bd280551f2590f7b7c5983428617b657b9b9a15a9863c5eacf1c1dc094",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1984/1609.png",
+      "sha256": "4fcfdd8fbc702879e491242fc08d77e6305ca6c6847fb360c6e0994e40adf9bc",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1984/1610.png",
+      "sha256": "4f0b20b9383191c1707ae0ef9d11f775bf03770760e3db6fc58fbc21c56f8af6",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1985/1608.png",
+      "sha256": "db1e39fef7dfd7c85e7c15ccab483bc4d6f811a16db17cd1c1673b99ddc2d10a",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1985/1609.png",
+      "sha256": "ccbbfd8687836c1a62897e30c6b57858098abf4842b090a31bf436ecdffb4cd0",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/1985/1610.png",
+      "sha256": "7f4eb10b3af4b0536419675542989ed1d624396a431ebac92d8b89024c2c8095",
+      "headers": {}
+    }
+  ],
+  "vector_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_land.geojson",
+      "sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416"
+    },
+    {
+      "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/ETOPO1_ice_surface/ImageServer/exportImage?bbox=-5.670494997761338%2C35.86864632208193%2C-5.469505002238662%2C36.03135367791808&bboxSR=4326&imageSR=4326&size=161%2C161&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&adjustAspectRatio=false&f=image",
+      "sha256": "cd809419117c548324cd3d5758d5ef72f63b4a4b4b7ef22af1087b82ac5d665d",
+      "role": "NOAA ETOPO1 sampled ocean elevations, native 1 arc-minute grid; unrendered signed float TIFF"
+    }
+  ],
+  "files": {
+    "terrain.npz": "e8bca67da6bd0040e9c727a65160f70baf2d82f1f5777a68192564df182ff770",
+    "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5",
+    "land-mask.png": "47ed6a9e1f81930c83fe23ece648f2f9fa5a66bcc3bfa75112f7ebdcf1bc4d2d"
+  },
+  "processing": "Bilinear pixel-center elevation sampling including negative depths; no summit/depth correction, smoothing or invented relief. Source vector fragments retained separately. Authored aperture.",
+  "attribution": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales."
+}

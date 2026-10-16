@@ -1,0 +1,54 @@
+{
+  "id": "terrain3d-victoria-falls",
+  "source": "https://registry.opendata.aws/terrain-tiles/",
+  "basis_url": "https://whc.unesco.org/en/list/509/",
+  "basis_label": "Geographic measurement and context",
+  "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+  "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "license_files": [
+    "sources/terrain3d-victoria-falls.md"
+  ],
+  "matches": {
+    "length": [
+      "Victoria Falls"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dem_terrain",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1708,
+    "pitch": 58,
+    "yaw": 0,
+    "roll": 0,
+    "layout_width_factor": 1.3
+  },
+  "note": "The present Zambezi gorge and upstream terrain around the falls, with a 2 km east-west context window. Calibration is the published 1,708 m width, not the DEM relief. SRTM smooths the narrow gorge; this is terrain, not a reconstruction of the seasonally changing water curtain. No invented waterfall surface is added. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "processing": {
+    "script": "scripts/build_terrain3d_models.py",
+    "units": "metres",
+    "vertical_gain": 1,
+    "mesh_grid_step": 1,
+    "source_note": "content/visualizations/models/sources/terrain3d-victoria-falls.md",
+    "provenance": "content/visualizations/models/sources/terrain3d/victoria-falls/provenance.json",
+    "source_files": {
+      "terrain.npz": "cda4fb4f46330a4eb613ef41cf98f9e2fa04ecb53d3f7cc8ec71d30a86e70c29",
+      "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5"
+    }
+  },
+  "src": "content/visualizations/models/terrain3d-victoria-falls.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 974356,
+  "sha256": "ad2ad8fcdbf694943be590e00195649cecc185794f14ad4813463694fb200e1b",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 38496,
+  "animations": 0,
+  "skins": 0
+}

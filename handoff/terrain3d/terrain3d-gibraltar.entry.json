@@ -1,0 +1,55 @@
+{
+  "id": "terrain3d-gibraltar",
+  "source": "https://registry.opendata.aws/terrain-tiles/",
+  "basis_url": "https://en.wikipedia.org/wiki/Strait_of_Gibraltar",
+  "basis_label": "Geographic measurement and context",
+  "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+  "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "license_files": [
+    "sources/terrain3d-gibraltar.md"
+  ],
+  "matches": {
+    "length": [
+      "Strait of Gibraltar"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dem_terrain",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 14200,
+    "pitch": 63,
+    "yaw": 0,
+    "roll": 0,
+    "layout_width_factor": 1.3
+  },
+  "note": "An 18 km geographic window of the narrow crossing between Spain and Morocco, with actual NOAA ETOPO1 ocean-floor relief and a flat sea-level surface. The context window is larger than the catalog 14.2 km narrowest crossing; its crop edges are not measurement endpoints. Ocean depth is sampled explicitly from the coarse 1 arc-minute ETOPO1 grid, not a detailed strait sounding survey. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "processing": {
+    "script": "scripts/build_terrain3d_models.py",
+    "units": "metres",
+    "vertical_gain": 1,
+    "mesh_grid_step": 2,
+    "source_note": "content/visualizations/models/sources/terrain3d-gibraltar.md",
+    "provenance": "content/visualizations/models/sources/terrain3d/gibraltar/provenance.json",
+    "source_files": {
+      "terrain.npz": "e8bca67da6bd0040e9c727a65160f70baf2d82f1f5777a68192564df182ff770",
+      "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5",
+      "land-mask.png": "47ed6a9e1f81930c83fe23ece648f2f9fa5a66bcc3bfa75112f7ebdcf1bc4d2d"
+    }
+  },
+  "src": "content/visualizations/models/terrain3d-gibraltar.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 615172,
+  "sha256": "b46d128ff638d22d907fc8ca560af18daa1400624d30a3fe5b2e276ce0cfca59",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 25658,
+  "animations": 0,
+  "skins": 0
+}

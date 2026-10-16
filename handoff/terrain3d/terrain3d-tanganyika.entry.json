@@ -1,0 +1,54 @@
+{
+  "id": "terrain3d-tanganyika",
+  "source": "https://registry.opendata.aws/terrain-tiles/",
+  "basis_url": "https://en.wikipedia.org/wiki/Lake_Tanganyika",
+  "basis_label": "Geographic measurement and context",
+  "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+  "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "license_files": [
+    "sources/terrain3d-tanganyika.md"
+  ],
+  "matches": {
+    "length": [
+      "Lake Tanganyika"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dem_terrain",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 673000,
+    "pitch": 68,
+    "yaw": 0,
+    "roll": -12,
+    "layout_width_factor": 1.3
+  },
+  "note": "The actual Natural Earth Lake Tanganyika shoreline in sampled East African Rift terrain. The complete lake remains at geographic horizontal scale; relief is exaggerated 4 times. The lake is rendered at its sampled surface elevation: there is no invented lake-floor bathymetry. The 673 km reference is the catalog long-axis length, not a sum around the shoreline. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "processing": {
+    "script": "scripts/build_terrain3d_models.py",
+    "units": "metres",
+    "vertical_gain": 4,
+    "mesh_grid_step": 2,
+    "source_note": "content/visualizations/models/sources/terrain3d-tanganyika.md",
+    "provenance": "content/visualizations/models/sources/terrain3d/tanganyika/provenance.json",
+    "source_files": {
+      "terrain.npz": "750da6bc45a7af57a0dcf9847085185832573dc93f35393fae3b163c4ee3d17f",
+      "vectors.geojson.gz": "0292de3d7bd61c81c177dbaf3da53baa4f760e230c8b38ceebf2d57a6b78ba2b"
+    }
+  },
+  "src": "content/visualizations/models/terrain3d-tanganyika.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 563644,
+  "sha256": "888d4ab5fb327b959af61dd80b9f271c17bc82aaa7045edb3baf56e58ba4b1bc",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 17536,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,200 @@
+{
+  "id": "san-andreas",
+  "grid_shape": [
+    161,
+    129
+  ],
+  "bounds_lonlat": [
+    -125.0,
+    32.2,
+    -114.8,
+    41.0
+  ],
+  "source_zoom": 7,
+  "elevation_range_m": [
+    -4706.482421875,
+    4128.068857797418
+  ],
+  "vertical_gain": 5,
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/19/47.png",
+      "sha256": "83bc04e414dfd090ded6611f27a0dadb10cc911c45420b4912312f048e7a1517",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/19/48.png",
+      "sha256": "c89e2aa098e20d2bb145611a1843119998fcade37ef2981488e0d0d80d8a528c",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/19/49.png",
+      "sha256": "d0f91440bced9ad9cf82be2e3e8bb5c1bab0d266428b4b7df8e7b16232f553a6",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/19/50.png",
+      "sha256": "00c6620208b4cbd78507dec5662dea906fc6e39dc230bbe8fb955d441bd42d36",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/19/51.png",
+      "sha256": "fa1722b27256eda4829fd2128912fb42675967d16eb5f84a35c3a5a5d8fb786d",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/20/47.png",
+      "sha256": "6deaac2289e1e8cd29b6ad26b7de3c3b81a59eb10d6ec8321829b7e818cd25dd",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/20/48.png",
+      "sha256": "d73e80db1fdc2ec9aa2388cb5d377fa61eda095947900222bab0fd8ef620305b",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/20/49.png",
+      "sha256": "aab9554328aa4418e54c5f1b2a730d6f4c9925e5f585369ff9cff128693d116d",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/20/50.png",
+      "sha256": "6703bca77aa53ee2618a84eaadf2d2d85b4245bd46366c5ae88c84e698115171",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/20/51.png",
+      "sha256": "9a6ca4b62cc7fa5f70c8e747805c541e533041784b3784e1da28f25526b4de0d",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/21/47.png",
+      "sha256": "85958b14933c7241f86802c5ddc9285bb7b61b57e93607a2c1880c377af73b5d",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/21/48.png",
+      "sha256": "9721773241ea495222a15b73503679af3efe6301e6efd0db2c4f722128445895",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/21/49.png",
+      "sha256": "f3c02ad33d3f3328ce228541f1a97ee3eb09c33afeb9aa27d86179b0c5fdeb66",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/21/50.png",
+      "sha256": "e889281a208a8dd327e987f7f26caddec981a5016f99a53c48c026796bfce641",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/21/51.png",
+      "sha256": "6c59b07cdb1af6c93724e4b551d8d1efdfc2f4896f41b4e536ccb1c67d995c90",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/22/47.png",
+      "sha256": "1e2799bea4810a381d217941e5fc5584e1e47158ae15d5750906e2145c881b79",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/22/48.png",
+      "sha256": "efbd15d49eb9d51074038e38dfe4731f95c33c3552c7fa4dcace9590eaff0c0b",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/22/49.png",
+      "sha256": "45df794974d19feb39c04020a19cde3da8ed2056f741de3aec9915b2ce6fddc2",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/22/50.png",
+      "sha256": "19a7db6d211bc1667d9c713f138628d74b6b74a197cc67f6d426beed51514e95",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/22/51.png",
+      "sha256": "3fda0e8f265ca4e9311b9de57d4f64abb77e100bc13c447d630e4e59d71e2875",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/23/47.png",
+      "sha256": "158f5d58be87f94b9e9c099bef261b54434ef13389535804927b7f1a1db809ac",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/23/48.png",
+      "sha256": "c472db8790f71931374352d160559e5e20f733248aa3cc452937fcda22f3d416",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/23/49.png",
+      "sha256": "b01134edbe92c8bb62656d3fceea786a22963adf794303741c51142eace40cba",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/23/50.png",
+      "sha256": "a2a2c684d90fcce9f24a0289c49c9babdff0645649928b2249f121b6eadd6384",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/7/23/51.png",
+      "sha256": "fb4dbd4da00df0c251fe2a9b9ab5173be1b1c377527600cbbd1592fede312441",
+      "headers": {}
+    }
+  ],
+  "vector_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_land.geojson",
+      "sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=0",
+      "sha256": "68ab65c949787f37982eaa5bc18395e86cccacc479bfeaa45b8690dc081011ca"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=1000",
+      "sha256": "1a7369fa1a2bf396f0fc98f4577e7021f376af760e1295e1ed089e4498375ba4"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=2000",
+      "sha256": "2fab104ebe54340f31a278c21db5d791f84e6e27679ec1277f90a8dcae3f5b58"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=3000",
+      "sha256": "0150cefb6c578a33d424c153b788003ad3b9c5e977c3f986e33dd57a93c8152f"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=4000",
+      "sha256": "4302d4888659ca2dc1770e320c6290a5c9a934e8ba186e9b6d8deac4b6ddd943"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=5000",
+      "sha256": "55751e92d78f00a807c040ab805a6b0f8a290f8391fc31f68a4dad56ccd4e22e"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=6000",
+      "sha256": "b0250379763a5e629c67f115fa898dafcd85217dd5c4274efb11ca8b8976a3db"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=7000",
+      "sha256": "d2162c1b689be158d4a8f5768c9b1279e1b5291b72c61ab30f2409f14c383576"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/arcgis/rest/services/haz/Qfaults/MapServer/21/query?where=fault_name+LIKE+%27%25San+Andreas%25%27&outFields=fault_name%2Csection_name%2Cfault_id%2Csection_id%2Clinetype%2Cage&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&resultOffset=8000",
+      "sha256": "8fd083c2d8a1188b5b3058b2284626fdb072a8a6a314f1e18c78c99923e73e1d"
+    },
+    {
+      "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/ETOPO1_ice_surface/ImageServer/exportImage?bbox=-125.03984375%2C32.1725%2C-114.76015625%2C41.0275&bboxSR=4326&imageSR=4326&size=129%2C161&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&adjustAspectRatio=false&f=image",
+      "sha256": "3feac6bf3d2d5e47cb4cff222ab7a194587aa777f785d8e6349750465301120a",
+      "role": "NOAA ETOPO1 sampled ocean elevations, native 1 arc-minute grid; unrendered signed float TIFF"
+    }
+  ],
+  "files": {
+    "terrain.npz": "bd44217da03aae1641a5d407a51cba7ba01d0a2a2041c620b10d616384c3e982",
+    "vectors.geojson.gz": "50968a22f5c21dfe65b97a4498cb0085037a411efcd70ed1fc97f5c9b77d5bb7",
+    "land-mask.png": "a5ad7a005c3e6edf4c92344642a446e41b0446b65a7883436000f532c030534e"
+  },
+  "processing": "Bilinear pixel-center elevation sampling including negative depths; no summit/depth correction, smoothing or invented relief. Source vector fragments retained separately. Authored aperture.",
+  "attribution": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales."
+}

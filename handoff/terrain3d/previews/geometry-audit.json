@@ -1,0 +1,50 @@
+{
+  "method": "Render all terrain3d handoff models using the existing CPU depth rasterizer.\n\nThese orthographic rest/side images do not verify WebGL, production materials,\nconstant-pixel line widths, labels, perspective, explorer grounding, or mobile.\n",
+  "models": [
+    {
+      "id": "terrain3d-angel-falls",
+      "rest_extent": 1.2150696508150123,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-gibraltar",
+      "rest_extent": 1.267605633802817,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-grand-canyon",
+      "rest_extent": 1.002,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-great-barrier-reef",
+      "rest_extent": 0.6975744939925513,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-sahara",
+      "rest_extent": 1.1043534895833333,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-san-andreas",
+      "rest_extent": 0.9357811409574075,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-suez",
+      "rest_extent": 0.9947537206963348,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-tanganyika",
+      "rest_extent": 0.9576776589392165,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d-victoria-falls",
+      "rest_extent": 1.17096018735363,
+      "passes_extent_rule": true
+    }
+  ]
+}

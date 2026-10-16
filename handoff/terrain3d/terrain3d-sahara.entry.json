@@ -1,0 +1,55 @@
+{
+  "id": "terrain3d-sahara",
+  "source": "https://registry.opendata.aws/terrain-tiles/",
+  "basis_url": "https://modis.gsfc.nasa.gov/gallery/individual.php?db_date=2008-05-08",
+  "basis_label": "Geographic measurement and context",
+  "author": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales.",
+  "license": "US-government public-domain elevation and Natural Earth public-domain vectors; Mapzen attribution",
+  "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "license_files": [
+    "sources/terrain3d-sahara.md"
+  ],
+  "matches": {
+    "length": [
+      "Sahara"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dem_terrain",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 4800000,
+    "pitch": 62,
+    "yaw": 0,
+    "roll": 0,
+    "layout_width_factor": 1.3
+  },
+  "note": "Northern Africa from Atlantic coastal terrain across the Atlas, Ahaggar and Tibesti to the Nile/Red Sea region, at geographic horizontal scale on a curved Earth. Relief is exaggerated 12 times. The rectangular viewing aperture is an authored regional crop, not a mapped climatic boundary of the Sahara; no desert-boundary polygon is invented. The 4,800 km catalog east-west span is an approximate geographic reference. Colors indicate elevation and ocean depth, not vegetation, dunes, sand cover or mapped lithology. Horizontal coordinates are not normalized to the catalog size. Colors are illustrative. The opaque sides and flat underside are arbitrary display cuts, not real cliffs or geological strata. Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales. Ocean depths are sampled explicitly from NOAA ETOPO1 (1 arc-minute), using Natural Earth coastlines to select ocean samples; coastlines and land/ocean source transitions are generalized.",
+  "processing": {
+    "script": "scripts/build_terrain3d_models.py",
+    "units": "metres",
+    "vertical_gain": 12,
+    "mesh_grid_step": 2,
+    "source_note": "content/visualizations/models/sources/terrain3d-sahara.md",
+    "provenance": "content/visualizations/models/sources/terrain3d/sahara/provenance.json",
+    "source_files": {
+      "terrain.npz": "26b09922e586f78092bdc0967b85110cee95defd5560a5c2fabb1b9904b8876c",
+      "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5",
+      "land-mask.png": "b3516442c46ba02e187909d023c9ab3da79b30ccc56037f46b38fa59d400c40f"
+    }
+  },
+  "src": "content/visualizations/models/terrain3d-sahara.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 714360,
+  "sha256": "32c5627ad3b8b225e624af4a2add037f854c4a1f486f6bb13b05374daabf8fab",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 24432,
+  "animations": 0,
+  "skins": 0
+}

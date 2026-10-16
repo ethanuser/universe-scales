@@ -1,5 +1,25 @@
 # Agent Handoff Guide
 
+## 2026-10-16 terrain3d handoff
+
+- Nine geographic Length assets: Angel/Victoria Falls terrain, Gibraltar with
+  explicit NOAA ETOPO1 bathymetry, Tanganyika shoreline/rift terrain, Grand Canyon
+  from direct USGS 3DEP, Suez, 8,042 separate USGS San Andreas trace features,
+  northern-African Sahara terrain, and 3,811 Reef Authority reef polygons.
+- Offline builder: `scripts/build_terrain3d_models.py`; optional `--prepare`
+  acquires sources. Pinned grids, compressed original vectors, source hashes,
+  raster requests and reef license snapshot: `models/sources/terrain3d/`.
+  No geographic footprint is stretched to a route length. Rulers are independent;
+  vertical exaggeration is documented per entry. Waterfalls are terrain only.
+- `scripts/audit_terrain3d_models.mjs` loads the actual vendored GLTFLoader;
+  `scripts/preview_terrain3d_cpu.py` renders rest/quarter CPU previews. These
+  do not certify WebGL, the production size audit, explorer or mobile behavior.
+  Known browser/git sandbox limits were not retried; work remains uncommitted.
+- Sources, final entries, integration commands, checks and deferred targets:
+  `handoff/terrain3d/REPORT.md`. No dataset/exports/images/runtime JS/CSS changes.
+- All nine are below 1.8 MB/44k triangles and validate with zero errors/warnings.
+  Node: 228 passing; Python: 122 run with one skip. Asset/version checks pass.
+
 Start here if you are an AI agent (Codex, Claude, ...) or a new contributor picking
 up this repo. It is the shortest path to being productive; the longer READMEs linked
 below hold the details. Keep this file current when you change workflows.

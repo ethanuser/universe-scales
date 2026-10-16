@@ -1,0 +1,176 @@
+{
+  "method": "Vendored production GLTFLoader, with placeholder image decoding; native geometry + orthographic rest bounds. No WebGL, texture appearance, perspective, actual explorer or mobile certification.",
+  "models": [
+    {
+      "id": "terrain3d-angel-falls",
+      "registered": true,
+      "nativeExtent": [
+        1100,
+        838.8630981445312,
+        1100
+      ],
+      "normalizedRestExtent": [
+        1.1235955056179778,
+        1.2150696508150125,
+        1.0859679055122038
+      ],
+      "displayedExtentPerValue": 1.2150696508150125,
+      "triangles": 30240,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-gibraltar",
+      "registered": true,
+      "nativeExtent": [
+        18000,
+        1322.388427734375,
+        18000
+      ],
+      "normalizedRestExtent": [
+        1.267605633802817,
+        1.1712776175568675,
+        0.6579956868116649
+      ],
+      "displayedExtentPerValue": 1.267605633802817,
+      "triangles": 25658,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-grand-canyon",
+      "registered": true,
+      "nativeExtent": [
+        446892,
+        29983.63666110988,
+        175139.63298053585
+      ],
+      "normalizedRestExtent": [
+        1.002,
+        0.3619904228714432,
+        0.2133243697559346
+      ],
+      "displayedExtentPerValue": 1.002,
+      "triangles": 23756,
+      "points": 0,
+      "lines": 996,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-great-barrier-reef",
+      "registered": true,
+      "nativeExtent": [
+        1286146.3125,
+        135101.95922851562,
+        1572474.5625
+      ],
+      "normalizedRestExtent": [
+        0.5377418218900771,
+        0.6975744939925514,
+        0.4660308683398823
+      ],
+      "displayedExtentPerValue": 0.6975744939925514,
+      "triangles": 25920,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-sahara",
+      "registered": true,
+      "nativeExtent": [
+        5300896.75,
+        711811.06640625,
+        2312241.75
+      ],
+      "normalizedRestExtent": [
+        1.1043534895833333,
+        0.4477149782215737,
+        0.33821374165734813
+      ],
+      "displayedExtentPerValue": 1.1043534895833333,
+      "triangles": 24432,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-san-andreas",
+      "registered": true,
+      "nativeExtent": [
+        1212420,
+        120391.22943831951,
+        1038791.3585953333
+      ],
+      "normalizedRestExtent": [
+        0.9357811409574074,
+        0.9291931783314095,
+        0.6583263188578948
+      ],
+      "displayedExtentPerValue": 0.9357811409574074,
+      "triangles": 43672,
+      "points": 0,
+      "lines": 16266,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-suez",
+      "registered": true,
+      "nativeExtent": [
+        193686.6,
+        10358.333869002721,
+        197031.12409136954
+      ],
+      "normalizedRestExtent": [
+        0.9947537206963347,
+        0.9865829055866924,
+        0.49845532324284236
+      ],
+      "displayedExtentPerValue": 0.9947537206963347,
+      "triangles": 18284,
+      "points": 0,
+      "lines": 356,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-tanganyika",
+      "registered": true,
+      "nativeExtent": [
+        322272.875,
+        23675.7548828125,
+        662336.71875
+      ],
+      "normalizedRestExtent": [
+        0.47302699394980274,
+        0.9576776589392165,
+        0.4709944889275182
+      ],
+      "displayedExtentPerValue": 0.9576776589392165,
+      "triangles": 17536,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d-victoria-falls",
+      "registered": true,
+      "nativeExtent": [
+        2000,
+        186.3199462890625,
+        1800
+      ],
+      "normalizedRestExtent": [
+        1.17096018735363,
+        0.9508915730311568,
+        0.6469935021893662
+      ],
+      "displayedExtentPerValue": 1.17096018735363,
+      "triangles": 38496,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    }
+  ]
+}

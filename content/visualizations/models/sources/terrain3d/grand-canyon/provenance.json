@@ -1,0 +1,37 @@
+{
+  "id": "grand-canyon",
+  "grid_shape": [
+    161,
+    257
+  ],
+  "bounds_lonlat": [
+    -114.2,
+    35.55,
+    -111.45,
+    36.95
+  ],
+  "source_zoom": 10,
+  "elevation_range_m": [
+    329.77032470703125,
+    2782.80615234375
+  ],
+  "vertical_gain": 5,
+  "tiles": [],
+  "vector_sources": [
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-114.20537109375%2C35.545625%2C-111.44462890625%2C36.954375&bboxSR=4326&imageSR=4326&size=257%2C161&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&adjustAspectRatio=false&f=image",
+      "sha256": "1dc310eb9fc6cec7c8b566ae1b34a6d6bb48c458561034e34dd1bb069c422340",
+      "role": "USGS 3DEP land elevation; unrendered signed float TIFF"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_rivers_lake_centerlines.geojson",
+      "sha256": "bb854a900ecbd3b408df46d5e16e3e0f974ba55993f9d8b5c26e855273c0905a"
+    }
+  ],
+  "files": {
+    "terrain.npz": "5e8c75c7e41749b72f0d365cb043b34420b0ed315761f5e2589ec3e615dd305f",
+    "vectors.geojson.gz": "837648c7c2adb431fc9b032c41416854cbee947804c8ba76621d322c46a4d51e"
+  },
+  "processing": "Bilinear pixel-center elevation sampling including negative depths; no summit/depth correction, smoothing or invented relief. Source vector fragments retained separately. Authored aperture.",
+  "attribution": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales."
+}

@@ -1,0 +1,116 @@
+{
+  "id": "great-barrier-reef",
+  "grid_shape": [
+    257,
+    193
+  ],
+  "bounds_lonlat": [
+    142.0,
+    -24.6,
+    153.8,
+    -10.5
+  ],
+  "source_zoom": 6,
+  "elevation_range_m": [
+    -5066.47021484375,
+    1251.9905134118746
+  ],
+  "vertical_gain": 8,
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/57/33.png",
+      "sha256": "57fbd5208096b21e1fa1ad1e4de7a791d9c32446dd0ce366eacd37e0bdc6f7e1",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/57/34.png",
+      "sha256": "65c3f1702c30c3379f4e72fbf8312d202c070848c247b0edc37aa904c07e79a5",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/57/35.png",
+      "sha256": "7b095f51659f33876852e5e92cf3eb8ff7793fb5ff88697ecc82d89865ec0c0e",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/57/36.png",
+      "sha256": "d8b213ec9850790acae1a91cb28b5b08b132d45c8c19bd9998d3aa04fddf79ee",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/58/33.png",
+      "sha256": "484ab1790edddccaf1baad08f584f770ac40f0fffcba608258dbcf31c4eb43a3",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/58/34.png",
+      "sha256": "5ae993912171d1a76340a6c7db3ddc60b3ae1c4605a272de3d6821862c3595da",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/58/35.png",
+      "sha256": "851315d7543693422436d7ba20633044345abddc450b227d6f729a9836e3271a",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/58/36.png",
+      "sha256": "420f96ef95a2a1caad3e7e1dc79fc46818334fa256067d0994328a4171445ce9",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/59/33.png",
+      "sha256": "12fe153cf0743afa790d064f454ae3f9708eade6a0f318a72c7ca86144c48630",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/59/34.png",
+      "sha256": "a9a7ef0c3aeb41a99d231dba4d2bd07754fbcb2c30d5db528572341a75e11204",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/59/35.png",
+      "sha256": "fda79a5007924a9e542c9967ed493e5aa542f2c0f2592947ab3511880296193b",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/6/59/36.png",
+      "sha256": "d219c4442da9b995d106cfcb677faf03e207e6c9ef6626370487713cdcfdbc43",
+      "headers": {}
+    }
+  ],
+  "vector_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_land.geojson",
+      "sha256": "1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416"
+    },
+    {
+      "url": "https://services-ap1.arcgis.com/8gXWSCxaJlFIfiTr/arcgis/rest/services/Great_Barrier_Reef_Features_20/FeatureServer/64/query?where=FEAT_NAME+%3D+%27Reef%27&geometry=142.0%2C-24.6%2C153.8%2C-10.5&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFEAT_NAME%2CGBR_NAME%2CLABEL_ID&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&geometryPrecision=6&resultOffset=0",
+      "sha256": "fde11b414d988cbbfe749f2710b926ecf46b9ad9fa414cc853291dcc9a3f41c4"
+    },
+    {
+      "url": "https://services-ap1.arcgis.com/8gXWSCxaJlFIfiTr/arcgis/rest/services/Great_Barrier_Reef_Features_20/FeatureServer/64/query?where=FEAT_NAME+%3D+%27Reef%27&geometry=142.0%2C-24.6%2C153.8%2C-10.5&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFEAT_NAME%2CGBR_NAME%2CLABEL_ID&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&geometryPrecision=6&resultOffset=1000",
+      "sha256": "31da3aa91802e71cc68201ea2d1316783f137fe2a6e6b4d7419c2dbb78a97566"
+    },
+    {
+      "url": "https://services-ap1.arcgis.com/8gXWSCxaJlFIfiTr/arcgis/rest/services/Great_Barrier_Reef_Features_20/FeatureServer/64/query?where=FEAT_NAME+%3D+%27Reef%27&geometry=142.0%2C-24.6%2C153.8%2C-10.5&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFEAT_NAME%2CGBR_NAME%2CLABEL_ID&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&geometryPrecision=6&resultOffset=2000",
+      "sha256": "487f57dafe3d15ff3b6ffae9d1eccb3b8f4f5976adaac84a9b9c723b415aea01"
+    },
+    {
+      "url": "https://services-ap1.arcgis.com/8gXWSCxaJlFIfiTr/arcgis/rest/services/Great_Barrier_Reef_Features_20/FeatureServer/64/query?where=FEAT_NAME+%3D+%27Reef%27&geometry=142.0%2C-24.6%2C153.8%2C-10.5&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CFEAT_NAME%2CGBR_NAME%2CLABEL_ID&outSR=4326&f=geojson&returnGeometry=true&orderByFields=OBJECTID&resultRecordCount=1000&geometryPrecision=6&resultOffset=3000",
+      "sha256": "502a098d1dd98740a6782ca66e38d0ba538988346a92f76ef088c5afe8a0d323"
+    },
+    {
+      "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/ETOPO1_ice_surface/ImageServer/exportImage?bbox=141.96927083333333%2C-24.627539062500002%2C153.83072916666669%2C-10.4724609375&bboxSR=4326&imageSR=4326&size=193%2C257&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&adjustAspectRatio=false&f=image",
+      "sha256": "74726feb7a0d642064928b43e06ae2b1f9c2891cd5b08a2f6f026b80c83a10cf",
+      "role": "NOAA ETOPO1 sampled ocean elevations, native 1 arc-minute grid; unrendered signed float TIFF"
+    }
+  ],
+  "files": {
+    "terrain.npz": "d404e605685f19c89c55e10fe642429403cfe11c1075ccb410b712414c95f51e",
+    "vectors.geojson.gz": "639c43fc53a3c6c22174da6fdffb5506eb7cc2ad24ed72ad76b68afc7bd23409",
+    "land-mask.png": "deaba50b186a1fc7edc45b9850d22e0754562ac2d31f94c05d8185c0eae872af",
+    "reef-license.json": "30eddf54a4b1d7bfa990d0fe7c7af67bcc5860cac8b85a66f8dcd1716f83da35"
+  },
+  "processing": "Bilinear pixel-center elevation sampling including negative depths; no summit/depth correction, smoothing or invented relief. Source vector fragments retained separately. Authored aperture.",
+  "attribution": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales."
+}

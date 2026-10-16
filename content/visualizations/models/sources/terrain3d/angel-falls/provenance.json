@@ -1,0 +1,48 @@
+{
+  "id": "angel-falls",
+  "grid_shape": [
+    121,
+    121
+  ],
+  "bounds_lonlat": [
+    -62.54052765364232,
+    5.962559265937343,
+    -62.53059234635767,
+    5.9724407340626575
+  ],
+  "source_zoom": 14,
+  "elevation_range_m": [
+    709.1429141040088,
+    1536.2580127007654
+  ],
+  "vertical_gain": 1,
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5345/7919.png",
+      "sha256": "4eb67242da4b7d3e21d12d0f212d5762e567905f8770e252d584379731c579fd",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5345/7920.png",
+      "sha256": "f1e12ce66b419091f5833c0f365d21d84f5b594ee4044ae2696daee2e89101cb",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5346/7919.png",
+      "sha256": "93a60134cb0bed78c109123312c92817a5b15205ef28581b316fb1d93530915d",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5346/7920.png",
+      "sha256": "da5c9cfc580fcbd96d227dc8edc5e65dbd063b56bb3d6dfb9e114882b80e649d",
+      "headers": {}
+    }
+  ],
+  "vector_sources": [],
+  "files": {
+    "terrain.npz": "38ef7e8ede1352b58498fb8aee445166995b80c1c0182c894265f96161f67a97",
+    "vectors.geojson.gz": "1dc7a6d21538406b2eee4be25ac96404a853f2147f7fc2ccca428c4f0fd1cea5"
+  },
+  "processing": "Bilinear pixel-center elevation sampling including negative depths; no summit/depth correction, smoothing or invented relief. Source vector fragments retained separately. Authored aperture.",
+  "attribution": "Mapzen / Tilezen; SRTM, GMTED2010 and United States 3DEP terrain courtesy of the U.S. Geological Survey; ETOPO1 ocean bathymetry courtesy of NOAA; Natural Earth public-domain map data; adaptation by Universe Scales."
+}
