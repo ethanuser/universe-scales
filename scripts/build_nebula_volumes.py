@@ -148,6 +148,60 @@ def shell_depth(radius, roughness=0.3, thickness=0.06):
     return depth
 
 
+def image_ellipse(image, center_px, ly_per_px, percentile=60, filled=False):
+    """Brightness-weighted second moments of the brighter pixels around center_px:
+    (angle radians, semi-axis a, semi-axis b) in ly, a >= b. A thin ring has variance
+    a^2/2 along an axis; a filled ellipse has a^2/4."""
+    lum = image.max(axis=2)
+    ys, xs = np.nonzero(lum > np.percentile(lum, percentile))
+    w = lum[ys, xs]
+    dx, dy = (xs - center_px[0]) * ly_per_px, (center_px[1] - ys) * ly_per_px
+    cov = np.cov(np.stack([dx, dy]), aweights=w)
+    values, vectors = np.linalg.eigh(cov)
+    a, b = np.sqrt((4 if filled else 2) * values[::-1])
+    return math.atan2(vectors[1, 1], vectors[0, 1]), a, b
+
+
+def crab_depth(angle, a, b):
+    """Prolate shell (long axis in the sky plane, line-of-sight semi-axis b) for the
+    filaments; the smooth synchrotron glow fills the interior."""
+    def depth(x, y, kind, rng, fields):
+        c, s = math.cos(angle), math.sin(angle)
+        u, v = (x * c + y * s) / a, (-x * s + y * c) / b
+        # Filaments beyond the fitted ellipse sit on a slightly larger one, not at z = 0.
+        q = np.hypot(u, v) / np.maximum(1, np.hypot(u, v) * 1.12)
+        cap = b * np.sqrt(np.clip(1 - q * q, 0, None))
+        if kind == "stars":
+            return rng.uniform(-1, 1, len(x)) * a
+        if kind == "glow":
+            return cap * rng.uniform(-0.85, 0.85, len(x))
+        side = np.sign(np.clip(0.8 * fields["side"] + rng.normal(0, 0.45, len(x)), -1, 1) + 1e-9)
+        on_shell = side * cap * rng.uniform(0.75, 1.05, len(x))
+        # Outskirts seen beyond the fitted ellipse spread through the depth, not one sheet.
+        z = np.where(np.hypot(u, v) > 1, cap * rng.uniform(-1, 1, len(x)), on_shell)
+        return z + rng.normal(0, 0.04 * b, len(x))
+    return depth
+
+
+def ring_depth(angle, a, b):
+    """The Ring as a barrel seen nearly end-on (O'Dell et al. 2013): its waist makes the
+    bright ring, its end caps the faint center, and a larger faint shell the halo."""
+    length = 1.6 * a
+    def depth(x, y, kind, rng, fields):
+        c, s = math.cos(angle), math.sin(angle)
+        r = np.hypot((x * c + y * s) / a, (-x * s + y * c) / b)
+        if kind == "stars":
+            return rng.uniform(-1, 1, len(x)) * 2 * a
+        side = np.where(fields["side"] + rng.normal(0, 0.5, len(x)) > 0, 1, -1)
+        caps = side * length * np.sqrt(np.clip(1 - r * r, 0, None)) * rng.uniform(0.85, 1.0, len(x))
+        waist = rng.normal(0, 0.22 * length, len(x)) * np.exp(-((r - 1) / 0.25) ** 2)
+        rho = np.hypot(x, y)
+        halo = rng.uniform(-1, 1, len(x)) * np.sqrt(np.maximum(np.clip((1.45 * a) ** 2 - rho ** 2, 0, None), (0.5 * rho) ** 2))
+        inner, outer = np.clip((0.85 - r) / 0.2, 0, 1), np.clip((r - 1.15) / 0.2, 0, 1)
+        return inner * caps + outer * halo + (1 - inner) * (1 - outer) * waist
+    return depth
+
+
 # --------------------------------------------------------------------- build
 
 def build_volume(canvas, ly_per_px, center_px, depth, output, labels, reference_ly, counts, seed, feather_start=0.6):
@@ -200,7 +254,7 @@ def build_volume(canvas, ly_per_px, center_px, depth, output, labels, reference_
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("nebula", choices=["orion", "carina", "tarantula"])
+    parser.add_argument("nebula", choices=["orion", "carina", "tarantula", "crab", "ring"])
     parser.add_argument("output")
     parser.add_argument("--image")
     parser.add_argument("--hubble")
@@ -228,6 +282,29 @@ def main():
         result = build_volume(canvas, ly_px, (cx + 0.5, cy + 0.5), shell_depth(80), args.output,
                               [], 300.0, {"detail": 70000, "stars": 3000}, 0xCA21, feather_start=0.62)
         result["center_px"] = [int(cx), int(cy)]
+    elif args.nebula == "crab":
+        # ESA/Hubble heic0515a: 6.41 arcmin square, north up, at about 6,500 ly.
+        canvas = load_rgb(args.image, width=1800)
+        ly_px = ly_per_arcsec(6500) * 6.41 * 60 / canvas.shape[1]
+        center = (canvas.shape[1] / 2, canvas.shape[0] / 2)
+        angle, a, b = image_ellipse(canvas, center, ly_px, 55, filled=True)
+        result = build_volume(canvas, ly_px, center, crab_depth(angle, a, b), args.output, [], 11.0,
+                              {"detail": 70000, "stars": 400}, 0xC2AB, feather_start=0.8)
+        result["shell_axes_ly"] = [round(a, 2), round(b, 2), round(math.degrees(angle), 1)]
+    elif args.nebula == "ring":
+        # ESA/Webb weic2320b (NIRCam): 2.14 x 2.17 arcmin at about 2,567 ly (Gaia, 787 pc).
+        # Keep the central 78% (about 1.25 ly) so the faint halo does not swamp the 1 ly ring.
+        Image.MAX_IMAGE_PIXELS = None
+        width, height = Image.open(args.image).size
+        keep = 0.78
+        box = (width * (1 - keep) / 2, height * (1 - keep) / 2, width * (1 + keep) / 2, height * (1 + keep) / 2)
+        canvas = load_rgb(args.image, width=1600, crop=box)
+        ly_px = ly_per_arcsec(2567) * 2.14 * 60 * keep / canvas.shape[1]
+        center = (canvas.shape[1] / 2, canvas.shape[0] / 2)
+        angle, a, b = image_ellipse(canvas, center, ly_px, 75)
+        result = build_volume(canvas, ly_px, center, ring_depth(angle, a, b), args.output, [], 1.0,
+                              {"detail": 70000, "stars": 300}, 0x2157, feather_start=0.7)
+        result["ring_axes_ly"] = [round(a, 3), round(b, 3), round(math.degrees(angle), 1)]
     else:
         # ESO eso0650a: 62.40 x 62.31 arcmin at 170,000 ly. Crop 1.15x the 951-ly
         # aperture around R136, as in the earlier model.

@@ -5309,6 +5309,112 @@
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "crab-nebula-volume",
+      "source": "https://esahubble.org/images/heic0515a/",
+      "download_url": "https://cdn.esahubble.org/archives/images/large/heic0515a.jpg",
+      "link_label": "Hubble mosaic",
+      "author": "Image: NASA, ESA and Allison Loll/Jeff Hester (Arizona State University), acknowledgement Davide De Martin (ESA/Hubble); 3D assembly: Universe Scales",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/crab-ring-models.md"
+      ],
+      "matches": {
+        "length": [
+          "Crab Nebula"
+        ]
+      },
+      "geometry": "mesh",
+      "basis_url": "https://doi.org/10.1093/mnras/stab2848",
+      "basis_label": "3D structure: Martin, Milisavljevic & Drout 2021",
+      "presentation": {
+        "reference_size": 11.0,
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.15
+      },
+      "note": "Hubble's mosaic of the Crab Nebula, the remains of a star seen to explode in 1054, given depth: the glowing filaments lie on a roughly ellipsoidal shell, as 3D spectroscopic maps show (Martin, Milisavljevic & Drout 2021), and the bluish glow from electrons spiraling in the pulsar's magnetic field fills the inside. The shell is fitted to the photo's brightness, with its long axis taken to lie across the sky; which filaments are on the near or far side is illustrative, not measured.",
+      "processing": {
+        "script": "scripts/build_nebula_volumes.py crab",
+        "source_image_sha256": "43b4ea82bbb50686697634e7cc212e06b0f501d26a9ce2ec5619504840ea4345",
+        "source_field_arcmin": [
+          6.41,
+          6.41
+        ],
+        "adopted_distance_ly": 6500
+      },
+      "src": "content/visualizations/models/crab-nebula-volume.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1257300,
+      "sha256": "c51901e075e4793ae2a140bc497331f99683e69017aaffb204aeaa47ecd82529",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "ring-nebula-volume",
+      "source": "https://esawebb.org/images/weic2320b/",
+      "download_url": "https://cdn.esawebb.org/archives/images/large/weic2320b.jpg",
+      "link_label": "Webb image",
+      "author": "Image: ESA/Webb, NASA, CSA, M. Barlow, N. Cox, R. Wesson; 3D assembly: Universe Scales",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/crab-ring-models.md"
+      ],
+      "matches": {
+        "length": [
+          "Ring Nebula"
+        ]
+      },
+      "geometry": "mesh",
+      "basis_url": "https://doi.org/10.1088/0004-6256/145/4/92",
+      "basis_label": "3D structure: O'Dell et al. 2013",
+      "presentation": {
+        "reference_size": 1.0,
+        "layout_width_factor": 1.6,
+        "focus_scale_factor": 1.2
+      },
+      "note": "Webb's near-infrared view of the Ring Nebula, gas thrown off by a dying Sun-like star, given depth: following O'Dell and colleagues (2013), the ring is the waist of a barrel-shaped shell seen nearly end-on, its faint center is the barrel's end caps, and the outer halo lies on a larger shell. The listed 1 light-year spans the main ring; the field shown is about 1.6 light-years. Colors and sky positions are observed; the depth placement is illustrative.",
+      "processing": {
+        "script": "scripts/build_nebula_volumes.py ring",
+        "source_image_sha256": "70623839180e729d8843cc17518401d657c7b3878b7872e9bb5761d5ecbdec40",
+        "source_field_arcmin": [
+          2.14,
+          2.17
+        ],
+        "adopted_distance_ly": 2567
+      },
+      "src": "content/visualizations/models/ring-nebula-volume.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1285892,
+      "sha256": "93fdb96310d45f917045c2da9a5b2ef18180c230e3ddf208454f46d65f12a73f",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [
