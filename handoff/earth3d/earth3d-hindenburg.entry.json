@@ -25,7 +25,7 @@
     "yaw": -8,
     "pitch": 8
   },
-  "note": "Authored Hindenburg airship by hank2, uniformly calibrated to 245 m overall length. Envelope, gondolas, fins and historically contextual tail markings are retained. The neutral envelope material is lightened for legibility; no independent axis scaling. Internal framework and gas bags are the artist’s illustration, not a structural survey.",
+  "note": "Authored Hindenburg airship by hank2, uniformly calibrated to 245 m overall length. Envelope, gondolas, fins and historically contextual tail markings are retained. The neutral envelope material is lightened for legibility; no independent axis scaling. Internal framework and gas bags are the artist’s illustration, not a structural survey. The swastikas on the tail fins of the original airship (and of the source model) are replaced here by plus signs; the red bands and white disks are kept.",
   "basis_url": "https://www.airships.net/hindenburg/disaster/commerce-department-report/",
   "basis_label": "U.S. Commerce Department accident report: original dimensions",
   "processing": {
@@ -45,8 +45,8 @@
   "src": "content/visualizations/models/earth3d-hindenburg.glb",
   "format": "glb",
   "gltf_version": "2.0",
-  "bytes": 2531076,
-  "sha256": "737f8e389684d53853be89e24cc25f808a69427fb8b9c1344490f9c7469b8239",
+  "bytes": 2532596,
+  "sha256": "72908dc0b19bb94b7eac6f7d1d75e31a3be9158ea6033e7c673db9e1d3785a9a",
   "extensions_used": [
     "KHR_mesh_quantization"
   ],
@@ -55,8 +55,8 @@
   ],
   "decompression_required": [],
   "external_resources": [],
-  "mesh_count": 6,
-  "triangle_count": 69340,
+  "mesh_count": 7,
+  "triangle_count": 68948,
   "animations": 0,
   "skins": 0,
   "sketchfab_author": "hank2"
