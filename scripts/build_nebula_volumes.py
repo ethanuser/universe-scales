@@ -202,6 +202,21 @@ def ring_depth(angle, a, b):
     return depth
 
 
+def inclined_disk_depth(angle, inclination_deg, thickness, bulge_radius):
+    """A thin disk tilted by its inclination about the photo's major axis: a point at
+    projected minor-axis offset b lies at depth b tan(i). A round bulge thickens the center.
+    Which side is near is not encoded."""
+    t = math.tan(math.radians(inclination_deg))
+    def depth(x, y, kind, rng, fields):
+        c, s = math.cos(angle), math.sin(angle)
+        major, minor = x * c + y * s, -x * s + y * c
+        r = np.hypot(major, minor / math.cos(math.radians(inclination_deg)))
+        bulge = np.exp(-(r / bulge_radius) ** 2)
+        spread = {"glow": 1.6, "detail": 1.0, "stars": 1.0}[kind]
+        return minor * t + rng.laplace(0, thickness * spread, len(x)) + rng.normal(0, 0.8 * bulge_radius, len(x)) * bulge
+    return depth
+
+
 # --------------------------------------------------------------------- build
 
 def build_volume(canvas, ly_per_px, center_px, depth, output, labels, reference_ly, counts, seed, feather_start=0.6):
@@ -244,8 +259,10 @@ def build_volume(canvas, ly_per_px, center_px, depth, output, labels, reference_
     peak = stars[:, 5] * star_feather[star_feather > 0.05]
     bright = np.arange(len(x)) < 30
     positions = np.column_stack([x, y, z])
-    add_cloud(glb, "bright-stars", positions[bright], color[bright], np.clip(peak[bright] * 1.5, 0.35, 1), 1 / 140, 6)
-    add_cloud(glb, "stars", positions[~bright], color[~bright], np.clip(peak[~bright] * 2, 0.12, 1), 1 / 420, 2.4)
+    if bright.any():
+        add_cloud(glb, "bright-stars", positions[bright], color[bright], np.clip(peak[bright] * 1.5, 0.35, 1), 1 / 140, 6)
+    if (~bright).any():
+        add_cloud(glb, "stars", positions[~bright], color[~bright], np.clip(peak[~bright] * 2, 0.12, 1), 1 / 420, 2.4)
     for text, position in labels:
         glb.node(f"label-{text}", translation=position, extras={"label": text})
     size = glb.write(output)
@@ -254,7 +271,7 @@ def build_volume(canvas, ly_per_px, center_px, depth, output, labels, reference_
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("nebula", choices=["orion", "carina", "tarantula", "crab", "ring"])
+    parser.add_argument("nebula", choices=["orion", "carina", "tarantula", "crab", "ring", "andromeda"])
     parser.add_argument("output")
     parser.add_argument("--image")
     parser.add_argument("--hubble")
@@ -282,6 +299,19 @@ def main():
         result = build_volume(canvas, ly_px, (cx + 0.5, cy + 0.5), shell_depth(80), args.output,
                               [], 300.0, {"detail": 70000, "stars": 3000}, 0xCA21, feather_start=0.62)
         result["center_px"] = [int(cx), int(cy)]
+    elif args.nebula == "andromeda":
+        # NOIRLab noao-m31fsqblock (KPNO/Adam Block): 162.24 x 58.90 arcmin at 783 kpc (McConnachie 2012).
+        canvas = load_rgb(args.image, width=2400)
+        ly_px = 783 * ARCSEC * 162.24 * 60 / canvas.shape[1]  # kpc per pixel
+        lum = canvas.max(axis=2)
+        from scipy import ndimage
+        cy, cx = np.unravel_index(np.argmax(ndimage.gaussian_filter(lum, 8)), lum.shape)
+        center = (cx + 0.5, cy + 0.5)
+        angle, a, b = image_ellipse(canvas, center, ly_px, 70, filled=True)
+        result = build_volume(canvas, ly_px, center, inclined_disk_depth(angle, 77.0, 0.35, 2.2), args.output,
+                              [], 46.6, {"detail": 80000, "stars": 0}, 0x3131, feather_start=0.85)
+        result.update({"major_axis_deg": round(math.degrees(angle), 1), "fitted_axes_kpc": [round(a, 1), round(b, 1)],
+                       "axis_ratio": round(b / a, 3), "center_px": [int(cx), int(cy)]})
     elif args.nebula == "crab":
         # ESA/Hubble heic0515a: 6.41 arcmin square, north up, at about 6,500 ly.
         canvas = load_rgb(args.image, width=1800)

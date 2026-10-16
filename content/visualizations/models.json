@@ -5441,6 +5441,60 @@
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "andromeda-galaxy-disk",
+      "source": "https://noirlab.edu/public/images/noao-m31fsqblock/",
+      "download_url": "https://storage.noirlab.edu/media/archives/images/large/noao-m31fsqblock.jpg",
+      "link_label": "NOIRLab image",
+      "author": "Image: KPNO/NOIRLab/NSF/AURA/Adam Block; 3D assembly: Universe Scales",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/andromeda-disk.md"
+      ],
+      "matches": {
+        "length": [
+          "Andromeda Galaxy Diameter"
+        ]
+      },
+      "geometry": "mesh",
+      "basis_url": "https://doi.org/10.1088/0004-6256/144/1/4",
+      "basis_label": "Distance: McConnachie (2012); inclination 77 degrees",
+      "presentation": {
+        "reference_size": 46.6,
+        "layout_width_factor": 0.85,
+        "focus_scale_factor": 1.2
+      },
+      "note": "A ground-based photograph of the Andromeda Galaxy (Adam Block, Kitt Peak) turned into a glowing disk tilted 77 degrees, as Andromeda is to our line of sight: at rest you see it as we do, and turning it shows the thin disk and its round central bulge. The photo's 2.7-degree field covers about 37 kiloparsecs (120,000 light-years) of the listed 152,000-light-year disk at 783 kiloparsecs. Foreground Milky Way stars are removed. Seen face-on, the spiral is the photo stretched back out of its tilt, so it is blurred along that direction; which edge is nearer is not encoded.",
+      "processing": {
+        "script": "scripts/build_nebula_volumes.py andromeda",
+        "source_image_sha256": "cb171b2ba5be1088f3a0297ba4b0d2a44fa57cd3b2f30d35bd73624efc799644",
+        "source_field_arcmin": [
+          162.24,
+          58.9
+        ],
+        "adopted_distance_kpc": 783,
+        "inclination_deg": 77
+      },
+      "src": "content/visualizations/models/andromeda-galaxy-disk.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 619232,
+      "sha256": "30a913cf1c30aff8bf619f0892525b2b6b1704dcdf02f41acee6eca3f1477f8c",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [
