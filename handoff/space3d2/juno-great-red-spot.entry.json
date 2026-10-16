@@ -1,0 +1,61 @@
+{
+  "id": "juno-great-red-spot",
+  "matches": {
+    "length": [
+      "Great Red Spot"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "image-textured-cloud-patch",
+  "note": "An enhanced-color Juno cloud image (12 February 2019) draped over an idealized shallow cloud-top patch. The storm is shown at the catalog\u2019s representative April 2017 width of 16,350 km. This is an illustrative size comparison using later imagery, not a measured 2019 map or a claim that the storm\u2019s size stayed constant. The surrounding collar is context. Curvature is schematic; neither cloud heights nor storm depth are reconstructed. Credit NASA/JPL-Caltech/SwRI/MSSS; processing Kevin M. Gill, CC BY; cropped and draped by Universe Scales.",
+  "source": "https://science.nasa.gov/photojournal/the-great-red-spot/",
+  "author": "NASA/JPL-Caltech/SwRI/MSSS; image processing Kevin M. Gill; adapted by Universe Scales",
+  "reference": "content/visualizations/models/sources/juno-great-red-spot.md",
+  "license": "CC BY (image processing); NASA public-domain image data",
+  "license_url": "https://science.nasa.gov/photojournal/the-great-red-spot/",
+  "license_files": [
+    "licenses/space3d2-rights.md",
+    "licenses/nasa-media-guidelines.html"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1,
+    "pitch": -8,
+    "yaw": -10,
+    "layout_width_factor": 1.25
+  },
+  "processing": {
+    "pinned_input": "content/visualizations/models/sources/space3d2/grs2019.jpg",
+    "pinned_input_sha256": "68c42665d4edc8da87d9baa481b0f2192a3d5f9cadc20db5be3023682fe0f8dc",
+    "image_crop_pixels": [
+      1740,
+      80,
+      2760,
+      1000
+    ],
+    "operations": [
+      "Crop PIA23606 around the full Great Red Spot and collar",
+      "Use the catalog 2017 size as a representative display scale, explicitly not 2019 astrometry",
+      "Drape over an idealized shallow spherical patch; do not invent storm relief"
+    ]
+  },
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia23/pia23606/PIA23606.jpg",
+  "source_sha256": "68c42665d4edc8da87d9baa481b0f2192a3d5f9cadc20db5be3023682fe0f8dc",
+  "source_bytes": 520993,
+  "src": "content/visualizations/models/juno-great-red-spot.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 544068,
+  "sha256": "d33bbedc45d4f08eea108a3ac0fb22e6b33458ff63f364d98f8b9931c09b17cc",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 8192,
+  "animations": 0,
+  "skins": 0
+}

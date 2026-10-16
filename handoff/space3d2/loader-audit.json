@@ -1,0 +1,290 @@
+{
+  "method": "Vendored production GLTFLoader, with placeholder image decoding; native geometry + orthographic rest bounds. No WebGL, texture appearance, perspective, actual explorer or mobile certification.",
+  "models": [
+    {
+      "id": "cassini-hyperion-shape",
+      "registered": false,
+      "nativeExtent": [
+        252.4776840209961,
+        341.26365661621094,
+        267.11279296875
+      ],
+      "normalizedRestExtent": [
+        0.976864915436398,
+        1.2069816813569016,
+        1.0659396756980697
+      ],
+      "displayedExtentPerValue": 1.2069816813569016,
+      "triangles": 29268,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "cassini-saturn-hexagon",
+      "registered": true,
+      "nativeExtent": [
+        1.2799999713897705,
+        1.2799999713897705,
+        0.0865059569478035
+      ],
+      "normalizedRestExtent": [
+        1.2799999713897705,
+        1.2799999713897705,
+        0.0865059569478035
+      ],
+      "displayedExtentPerValue": 1.2799999713897705,
+      "triangles": 12160,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "dart-dimorphos-preimpact",
+      "registered": true,
+      "nativeExtent": [
+        0.17767000198364258,
+        0.11451999843120575,
+        0.1689700037240982
+      ],
+      "normalizedRestExtent": [
+        1.2014314464264704,
+        0.7980966345281006,
+        1.1380966195378797
+      ],
+      "displayedExtentPerValue": 1.2014314464264704,
+      "triangles": 49152,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "eris-occultation-sphere",
+      "registered": true,
+      "nativeExtent": [
+        2326,
+        2326,
+        2326
+      ],
+      "normalizedRestExtent": [
+        1,
+        1,
+        1
+      ],
+      "displayedExtentPerValue": 1,
+      "triangles": 9024,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "jaxa-ryugu-shape",
+      "registered": true,
+      "nativeExtent": [
+        1.0185700058937073,
+        0.9642599821090698,
+        1.0192000269889832
+      ],
+      "normalizedRestExtent": [
+        1.124014281785025,
+        1.1004759641893012,
+        1.1265402282802806
+      ],
+      "displayedExtentPerValue": 1.124014281785025,
+      "triangles": 49152,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "jpl-halley-orbit",
+      "registered": true,
+      "nativeExtent": [
+        1.1353068798780441,
+        0.3517446517944336,
+        0.09451594203710556
+      ],
+      "normalizedRestExtent": [
+        1.1353068798780441,
+        0.32879402496703014,
+        0.15051613807327796
+      ],
+      "displayedExtentPerValue": 1.1353068798780441,
+      "triangles": 672,
+      "points": 0,
+      "lines": 3243,
+      "pass": true
+    },
+    {
+      "id": "jpl-kuiper-catalog",
+      "registered": true,
+      "nativeExtent": [
+        97.69964599609375,
+        73.83340835571289,
+        99.1597900390625
+      ],
+      "normalizedRestExtent": [
+        0.9848471191873243,
+        0.7458501991464799,
+        0.9345481435198933
+      ],
+      "displayedExtentPerValue": 0.9848471191873243,
+      "triangles": 528,
+      "points": 4615,
+      "lines": 720,
+      "pass": true
+    },
+    {
+      "id": "jpl-sedna-orbit",
+      "registered": true,
+      "nativeExtent": [
+        1.1649897396564484,
+        0.5931861400604248,
+        0.006000000052154064
+      ],
+      "normalizedRestExtent": [
+        1.1649897396564484,
+        0.5641535438804366,
+        0.18330459810634908
+      ],
+      "displayedExtentPerValue": 1.1649897396564484,
+      "triangles": 448,
+      "points": 0,
+      "lines": 1803,
+      "pass": true
+    },
+    {
+      "id": "juno-great-red-spot",
+      "registered": true,
+      "nativeExtent": [
+        1.2000000476837158,
+        1.0823999643325806,
+        0.07530628889799118
+      ],
+      "normalizedRestExtent": [
+        1.1876638770668035,
+        1.1008667098723142,
+        0.3569908623613065
+      ],
+      "displayedExtentPerValue": 1.1876638770668035,
+      "triangles": 8192,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "nasa-saturn-globe-length",
+      "registered": true,
+      "nativeExtent": [
+        1000,
+        902.0380249023438,
+        1000
+      ],
+      "normalizedRestExtent": [
+        1.0307631836333366,
+        0.9388121168223321,
+        1.032395873821506
+      ],
+      "displayedExtentPerValue": 1.0307631836333366,
+      "triangles": 3072,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "nasa-saturn-main-rings",
+      "registered": true,
+      "nativeExtent": [
+        2330.9010009765625,
+        902.0380249023438,
+        2330.9007568359375
+      ],
+      "normalizedRestExtent": [
+        0.9530833394924988,
+        0.543812086335558,
+        0.896190407625443
+      ],
+      "displayedExtentPerValue": 0.9530833394924988,
+      "triangles": 3328,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "nicer-j0437-sphere",
+      "registered": true,
+      "nativeExtent": [
+        22.719999313354492,
+        22.719999313354492,
+        22.719999313354492
+      ],
+      "normalizedRestExtent": [
+        0.9999999697779267,
+        0.9999999697779267,
+        0.9999999697779267
+      ],
+      "displayedExtentPerValue": 0.9999999697779267,
+      "triangles": 9024,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "proxima-centauri-sphere",
+      "registered": true,
+      "nativeExtent": [
+        214553.875,
+        214553.875,
+        214553.875
+      ],
+      "normalizedRestExtent": [
+        0.9999999766958304,
+        0.9999999766958304,
+        0.9999999766958304
+      ],
+      "displayedExtentPerValue": 0.9999999766958304,
+      "triangles": 9024,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "sirius-b-sphere",
+      "registered": true,
+      "nativeExtent": [
+        11300,
+        11300,
+        11300
+      ],
+      "normalizedRestExtent": [
+        1,
+        1,
+        1
+      ],
+      "displayedExtentPerValue": 1,
+      "triangles": 9024,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "vega-roche-photosphere",
+      "registered": true,
+      "nativeExtent": [
+        3792956.5,
+        3364405.25,
+        3792956.5
+      ],
+      "normalizedRestExtent": [
+        0.990226105330736,
+        0.9086116665694596,
+        0.982094334514793
+      ],
+      "displayedExtentPerValue": 0.990226105330736,
+      "triangles": 16128,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    }
+  ]
+}

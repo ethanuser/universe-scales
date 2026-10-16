@@ -1,0 +1,48 @@
+{
+  "id": "nicer-j0437-sphere",
+  "matches": {
+    "length": [
+      "PSR J0437-4715 Neutron Star"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "idealized-size-sphere",
+  "note": "A true-size smooth sphere at the catalog\u2019s 22.72 km equatorial-diameter estimate, twice the 11.36 km radius inferred by Choudhury et al. (2024) from NICER pulse-profile modeling and radio timing. It is not a resolved surface photograph. Sphericity and blue-white color are display conventions; hot spots, beams, atmosphere and gravitational lensing are not simulated. The 2024 radius has a 68% interval of -0.63/+0.95 km. A newer NICER analysis (arXiv:2512.08790) finds a broader, larger range, so this is explicitly the catalog\u2019s 2024 estimate, not a unique established radius.",
+  "source": "https://arxiv.org/abs/2407.06789",
+  "author": "Universe Scales",
+  "reference": "content/visualizations/models/sources/nicer-j0437-sphere.md",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 22.72
+  },
+  "processing": {
+    "native_units": "km",
+    "diameter_km": 22.72,
+    "operations": [
+      "Create a smooth sphere at the cited catalog diameter",
+      "Use an authored uniform material; no surface texture"
+    ]
+  },
+  "display_label": "PSR J0437-4715 \u00b7 2024 NICER estimate",
+  "src": "content/visualizations/models/nicer-j0437-sphere.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 207576,
+  "sha256": "13a2fef5f93fd2f0e61a4fdf2a0b290568d7feb2f0cc22b7b19b692e6d11a9ff",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 9024,
+  "animations": 0,
+  "skins": 0
+}

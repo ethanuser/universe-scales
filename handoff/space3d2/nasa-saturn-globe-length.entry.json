@@ -1,0 +1,56 @@
+{
+  "id": "nasa-saturn-globe-length",
+  "matches": {
+    "length": [
+      "Saturn"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "scientific-agency-illustration",
+  "note": "NASA VTAD\u2019s original oblate textured Saturn globe. The catalog mean diameter is calibrated against the source\u2019s equatorial-diameter scale, preserving polar flattening. Rings are shown at their true relative scale under the separate Saturn\u2019s Rings item; including them here would exceed the explorer\u2019s 1.3\u00d7 body-diameter extent rule. The texture is an illustrative global mosaic, not current weather.",
+  "source": "https://science.nasa.gov/resource/saturn-3d-model/",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "reference": "content/visualizations/models/sources/nasa-saturn-globe-length.md",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 966.2175615583726,
+    "pitch": 8,
+    "roll": -12,
+    "layout_width_factor": 1.2
+  },
+  "processing": {
+    "source_models": [
+      {
+        "id": "nasa-saturn-angular",
+        "sha256": "cbd2f83aa8cf70425453b9406dd7812dd8b30d0cb6e7fd186ba4d2c2dcbd1bd9"
+      }
+    ],
+    "source_equatorial_diameter_units": 1000,
+    "source_equatorial_diameter_km": 120536,
+    "operations": [
+      "Reuse NASA source geometry, UVs and already resized embedded textures",
+      "Extract globe; omit ring meshes and unused ring image"
+    ]
+  },
+  "src": "content/visualizations/models/nasa-saturn-globe-length.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 704112,
+  "sha256": "c9d20445ffe62d808f99f820c95cf3925ca3f165a33597b49b05305855adbdf1",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 3072,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,47 @@
+{
+  "id": "sirius-b-sphere",
+  "matches": {
+    "length": [
+      "Sirius B"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "idealized-size-sphere",
+  "note": "A smooth white-dwarf sphere calibrated to the catalog\u2019s approximate 11,300 km diameter. Bond et al. (2017) infer a radius of 0.008098 solar radii. The blue-white tint is illustrative; no resolved surface texture, accretion disk or surrounding halo is claimed. Brightness is adjusted for inspection, not compared photometrically with other stars.",
+  "source": "https://arxiv.org/abs/1703.10625",
+  "author": "Universe Scales",
+  "reference": "content/visualizations/models/sources/sirius-b-sphere.md",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 11300
+  },
+  "processing": {
+    "native_units": "km",
+    "diameter_km": 11300,
+    "operations": [
+      "Create a smooth sphere at the cited catalog diameter",
+      "Use an authored uniform material; no surface texture"
+    ]
+  },
+  "src": "content/visualizations/models/sirius-b-sphere.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 207452,
+  "sha256": "d6c2a7d3027ee0723a154bf94645d1d825faa270c658771d468a956db0fd2fd3",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 9024,
+  "animations": 0,
+  "skins": 0
+}

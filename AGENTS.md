@@ -4,6 +4,31 @@ Start here if you are an AI agent (Codex, Claude, ...) or a new contributor pick
 up this repo. It is the shortest path to being productive; the longer READMEs linked
 below hold the details. Keep this file current when you change workflows.
 
+## 2026-10-16 space3d2 handoff
+
+- Fourteen new Length entries: NASA Saturn globe and ringed-system views,
+  Cassini hexagon cap, Juno Great Red Spot patch, measured Ryugu/Dimorphos shapes,
+  Eris and three stellar size spheres, a CHARA-constrained Vega Roche surface,
+  JPL Halley/Sedna orbital diagrams, and 4,615 actual selected Kuiper-region
+  catalog locations. No synthetic filler points or invented asteroid terrain.
+- A measured Cassini Hyperion asset/entry is ready but **unregistered**: the
+  existing `Hyperion` item is a redwood. Add distinct `Hyperion Moon` first.
+  Dinkinesh remains unchanged; a usable authoritative shape download was not
+  obtained. Exact integration/data notes: `handoff/space3d2/REPORT.md`.
+- Offline builder: `scripts/build_space3d2_models.py`; source refresh:
+  `prepare_space3d2_sources.py` (preparation-only spiceypy needed for DSK).
+  Pinned coordinates, element snapshots and identities: `models/sources/space3d2/`.
+- Both rings and globe preserve physical source proportions, so the body item
+  omits rings to satisfy its diameter extent rule. Ringed Saturn is shown under
+  `Saturn's Rings`. Sedna's pinned solution gives ~1,011 AU, rather than the old
+  catalog ~937 AU. The neutron star is explicitly the 2024 NICER estimate;
+  a newer analysis differs. Cloud imagery is draped, not reconstructed cloud relief.
+- All 15 GLBs validate with zero errors/warnings; Node: 225 passing; Python:
+  103 tests with one skip. Asset/version checks pass. Vendored-loader and CPU
+  rest extents pass; all rest/quarter CPU previews were viewed. These do not
+  certify WebGL, production model-lab size audit, explorer/mobile or lighting.
+  Known Chromium/git sandbox limits were not retried; work is uncommitted.
+
 ## 2026-10-16 earth3d handoff
 
 - Added 14 Length models: eight dimensioned everyday/optical objects, four

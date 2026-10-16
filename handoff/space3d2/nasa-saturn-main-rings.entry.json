@@ -1,0 +1,56 @@
+{
+  "id": "nasa-saturn-main-rings",
+  "matches": {
+    "length": [
+      "Saturn's Rings"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "scientific-agency-illustration",
+  "note": "NASA VTAD\u2019s original Saturn globe and ring meshes, retaining their textures and relative proportions. Calibration uses the catalog 280,360 km span to the F ring in the source\u2019s 120,536 km equatorial-diameter units. The model\u2019s outer edge is within 1% of that span. This is a main-ring view; the diffuse E ring and individual particles are not represented.",
+  "source": "https://science.nasa.gov/resource/saturn-3d-model/",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "reference": "content/visualizations/models/sources/nasa-saturn-main-rings.md",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 2325.9441162806133,
+    "pitch": 28,
+    "roll": -18,
+    "layout_width_factor": 1.2
+  },
+  "processing": {
+    "source_models": [
+      {
+        "id": "nasa-saturn-angular",
+        "sha256": "cbd2f83aa8cf70425453b9406dd7812dd8b30d0cb6e7fd186ba4d2c2dcbd1bd9"
+      }
+    ],
+    "source_equatorial_diameter_units": 1000,
+    "source_equatorial_diameter_km": 120536,
+    "operations": [
+      "Reuse NASA source geometry, UVs and already resized embedded textures",
+      "Retain globe and both original ring faces"
+    ]
+  },
+  "src": "content/visualizations/models/nasa-saturn-main-rings.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 726904,
+  "sha256": "b6ae5c7d675794ddec13b4e156789322bd901348ea82bd81a513eedd5a933dad",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 3328,
+  "animations": 0,
+  "skins": 0
+}
