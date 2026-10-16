@@ -162,6 +162,97 @@
     function frameExponent(items, index, order = 1, options = {}) {
         return Math.log10(items[index].value) / order;
     }
-    root.ScaleJourney = { layout, frameExponent, Camera, FocusTransition, BASELINE, BASE_SIZE, TRAVEL_PER_DECADE };
+
+    // Radial layout (as in Scale of the Universe): each object sits at a fixed world
+    // position whose distance from the center is proportional to its own size, so at
+    // any zoom the objects near the camera's scale form a ring, smaller ones converge
+    // toward the center and larger ones wait offscreen. Only the zoom changes.
+    const RADIAL_SIZE = 150;               // px drawn for an object as large as the camera length
+    const RADIAL_CENTER_Y = 250;
+    const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
+    const LABEL_EM = 0.07;                 // label font size, in units of the drawn extent
+    const radialCache = new Map();
+    // Half-extents of an object and its label below it, in units of its size.
+    function radialBox(item, factor, extent) {
+        const label = LABEL_EM * extent;
+        const halfWidth = 0.5 * Math.max(factor * extent, 0.56 * label * String(item.name).length);
+        return { halfWidth, top: 0.5 * extent, bottom: 0.5 * extent + 2.9 * label };
+    }
+    function radialPlacement(items, order, options) {
+        const aspect = (options.width ?? 1000) < 800 ? 'narrow' : 'wide';
+        const factors = items.map(item => options.widthFactor?.(item) ?? 1);
+        const extents = items.map(item => options.extentFactor?.(item) ?? 1);
+        const key = `${aspect}|${order}|${items.map((item, i) => `${item.name}:${item.value}:${factors[i]}:${extents[i]}`).join('|')}`;
+        if (radialCache.has(key)) return radialCache.get(key);
+        const [stretchX, stretchY] = aspect === 'wide' ? [1.55, 0.78] : [1.0, 0.92];
+        const sizes = items.map(item => 10 ** (Math.log10(item.value) / order));
+        const sorted = items.map((_, index) => index).sort((a, b) => sizes[a] - sizes[b] ||
+            String(items[a].name).localeCompare(String(items[b].name)));
+        const placed = [];
+        const offsets = new Array(items.length);
+        sorted.forEach((index, rank) => {
+            const size = sizes[index];
+            const box = radialBox(items[index], factors[index], extents[index]);
+            // Keep the center clear for the smaller objects converging there.
+            const reach = Math.hypot(box.halfWidth / stretchX, Math.max(box.top, box.bottom) / stretchY);
+            const base = Math.max(1.05, reach + 0.3);
+            const start = rank * GOLDEN_ANGLE;
+            const neighbors = placed.filter(other => other.size >= size / 60);
+            let chosen = null;
+            for (let ring = 0; ring < 28 && !chosen; ring++) {
+                const radius = base * 1.07 ** ring;
+                for (let step = 0; step < 24 && !chosen; step++) {
+                    const turn = (step % 2 ? 1 : -1) * Math.ceil(step / 2) * (Math.PI / 12);
+                    const angle = start + turn;
+                    const x = size * radius * stretchX * Math.cos(angle);
+                    const y = size * radius * stretchY * Math.sin(angle);
+                    const gap = 0.06 * size;
+                    const clear = neighbors.every(other =>
+                        Math.abs(x - other.x) >= size * box.halfWidth + other.size * other.box.halfWidth + gap ||
+                        y + size * box.top + gap <= other.y - other.size * other.box.bottom ||
+                        other.y + other.size * other.box.top + gap <= y - size * box.bottom);
+                    if (clear) chosen = { x, y };
+                }
+            }
+            chosen ||= { x: size * base * 4 * stretchX * Math.cos(start), y: size * base * 4 * stretchY * Math.sin(start) };
+            placed.push({ ...chosen, size, box });
+            offsets[index] = { u: chosen.x / size, v: chosen.y / size };
+        });
+        radialCache.set(key, offsets);
+        if (radialCache.size > 8) radialCache.delete(radialCache.keys().next().value);
+        return offsets;
+    }
+    function radialLayout(items, exponent, order = 1, options = {}) {
+        const offsets = radialPlacement(items, order, options);
+        const left = options.left ?? 0, right = left + (options.width ?? 1000);
+        const overscan = Math.max(0, options.overscan ?? 0);
+        const pixelsPerUnit = RADIAL_SIZE / 10 ** exponent;
+        return items.map((item, index) => {
+            const length = 10 ** (Math.log10(item.value) / order);
+            const size = RADIAL_SIZE * 10 ** Math.max(-300, Math.min(296, Math.log10(item.value) / order - exponent));
+            const factor = options.widthFactor?.(item) ?? 1;
+            const extent = options.extentFactor?.(item) ?? 1;
+            const box = radialBox(item, factor, extent);
+            const x = CENTER_X + offsets[index].u * length * pixelsPerUnit;
+            const center = RADIAL_CENTER_Y - offsets[index].v * length * pixelsPerUnit;
+            const width = size * 2 * box.halfWidth;
+            const leftEdge = x - width / 2, rightEdge = x + width / 2;
+            const top = center - size * box.top, bottom = center + size * box.bottom;
+            return { item, index, size, width, x, y: center + size * extent / 2, center, leftEdge, rightEdge,
+                pixelsPerUnit, visible: rightEdge >= left - overscan && leftEdge <= right + overscan &&
+                    bottom >= -overscan && top <= 500 + overscan };
+        });
+    }
+    // The item at the camera's scale: drawn closest to RADIAL_SIZE * ratio.
+    function radialFocus(items, exponent, order = 1, ratio = 0.85) {
+        let best = 0, bestDistance = Infinity;
+        items.forEach((item, index) => {
+            const distance = Math.abs(Math.log10(item.value) / order - exponent - Math.log10(ratio));
+            if (distance < bestDistance) { best = index; bestDistance = distance; }
+        });
+        return best;
+    }
+    root.ScaleJourney = { layout, frameExponent, radialLayout, radialFocus, radialPlacement, Camera, FocusTransition,
+        BASELINE, BASE_SIZE, RADIAL_SIZE, RADIAL_CENTER_Y, LABEL_EM, TRAVEL_PER_DECADE };
     if (typeof module !== 'undefined') module.exports = root.ScaleJourney;
 })(globalThis);

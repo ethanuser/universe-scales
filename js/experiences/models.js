@@ -375,8 +375,9 @@ export class ModelStage {
         if (pending) this.returnFrame = requestAnimationFrame(next => this.returnToPose(next));
         else this.lastReturnFrame = null;
     }
-    begin(exponent = 0) {
-        this.eyeY = 500 - (globalThis.ScaleJourney?.BASELINE ?? 405)
+    begin(exponent = 0, eyeY) {
+        // Radial layouts pass the screen center: objects sit above and below it.
+        this.eyeY = eyeY ?? 500 - (globalThis.ScaleJourney?.BASELINE ?? 405)
             + 130 * THREE.MathUtils.clamp((exponent + 1) / 7, 0, 1);
         for (const instance of this.instances.values()) if (instance) instance.visible = false;
     }

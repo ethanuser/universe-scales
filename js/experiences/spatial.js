@@ -151,6 +151,13 @@
         const apply = () => {
             zoom.set(camera.value);
             const options = layoutOptions();
+            if (options.radial) {
+                // Radial layouts never pan: the selected item is the one at the camera's scale.
+                const index = ScaleJourney.radialFocus(ctx.items, camera.value, order);
+                if (camera.glideTime == null && index !== ctx.index) ctx.focus(index, false);
+                render();
+                return;
+            }
             const entries = ScaleJourney.layout(ctx.items,camera.value*(options.exponentFactor??1),options.order??order,
                 {...options, ...focusTransition.options()});
             const focusEntries = options.maxFocusSize
@@ -188,6 +195,11 @@
             value = clamp(value, camera.min, camera.max);
             if (reduceMotion.matches || focusIndex == null) { aim(value, focusIndex, focusWindow); return; }
             const options = layoutOptions();
+            if (options.radial) {
+                camera.glide(value, clamp(0.4 + 0.16 * Math.abs(value - camera.value), 0.4, 1.1));
+                if (!frame) frame = requestAnimationFrame(animate);
+                return;
+            }
             const entries = ScaleJourney.layout(ctx.items, camera.value * (options.exponentFactor ?? 1),
                 options.order ?? order, { ...options, ...focusTransition.options() });
             const slide = Math.abs((entries[focusIndex]?.x ?? 500) - 500);
@@ -263,7 +275,9 @@
             return (model.presentation?.layout_width_factor ?? 1) *
                 (order === 3 && model.geometry === 'sphere' ? Math.cbrt(6 / Math.PI) : 1);
         };
-        const navigationControl = navigation(ctx, order, zoom, render, () => ({widthFactor}), {
+        const radial = order === 1;
+        const extentFactor = item => modelStage?.entry(item)?.presentation?.display_extent_factor ?? 1;
+        const navigationControl = navigation(ctx, order, zoom, render, () => ({ widthFactor, radial }), {
             pick: (x, y) => modelStage?.pick(x, y),
             hover: (item, pointer) => modelStage?.setHover(item, pointer),
             beginRotate: (item, timestamp) => modelStage?.beginRotate(item, timestamp),
@@ -296,7 +310,7 @@
         if (order === 2) world().then(data => { land = data; if (!disposed) render(); });
         function render() {
             if (disposed) return;
-            ctx.stage.replaceChildren(); modelStage?.begin(zoom.value);
+            ctx.stage.replaceChildren(); modelStage?.begin(zoom.value, radial ? 500 - ScaleJourney.RADIAL_CENTER_Y : undefined);
             const view = viewport(ctx);
             const sky = ramp(zoom.value, [
                 [-4, [255, 255, 255]],
@@ -322,12 +336,14 @@
             ruler.style.color = ctx.stage.style.color;
             // Keep nearby offscreen objects mounted so the SVG viewport, rather than
             // JavaScript culling, controls the exact moment they cross an edge.
-            const entries = ScaleJourney.layout(ctx.items, zoom.value, order, {
-                ...view,
-                widthFactor,
-                ...navigationControl.focusOptions(),
-                overscan: view.width * 0.75
-            });
+            const entries = radial
+                ? ScaleJourney.radialLayout(ctx.items, zoom.value, order, { ...view, widthFactor, extentFactor, overscan: 40 })
+                : ScaleJourney.layout(ctx.items, zoom.value, order, {
+                    ...view,
+                    widthFactor,
+                    ...navigationControl.focusOptions(),
+                    overscan: view.width * 0.75
+                });
             const labels = [];
             let renderedModels = 0;
             let clipped = false;
@@ -346,7 +362,9 @@
                     g.dataset.modelIndex = ctx.items.indexOf(item);
                     g.style.pointerEvents = 'none';
                 }
-                const isModel = order !== 2 && modelStage?.draw(item, x, y, visualSize);
+                // In the radial view many small objects converge on the center; they show as
+                // photos until they are big enough for a 3D model to read.
+                const isModel = order !== 2 && (!radial || extent * view.scale >= 14) && modelStage?.draw(item, x, y, visualSize);
                 if (isModel) renderedModels++;
                 else if (order === 2 && item.name === 'Earth surface area' && land) {
                     const projection = d3.geoEqualEarth().scale(1).translate([0, 0]);
@@ -368,25 +386,42 @@
                     if (src) g.append(svg('image', { href:src, x:x-size/2,y:y-size,width:size,height:size,
                         preserveAspectRatio:'xMidYMax meet' }));
                 }
-                const fontSize = 19 * extent / ScaleJourney.BASE_SIZE;
+                // Radial view: labels grow with their object but never drop below a readable
+                // 11 px, and fade in as the object grows from 28 to 56 px on screen.
+                const drawnPx = extent * view.scale;
+                const fontSize = radial
+                    ? Math.min(Math.max(ScaleJourney.LABEL_EM * extent, 11 / view.scale), 26 / view.scale)
+                    : 19 * extent / ScaleJourney.BASE_SIZE;
                 // Names fade as their objects shrink: gone below 7 px text, full above 12 px.
-                const labelOpacity = clamp((fontSize * view.scale - 7) / 5, 0, 1);
+                const labelOpacity = radial ? clamp((drawnPx - 28) / 28, 0, 1) : clamp((fontSize * view.scale - 7) / 5, 0, 1);
                 if (labelOpacity > 0) {
-                    const text = svg('text',{x,y:y+fontSize*1.8,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px`,opacity:labelOpacity},entry?.display_label || item.name);
+                    const name = entry?.display_label || item.name;
+                    const labelY = radial ? y + fontSize * 1.25 : y + fontSize * 1.8;
+                    const text = svg('text',{x,y:labelY,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px${radial && item === ctx.item ? ';font-weight:700' : ''}`,opacity:labelOpacity},name);
                     text.dataset.labelPriority = item === ctx.item ? '200' : '100';
-                    labels.push(text);
+                    labels.push({ text, x, y: labelY, fontSize, width: 0.56 * fontSize * name.length,
+                        rank: (item === ctx.item ? 1e9 : 0) + drawnPx });
                 }
             });
-            ctx.stage.append(...labels);
+            // Keep the selected item's label, then larger objects' labels; drop any that collide.
+            const kept = [];
+            for (const label of labels.sort((a, b) => b.rank - a.rank)) {
+                const box = { left: label.x - label.width / 2, right: label.x + label.width / 2,
+                    top: label.y - label.fontSize, bottom: label.y + 0.25 * label.fontSize };
+                if (radial && kept.some(other => box.left < other.right && box.right > other.left &&
+                    box.top < other.bottom && box.bottom > other.top)) continue;
+                kept.push(box);
+                ctx.stage.append(label.text);
+            }
             modelStage?.finish(zoom.value);
             const rulerWidth = 112;
-            const rulerValue = power(zoom.value) * rulerWidth / (ScaleJourney.BASE_SIZE * view.scale);
+            const rulerValue = power(zoom.value) * rulerWidth / ((radial ? ScaleJourney.RADIAL_SIZE : ScaleJourney.BASE_SIZE) * view.scale);
             rulerLine.style.width = `${rulerWidth}px`;
             rulerLabel.innerHTML = ctx.app.formatTooltipValueHTML(
                 ctx.app.formatValueForCurrentUnit(rulerValue, 2, true),
                 ctx.app.getCurrentUnitDefinition()?.symbol || 'm');
             ctx.caption.textContent = order === 1
-                ? 'All objects share a continuous camera. The ruler and image span use the listed length; image framing is approximate. Spacing is arranged for reading, not physical distance. Distances, radii and object diameters retain their dataset definitions. Downloaded models are used when available.'
+                ? 'All objects share one camera that only zooms. Each sits at a distance from the center proportional to its own size, so objects at the current scale ring the center and smaller ones gather toward it; the arrangement is for reading, not physical distance. The ruler and image span use the listed length; image framing is approximate. Distances, radii and object diameters retain their dataset definitions. Downloaded models are used when available.'
                 : order === 2
                 ? 'Outlined disks or squares have the listed area; photos identify the subject and do not define its outline. Earth uses an Equal Earth map whose entire footprint includes land and ocean. This is a continuous area journey, not a geographic map. Model/photo sources and geometry conventions are documented with the assets.'
                 : 'Downloaded spherical models are sized using diameter = (6V/pi)^(1/3). Non-spherical models and photos use an equivalent-volume span V^(1/3), not a measured physical outline or mesh volume. A bottle capacity is not the volume of its glass. Object spacing is editorial, not a real spatial distribution.';
