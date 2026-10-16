@@ -1,34 +1,30 @@
-# Orion Nebula Model Provenance
+# Orion Nebula: observed light, published 3D structure
 
-This is an authored inferred-depth illustration, not a downloaded NASA 3D mesh.
-Observed sky-plane colors come from the NASA/ESA Orion Treasury mosaic:
+Images (both CC BY 4.0):
+- Hubble Orion Treasury mosaic, https://esahubble.org/images/heic0601a/ (30.03 arcmin square,
+  north up). Credit: NASA, ESA, M. Robberto (Space Telescope Science Institute/ESA) and the
+  Hubble Space Telescope Orion Treasury Project Team.
+- Wide view, https://noirlab.edu/public/images/noao-m42steinberg/ (130.89 x 73.22 arcmin,
+  north 79 degrees left of vertical). Credit: KPNO/NOIRLab/NSF/AURA/Ryan Steinberg and
+  Family/Adam Block. Its listed center (Dec -4:41:52) disagrees with the image, which has the
+  Trapezium near its middle, so the image is pinned at the Trapezium pixel (833, 512) and the
+  shift refined by cross-correlation with Hubble (about 6 canvas px).
 
-- [Image, credits, filters and downloads](https://science.nasa.gov/asset/hubble/hubbles-sharpest-view-of-the-orion-nebula/)
-- [Downloaded 1024 px derivative](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/releases/2006/01/STScI-01EVT7X0BR54ZWDP1AG2DA54RA.tif?w=1024)
-- Credit: NASA, ESA, Hubble Space Telescope Orion Treasury Project Team,
-  Massimo Robberto (STScI, ESA).
-- [NASA media usage guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)
+Both are resampled onto one north-up canvas, 64 arcmin (25.0 ly at 1,344 ly) centered on
+theta-1 Ori C. Ground-based colors are scaled to Hubble's where they overlap; Hubble fills its
+square. The photo becomes calibrated glowing sprites (scripts/nebula_volume.py): front-on, the
+summed sprites reproduce the photo.
 
-The Hubble field is approximately 13 light-years square. It occupies that width
-inside the dataset's approximately 25-light-year whole-region span. The lower
-context bracket is not a measured gas boundary. No texture or external resources
-are needed at runtime; sampled colors are embedded in the GLB.
+Depth follows published structure, placed illustratively:
+- O'Dell et al. 2009, AJ 137, 367 (https://doi.org/10.1088/0004-6256/137/1/367): the bright
+  gas is the main ionization front on the face of the Orion Molecular Cloud, about 0.2 pc
+  (0.65 ly) behind the Trapezium, tilting toward us farther out.
+- Pabst et al. 2019, Nature 565, 618 (https://arxiv.org/abs/1901.04221): theta-1 Ori C's wind
+  has blown a bubble about 4 pc across whose near half-shell, the Veil, expands toward us at
+  13 km/s.
+Gas sits on that curved wall, with a share on the near half-shell (radius 6.5 ly) that grows
+away from the center; the Orion Nebula Cluster's stars sit in front of the wall. Neither paper
+gives a per-pixel depth: placement is an illustration of the geometry, not tomography.
 
-The inferred central concavity is informed by [O'Dell et al. (2009), The Three
-Dimensional Structure of the Orion Nebula](https://doi.org/10.1088/0004-6256/137/1/367)
-([preprint](https://arxiv.org/abs/0810.4375)). The observed gas is on a main
-ionization front behind the Trapezium; the central approximately 0.2 pc offset
-and approximately 0.1 pc layer thickness motivate this illustration. A smooth
-Gaussian depression, all outer-field depth assignments, and the four enlarged
-stellar markers are authored assumptions. Image brightness is not interpreted
-as volumetric density. No claim of exact tomographic reconstruction is made.
-
-Reproduce from the credited source image with:
-
-```sh
-./venv/bin/python scripts/build_orion_model.py --reference-image /tmp/orion-hubble-1024.jpg
-python3 scripts/register_model.py /private/tmp/orion-model/entry.json /private/tmp/orion-model/orion-hubble-blister.glb
-```
-
-The source-image hash and sampling settings are recorded in `models.json`.
-The original NASA/ESA image is not relicensed as CC0 or under the project code license.
+Rebuild: `./venv/bin/python scripts/build_nebula_volumes.py orion OUT.glb --hubble heic0601a.jpg
+--wide noao-m42steinberg.jpg` (ESA "large" JPEG, NOIRLab "large" JPEG; hashes in models.json).

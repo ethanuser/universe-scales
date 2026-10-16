@@ -3,7 +3,8 @@
 //   screenLine = { axis: 'x' | 'y' | 'z', length }  box redrawn at a constant pixel width
 //   label = text, labelClass = extra CSS class, labelVector = true  upright SVG text (with a vector arrow)
 //   outline = true (with sphere = true)  thin SVG circle around a unit-sphere node
-//   pointSize = { max, perPixel }  Points size follows the drawn model size
+//   pointSize = { max, perPixel, conserve }  Points size follows the drawn model size;
+//                                 conserve keeps glow brightness when capped or thinned
 import * as THREE from '../vendor/three/three.module.min.js';
 
 export const SCREEN_LINE_PX = 1.4;

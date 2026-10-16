@@ -4004,15 +4004,16 @@
       "skins": 0
     },
     {
-      "id": "orion-hubble-blister",
-      "source": "https://science.nasa.gov/asset/hubble/hubbles-sharpest-view-of-the-orion-nebula/",
-      "download_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/releases/2006/01/STScI-01EVT7X0BR54ZWDP1AG2DA54RA.tif?w=1024",
-      "link_label": "Reference image",
-      "author": "Image: NASA, ESA, Hubble Space Telescope Orion Treasury Project Team, Massimo Robberto (STScI, ESA); inferred geometry: Universe Scales",
-      "license": "NASA/ESA credited scientific image under NASA media guidelines; authored geometry under the project code license",
-      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "geometry": "mesh",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "id": "orion-nebula-volume",
+      "source": "https://esahubble.org/images/heic0601a/",
+      "download_url": "https://cdn.esahubble.org/archives/images/large/heic0601a.jpg",
+      "link_label": "Hubble mosaic",
+      "author": "Images: NASA, ESA, M. Robberto (STScI/ESA) and the Hubble Space Telescope Orion Treasury Project Team; KPNO/NOIRLab/NSF/AURA/Ryan Steinberg and Family/Adam Block. 3D assembly: Universe Scales",
       "license_files": [
-        "licenses/nasa-media-guidelines.html",
+        "licenses/CC-BY-4.0.txt",
         "sources/orion-model.md"
       ],
       "matches": {
@@ -4020,31 +4021,32 @@
           "Orion Nebula"
         ]
       },
-      "geometry": "mesh",
+      "basis_url": "https://arxiv.org/abs/1901.04221",
+      "basis_label": "3D structure: Pabst et al. 2019; O'Dell et al. 2009",
       "presentation": {
         "reference_size": 25.368020016590773,
-        "yaw": 22,
-        "layout_width_factor": 1.05,
+        "layout_width_factor": 1.0,
         "focus_scale_factor": 1.15
       },
-      "basis_url": "https://doi.org/10.1088/0004-6256/137/1/367",
-      "basis_label": "Blister structure: O'Dell et al. (2009)",
-      "note": "Hubble's observed colors and sky-plane positions are sampled into a rotatable gas layer. The photographed field is 13 light-years wide; it is not stretched to the listed roughly 25-light-year whole nebula. The lower bracket indicates that larger contextual span, not an observed gas boundary. Inferred depth illustrates a thin ionization front behind the Trapezium, following Orion's blister interpretation; outside that inner region the depth is an artistic assumption. The four stellar markers are enlarged and schematic. This is not NASA's fly-through mesh, a tomographic reconstruction, or a measured 3D density map.",
+      "note": "Hubble's Orion mosaic (the central 12 light-years) set into a wider ground-based image of the whole nebula, about 25 light-years across, and given depth from its published structure: the brightest gas is the ionization front on the face of the Orion Molecular Cloud, about 0.2 parsec behind the Trapezium stars and curving toward us farther out (O'Dell et al. 2009), inside a bubble about 4 parsecs across blown by the star theta-1 Orionis C, whose near side is the Veil (Pabst et al. 2019). Colors and sky positions are observed; the depth of each glowing patch is an illustration of that geometry, not a measurement.",
       "processing": {
-        "script": "scripts/build_orion_model.py",
-        "source_image_sha256": "31721848d4985cf3c93db1078b12b091a04650aaf22e08edd5237102fa5b8e9d",
-        "image_field_span_ly": 13.0,
-        "reference_span_ly": 25.368020016590773,
-        "cloud_points": 27860,
-        "depth_semantics": "inferred illustration"
+        "script": "scripts/build_nebula_volumes.py orion",
+        "source_image_sha256": {
+          "hubble": "f79819a5b0ec66fe750aa8e4a6ce8b5a5c656b3e4cfb85a2b4f67f0012db9ce4",
+          "wide": "521f28eef7a0354c5bcd4fed6d6ea06ec72f97b128877db2c1d453d3a3aa5481"
+        },
+        "wide_download_url": "https://storage.noirlab.edu/media/archives/images/large/noao-m42steinberg.jpg",
+        "adopted_distance_ly": 1344,
+        "canvas_span_ly": 25.02,
+        "depth_semantics": "published geometry, illustrative placement"
       },
-      "src": "content/visualizations/models/orion-hubble-blister.glb",
+      "src": "content/visualizations/models/orion-nebula-volume.glb",
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 672008,
-      "sha256": "ab4225ee737f6202d55d707d975b9bfbbf2192d709d57d5493ef2d42673476a5",
+      "bytes": 1255516,
+      "sha256": "3442757bfe4b98304493bb9bed599d4b1ebd587447d5720a84c3dbb1fb063441",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
@@ -4057,13 +4059,14 @@
       "skins": 0
     },
     {
-      "id": "tarantula-eso-cloud",
-      "source": "https://www.eso.org/public/images/eso0650a/",
-      "download_url": "https://cdn.eso.org/images/screen/eso0650a.jpg",
-      "link_label": "ESO reference image",
-      "author": "ESO/R. Fosbury (ST-ECF); geometry: Universe Scales",
+      "geometry": "mesh",
       "license": "CC-BY-4.0",
-      "license_url": "https://www.eso.org/public/outreach/copyright/",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "id": "tarantula-nebula-volume",
+      "source": "https://www.eso.org/public/images/eso0650a/",
+      "download_url": "https://cdn.eso.org/images/large/eso0650a.jpg",
+      "link_label": "ESO image",
+      "author": "Image: ESO/R. Fosbury (ST-ECF). 3D assembly: Universe Scales",
       "license_files": [
         "licenses/CC-BY-4.0.txt",
         "sources/tarantula-model.md"
@@ -4073,60 +4076,51 @@
           "Tarantula Nebula"
         ]
       },
-      "geometry": "mesh",
+      "basis_url": "https://www.eso.org/public/news/eso0650/",
+      "basis_label": "ESO field of view and nebula size",
       "presentation": {
         "reference_size": 951.3007506221539,
-        "yaw": 12,
         "layout_width_factor": 1.05,
         "focus_scale_factor": 1.15
       },
-      "basis_url": "https://www.eso.org/public/news/eso0650/",
-      "basis_label": "ESO field of view and approximate nebula span",
-      "note": "ESO/R. Fosbury (ST-ECF), adapted into a rotatable illustration. Colors and projected filaments come from the MPG/ESO 2.2-metre telescope's optical B, V, H-alpha and [O III] mosaic. Its published 62.40 by 62.31 arcminute field and 170,000-light-year distance set the scale. A circular viewing aperture around the bright R136 region spans the listed approximately 951 light-years, close to ESO's approximate 1,000-light-year nebula size; the aperture is not a measured gas edge. The bowed emitting layer and its thickness are artistic depth cues, not a tomographic reconstruction. Sample points represent emission, not individual atoms or stars.",
+      "note": "ESO's MPG/ESO 2.2-metre telescope image of the Tarantula Nebula in the Large Magellanic Cloud (B, V, H-alpha and [O III]), cropped to about 1,100 light-years around the R136 star cluster at 170,000 light-years. Colors and sky positions are observed. The gas is wrapped onto irregular shells around R136, the usual shape of nebulae blown by massive stars; that depth is illustrative, not measured.",
       "processing": {
-        "script": "scripts/build_tarantula_model.py",
-        "source_image_sha256": "7a6a323a874e48bfc98fdf9f500ab669b7f7a77e7464d39ba292df03891183f2",
+        "script": "scripts/build_nebula_volumes.py tarantula",
+        "source_image_sha256": "a672d004fd67ba23057ad1602aef21dc5e93988b5cc5b5647c86972605179450",
         "source_field_arcmin": [
           62.4,
           62.31
         ],
         "adopted_distance_ly": 170000,
-        "crop_box_pixels": [
-          360,
-          116,
-          754,
-          510
-        ],
-        "viewing_aperture_ly": 951.3007506221539,
-        "cloud_points": 33686,
-        "depth_semantics": "authored illustration, not measured"
+        "depth_semantics": "illustrative"
       },
-      "src": "content/visualizations/models/tarantula-eso-cloud.glb",
+      "src": "content/visualizations/models/tarantula-nebula-volume.glb",
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 809684,
-      "sha256": "aca4442069872b644a6cf82741d9e48a227737cd39a9c824b5c2d7089ce08194",
+      "bytes": 1275272,
+      "sha256": "6c71e112eb5aec8d9050cbf805d6c1f458d0b6d84060bb27de3134be33331179",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
-      "mesh_count": 1,
+      "mesh_count": 4,
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
     },
     {
-      "id": "carina-vista-field",
-      "source": "https://www.eso.org/public/images/eso1828b/",
-      "download_url": "https://cdn.eso.org/images/screen/eso1828b.jpg",
-      "link_label": "ESO VISTA reference image",
-      "author": "ESO/J. Emerson/M. Irwin/J. Lewis; geometry: Universe Scales",
+      "geometry": "mesh",
       "license": "CC-BY-4.0",
-      "license_url": "https://www.eso.org/public/outreach/copyright/",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "id": "carina-nebula-volume",
+      "source": "https://noirlab.edu/public/images/noao0136a/",
+      "download_url": "https://storage.noirlab.edu/media/archives/images/large/noao0136a.jpg",
+      "link_label": "NOIRLab image",
+      "author": "Image: CTIO/NOIRLab/NSF/AURA/N. Smith (University of Minnesota). 3D assembly: Universe Scales",
       "license_files": [
         "licenses/CC-BY-4.0.txt",
         "sources/carina-model.md"
@@ -4136,49 +4130,39 @@
           "Carina Nebula"
         ]
       },
-      "geometry": "mesh",
-      "volume_semantics": "not a volume measurement",
-      "closed_volume_checked": false,
+      "basis_url": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/",
+      "basis_label": "NASA: about 300 light-years, 7,500 light-years away",
       "presentation": {
         "reference_size": 300,
-        "yaw": 15,
-        "layout_width_factor": 1.05,
+        "layout_width_factor": 0.75,
         "focus_scale_factor": 1.15
       },
-      "basis_url": "https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/",
-      "basis_label": "NASA: whole-nebula size and distance",
-      "note": "ESO/J. Emerson/M. Irwin/J. Lewis, adapted into a rotatable image-derived surface. VISTA's Z, J and Ks bands show infrared structures and many foreground/background stars, not naked-eye colors. The published 88.49 by 71.78 arcminute field at about 7,500 light-years covers roughly 193 by 157 light-years. It is not stretched to the listed approximately 300-light-year nebula span: the lower bracket marks that broader context, not an observed gas edge. The observed image is mapped onto a gently bowed sheet; that bend is an artistic depth cue. This is a 2.5D illustration, not tomography or a measured gas-density volume.",
+      "note": "The whole Carina Nebula photographed in the light of oxygen (blue), hydrogen (green) and sulfur (red) with the Curtis Schmidt telescope at Cerro Tololo: 80 by 132 arcminutes, about 174 by 289 light-years at 7,500 light-years. Colors and sky positions are observed. The gas is wrapped onto irregular shells around the brightest region (the Trumpler 16 cluster with Eta Carinae), the usual shape of nebulae blown by massive stars; that depth is illustrative, as no 3D map of Carina exists.",
       "processing": {
-        "script": "scripts/build_carina_model.py",
-        "source_image_sha256": "20684d2e213b796a0e008ff36bf18bed8db1fff4520eff233f03bf4613aeb6c5",
+        "script": "scripts/build_nebula_volumes.py carina",
+        "source_image_sha256": "3fdfc456efcdbc3d4a37ff5f1610bd4d9b70a4e29a27049a6bb7c794ad66c4af",
         "source_field_arcmin": [
-          88.49,
-          71.78
+          79.95,
+          132.38
         ],
         "adopted_distance_ly": 7500,
-        "image_span_ly": [
-          193.06589219368962,
-          156.60535681288562
-        ],
-        "whole_nebula_span_ly": 300,
-        "surface_triangles": 10400,
-        "texture_max_px": 1024,
-        "texture_encoding": "JPEG quality 90",
-        "depth_semantics": "authored illustration, not measured"
+        "depth_semantics": "illustrative"
       },
-      "src": "content/visualizations/models/carina-vista-field.glb",
+      "src": "content/visualizations/models/carina-nebula-volume.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 735236,
-      "sha256": "cadd8e61e37c2050df3259101b9c5a7e1e4585889d5ff596342bcd39719a5c63",
+      "bytes": 1300600,
+      "sha256": "c54e2bee6733dc673f43eef9ccf960910d3d6634533df40c4923ca2a95b73646",
       "extensions_used": [
         "KHR_materials_unlit"
       ],
       "extensions_required": [],
       "decompression_required": [],
       "external_resources": [],
-      "mesh_count": 2,
-      "triangle_count": 10400,
+      "mesh_count": 4,
+      "triangle_count": 0,
       "animations": 0,
       "skins": 0
     },

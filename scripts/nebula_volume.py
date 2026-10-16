@@ -58,6 +58,17 @@ def split_stars(rgb, radius=3, threshold=0.06, limit=4000):
     return gas, np.column_stack([xs + 0.5, ys + 0.5, colors, residual[ys, xs]])
 
 
+def decompose(gas, radius=6, sigma=8):
+    """Split gas into a smooth part (eroded then blurred, so it never exceeds the
+    original) for big glow sprites, and the remaining filaments and knots for small
+    sprites. Both are non-negative and sum to the gas image."""
+    footprint = np.hypot(*np.mgrid[-radius:radius + 1, -radius:radius + 1]) <= radius
+    low = np.stack([ndimage.gaussian_filter(ndimage.grey_erosion(gas[..., c], footprint=footprint), sigma)
+                    for c in range(3)], -1)
+    low = np.minimum(low, gas)
+    return low, gas - low
+
+
 def calibrated_samples(target, count, rng, q, gamma=0.7, mask=None):
     """Sample `count` sprites from a display-space RGB target. Returns pixel positions
     (x, y, jittered), display colors normalized to max channel 1, and alphas."""
@@ -114,7 +125,7 @@ def sample_field(field, x, y):
     return ndimage.map_coordinates(field, [y - 0.5, x - 0.5], order=1, mode="nearest")
 
 
-def add_cloud(glb, name, positions, colors, alpha, per_pixel, max_px, alpha_floor=ALPHA_FLOOR, parent=None):
+def add_cloud(glb, name, positions, colors, alpha, per_pixel, max_px, alpha_floor=ALPHA_FLOOR, parent=None, conserve=True):
     """Write an additive soft-sprite cloud. Alphas above 1 are folded into color;
     sprites below the floor are dropped at random so the expected value is kept."""
     positions = np.asarray(positions, np.float32)
@@ -131,4 +142,5 @@ def add_cloud(glb, name, positions, colors, alpha, per_pixel, max_px, alpha_floo
     material = glb.unlit(f"{name}-sprites")
     primitive = glb.points(positions[keep], rgba, material)
     return glb.node(name, [primitive], parent=parent, extras={
-        "softPoints": True, "additive": True, "pointSize": {"max": max_px, "perPixel": per_pixel}})
+        "softPoints": True, "additive": True,
+        "pointSize": {"max": max_px, "perPixel": per_pixel, "conserve": conserve}})

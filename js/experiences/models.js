@@ -4,7 +4,7 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=ad10588828';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=89166c4ea0';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import { prepareModelPoints } from './model-points.js?v=1a62e15829';
 import { angularEntry, angularScene } from './angular-models.js?v=9445c96468';
@@ -519,13 +519,23 @@ export class ModelStage {
             // Point clouds shrink with the model instead of staying a fixed-size smudge.
             const drawnPixels = instance.userData.drawSize * scale;
             for (const cloud of instance.userData.clouds) {
-                const { max, perPixel } = cloud.userData.pointSize;
-                cloud.material.size = THREE.MathUtils.clamp(drawnPixels * perPixel, 0.35, max);
+                const { max, perPixel, conserve } = cloud.userData.pointSize;
+                const wanted = drawnPixels * perPixel;
+                cloud.material.size = THREE.MathUtils.clamp(wanted, 0.35, max);
+                const count = cloud.geometry.attributes.position.count;
+                let drawn = count;
                 if (cloud.userData.pointLOD) {
                     const { fullPixels, minimum, mobileMaximum = Infinity } = cloud.userData.pointLOD;
-                    const count = cloud.geometry.attributes.position.count;
-                    cloud.geometry.setDrawRange(0, Math.min(count, this.coarsePointer ? mobileMaximum : Infinity, Math.max(minimum,
-                        Math.ceil(count * Math.min(1, drawnPixels / fullPixels)))));
+                    drawn = Math.min(count, this.coarsePointer ? mobileMaximum : Infinity, Math.max(minimum,
+                        Math.ceil(count * Math.min(1, drawnPixels / fullPixels))));
+                    cloud.geometry.setDrawRange(0, drawn);
+                }
+                // Glowing gas (extras pointSize.conserve) keeps its calibrated brightness
+                // when sprites hit their size cap or the LOD draws fewer of them.
+                if (conserve) {
+                    cloud.userData.baseOpacity ??= cloud.material.opacity;
+                    const gain = Math.max(1, wanted / cloud.material.size) ** 2 * count / drawn;
+                    cloud.material.opacity = cloud.userData.baseOpacity * Math.min(gain, 8);
                 }
             }
             this.overlay(instance, w, h, scale, cx, view);

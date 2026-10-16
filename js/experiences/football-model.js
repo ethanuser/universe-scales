@@ -1,5 +1,5 @@
 import * as THREE from '../vendor/three/three.module.min.js';
-import { labelNode, screenLine } from './model-overlay-nodes.js?v=26a046c0b3';
+import { labelNode, screenLine } from './model-overlay-nodes.js?v=ecd7a14690';
 
 export const FOOTBALL_FIELD = Object.freeze({
     playingLength: 100,

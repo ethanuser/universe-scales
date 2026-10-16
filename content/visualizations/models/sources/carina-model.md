@@ -1,32 +1,19 @@
-# Carina Nebula: VISTA sky field
+# Carina Nebula: whole-nebula optical image in 3D
 
-Image credit: **ESO/J. Emerson/M. Irwin/J. Lewis**. Adapted from
-[ESO eso1828b](https://www.eso.org/public/images/eso1828b/) under
-[CC BY 4.0](https://www.eso.org/public/outreach/copyright/). No ESO endorsement
-is implied. The unmodified screen-size image is a build input, not an additional
-runtime download; its SHA-256 is recorded in the registry.
+Image: https://noirlab.edu/public/images/noao0136a/ (CC BY 4.0). Credit: CTIO/NOIRLab/NSF/AURA/
+N. Smith (University of Minnesota). Curtis Schmidt telescope, Cerro Tololo; [O III] blue,
+H-alpha green, [S II] red; 79.95 x 132.38 arcmin, north 1 degree left of vertical.
 
-## Calibration
+At NASA's ~7,500 ly (https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/)
+the field is about 174 x 289 ly, essentially the whole ~300 ly nebula (the listed value).
+The photo becomes calibrated glowing sprites (scripts/nebula_volume.py), so the front view
+reproduces it.
 
-The published field is 88.49 by 71.78 arcminutes. At the approximate 7,500-light-year
-distance in [NASA's account](https://science.nasa.gov/missions/hubble/hubbles-sparkling-new-view-of-the-carina-nebula/),
-`2 * distance * tan(field_angle / 2)` gives 193.06 by 156.60 light-years. The image
-uses Z (880 nm), J (1.25 um), and Ks (2.15 um) bands; these assigned colors are
-not an optical human-eye view. Its north-up orientation is retained.
+Depth is illustrative: no 3D map of Carina exists. Gas is wrapped onto irregular, filled shells
+(radius ~80 ly, +-30%) around the brightest region (Trumpler 16 / Eta Carinae), the generic shape
+of nebulae blown by massive stars; a smooth random field keeps whole filaments together on the
+near or far side. Stars are given random depths.
 
-NASA gives about 300 light-years for the whole nebula. The dataset now uses
-`300 * 9.4607304725808e15 = 2.83821914177424e18 m`, replacing the incorrect
-`3e20 m` (over 31,000 light-years). The bracket represents this approximate
-whole-region span. The smaller photographed field is never stretched to fill it.
-
-## Interpretation
-
-The observed image is mapped onto a gently bowed, feather-edged sheet, including
-foreground/background stars. Its embedded JPEG is at most 1024 pixels wide.
-The bow is a presentation cue, not recovered depth: this is explicitly a 2.5D
-illustration, not a gas-density volume or catalog of member stars. It preserves
-the photograph's filaments and dark lanes better than a sparse point cloud.
-The bracket is a context cue, not a physical edge. No unseen structures are
-invented outside the photograph.
-
-Reproduce with `scripts/build_carina_model.py --reference-image eso1828b.jpg`.
+Rebuild: `./venv/bin/python scripts/build_nebula_volumes.py carina OUT.glb --image noao0136a.jpg`
+(NOIRLab "large" JPEG, 2069 x 3426 px; hash in models.json). This replaces an earlier flat VISTA
+infrared sheet (ESO eso1828b).

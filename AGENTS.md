@@ -477,17 +477,24 @@ node scripts/model_lab.cjs audit
   and diff whitespace checks pass. Chromium touch emulation is verified; actual
   iOS/Android hardware testing remains necessary.
 
-## Handoff (Claude, 2026-10-15): nebula volumes in progress
+## 2026-10-15 nebula volumes, Milky Way, human (Claude)
 
-- New: `scripts/nebula_volume.py` (photo -> calibrated additive sprite layers + star split),
-  `scripts/build_pillars_model.py` (registered as `pillars-of-creation-hubble-3d`; WIP: gas is
-  still speckled and too bright vs the photo, lower warm haze missing; tune counts/alpha).
-- `scripts/repair_glb.py` fixes EMPTY_ENTITY / POSITION-bounds validator errors.
-- DATA BUG to fix: `Pillars of Creation` value is 5e18 m (528 ly); NASA SVS 30774 says about
-  5 ly = 4.7303652362904e16 m. Fix in dataset/raw/legacy_yaml/length.yaml, rewrite the description,
-  rebuild with `./venv/bin/python -m scripts.dataset.rebuild_dimension length`.
-- Next: Orion (Pabst et al. 2019: ~4 pc half-shell bubble in front of the OMC-1 ionization front;
-  Trapezium at (0.445, 0.456) of the Hubble mosaic), Carina (replace infrared VISTA with NOIRLab
-  noao0136a, CC BY 4.0, 79.95 x 132.38 arcmin, about 174 x 289 ly at 7,500 ly), Tarantula (ESO
-  eso0650a large, R136 at (0.435, 0.245)) with nebula_volume.py; then Laniakea, HCB, Electron,
-  angular spins, 4x Length items, fly brain, EM mitochondrion, human model, neuron with axon.
+- Orion, Carina, Tarantula and the Pillars are now 3D glowing volumes built from real photos
+  (`scripts/nebula_volume.py`, `scripts/build_nebula_volumes.py`, `scripts/build_pillars_model.py`).
+  Photos are split into stars and gas; gas into a smooth part (big glow sprites on a jittered grid)
+  and filaments (small importance-sampled sprites). Alphas are calibrated so the front view
+  reproduces the photo (tests/test_nebula_volume.py checks light conservation). Depth: Orion from
+  O'Dell 2009 + Pabst 2019 geometry; Pillars from STScI's 3D mesh wearing the Hubble image;
+  Carina/Tarantula illustrative shells. Provenance in sources/{orion,carina,tarantula,pillars}-model.md.
+  The old flat-sheet builders and their tests were removed.
+- `pointSize.conserve` (glTF extras) keeps an additive cloud's brightness when sprites hit their
+  `max` size or the LOD thins them (opacity gain, capped at 8x). Used by all nebula clouds.
+- Milky Way: NASA/JPL face-on concept as glowing disk + 26k sampled 3D stars (`build_milky_way_model.py`).
+- Human Height: Renderpeople photoscan (CC BY). Alternatives (X-ray skeleton, walking woman) were
+  prepared in a scratch dir; ask the owner if they prefer them.
+- `scripts/repair_glb.py` fixes EMPTY_ENTITY / missing POSITION bounds validator errors.
+- Asset lock: Kenney license files recorded as stored with LF endings (`* text=auto`).
+- Codex jobs run in worktrees under ../universe-scales-codex/{items,flybrain,neuron,angular}
+  (briefs in ../universe-scales-codex/briefs); merge their branches codex/* after review.
+- Still open: Laniakea 3D (CF4 rights question), Hercules-Corona Borealis, classical electron
+  radius visual, real-data mitochondrion (handoff script in ../universe-scales-codex/mito/handoff).

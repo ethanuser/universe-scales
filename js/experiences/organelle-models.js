@@ -2,7 +2,7 @@
 // pyramidal neuron whose action potential animates along its axon.
 // Units are the model's own (mitochondrion: 1 = its length; neuron: micrometers).
 import * as THREE from '../vendor/three/three.module.min.js';
-import { labelNode } from './model-overlay-nodes.js?v=26a046c0b3';
+import { labelNode } from './model-overlay-nodes.js?v=ecd7a14690';
 import { registerAnimation } from './model-animation.js?v=540ebe0ea0';
 
 function seeded(seed) {

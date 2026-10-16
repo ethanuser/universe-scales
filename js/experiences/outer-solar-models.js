@@ -1,7 +1,7 @@
 // Outer-solar-system diagrams use AU as their scene unit. The particles and
 // flow lines are visual samples, not object counts or a dynamical simulation.
 import * as THREE from '../vendor/three/three.module.min.js';
-import { screenLine } from './model-overlay-nodes.js?v=26a046c0b3';
+import { screenLine } from './model-overlay-nodes.js?v=ecd7a14690';
 
 export const OORT_CLOUD = Object.freeze({
     innerHillsMinAU: 2_000,
