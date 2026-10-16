@@ -1939,6 +1939,51 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:length:scenario-length-mitochondrion
+  name: Mitochondrion
+  value: 4.3e-06
+  description: This mitochondrion, from a human T cell imaged by electron microscopy, is about 4.3 micrometers long and 1.4 wide; others range from under one micrometer to about ten. Mitochondria make most of a cell's ATP on their inner membrane, which folds into plates called cristae to fit more surface inside. They descend from bacteria taken in by an ancestral cell more than 1.5 billion years ago and still carry a small genome of their own.
+  description_format: markdown
+  summary_short: This mitochondrion, from a human T cell imaged by electron microscopy, is about 4.3 micrometers long and 1.4 wide; others range from under one micrometer to about ten.
+  description_medium: This mitochondrion, from a human T cell imaged by electron microscopy, is about 4.3 micrometers long and 1.4 wide; others range from under one micrometer to about ten. Mitochondria make most of a cell's ATP on their inner membrane, which folds into plates called cristae to fit more surface inside. They descend from bacteria taken in by an ancestral cell more than 1.5 billion years ago and still carry a small genome of their own.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/length.yaml
+    legacy_item_name: Mitochondrion
+    source_trace:
+      method: derived
+      original_value_text: '4.3e-06'
+      source_url: https://openorganelle.janelia.org/datasets/jrc_jurkat-1
+  source: https://openorganelle.janelia.org/datasets/jrc_jurkat-1
+  source_count: 2
+  sources:
+  - id: src:https-openorganelle-janelia-org-datasets-jrc-jurkat-1
+    url: https://openorganelle.janelia.org/datasets/jrc_jurkat-1
+    title: jrc jurkat-1
+    publisher: openorganelle.janelia.org
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-length-yaml
+    url: repo://dataset/raw/legacy_yaml/length.yaml
+    title: dataset/raw/legacy_yaml/length.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/length.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:length:scenario-length-budding-yeast-cell
   name: Budding Yeast Cell
   value: 5.0e-06
@@ -2148,51 +2193,6 @@ items:
     title: mmw bbody.html
     publisher: NASA
     license_text: null
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-legacy-yaml-length-yaml
-    url: repo://dataset/raw/legacy_yaml/length.yaml
-    title: dataset/raw/legacy_yaml/length.yaml
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: legacy_seed
-    note: dataset/raw/legacy_yaml/length.yaml
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
-- id: obs:length:scenario-length-mitochondrion
-  name: Mitochondrion
-  value: 1.0e-05
-  description: The size of mitochondria, the powerhouses of cells. These organelles contain their own DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP through cellular respiration, generating enough energy to power a cell's activities. Interestingly, mitochondria can fuse together and split apart, and they're inherited only from the mother, making them useful for tracing maternal ancestry.
-  description_format: markdown
-  summary_short: The size of mitochondria, the powerhouses of cells.
-  description_medium: The size of mitochondria, the powerhouses of cells. These organelles contain their own DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP through cellular respiration, generating enough energy to power a cell's activities. Interestingly, mitochondria can fuse together and split apart, and they're inherited only from the mother, making them useful for tracing maternal ancestry.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    ingest_source: dataset/raw/legacy_yaml/length.yaml
-    legacy_item_name: Mitochondrion
-    source_trace:
-      method: derived
-      original_value_text: 1e-5
-      source_url: https://en.wikipedia.org/wiki/Mitochondrion
-  source: https://en.wikipedia.org/wiki/Mitochondrion
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-mitochondrion
-    url: https://en.wikipedia.org/wiki/Mitochondrion
-    title: Mitochondrion
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
     source_class: secondary_reference
     source_type: web_page
     role: external_source

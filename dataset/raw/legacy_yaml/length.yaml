@@ -355,14 +355,14 @@ items:
   name: Infrared Wavelength
   source: https://lhea.gsfc.nasa.gov/archive/mwmw/mmw_bbody.html
   value: 9.35e-06
-- description: The size of mitochondria, the powerhouses of cells. These organelles contain their own
-    DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP
-    through cellular respiration, generating enough energy to power a cell's activities. Interestingly,
-    mitochondria can fuse together and split apart, and they're inherited only from the mother, making
-    them useful for tracing maternal ancestry.
+- description: This mitochondrion, from a human T cell imaged by electron microscopy, is about 4.3 micrometers
+    long and 1.4 wide; others range from under one micrometer to about ten. Mitochondria make most of a
+    cell's ATP on their inner membrane, which folds into plates called cristae to fit more surface inside.
+    They descend from bacteria taken in by an ancestral cell more than 1.5 billion years ago and still
+    carry a small genome of their own.
   name: Mitochondrion
-  source: https://en.wikipedia.org/wiki/Mitochondrion
-  value: 1e-5
+  source: https://openorganelle.janelia.org/datasets/jrc_jurkat-1
+  value: 4.3e-6
 - name: Neutrophil
   value: 1.2e-05
   source: https://en.wikipedia.org/wiki/Neutrophil

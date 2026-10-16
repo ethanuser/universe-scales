@@ -381,14 +381,9 @@ export function updateNeuron(root, elapsed) {
 }
 registerAnimation('action-potential', updateNeuron);
 
-export const organelleModelMetadata = Object.freeze({
-    'Mitochondrion': Object.freeze({ id: 'mitochondrion-lamellar-section', procedural: 'mitochondrion-section', geometry: 'mesh',
-        presentation: Object.freeze({ reference_size: 1, layout_width_factor: 1.05, focus_scale_factor: 1.3,
-            display_extent_factor: 1, pitch: 26, yaw: -30 }),
-        basis_url: 'https://doi.org/10.1016/j.bbabio.2009.09.010',
-        basis_label: 'Cristae architecture: electron tomography',
-        note: 'A mitochondrion cut lengthwise. Its double membrane (a tan outer membrane around an orange inner membrane) encloses the matrix, where the inner membrane folds inward as about 17 perforated, plate-like cristae, the lamellar form seen in electron tomography of many animal cells. The long axis is the listed 10 micrometers. Real mitochondria vary a lot in shape and in cristae count and spacing, and are often much thinner; sizes and folds here are a schematic, not a reconstruction of one organelle.' }),
-});
+// The Mitochondrion item now uses a registered GLB of a real organelle from FIB-SEM
+// data (models.json: em-mitochondrion-jurkat); procedural entries here would shadow it.
+export const organelleModelMetadata = Object.freeze({});
 
 export const organelleScenes = Object.freeze({
     'mitochondrion-section': mitochondrionScene,

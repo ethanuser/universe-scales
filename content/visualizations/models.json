@@ -5180,6 +5180,133 @@
       "animations": 0,
       "skins": 0,
       "src": "content/visualizations/models/fruit-fly-brain-flywire.glb"
+    },
+    {
+      "id": "em-mitochondrion-jurkat",
+      "source": "https://openorganelle.janelia.org/datasets/jrc_jurkat-1",
+      "link_label": "OpenOrganelle dataset",
+      "author": "Data: Janelia COSEM Project Team (Heinrich et al. 2021; Xu et al. 2021), OpenOrganelle jrc_jurkat-1; mesh: Universe Scales",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/em-mitochondrion.md"
+      ],
+      "matches": {
+        "length": [
+          "Mitochondrion"
+        ]
+      },
+      "geometry": "mesh",
+      "basis_url": "https://doi.org/10.1038/s41586-021-03977-3",
+      "basis_label": "Whole-cell organelle segmentation (Heinrich et al. 2021)",
+      "presentation": {
+        "measure_axis": "x",
+        "layout_width_factor": 1.05,
+        "focus_scale_factor": 1.25,
+        "pitch": 18,
+        "yaw": -24
+      },
+      "note": "One real mitochondrion, 4.3 micrometers long, from a human Jurkat T cell imaged by focused-ion-beam electron microscopy at 4 nanometer resolution (Janelia OpenOrganelle). The translucent shell is the organelle's segmented outline; inside, the orange sheets are its cristae, the folded inner membrane where ATP is made, as found by the COSEM team's neural network in the electron micrographs. Faint cristae the network missed are absent, so the folding shown is a lower bound.",
+      "processing": {
+        "script": "scripts/build_em_mitochondrion.py",
+        "dataset": "jrc_jurkat-1",
+        "object_id": 265,
+        "stats": {
+          "length_nm": 4283.768869920182,
+          "width_nm": 1400.928171212579,
+          "depth_nm": 1134.8807115960517,
+          "mask_volume_um3": 1.961695552,
+          "outer_surface_area_um2": 12.756430440682546,
+          "cristae_two_sided_shell_area_um2": 12.869572334169519,
+          "triangles_shell": 13998,
+          "triangles_cristae": 89980
+        },
+        "crop_hashes": {
+          "mito_seg_crop_uint16": "220adacf4d93e6b92945ef74a3ff970722b8359f9b2a0442437d4506f501071d",
+          "mito-mem_pred_crop_uint8": "bb2699d3b545bda21ebc57406d6c18d3639804f8be7be368dc24d4145b65edb0"
+        },
+        "crop_lo_xyz_voxels": [
+          4644,
+          268,
+          5500
+        ],
+        "crop_hi_xyz_voxels": [
+          5188,
+          724,
+          6692
+        ],
+        "voxel_xyz_nm": [
+          4.0,
+          4.0,
+          3.44
+        ],
+        "mean_prediction_inside_object": 90.33171472602415
+      },
+      "src": "content/visualizations/models/em-mitochondrion-jurkat.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1869564,
+      "sha256": "eed2b81cd6cdab7732c045bdc0223d8dfa0ef7dee74dc2b42310baa4f41bda11",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 103978,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "laniakea-2mrs-galaxies",
+      "source": "https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=J/ApJS/199/26",
+      "link_label": "2MASS Redshift Survey catalog",
+      "author": "Galaxy catalog: Huchra et al. 2012, 2MASS Redshift Survey (VizieR J/ApJS/199/26); 3D assembly: Universe Scales",
+      "license": "Scientific catalog used with citation (CDS/VizieR terms); model under the project code license",
+      "license_url": "https://cds.unistra.fr/vizier-org/licences_vizier.html",
+      "license_files": [
+        "sources/laniakea-galaxies.md"
+      ],
+      "matches": {
+        "length": [
+          "Laniakea Supercluster"
+        ]
+      },
+      "geometry": "mesh",
+      "basis_url": "https://doi.org/10.1038/nature13674",
+      "basis_label": "Laniakea: Tully et al. 2014",
+      "presentation": {
+        "reference_size": 160,
+        "layout_width_factor": 1.1,
+        "focus_scale_factor": 1.2,
+        "pitch": 18
+      },
+      "note": "11,733 real galaxies from the 2MASS Redshift Survey within about 80 megaparsecs of a point between the Milky Way and the Great Attractor, roughly the 160-megaparsec region Tully and colleagues named Laniakea. Each glowing point is a galaxy, placed by its redshift (H0 = 75 km/s/Mpc) in supergalactic coordinates; the supergalactic plane is horizontal. Positions are in redshift space, so clusters stretch toward us, and the Milky Way's own dust hides a wedge of sky. Laniakea is defined by galaxy flows, which this model does not show: no membership boundary is drawn.",
+      "processing": {
+        "script": "scripts/build_laniakea_galaxies.py",
+        "catalog_sha256": "3ed9e506cf91639302e84af8f74c4e5af518b66150687c5a1a0b303193ea8f84",
+        "hubble_constant": 75,
+        "selection_radius_mpc": 80
+      },
+      "src": "content/visualizations/models/laniakea-2mrs-galaxies.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 371648,
+      "sha256": "d5a8898f66a4ecf62558b87af3d41aac40ac20f5a666e049c54a3fdf87aa170c",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

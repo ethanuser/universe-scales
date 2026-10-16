@@ -2266,6 +2266,60 @@
     {
       "caveats": null,
       "content_status": "seeded",
+      "description": "This mitochondrion, from a human T cell imaged by electron microscopy, is about 4.3 micrometers long and 1.4 wide; others range from under one micrometer to about ten. Mitochondria make most of a cell's ATP on their inner membrane, which folds into plates called cristae to fit more surface inside. They descend from bacteria taken in by an ancestral cell more than 1.5 billion years ago and still carry a small genome of their own.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "This mitochondrion, from a human T cell imaged by electron microscopy, is about 4.3 micrometers long and 1.4 wide; others range from under one micrometer to about ten. Mitochondria make most of a cell's ATP on their inner membrane, which folds into plates called cristae to fit more surface inside. They descend from bacteria taken in by an ancestral cell more than 1.5 billion years ago and still carry a small genome of their own.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Mitochondrion",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4.3e-06",
+          "source_url": "https://openorganelle.janelia.org/datasets/jrc_jurkat-1"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-mitochondrion",
+      "name": "Mitochondrion",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://openorganelle.janelia.org/datasets/jrc_jurkat-1",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-openorganelle-janelia-org-datasets-jrc-jurkat-1",
+          "license_text": null,
+          "note": null,
+          "publisher": "openorganelle.janelia.org",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "jrc jurkat-1",
+          "url": "https://openorganelle.janelia.org/datasets/jrc_jurkat-1"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "This mitochondrion, from a human T cell imaged by electron microscopy, is about 4.3 micrometers long and 1.4 wide; others range from under one micrometer to about ten.",
+      "value": 4.3e-06,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
       "description": "A budding yeast cell can be about five micrometers across, at the small end of the usual size range. This single-celled fungus reproduces by growing a daughter cell from its surface, and its metabolism makes bread rise and supports fermentation. A familiar kitchen process therefore depends on cells comparable in width to a chloroplast, each carrying the machinery of a complete organism.",
       "description_format": "markdown",
       "description_long": null,
@@ -2530,60 +2584,6 @@
       ],
       "summary_short": "The approximate thermal emission peak of a 310 K body.",
       "value": 9.35e-06,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "The size of mitochondria, the powerhouses of cells. These organelles contain their own DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP through cellular respiration, generating enough energy to power a cell's activities. Interestingly, mitochondria can fuse together and split apart, and they're inherited only from the mother, making them useful for tracing maternal ancestry.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The size of mitochondria, the powerhouses of cells. These organelles contain their own DNA, suggesting they were once free-living bacteria that became symbiotic partners. They produce ATP through cellular respiration, generating enough energy to power a cell's activities. Interestingly, mitochondria can fuse together and split apart, and they're inherited only from the mother, making them useful for tracing maternal ancestry.",
-      "display_status": "display",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Mitochondrion",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "1e-5",
-          "source_url": "https://en.wikipedia.org/wiki/Mitochondrion"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-mitochondrion",
-      "name": "Mitochondrion",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Mitochondrion",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-mitochondrion",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Mitochondrion",
-          "url": "https://en.wikipedia.org/wiki/Mitochondrion"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "The size of mitochondria, the powerhouses of cells.",
-      "value": 1e-05,
       "value_type": "derived",
       "wikidata_qid": null
     },
