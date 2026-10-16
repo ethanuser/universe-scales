@@ -1,0 +1,1136 @@
+{
+  "source": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-019-1874-z/MediaObjects/41586_2019_1874_MOESM1_ESM.html",
+  "paper": "https://doi.org/10.1038/s41586-019-1874-z",
+  "frame": "Heliocentric Galactic Cartesian pc: X toward Galactic center, Y toward l=90, Z north",
+  "selection": "All 141 points in the authors' Radcliffe Wave trace; no fit or posterior samples",
+  "clouds": [
+    {
+      "name": "CB28",
+      "xyz_pc": [
+        -328,
+        -146,
+        -170
+      ]
+    },
+    {
+      "name": "CB29",
+      "xyz_pc": [
+        -313,
+        -151,
+        -137
+      ]
+    },
+    {
+      "name": "CMa_OB1",
+      "xyz_pc": [
+        -855,
+        -795,
+        -38
+      ]
+    },
+    {
+      "name": "CMa_OB1",
+      "xyz_pc": [
+        -895,
+        -895,
+        -4
+      ]
+    },
+    {
+      "name": "CMa_OB1",
+      "xyz_pc": [
+        -900,
+        -884,
+        -4
+      ]
+    },
+    {
+      "name": "CMa_OB1",
+      "xyz_pc": [
+        -890,
+        -902,
+        6
+      ]
+    },
+    {
+      "name": "Cam",
+      "xyz_pc": [
+        -296,
+        182,
+        110
+      ]
+    },
+    {
+      "name": "Cam",
+      "xyz_pc": [
+        -185,
+        124,
+        71
+      ]
+    },
+    {
+      "name": "Cam",
+      "xyz_pc": [
+        -171,
+        120,
+        67
+      ]
+    },
+    {
+      "name": "Cam",
+      "xyz_pc": [
+        -299,
+        181,
+        112
+      ]
+    },
+    {
+      "name": "Cam",
+      "xyz_pc": [
+        -171,
+        113,
+        63
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -101,
+        344,
+        114
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -99,
+        298,
+        105
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -81,
+        339,
+        83
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -127,
+        304,
+        97
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -144,
+        294,
+        120
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -126,
+        316,
+        126
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -110,
+        310,
+        100
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -103,
+        313,
+        104
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -110,
+        301,
+        100
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -79,
+        320,
+        85
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -135,
+        323,
+        133
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -113,
+        287,
+        117
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -145,
+        308,
+        108
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -128,
+        296,
+        92
+      ]
+    },
+    {
+      "name": "Cepheus",
+      "xyz_pc": [
+        -138,
+        301,
+        98
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        208,
+        1208,
+        2
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        101,
+        754,
+        13
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        180,
+        901,
+        9
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        163,
+        957,
+        49
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        172,
+        975,
+        -12
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        157,
+        1262,
+        15
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        191,
+        877,
+        20
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        286,
+        1476,
+        97
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        200,
+        1197,
+        23
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        242,
+        1419,
+        -60
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        289,
+        1275,
+        47
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        189,
+        983,
+        52
+      ]
+    },
+    {
+      "name": "CygnusX",
+      "xyz_pc": [
+        370,
+        1577,
+        62
+      ]
+    },
+    {
+      "name": "IC2118",
+      "xyz_pc": [
+        -225,
+        -114,
+        -126
+      ]
+    },
+    {
+      "name": "IC2118",
+      "xyz_pc": [
+        -215,
+        -111,
+        -124
+      ]
+    },
+    {
+      "name": "IC2118",
+      "xyz_pc": [
+        -264,
+        -131,
+        -143
+      ]
+    },
+    {
+      "name": "IC5146",
+      "xyz_pc": [
+        -50,
+        725,
+        -62
+      ]
+    },
+    {
+      "name": "IC5146",
+      "xyz_pc": [
+        -46,
+        788,
+        -58
+      ]
+    },
+    {
+      "name": "IC5146",
+      "xyz_pc": [
+        -49,
+        769,
+        -62
+      ]
+    },
+    {
+      "name": "IC5146",
+      "xyz_pc": [
+        -57,
+        745,
+        -71
+      ]
+    },
+    {
+      "name": "L1228",
+      "xyz_pc": [
+        -127,
+        318,
+        126
+      ]
+    },
+    {
+      "name": "L1228D",
+      "xyz_pc": [
+        -180,
+        441,
+        117
+      ]
+    },
+    {
+      "name": "L1251",
+      "xyz_pc": [
+        -141,
+        308,
+        87
+      ]
+    },
+    {
+      "name": "L1265",
+      "xyz_pc": [
+        -150,
+        309,
+        -12
+      ]
+    },
+    {
+      "name": "L1333",
+      "xyz_pc": [
+        -172,
+        213,
+        67
+      ]
+    },
+    {
+      "name": "L1616",
+      "xyz_pc": [
+        -326,
+        -141,
+        -164
+      ]
+    },
+    {
+      "name": "L1617",
+      "xyz_pc": [
+        -371,
+        -161,
+        -86
+      ]
+    },
+    {
+      "name": "L1622",
+      "xyz_pc": [
+        -371,
+        -170,
+        -85
+      ]
+    },
+    {
+      "name": "L1634",
+      "xyz_pc": [
+        -316,
+        -165,
+        -153
+      ]
+    },
+    {
+      "name": "L1634",
+      "xyz_pc": [
+        -297,
+        -155,
+        -141
+      ]
+    },
+    {
+      "name": "L977",
+      "xyz_pc": [
+        2,
+        641,
+        24
+      ]
+    },
+    {
+      "name": "L977",
+      "xyz_pc": [
+        5,
+        659,
+        23
+      ]
+    },
+    {
+      "name": "L988",
+      "xyz_pc": [
+        -7,
+        626,
+        26
+      ]
+    },
+    {
+      "name": "L988",
+      "xyz_pc": [
+        -2,
+        611,
+        24
+      ]
+    },
+    {
+      "name": "LBN906",
+      "xyz_pc": [
+        -226,
+        -92,
+        -149
+      ]
+    },
+    {
+      "name": "LBN917",
+      "xyz_pc": [
+        -183,
+        -80,
+        -117
+      ]
+    },
+    {
+      "name": "LBN942",
+      "xyz_pc": [
+        -214,
+        -102,
+        -96
+      ]
+    },
+    {
+      "name": "LBN968",
+      "xyz_pc": [
+        -246,
+        -133,
+        -151
+      ]
+    },
+    {
+      "name": "LBN969",
+      "xyz_pc": [
+        -223,
+        -120,
+        -103
+      ]
+    },
+    {
+      "name": "LBN991",
+      "xyz_pc": [
+        -297,
+        -197,
+        -197
+      ]
+    },
+    {
+      "name": "Lacerta",
+      "xyz_pc": [
+        -52,
+        493,
+        -89
+      ]
+    },
+    {
+      "name": "MonR2",
+      "xyz_pc": [
+        -654,
+        -424,
+        -172
+      ]
+    },
+    {
+      "name": "Mon_R2",
+      "xyz_pc": [
+        -610,
+        -432,
+        -171
+      ]
+    },
+    {
+      "name": "Mon_R2",
+      "xyz_pc": [
+        -724,
+        -590,
+        -126
+      ]
+    },
+    {
+      "name": "Mon_R2",
+      "xyz_pc": [
+        -684,
+        -592,
+        -132
+      ]
+    },
+    {
+      "name": "Mon_R2",
+      "xyz_pc": [
+        -639,
+        -430,
+        -162
+      ]
+    },
+    {
+      "name": "Mon_R2",
+      "xyz_pc": [
+        -704,
+        -576,
+        -152
+      ]
+    },
+    {
+      "name": "NorthAmerica",
+      "xyz_pc": [
+        122,
+        842,
+        -25
+      ]
+    },
+    {
+      "name": "NorthAmerica",
+      "xyz_pc": [
+        85,
+        775,
+        -28
+      ]
+    },
+    {
+      "name": "NorthAmerica",
+      "xyz_pc": [
+        101,
+        802,
+        -29
+      ]
+    },
+    {
+      "name": "NorthAmerica",
+      "xyz_pc": [
+        74,
+        788,
+        1
+      ]
+    },
+    {
+      "name": "NorthAmerica",
+      "xyz_pc": [
+        43,
+        729,
+        -26
+      ]
+    },
+    {
+      "name": "NorthAmerica",
+      "xyz_pc": [
+        61,
+        831,
+        -32
+      ]
+    },
+    {
+      "name": "NorthAmerica",
+      "xyz_pc": [
+        79,
+        874,
+        -18
+      ]
+    },
+    {
+      "name": "NorthAmericaNebula",
+      "xyz_pc": [
+        64,
+        781,
+        -10
+      ]
+    },
+    {
+      "name": "NorthAmericaNebula",
+      "xyz_pc": [
+        81,
+        806,
+        -18
+      ]
+    },
+    {
+      "name": "NorthAmericaNebula",
+      "xyz_pc": [
+        74,
+        817,
+        -24
+      ]
+    },
+    {
+      "name": "NorthernCoalsack",
+      "xyz_pc": [
+        -13,
+        575,
+        42
+      ]
+    },
+    {
+      "name": "NorthernCoalsack",
+      "xyz_pc": [
+        -25,
+        559,
+        34
+      ]
+    },
+    {
+      "name": "NorthernCoalsack",
+      "xyz_pc": [
+        -20,
+        545,
+        41
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -366,
+        -169,
+        -95
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -384,
+        -199,
+        -124
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -358,
+        -164,
+        -137
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -380,
+        -148,
+        -100
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -358,
+        -145,
+        -96
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -358,
+        -205,
+        -146
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -420,
+        -267,
+        -155
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -323,
+        -223,
+        -135
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -347,
+        -184,
+        -118
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -330,
+        -178,
+        -133
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -329,
+        -209,
+        -141
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -379,
+        -182,
+        -111
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -434,
+        -175,
+        -110
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -379,
+        -238,
+        -150
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -365,
+        -203,
+        -151
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -323,
+        -179,
+        -135
+      ]
+    },
+    {
+      "name": "Orion",
+      "xyz_pc": [
+        -373,
+        -185,
+        -114
+      ]
+    },
+    {
+      "name": "Orion_Lam",
+      "xyz_pc": [
+        -404,
+        -106,
+        -74
+      ]
+    },
+    {
+      "name": "Orion_Lam",
+      "xyz_pc": [
+        -399,
+        -105,
+        -88
+      ]
+    },
+    {
+      "name": "Orion_Lam",
+      "xyz_pc": [
+        -373,
+        -113,
+        -56
+      ]
+    },
+    {
+      "name": "Orion_Lam",
+      "xyz_pc": [
+        -362,
+        -128,
+        -81
+      ]
+    },
+    {
+      "name": "Orion_Lam",
+      "xyz_pc": [
+        -391,
+        -85,
+        -62
+      ]
+    },
+    {
+      "name": "Orion_Lam",
+      "xyz_pc": [
+        -392,
+        -117,
+        -118
+      ]
+    },
+    {
+      "name": "Orion_Lam",
+      "xyz_pc": [
+        -373,
+        -103,
+        -94
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -252,
+        104,
+        -88
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -248,
+        99,
+        -102
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -206,
+        84,
+        -87
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -249,
+        86,
+        -80
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -253,
+        96,
+        -104
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -254,
+        88,
+        -91
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -230,
+        82,
+        -73
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -225,
+        91,
+        -102
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -204,
+        76,
+        -85
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -247,
+        90,
+        -90
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -306,
+        113,
+        -116
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -241,
+        91,
+        -97
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -209,
+        82,
+        -91
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -254,
+        99,
+        -99
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -272,
+        99,
+        -94
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -296,
+        107,
+        -100
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -268,
+        93,
+        -83
+      ]
+    },
+    {
+      "name": "Perseus",
+      "xyz_pc": [
+        -255,
+        91,
+        -83
+      ]
+    },
+    {
+      "name": "Polaris",
+      "xyz_pc": [
+        -207,
+        251,
+        101
+      ]
+    },
+    {
+      "name": "Polaris",
+      "xyz_pc": [
+        -189,
+        257,
+        124
+      ]
+    },
+    {
+      "name": "S106",
+      "xyz_pc": [
+        263,
+        1058,
+        -13
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -140,
+        20,
+        -44
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -148,
+        22,
+        -35
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -128,
+        31,
+        -39
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -163,
+        28,
+        -36
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -152,
+        14,
+        -42
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -119,
+        21,
+        -42
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -131,
+        17,
+        -34
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -151,
+        11,
+        -34
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -123,
+        18,
+        -35
+      ]
+    },
+    {
+      "name": "Taurus",
+      "xyz_pc": [
+        -141,
+        16,
+        -36
+      ]
+    }
+  ]
+}

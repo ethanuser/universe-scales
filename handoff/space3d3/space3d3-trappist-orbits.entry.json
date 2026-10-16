@@ -1,0 +1,89 @@
+{
+  "id": "space3d3-trappist-orbits",
+  "matches": {
+    "length": [
+      "TRAPPIST-1 System"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://arxiv.org/html/2010.01074v2",
+  "reference": "content/visualizations/models/sources/space3d3-trappist-orbits.md",
+  "representation": "measurement-diagram",
+  "note": "Seven coplanar circular reference orbits use Agol et al. (2021) semimajor axes, planet radii and 0.1192-solar-radius star. The circular approximation omits their small measured eccentricities; planet phases and the inspection view are authored, not ephemeris. Planet/star radii share the AU orbit scale; thin outline markers keep tiny planets findable. Colors are illustrative and do not assert surface maps, oceans or habitability. The outer orbit\u2019s 0.12378 AU diameter is close to the catalog\u2019s rounded 0.1238 AU.",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.12380000000000001,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "pitch": 30,
+    "roll": -14
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "AU",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [],
+    "planet_count": 7,
+    "star_radius_solar": 0.1192,
+    "circular_approximation": true,
+    "planet_parameters": [
+      {
+        "name": "b",
+        "a_au": 0.01154,
+        "radius_km": 7119
+      },
+      {
+        "name": "c",
+        "a_au": 0.0158,
+        "radius_km": 6995
+      },
+      {
+        "name": "d",
+        "a_au": 0.02227,
+        "radius_km": 5026
+      },
+      {
+        "name": "e",
+        "a_au": 0.02925,
+        "radius_km": 5868
+      },
+      {
+        "name": "f",
+        "a_au": 0.03849,
+        "radius_km": 6664
+      },
+      {
+        "name": "g",
+        "a_au": 0.04683,
+        "radius_km": 7204
+      },
+      {
+        "name": "h",
+        "a_au": 0.06189,
+        "radius_km": 4817
+      }
+    ],
+    "phase_semantics": "Authored positions; no date or dynamical state implied"
+  },
+  "src": "content/visualizations/models/space3d3-trappist-orbits.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 242332,
+  "sha256": "05cbb5ac2a05246f9d77f154372d38f28e65b0b733eac12858ee9b60231b8759",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 16,
+  "triangle_count": 5904,
+  "animations": 0,
+  "skins": 0
+}

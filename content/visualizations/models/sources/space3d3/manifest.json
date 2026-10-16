@@ -1,0 +1,45 @@
+{
+  "retrieved": "2026-10-16",
+  "sources": [
+    {
+      "file": "webb-vectors.json",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27-170%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%40399%27&START_TIME=%272024-01-01%27&STOP_TIME=%272025-01-01%27&STEP_SIZE=%272+d%27&OUT_UNITS=%27KM-S%27&REF_PLANE=%27ECLIPTIC%27&REF_SYSTEM=%27ICRF%27&VEC_TABLE=%271%27&CSV_FORMAT=%27YES%27&VEC_CORR=%27NONE%27",
+      "source_bytes": 27365,
+      "source_sha256": "49fb34cea459f1eb540b93b21c844023326e69268c604b5a3db56b22eaa793e4",
+      "sha256": "9a7b10fa9145e00fbafe614078351dc4b5bdf02c69feecd1dc8ce0a697f9436e"
+    },
+    {
+      "file": "sun-vectors.json",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%2710%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%40399%27&START_TIME=%272024-01-01%27&STOP_TIME=%272025-01-01%27&STEP_SIZE=%272+d%27&OUT_UNITS=%27KM-S%27&REF_PLANE=%27ECLIPTIC%27&REF_SYSTEM=%27ICRF%27&VEC_TABLE=%271%27&CSV_FORMAT=%27YES%27&VEC_CORR=%27NONE%27",
+      "source_bytes": 27344,
+      "source_sha256": "96810fea74cc21a9e25d76c60a07ea0c669aca5971d6b832596c6369b6b62eb5",
+      "sha256": "9ff6d42265e7a7d04ed4bcc91dc0f1e69e5d609f4a8b33373c6f9d926575684a"
+    },
+    {
+      "file": "radcliffe-clouds.json",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-019-1874-z/MediaObjects/41586_2019_1874_MOESM1_ESM.html",
+      "source_bytes": 5179773,
+      "source_sha256": "ce974a580010f8adacd0f3be41137f54686701a82d235f99ab43a433adce0680",
+      "sha256": "e3636c5c465a139339a209c81f2fcb35f7bc3f14f53b047baa789e67864ede2e"
+    },
+    {
+      "file": "radcliffe-data-rights.json",
+      "url": "https://api.datacite.org/dois/10.7910/DVN/07L7YZ",
+      "source_bytes": 13707,
+      "source_sha256": "d44ec2a4754cdcd1c9b948626750aabf58737cc8b45a87175c44db7ddec0cb0e",
+      "sha256": "430b57e74fcac6e82c4902749b7722f0071cc1e550910e6baff8a68275f0d6d9"
+    },
+    {
+      "file": "m87-eht.jpg",
+      "url": "https://cdn.eso.org/images/publicationjpg/eso1907a.jpg",
+      "source_bytes": 413166,
+      "source_sha256": "9b82865f14efc6d001d97d9eb6215e18de5f2ba8322b513f1673e2e2b2dca341",
+      "sha256": "9b82865f14efc6d001d97d9eb6215e18de5f2ba8322b513f1673e2e2b2dca341"
+    },
+    {
+      "file": "parameters.json",
+      "sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+      "note": "Numerical facts transcribed from the primary sources listed in the file"
+    }
+  ]
+}

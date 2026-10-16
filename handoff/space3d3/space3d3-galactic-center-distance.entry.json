@@ -1,0 +1,69 @@
+{
+  "id": "space3d3-galactic-center-distance",
+  "matches": {
+    "length": [
+      "Sun-Galactic Center Distance"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://arxiv.org/html/1904.05721v1",
+  "reference": "content/visualizations/models/sources/space3d3-galactic-center-distance.md",
+  "representation": "measurement-diagram",
+  "note": "A Sun-to-Galactic-center measurement diagram spanning the 2019 GRAVITY geometric distance of 8,178 pc. The only local cloud context is the same 141 measured Alves et al. (2020) Radcliffe cloud locations, drawn in true heliocentric Galactic Cartesian parsecs at the same scale. X points toward the Galactic Center; Galactic north is up. Endpoint glyphs are location aids, not the dimensions of the Sun or black hole. No Milky Way outline, star density or galactic bar is invented.",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 8178,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "pitch": 20,
+    "yaw": -10
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "pc",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [],
+    "center_distance_pc": 8178,
+    "cloud_count": 141,
+    "vertical_exaggeration": 1,
+    "pinned_inputs": [
+      {
+        "file": "radcliffe-clouds.json",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-019-1874-z/MediaObjects/41586_2019_1874_MOESM1_ESM.html",
+        "source_bytes": 5179773,
+        "source_sha256": "ce974a580010f8adacd0f3be41137f54686701a82d235f99ab43a433adce0680",
+        "sha256": "e3636c5c465a139339a209c81f2fcb35f7bc3f14f53b047baa789e67864ede2e"
+      },
+      {
+        "file": "radcliffe-data-rights.json",
+        "url": "https://api.datacite.org/dois/10.7910/DVN/07L7YZ",
+        "source_bytes": 13707,
+        "source_sha256": "d44ec2a4754cdcd1c9b948626750aabf58737cc8b45a87175c44db7ddec0cb0e",
+        "sha256": "430b57e74fcac6e82c4902749b7722f0071cc1e550910e6baff8a68275f0d6d9"
+      }
+    ]
+  },
+  "src": "content/visualizations/models/space3d3-galactic-center-distance.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 21080,
+  "sha256": "f76e51578464c05bae7dcc5db4b23bd13b375d083cab8f696909083ca2605b61",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 6,
+  "triangle_count": 448,
+  "animations": 0,
+  "skins": 0
+}

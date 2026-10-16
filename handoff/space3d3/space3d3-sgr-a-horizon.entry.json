@@ -1,0 +1,52 @@
+{
+  "id": "space3d3-sgr-a-horizon",
+  "matches": {
+    "length": [
+      "Sagittarius A* Event Horizon"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://arxiv.org/html/1904.05721v1",
+  "reference": "content/visualizations/models/sources/space3d3-sgr-a-horizon.md",
+  "representation": "measurement-diagram",
+  "note": "A Schwarzschild reference horizon calculated as r_s = 2GM/c\u00b2 from the 2019 GRAVITY noise-model mass of 4.152 million solar masses. Its Euclidean drawing diameter is about 24.52 million km, close to the catalog\u2019s approximate 25.4 million km. This is a mass-based nonrotating reference boundary, not an observed black surface, EHT shadow, accretion disk, or embedding of curved space. Violet great circles and the rim are authored guides to the causal boundary; their thickness is not physical. Spin and mass uncertainty are not modeled.",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 25400000.0,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "pitch": 15,
+    "yaw": 18
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "km",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [],
+    "mass_solar": 4152000,
+    "schwarzschild_radius_km": 12261894.319782227,
+    "spin_assumption": 0,
+    "solar_gm_km3_s2": 132712440041.27942
+  },
+  "src": "content/visualizations/models/space3d3-sgr-a-horizon.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 261744,
+  "sha256": "a460dad0d9c723fa7c1d50a1af75e1f0a891f98b4c5919921965047fdd72bac7",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 5,
+  "triangle_count": 9024,
+  "animations": 0,
+  "skins": 0
+}

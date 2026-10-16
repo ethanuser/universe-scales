@@ -1,0 +1,60 @@
+{
+  "id": "space3d3-geostationary-altitude",
+  "matches": {
+    "length": [
+      "Geostationary Orbit"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit",
+  "reference": "content/visualizations/models/sources/space3d3-geostationary-altitude.md",
+  "representation": "measurement-diagram",
+  "note": "A 35,786 km surface-to-orbit radial altitude, with the Earth at the same physical scale. The nearby cyan arc is only a 24-degree segment of the circular equatorial geostationary orbit, not its full diameter. The center-to-orbit radius is Earth\u2019s equatorial radius plus the listed altitude. The spacecraft point is a location glyph. The inspection pose foreshortens the radial ruler slightly; no coordinates are stretched.",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "yaw": 40,
+    "pitch": 25
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "reference distance",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [],
+    "source_models": [
+      {
+        "id": "nasa-earth",
+        "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
+        "source": "https://science.nasa.gov/resource/earth-3d-model/"
+      }
+    ],
+    "altitude_km": 35786,
+    "earth_equatorial_radius_km": 6378.137,
+    "center_to_orbit_km": 42164.136999999995,
+    "shown_orbit_arc_degrees": 24
+  },
+  "src": "content/visualizations/models/space3d3-geostationary-altitude.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 138440,
+  "sha256": "73215a3958c339f28117de50a58187e397854b7e3c5acee13c2bdb66198e3a25",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 2432,
+  "animations": 0,
+  "skins": 0
+}

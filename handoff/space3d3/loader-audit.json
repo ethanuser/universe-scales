@@ -1,0 +1,290 @@
+{
+  "method": "Vendored production GLTFLoader, with placeholder image decoding; native geometry + orthographic rest bounds. No WebGL, texture appearance, perspective, actual explorer or mobile certification.",
+  "models": [
+    {
+      "id": "space3d3-alpha-cen-relative-orbit",
+      "registered": true,
+      "nativeExtent": [
+        47.72421073913574,
+        44.487945556640625,
+        0.37439998984336853
+      ],
+      "normalizedRestExtent": [
+        1.0819200285037842,
+        0.9298256116161778,
+        0.4139850346260764
+      ],
+      "displayedExtentPerValue": 1.0819200285037842,
+      "triangles": 448,
+      "points": 0,
+      "lines": 1003,
+      "pass": true
+    },
+    {
+      "id": "space3d3-barnard-distance",
+      "registered": true,
+      "nativeExtent": [
+        6.017703261226416,
+        0.9720165990293026,
+        0.047703199088573456
+      ],
+      "normalizedRestExtent": [
+        0.9871782933547996,
+        0.1630107160994319,
+        0.21602528242681174
+      ],
+      "displayedExtentPerValue": 0.9871782933547996,
+      "triangles": 448,
+      "points": 0,
+      "lines": 9,
+      "pass": true
+    },
+    {
+      "id": "space3d3-galactic-center-distance",
+      "registered": true,
+      "nativeExtent": [
+        9110.7119140625,
+        1269.741943359375,
+        2479
+      ],
+      "normalizedRestExtent": [
+        1.1158968840165089,
+        0.25244473918449495,
+        0.33559594334041326
+      ],
+      "displayedExtentPerValue": 1.1158968840165089,
+      "triangles": 448,
+      "points": 141,
+      "lines": 11,
+      "pass": true
+    },
+    {
+      "id": "space3d3-geostationary-altitude",
+      "registered": true,
+      "nativeExtent": [
+        1.3604599086259879,
+        0.4682299419152279,
+        0.48993557691574097
+      ],
+      "normalizedRestExtent": [
+        1.2183756160272305,
+        0.6067956648035592,
+        1.0193868778365762
+      ],
+      "displayedExtentPerValue": 1.2183756160272305,
+      "triangles": 2432,
+      "points": 0,
+      "lines": 163,
+      "pass": true
+    },
+    {
+      "id": "space3d3-iss-altitude",
+      "registered": true,
+      "nativeExtent": [
+        0.8998788595199585,
+        1.103999949991703,
+        0.6399564146995544
+      ],
+      "normalizedRestExtent": [
+        1.0150697407720395,
+        1.220318514734685,
+        0.8016758880295506
+      ],
+      "displayedExtentPerValue": 1.220318514734685,
+      "triangles": 3216,
+      "points": 0,
+      "lines": 7,
+      "pass": true
+    },
+    {
+      "id": "space3d3-light-year-distance",
+      "registered": true,
+      "nativeExtent": [
+        1.0079999486915767,
+        0.1629999945871532,
+        0.00800000037997961
+      ],
+      "normalizedRestExtent": [
+        0.9860136106294979,
+        0.1629999945871532,
+        0.2157777371213611
+      ],
+      "displayedExtentPerValue": 0.9860136106294979,
+      "triangles": 448,
+      "points": 0,
+      "lines": 15,
+      "pass": true
+    },
+    {
+      "id": "space3d3-m87-eht-ring",
+      "registered": true,
+      "nativeExtent": [
+        130889760768,
+        131417542656,
+        1
+      ],
+      "normalizedRestExtent": [
+        1.2707743763883494,
+        1.2758984723883495,
+        9.70873786407767e-12
+      ],
+      "displayedExtentPerValue": 1.2758984723883495,
+      "triangles": 2816,
+      "points": 0,
+      "lines": 3,
+      "pass": true
+    },
+    {
+      "id": "space3d3-radcliffe-clouds",
+      "registered": true,
+      "nativeExtent": [
+        2779.826416015625,
+        507.37599182128906,
+        444.61518383026123
+      ],
+      "normalizedRestExtent": [
+        1.0391386230031934,
+        0.1776687650069414,
+        0.1648982516275955
+      ],
+      "displayedExtentPerValue": 1.0391386230031934,
+      "triangles": 224,
+      "points": 141,
+      "lines": 6,
+      "pass": true
+    },
+    {
+      "id": "space3d3-sgr-a-horizon",
+      "registered": true,
+      "nativeExtent": [
+        24523788,
+        26240454,
+        24523788
+      ],
+      "normalizedRestExtent": [
+        0.9655034532158067,
+        1.0529439211651321,
+        0.9654263399549151
+      ],
+      "displayedExtentPerValue": 1.0529439211651321,
+      "triangles": 9024,
+      "points": 0,
+      "lines": 2163,
+      "pass": true
+    },
+    {
+      "id": "space3d3-sirius-distance",
+      "registered": true,
+      "nativeExtent": [
+        8.668800368905067,
+        1.40180005133152,
+        0.06880000233650208
+      ],
+      "normalizedRestExtent": [
+        0.9860136540374533,
+        0.1630000059687814,
+        0.21577772164828674
+      ],
+      "displayedExtentPerValue": 0.9860136540374533,
+      "triangles": 448,
+      "points": 0,
+      "lines": 11,
+      "pass": true
+    },
+    {
+      "id": "space3d3-sun-jupiter",
+      "registered": true,
+      "nativeExtent": [
+        1.1914764682078083,
+        0.16989340296149943,
+        0.38431818783283234
+      ],
+      "normalizedRestExtent": [
+        1.1914764682078083,
+        0.24349108564463057,
+        0.32592036192925194
+      ],
+      "displayedExtentPerValue": 1.1914764682078083,
+      "triangles": 4416,
+      "points": 0,
+      "lines": 487,
+      "pass": true
+    },
+    {
+      "id": "space3d3-sun-mercury",
+      "registered": true,
+      "nativeExtent": [
+        1.0122131208981002,
+        0.18101694451218442,
+        0.024031088082901553
+      ],
+      "normalizedRestExtent": [
+        1.0122131208981002,
+        0.1553295402552594,
+        0.10156532213011646
+      ],
+      "displayedExtentPerValue": 1.0122131208981002,
+      "triangles": 4416,
+      "points": 0,
+      "lines": 7,
+      "pass": true
+    },
+    {
+      "id": "space3d3-sun-neptune",
+      "registered": false,
+      "nativeExtent": [
+        1.1804035600094112,
+        0.17311367020010948,
+        0.3444019854068756
+      ],
+      "normalizedRestExtent": [
+        1.1804035600094112,
+        0.23306103143381202,
+        0.292854827267382
+      ],
+      "displayedExtentPerValue": 1.1804035600094112,
+      "triangles": 4416,
+      "points": 0,
+      "lines": 967,
+      "pass": true
+    },
+    {
+      "id": "space3d3-trappist-orbits",
+      "registered": true,
+      "nativeExtent": [
+        0.12377999722957611,
+        0.1328900009393692,
+        0.0011086714221164584
+      ],
+      "normalizedRestExtent": [
+        1.1237275218381677,
+        1.0195942014732187,
+        0.5886629866847444
+      ],
+      "displayedExtentPerValue": 1.1237275218381677,
+      "triangles": 5904,
+      "points": 0,
+      "lines": 3363,
+      "pass": true
+    },
+    {
+      "id": "space3d3-webb-l2-trajectory",
+      "registered": true,
+      "nativeExtent": [
+        1.3920758366584778,
+        0.5956140011548996,
+        1.0456318855285645
+      ],
+      "normalizedRestExtent": [
+        1.219515831761604,
+        0.7551878832867084,
+        1.1845173620866198
+      ],
+      "displayedExtentPerValue": 1.219515831761604,
+      "triangles": 4864,
+      "points": 0,
+      "lines": 666,
+      "pass": true
+    }
+  ]
+}

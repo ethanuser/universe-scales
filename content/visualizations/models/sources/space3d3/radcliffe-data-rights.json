@@ -1,0 +1,22 @@
+{
+  "doi": "10.7910/dvn/07l7yz",
+  "titles": [
+    {
+      "title": "Table A.1"
+    }
+  ],
+  "rightsList": [
+    {
+      "rightsUri": "info:eu-repo/semantics/openAccess"
+    },
+    {
+      "lang": "en",
+      "rights": "Creative Commons Zero v1.0 Universal",
+      "rightsUri": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "schemeUri": "https://spdx.org/licenses/",
+      "rightsIdentifier": "cc0-1.0",
+      "rightsIdentifierScheme": "SPDX"
+    }
+  ],
+  "url": "https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/07L7YZ"
+}

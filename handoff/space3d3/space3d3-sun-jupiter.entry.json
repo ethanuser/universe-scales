@@ -1,0 +1,65 @@
+{
+  "id": "space3d3-sun-jupiter",
+  "matches": {
+    "length": [
+      "Sun-Jupiter Distance"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+  "reference": "content/visualizations/models/sources/space3d3-sun-jupiter.md",
+  "representation": "measurement-diagram",
+  "note": "NASA Sun and Jupiter image maps on idealized spheres, separated by the NASA fact-sheet semimajor axis of 778,479,000 km. Body radii and distance use the same physical scale. This is a representative center-to-center separation equal to a, not an orbital snapshot or the diameter of the orbit. Subpixel body outlines are location aids. Faint inner reference ellipses, where present, use JPL J2000 elements and are not simultaneous planet positions.",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "pitch": 32
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "reference distance",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [
+      "Reuse embedded NASA maps; spherical mean-radius approximation",
+      "Place centers one published semimajor axis apart, preserve km ratios"
+    ],
+    "distance_km": 778479000,
+    "catalog_reference_km": 778500000,
+    "source_models": [
+      {
+        "id": "nasa-sun",
+        "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+        "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+      },
+      {
+        "id": "nasa-jupiter",
+        "sha256": "821c75e6a2268ab139d6fd87c1d0f37b86ca4985957e23e900936535b4bf9e50",
+        "source": "https://science.nasa.gov/resource/jupiter-3d-model/"
+      }
+    ]
+  },
+  "src": "content/visualizations/models/space3d3-sun-jupiter.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 295124,
+  "sha256": "6b105826c5584e99fce144ab3c6382e6995a761cca32f1a0b7b3643ea3e10e9a",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 5,
+  "triangle_count": 4416,
+  "animations": 0,
+  "skins": 0
+}

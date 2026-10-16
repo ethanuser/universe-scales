@@ -1,0 +1,51 @@
+{
+  "id": "space3d3-barnard-distance",
+  "matches": {
+    "length": [
+      "Barnard's Star Distance"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://imagine.gsfc.nasa.gov/features/cosmic/solar_neighborhood_info.html",
+  "reference": "content/visualizations/models/sources/space3d3-barnard-distance.md",
+  "representation": "measurement-diagram",
+  "note": "A heliocentric distance ruler using NASA\u2019s approximate 5.97-light-year distance to Barnard's Star. The endpoints mark locations and do not represent stellar radii or luminosity; the orientation is authored and is not a sky direction or 3D astrometric coordinate reconstruction. The point of the true-scale ruler is the separation between the systems. Subdivisions are equal fractions of that distance.",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 5.9629,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "yaw": 12
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "ly",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [],
+    "distance_ly": 5.97,
+    "exact_light_year_m": 9460730472580800,
+    "subdivision_count": 6,
+    "orientation_semantics": "Authored measurement axis, no celestial direction"
+  },
+  "src": "content/visualizations/models/space3d3-barnard-distance.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 16868,
+  "sha256": "ae09ad0faa064bbc69317e7ad9050aa60482b8e8ce3313addb229f79587d3eaa",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 5,
+  "triangle_count": 448,
+  "animations": 0,
+  "skins": 0
+}
