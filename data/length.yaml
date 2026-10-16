@@ -9198,51 +9198,6 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:length:scenario-length-sun-neptune-distance
-  name: Sun-Neptune Distance
-  value: 4514953000.0
-  description: Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.
-  description_format: markdown
-  summary_short: Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun.
-  description_medium: Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    ingest_source: dataset/raw/legacy_yaml/length.yaml
-    legacy_item_name: Sun-Neptune Distance
-    source_trace:
-      method: derived
-      original_value_text: '4514953000.0'
-      source_url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
-  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
-  source_count: 2
-  sources:
-  - id: src:https-nssdc-gsfc-nasa-gov-planetary-factsheet-neptunefact-html
-    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
-    title: neptunefact.html
-    publisher: NASA
-    license_text: null
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-legacy-yaml-length-yaml
-    url: repo://dataset/raw/legacy_yaml/length.yaml
-    title: dataset/raw/legacy_yaml/length.yaml
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: legacy_seed
-    note: dataset/raw/legacy_yaml/length.yaml
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:length:scenario-length-parker-solar-probe-closest-approach
   name: Parker Solar Probe Closest Approach
   value: 6115507200.0
@@ -9542,6 +9497,51 @@ items:
     title: Betelgeuse
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-length-yaml
+    url: repo://dataset/raw/legacy_yaml/length.yaml
+    title: dataset/raw/legacy_yaml/length.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/length.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:length:scenario-length-sun-neptune-distance
+  name: Sun-Neptune Distance
+  value: 4514953000000.0
+  description: Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.
+  description_format: markdown
+  summary_short: Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun.
+  description_medium: Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/length.yaml
+    legacy_item_name: Sun-Neptune Distance
+    source_trace:
+      method: derived
+      original_value_text: '4514953000000.0'
+      source_url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
+  source_count: 2
+  sources:
+  - id: src:https-nssdc-gsfc-nasa-gov-planetary-factsheet-neptunefact-html
+    url: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
+    title: neptunefact.html
+    publisher: NASA
+    license_text: null
     source_class: secondary_reference
     source_type: web_page
     role: external_source

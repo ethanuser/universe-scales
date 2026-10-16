@@ -10981,60 +10981,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.",
-      "display_status": "display",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Sun-Neptune Distance",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "4514953000.0",
-          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-sun-neptune-distance",
-      "name": "Sun-Neptune Distance",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-nssdc-gsfc-nasa-gov-planetary-factsheet-neptunefact-html",
-          "license_text": null,
-          "note": null,
-          "publisher": "NASA",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "neptunefact.html",
-          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun.",
-      "value": 4514953000.0,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "On 24 December 2024 NASA's Parker Solar Probe flew about 6.1 million km (3.8 million miles) above the visible surface of the Sun, inside the outer corona, moving at roughly 700,000 km/h. That is the closest any spacecraft has come to a star, nearly seven times closer to the Sun's center than Mercury ever gets. Sunlight leaving the surface reaches the probe in about 20 seconds.",
       "description_format": "markdown",
       "description_long": null,
@@ -11407,6 +11353,60 @@
       ],
       "summary_short": "The diameter of Betelgeuse, a red supergiant star that could explode as a supernova within the next 100,000 years.",
       "value": 1000000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun. At this distance the outermost major planet needs far longer than Earth to complete a circuit. The marker measures a star-to-orbit distance rather than the diameter of the whole orbit, placing familiar planetary globes within the much wider architecture of their system.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Sun-Neptune Distance",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "4514953000000.0",
+          "source_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-sun-neptune-distance",
+      "name": "Sun-Neptune Distance",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-nssdc-gsfc-nasa-gov-planetary-factsheet-neptunefact-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "neptunefact.html",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size of its path around the Sun.",
+      "value": 4514953000000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },

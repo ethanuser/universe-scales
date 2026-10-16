@@ -1516,7 +1516,7 @@ items:
     would hide an important part of its structure. This marker follows the equator, placing a familiar
     bright star on the scale while showing that stars need not be perfectly round.
 - name: Sun-Neptune Distance
-  value: 4514953000.0
+  value: 4514953000000.0
   source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
   description: Neptune's orbital semimajor axis is about 4.51 billion kilometers, a measure of the size
     of its path around the Sun. At this distance the outermost major planet needs far longer than Earth
