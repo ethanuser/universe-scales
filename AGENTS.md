@@ -632,7 +632,13 @@ Codex workflow (the owner has spare Codex capacity):
   163 of 258 items now have models. Merge helper used: a script that keeps main's models.json /
   validation.json, union-merges sketchfab-length.json, appends AGENTS.md sections and re-registers
   handoff entries.
-- Round 4 queued at 14:25 2026-10-16: earth3d3, terrain3d, space3d3, micro3d, images4.
+- Round 4 (merged 2026-10-16; Codex hit its usage limit after ~20 min, three jobs without reports):
+  images4 (16 wrong-subject photos replaced, 9 added), earth3d3 (7), terrain3d (9 DEM models),
+  space3d3 (15 diagrams; found Sun-Neptune stored in km, fixed to 4.515e12 m), micro3d (4 kept; six
+  bare primitives left out because their photos/diagrams explained more). Lead added T4 phage and
+  mimivirus (Sketchfab CC BY) and a Mycoplasma schematic (scripts/build_mycoplasma_model.py): OpenAI's
+  bio filter blocks microbe briefs. 201 of 258 items modeled.
+- Round 5 queued at 19:30 2026-10-16: earth3d4, terrain3d2, deepsky3d.
 
 ## 2026-10-16 radial Length explorer (Claude)
 
