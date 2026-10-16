@@ -1,0 +1,66 @@
+1.62e-35	Planck Length
+4.3e-19	Quark
+8.41e-16	Proton Radius
+2.82e-15	Electron
+1e-14	Atomic Nucleus
+1.06e-12	Gamma Ray Wavelength
+1.24e-12	1 MeV Neutrino Wavelength
+1.06e-10	Hydrogen Atom
+1.4e-10	Carbon Atom
+1.54e-10	X-ray Wavelength
+2.75e-10	Water Molecule
+1e-09	Glucose Molecule
+2e-09	DNA Helix Width
+5e-09	Protein (Small)
+9.1e-08	Virus
+2.54e-07	UV Wavelength
+5e-07	Visible Light Wavelength
+2e-06	Bacteria
+8e-06	Red Blood Cell
+9.35e-06	Infrared Wavelength
+1e-05	Mitochondrion
+0.0001	Human Hair
+0.0001	Neuron
+0.001	Grain of Sand
+0.005	Ant
+0.007	Housefly
+0.1	Butterfly Wingspan
+0.122	Microwave Wavelength
+0.46	Cat Length
+1.7	Human Height
+3	Radio Wavelength
+5.5	Giraffe Height
+30	Blue Whale
+91.4	Football Field
+93	Statue of Liberty
+330	Eiffel Tower
+828	Burj Khalifa
+8.85e+03	Mount Everest
+1.1e+04	Mariana Trench
+2.16e+04	Manhattan Island
+4.22e+04	Marathon Distance
+8.2e+04	Panama Canal
+6.4e+06	Amazon River
+1.27e+07	Earth Diameter
+2.12e+07	Great Wall of China
+1.4e+08	Jupiter Diameter
+3.84e+08	Earth-Moon Distance
+1.39e+09	Sun Diameter
+1.5e+11	Astronomical Unit
+1e+12	Betelgeuse Diameter
+1.2e+13	Solar System
+3.59e+13	Heliosphere
+2.99e+16	Oort Cloud
+4e+16	Proxima Centauri
+2.4e+17	Orion Nebula
+2.84e+18	Carina Nebula
+5e+18	Pillars of Creation
+9e+18	Tarantula Nebula
+1e+21	Galaxy Diameter
+2.37e+22	Andromeda Distance
+1e+23	Local Group
+9.46e+23	Virgo Supercluster
+4.94e+24	Laniakea Supercluster
+1.39e+25	Sloan Great Wall
+9.46e+25	Hercules-Corona Borealis Great Wall
+8.8e+26	Observable Universe

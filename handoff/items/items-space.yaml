@@ -1,0 +1,488 @@
+# items-space.yaml : proposed new Length items, band Moon (3.5e6 m) up to the observable universe.
+# Sorted by value. Values in metres. See the report for flagged items (near-duplicate values, uncertain numbers).
+
+- name: Neutron Star
+  value: 2.27e4
+  source: https://heasarc.gsfc.nasa.gov/docs/nicer/science_nuggets/20240822.html
+  description: >-
+    A neutron star squeezes about 1.4 Suns of matter into a ball only around 22 km across, roughly as wide as Manhattan Island is long. NASA's NICER telescope measured the pulsar PSR J0437-4715 to have an equatorial radius of 11.36 km. The matter is about as dense as an atomic nucleus, so a single teaspoon of it would weigh several billion tonnes. It is what remains when a massive star's core collapses and the protons and electrons are crushed together into neutrons.
+  measures: diameter, twice the NICER-measured 11.36 km equatorial radius of PSR J0437-4715
+  model_idea: "procedural: small glowing sphere with two polar beams and dipole field lines; NASA Goddard has public-domain neutron star/pulsar visualizations (not checked for a downloadable mesh)"
+  wonder: A star's worth of mass in the footprint of a city, and the densest stable matter we can measure.
+
+- name: Olympus Mons Height
+  value: 2.6e4
+  source: https://science.nasa.gov/photojournal/pj-olympus-mons-lava-flows-2
+  description: >-
+    Olympus Mons, the tallest volcano in the Solar System, rises about 26 km above the surrounding plains of Mars, roughly three times the height of Everest. It is a shield volcano built from runny lava, and because Mars has no drifting tectonic plates to carry the crust away from a hot spot, one volcano could keep growing in the same place for an immense time. Its summit stands higher than Manhattan Island is long, and a cliff up to 8 km tall rings its base.
+  measures: height of the summit above the surrounding plains (about 22 km above the Martian datum)
+  model_idea: "procedural: low-angle shield-volcano heightfield from MOLA/Mars Trek data; NASA 3D Resources also lists Mars terrain models (not checked)"
+  wonder: Three Everests stacked on a single mountain, on a planet half Earth's width.
+
+- name: Olympus Mons Width
+  value: 5.85e5
+  source: https://science.nasa.gov/photojournal/pj-olympus-mons-lava-flows-2
+  description: >-
+    Olympus Mons is about 585 km across, wider than the state of Arizona and more than 20 times wider than it is tall. That proportion explains its gentle shape: its flanks climb at an average of only a few degrees, rising 26 km over a distance of roughly 290 km from rim to summit. Seen from the ground, it would not look like a mountain so much as a slowly rising plain.
+  measures: width of the volcano's base
+  model_idea: "same heightfield model as Olympus Mons Height, drawn at its true horizontal scale to show how flat it is"
+  wonder: A mountain so broad that its height barely registers, which is the best way to feel how big Mars's volcanoes are.
+
+- name: Pluto
+  value: 2.3766e6
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html
+  description: >-
+    Pluto is a dwarf planet about two-thirds as wide as Earth's Moon, circling the Sun roughly 39 times farther away than Earth does. NASA's New Horizons spacecraft reached it in 2015 after nearly ten years in flight and found mountains of water ice and a broad heart-shaped plain of frozen nitrogen. The International Astronomical Union reclassified Pluto in 2006, once astronomers began finding other worlds of similar size in the Kuiper Belt.
+  measures: mean diameter, twice the 1,188 km volumetric mean radius
+  model_idea: "NASA 3D Resources has public-domain Pluto and Charon models; else a procedural sphere with New Horizons global color map (not checked)"
+  wonder: A world smaller than our Moon that has glaciers, mountains and a heart, seen up close only once.
+
+- name: Moon
+  value: 3.4748e6
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html
+  description: >-
+    The Moon is about 3,475 km across, just over a quarter of Earth's diameter, which is unusually large for a moon of a planet. Its whole surface is only a bit larger than Africa. It is about 400 times narrower than the Sun and also about 400 times closer, a coincidence that lets it cover the Sun almost exactly during a total solar eclipse.
+  measures: mean diameter, twice the 1,737.4 km volumetric mean radius
+  model_idea: "NASA 3D Resources and NASA Scientific Visualization Studio have public-domain Moon models/LRO textures (not checked); or procedural sphere with LROC color map"
+  wonder: The 400-to-1 coincidence of the Sun and Moon is one of the most astonishing accidents in the sky.
+
+- name: Valles Marineris
+  value: 4.0e6
+  source: https://en.wikipedia.org/wiki/Valles_Marineris
+  description: >-
+    Valles Marineris is the largest canyon in the Solar System, more than 4,000 km long, about 200 km wide and up to 7 km deep in places. Placed on Earth it would run for roughly nine times the length of the Grand Canyon, about as far as the width of the continental United States. Most geologists think it began as a vast crack opened as the neighboring Tharsis volcanic region swelled, rather than as a river valley.
+  measures: length of the canyon system
+  model_idea: "procedural: heightfield from MOLA/Mars Trek data on a Mars sphere; NASA 3D Resources Mars globe (not checked)"
+  wonder: A scar across a whole hemisphere of Mars that would span a continent.
+
+- name: Ganymede
+  value: 5.268e6
+  source: https://en.wikipedia.org/wiki/Ganymede_(moon)
+  description: >-
+    Ganymede, a moon of Jupiter, is the largest moon in the Solar System at about 5,270 km across, wider than the planet Mercury (4,880 km). Mercury is still heavier, because Ganymede is a mix of rock and water ice with only about 45 percent of Mercury's mass. Ganymede is the only moon known to generate its own magnetic field.
+  measures: mean diameter
+  model_idea: "NASA 3D Resources has Ganymede models (public domain, not checked); else procedural sphere with Voyager/Galileo color map"
+  wonder: A moon bigger than a planet, which would count as a planet if it orbited the Sun.
+
+- name: Mars
+  value: 6.779e6
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html
+  description: >-
+    Mars is about 6,780 km across, a little over half of Earth's diameter. Because Earth's surface is mostly ocean, Mars has about as much total surface area as all of Earth's dry land. It holds the Solar System's tallest volcano and largest canyon, both of which appear elsewhere on this scale.
+  measures: mean diameter, twice the 3,389.5 km volumetric mean radius
+  model_idea: "NASA 3D Resources has public-domain Mars models; or procedural sphere with MOLA/Viking color map (not checked)"
+  wonder: A whole world's worth of dry land, half the width of our own planet.
+
+- name: Sirius B
+  value: 1.13e7
+  source: https://en.wikipedia.org/wiki/Sirius
+  description: >-
+    Sirius B is a white dwarf, the exposed core of a dead star, with 1.02 times the Sun's mass packed into a globe about 11,300 km across, slightly smaller than Earth. A single cubic centimetre of its material would weigh nearly three tonnes. It was the first white dwarf ever identified, found in 1862 as a faint companion to Sirius, the brightest star in our night sky.
+  measures: diameter, twice the 5,634 km radius (0.0081 solar radii)
+  model_idea: "procedural: tiny bright blue-white sphere next to an Earth model; no known CC model needed"
+  wonder: An entire Sun-mass star the size of the Earth sitting eight light-years away.
+
+- name: Great Red Spot
+  value: 1.6e7
+  source: https://en.wikipedia.org/wiki/Great_Red_Spot
+  description: >-
+    The Great Red Spot is a storm on Jupiter, the largest anticyclone in the Solar System, measured at about 16,350 km wide in April 2017, or 1.3 times the diameter of Earth. Astronomers have tracked it for well over a century, and it has been shrinking from a width of roughly 40,000 km. A planet's worth of storm is still raging inside a gas giant whose own diameter is nearly nine times larger.
+  measures: width of the storm as measured in 2017 (it has been shrinking)
+  model_idea: "NASA 3D Resources/Juno visualizations have Jupiter models (public domain, not checked); or procedural Jupiter sphere with Juno cloud map"
+  wonder: A storm that has been visible through telescopes for centuries and is still larger than the Earth.
+
+- name: Saturn's Hexagon
+  value: 2.5e7
+  source: https://en.wikipedia.org/wiki/Saturn%27s_hexagon
+  description: >-
+    A jet stream circling Saturn's north pole has settled into a six-sided shape about 25,000 km across, wide enough to hold almost two Earths side by side. Each straight side is roughly 14,500 km long, which is longer than Earth's diameter, and the whole pattern turns once every 10 hours 39 minutes. The hexagon is around 300 km tall and was first seen by the Voyager spacecraft and then studied in detail by Cassini.
+  measures: flat-to-flat width of the hexagon, computed from the stated 14,500 km side length (corner to corner is about 29,000 km)
+  model_idea: "procedural: Saturn sphere with a hexagonal polar cap texture; NASA 3D Resources Saturn model (not checked)"
+  wonder: A persistent, perfectly straight-sided weather pattern on a planet with no ground to anchor it.
+
+- name: Geostationary Orbit
+  value: 3.5786e7
+  source: https://en.wikipedia.org/wiki/Geostationary_orbit
+  description: >-
+    A satellite 35,786 km above the equator circles Earth once per sidereal day, so it appears to hang motionless over one spot on the ground. Arthur C. Clarke popularized the idea in 1945, and the ring of satellites there now carries television, communications and weather observations. A radio signal needs about 0.12 seconds to reach the ground from that height, and the orbit lies about a tenth of the way to the Moon.
+  measures: altitude above Earth's equator
+  model_idea: "procedural: Earth sphere with a translucent orbit ring and small satellite meshes; many CC0/CC-BY communication-satellite models exist on Sketchfab (not checked)"
+  wonder: The one altitude where a satellite can stand still over a city, an orbit chosen by physics.
+
+- name: Neptune
+  value: 4.92e7
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html
+  description: >-
+    Neptune is about 49,000 km across, nearly four times the width of Earth, yet it is too dim to see without a telescope. It was found in 1846 after astronomers calculated where an unseen planet must be pulling Uranus away from its predicted path. It orbits about 30 times farther from the Sun than Earth does, and takes roughly 165 years to complete a single lap.
+  measures: mean diameter, twice the 24,622 km volumetric mean radius
+  model_idea: "NASA 3D Resources has Neptune models (public domain, not checked); or procedural sphere with Voyager 2 color map"
+  wonder: A planet discovered with mathematics before anyone saw it, and still too far away to have completed one orbit since its discovery.
+
+- name: Saturn's Rings
+  value: 2.8e8
+  source: https://en.wikipedia.org/wiki/Rings_of_Saturn
+  description: >-
+    Saturn's main rings reach out to the thin F ring, about 140,000 km from the planet's center, so the system spans roughly 280,000 km, nearly three-quarters of the way from Earth to the Moon. Across that expanse the main rings are typically only about 10 meters thick. Shrink the rings to the length of a football field and they would be a few micrometers thick, far thinner than a human hair.
+  measures: diameter of the main-ring system out to the F ring (twice the 140,180 km F-ring radius)
+  model_idea: "NASA 3D Resources has public-domain Saturn models with rings; or procedural flat annuli with ring-brightness texture"
+  wonder: A structure as wide as the Earth-Moon gap and about as thick as a school bus.
+
+- name: James Webb Space Telescope Orbit
+  value: 1.5e9
+  source: https://science.nasa.gov/mission/webb/orbit/
+  description: >-
+    The James Webb Space Telescope orbits the Sun in step with Earth at the second [Lagrange point](https://en.wikipedia.org/wiki/Lagrange_point), about 1.5 million km from us, roughly four times farther than the Moon. From there one sunshield can block the light and heat of the Sun, Earth and Moon together. After launch it needed only about three days to cross the distance to the Moon's orbit, and a radio signal takes about five seconds to reach it.
+  measures: distance from Earth to Webb at the Sun-Earth L2 point
+  model_idea: "NASA 3D Resources has a public-domain JWST model (not checked); Sketchfab also has many JWST models, check licenses"
+  wonder: The most powerful telescope ever built sits four Moon-distances from home, hiding from the Sun.
+
+- name: Parker Solar Probe Closest Approach
+  value: 6.1e9
+  source: https://svs.gsfc.nasa.gov/14741/
+  description: >-
+    On 24 December 2024 NASA's Parker Solar Probe flew about 6.1 million km (3.8 million miles) above the visible surface of the Sun, inside the outer corona, moving at roughly 700,000 km/h. That is the closest any spacecraft has come to a star, nearly seven times closer to the Sun's center than Mercury ever gets. Sunlight leaving the surface reaches the probe in about 20 seconds.
+  measures: altitude above the Sun's visible surface at closest approach (about 6.8 million km from the Sun's center)
+  model_idea: "NASA 3D Resources has a public-domain Parker Solar Probe model (not checked); Sketchfab alternatives, check license"
+  wonder: A human-made object that dipped into the atmosphere of a star.
+
+- name: TRAPPIST-1 System
+  value: 1.85e10
+  source: https://en.wikipedia.org/wiki/TRAPPIST-1
+  description: >-
+    TRAPPIST-1 is a dim red dwarf 40.7 light-years away with seven roughly Earth-sized planets, and the whole system could fit comfortably inside Mercury's orbit. The outermost planet, h, circles only 0.0619 AU (9.3 million km) from the star, so the system is about 18.5 million km wide, less than one sixth the width of Mercury's orbit. The star itself is only about 12 percent of the Sun's radius, just a little larger than Jupiter.
+  measures: diameter of the orbit of the outermost planet, TRAPPIST-1h (twice its 0.0619 AU semi-major axis)
+  model_idea: "NASA/JPL exoplanet artist concepts only; procedural: small red star plus seven spheres on circular orbits"
+  wonder: A complete family of seven Earth-sized worlds packed into a space smaller than Mercury's orbit.
+
+- name: Sagittarius A* Event Horizon
+  value: 2.54e10
+  source: https://en.wikipedia.org/wiki/Sagittarius_A*
+  description: >-
+    Sagittarius A* is the supermassive black hole at the center of the Milky Way, with about 4.3 million times the Sun's mass. Its event horizon, the boundary beyond which light cannot escape, is roughly 25 million km across, about 18 times the width of the Sun and smaller than the orbit of Mercury. The [Event Horizon Telescope](https://en.wikipedia.org/wiki/Event_Horizon_Telescope) captured the glowing ring around it in 2022.
+  measures: diameter of the event horizon of a non-spinning 4.3 million solar mass black hole (Schwarzschild radius about 12.7 million km, doubled)
+  model_idea: "procedural: black sphere with thin accretion disk and lensed ring; NASA Goddard has public-domain black hole visualizations (not checked)"
+  wonder: The monster at the heart of our galaxy is small enough to fit inside Mercury's orbit.
+
+- name: Sun-Mercury Distance
+  value: 5.79e10
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html
+  description: >-
+    Mercury orbits the Sun at an average distance of 57.9 million km, about 0.39 of Earth's, so sunlight takes just over three minutes to arrive and is about seven times brighter than at Earth. The orbit is stretched, swinging between 46.0 and 69.8 million km from the Sun, and a Mercury year lasts only 88 Earth days. It is the innermost planet, and this scale shows how much room remains between it and the Sun's surface.
+  measures: semi-major axis of Mercury's orbit
+  model_idea: "procedural: Sun and Mercury spheres separated by the orbit radius; NASA 3D Resources has public-domain Mercury and Sun models (not checked)"
+  wonder: The closest a planet comes, a mere three light-minutes from the Sun.
+
+- name: Sun-Jupiter Distance
+  value: 7.785e11
+  source: https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html
+  description: >-
+    Jupiter orbits the Sun at an average distance of 778 million km, about 5.2 times Earth's distance, so sunlight takes roughly 43 minutes to reach it and the planet needs almost 12 years to circle the Sun once. Its orbit lies just outside the asteroid belt, and the planet is heavier than all the other planets combined, more than twice over. The orbit would be swallowed whole by the largest red supergiants.
+  measures: semi-major axis of Jupiter's orbit
+  model_idea: "procedural: Sun and Jupiter spheres separated by the orbit radius; NASA 3D Resources Jupiter model (not checked)"
+  wonder: The giant planet that shaped the Solar System sits 43 light-minutes from the Sun.
+
+- name: WOH G64
+  value: 2.1e12
+  source: https://en.wikipedia.org/wiki/WOH_G64
+  description: >-
+    WOH G64 is a red supergiant in the Large Magellanic Cloud, about 160,000 light-years away, and was the first star outside the Milky Way to be imaged in close-up, by ESO's Very Large Telescope Interferometer in 2024. Estimates of its radius run from about 1,500 to 1,800 times the Sun's, large enough to swallow the orbit of Jupiter. The image shows a dusty, egg-shaped cocoon around the star, probably material it has been throwing off before it explodes.
+  measures: approximate diameter, twice a radius of about 1,540 solar radii (estimates differ by about 15 percent)
+  model_idea: "procedural: huge dim orange sphere with a dusty egg-shaped shell; ESO VLTI image is CC-BY for reference"
+  wonder: A star whose surface would reach past Jupiter, imaged as more than a dot in another galaxy.
+
+- name: Alpha Centauri A-B Orbit
+  value: 7.0e12
+  source: https://en.wikipedia.org/wiki/Alpha_Centauri
+  description: >-
+    Alpha Centauri A and B, a Sun-like star and a slightly smaller orange one, circle each other along an ellipse about 47 AU long, once every 79.8 years. They approach to 11.2 AU, about the distance from the Sun to Saturn, and recede to 35.6 AU, about the distance from the Sun to Pluto. The pair belongs to the nearest star system to the Sun, together with the faint red dwarf Proxima Centauri.
+  measures: long axis (major axis) of the relative orbit of A and B, twice the 23.3 AU semi-major axis
+  model_idea: "procedural: two spheres on a to-scale ellipse; Sketchfab has CC-BY Alpha Centauri system models (not checked)"
+  wonder: The Sun's nearest neighbors dance across a space as wide as the outer Solar System.
+
+- name: Kuiper Belt
+  value: 1.5e13
+  source: https://en.wikipedia.org/wiki/Kuiper_belt
+  description: >-
+    The Kuiper Belt is a wide ring of icy bodies beyond Neptune, stretching from about 30 AU to roughly 50 AU from the Sun, so about 100 AU across counting both sides. It is 20 times as wide as the asteroid belt and 20 to 200 times as massive, yet its total mass is only about 2 percent of Earth's. Pluto lives here, and its main population ends abruptly near 48 AU for reasons still debated.
+  measures: approximate outer diameter of the belt, twice an outer edge of about 50 AU
+  model_idea: "procedural: particle ring in a plane, Sun at center; Pluto and Arrokoth models from NASA 3D Resources (not checked)"
+  wonder: A reservoir of frozen leftovers so spread out that spacecraft find it almost empty.
+
+- name: Voyager 1 Distance
+  value: 2.59e13
+  source: https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/
+  description: >-
+    On 18 November 2026 NASA expects Voyager 1 to reach 25.9 billion km (173 AU) from Earth, the distance light travels in one day. Launched in 1977, it is the farthest human-made object, yet a radio command sent to it takes a full day to arrive and the reply another day to return. Proxima Centauri, the nearest star, is still about 1,500 times farther away than that.
+  measures: distance from Earth when Voyager 1 reaches one light-day (the value grows by about 17 km every second)
+  model_idea: "NASA 3D Resources has a public-domain Voyager model (not checked); Sketchfab alternatives, check license"
+  wonder: A 1970s spacecraft is now so far away that light needs a full day to reach it.
+
+- name: M87* Shadow
+  value: 1.03e14
+  source: https://en.wikipedia.org/wiki/Messier_87
+  description: >-
+    In 2019 the Event Horizon Telescope produced the first image of a black hole, a bright lopsided ring about 690 AU (103 billion km) across around the 6.5 billion solar mass black hole at the heart of the galaxy M87, 53 million light-years away. The dark center of the ring is the black hole's shadow, about 2.6 times larger than the event horizon itself. The ring is more than ten times wider than the orbit of Neptune.
+  measures: diameter of the bright emission ring (42 microarcseconds) imaged by the Event Horizon Telescope
+  model_idea: "procedural: lensed ring with Doppler-beamed asymmetry; EHT collaboration images are CC-BY for reference"
+  wonder: The first photograph of a black hole, and the ring is about 11 Neptune-orbits wide.
+
+- name: Sedna Aphelion
+  value: 1.4e14
+  source: https://en.wikipedia.org/wiki/Sedna_(dwarf_planet)
+  description: >-
+    Sedna is a dwarf planet roughly 900 km wide whose orbit swings from 76 AU out to 937 AU (140 billion km), over 30 times Neptune's distance. At that far end sunlight is faint enough that the Sun looks like a very bright star, and a single orbit takes about 11,400 years, far longer than recorded history. Nothing known explains how Sedna reached such an orbit, and it hints at unseen influences in the distant Solar System.
+  measures: aphelion, the greatest distance of Sedna from the Sun
+  model_idea: "procedural: Sedna sphere and an elongated orbit ellipse to scale; NASA 3D Resources lacks a real surface model (artist concepts only)"
+  wonder: A world whose year is longer than recorded history and whose orbit is still unexplained.
+
+- name: TON 618 Event Horizon
+  value: 2.4e14
+  source: https://en.wikipedia.org/wiki/TON_618
+  description: >-
+    TON 618 is a quasar at redshift 2.2 powered by one of the most massive black holes known, estimated at between about 40 and 66 billion Suns. For the lower mass, the event horizon is about 1,600 AU (240 billion km) across, roughly 20 times the width of Pluto's orbit, and light would take about nine days to cross it. The black hole is not seen directly, and the mass estimate depends on a velocity measurement that carries a large uncertainty.
+  measures: diameter of the event horizon (Schwarzschild diameter) for a 40.7 billion solar mass black hole; about 3.9e14 m if the older 66 billion estimate is right
+  model_idea: "procedural: black sphere with accretion disk; compare against Solar System orbits rings"
+  wonder: A black hole whose event horizon is about 20 times wider than the orbit of Pluto.
+
+- name: Light-Year
+  value: 9.4607e15
+  source: https://en.wikipedia.org/wiki/Light-year
+  description: >-
+    A light-year is the distance light travels in a vacuum in one Julian year of 365.25 days, exactly 9,460,730,472,580,800 meters. It equals about 63,000 times the distance from Earth to the Sun. At the 17 km/s speed of Voyager 1, a spacecraft would need roughly 18,000 years to cover it, and the nearest star lies just over four of them away.
+  measures: exact definition (speed of light times a Julian year)
+  model_idea: "procedural: a line segment with Earth-Sun, Solar System and Proxima markers; no mesh needed"
+  wonder: The unit that makes the universe measurable, and a human-scale reminder of how empty interstellar space is.
+
+- name: Ring Nebula
+  value: 9.5e15
+  source: https://en.wikipedia.org/wiki/Ring_Nebula
+  description: >-
+    The Ring Nebula (Messier 57) is a [planetary nebula](https://en.wikipedia.org/wiki/Planetary_nebula): the glowing shell of gas shed by a dying Sun-like star about 2,570 light-years away in the constellation Lyra. After expanding for about 1,610 years it is now roughly one light-year across, with a faint white dwarf at its center. The Sun is expected to end its life the same way in several billion years.
+  measures: approximate diameter of the nebula's bright ring
+  model_idea: "procedural: thin torus with gradient shell; NASA/Hubble image for reference (public domain)"
+  wonder: The likely future of our own Sun, drawn at a size of one light-year.
+
+- name: Distance to Sirius
+  value: 8.15e16
+  source: https://en.wikipedia.org/wiki/Sirius
+  description: >-
+    Sirius, the brightest star in the night sky, lies 8.6 light-years from the Sun, so the light you see from it tonight left about 8.6 years ago. That is about twice as far as the nearest star, Proxima Centauri, yet close enough that Sirius has a faint white-dwarf companion, Sirius B, whose size appears earlier on this scale.
+  measures: distance from the Sun to Sirius
+  model_idea: "procedural: line from the Sun to a bright white star; Sketchfab has CC-BY Sirius A/B system models (not checked)"
+  wonder: The night sky's brightest star is only twice as far as the nearest one.
+
+- name: Crab Nebula
+  value: 1.05e17
+  source: https://en.wikipedia.org/wiki/Crab_Nebula
+  description: >-
+    The Crab Nebula is the debris of a star that exploded in the year 1054, a supernova recorded by astronomers in China and elsewhere. About 6,500 light-years from Earth, its filaments are still expanding at roughly 1,500 km/s and are now about 11 light-years across. At its center, a pulsar spinning about 30 times per second powers the whole nebula's glow.
+  measures: approximate diameter of the nebula (3.4 parsecs)
+  model_idea: "NASA 3D Resources and NASA/Chandra provide public-domain Crab Nebula 3D visualizations (not checked); or procedural filament shell"
+  wonder: A supernova that humans watched in 1054 is still visibly expanding.
+
+- name: Pleiades
+  value: 8.1e17
+  source: https://en.wikipedia.org/wiki/Pleiades
+  description: >-
+    The Pleiades is an open star cluster about 444 light-years away with more than 1,000 members, of which the naked eye picks out only the brightest handful as the Seven Sisters. Its core has a radius of about 8 light-years, but the cluster's gravity binds stars out to a tidal radius of about 43 light-years, so the whole cluster is roughly 86 light-years across. It is young, and its stars will slowly drift apart over time.
+  measures: tidal diameter of the cluster, twice the roughly 43 light-year tidal radius
+  model_idea: "procedural: point cloud of blue stars from Gaia membership catalog (public data)"
+  wonder: The famous smudge of stars is a swarm over 80 light-years wide.
+
+- name: Omega Centauri
+  value: 1.42e18
+  source: https://en.wikipedia.org/wiki/Omega_Centauri
+  description: >-
+    Omega Centauri is the largest globular cluster in the Milky Way, about 150 light-years across and holding roughly 10 million stars with a combined mass of about 4 million Suns. It is so massive and complex, with several distinct generations of stars, that astronomers suspect it is the stripped core of a small galaxy swallowed long ago by the Milky Way. To the naked eye it looks like a single fuzzy star.
+  measures: approximate diameter of the cluster
+  model_idea: "procedural: dense point cloud with King-profile density; Sketchfab has globular-cluster models (not checked)"
+  wonder: Ten million stars in a ball 150 light-years wide, probably a galaxy's last remains.
+
+- name: Orion Arm
+  value: 3.3e19
+  source: https://en.wikipedia.org/wiki/Orion_Arm
+  description: >-
+    The Sun lives in the Orion Arm (or Local Arm), a minor spiral arm of the Milky Way about 3,500 light-years wide and 20,000 light-years long, lying between two major arms. The Solar System sits close to its inner rim, about halfway along its length. The [Radcliffe Wave](https://en.wikipedia.org/wiki/Radcliffe_Wave) of star-forming gas occupies about 20 percent of the arm's width and 40 percent of its length.
+  measures: width of the arm (its length is about 20,000 light-years)
+  model_idea: "procedural: top-down galaxy map with the Orion Arm highlighted; NASA/JPL-Caltech (R. Hurt) Milky Way illustration for reference"
+  wonder: Our whole neighborhood of the galaxy is a small spur between two real spiral arms.
+
+- name: M87 Jet
+  value: 4.7e19
+  source: https://science.nasa.gov/asset/hubble/galaxy-m87-jet-annotated/
+  description: >-
+    A jet of superheated plasma streams out of the giant elliptical galaxy M87, and Hubble can follow its visible portion for 5,000 light-years. It is launched at nearly the speed of light by the same supermassive black hole that the Event Horizon Telescope imaged, whose ring is millions of times smaller. The jet is longer than the Orion Arm is wide, yet it all begins within a region the size of a solar system.
+  measures: length of the visible jet
+  model_idea: "NASA Hubble image for reference; procedural: narrow glowing cone from a galaxy center"
+  wonder: One black hole, a few hundred AU wide, aims a beam that stretches thousands of light-years.
+
+- name: Radcliffe Wave
+  value: 8.3e19
+  source: https://en.wikipedia.org/wiki/Radcliffe_Wave
+  description: >-
+    The Radcliffe Wave is a long, undulating chain of star-forming gas clouds near the Sun, found in 2020 by mapping the three-dimensional positions of stars and dust with Gaia data. It is about 8,800 light-years long and rises and falls by roughly 520 light-years as it snakes through the Milky Way's disk. Many of the nearby star-forming clouds seen from Earth are part of this single structure.
+  measures: length of the wave
+  model_idea: "procedural: sinusoidal ribbon of dots; the Alves et al. 2020 Nature figure and Gaia data are public for reference"
+  wonder: A galaxy-scale wave of gas, only recognized in 2020, running right past our own neighborhood.
+
+- name: Sun-Galactic Center Distance
+  value: 2.52e20
+  source: https://arxiv.org/abs/1904.05721
+  description: >-
+    The Sun is about 8,178 parsecs from the center of the Milky Way, as measured by the GRAVITY instrument by watching stars orbit the central black hole. That is roughly 26,700 light-years, a little more than halfway out to the edge of the galaxy's stellar disk. The Sun takes about 230 million years to complete one orbit of the center, so it has made only about 20 laps in its lifetime.
+  measures: distance from the Sun to the Galactic Center (8178 pc)
+  model_idea: "procedural: Milky Way top-down with Sun marker; NASA/JPL-Caltech Milky Way illustration for reference"
+  wonder: Our home address, measured to a few hundred light-years by tracking stars around the central black hole.
+
+- name: Large Magellanic Cloud
+  value: 3.04e20
+  source: https://en.wikipedia.org/wiki/Large_Magellanic_Cloud
+  description: >-
+    The Large Magellanic Cloud is a satellite galaxy of the Milky Way, visible to the naked eye from the Southern Hemisphere. It is about 9.9 kiloparsecs, or 32,000 light-years, across, roughly a third the width of the Milky Way's disk, and lies about 163,000 light-years away. It hosts the Tarantula Nebula and was the site of Supernova 1987A, the closest supernova seen in modern times.
+  measures: diameter at the 25 mag/arcsec^2 B-band isophote
+  model_idea: "procedural: irregular disk with a bar; NASA 3D Resources/ESA images for reference (not checked)"
+  wonder: A whole galaxy of billions of stars drifting beside ours, big enough to hold a Tarantula Nebula.
+
+- name: Milky Way Central Bar
+  value: 3.09e20
+  source: https://arxiv.org/abs/1504.01401
+  description: >-
+    Through the Milky Way's bulge runs a bar of old stars, rotated about 28 to 33 degrees from the line between the Sun and the Galactic Center. Counts of red clump giant stars put its half-length at about 5 kiloparsecs, which makes the bar around 10 kiloparsecs, or 32,000 light-years, from end to end. Other methods give shorter bars, so its exact length is still being refined.
+  measures: end-to-end length of the long bar, twice the 5.0 kpc half-length measured by Wegg, Gerhard and Portail (2015)
+  model_idea: "procedural: elongated ellipsoid in the galactic plane; NASA/JPL-Caltech Milky Way illustration (R. Hurt) for reference"
+  wonder: The Milky Way is a barred spiral, and the bar is about the size of a dwarf galaxy.
+
+- name: Fermi Bubbles
+  value: 4.73e20
+  source: https://www.nasa.gov/universe/nasas-fermi-telescope-finds-giant-structure-in-our-galaxy
+  description: >-
+    In 2010 NASA's Fermi Gamma-ray Space Telescope revealed two vast lobes of gamma rays, each 25,000 light-years tall, rising above and below the Milky Way's center. Together they span about 50,000 light-years, roughly half the galaxy's diameter, and they cover more than half of the visible sky. Their origin is still debated, but one idea is a burst of material ejected by the central black hole a few million years ago.
+  measures: total height of the two bubbles, from the southern tip to the northern tip
+  model_idea: "NASA Goddard's Fermi bubbles visualization is public domain (not checked for a mesh); or procedural: two hourglass lobes"
+  wonder: Evidence that the quiet center of our galaxy once erupted on a scale of tens of thousands of light-years.
+
+- name: Andromeda Galaxy Diameter
+  value: 1.44e21
+  source: https://en.wikipedia.org/wiki/Andromeda_Galaxy
+  description: >-
+    The Andromeda Galaxy, 2.5 million light-years away, has a bright disk about 152,000 light-years across, the largest galaxy in our Local Group and nearly one and a half times as wide as the Milky Way's disk. Its full disk would appear about six times the width of the Moon if our eyes were sensitive enough. It is approaching the Milky Way and the two are expected to merge in several billion years.
+  measures: D25 isophotal diameter of the disk
+  model_idea: "NASA 3D Resources/ESA images for reference (not checked); procedural: tilted spiral disk"
+  wonder: The biggest galaxy near us would span six Moons if we could see all of it.
+
+- name: Magellanic Stream
+  value: 5.6e21
+  source: https://en.wikipedia.org/wiki/Magellanic_Stream
+  description: >-
+    The Magellanic Stream is a vast ribbon of hydrogen gas trailing behind the Large and Small Magellanic Clouds, stripped from them as they fall around the Milky Way. It stretches at least 180 degrees across the sky, which at its distance of roughly 55 kiloparsecs corresponds to about 180 kiloparsecs, or 600,000 light-years. It was discovered in radio observations in the 1970s, and later work showed it to be much longer than first thought.
+  measures: projected length of the stream (at least about 180 kpc, a lower limit)
+  model_idea: "procedural: curved particle ribbon from the LMC/SMC around the Milky Way; Nidever et al. radio maps for reference"
+  wonder: A river of gas crossing half the sky, a trail left by our companion galaxies.
+
+- name: Andromeda Gas Halo
+  value: 1.23e22
+  source: https://www.stsci.edu/contents/news-releases/2020/news-2020-46
+  description: >-
+    Hubble mapped a huge, nearly invisible halo of diffuse gas around the Andromeda Galaxy by studying how it absorbs the light of distant background quasars. The halo extends 1.3 million light-years from the galaxy, about halfway to the Milky Way, and up to 2 million light-years in some directions. The galaxy's visible disk is only a small core inside this immense envelope.
+  measures: radius of the gas halo, measured from the galaxy's center
+  model_idea: "procedural: faint translucent sphere around an Andromeda disk model; STScI images for reference"
+  wonder: Andromeda's invisible gas reaches halfway to us, so the two galaxies are already almost touching.
+
+- name: IC 1101
+  value: 1.6e22
+  source: https://arxiv.org/abs/2607.15340
+  description: >-
+    IC 1101 is a giant elliptical galaxy at the center of the galaxy cluster Abell 2029, about a billion light-years away. Ultra-deep imaging puts the edge of its main body at about 260 kiloparsecs from the center, so it is roughly 520 kiloparsecs, or 1.7 million light-years, across, more than ten times wider than the Andromeda Galaxy's disk. It holds trillions of Suns' worth of stars and is thought to be still growing.
+  measures: diameter of the main body, twice a 260 kpc semi-major-axis radius (older isophotal estimates are 400,000 to 550,000 light-years)
+  model_idea: "procedural: smooth glowing ellipsoid; compare against an Andromeda disk"
+  wonder: The largest galaxy known, with a faint main body as wide as the whole Local Group is.
+
+- name: Porphyrion
+  value: 2.16e23
+  source: https://www.sciencealert.com/this-huge-galactic-structure-is-23-million-light-years-long-and-we-cant-comprehend-it
+  description: >-
+    Porphyrion is a pair of jets blasted out by a supermassive black hole, discovered in 2024 with the LOFAR radio telescope and spanning about 7 megaparsecs, or 23 million light-years, the longest black-hole jet system known. The jets were launched when the universe was about 6.3 billion years old, and together they stretch for roughly 140 Milky Way widths. The system is more than twice the size of the entire Local Group.
+  measures: total projected length of the radio jets from end to end
+  model_idea: "procedural: double-lobed radio galaxy with narrow jets; Oei et al. 2024 (Nature) image for reference"
+  wonder: A single black hole shot out material across 23 million light-years of space.
+
+- name: Distance to the Virgo Cluster
+  value: 5.09e23
+  source: https://en.wikipedia.org/wiki/Virgo_Cluster
+  description: >-
+    The center of the Virgo Cluster lies about 16.5 megaparsecs (54 million light-years) away, the nearest large galaxy cluster to us. It holds more than a thousand galaxies, with a total mass of about a quadrillion Suns, and spans roughly eight degrees of sky. Light that we see from it left when mammals were just beginning to diversify after the extinction of the dinosaurs.
+  measures: distance from the Milky Way to the center of the Virgo Cluster
+  model_idea: "procedural: sparse galaxy cloud with M87 in the center; Sketchfab has CC-BY cluster models (not checked)"
+  wonder: The nearest big cluster is so far that its light left while mammals were first diversifying after the dinosaurs.
+
+- name: Local Void
+  value: 1.85e24
+  source: https://en.wikipedia.org/wiki/Local_Void
+  description: >-
+    The Local Void is a vast, almost empty region of space that borders the Local Group, stretching about 60 megaparsecs, or 200 million light-years, according to current estimates, though the uncertainty is large and it may be as small as 45 megaparsecs. Galaxies avoid such regions, lying on the walls and filaments of the cosmic web that surround them. It is roughly twenty times as wide as the Local Group.
+  measures: approximate diameter of the void (estimates range from about 150 to 200 million light-years)
+  model_idea: "procedural: translucent sphere among filaments; Tully et al. cosmography visualizations for reference"
+  wonder: A region 200 million light-years wide that is nearly empty of galaxies, right next door.
+
+- name: Bootes Void
+  value: 3.5e24
+  source: https://en.wikipedia.org/wiki/Bo%C3%B6tes_void
+  description: >-
+    The Bootes Void is one of the largest known voids, discovered in 1981 by Robert Kirshner and colleagues, who found a vast region with far fewer galaxies than expected. Published estimates place its diameter between about 330 and 400 million light-years, depending on the assumptions made for the distance scale. If the Milky Way were at its center, we would have seen almost no galaxies in the night sky beyond our own.
+  measures: approximate diameter (estimates 330 to 400 million light-years)
+  model_idea: "procedural: translucent sphere among filaments; Kirshner et al. survey maps for reference"
+  wonder: A hole in the universe so large that the Local Group could be lost many times over inside it.
+
+- name: Baryon Acoustic Oscillation Scale
+  value: 4.6e24
+  source: https://en.wikipedia.org/wiki/Baryon_acoustic_oscillations
+  description: >-
+    When the universe was a hot plasma, sound waves rippled outward from every dense spot; when the plasma cooled 380,000 years after the Big Bang, those waves froze in place. The result is that galaxies are slightly more likely to be separated by about 150 megaparsecs, roughly 490 million light-years in today's expanded universe. First detected in 2005 in galaxy surveys, this ruler is now used to measure the expansion history of the universe.
+  measures: comoving size of the sound horizon, a statistical preferred separation of galaxies
+  model_idea: "procedural: a spherical shell of faint galaxies around a central overdensity; SDSS/Eisenstein 2005 figure for reference"
+  wonder: Fossil sound waves from the early universe leave a ruler that is still measurable today.
+
+- name: Pisces-Cetus Supercluster Complex
+  value: 1.17e25
+  source: https://en.wikipedia.org/wiki/Pisces%E2%80%93Cetus_Supercluster_Complex
+  description: >-
+    The Pisces-Cetus Supercluster Complex is a filament of galaxies about 380 megaparsecs, or 1.24 billion light-years, long and 160 megaparsecs wide. Its members include the Local Supercluster, the Virgo Supercluster and thus the Local Group and the Milky Way, which together make up only about 0.1 percent of its total mass. It is one of the largest structures that astronomers have mapped around us.
+  measures: length of the filament complex
+  model_idea: "procedural: elongated filament of dots; Tully 1986/1987 supercluster complex maps for reference"
+  wonder: Our galaxy is a speck on the edge of a filament 1.2 billion light-years long.
+
+- name: KBC Void
+  value: 1.85e25
+  source: https://en.wikipedia.org/wiki/KBC_Void
+  description: >-
+    The KBC Void, named for Keenan, Barger and Cowie, is a proposed region where the density of galaxies is lower than average, about 2 billion light-years across (600 megaparsecs), with the Milky Way near its center. Some researchers have suggested it as one explanation for the [Hubble tension](https://en.wikipedia.org/wiki/Hubble_tension), the mismatch between expansion rates, but other analyses find no evidence for such a void. Its existence is still hypothetical and controversial.
+  measures: approximate diameter of the proposed underdensity (a radius of about 300 Mpc)
+  model_idea: "procedural: translucent sphere with the Local Group inside; Keenan et al. 2013 diagram for reference"
+  wonder: A possible hole 2 billion light-years wide, with our galaxy sitting inside it.
+
+- name: Giant Arc
+  value: 3.1e25
+  source: https://en.wikipedia.org/wiki/Giant_Arc
+  description: >-
+    The Giant Arc is a claimed arc of galaxies and gas spanning 3.3 billion light-years, discovered in 2021 as a pattern in the absorption lines of distant quasars, about 9.2 billion light-years away. It covers roughly one fifteenth of the radius of the observable universe. If real, it is a larger pattern than most theories expect, which is why it is debated.
+  measures: approximate chord length of the arc
+  model_idea: "procedural: faint arc of points on the sky; Lopez, Clowes and Williger 2022 figure for reference"
+  wonder: A structure so large that it strains the assumption that the universe looks the same everywhere.
+
+- name: Hubble Radius
+  value: 1.36e26
+  source: https://en.wikipedia.org/wiki/Hubble%27s_law
+  description: >-
+    The Hubble radius is the distance, about 14.4 billion light-years (4,420 megaparsecs), at which the expansion of space carries galaxies away at the speed of light. This does not violate relativity, since the galaxies are not moving through space that fast, and we can still see galaxies beyond this distance because the Hubble radius itself grows with time. It is only about a third of the 46.5 billion light-year radius of the observable universe.
+  measures: radius of the Hubble sphere, c/H0, for H0 = 67.8 km/s/Mpc (not a diameter)
+  model_idea: "procedural: concentric spheres for Hubble radius and observable universe; no mesh needed"
+  wonder: Beyond this distance the universe recedes faster than light, yet we can still receive light from there.
+
+- name: JADES-GS-z14-0
+  value: 3.2e26
+  source: https://en.wikipedia.org/wiki/JADES-GS-z14-0
+  description: >-
+    JADES-GS-z14-0, found by the James Webb Space Telescope, is one of the most distant galaxies known, seen as it was less than 300 million years after the Big Bang at redshift near 14.2. Its light has traveled for about 13.5 billion years, but because space expanded during the trip, the galaxy's present distance (comoving) is about 33.8 billion light-years. The galaxy is only about 1,600 light-years wide.
+  measures: comoving distance from Earth today (the light-travel distance is about 13.4 billion light-years, or 1.27e26 m)
+  model_idea: "procedural: small bright dot at the edge of the observable-universe sphere; JWST/ESO imagery for reference"
+  wonder: Light left this galaxy 13.5 billion years ago, yet the galaxy itself is now 33.8 billion light-years away.

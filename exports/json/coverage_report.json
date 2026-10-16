@@ -631,22 +631,22 @@
   },
   "length": {
     "bin_count": 24,
-    "candidate_count": 66,
+    "candidate_count": 255,
     "candidate_shortfall_to_preferred_target": 0,
     "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
-    "preferred_max_items": 100,
-    "preferred_target_items": 66,
-    "raw_candidate_count": 66,
+    "preferred_max_items": 255,
+    "preferred_target_items": 255,
+    "raw_candidate_count": 255,
     "required_min_items": 24,
-    "selected_count": 66,
+    "selected_count": 255,
     "selected_primary_count": 19,
-    "selected_secondary_count": 47,
+    "selected_secondary_count": 236,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 66
+      "secondary_reference": 255
     },
-    "target_selected_count": 66
+    "target_selected_count": 255
   },
   "magnetic-field": {
     "bin_count": 24,
