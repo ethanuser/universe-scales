@@ -3,8 +3,9 @@
 
     python3 scripts/repair_glb.py content/visualizations/models/X.glb [...]
 
-Removes empty top-level arrays (EMPTY_ENTITY) and adds min/max to POSITION
-accessors that lack them. Geometry and materials are unchanged.
+Removes empty top-level arrays (EMPTY_ENTITY), adds min/max to POSITION accessors
+that lack them, and renormalizes float NORMALs (zero-length ones from degenerate
+triangles become +Y). Positions and materials are unchanged.
 """
 import json
 import sys
@@ -35,8 +36,31 @@ def repair(path):
                 accessor["min"] = values.min(axis=0).tolist()
                 accessor["max"] = values.max(axis=0).tolist()
                 changes.append(f"bounds for accessor {index}")
+    binary = bytearray(binary)
+    fixed = set()
+    for mesh in document.get("meshes", []):
+        for primitive in mesh["primitives"]:
+            index = primitive["attributes"].get("NORMAL")
+            if index is None or index in fixed or document["accessors"][index]["componentType"] != 5126:
+                continue
+            accessor = document["accessors"][index]
+            values = accessor_array(document, binary, index).astype(np.float64)
+            length = np.linalg.norm(values, axis=1)
+            bad = np.abs(length - 1) > 5e-4
+            if not bad.any():
+                continue
+            values[bad & (length > 1e-6)] /= length[bad & (length > 1e-6), None]
+            values[length <= 1e-6] = (0.0, 1.0, 0.0)
+            view = document["bufferViews"][accessor["bufferView"]]
+            stride = view.get("byteStride", 12)
+            offset = view.get("byteOffset", 0) + accessor.get("byteOffset", 0)
+            for row, vector in zip(np.flatnonzero(bad), values[bad].astype("<f4")):
+                start = offset + int(row) * stride
+                binary[start:start + 12] = vector.tobytes()
+            fixed.add(index)
+            changes.append(f"normalized {int(bad.sum())} normals in accessor {index}")
     if changes:
-        path.write_bytes(pack_glb(document, binary))
+        path.write_bytes(pack_glb(document, bytes(binary)))
     return changes
 
 

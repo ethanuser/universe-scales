@@ -13268,43 +13268,53 @@
       }
     },
     {
-      "id": "sketchfab-human-anatomical",
-      "sha256": "eece918e14c3e5d443cc9829fd0552c193976b76321a1e10afa335b67ce72614",
+      "id": "sketchfab-human-dennis-posed",
+      "sha256": "5e8285fa24a6f8b9f709de363e4c8d24af3f090d58b2baa3c842f39c320e50aa",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
-        "numInfos": 1,
+        "numInfos": 0,
         "numHints": 0,
-        "messages": [
-          {
-            "code": "UNUSED_OBJECT",
-            "message": "This object may be unused.",
-            "severity": 2,
-            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
-          }
-        ],
+        "messages": [],
         "truncated": false
       },
       "info": {
         "version": "2.0",
-        "generator": "Sketchfab-13.11.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
         "resources": [
           {
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 1578384
+            "byteLength": 1724248
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
           }
         ],
         "animationCount": 0,
         "materialCount": 1,
         "hasMorphTargets": false,
         "hasSkins": false,
-        "hasTextures": false,
+        "hasTextures": true,
         "hasDefaultScene": true,
         "drawCallCount": 1,
-        "totalVertexCount": 41538,
-        "totalTriangleCount": 20764,
+        "totalVertexCount": 52238,
+        "totalTriangleCount": 99964,
         "maxUVs": 1,
         "maxInfluences": 0,
         "maxAttributes": 3
@@ -14541,45 +14551,60 @@
       }
     },
     {
-      "id": "nasa-pillars-of-creation",
-      "sha256": "0bb09332ddd81dc54f253e85f86a089595cb75f36183e52301a7867da0aa0c5d",
+      "id": "pillars-of-creation-hubble-3d",
+      "sha256": "8ca10e135fe59f5a564d14a7d25de3f5201b2401386a4d33cc0f1041ba388956",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
-        "numInfos": 0,
+        "numInfos": 1,
         "numHints": 0,
-        "messages": [],
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x1067.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
         "truncated": false
       },
       "info": {
         "version": "2.0",
-        "generator": "glTF-Transform v4.5.0",
+        "generator": "Universe Scales Pillars of Creation builder",
         "extensionsUsed": [
-          "KHR_mesh_quantization"
-        ],
-        "extensionsRequired": [
-          "KHR_mesh_quantization"
+          "KHR_materials_unlit"
         ],
         "resources": [
           {
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 722528
+            "byteLength": 1471076
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1067,
+              "format": "rgb",
+              "bits": 8
+            }
           }
         ],
         "animationCount": 0,
-        "materialCount": 1,
+        "materialCount": 6,
         "hasMorphTargets": false,
         "hasSkins": false,
-        "hasTextures": false,
+        "hasTextures": true,
         "hasDefaultScene": true,
-        "drawCallCount": 1,
-        "totalVertexCount": 25808,
+        "drawCallCount": 6,
+        "totalVertexCount": 48093,
         "totalTriangleCount": 51600,
-        "maxUVs": 0,
+        "maxUVs": 1,
         "maxInfluences": 0,
-        "maxAttributes": 2
+        "maxAttributes": 3
       }
     },
     {
@@ -14691,8 +14716,8 @@
       }
     },
     {
-      "id": "orion-hubble-blister",
-      "sha256": "ab4225ee737f6202d55d707d975b9bfbbf2192d709d57d5493ef2d42673476a5",
+      "id": "orion-nebula-volume",
+      "sha256": "3442757bfe4b98304493bb9bed599d4b1ebd587447d5720a84c3dbb1fb063441",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -14703,7 +14728,7 @@
       },
       "info": {
         "version": "2.0",
-        "generator": "Universe Scales referenced Orion illustration",
+        "generator": "Universe Scales nebula volume builder",
         "extensionsUsed": [
           "KHR_materials_unlit"
         ],
@@ -14712,7 +14737,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 668808
+            "byteLength": 1251584
           }
         ],
         "animationCount": 0,
@@ -14722,7 +14747,7 @@
         "hasTextures": false,
         "hasDefaultScene": true,
         "drawCallCount": 4,
-        "totalVertexCount": 27874,
+        "totalVertexCount": 78224,
         "totalTriangleCount": 0,
         "maxUVs": 0,
         "maxInfluences": 0,
@@ -14730,8 +14755,8 @@
       }
     },
     {
-      "id": "tarantula-eso-cloud",
-      "sha256": "aca4442069872b644a6cf82741d9e48a227737cd39a9c824b5c2d7089ce08194",
+      "id": "tarantula-nebula-volume",
+      "sha256": "6c71e112eb5aec8d9050cbf805d6c1f458d0b6d84060bb27de3134be33331179",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -14742,7 +14767,7 @@
       },
       "info": {
         "version": "2.0",
-        "generator": "Universe Scales ESO Tarantula illustration",
+        "generator": "Universe Scales nebula volume builder",
         "extensionsUsed": [
           "KHR_materials_unlit"
         ],
@@ -14751,17 +14776,17 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 808464
+            "byteLength": 1271472
           }
         ],
         "animationCount": 0,
-        "materialCount": 1,
+        "materialCount": 4,
         "hasMorphTargets": false,
         "hasSkins": false,
         "hasTextures": false,
         "hasDefaultScene": true,
-        "drawCallCount": 1,
-        "totalVertexCount": 33686,
+        "drawCallCount": 4,
+        "totalVertexCount": 79467,
         "totalTriangleCount": 0,
         "maxUVs": 0,
         "maxInfluences": 0,
@@ -14769,26 +14794,19 @@
       }
     },
     {
-      "id": "carina-vista-field",
-      "sha256": "cadd8e61e37c2050df3259101b9c5a7e1e4585889d5ff596342bcd39719a5c63",
+      "id": "carina-nebula-volume",
+      "sha256": "c54e2bee6733dc673f43eef9ccf960910d3d6634533df40c4923ca2a95b73646",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
-        "numInfos": 1,
+        "numInfos": 0,
         "numHints": 0,
-        "messages": [
-          {
-            "code": "IMAGE_NPOT_DIMENSIONS",
-            "message": "Image has non-power-of-two dimensions: 1024x830.",
-            "severity": 2,
-            "pointer": "/images/0"
-          }
-        ],
+        "messages": [],
         "truncated": false
       },
       "info": {
         "version": "2.0",
-        "generator": "Universe Scales ESO Carina illustration",
+        "generator": "Universe Scales nebula volume builder",
         "extensionsUsed": [
           "KHR_materials_unlit"
         ],
@@ -14797,32 +14815,21 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 733060
-          },
-          {
-            "pointer": "/images/0",
-            "mimeType": "image/jpeg",
-            "storage": "buffer-view",
-            "image": {
-              "width": 1024,
-              "height": 830,
-              "format": "rgb",
-              "bits": 8
-            }
+            "byteLength": 1296864
           }
         ],
         "animationCount": 0,
-        "materialCount": 2,
+        "materialCount": 4,
         "hasMorphTargets": false,
         "hasSkins": false,
-        "hasTextures": true,
+        "hasTextures": false,
         "hasDefaultScene": true,
-        "drawCallCount": 2,
-        "totalVertexCount": 5350,
-        "totalTriangleCount": 10400,
-        "maxUVs": 1,
+        "drawCallCount": 4,
+        "totalVertexCount": 81054,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
         "maxInfluences": 0,
-        "maxAttributes": 3
+        "maxAttributes": 2
       }
     },
     {
@@ -15097,8 +15104,8 @@
       }
     },
     {
-      "id": "virgo-supercluster-sdss-window",
-      "sha256": "ee3ad1678ced446dc9b1cbb8a69328468086b06607a341c24e3ec52425878ac8",
+      "id": "virgo-supercluster-2mrs-galaxies",
+      "sha256": "c26d45ce4460fa93cffc49ebcd0bfb7d9e517e5a33352ad9ce30fd57598bc538",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -15109,7 +15116,7 @@
       },
       "info": {
         "version": "2.0",
-        "generator": "Universe Scales SDSS large-scale catalog-window diagram",
+        "generator": "Universe Scales Laniakea galaxy builder",
         "extensionsUsed": [
           "KHR_materials_unlit"
         ],
@@ -15118,7 +15125,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 28248
+            "byteLength": 26960
           }
         ],
         "animationCount": 0,
@@ -15128,7 +15135,7 @@
         "hasTextures": false,
         "hasDefaultScene": true,
         "drawCallCount": 2,
-        "totalVertexCount": 1417,
+        "totalVertexCount": 1685,
         "totalTriangleCount": 0,
         "maxUVs": 0,
         "maxInfluences": 0,
@@ -15136,8 +15143,8 @@
       }
     },
     {
-      "id": "hercules-corona-borealis-grb-catalog",
-      "sha256": "7aa8c75961dd27d68aa0c4520769956310fca236585784904f7503efb5c43419",
+      "id": "hercules-corona-borealis-lightcone",
+      "sha256": "0142825a6f528d0025381417d219bb30bf9970906faaf73902ef2c4ed359c7a1",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -15148,7 +15155,7 @@
       },
       "info": {
         "version": "2.0",
-        "generator": "Universe Scales Swift GRB catalog view",
+        "generator": "Universe Scales Hercules-Corona Borealis builder",
         "extensionsUsed": [
           "KHR_materials_unlit"
         ],
@@ -15157,17 +15164,17 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 24120
+            "byteLength": 406896
           }
         ],
         "animationCount": 0,
-        "materialCount": 6,
+        "materialCount": 4,
         "hasMorphTargets": false,
         "hasSkins": false,
         "hasTextures": false,
         "hasDefaultScene": true,
-        "drawCallCount": 6,
-        "totalVertexCount": 1968,
+        "drawCallCount": 4,
+        "totalVertexCount": 25433,
         "totalTriangleCount": 0,
         "maxUVs": 0,
         "maxInfluences": 0,
@@ -16102,6 +16109,319 @@
         "maxUVs": 0,
         "maxInfluences": 0,
         "maxAttributes": 3
+      }
+    },
+    {
+      "id": "fruit-fly-brain-flywire",
+      "sha256": "48e24338383bc6a8f05003f0ca922d719c40b7b2acd301c1e4187f7e12aadd11",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales FlyWire v783 skeleton sample",
+        "extensionsUsed": [
+          "KHR_materials_unlit",
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 2529884
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 3,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 6,
+        "totalVertexCount": 154849,
+        "totalTriangleCount": 30768,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "em-mitochondrion-jurkat",
+      "sha256": "1a68399f150f8eba6467689ed3867efe0cec2d1054d0bea27402d0727a5b73b9",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales scripts/build_em_mitochondrion.py",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1867428
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 51815,
+        "totalTriangleCount": 103978,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "laniakea-2mrs-galaxies",
+      "sha256": "d5a8898f66a4ecf62558b87af3d41aac40ac20f5a666e049c54a3fdf87aa170c",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales Laniakea galaxy builder",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 368512
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 23032,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "crab-nebula-volume",
+      "sha256": "c51901e075e4793ae2a140bc497331f99683e69017aaffb204aeaa47ecd82529",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales nebula volume builder",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1253568
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 4,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 78348,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "ring-nebula-volume",
+      "sha256": "93fdb96310d45f917045c2da9a5b2ef18180c230e3ddf208454f46d65f12a73f",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales nebula volume builder",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1282144
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 4,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 80134,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "local-group-mcconnachie-3d",
+      "sha256": "07e0deb0c2dd0c4b25daf4ad260bb42aaab5c604f56bf349bfd18db3947987cd",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales Local Group builder",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 503600
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 9,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 9,
+        "totalVertexCount": 31475,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "andromeda-galaxy-disk",
+      "sha256": "30a913cf1c30aff8bf619f0892525b2b6b1704dcdf02f41acee6eca3f1477f8c",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales nebula volume builder",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 617216
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 38576,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "pleiades-gaia-3d",
+      "sha256": "3aa2638881466396c4724af94f228f0a6d3639843baeca468445c7c98ab625df",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales Pleiades builder",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 35840
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 3,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 2240,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
       }
     }
   ]
