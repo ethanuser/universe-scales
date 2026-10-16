@@ -1,0 +1,45 @@
+{
+  "scope": "Full registered-GLB validation before final cap geometry refinement; final all-batch results are in gltf-validation.json",
+  "validator": "2.0.0-dev.3.10",
+  "models": 132,
+  "errors": 0,
+  "warnings": 1867,
+  "existing_warning_models": [
+    {
+      "id": "nasa-earth",
+      "warnings": 1
+    },
+    {
+      "id": "wine-bottle",
+      "warnings": 3
+    },
+    {
+      "id": "ceiling-fan",
+      "warnings": 2
+    },
+    {
+      "id": "sketchfab-giraffe",
+      "warnings": 876
+    },
+    {
+      "id": "sketchfab-blue-whale",
+      "warnings": 979
+    },
+    {
+      "id": "bucket",
+      "warnings": 3
+    },
+    {
+      "id": "nasa-earth-moon-distance",
+      "warnings": 1
+    },
+    {
+      "id": "nasa-sun-earth-au",
+      "warnings": 1
+    },
+    {
+      "id": "great-wall-network-globe",
+      "warnings": 1
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "method": "CPU orthographic geometry, all primitive types; not production/WebGL verification",
+  "models": [
+    {
+      "id": "cassini-hyperion-shape",
+      "extent_per_catalog_value": 1.2069816813569016,
+      "width_per_value": 0.9768649154363979,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "cassini-saturn-hexagon",
+      "extent_per_catalog_value": 1.2799999713897705,
+      "width_per_value": 1.2799999713897705,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "dart-dimorphos-preimpact",
+      "extent_per_catalog_value": 1.2014314464264702,
+      "width_per_value": 1.2014314464264702,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "eris-occultation-sphere",
+      "extent_per_catalog_value": 1.0,
+      "width_per_value": 1.0,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "jaxa-ryugu-shape",
+      "extent_per_catalog_value": 1.1240142817850247,
+      "width_per_value": 1.1240142817850247,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "jpl-halley-orbit",
+      "extent_per_catalog_value": 1.1353068798780441,
+      "width_per_value": 1.1353068798780441,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "jpl-kuiper-catalog",
+      "extent_per_catalog_value": 0.9848471191873241,
+      "width_per_value": 0.9848471191873241,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "jpl-sedna-orbit",
+      "extent_per_catalog_value": 1.1649897396564484,
+      "width_per_value": 1.1649897396564484,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "juno-great-red-spot",
+      "extent_per_catalog_value": 1.1876638770668035,
+      "width_per_value": 1.1876638770668035,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "nasa-saturn-globe-length",
+      "extent_per_catalog_value": 1.0307631836333369,
+      "width_per_value": 1.0307631836333369,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "nasa-saturn-main-rings",
+      "extent_per_catalog_value": 0.9530833394924987,
+      "width_per_value": 0.9530833394924987,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "nicer-j0437-sphere",
+      "extent_per_catalog_value": 0.9999999697779266,
+      "width_per_value": 0.9999999697779266,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "proxima-centauri-sphere",
+      "extent_per_catalog_value": 0.9999999766958304,
+      "width_per_value": 0.9999999766958304,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "sirius-b-sphere",
+      "extent_per_catalog_value": 1.0,
+      "width_per_value": 1.0,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "vega-roche-photosphere",
+      "extent_per_catalog_value": 0.990226105330736,
+      "width_per_value": 0.990226105330736,
+      "passes_extent_rule": true
+    }
+  ]
+}

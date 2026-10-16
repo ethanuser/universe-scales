@@ -1,0 +1,273 @@
+{
+  "validator": "2.0.0-dev.3.10",
+  "models": [
+    {
+      "id": "cassini-hyperion-shape",
+      "sha256": "f687493d297b17be24f74bc6c574fa9b3265bd74f5cef580965998b1195908d0",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "id": "cassini-saturn-hexagon",
+      "sha256": "e3a5d1288345139d452955d20f7695cb7654ee70804ff22ffd8d89b77807dae4",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "id": "dart-dimorphos-preimpact",
+      "sha256": "45561600b47afc46f4e35641747916ccaf06dab79b052c141cfc306d21d45873",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "id": "eris-occultation-sphere",
+      "sha256": "5b52110a70c17e4dbd6aa40a4fbb9ea6107be39fffd24d2c74cfb1b0e924bb69",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "jaxa-ryugu-shape",
+      "sha256": "395067bda654535268602a7cad1dd1f8a659fe052d6b8dbb5ab433a0efe8e94b",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "id": "jpl-halley-orbit",
+      "sha256": "bf0f69750cea665bd03cc5f2e70d41ceef9acb1f528587cda965b9abe6c00df0",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 3,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "jpl-kuiper-catalog",
+      "sha256": "45f5406ccaf942a86e18c0beb8d554cd33d69e18bc95bfce3301dfac5ac57f59",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "jpl-sedna-orbit",
+      "sha256": "314656d12f36ec12d3298015675152dfea58c12f538c0daa270de50f341d4d2f",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 2,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "juno-great-red-spot",
+      "sha256": "d33bbedc45d4f08eea108a3ac0fb22e6b33458ff63f364d98f8b9931c09b17cc",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1020x920.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "nasa-saturn-globe-length",
+      "sha256": "c9d20445ffe62d808f99f820c95cf3925ca3f165a33597b49b05305855adbdf1",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "nasa-saturn-main-rings",
+      "sha256": "b6ae5c7d675794ddec13b4e156789322bd901348ea82bd81a513eedd5a933dad",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "nicer-j0437-sphere",
+      "sha256": "13a2fef5f93fd2f0e61a4fdf2a0b290568d7feb2f0cc22b7b19b692e6d11a9ff",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "proxima-centauri-sphere",
+      "sha256": "9b211604d9cc78fb3d08b48ffa4922eccef311df939899fd981220e471dc57d2",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "sirius-b-sphere",
+      "sha256": "d6c2a7d3027ee0723a154bf94645d1d825faa270c658771d468a956db0fd2fd3",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "id": "vega-roche-photosphere",
+      "sha256": "d4e9746cb7fbe6268b87cac1ab46f61e97f69607f7405c26bb302adb8d98fa6d",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    }
+  ]
+}

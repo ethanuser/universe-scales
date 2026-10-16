@@ -1,0 +1,56 @@
+{
+  "id": "cassini-saturn-hexagon",
+  "matches": {
+    "length": [
+      "Saturn's Hexagon"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "image-textured-cloud-cap",
+  "note": "Cassini PIA17652 false-color polar mosaic on a shallow idealized spherical cap. The jet\u2019s visible across-corners width is registered approximately to the catalog 25,000 km; the surrounding circular aperture is context and extends to about 1.28\u00d7. This is approximate image registration, not a georeferenced latitude/longitude map. Colors combine ultraviolet, visible and infrared wavelengths and are not natural vision. Geometry shows planetary curvature only, not measured cloud heights. The source is a 2012 image, not current weather or a six-sided solid object.",
+  "source": "https://science.nasa.gov/resource/saturns-streaming-hexagon-storm/",
+  "author": "NASA/JPL-Caltech/SSI/Hampton University; cap assembled by Universe Scales",
+  "reference": "content/visualizations/models/sources/cassini-saturn-hexagon.md",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1,
+    "layout_width_factor": 1.3
+  },
+  "processing": {
+    "pinned_input": "content/visualizations/models/sources/space3d2/hexagon.jpg",
+    "pinned_input_sha256": "29b65d1370390fda5ff32ad0e73bfc774cd0c4755a237005031663a46facb452",
+    "source_image_size": [
+      1024,
+      1024
+    ],
+    "operations": [
+      "Retain original 1024px NASA polar mosaic in a circular aperture",
+      "Register image jet width approximately; retain image cloud markings",
+      "Drape over a shallow cap with Saturn curvature; no relief noise"
+    ]
+  },
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/i/a/PIA17652.jpg",
+  "source_sha256": "29b65d1370390fda5ff32ad0e73bfc774cd0c4755a237005031663a46facb452",
+  "source_bytes": 109646,
+  "src": "content/visualizations/models/cassini-saturn-hexagon.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 554132,
+  "sha256": "e3a5d1288345139d452955d20f7695cb7654ee70804ff22ffd8d89b77807dae4",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 12160,
+  "animations": 0,
+  "skins": 0
+}

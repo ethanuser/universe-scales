@@ -1,0 +1,86 @@
+{
+  "id": "jpl-halley-orbit",
+  "matches": {
+    "length": [
+      "Halley's Comet Orbit"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "catalog-orbit-diagram",
+  "note": "JPL SBDB heliocentric osculating ellipse for 1P/Halley, at the returned 1968 epoch; the ruler measures the entire major axis, not a Sun-to-comet radius or traveled path. Faint Earth/Jupiter ellipses are JPL J2000 reference orbits for context. This is a static two-body orbital diagram, not a current comet position or a full N-body trajectory. The Sun and endpoint dots are enlarged location markers, not true body diameters.",
+  "source": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
+  "author": "NASA/JPL Solar System Dynamics; diagram by Universe Scales",
+  "reference": "content/visualizations/models/sources/jpl-halley-orbit.md",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1,
+    "pitch": 18,
+    "layout_width_factor": 1.2
+  },
+  "processing": {
+    "pinned_input": "content/visualizations/models/sources/space3d2/halley.json",
+    "pinned_input_sha256": "69353b4bb9ea975e250afa996b3da776b7db17096b534065982a872ff85bde54",
+    "elements": {
+      "e": 0.9679359956953211,
+      "a": 17.92863504856923,
+      "q": 0.5748638313743413,
+      "i": 162.1905300439129,
+      "om": 59.09894720612437,
+      "w": 112.2414314637764,
+      "ma": 274.3823371366792,
+      "tp": 2446469.9736161465,
+      "per": 27728.04608790421,
+      "n": 0.01298324443268444,
+      "ad": 35.28240626576412
+    },
+    "source_epoch_jd_tdb": "2439875.5",
+    "source_orbit_id": "75",
+    "physical_reference_AU": 35.474,
+    "source_to_inspection_rotation": [
+      [
+        -0.5617674725637058,
+        0.7773504761497562,
+        -0.2830963510876349
+      ],
+      [
+        -0.7845656828293982,
+        -0.6091423292137264,
+        -0.11576835528984725
+      ],
+      [
+        -0.2624385568010657,
+        0.15707278564354676,
+        0.9520788538321552
+      ]
+    ],
+    "operations": [
+      "Solve Kepler equation for pinned JPL elements",
+      "Rotate rigidly to an orbital-plane inspection frame",
+      "Use catalog meters/AU as calibration; never normalize the coordinate bounds"
+    ]
+  },
+  "download_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1P&full-prec=1",
+  "source_sha256": "69353b4bb9ea975e250afa996b3da776b7db17096b534065982a872ff85bde54",
+  "source_bytes": 4092,
+  "src": "content/visualizations/models/jpl-halley-orbit.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 102976,
+  "sha256": "bf0f69750cea665bd03cc5f2e70d41ceef9acb1f528587cda965b9abe6c00df0",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 7,
+  "triangle_count": 672,
+  "animations": 0,
+  "skins": 0
+}

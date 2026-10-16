@@ -1,0 +1,12 @@
+{
+  "source": "https://ssd.jpl.nasa.gov/planets/approx_pos.html",
+  "table": "Table 1, base J2000 elements valid 1800–2050; no epoch-rate propagation for reference ellipses",
+  "epoch_jd_tdb": 2451545.0,
+  "units": "a in AU; i, om, w in degrees; w = longitude of perihelion minus longitude of ascending node",
+  "planets": {
+    "Earth": {"a": 1.00000261, "e": 0.01671123, "i": -0.00001531, "om": 0.0, "w": 102.93768193},
+    "Jupiter": {"a": 5.20288700, "e": 0.04838624, "i": 1.30439695, "om": 100.47390909, "w": -85.74542926},
+    "Neptune": {"a": 30.06992276, "e": 0.00859048, "i": 1.77004347, "om": 131.78422574, "w": -86.81946347}
+  },
+  "earth_note": "The Earth entry represents the Earth–Moon barycenter in this source table."
+}

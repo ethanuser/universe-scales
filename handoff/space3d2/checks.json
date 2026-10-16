@@ -1,0 +1,29 @@
+{
+  "node": {
+    "tests": 225,
+    "passed": 225,
+    "failed": 0
+  },
+  "python": {
+    "tests": 103,
+    "skipped": 1,
+    "failures": 0
+  },
+  "asset_verification": {
+    "registered_glbs": 132,
+    "exact_name_matches": 143,
+    "passed": true
+  },
+  "versions": {
+    "stale": 0
+  },
+  "new_glbs": {
+    "total": 15,
+    "registered": 14,
+    "errors": 0,
+    "warnings": 0,
+    "offline_rebuild_byte_identical": true
+  },
+  "browser": "Not attempted: known sandbox limitation; production review pending",
+  "git_commit": "Not attempted: known sandbox limitation; lead commits"
+}

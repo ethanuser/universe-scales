@@ -9325,6 +9325,829 @@
       "triangle_count": 52398,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "nasa-saturn-globe-length",
+      "matches": {
+        "length": [
+          "Saturn"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "scientific-agency-illustration",
+      "note": "NASA VTAD\u2019s original oblate textured Saturn globe. The catalog mean diameter is calibrated against the source\u2019s equatorial-diameter scale, preserving polar flattening. Rings are shown at their true relative scale under the separate Saturn\u2019s Rings item; including them here would exceed the explorer\u2019s 1.3\u00d7 body-diameter extent rule. The texture is an illustrative global mosaic, not current weather.",
+      "source": "https://science.nasa.gov/resource/saturn-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "reference": "content/visualizations/models/sources/nasa-saturn-globe-length.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 966.2175615583726,
+        "pitch": 8,
+        "roll": -12,
+        "layout_width_factor": 1.2
+      },
+      "processing": {
+        "source_models": [
+          {
+            "id": "nasa-saturn-angular",
+            "sha256": "cbd2f83aa8cf70425453b9406dd7812dd8b30d0cb6e7fd186ba4d2c2dcbd1bd9"
+          }
+        ],
+        "source_equatorial_diameter_units": 1000,
+        "source_equatorial_diameter_km": 120536,
+        "operations": [
+          "Reuse NASA source geometry, UVs and already resized embedded textures",
+          "Extract globe; omit ring meshes and unused ring image"
+        ]
+      },
+      "src": "content/visualizations/models/nasa-saturn-globe-length.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 704112,
+      "sha256": "c9d20445ffe62d808f99f820c95cf3925ca3f165a33597b49b05305855adbdf1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nasa-saturn-main-rings",
+      "matches": {
+        "length": [
+          "Saturn's Rings"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "scientific-agency-illustration",
+      "note": "NASA VTAD\u2019s original Saturn globe and ring meshes, retaining their textures and relative proportions. Calibration uses the catalog 280,360 km span to the F ring in the source\u2019s 120,536 km equatorial-diameter units. The model\u2019s outer edge is within 1% of that span. This is a main-ring view; the diffuse E ring and individual particles are not represented.",
+      "source": "https://science.nasa.gov/resource/saturn-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "reference": "content/visualizations/models/sources/nasa-saturn-main-rings.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 2325.9441162806133,
+        "pitch": 28,
+        "roll": -18,
+        "layout_width_factor": 1.2
+      },
+      "processing": {
+        "source_models": [
+          {
+            "id": "nasa-saturn-angular",
+            "sha256": "cbd2f83aa8cf70425453b9406dd7812dd8b30d0cb6e7fd186ba4d2c2dcbd1bd9"
+          }
+        ],
+        "source_equatorial_diameter_units": 1000,
+        "source_equatorial_diameter_km": 120536,
+        "operations": [
+          "Reuse NASA source geometry, UVs and already resized embedded textures",
+          "Retain globe and both original ring faces"
+        ]
+      },
+      "src": "content/visualizations/models/nasa-saturn-main-rings.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 726904,
+      "sha256": "b6ae5c7d675794ddec13b4e156789322bd901348ea82bd81a513eedd5a933dad",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 3328,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "cassini-saturn-hexagon",
+      "matches": {
+        "length": [
+          "Saturn's Hexagon"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "image-textured-cloud-cap",
+      "note": "Cassini PIA17652 false-color polar mosaic on a shallow idealized spherical cap. The jet\u2019s visible across-corners width is registered approximately to the catalog 25,000 km; the surrounding circular aperture is context and extends to about 1.28\u00d7. This is approximate image registration, not a georeferenced latitude/longitude map. Colors combine ultraviolet, visible and infrared wavelengths and are not natural vision. Geometry shows planetary curvature only, not measured cloud heights. The source is a 2012 image, not current weather or a six-sided solid object.",
+      "source": "https://science.nasa.gov/resource/saturns-streaming-hexagon-storm/",
+      "author": "NASA/JPL-Caltech/SSI/Hampton University; cap assembled by Universe Scales",
+      "reference": "content/visualizations/models/sources/cassini-saturn-hexagon.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1,
+        "layout_width_factor": 1.3
+      },
+      "processing": {
+        "pinned_input": "content/visualizations/models/sources/space3d2/hexagon.jpg",
+        "pinned_input_sha256": "29b65d1370390fda5ff32ad0e73bfc774cd0c4755a237005031663a46facb452",
+        "source_image_size": [
+          1024,
+          1024
+        ],
+        "operations": [
+          "Retain original 1024px NASA polar mosaic in a circular aperture",
+          "Register image jet width approximately; retain image cloud markings",
+          "Drape over a shallow cap with Saturn curvature; no relief noise"
+        ]
+      },
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/i/a/PIA17652.jpg",
+      "source_sha256": "29b65d1370390fda5ff32ad0e73bfc774cd0c4755a237005031663a46facb452",
+      "source_bytes": 109646,
+      "src": "content/visualizations/models/cassini-saturn-hexagon.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 554132,
+      "sha256": "e3a5d1288345139d452955d20f7695cb7654ee70804ff22ffd8d89b77807dae4",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 12160,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "juno-great-red-spot",
+      "matches": {
+        "length": [
+          "Great Red Spot"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "image-textured-cloud-patch",
+      "note": "An enhanced-color Juno cloud image (12 February 2019) draped over an idealized shallow cloud-top patch. The storm is shown at the catalog\u2019s representative April 2017 width of 16,350 km. This is an illustrative size comparison using later imagery, not a measured 2019 map or a claim that the storm\u2019s size stayed constant. The surrounding collar is context. Curvature is schematic; neither cloud heights nor storm depth are reconstructed. Credit NASA/JPL-Caltech/SwRI/MSSS; processing Kevin M. Gill, CC BY; cropped and draped by Universe Scales.",
+      "source": "https://science.nasa.gov/photojournal/the-great-red-spot/",
+      "author": "NASA/JPL-Caltech/SwRI/MSSS; image processing Kevin M. Gill; adapted by Universe Scales",
+      "reference": "content/visualizations/models/sources/juno-great-red-spot.md",
+      "license": "CC BY (image processing); NASA public-domain image data",
+      "license_url": "https://science.nasa.gov/photojournal/the-great-red-spot/",
+      "license_files": [
+        "licenses/space3d2-rights.md",
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1,
+        "pitch": -8,
+        "yaw": -10,
+        "layout_width_factor": 1.25
+      },
+      "processing": {
+        "pinned_input": "content/visualizations/models/sources/space3d2/grs2019.jpg",
+        "pinned_input_sha256": "68c42665d4edc8da87d9baa481b0f2192a3d5f9cadc20db5be3023682fe0f8dc",
+        "image_crop_pixels": [
+          1740,
+          80,
+          2760,
+          1000
+        ],
+        "operations": [
+          "Crop PIA23606 around the full Great Red Spot and collar",
+          "Use the catalog 2017 size as a representative display scale, explicitly not 2019 astrometry",
+          "Drape over an idealized shallow spherical patch; do not invent storm relief"
+        ]
+      },
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia23/pia23606/PIA23606.jpg",
+      "source_sha256": "68c42665d4edc8da87d9baa481b0f2192a3d5f9cadc20db5be3023682fe0f8dc",
+      "source_bytes": 520993,
+      "src": "content/visualizations/models/juno-great-red-spot.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 544068,
+      "sha256": "d33bbedc45d4f08eea108a3ac0fb22e6b33458ff63f364d98f8b9931c09b17cc",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 8192,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "eris-occultation-sphere",
+      "matches": {
+        "length": [
+          "Eris"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "idealized-size-sphere",
+      "note": "An idealized untextured icy sphere at the 2,326 km diameter measured by Sicardy et al. (2011) from a stellar occultation (about \u00b112 km). It is not a spacecraft-derived terrain model: no resolved surface map of Eris is available here. Bright neutral material suggests its high reflectivity without inventing craters or albedo markings. Dysnomia is omitted.",
+      "source": "https://www.eso.org/public/news/eso1142/",
+      "author": "Universe Scales",
+      "reference": "content/visualizations/models/sources/eris-occultation-sphere.md",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 2326
+      },
+      "processing": {
+        "native_units": "km",
+        "diameter_km": 2326,
+        "operations": [
+          "Create a smooth sphere at the cited catalog diameter",
+          "Use an authored uniform material; no surface texture"
+        ]
+      },
+      "src": "content/visualizations/models/eris-occultation-sphere.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 207408,
+      "sha256": "5b52110a70c17e4dbd6aa40a4fbb9ea6107be39fffd24d2c74cfb1b0e924bb69",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 9024,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "nicer-j0437-sphere",
+      "matches": {
+        "length": [
+          "PSR J0437-4715 Neutron Star"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "idealized-size-sphere",
+      "note": "A true-size smooth sphere at the catalog\u2019s 22.72 km equatorial-diameter estimate, twice the 11.36 km radius inferred by Choudhury et al. (2024) from NICER pulse-profile modeling and radio timing. It is not a resolved surface photograph. Sphericity and blue-white color are display conventions; hot spots, beams, atmosphere and gravitational lensing are not simulated. The 2024 radius has a 68% interval of -0.63/+0.95 km. A newer NICER analysis (arXiv:2512.08790) finds a broader, larger range, so this is explicitly the catalog\u2019s 2024 estimate, not a unique established radius.",
+      "source": "https://arxiv.org/abs/2407.06789",
+      "author": "Universe Scales",
+      "reference": "content/visualizations/models/sources/nicer-j0437-sphere.md",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 22.72
+      },
+      "processing": {
+        "native_units": "km",
+        "diameter_km": 22.72,
+        "operations": [
+          "Create a smooth sphere at the cited catalog diameter",
+          "Use an authored uniform material; no surface texture"
+        ]
+      },
+      "display_label": "PSR J0437-4715 \u00b7 2024 NICER estimate",
+      "src": "content/visualizations/models/nicer-j0437-sphere.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 207576,
+      "sha256": "13a2fef5f93fd2f0e61a4fdf2a0b290568d7feb2f0cc22b7b19b692e6d11a9ff",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 9024,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "sirius-b-sphere",
+      "matches": {
+        "length": [
+          "Sirius B"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "idealized-size-sphere",
+      "note": "A smooth white-dwarf sphere calibrated to the catalog\u2019s approximate 11,300 km diameter. Bond et al. (2017) infer a radius of 0.008098 solar radii. The blue-white tint is illustrative; no resolved surface texture, accretion disk or surrounding halo is claimed. Brightness is adjusted for inspection, not compared photometrically with other stars.",
+      "source": "https://arxiv.org/abs/1703.10625",
+      "author": "Universe Scales",
+      "reference": "content/visualizations/models/sources/sirius-b-sphere.md",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 11300
+      },
+      "processing": {
+        "native_units": "km",
+        "diameter_km": 11300,
+        "operations": [
+          "Create a smooth sphere at the cited catalog diameter",
+          "Use an authored uniform material; no surface texture"
+        ]
+      },
+      "src": "content/visualizations/models/sirius-b-sphere.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 207452,
+      "sha256": "d6c2a7d3027ee0723a154bf94645d1d825faa270c658771d468a956db0fd2fd3",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 9024,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "proxima-centauri-sphere",
+      "matches": {
+        "length": [
+          "Proxima Centauri Diameter"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "idealized-size-sphere",
+      "note": "A smooth red-dwarf sphere calibrated to the catalog diameter, from the 0.1542 solar-radius estimate of Kervella et al. (2017). Warm color and inspection lighting are illustrative; no resolved photospheric map, invented spots, flares or corona is implied. Apparent brightness is adjusted for visibility and is not a luminosity comparison.",
+      "source": "https://www.aanda.org/articles/aa/pdf/2017/02/aa29930-16.pdf",
+      "author": "Universe Scales",
+      "reference": "content/visualizations/models/sources/proxima-centauri-sphere.md",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 214553.88
+      },
+      "processing": {
+        "native_units": "km",
+        "diameter_km": 214553.88,
+        "operations": [
+          "Create a smooth sphere at the cited catalog diameter",
+          "Use an authored uniform material; no surface texture"
+        ]
+      },
+      "src": "content/visualizations/models/proxima-centauri-sphere.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 207516,
+      "sha256": "9b211604d9cc78fb3d08b48ffa4922eccef311df939899fd981220e471dc57d2",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 9024,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "vega-roche-photosphere",
+      "matches": {
+        "length": [
+          "Vega Diameter"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "interferometry-constrained-roche-model",
+      "note": "An oblate Roche equipotential using Monnier et al. (2012) CHARA/MIRC concordance-model equatorial and polar radii, 2.726 and 2.418 solar radii. Latitude shading qualitatively illustrates gravity darkening (polar temperature 10,070 K, exponent 0.231); it is not an observed surface map or calibrated color photometry. The oblique inspection view deliberately exposes flattening. From Earth Vega is seen nearly pole-on (~6.2\u00b0), so this is not its sky orientation. Earlier Aufdenberg et al. (2006) modeling supports rapid rotation but gives different parameters.",
+      "source": "https://arxiv.org/html/1211.6055v1",
+      "author": "Universe Scales",
+      "reference": "content/visualizations/models/sources/vega-roche-photosphere.md",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 3792956.4,
+        "pitch": 23,
+        "roll": -16,
+        "layout_width_factor": 1.1
+      },
+      "processing": {
+        "native_units": "km",
+        "equatorial_radius_solar": 2.726,
+        "polar_radius_solar": 2.418,
+        "nominal_solar_radius_km": 695700,
+        "gravity_darkening_beta": 0.231,
+        "polar_temperature_K": 10070,
+        "operations": [
+          "Solve a Roche equipotential at each colatitude",
+          "Compute analytic gravity normals; shade smoothly by modeled relative temperature",
+          "Retain the true equator-to-pole radius ratio and authored inspection pose"
+        ]
+      },
+      "src": "content/visualizations/models/vega-roche-photosphere.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 367204,
+      "sha256": "d4e9746cb7fbe6268b87cac1ab46f61e97f69607f7405c26bb302adb8d98fa6d",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 16128,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "jpl-halley-orbit",
+      "matches": {
+        "length": [
+          "Halley's Comet Orbit"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "catalog-orbit-diagram",
+      "note": "JPL SBDB heliocentric osculating ellipse for 1P/Halley, at the returned 1968 epoch; the ruler measures the entire major axis, not a Sun-to-comet radius or traveled path. Faint Earth/Jupiter ellipses are JPL J2000 reference orbits for context. This is a static two-body orbital diagram, not a current comet position or a full N-body trajectory. The Sun and endpoint dots are enlarged location markers, not true body diameters.",
+      "source": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
+      "author": "NASA/JPL Solar System Dynamics; diagram by Universe Scales",
+      "reference": "content/visualizations/models/sources/jpl-halley-orbit.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1,
+        "pitch": 18,
+        "layout_width_factor": 1.2
+      },
+      "processing": {
+        "pinned_input": "content/visualizations/models/sources/space3d2/halley.json",
+        "pinned_input_sha256": "69353b4bb9ea975e250afa996b3da776b7db17096b534065982a872ff85bde54",
+        "elements": {
+          "e": 0.9679359956953211,
+          "a": 17.92863504856923,
+          "q": 0.5748638313743413,
+          "i": 162.1905300439129,
+          "om": 59.09894720612437,
+          "w": 112.2414314637764,
+          "ma": 274.3823371366792,
+          "tp": 2446469.9736161465,
+          "per": 27728.04608790421,
+          "n": 0.01298324443268444,
+          "ad": 35.28240626576412
+        },
+        "source_epoch_jd_tdb": "2439875.5",
+        "source_orbit_id": "75",
+        "physical_reference_AU": 35.474,
+        "source_to_inspection_rotation": [
+          [
+            -0.5617674725637058,
+            0.7773504761497562,
+            -0.2830963510876349
+          ],
+          [
+            -0.7845656828293982,
+            -0.6091423292137264,
+            -0.11576835528984725
+          ],
+          [
+            -0.2624385568010657,
+            0.15707278564354676,
+            0.9520788538321552
+          ]
+        ],
+        "operations": [
+          "Solve Kepler equation for pinned JPL elements",
+          "Rotate rigidly to an orbital-plane inspection frame",
+          "Use catalog meters/AU as calibration; never normalize the coordinate bounds"
+        ]
+      },
+      "download_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=1P&full-prec=1",
+      "source_sha256": "69353b4bb9ea975e250afa996b3da776b7db17096b534065982a872ff85bde54",
+      "source_bytes": 4092,
+      "src": "content/visualizations/models/jpl-halley-orbit.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 102976,
+      "sha256": "bf0f69750cea665bd03cc5f2e70d41ceef9acb1f528587cda965b9abe6c00df0",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 7,
+      "triangle_count": 672,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "jpl-sedna-orbit",
+      "matches": {
+        "length": [
+          "Sedna Aphelion"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "catalog-orbit-diagram",
+      "note": "JPL SBDB heliocentric osculating ellipse for Sedna at the pinned 2026 epoch. The ruler runs from the Sun\u2019s focus to aphelion, not across the whole ellipse. This source solution gives Q about 1,011 AU, differing from the catalog\u2019s older approximate 937 AU; coordinates are preserved without stretching. The diagram is a two-body snapshot, not a measured future trajectory. Sun and endpoint dots are enlarged location markers, not physical bodies.",
+      "source": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
+      "author": "NASA/JPL Solar System Dynamics; diagram by Universe Scales",
+      "reference": "content/visualizations/models/sources/jpl-sedna-orbit.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 1,
+        "pitch": 18,
+        "layout_width_factor": 1.2
+      },
+      "processing": {
+        "pinned_input": "content/visualizations/models/sources/space3d2/sedna.json",
+        "pinned_input_sha256": "9073e7e92d11f68758a0275e3b766f857647859d313aa2d2d5c4af488fa17152",
+        "elements": {
+          "e": 0.8598824585187618,
+          "a": 543.7195289104732,
+          "q": 76.18464364627253,
+          "i": 11.92527582847476,
+          "om": 144.5061662673739,
+          "w": 311.0987725939751,
+          "ma": 358.5956944005428,
+          "tp": 2479264.7506871386,
+          "per": 4630851.183590915,
+          "n": 7.773948799642578e-05,
+          "ad": 1011.254414174674
+        },
+        "source_epoch_jd_tdb": "2461200.5",
+        "source_orbit_id": "51",
+        "physical_reference_AU": 935.8421971175824,
+        "source_to_inspection_rotation": [
+          [
+            0.10711167969544934,
+            -0.9819773835812369,
+            0.15571610773381106
+          ],
+          [
+            -0.9869816937026173,
+            -0.08611780202257913,
+            0.13583394447159644
+          ],
+          [
+            -0.11997593245619036,
+            -0.16823834969990714,
+            -0.9784179236509926
+          ]
+        ],
+        "operations": [
+          "Solve Kepler equation for pinned JPL elements",
+          "Rotate rigidly to an orbital-plane inspection frame",
+          "Use catalog meters/AU as calibration; never normalize the coordinate bounds"
+        ]
+      },
+      "download_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=90377&full-prec=1",
+      "source_sha256": "9073e7e92d11f68758a0275e3b766f857647859d313aa2d2d5c4af488fa17152",
+      "source_bytes": 3255,
+      "src": "content/visualizations/models/jpl-sedna-orbit.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 59728,
+      "sha256": "314656d12f36ec12d3298015675152dfea58c12f538c0daa270de50f341d4d2f",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 448,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "jpl-kuiper-catalog",
+      "matches": {
+        "length": [
+          "Kuiper Belt"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "catalog-point-cloud",
+      "note": "4,615 actual catalog-object locations from the pinned JPL SBDB orbital elements, propagated with a two-body approximation to 16 October 2026 TDB. Selection: asteroid records with semimajor axis 30\u201350 AU, perihelion at least 30 AU, and computed distance 30\u201350 AU. This is a selected, discovery-biased subset, not all Kuiper Belt objects or an unbiased density map. Point colors and sizes are display glyphs, not body sizes or measured colors. The faint Neptune ellipse is a JPL J2000 reference orbit; the Sun is physically scaled and subpixel. No synthetic filler points are added.",
+      "source": "https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html",
+      "author": "NASA/JPL Solar System Dynamics; catalog visualization by Universe Scales",
+      "reference": "content/visualizations/models/sources/jpl-kuiper-catalog.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 100.26880683402668,
+        "pitch": 24,
+        "yaw": -12,
+        "roll": -8,
+        "layout_width_factor": 1.1
+      },
+      "processing": {
+        "pinned_input": "content/visualizations/models/sources/space3d2/kuiper.json",
+        "pinned_input_sha256": "acade45227a698b01cd01f05b712cbd9c3a17b99b228e77c0b31bac6e2360975",
+        "native_units": "AU",
+        "selected_query_count": 4747,
+        "displayed_count": 4615,
+        "display_epoch_jd_tdb": 2461329.5,
+        "point_identities": "content/visualizations/models/sources/space3d2/kuiper-displayed.json",
+        "point_identities_sha256": "5b47ff5a557baf6d6877c5e108aefb58f88e0859a744b8c90d21450e20dd0fb5",
+        "operations": [
+          "Retain actual JPL osculating elements and solve Kepler equation",
+          "Propagate mean anomaly to a common display epoch with a fixed two-body approximation",
+          "Select computed heliocentric distance 30\u201350 AU; retain true coordinates",
+          "Shuffle deterministically for runtime LOD; add no synthetic objects"
+        ]
+      },
+      "download_url": "https://ssd-api.jpl.nasa.gov/sbdb_query.api?fields=pdes%2Cfull_name%2Cepoch%2Ca%2Ce%2Ci%2Com%2Cw%2Cma&sb-kind=a&sb-cdata=%7B%22AND%22%3A%5B%22a%7CRG%7C30%7C50%22%2C%22q%7CGE%7C30%22%5D%7D&full-prec=1&sort=pdes",
+      "source_sha256": "acade45227a698b01cd01f05b712cbd9c3a17b99b228e77c0b31bac6e2360975",
+      "source_bytes": 1105414,
+      "src": "content/visualizations/models/jpl-kuiper-catalog.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 89028,
+      "sha256": "45f5406ccaf942a86e18c0beb8d554cd33d69e18bc95bfce3301dfac5ac57f59",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 528,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "jaxa-ryugu-shape",
+      "matches": {
+        "length": [
+          "Ryugu"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "spacecraft-derived-shape",
+      "note": "Hayabusa2 measured SfM shape, 49,152 original triangles. The equatorial ridge and resolved relief are from spacecraft data; gray albedo is authored, not a surface photograph. Catalog mean diameter calibrates the closed mesh equivalent-volume diameter. Body-fixed north is up; the inspection pose is authored.",
+      "source": "https://data.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/README.html",
+      "author": "ISAS/JAXA; Watanabe et al. (2019), Hayabusa2 shape-model team",
+      "reference": "content/visualizations/models/sources/jaxa-ryugu-shape.md",
+      "license": "ISAS/JAXA open-data terms, compatible with CC BY 4.0",
+      "license_url": "https://www.isas.jaxa.jp/en/researchers/data-policy/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "licenses/space3d2-rights.md"
+      ],
+      "volume_semantics": "equivalent_volume_diameter_calibration",
+      "closed_volume_checked": true,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 0.8964993941086019,
+        "yaw": -25,
+        "pitch": 12,
+        "layout_width_factor": 1.25
+      },
+      "processing": {
+        "pinned_input": "content/visualizations/models/sources/space3d2/ryugu.npz",
+        "pinned_input_sha256": "c0a7b03ea95953285e5c31d53169f344e0cb31f7703d55341fbfba781a1987c0",
+        "source_vertex_count": 24578,
+        "original_triangles": 49152,
+        "computed_equivalent_diameter_km": 0.8964993941086019,
+        "operations": [
+          "Read pinned original coordinates in km without simplification",
+          "Rotate body-fixed Z north to display Y, preserving handedness",
+          "Compute area-weighted normals and check closed oriented topology"
+        ]
+      },
+      "download_url": "https://data.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/SHAPE_SFM_49k_v20180804.obj",
+      "source_sha256": "012421d8fc981cede420b71ca34805cf71e6abfef26cdb750534600cc3adbd16",
+      "source_bytes": 2639581,
+      "src": "content/visualizations/models/jaxa-ryugu-shape.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 885876,
+      "sha256": "395067bda654535268602a7cad1dd1f8a659fe052d6b8dbb5ab433a0efe8e94b",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 49152,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "dart-dimorphos-preimpact",
+      "matches": {
+        "length": [
+          "Dimorphos"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "spacecraft-derived-shape",
+      "note": "The DART final pre-impact global SPC shape v004, sampled from NASA NAIF\u2019s 1.940 m DSK. This is the shape before 26 September 2022, not a prediction of the reshaped asteroid. Catalog 151 m equivalent-volume diameter calibrates the closed mesh. Neutral gray is authored; no impact crater or ejecta is invented.",
+      "source": "https://pds.nasa.gov/ds-view/pds/viewCollection.jsp?identifier=urn:nasa:pds:dart_shapemodel:data_derived_dimorphos_model_v004&version=1.0",
+      "author": "NASA/Johns Hopkins APL DART team; NASA PDS/NAIF",
+      "reference": "content/visualizations/models/sources/dart-dimorphos-preimpact.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/space3d2-rights.md"
+      ],
+      "volume_semantics": "equivalent_volume_diameter_calibration",
+      "closed_volume_checked": true,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 0.1497795727825793,
+        "yaw": -18,
+        "pitch": 12,
+        "layout_width_factor": 1.3
+      },
+      "processing": {
+        "pinned_input": "content/visualizations/models/sources/space3d2/dimorphos.npz",
+        "pinned_input_sha256": "3c0f6f7f88a324aeb0456e1eba51a817d3bc7d8a0cfdd66f2e3b15abd34e2325",
+        "source_vertex_count": 24578,
+        "original_triangles": 49152,
+        "computed_equivalent_diameter_km": 0.1497795727825793,
+        "operations": [
+          "Read pinned original coordinates in km without simplification",
+          "Rotate body-fixed Z north to display Y, preserving handedness",
+          "Compute area-weighted normals and check closed oriented topology"
+        ]
+      },
+      "download_url": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/dart/dart_spice/spice_kernels/dsk/dimorphos_g_01940mm_spc_0000n00000_v004.bds",
+      "source_sha256": "dce2cb662822448f6e765e6cfa568e0024af627e13eb7c9c44c55008a8b4b1e9",
+      "source_bytes": 2714624,
+      "src": "content/visualizations/models/dart-dimorphos-preimpact.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 885892,
+      "sha256": "45561600b47afc46f4e35641747916ccaf06dab79b052c141cfc306d21d45873",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 49152,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

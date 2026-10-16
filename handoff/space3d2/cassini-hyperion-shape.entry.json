@@ -1,0 +1,58 @@
+{
+  "id": "cassini-hyperion-shape",
+  "matches": {
+    "length": [
+      "Hyperion Moon"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "spacecraft-derived-shape",
+  "note": "The Cassini/Thomas 30k-plate measured shape of Saturn\u2019s moon Hyperion, not the redwood tree. Craters and major relief are from the archived shape, not procedural noise. Neutral gray is an authored albedo; unresolved small crater detail is absent. The catalog mean diameter calibrates the equivalent-volume diameter; an oblique pose foreshortens its long axis.",
+  "source": "https://data.nasa.gov/dataset/saturn-small-moon-shape-models-v1-0",
+  "author": "Peter C. Thomas; NASA/JPL/Cassini ISS; NASA PDS Small Bodies Node",
+  "reference": "content/visualizations/models/sources/cassini-hyperion-shape.md",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/space3d2-rights.md"
+  ],
+  "volume_semantics": "equivalent_volume_diameter_calibration",
+  "closed_volume_checked": true,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 272.50553857146303,
+    "yaw": 60,
+    "pitch": 15,
+    "layout_width_factor": 1.3
+  },
+  "processing": {
+    "pinned_input": "content/visualizations/models/sources/space3d2/hyperion.npz",
+    "pinned_input_sha256": "711c14b83bc5905898b340e186af7777b741f3d94f93e62923886f86cea7282e",
+    "source_vertex_count": 14636,
+    "original_triangles": 29268,
+    "computed_equivalent_diameter_km": 272.50553857146303,
+    "operations": [
+      "Read pinned original coordinates in km without simplification",
+      "Rotate body-fixed Z north to display Y, preserving handedness",
+      "Compute area-weighted normals and check closed oriented topology"
+    ]
+  },
+  "download_url": "https://sbn.psi.edu/pds/shape-models/files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj",
+  "source_sha256": "7b1bb010f9f7952e2647923a30bfed813850bf8e72e235a80ac4008a23e0c8fc",
+  "source_bytes": 1228388,
+  "src": "content/visualizations/models/cassini-hyperion-shape.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 527972,
+  "sha256": "f687493d297b17be24f74bc6c574fa9b3265bd74f5cef580965998b1195908d0",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 29268,
+  "animations": 0,
+  "skins": 0
+}

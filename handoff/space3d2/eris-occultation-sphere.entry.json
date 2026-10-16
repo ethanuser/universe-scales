@@ -1,0 +1,47 @@
+{
+  "id": "eris-occultation-sphere",
+  "matches": {
+    "length": [
+      "Eris"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "idealized-size-sphere",
+  "note": "An idealized untextured icy sphere at the 2,326 km diameter measured by Sicardy et al. (2011) from a stellar occultation (about \u00b112 km). It is not a spacecraft-derived terrain model: no resolved surface map of Eris is available here. Bright neutral material suggests its high reflectivity without inventing craters or albedo markings. Dysnomia is omitted.",
+  "source": "https://www.eso.org/public/news/eso1142/",
+  "author": "Universe Scales",
+  "reference": "content/visualizations/models/sources/eris-occultation-sphere.md",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 2326
+  },
+  "processing": {
+    "native_units": "km",
+    "diameter_km": 2326,
+    "operations": [
+      "Create a smooth sphere at the cited catalog diameter",
+      "Use an authored uniform material; no surface texture"
+    ]
+  },
+  "src": "content/visualizations/models/eris-occultation-sphere.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 207408,
+  "sha256": "5b52110a70c17e4dbd6aa40a4fbb9ea6107be39fffd24d2c74cfb1b0e924bb69",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 9024,
+  "animations": 0,
+  "skins": 0
+}

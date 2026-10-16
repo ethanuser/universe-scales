@@ -1,0 +1,86 @@
+{
+  "id": "jpl-sedna-orbit",
+  "matches": {
+    "length": [
+      "Sedna Aphelion"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "catalog-orbit-diagram",
+  "note": "JPL SBDB heliocentric osculating ellipse for Sedna at the pinned 2026 epoch. The ruler runs from the Sun\u2019s focus to aphelion, not across the whole ellipse. This source solution gives Q about 1,011 AU, differing from the catalog\u2019s older approximate 937 AU; coordinates are preserved without stretching. The diagram is a two-body snapshot, not a measured future trajectory. Sun and endpoint dots are enlarged location markers, not physical bodies.",
+  "source": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
+  "author": "NASA/JPL Solar System Dynamics; diagram by Universe Scales",
+  "reference": "content/visualizations/models/sources/jpl-sedna-orbit.md",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1,
+    "pitch": 18,
+    "layout_width_factor": 1.2
+  },
+  "processing": {
+    "pinned_input": "content/visualizations/models/sources/space3d2/sedna.json",
+    "pinned_input_sha256": "9073e7e92d11f68758a0275e3b766f857647859d313aa2d2d5c4af488fa17152",
+    "elements": {
+      "e": 0.8598824585187618,
+      "a": 543.7195289104732,
+      "q": 76.18464364627253,
+      "i": 11.92527582847476,
+      "om": 144.5061662673739,
+      "w": 311.0987725939751,
+      "ma": 358.5956944005428,
+      "tp": 2479264.7506871386,
+      "per": 4630851.183590915,
+      "n": 7.773948799642578e-05,
+      "ad": 1011.254414174674
+    },
+    "source_epoch_jd_tdb": "2461200.5",
+    "source_orbit_id": "51",
+    "physical_reference_AU": 935.8421971175824,
+    "source_to_inspection_rotation": [
+      [
+        0.10711167969544934,
+        -0.9819773835812369,
+        0.15571610773381106
+      ],
+      [
+        -0.9869816937026173,
+        -0.08611780202257913,
+        0.13583394447159644
+      ],
+      [
+        -0.11997593245619036,
+        -0.16823834969990714,
+        -0.9784179236509926
+      ]
+    ],
+    "operations": [
+      "Solve Kepler equation for pinned JPL elements",
+      "Rotate rigidly to an orbital-plane inspection frame",
+      "Use catalog meters/AU as calibration; never normalize the coordinate bounds"
+    ]
+  },
+  "download_url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=90377&full-prec=1",
+  "source_sha256": "9073e7e92d11f68758a0275e3b766f857647859d313aa2d2d5c4af488fa17152",
+  "source_bytes": 3255,
+  "src": "content/visualizations/models/jpl-sedna-orbit.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 59728,
+  "sha256": "314656d12f36ec12d3298015675152dfea58c12f538c0daa270de50f341d4d2f",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 448,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,47 @@
+{
+  "id": "proxima-centauri-sphere",
+  "matches": {
+    "length": [
+      "Proxima Centauri Diameter"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "idealized-size-sphere",
+  "note": "A smooth red-dwarf sphere calibrated to the catalog diameter, from the 0.1542 solar-radius estimate of Kervella et al. (2017). Warm color and inspection lighting are illustrative; no resolved photospheric map, invented spots, flares or corona is implied. Apparent brightness is adjusted for visibility and is not a luminosity comparison.",
+  "source": "https://www.aanda.org/articles/aa/pdf/2017/02/aa29930-16.pdf",
+  "author": "Universe Scales",
+  "reference": "content/visualizations/models/sources/proxima-centauri-sphere.md",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 214553.88
+  },
+  "processing": {
+    "native_units": "km",
+    "diameter_km": 214553.88,
+    "operations": [
+      "Create a smooth sphere at the cited catalog diameter",
+      "Use an authored uniform material; no surface texture"
+    ]
+  },
+  "src": "content/visualizations/models/proxima-centauri-sphere.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 207516,
+  "sha256": "9b211604d9cc78fb3d08b48ffa4922eccef311df939899fd981220e471dc57d2",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 9024,
+  "animations": 0,
+  "skins": 0
+}

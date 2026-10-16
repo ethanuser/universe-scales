@@ -1,0 +1,58 @@
+{
+  "id": "jaxa-ryugu-shape",
+  "matches": {
+    "length": [
+      "Ryugu"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "spacecraft-derived-shape",
+  "note": "Hayabusa2 measured SfM shape, 49,152 original triangles. The equatorial ridge and resolved relief are from spacecraft data; gray albedo is authored, not a surface photograph. Catalog mean diameter calibrates the closed mesh equivalent-volume diameter. Body-fixed north is up; the inspection pose is authored.",
+  "source": "https://data.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/README.html",
+  "author": "ISAS/JAXA; Watanabe et al. (2019), Hayabusa2 shape-model team",
+  "reference": "content/visualizations/models/sources/jaxa-ryugu-shape.md",
+  "license": "ISAS/JAXA open-data terms, compatible with CC BY 4.0",
+  "license_url": "https://www.isas.jaxa.jp/en/researchers/data-policy/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt",
+    "licenses/space3d2-rights.md"
+  ],
+  "volume_semantics": "equivalent_volume_diameter_calibration",
+  "closed_volume_checked": true,
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 0.8964993941086019,
+    "yaw": -25,
+    "pitch": 12,
+    "layout_width_factor": 1.25
+  },
+  "processing": {
+    "pinned_input": "content/visualizations/models/sources/space3d2/ryugu.npz",
+    "pinned_input_sha256": "c0a7b03ea95953285e5c31d53169f344e0cb31f7703d55341fbfba781a1987c0",
+    "source_vertex_count": 24578,
+    "original_triangles": 49152,
+    "computed_equivalent_diameter_km": 0.8964993941086019,
+    "operations": [
+      "Read pinned original coordinates in km without simplification",
+      "Rotate body-fixed Z north to display Y, preserving handedness",
+      "Compute area-weighted normals and check closed oriented topology"
+    ]
+  },
+  "download_url": "https://data.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/SHAPE_SFM_49k_v20180804.obj",
+  "source_sha256": "012421d8fc981cede420b71ca34805cf71e6abfef26cdb750534600cc3adbd16",
+  "source_bytes": 2639581,
+  "src": "content/visualizations/models/jaxa-ryugu-shape.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 885876,
+  "sha256": "395067bda654535268602a7cad1dd1f8a659fe052d6b8dbb5ab433a0efe8e94b",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 49152,
+  "animations": 0,
+  "skins": 0
+}
