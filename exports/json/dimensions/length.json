@@ -2,22 +2,22 @@
   "base_unit": "meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 255,
-    "candidate_shortfall_to_preferred_target": 0,
+    "candidate_count": 257,
+    "candidate_shortfall_to_preferred_target": 43,
     "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
-    "preferred_max_items": 255,
-    "preferred_target_items": 255,
-    "raw_candidate_count": 255,
+    "preferred_max_items": 320,
+    "preferred_target_items": 300,
+    "raw_candidate_count": 257,
     "required_min_items": 24,
-    "selected_count": 255,
+    "selected_count": 257,
     "selected_primary_count": 19,
-    "selected_secondary_count": 236,
+    "selected_secondary_count": 238,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 255
+      "secondary_reference": 257
     },
-    "target_selected_count": 255
+    "target_selected_count": 257
   },
   "description_format": "markdown",
   "dimension": "length",
@@ -138,6 +138,60 @@
       ],
       "summary_short": "An experimental upper limit on an effective quark radius from combined HERA electron-proton collision data, at 95% confidence within the study's form-factor model.",
       "value": 4.3e-19,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "The weak force, which lets the Sun fuse hydrogen and makes some atomic nuclei decay, reaches only about 2.5 billionths of a billionth of a meter. Its carriers, the W and Z bosons, are about 86 times heavier than a proton, and a force carried by heavy particles fades within roughly their reduced Compton wavelength, here hbar divided by the W mass times the speed of light. A proton is about 340 times wider than the reach of this force.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "The weak force, which lets the Sun fuse hydrogen and makes some atomic nuclei decay, reaches only about 2.5 billionths of a billionth of a meter. Its carriers, the W and Z bosons, are about 86 times heavier than a proton, and a force carried by heavy particles fades within roughly their reduced Compton wavelength, here hbar divided by the W mass times the speed of light. A proton is about 340 times wider than the reach of this force.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Weak Force Range",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "2.4552562474181655e-18",
+          "source_url": "https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-weak-force-range",
+      "name": "Weak Force Range",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-pdg-lbl-gov-2024-listings-rpp2024-list-w-boson-pdf",
+          "license_text": null,
+          "note": null,
+          "publisher": "pdg.lbl.gov",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "rpp2024-list-w-boson.pdf",
+          "url": "https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "The weak force, which lets the Sun fuse hydrogen and makes some atomic nuclei decay, reaches only about 2.5 billionths of a billionth of a meter.",
+      "value": 2.4552562474181655e-18,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -523,6 +577,60 @@
       ],
       "summary_short": "A muon's Compton wavelength is about 11.7 femtometers, a quantum length associated with its rest mass.",
       "value": 1.17344411e-14,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Replace hydrogen's electron with a muon, its 207-times-heavier cousin, and the atom shrinks about 186 times, to roughly 0.57 picometers across. The muon then orbits only about 340 proton radii out, close enough that its energy levels reveal the proton's size. Measurements of muonic hydrogen in 2010 found a proton smaller than electron-based experiments did, a puzzle that later work largely resolved in favor of the smaller value. A muon decays in about two microseconds.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Replace hydrogen's electron with a muon, its 207-times-heavier cousin, and the atom shrinks about 186 times, to roughly 0.57 picometers across. The muon then orbits only about 340 proton radii out, close enough that its energy levels reveal the proton's size. Measurements of muonic hydrogen in 2010 found a proton smaller than electron-based experiments did, a puzzle that later work largely resolved in favor of the smaller value. A muon decays in about two microseconds.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Muonic Hydrogen Atom",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "5.694950864874306e-13",
+          "source_url": "https://doi.org/10.1038/nature09250"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-muonic-hydrogen-atom",
+      "name": "Muonic Hydrogen Atom",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://doi.org/10.1038/nature09250",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-doi-org-10-1038-nature09250",
+          "license_text": null,
+          "note": null,
+          "publisher": "doi.org",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "nature09250",
+          "url": "https://doi.org/10.1038/nature09250"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "Replace hydrogen's electron with a muon, its 207-times-heavier cousin, and the atom shrinks about 186 times, to roughly 0.57 picometers across.",
+      "value": 5.694950864874306e-13,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -13884,8 +13992,8 @@
       "wikidata_qid": "Q1"
     }
   ],
-  "preferred_max_items": 255,
-  "preferred_target_items": 255,
+  "preferred_max_items": 320,
+  "preferred_target_items": 300,
   "related_resources": [
     {
       "name": "Scale of the Universe",

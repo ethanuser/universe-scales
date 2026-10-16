@@ -9,6 +9,9 @@ export const QUARK_RADIUS_LIMIT_M = 4.3e-19;
 export const PROTON_RMS_CHARGE_RADIUS_M = 0.84075e-15;
 export const CLASSICAL_ELECTRON_RADIUS_M = 2.8179403205e-15;
 export const NEUTRINO_WAVELENGTH_1MEV_M = 1.239841984e-12;
+// Weak force range: the W boson's reduced Compton wavelength hbar / (m_W c), with
+// hbar c = 197.3269804 MeV fm and m_W = 80369.2 MeV (PDG 2024).
+export const WEAK_FORCE_RANGE_M = 197.3269804 / 80369.2 * 1e-15;
 // Compton wavelengths h / (m c), 2022 CODATA (NIST), as listed in the Length data.
 export const COMPTON_WAVELENGTHS_M = Object.freeze({
     Electron: 2.42631023538e-12, Muon: 1.17344411e-14, Proton: 1.3214098536e-15, Tau: 6.97771e-16 });
@@ -172,6 +175,40 @@ export function neutrinoWavelengthScene() {
     return scene;
 }
 
+// The Yukawa potential of W exchange, V ~ exp(-r / lambda) / r with lambda = the range:
+// dots are drawn with density ~ |V|, so radial weight r^2 |V| ~ r exp(-r) (Gamma(2)).
+export function weakForceRangeScene() {
+    const scene = new THREE.Group(), positions = [], colors = [];
+    let seed = 0x3ea1;
+    const random = () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) + 0.5) / 4294967296;
+    const inner = new THREE.Color(0x2f6f5e), outer = new THREE.Color(0x9fd0bd);
+    while (positions.length < 9000 * 3) {
+        const r = -Math.log(random() * random());
+        if (r > ELECTRON_FIELD_CROP) continue;
+        const z = 2 * random() - 1, angle = 2 * Math.PI * random(), planar = Math.sqrt(1 - z * z);
+        positions.push(r * planar * Math.cos(angle), r * planar * Math.sin(angle), r * z);
+        const color = inner.clone().lerp(outer, r / ELECTRON_FIELD_CROP);
+        colors.push(color.r, color.g, color.b);
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    const cloud = new THREE.Points(geometry, new THREE.PointsMaterial({ vertexColors: true,
+        size: 1.6, sizeAttenuation: false, transparent: true, opacity: 0.5, depthWrite: false }));
+    cloud.name = 'yukawa-potential';
+    cloud.userData.softPoints = true;
+    cloud.userData.pointSize = { max: 2.2, perPixel: 1 / 70 };
+    scene.add(cloud);
+    const loop = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 160 },
+        (_, i) => new THREE.Vector3(Math.cos(i * Math.PI / 80), Math.sin(i * Math.PI / 80), 0))),
+        new THREE.LineBasicMaterial({ color: 0x2f6f5e, transparent: true, opacity: 0.75, depthWrite: false }));
+    loop.name = 'weak-range-circle';
+    scene.add(loop);
+    scene.add(labelNode('Range: ħ / (m_W c)', new THREE.Vector3(0, 1.08, 0)));
+    scene.add(labelNode('A proton is about 340 times wider', new THREE.Vector3(0, -1.12, 0)));
+    return scene;
+}
+
 // One Compton wavelength, lambda = h / (m c): a photon this long carries the particle's
 // whole rest energy, since E = h c / lambda = m c^2.
 export function comptonWavelengthScene(entry = {}) {
@@ -265,6 +302,13 @@ export const particleScaleMetadata = Object.freeze({
         basis_url: 'https://physics.nist.gov/cuu/Constants/Table/allascii.txt',
         basis_label: 'Compton wavelengths: 2022 CODATA',
         note: 'One Compton wavelength of the tau, h / (m c). A photon with exactly this wavelength carries the tau\'s entire rest energy, m c^2, so it is roughly the length scale at which probing the particle with light makes new particles appear. It is a wavelength, not the particle\'s size; the dot only marks the particle. The wave is a schematic amplitude; its slow phase animation is illustrative.' }),
+    'Weak Force Range': Object.freeze({ id: 'weak-force-range', procedural: 'weak-force-range',
+        name: 'Weak Force Range', dimension: 'length', value: WEAK_FORCE_RANGE_M, unit: 'm', geometry: 'mesh',
+        representation: 'measurement_diagram', presentation: Object.freeze({ ...presentation,
+            layout_width_factor: 2.6, focus_scale_factor: 3, display_extent_factor: 2.5 }),
+        basis_url: 'https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf',
+        basis_label: 'W boson mass: Particle Data Group 2024',
+        note: 'The weak force is carried by W and Z bosons, about 86 times heavier than a proton, so it reaches only about hbar / (m_W c) = 2.46e-18 m before fading: the dots follow the Yukawa potential exp(-r / range) / r of W exchange, and the circle marks the range. A proton (0.84 fm radius) is about 340 times wider. The range is a decay length, not a hard edge; the sphere spans twice it.' }),
     '1 MeV Neutrino Wavelength': Object.freeze({ id: 'neutrino-wavelength-1mev', procedural: 'neutrino-wavelength-1mev',
         name: '1 MeV Neutrino Wavelength', dimension: 'length', value: NEUTRINO_WAVELENGTH_1MEV_M, unit: 'm', geometry: 'mesh',
         representation: 'measurement_diagram', presentation,
@@ -280,5 +324,6 @@ export const particleScaleScenes = Object.freeze({
     'proton-rms-charge-radius': protonRmsRadiusScene,
     'classical-electron-radius': classicalElectronRadiusScene,
     'neutrino-wavelength-1mev': neutrinoWavelengthScene,
-    'compton-wavelength': comptonWavelengthScene
+    'compton-wavelength': comptonWavelengthScene,
+    'weak-force-range': weakForceRangeScene
 });

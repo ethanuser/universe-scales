@@ -12,7 +12,7 @@ import { waveAnimation } from '../js/experiences/wave-models.js';
 test('particle scale catalog has exact dataset names and matching scene factories', () => {
     assert.deepEqual(Object.keys(particleScaleMetadata), [
         'Planck Length', 'Quark', 'Proton Radius', 'Electron', 'Electron Compton Wavelength', 'Muon Compton Wavelength',
-        'Proton Compton Wavelength', 'Tau Compton Wavelength', '1 MeV Neutrino Wavelength'
+        'Proton Compton Wavelength', 'Tau Compton Wavelength', 'Weak Force Range', '1 MeV Neutrino Wavelength'
     ]);
     for (const entry of Object.values(particleScaleMetadata)) {
         assert.ok(entry.id);
@@ -26,7 +26,7 @@ test('particle scale catalog has exact dataset names and matching scene factorie
         assert.equal(entry.presentation.reference_size, 1);
         assert.equal(typeof particleScaleScenes[entry.procedural], 'function');
     }
-    assert.equal(Object.keys(particleScaleScenes).length, 6);
+    assert.equal(Object.keys(particleScaleScenes).length, 7);
     assert.equal(particleScaleMetadata['1 MeV Neutrino Wavelength'].value, NEUTRINO_WAVELENGTH_1MEV_M);
 });
 
@@ -36,7 +36,7 @@ test('scene bounds remain close to one reference unit and geometry budgets stay 
         const dimensions = new THREE.Box3().setFromObject(scene, true).getSize(new THREE.Vector3());
         const extent = Math.max(dimensions.x, dimensions.y, dimensions.z);
         const maxExtent = id === 'proton-rms-charge-radius' ? 2 * PROTON_CLOUD_CROP_RMS
-            : id === 'classical-electron-radius' ? 2 * ELECTRON_FIELD_CROP : 1.3;
+            : ['classical-electron-radius', 'weak-force-range'].includes(id) ? 2 * ELECTRON_FIELD_CROP + 0.3 : 1.3;
         assert.ok(extent > 0.9 && extent <= maxExtent, `${id} extent ${extent}`);
         assert.ok(scene.children.length <= 80, `${id} has ${scene.children.length} children`);
         let triangles = 0;

@@ -63,8 +63,8 @@ units:
   conversion_factor: 6.187927353732898e+34
   description: Planck length is the natural quantum-gravity length scale.
 required_min_items: 24
-preferred_target_items: 255
-preferred_max_items: 255
+preferred_target_items: 300
+preferred_max_items: 320
 selection_bin_count: 24
 description_format: markdown
 scale_mode: log
@@ -167,6 +167,51 @@ items:
     experiment: combined H1 and ZEUS inclusive deep-inelastic scattering at HERA
     measurement: 95% confidence upper limit on effective quark radius
     model_dependence: specified quark form-factor fit, not a universal hard-size bound
+- id: obs:length:scenario-length-weak-force-range
+  name: Weak Force Range
+  value: 2.4552562474181655e-18
+  description: The weak force, which lets the Sun fuse hydrogen and makes some atomic nuclei decay, reaches only about 2.5 billionths of a billionth of a meter. Its carriers, the W and Z bosons, are about 86 times heavier than a proton, and a force carried by heavy particles fades within roughly their reduced Compton wavelength, here hbar divided by the W mass times the speed of light. A proton is about 340 times wider than the reach of this force.
+  description_format: markdown
+  summary_short: The weak force, which lets the Sun fuse hydrogen and makes some atomic nuclei decay, reaches only about 2.5 billionths of a billionth of a meter.
+  description_medium: The weak force, which lets the Sun fuse hydrogen and makes some atomic nuclei decay, reaches only about 2.5 billionths of a billionth of a meter. Its carriers, the W and Z bosons, are about 86 times heavier than a proton, and a force carried by heavy particles fades within roughly their reduced Compton wavelength, here hbar divided by the W mass times the speed of light. A proton is about 340 times wider than the reach of this force.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/length.yaml
+    legacy_item_name: Weak Force Range
+    source_trace:
+      method: derived
+      original_value_text: '2.4552562474181655e-18'
+      source_url: https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf
+  source: https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf
+  source_count: 2
+  sources:
+  - id: src:https-pdg-lbl-gov-2024-listings-rpp2024-list-w-boson-pdf
+    url: https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf
+    title: rpp2024-list-w-boson.pdf
+    publisher: pdg.lbl.gov
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-length-yaml
+    url: repo://dataset/raw/legacy_yaml/length.yaml
+    title: dataset/raw/legacy_yaml/length.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/length.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:length:scenario-length-tau-compton-wavelength
   name: Tau Compton Wavelength
   value: 6.97771e-16
@@ -470,6 +515,51 @@ items:
     url: https://physics.nist.gov/cgi-bin/cuu/Value?mcomwl
     title: Value
     publisher: physics.nist.gov
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-length-yaml
+    url: repo://dataset/raw/legacy_yaml/length.yaml
+    title: dataset/raw/legacy_yaml/length.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/length.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
+- id: obs:length:scenario-length-muonic-hydrogen-atom
+  name: Muonic Hydrogen Atom
+  value: 5.694950864874306e-13
+  description: Replace hydrogen's electron with a muon, its 207-times-heavier cousin, and the atom shrinks about 186 times, to roughly 0.57 picometers across. The muon then orbits only about 340 proton radii out, close enough that its energy levels reveal the proton's size. Measurements of muonic hydrogen in 2010 found a proton smaller than electron-based experiments did, a puzzle that later work largely resolved in favor of the smaller value. A muon decays in about two microseconds.
+  description_format: markdown
+  summary_short: Replace hydrogen's electron with a muon, its 207-times-heavier cousin, and the atom shrinks about 186 times, to roughly 0.57 picometers across.
+  description_medium: Replace hydrogen's electron with a muon, its 207-times-heavier cousin, and the atom shrinks about 186 times, to roughly 0.57 picometers across. The muon then orbits only about 340 proton radii out, close enough that its energy levels reveal the proton's size. Measurements of muonic hydrogen in 2010 found a proton smaller than electron-based experiments did, a puzzle that later work largely resolved in favor of the smaller value. A muon decays in about two microseconds.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/length.yaml
+    legacy_item_name: Muonic Hydrogen Atom
+    source_trace:
+      method: derived
+      original_value_text: '5.694950864874306e-13'
+      source_url: https://doi.org/10.1038/nature09250
+  source: https://doi.org/10.1038/nature09250
+  source_count: 2
+  sources:
+  - id: src:https-doi-org-10-1038-nature09250
+    url: https://doi.org/10.1038/nature09250
+    title: nature09250
+    publisher: doi.org
     license_text: null
     source_class: secondary_reference
     source_type: web_page

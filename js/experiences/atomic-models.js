@@ -19,6 +19,10 @@ export const radialCdf = Object.freeze({
 
 // Hydrogen: the boundary is one Bohr radius, the most probable electron distance.
 export const HYDROGEN_BOUNDARY_BOHR = 1;
+// Muonic hydrogen: a0 * m_e / mu, with mu the muon-proton reduced mass (CODATA 2018 masses, MeV).
+export const MUONIC_BOHR_RADIUS_FM = 52917.7210903 * 0.51099895 /
+    (105.6583755 * 938.27208816 / (105.6583755 + 938.27208816));
+export const PROTON_RADIUS_FM = 0.84075;
 export const HYDROGEN_ENCLOSED_PROBABILITY = radialCdf['1s'](HYDROGEN_BOUNDARY_BOHR); // 1 - 5e^-2
 
 // Carbon, 1s2 2s2 2p2, as hydrogen-like orbitals with Clementi and Raimondi's
@@ -159,6 +163,13 @@ export const atomicModelMetadata = Object.freeze({
         basis_url: 'https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom',
         basis_label: 'Orbital basis: OpenStax University Physics',
         note: `Hydrogen's 1s electron cloud, sampled from its exact probability density and cut off at one Bohr radius (52.9 pm), the electron's most probable distance from the proton. That sphere holds ${percent(HYDROGEN_ENCLOSED_PROBABILITY)} of the probability (exactly 1 - 5/e²); the real cloud has no edge and thins out exponentially beyond it. The listed 106 pm is the sphere's diameter. The red nucleus is enlarged about 2,000 times to be visible.` }),
+    'Muonic Hydrogen Atom': Object.freeze({ id: 'muonic-hydrogen-1s', procedural: 'muonic-hydrogen-1s',
+        name: 'Muonic Hydrogen Atom', dimension: 'length', value: 2 * MUONIC_BOHR_RADIUS_FM * 1e-15, unit: 'm', geometry: 'mesh',
+        presentation: Object.freeze({ reference_size: 2 * HYDROGEN_BOUNDARY_BOHR, layout_width_factor: 1,
+            focus_scale_factor: 1.3, display_extent_factor: 1 }),
+        source: 'https://doi.org/10.1038/nature09250',
+        basis_url: 'https://doi.org/10.1038/nature09250', basis_label: 'Muonic hydrogen: Pohl et al. (2010)',
+        note: `Hydrogen with its electron replaced by a muon, 207 times heavier: the same 1s probability cloud, cut off at the muon's Bohr radius of ${MUONIC_BOHR_RADIUS_FM.toFixed(1)} femtometers (from the muon-proton reduced mass), so the atom is about 186 times smaller. The proton is drawn at its true size (0.84 fm radius), only about 340 times smaller than the orbit, close enough that the muon's energy levels measure the proton's size. The listed value is the sphere's diameter.` }),
     'Carbon Atom': Object.freeze({ id: 'carbon-atom-quantum', procedural: 'carbon-atom-quantum',
         name: 'Carbon Atom', dimension: 'length', value: 2 * CARBON_RADIUS_PM * 1e-12, unit: 'm', geometry: 'mesh',
         presentation: Object.freeze({ reference_size: 2 * CARBON_BOUNDARY_BOHR, layout_width_factor: 1,
@@ -255,8 +266,27 @@ export const nuclearModelMetadata = Object.freeze({
         note: 'An iron-56 nucleus, the most tightly bound kind, drawn as 26 red protons and 30 gray neutrons packed into a sphere 9.7 fm across, the size implied by its measured charge radius. That is about 14,000 times smaller than a carbon atom. Real nucleons are not hard balls: they are fuzzy quantum objects in constant motion, so this is the conventional picture, not a snapshot.' })
 });
 
+export function muonicHydrogenScene() {
+    const scene = new THREE.Group();
+    addCloud(scene, 'muonic-1s-probability', orbitalSamples({ orbital: '1s', z: 1,
+        limit: HYDROGEN_BOUNDARY_BOHR, count: 7000, seed: 0x1a70a1 }), 0x7a4fb0, 0.38);
+    addBoundary(scene, 'muonic-bohr-radius-boundary', HYDROGEN_BOUNDARY_BOHR, 0x7a4fb0,
+        `Muon's Bohr radius: ${percent(HYDROGEN_ENCLOSED_PROBABILITY)} inside`);
+    // The proton at true size relative to the orbit (no enlargement).
+    const proton = new THREE.Mesh(new THREE.SphereGeometry(PROTON_RADIUS_FM / MUONIC_BOHR_RADIUS_FM, 16, 10),
+        new THREE.MeshBasicMaterial({ color: 0xd9534f }));
+    proton.name = 'proton-true-size';
+    scene.add(proton);
+    const anchor = new THREE.Object3D();
+    anchor.position.set(0.04, -0.06, 0);
+    anchor.userData.label = 'Proton, true size';
+    scene.add(anchor);
+    return scene;
+}
+
 export const atomicScenes = Object.freeze({
     'iron-56-nucleus': ironNucleusScene,
+    'muonic-hydrogen-1s': muonicHydrogenScene,
     'hydrogen-1s-quantum': hydrogenAtomScene,
     'carbon-atom-quantum': carbonAtomScene
 });

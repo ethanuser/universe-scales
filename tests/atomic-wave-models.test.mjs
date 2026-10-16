@@ -186,8 +186,8 @@ test('wave module supplies seven calibrated band metadata entries and a clone-sa
 });
 
 test('module metadata and factories have stable, explicit integration keys', () => {
-    assert.deepEqual(Object.keys(atomicModelMetadata), ['Hydrogen Atom', 'Carbon Atom']);
-    assert.deepEqual(Object.keys(atomicScenes), ['iron-56-nucleus', 'hydrogen-1s-quantum', 'carbon-atom-quantum']);
+    assert.deepEqual(Object.keys(atomicModelMetadata), ['Hydrogen Atom', 'Muonic Hydrogen Atom', 'Carbon Atom']);
+    assert.deepEqual(Object.keys(atomicScenes), ['iron-56-nucleus', 'muonic-hydrogen-1s', 'hydrogen-1s-quantum', 'carbon-atom-quantum']);
     assert.equal(atomicScenes['hydrogen-1s-quantum'], hydrogenAtomScene);
     assert.equal(atomicScenes['carbon-atom-quantum'], carbonAtomScene);
 });
@@ -219,4 +219,13 @@ test('wave animation survives production normalization wrappers and keeps both f
     }
     assert.notDeepEqual(e.array, before);
     assert.ok(waveModelMetadata['Visible Light Wavelength'].presentation.pitch >= 15);
+});
+
+test('muonic hydrogen uses the reduced-mass Bohr radius and a true-size proton', async () => {
+    const { MUONIC_BOHR_RADIUS_FM, PROTON_RADIUS_FM, muonicHydrogenScene } = await import('../js/experiences/atomic-models.js');
+    assert.ok(Math.abs(MUONIC_BOHR_RADIUS_FM - 284.75) < 0.05);
+    assert.ok(Math.abs(atomicModelMetadata['Muonic Hydrogen Atom'].value - 2 * MUONIC_BOHR_RADIUS_FM * 1e-15) < 1e-25);
+    const proton = muonicHydrogenScene().getObjectByName('proton-true-size');
+    proton.geometry.computeBoundingSphere();
+    assert.ok(Math.abs(proton.geometry.boundingSphere.radius - PROTON_RADIUS_FM / MUONIC_BOHR_RADIUS_FM) < 1e-6);
 });

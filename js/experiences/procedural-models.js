@@ -2,7 +2,7 @@
 // relative three.js import resolves to the same module as the page's import map
 // and also works under Node for tests.
 import * as THREE from '../vendor/three/three.module.min.js';
-import { atomicModelMetadata, atomicScenes, nuclearModelMetadata } from './atomic-models.js?v=4affabd60c';
+import { atomicModelMetadata, atomicScenes, nuclearModelMetadata } from './atomic-models.js?v=868d2f4108';
 import { cosmicModelMetadata, cosmicScenes } from './cosmic-models.js?v=ed1ef5fd83';
 import { waveModelMetadata, waveScenes } from './wave-models.js?v=d9360c0030';
 
@@ -11,7 +11,7 @@ import { footballFieldRenderScene } from './football-model.js?v=8ee95c682c';
 import { organelleModelMetadata, organelleScenes } from './organelle-models.js?v=2528c1eebb';
 import { nearbySpaceModelMetadata, cosmicScenes as nearbySpaceScenes } from './nearby-space-models.js?v=ac35f7b8ae';
 import { outerSolarModelMetadata, outerSolarScenes } from './outer-solar-models.js?v=25caba771f';
-import { particleScaleMetadata, particleScaleScenes } from './particle-scale-models.js?v=43e11a5421';
+import { particleScaleMetadata, particleScaleScenes } from './particle-scale-models.js?v=c173684055';
 export { SCREEN_LINE_PX, screenLine };
 
 // Distance diagrams (Earth-Moon, AU) get a U-shaped bracket below the two
