@@ -1,0 +1,11 @@
+[
+  {
+    "file": "images/length_ribosome.jpg",
+    "source": "https://www.rcsb.org/structure/4V88",
+    "title": "Complete yeast 80S ribosome — original coordinate-based illustration",
+    "author": "Universe Scales (rendering); Ben-Shem et al. (2011), PDB 4V88 (structural data)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New CPU rendering of biological assembly 1 of PDB 4V88 using the existing authored GLB; includes the complete deposited yeast 80S particle and Stm1. RNA gold; protein chain colors illustrative. Smooth surface is a display envelope around atomic sites, not experimental electron density. Unresolved residues, waters and ions omitted. JPEG 1200 × 800; matching 300 × 200 thumbnail."
+  }
+]

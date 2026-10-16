@@ -1,0 +1,452 @@
+[
+  {
+    "item": "String Length",
+    "file": "images/length_string_length.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 83955,
+    "sha256": "7f1c4b1e72b3162d818a135456880c1eb90117c017dcc2477cf7ee2c676b69ab",
+    "thumbnail": "images/thumbs/length_string_length.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "7a8fbfcf278d313d92776258cd4b022dfaee1d93bc98c7062cd76f271dcd7794",
+    "thumbnail_mean_pixel_difference": 1.135,
+    "license": "CC0"
+  },
+  {
+    "item": "Carbon Atom",
+    "file": "images/length_carbon_atom.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 94586,
+    "sha256": "b8add02432a666b7be5cd4c36f4e87d2dbe218e3aed7d0f977452b96d9fe8c31",
+    "thumbnail": "images/thumbs/length_carbon_atom.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "9e803851aa4029d7bbd7f59ed9f0e8313b29a5b2f03770498d50ae396419a602",
+    "thumbnail_mean_pixel_difference": 1.25,
+    "license": "CC0"
+  },
+  {
+    "item": "Grain of Sand",
+    "file": "images/length_grain_of_sand.jpg",
+    "dimensions": [
+      700,
+      854
+    ],
+    "bytes": 92623,
+    "sha256": "31060e8505d8c8cd9e3220a1195d2eb83c2e6c0887c56f4fe64c947167f27769",
+    "thumbnail": "images/thumbs/length_grain_of_sand.jpg",
+    "thumbnail_dimensions": [
+      300,
+      366
+    ],
+    "thumbnail_sha256": "cb6d6211dfaccd6ff0b948a430f81bec4160c8841d31d3b836cb0849386e17f1",
+    "thumbnail_mean_pixel_difference": 1.389,
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Lolong the Crocodile",
+    "file": "images/length_lolong_the_crocodile.jpg",
+    "dimensions": [
+      960,
+      782
+    ],
+    "bytes": 160633,
+    "sha256": "9f86a2e1980e1277191364c40bfc92401a5360c22951f7560db82da7babca20f",
+    "thumbnail": "images/thumbs/length_lolong_the_crocodile.jpg",
+    "thumbnail_dimensions": [
+      300,
+      244
+    ],
+    "thumbnail_sha256": "b0cfbf7d571dd2153139f38cef950ab501be15fe2d2b1ba1dde427df554d2f93",
+    "thumbnail_mean_pixel_difference": 2.301,
+    "license": "CC0"
+  },
+  {
+    "item": "Titanosaur Cast",
+    "file": "images/length_titanosaur_cast.jpg",
+    "dimensions": [
+      1200,
+      412
+    ],
+    "bytes": 135437,
+    "sha256": "75664cda9fa7bd927cb20a8e16f5194733730f934f2463a4156ab2dd78a0bee9",
+    "thumbnail": "images/thumbs/length_titanosaur_cast.jpg",
+    "thumbnail_dimensions": [
+      300,
+      103
+    ],
+    "thumbnail_sha256": "94e87f59c30cfe1021930f7c248582a4d06355191bd98b9bb43ced3af9e224c0",
+    "thumbnail_mean_pixel_difference": 2.787,
+    "license": "CC0"
+  },
+  {
+    "item": "Hyperion",
+    "file": "images/length_hyperion.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 80044,
+    "sha256": "043be412d4ad653b79a90811833316cde29b7c73199cb1c907e9d27cb07614eb",
+    "thumbnail": "images/thumbs/length_hyperion.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "cb58ccec2e4e09cb10d7a1a59622b6a6e8b0ef21532793817cd5b5ff3915168e",
+    "thumbnail_mean_pixel_difference": 1.17,
+    "license": "CC0"
+  },
+  {
+    "item": "Ribosome",
+    "file": "images/length_ribosome.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 116572,
+    "sha256": "a69b0b4421addd85e33432a268aae19f7891a029bcfef8d784afe33b0c32c114",
+    "thumbnail": "images/thumbs/length_ribosome.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "1239670703b08d38d3953e83effe1c51415738cb1e84e4bb731947de9a15ff74",
+    "thumbnail_mean_pixel_difference": 2.034,
+    "license": "CC0"
+  },
+  {
+    "item": "Longest Lightning Flash",
+    "file": "images/length_longest_lightning_flash.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 100347,
+    "sha256": "be0fa4a6bae032895688ebe1fe6fde6793cf4c9ca9985dc74608e97bd3bb3e02",
+    "thumbnail": "images/thumbs/length_longest_lightning_flash.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "9b08c8220efaf6fd2190ffb5eab7feb355157a18add16a93306f56250a40c722",
+    "thumbnail_mean_pixel_difference": 1.451,
+    "license": "CC0"
+  },
+  {
+    "item": "TRAPPIST-1 System",
+    "file": "images/length_trappist_1_system.jpg",
+    "dimensions": [
+      1200,
+      675
+    ],
+    "bytes": 105418,
+    "sha256": "436c5f35d476451d507230041ab67adac928a7afda895da58673ac7fc66c5a46",
+    "thumbnail": "images/thumbs/length_trappist_1_system.jpg",
+    "thumbnail_dimensions": [
+      300,
+      169
+    ],
+    "thumbnail_sha256": "e78c064d31d5f66bf0e507b9b7335ec52a8c8f0c86fe8298e621f8f28816da35",
+    "thumbnail_mean_pixel_difference": 1.508,
+    "license": "Public domain"
+  },
+  {
+    "item": "Kuiper Belt",
+    "file": "images/length_kuiper_belt.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 98688,
+    "sha256": "856e1d8d6df6b7a23bb133f63b1dba4d886dd780f09aa5a7d579b1fcc13769c3",
+    "thumbnail": "images/thumbs/length_kuiper_belt.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "270775c67c9f725b69d12fe8f1ff0affcaa37d5f1ca86340c03200763dd2912f",
+    "thumbnail_mean_pixel_difference": 1.466,
+    "license": "CC0"
+  },
+  {
+    "item": "Andromeda Gas Halo",
+    "file": "images/length_andromeda_gas_halo.jpg",
+    "dimensions": [
+      1200,
+      1038
+    ],
+    "bytes": 289419,
+    "sha256": "2480f986ad461eeeb706ea2c10e7177f7404cf5bfdafe92ca37d682168f3018f",
+    "thumbnail": "images/thumbs/length_andromeda_gas_halo.jpg",
+    "thumbnail_dimensions": [
+      300,
+      260
+    ],
+    "thumbnail_sha256": "7e890a072c373865e41c78648d2b6af7973a61da2b21d23626a207f7b396ca75",
+    "thumbnail_mean_pixel_difference": 2.437,
+    "license": "Public domain"
+  },
+  {
+    "item": "Hercules-Corona Borealis Great Wall",
+    "file": "images/length_hercules_corona_borealis_great_wall.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 116306,
+    "sha256": "eeb258c0428369e9a6df1e4442f5e92f29b1aed6faf7ca348d30547b1a9e27e9",
+    "thumbnail": "images/thumbs/length_hercules_corona_borealis_great_wall.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "94bc1cb7a5c6da7ad0a7f380b43b2ff9581646e9bfa9a825382c49c26f89d82e",
+    "thumbnail_mean_pixel_difference": 1.755,
+    "license": "CC0"
+  },
+  {
+    "item": "Chloroplast",
+    "file": "images/length_chloroplast.jpg",
+    "dimensions": [
+      960,
+      1022
+    ],
+    "bytes": 75775,
+    "sha256": "7b2bd5e89f7b6b115742abd68d5f7fe55738936beea277e4f7808d9f4b19f73a",
+    "thumbnail": "images/thumbs/length_chloroplast.jpg",
+    "thumbnail_dimensions": [
+      300,
+      319
+    ],
+    "thumbnail_sha256": "317e814191aaac31623a9b853d0a5b63355d5bdad4802255ae2994f38ddca4f5",
+    "thumbnail_mean_pixel_difference": 0.961,
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Hunga Tonga Eruption Plume",
+    "file": "images/length_hunga_tonga_eruption_plume.jpg",
+    "dimensions": [
+      500,
+      554
+    ],
+    "bytes": 93461,
+    "sha256": "6cfdc4c5f3341318b9a141423525444d8295a4e5f43790b4fd7fe7dde3525372",
+    "thumbnail": "images/thumbs/length_hunga_tonga_eruption_plume.jpg",
+    "thumbnail_dimensions": [
+      300,
+      332
+    ],
+    "thumbnail_sha256": "a3a5ec29b16096a9ca198e30e21eb0430ccb29486b318016f6c5f18a0f1c33da",
+    "thumbnail_mean_pixel_difference": 2.827,
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "DVD Track Pitch",
+    "file": "images/length_dvd_track_pitch.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 95661,
+    "sha256": "752909deee2489e8590396a2188f7e6d47741f3a2483283eecc975e2d1ab5179",
+    "thumbnail": "images/thumbs/length_dvd_track_pitch.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "b53f3c7608f51fd5d14b36df34364341364b1518e9e0b8bff41d73ba14a0cc02",
+    "thumbnail_mean_pixel_difference": 1.658,
+    "license": "CC0"
+  },
+  {
+    "item": "El Reno Tornado",
+    "file": "images/length_el_reno_tornado.jpg",
+    "dimensions": [
+      960,
+      715
+    ],
+    "bytes": 100673,
+    "sha256": "4420948d0681207079748901f3b57048aa1444c610802df0a57843a1dc6a15b3",
+    "thumbnail": "images/thumbs/length_el_reno_tornado.jpg",
+    "thumbnail_dimensions": [
+      300,
+      223
+    ],
+    "thumbnail_sha256": "f180f216e5f258aa5252fbc8b99bd9396b2db05b79ce3bb667790059a776d6a6",
+    "thumbnail_mean_pixel_difference": 1.423,
+    "license": "Public domain"
+  },
+  {
+    "item": "Prelude FLNG",
+    "file": "images/length_prelude_flng.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 77944,
+    "sha256": "4077883142be966a42fb617e50f8b59c1fc1631c97fe3844f86e42e9216e3aed",
+    "thumbnail": "images/thumbs/length_prelude_flng.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "468c51a2114ad46419e1e042772f72cde776104cd4d905bea61fe54a0638a363",
+    "thumbnail_mean_pixel_difference": 1.332,
+    "license": "CC0"
+  },
+  {
+    "item": "Danyang-Kunshan Grand Bridge",
+    "file": "images/length_danyang_kunshan_grand_bridge.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 92406,
+    "sha256": "b8c6575213fc6b5a11cbe9c58203adaf08986102eef5ed2a253f0d43935c61b0",
+    "thumbnail": "images/thumbs/length_danyang_kunshan_grand_bridge.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "f60fdf7e98cc41a019b0cfe7aa7c5c26bd60aed2934e682fa70bbb2878b8e16d",
+    "thumbnail_mean_pixel_difference": 1.552,
+    "license": "CC0"
+  },
+  {
+    "item": "Credit Card",
+    "file": "images/length_credit_card.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 58114,
+    "sha256": "c372c0171451ad8a54c3dfe1a5bb4fbe1f3134ed472416b50e0e03a0ef0044a6",
+    "thumbnail": "images/thumbs/length_credit_card.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "1f0719029cab636b119a8507052b5617c6d0b21b4d8f914b63df3a4278767400",
+    "thumbnail_mean_pixel_difference": 0.971,
+    "license": "CC0"
+  },
+  {
+    "item": "Weak Force Range",
+    "file": "images/length_weak_force_range.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 93176,
+    "sha256": "72be88703eaccd4bc5dde5f4081e10539081e8e3a46e37cf8f96a58aeac4173e",
+    "thumbnail": "images/thumbs/length_weak_force_range.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "68551c6f117a2c1930b1042dfbbaee51c24d07f50bae7bf9ec670105ba466202",
+    "thumbnail_mean_pixel_difference": 1.258,
+    "license": "CC0"
+  },
+  {
+    "item": "Muonic Hydrogen Atom",
+    "file": "images/length_muonic_hydrogen_atom.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 88234,
+    "sha256": "daee87c6281b7210c396d9fae2c855bb2bbd5dd57cc6578e7c49b7bea8dee794",
+    "thumbnail": "images/thumbs/length_muonic_hydrogen_atom.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "6484a83b7575fb0c12ff59bb1b3b41707a33b6aed5b7f7fa2f4769bcc7ac8920",
+    "thumbnail_mean_pixel_difference": 1.228,
+    "license": "CC0"
+  },
+  {
+    "item": "Tau Compton Wavelength",
+    "file": "images/length_tau_compton_wavelength.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 89150,
+    "sha256": "b67225cbffffc1eb4d65b3bb5ed4d88b290f0a03ad0ba1fe1753a990d2b3d24c",
+    "thumbnail": "images/thumbs/length_tau_compton_wavelength.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "895f457ae9c2b8ed5a4d5227c92c4a5667311ea2fe1b5f7ee2c72c7542f12f0c",
+    "thumbnail_mean_pixel_difference": 1.44,
+    "license": "CC0"
+  },
+  {
+    "item": "Proton Compton Wavelength",
+    "file": "images/length_proton_compton_wavelength.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 88383,
+    "sha256": "d336386da205428e717435c83f95acbc990ee4a150b09764a86cee002b2c4f41",
+    "thumbnail": "images/thumbs/length_proton_compton_wavelength.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "71470ca7d0a451519c883f67e58c664d1269b5a1f54d46bd7ee8fe73267a8675",
+    "thumbnail_mean_pixel_difference": 1.409,
+    "license": "CC0"
+  },
+  {
+    "item": "Muon Compton Wavelength",
+    "file": "images/length_muon_compton_wavelength.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 86860,
+    "sha256": "c9648ceab5d974a36cc926e5cab6424cbaa1980a875ab77f05124cebd4fddd37",
+    "thumbnail": "images/thumbs/length_muon_compton_wavelength.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "f298d33763279c215b785db4c08fc5741ae268c89c58f4eba94a91469fb54d78",
+    "thumbnail_mean_pixel_difference": 1.39,
+    "license": "CC0"
+  },
+  {
+    "item": "Electron Compton Wavelength",
+    "file": "images/length_electron_compton_wavelength.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "bytes": 90106,
+    "sha256": "8bdb89027966ba9a61abf49f35284d3b7e3990b103c9884588b9b2869d8db074",
+    "thumbnail": "images/thumbs/length_electron_compton_wavelength.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "thumbnail_sha256": "3233cb58dbaf6d258f6204183d9ff4652552c6549bcae7da4028fed464ebb732",
+    "thumbnail_mean_pixel_difference": 1.45,
+    "license": "CC0"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "source": "https://www.rcsb.org/structure/4V88",
+  "accessed": "2026-10-16",
+  "license_source": "https://www.wwpdb.org/about/usage-policies",
+  "data_license": "CC0 1.0",
+  "citation": "Ben-Shem et al., The structure of the eukaryotic ribosome at 3.0 angstrom resolution, Science (2011), doi:10.1126/science.1212642",
+  "mesh": "content/visualizations/models/pdb-4v88-ribosome.glb",
+  "mesh_sha256": "3dde33c1dd567ffd9df1b1c223b1524c4325435fb8ac33e04ecfde54bb896bae",
+  "representation": "New CPU rendering of biological assembly 1 of PDB 4V88 using the existing authored GLB; includes the complete deposited yeast 80S particle and Stm1. RNA gold; protein chain colors illustrative. Smooth surface is a display envelope around atomic sites, not experimental electron density. Unresolved residues, waters and ions omitted. JPEG 1200 × 800; matching 300 × 200 thumbnail."
+}

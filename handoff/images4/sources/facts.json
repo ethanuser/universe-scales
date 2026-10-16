@@ -1,0 +1,136 @@
+[
+  {
+    "item": "String Length",
+    "source": "https://home.cern/science/physics/extra-dimensions-gravitons-and-tiny-black-holes",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/string_length.svg",
+    "evidence": "Conceptual open and closed strings, not a photograph, measured geometry, physical cord, or fixed universal string-length prediction. No numerical string/Planck equivalence is asserted."
+  },
+  {
+    "item": "Carbon Atom",
+    "source": "https://www.webelements.com/carbon/atom_sizes.html",
+    "extra_sources": [
+      "https://www.webelements.com/carbon/atoms.html"
+    ],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/carbon_atom.svg",
+    "evidence": "140 pm is twice the tabulated 70 pm empirical atomic radius. Cloud/lobes are qualitative, not an ab initio density, enclosed-probability contour or literal surface. Nucleus enlarged."
+  },
+  {
+    "item": "Hyperion",
+    "source": "https://www.guinnessworldrecords.com/world-records/tallest-tree-living",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/hyperion.svg",
+    "evidence": "Guinness reports Hyperion at 116.07 m in 2019, rounded here to approximately 116 m. Original generic coast-redwood silhouette, not a verified photograph or reconstruction of its crown. Does not corroborate the dataset’s unsourced 116.2 m / 2026 claim."
+  },
+  {
+    "item": "Longest Lightning Flash",
+    "source": "https://wmo.int/news/media-centre/wmo-certifies-megaflash-lightning-record-usa",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/longest_lightning_flash.svg",
+    "evidence": "WMO reports 829 ± 8 km for the 22 October 2017 US megaflash, measured by maximum great-circle separation. Authored channels/clouds are conceptual, not satellite data or traced channel geometry."
+  },
+  {
+    "item": "Kuiper Belt",
+    "source": "https://science.nasa.gov/solar-system/kuiper-belt/facts/",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/kuiper_belt.svg",
+    "evidence": "NASA places the main belt at approximately 30–50 AU, hence approximately 100 AU outer diameter. Original face-on annulus is a regional schematic, with no synthetic catalog points. Band edges are approximate and do not delimit all trans-Neptunian objects."
+  },
+  {
+    "item": "Hercules-Corona Borealis Great Wall",
+    "source": "https://arxiv.org/abs/1401.0533",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/hercules_corona_borealis_great_wall.svg",
+    "evidence": "The paper reports 14 of 31 GRBs at 1.6 < z < 2.1 in roughly 1/8 of the sky and infers a 2000–3000 Mpc span. A simple count strip conveys those published counts, not measured angular positions, structure membership or a mapped boundary. The proposed wall is explicitly disputed; no galaxy-wall artwork is copied."
+  },
+  {
+    "item": "DVD Track Pitch",
+    "source": "https://ecma-international.org/wp-content/uploads/ECMA-267_2nd_edition_december_1999.pdf",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/dvd_track_pitch.svg",
+    "evidence": "ECMA-267 specifies a 0.74 µm nominal track pitch (±0.03 µm). Parallel strips are a locally straightened view of adjacent spiral turns; drawn mark widths, lengths and sequence are illustrative, not a micrograph or encoded data."
+  },
+  {
+    "item": "Prelude FLNG",
+    "source": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/_jcr_content/root/main/section/simple_1285915735/call_to_action_11159_578483303/links/item0.stream/1669043581418/ef8aa6eff3694727cb88fdbd0d68fa3bb60d3586/2014-media-releases.pdf",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/prelude_flng.svg",
+    "evidence": "Shell states 488 m length and 74 m width. The bounding hull proportions follow those dimensions; hull contours and generic equipment symbols are original illustrative design, not a traced Shell rendering, photograph or as-built deck layout. No qualifying facility photo was established in the prior images3 search."
+  },
+  {
+    "item": "Danyang-Kunshan Grand Bridge",
+    "source": "https://www.guinnessworldrecords.com/world-records/longest-bridge",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/danyang_kunshan_grand_bridge.svg",
+    "evidence": "The opened Guinness record page gives the bridge length rounded to 164 km; this image uses that coarse figure rather than claiming the page states 164.8 km. The ruler represents total length, while the generic viaduct segment and train are illustrative, not a route map, engineering elevation or claim that the pictured segment spans 164 km. Prior images3 photo candidates were BY-SA or all rights reserved."
+  },
+  {
+    "item": "Credit Card",
+    "source": "https://www.cardprinting.com/faq",
+    "extra_sources": [
+      "https://www.iso.org/standard/70483.html"
+    ],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/credit_card.svg",
+    "evidence": "ID-1 length 85.60 mm and width 53.98 mm. Original unbranded card with generic chip motif; no actual account, personal data, company logo or copied card design. Corner shape and chip geometry are illustrative."
+  },
+  {
+    "item": "Weak Force Range",
+    "source": "https://pdg.lbl.gov/2024/listings/rpp2024-list-w-boson.pdf",
+    "extra_sources": [
+      "https://physics.nist.gov/cuu/Constants/Table/allascii.txt"
+    ],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/weak_force_range.svg",
+    "evidence": "Using PDG 2024 W mass 80.3692 GeV/c² and NIST ℏc = 197.3269804 MeV fm gives ℏ/(mW c) ≈ 2.45526e-18 m. Curve is exp(-r/range), the exponential factor only, not the full Yukawa potential or a force measurement."
+  },
+  {
+    "item": "Muonic Hydrogen Atom",
+    "source": "https://doi.org/10.1140/epja/s10050-020-00195-9",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/muonic_hydrogen_atom.svg",
+    "evidence": "The FAMU paper states a ground-state muonic Bohr radius of about 285 fm, including proton–muon reduced mass. Twice this radius is approximately 570 fm = 0.57 pm. Cloud is schematic, not bounded at aμ, and the proton dot is enlarged. This diameter is a convention, not the full wavefunction extent."
+  },
+  {
+    "item": "Tau Compton Wavelength",
+    "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/tau_compton_wavelength.svg",
+    "evidence": "Ordinary (not reduced) Compton wavelength h/(mc), displayed as 0.698 fm, rounded from CODATA 2022. A single sine-wave glyph explains a length, with arbitrary amplitude; it is not a particle boundary, observed field oscillation, de Broglie wavelength or emitted-photon measurement."
+  },
+  {
+    "item": "Proton Compton Wavelength",
+    "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/proton_compton_wavelength.svg",
+    "evidence": "Ordinary (not reduced) Compton wavelength h/(mc), displayed as 1.32 fm, rounded from CODATA 2022. A single sine-wave glyph explains a length, with arbitrary amplitude; it is not a particle boundary, observed field oscillation, de Broglie wavelength or emitted-photon measurement."
+  },
+  {
+    "item": "Muon Compton Wavelength",
+    "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/muon_compton_wavelength.svg",
+    "evidence": "Ordinary (not reduced) Compton wavelength h/(mc), displayed as 11.7 fm, rounded from CODATA 2022. A single sine-wave glyph explains a length, with arbitrary amplitude; it is not a particle boundary, observed field oscillation, de Broglie wavelength or emitted-photon measurement."
+  },
+  {
+    "item": "Electron Compton Wavelength",
+    "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "extra_sources": [],
+    "accessed": "2026-10-16",
+    "original_svg": "handoff/images4/diagrams/electron_compton_wavelength.svg",
+    "evidence": "Ordinary (not reduced) Compton wavelength h/(mc), displayed as 2.43 pm, rounded from CODATA 2022. A single sine-wave glyph explains a length, with arbitrary amplitude; it is not a particle boundary, observed field oscillation, de Broglie wavelength or emitted-photon measurement."
+  }
+]
