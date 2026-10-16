@@ -1,0 +1,65 @@
+{
+  "pdb": "6BNO",
+  "url": "https://files.rcsb.org/download/6BNO.cif.gz",
+  "source_sha256": "2ae9be349fc0652e24cf01bdc927ec4ebd6475df56e143649952a0790b73c828",
+  "compressed_sha256": "72e0682efb5d1ffbd67e8d2668923f67ec7f4054269080dd7b95240fab8ec85f",
+  "retained_atoms": 23120,
+  "unit": "angstrom",
+  "citation": {
+    "country": "US",
+    "id": "primary",
+    "journal_abbrev": "Elife",
+    "journal_id_ISSN": "2050-084X",
+    "journal_volume": "6",
+    "pdbx_database_id_DOI": "10.7554/eLife.31125",
+    "pdbx_database_id_PubMed": 29199952,
+    "rcsb_ORCID_identifiers": [
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ],
+    "rcsb_authors": [
+      "Gurel, P.S.",
+      "Kim, L.Y.",
+      "Ruijgrok, P.V.",
+      "Omabegho, T.",
+      "Bryant, Z.",
+      "Alushin, G.M."
+    ],
+    "rcsb_journal_abbrev": "Elife",
+    "title": "Cryo-EM structures reveal specialization at the myosin VI-actin interface and a mechanism of force sensitivity.",
+    "year": 2017
+  },
+  "title": "Structure of bare actin filament",
+  "assembly_gen": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X"
+    }
+  ],
+  "operations": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "?",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "retained_npz_sha256": "f0c8fee53a718f6529ac7e6c003a0f2f2908cb9a52a6a9040f0d19ba54a63f4b"
+}

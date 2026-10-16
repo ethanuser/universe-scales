@@ -1,0 +1,56 @@
+{
+  "id": "pdb-6vxx-spike",
+  "name": "SARS-CoV-2 Spike",
+  "source": "https://www.rcsb.org/structure/6VXX",
+  "author": "Walls, A.C., Park, Y.J., Tortorici, M.A., Wall, A., McGuire, A.T., Veesler, D.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.wwpdb.org/about/usage-policies",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "SARS-CoV-2 Spike"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "structural_model",
+  "presentation": {
+    "reference_size": 20,
+    "yaw": -20,
+    "pitch": 8,
+    "roughness": 0.72
+  },
+  "note": "PDB 6VXX closed prefusion spike ectodomain trimer, colored by protein chain, with only deposited glycan residues shown in gold. This engineered soluble construct resolves about 16 nm of the roughly 20 nm membrane-projecting spike; missing flexible stalk, membrane anchor and unresolved glycans are not invented. It is not the whole virus.",
+  "provenance": "content/visualizations/models/sources/pdb-6vxx-spike.md",
+  "processing": {
+    "builder": "scripts/build_bio3d_models.py",
+    "coordinate_unit": "nm",
+    "source_coordinate_unit": "angstrom",
+    "pdb": "6VXX",
+    "source_sha256": "74ceac62dc45e34818f7c6f32fc12690f250ad803b999c1d7399a362ecd86984",
+    "surface_grid_A": 1.5,
+    "display_sphere_radius_A": 2.0,
+    "surface_smoothing_A": 0.9,
+    "assembled_atoms": 23694
+  },
+  "src": "content/visualizations/models/pdb-6vxx-spike.glb",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1100152,
+  "sha256": "1bded537939fecbdbe48a15539d33a93153c148c1124298a255c9d2081333c89",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 54886,
+  "animations": 0,
+  "skins": 0,
+  "display_label": "SARS-CoV-2 Spike \u00b7 resolved ectodomain",
+  "basis_url": "https://doi.org/10.1016/j.cell.2020.02.058",
+  "basis_label": "PDB 6VXX structure paper",
+  "link_label": "PDB 6VXX coordinates"
+}

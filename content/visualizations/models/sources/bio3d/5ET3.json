@@ -1,0 +1,95 @@
+{
+  "pdb": "5ET3",
+  "url": "https://files.rcsb.org/download/5ET3.cif.gz",
+  "source_sha256": "7bc315ea040c2a7c5462eedbffb69a346fdbea5d3576d0198a99404da71ffbee",
+  "compressed_sha256": "5a9204caae191a14b4f3c5751d7b3e08850a53352d542f2e74b7887020920741",
+  "retained_atoms": 60,
+  "unit": "angstrom",
+  "citation": {
+    "country": "UK",
+    "id": "primary",
+    "journal_abbrev": "Nat Commun",
+    "journal_id_ISSN": "2041-1723",
+    "journal_volume": "7",
+    "page_first": "11429",
+    "page_last": "11429",
+    "pdbx_database_id_DOI": "10.1038/ncomms11429",
+    "pdbx_database_id_PubMed": 27113637,
+    "rcsb_ORCID_identifiers": [
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ],
+    "rcsb_authors": [
+      "Kim, K.-H.",
+      "Ko, D.-K.",
+      "Kim, Y.-T.",
+      "Kim, N.H.",
+      "Paul, J.",
+      "Zhang, S.-Q.",
+      "Murray, C.B.",
+      "Acharya, R.",
+      "DeGrado, W.F.",
+      "Kim, Y.H.",
+      "Grigoryan, G."
+    ],
+    "rcsb_journal_abbrev": "Nat Commun",
+    "title": "Protein-directed self-assembly of a fullerene crystal.",
+    "year": 2016
+  },
+  "title": "Crystal Structure of De novo Designed Fullerene organizing peptide",
+  "assembly_gen": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1,2",
+      "asym_id_list": "A,B,C,D,E"
+    }
+  ],
+  "operations": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    },
+    {
+      "id": "2",
+      "type": "crystal symmetry operation",
+      "name": "4_675",
+      "symmetry_operation": "-x+1,-y+2,z",
+      "matrix[1][1]": "-1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "-1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "72.9972812850",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "retained_npz_sha256": "6b76c8f3b5fabea03f1db287632cf138a8c1118b3e55fddd776405498c3188ca"
+}

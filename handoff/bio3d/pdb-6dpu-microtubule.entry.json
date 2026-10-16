@@ -1,0 +1,115 @@
+{
+  "id": "pdb-6dpu-microtubule",
+  "name": "Microtubule",
+  "source": "https://www.rcsb.org/structure/6DPU",
+  "author": "Zhang, R., LaFrance, B., Nogales, E.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.wwpdb.org/about/usage-policies",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Microtubule"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "structural_model",
+  "presentation": {
+    "reference_size": 25,
+    "yaw": 15,
+    "pitch": 28,
+    "roughness": 0.72,
+    "layout_width_factor": 1.3,
+    "focus_scale_factor": 1.3
+  },
+  "note": "A 20 nm-long, flat-cut window through a reconstructed 14-protofilament GMPCPP microtubule lattice from PDB 6DPU. Alpha tubulin is teal and beta tubulin violet. Neighboring-protofilament and longitudinal transforms are fitted to matching deposited C-alpha coordinates. The seam is inferred; seam-specific conformations and disordered tails are unresolved. The generic 25 nm diameter is approximate; this in-vitro 14-protofilament example is wider than a common 13-protofilament cellular microtubule.",
+  "provenance": "content/visualizations/models/sources/pdb-6dpu-microtubule.md",
+  "processing": {
+    "builder": "scripts/build_bio3d_models.py",
+    "coordinate_unit": "nm",
+    "source_coordinate_unit": "angstrom",
+    "pdb": "6DPU",
+    "source_sha256": "609965497713f3f86d796167a80d02bbf1c02720951b0e6a8d00915ba5af8977",
+    "protofilaments": 14,
+    "fit_rmsd_A": [
+      0.002327399282005989,
+      0.0032926031711584054
+    ],
+    "lateral_transform": [
+      [
+        0.9007014755376463,
+        0.43443834078821997,
+        0.00044612589313364204,
+        -94.12982396671373
+      ],
+      [
+        -0.4344385149098322,
+        0.9007014225909078,
+        0.0003591463764510694,
+        149.6762129759834
+      ],
+      [
+        -0.00024583679854184304,
+        -0.0005172722379638284,
+        0.9999998535144786,
+        9.246939736785066
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "longitudinal_transform": [
+      [
+        0.9999849760202869,
+        0.005398726727639961,
+        0.0008912022698219622,
+        -1.6494882468811056
+      ],
+      [
+        -0.005399385399273418,
+        0.9999850948157987,
+        0.0007367449978376831,
+        1.353070080877501
+      ],
+      [
+        -0.0008870502352311649,
+        -0.0007416357819927857,
+        0.9999992667814639,
+        84.4944662445341
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "surface_grid_A": 2,
+    "display_sphere_radius_A": 3.0,
+    "surface_smoothing_A": 1.2,
+    "assembled_atoms": 241646
+  },
+  "src": "content/visualizations/models/pdb-6dpu-microtubule.glb",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1096984,
+  "sha256": "92fbb68def07fdabf8213bf62ddc36d706a40126d3129053764bed87695ca46c",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 54872,
+  "animations": 0,
+  "skins": 0,
+  "display_label": "Microtubule \u00b7 14-protofilament segment",
+  "basis_url": "https://doi.org/10.1073/pnas.1802637115",
+  "basis_label": "PDB 6DPU structure paper",
+  "link_label": "PDB 6DPU coordinates"
+}

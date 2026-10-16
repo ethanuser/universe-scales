@@ -1,0 +1,60 @@
+{
+  "id": "pdb-2tmv-tmv",
+  "name": "Tobacco Mosaic Virus",
+  "source": "https://www.rcsb.org/structure/2TMV",
+  "author": "Namba, K., Pattanayek, R., Stubbs, G.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.wwpdb.org/about/usage-policies",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Tobacco Mosaic Virus"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "structural_model",
+  "presentation": {
+    "reference_size": 300,
+    "yaw": 0,
+    "pitch": 10,
+    "roughness": 0.72,
+    "roll": -20
+  },
+  "note": "A 300 nm-long flat-cut lattice reconstruction from PDB 2TMV protein and RNA coordinates and its deposited helical symmetry. The coat is teal and the RNA amber. The central channel and repeating surface follow the structural coordinates. This representative rod length uses repeated structural subunits; the two end planes are authored cuts, not experimentally reconstructed virion ends. The smooth display surface does not resolve individual atoms.",
+  "provenance": "content/visualizations/models/sources/pdb-2tmv-tmv.md",
+  "processing": {
+    "builder": "scripts/build_bio3d_models.py",
+    "coordinate_unit": "nm",
+    "source_coordinate_unit": "angstrom",
+    "pdb": "2TMV",
+    "source_sha256": "fede46c1b745eb14de56ffc9529b8020c03855cdd51ec27d4cafb35bb85a9da9",
+    "rise_A": 1.40816,
+    "twist_degrees": 22.040816010331014,
+    "window_length_nm": 300,
+    "surface_grid_A": 3.5,
+    "display_sphere_radius_A": 2.8,
+    "surface_smoothing_A": 1.4,
+    "assembled_atoms": 2728148
+  },
+  "src": "content/visualizations/models/pdb-2tmv-tmv.glb",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 964120,
+  "sha256": "938ee768d9001721dc59546af152bccf748768cf7156f373fe172d9f19b28a9e",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 50501,
+  "animations": 0,
+  "skins": 0,
+  "display_label": "Tobacco Mosaic Virus \u00b7 lattice reconstruction",
+  "basis_url": "https://doi.org/10.1016/0022-2836(89)90391-4",
+  "basis_label": "PDB 2TMV structure paper",
+  "link_label": "PDB 2TMV coordinates"
+}

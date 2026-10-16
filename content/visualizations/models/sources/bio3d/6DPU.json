@@ -1,0 +1,63 @@
+{
+  "pdb": "6DPU",
+  "url": "https://files.rcsb.org/download/6DPU.cif.gz",
+  "source_sha256": "609965497713f3f86d796167a80d02bbf1c02720951b0e6a8d00915ba5af8977",
+  "compressed_sha256": "0e00d5d69b3afffd196613e01606ff43fd854e1e1e261732944fc1f9496361ff",
+  "retained_atoms": 40650,
+  "unit": "angstrom",
+  "citation": {
+    "country": "US",
+    "id": "primary",
+    "journal_abbrev": "Proc. Natl. Acad. Sci. U.S.A.",
+    "journal_id_ASTM": "PNASA6",
+    "journal_id_CSD": "0040",
+    "journal_id_ISSN": "1091-6490",
+    "journal_volume": "115",
+    "page_first": "E6191",
+    "page_last": "E6200",
+    "pdbx_database_id_DOI": "10.1073/pnas.1802637115",
+    "pdbx_database_id_PubMed": 29915050,
+    "rcsb_ORCID_identifiers": [
+      "?",
+      "?",
+      "?"
+    ],
+    "rcsb_authors": [
+      "Zhang, R.",
+      "LaFrance, B.",
+      "Nogales, E."
+    ],
+    "rcsb_journal_abbrev": "Proc Natl Acad Sci U S A",
+    "title": "Separating the effects of nucleotide and EB binding on microtubule structure.",
+    "year": 2018
+  },
+  "title": "Undecorated GMPCPP microtubule",
+  "assembly_gen": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,AA,BA,CA,DA,EA,FA,GA,HA,IA,JA"
+    }
+  ],
+  "operations": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "?",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "retained_npz_sha256": "f1ee507b7167c4ad90cd5959a0d6e945f5b1bd6595a0af7ab6e76c067569bbcc"
+}

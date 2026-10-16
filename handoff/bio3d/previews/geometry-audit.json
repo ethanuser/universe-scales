@@ -1,0 +1,200 @@
+[
+  {
+    "id": "cod-9011577-graphene-spacing",
+    "view": "rest",
+    "extent_nm": [
+      0.4228604063359439,
+      0.3763011588770377,
+      0.36583129048282403
+    ],
+    "orthographic_extent_per_value": 1.262269869659534,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/cod-9011577-graphene-spacing-rest.png"
+  },
+  {
+    "id": "cod-9011577-graphene-spacing",
+    "view": "side",
+    "extent_nm": [
+      0.32226804550111315,
+      0.4005494449289143,
+      0.3725411993139078
+    ],
+    "orthographic_extent_per_value": 1.1956699848624308,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/cod-9011577-graphene-spacing-side.png"
+  },
+  {
+    "id": "pdb-1kx5-nucleosome",
+    "view": "rest",
+    "extent_nm": [
+      12.112901448477599,
+      12.157183891329634,
+      11.45707805979264
+    ],
+    "orthographic_extent_per_value": 1.1051985355754212,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-1kx5-nucleosome-rest.png"
+  },
+  {
+    "id": "pdb-1kx5-nucleosome",
+    "view": "side",
+    "extent_nm": [
+      7.601381737332446,
+      13.898197177108795,
+      15.888710997987857
+    ],
+    "orthographic_extent_per_value": 1.2634724706462541,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-1kx5-nucleosome-side.png"
+  },
+  {
+    "id": "pdb-2tmv-tmv",
+    "view": "rest",
+    "extent_nm": [
+      118.74904204618522,
+      283.6403486920128,
+      66.46023186337894
+    ],
+    "orthographic_extent_per_value": 0.9454678289733761,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-2tmv-tmv-rest.png"
+  },
+  {
+    "id": "pdb-2tmv-tmv",
+    "view": "side",
+    "extent_nm": [
+      18.614870071411133,
+      298.0372411528748,
+      69.6475637131818
+    ],
+    "orthographic_extent_per_value": 0.9934574705095827,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-2tmv-tmv-side.png"
+  },
+  {
+    "id": "pdb-4v88-ribosome",
+    "view": "rest",
+    "extent_nm": [
+      29.507789024543698,
+      26.66652683022214,
+      26.347360874401744
+    ],
+    "orthographic_extent_per_value": 0.98359296748479,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-4v88-ribosome-rest.png"
+  },
+  {
+    "id": "pdb-4v88-ribosome",
+    "view": "side",
+    "extent_nm": [
+      25.86669265201042,
+      27.730513536553325,
+      29.119399460775554
+    ],
+    "orthographic_extent_per_value": 0.9243504512184442,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-4v88-ribosome-side.png"
+  },
+  {
+    "id": "pdb-5et3-fullerene",
+    "view": "rest",
+    "extent_nm": [
+      0.7138469128132818,
+      0.7004105485621035,
+      0.7175263442360478
+    ],
+    "orthographic_extent_per_value": 1.0054181870609604,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-5et3-fullerene-rest.png"
+  },
+  {
+    "id": "pdb-5et3-fullerene",
+    "view": "side",
+    "extent_nm": [
+      0.7097046040158224,
+      0.705304491771324,
+      0.6899775990399912
+    ],
+    "orthographic_extent_per_value": 0.9995839493180597,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-5et3-fullerene-side.png"
+  },
+  {
+    "id": "pdb-6bno-actin",
+    "view": "rest",
+    "extent_nm": [
+      8.019876503447122,
+      8.41951751857039,
+      8.812545530670423
+    ],
+    "orthographic_extent_per_value": 1.202788216938627,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-6bno-actin-rest.png"
+  },
+  {
+    "id": "pdb-6bno-actin",
+    "view": "side",
+    "extent_nm": [
+      8.40146806955288,
+      7.987168683624614,
+      8.462120634262705
+    ],
+    "orthographic_extent_per_value": 1.2002097242218401,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-6bno-actin-side.png"
+  },
+  {
+    "id": "pdb-6dpu-microtubule",
+    "view": "rest",
+    "extent_nm": [
+      29.86321417066138,
+      31.095414285921,
+      34.628003486493014
+    ],
+    "orthographic_extent_per_value": 1.2438165714368399,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-6dpu-microtubule-rest.png"
+  },
+  {
+    "id": "pdb-6dpu-microtubule",
+    "view": "side",
+    "extent_nm": [
+      29.468965050126037,
+      31.43679389509458,
+      34.74175706210535
+    ],
+    "orthographic_extent_per_value": 1.2574717558037833,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-6dpu-microtubule-side.png"
+  },
+  {
+    "id": "pdb-6vxx-spike",
+    "view": "rest",
+    "extent_nm": [
+      12.748096197124003,
+      16.318881000829467,
+      12.029857820173172
+    ],
+    "orthographic_extent_per_value": 0.8159440500414734,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-6vxx-spike-rest.png"
+  },
+  {
+    "id": "pdb-6vxx-spike",
+    "view": "side",
+    "extent_nm": [
+      12.148434541684889,
+      16.329885460193022,
+      12.777281817325477
+    ],
+    "orthographic_extent_per_value": 0.8164942730096512,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-6vxx-spike-side.png"
+  },
+  {
+    "id": "pdb-7r5k-nuclear-pore",
+    "view": "rest",
+    "extent_nm": [
+      142.2551101798647,
+      132.90977959982587,
+      116.39886189081174
+    ],
+    "orthographic_extent_per_value": 1.1854592514988724,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-7r5k-nuclear-pore-rest.png"
+  },
+  {
+    "id": "pdb-7r5k-nuclear-pore",
+    "view": "side",
+    "extent_nm": [
+      95.12378592824686,
+      148.78992332611844,
+      146.59666171022656
+    ],
+    "orthographic_extent_per_value": 1.2399160277176537,
+    "path": "/Users/ethan/Documents/GitHub/universe-scales-codex/bio3d/handoff/bio3d/previews/pdb-7r5k-nuclear-pore-side.png"
+  }
+]

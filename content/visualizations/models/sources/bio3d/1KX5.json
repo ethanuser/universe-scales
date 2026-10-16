@@ -1,0 +1,67 @@
+{
+  "pdb": "1KX5",
+  "url": "https://files.rcsb.org/download/1KX5.cif.gz",
+  "source_sha256": "a55dc600553caf7b7b14f217768fed1566c5101ab0543dc86895224238b284a0",
+  "compressed_sha256": "a8fa3d8942f94ec03b11b089d0a3e55d8cf02dbf1134b6773444ac86f1c306f8",
+  "retained_atoms": 12833,
+  "unit": "angstrom",
+  "citation": {
+    "country": "UK",
+    "id": "primary",
+    "journal_abbrev": "J.Mol.Biol.",
+    "journal_id_ASTM": "JMOBAK",
+    "journal_id_CSD": "0070",
+    "journal_id_ISSN": "0022-2836",
+    "journal_volume": "319",
+    "page_first": "1097",
+    "page_last": "1113",
+    "pdbx_database_id_DOI": "10.1016/S0022-2836(02)00386-8",
+    "pdbx_database_id_PubMed": 12079350,
+    "rcsb_ORCID_identifiers": [
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ],
+    "rcsb_authors": [
+      "Davey, C.A.",
+      "Sargent, D.F.",
+      "Luger, K.",
+      "Maeder, A.W.",
+      "Richmond, T.J."
+    ],
+    "rcsb_journal_abbrev": "J Mol Biol",
+    "title": "Solvent Mediated Interactions in the Structure of the Nucleosome Core Particle at 1.9 A Resolution",
+    "year": 2002
+  },
+  "title": "X-Ray Structure of the Nucleosome Core Particle, NCP147, at 1.9 A Resolution",
+  "assembly_gen": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,AA,BA,CA,DA,EA,FA,GA,HA,IA,JA,KA,LA"
+    }
+  ],
+  "operations": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "x,y,z",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "retained_npz_sha256": "8ab398b6038506b4c31e0306e034228a22b16e0633fc57af565127542701a427"
+}

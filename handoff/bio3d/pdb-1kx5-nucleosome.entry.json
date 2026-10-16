@@ -1,0 +1,58 @@
+{
+  "id": "pdb-1kx5-nucleosome",
+  "name": "Nucleosome",
+  "source": "https://www.rcsb.org/structure/1KX5",
+  "author": "Davey, C.A., Sargent, D.F., Luger, K., Maeder, A.W., Richmond, T.J.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.wwpdb.org/about/usage-policies",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Nucleosome"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "structural_model",
+  "basis_url": "https://doi.org/10.1016/S0022-2836(02)00386-8",
+  "basis_label": "PDB 1KX5 structure paper",
+  "link_label": "PDB 1KX5 coordinates",
+  "presentation": {
+    "reference_size": 11,
+    "yaw": -15,
+    "pitch": 42,
+    "roughness": 0.72,
+    "layout_width_factor": 1.2,
+    "focus_scale_factor": 1.2,
+    "roll": 15
+  },
+  "note": "PDB 1KX5 nucleosome core particle: both 147-base DNA strands and all eight histones, including resolved histone tails. DNA is amber; histones are colored by chain. The approximate 11 nm value describes the DNA-wrapped disc; resolved tails extend beyond it. Unresolved residues, water and ions are omitted.",
+  "provenance": "content/visualizations/models/sources/pdb-1kx5-nucleosome.md",
+  "processing": {
+    "builder": "scripts/build_bio3d_models.py",
+    "coordinate_unit": "nm",
+    "source_coordinate_unit": "angstrom",
+    "pdb": "1KX5",
+    "source_sha256": "a55dc600553caf7b7b14f217768fed1566c5101ab0543dc86895224238b284a0",
+    "surface_grid_A": 1.2,
+    "display_sphere_radius_A": 2.0,
+    "surface_smoothing_A": 0.8,
+    "assembled_atoms": 12815
+  },
+  "src": "content/visualizations/models/pdb-1kx5-nucleosome.glb",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1100908,
+  "sha256": "c5be5f3b2eeeb656499a128e1f1e9113e8564fae512b29395031e3d4de4c6848",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 54972,
+  "animations": 0,
+  "skins": 0
+}

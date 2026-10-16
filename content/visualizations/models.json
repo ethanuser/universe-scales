@@ -6268,6 +6268,581 @@
       "triangle_count": 37632,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "cod-9011577-graphene-spacing",
+      "name": "Graphene Layer Spacing",
+      "display_label": "Graphene Layer Spacing \u00b7 AB-stacked lattice windows",
+      "source": "https://www.crystallography.net/cod/9011577.html",
+      "author": "Trucano, P.; Chen, R.; Crystallography Open Database",
+      "license": "CC0-1.0",
+      "license_url": "https://www.crystallography.net/cod/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Graphene Layer Spacing"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measurement_diagram",
+      "basis_url": "https://doi.org/10.1038/258136a0",
+      "basis_label": "Neutron-diffraction graphite structure",
+      "link_label": "COD graphite coordinates",
+      "src": "content/visualizations/models/cod-9011577-graphene-spacing.glb",
+      "presentation": {
+        "reference_size": 0.335,
+        "pitch": 8,
+        "yaw": -15,
+        "roll": 0,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.3
+      },
+      "note": "Two hexagonal windows of neighboring AB-stacked graphite sheets, derived from the neutron-diffraction cell of COD 9011577 (a = 2.464 \u00c5, c = 6.711 \u00c5). Their plane separation is c/2 = 0.33555 nm; the catalog value is the approximate 0.335 nm. The neutral connector measures plane to plane. Colored tubes trace nuclear positions and bonds; their thickness and colors are illustrative. These are tiny windows into extended sheets, not isolated benzene molecules, and the gap is not the thickness of a single graphene sheet.",
+      "provenance": "content/visualizations/models/sources/cod-9011577-graphene-spacing.md",
+      "processing": {
+        "builder": "scripts/build_graphene_spacing.py",
+        "coordinate_unit": "nm",
+        "pdb": "COD 9011577",
+        "cell_a_A": 2.464,
+        "cell_c_A": 6.711,
+        "layer_spacing_nm": 0.33555,
+        "retained_cif_sha256": "1d93baf0ce36817280f98ecc83fc260817281da502fe3185451677a1ddf0ed20"
+      },
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 17716,
+      "sha256": "f3bb2595f1fb27e43abc6a8bfdd628723affe62c33ef221aeb7d8a29b98bd301",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 672,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "pdb-1kx5-nucleosome",
+      "name": "Nucleosome",
+      "source": "https://www.rcsb.org/structure/1KX5",
+      "author": "Davey, C.A., Sargent, D.F., Luger, K., Maeder, A.W., Richmond, T.J.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Nucleosome"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "basis_url": "https://doi.org/10.1016/S0022-2836(02)00386-8",
+      "basis_label": "PDB 1KX5 structure paper",
+      "link_label": "PDB 1KX5 coordinates",
+      "presentation": {
+        "reference_size": 11,
+        "yaw": -15,
+        "pitch": 42,
+        "roughness": 0.72,
+        "layout_width_factor": 1.2,
+        "focus_scale_factor": 1.2,
+        "roll": 15
+      },
+      "note": "PDB 1KX5 nucleosome core particle: both 147-base DNA strands and all eight histones, including resolved histone tails. DNA is amber; histones are colored by chain. The approximate 11 nm value describes the DNA-wrapped disc; resolved tails extend beyond it. Unresolved residues, water and ions are omitted.",
+      "provenance": "content/visualizations/models/sources/pdb-1kx5-nucleosome.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "1KX5",
+        "source_sha256": "a55dc600553caf7b7b14f217768fed1566c5101ab0543dc86895224238b284a0",
+        "surface_grid_A": 1.2,
+        "display_sphere_radius_A": 2.0,
+        "surface_smoothing_A": 0.8,
+        "assembled_atoms": 12815
+      },
+      "src": "content/visualizations/models/pdb-1kx5-nucleosome.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1100908,
+      "sha256": "c5be5f3b2eeeb656499a128e1f1e9113e8564fae512b29395031e3d4de4c6848",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 54972,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "pdb-2tmv-tmv",
+      "name": "Tobacco Mosaic Virus",
+      "source": "https://www.rcsb.org/structure/2TMV",
+      "author": "Namba, K., Pattanayek, R., Stubbs, G.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Tobacco Mosaic Virus"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "presentation": {
+        "reference_size": 300,
+        "yaw": 0,
+        "pitch": 10,
+        "roughness": 0.72,
+        "roll": -20
+      },
+      "note": "A 300 nm-long flat-cut lattice reconstruction from PDB 2TMV protein and RNA coordinates and its deposited helical symmetry. The coat is teal and the RNA amber. The central channel and repeating surface follow the structural coordinates. This representative rod length uses repeated structural subunits; the two end planes are authored cuts, not experimentally reconstructed virion ends. The smooth display surface does not resolve individual atoms.",
+      "provenance": "content/visualizations/models/sources/pdb-2tmv-tmv.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "2TMV",
+        "source_sha256": "fede46c1b745eb14de56ffc9529b8020c03855cdd51ec27d4cafb35bb85a9da9",
+        "rise_A": 1.40816,
+        "twist_degrees": 22.040816010331014,
+        "window_length_nm": 300,
+        "surface_grid_A": 3.5,
+        "display_sphere_radius_A": 2.8,
+        "surface_smoothing_A": 1.4,
+        "assembled_atoms": 2728148
+      },
+      "src": "content/visualizations/models/pdb-2tmv-tmv.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 964120,
+      "sha256": "938ee768d9001721dc59546af152bccf748768cf7156f373fe172d9f19b28a9e",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 50501,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "Tobacco Mosaic Virus \u00b7 lattice reconstruction",
+      "basis_url": "https://doi.org/10.1016/0022-2836(89)90391-4",
+      "basis_label": "PDB 2TMV structure paper",
+      "link_label": "PDB 2TMV coordinates"
+    },
+    {
+      "id": "pdb-4v88-ribosome",
+      "name": "Ribosome",
+      "source": "https://www.rcsb.org/structure/4V88",
+      "author": "Ben-Shem, A., Garreau de Loubresse, N., Melnikov, S., Jenner, L., Yusupova, G., Yusupov, M.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Ribosome"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "basis_url": "https://doi.org/10.1126/science.1212642",
+      "basis_label": "PDB 4V88 structure paper",
+      "link_label": "PDB 4V88 coordinates",
+      "presentation": {
+        "reference_size": 30,
+        "yaw": -18,
+        "pitch": 12,
+        "roughness": 0.72,
+        "layout_width_factor": 1.06,
+        "focus_scale_factor": 1.06
+      },
+      "note": "Author-defined biological assembly 1 of PDB 4V88: one yeast 80S ribosome, not the two particles in the asymmetric unit. Ribosomal RNA is gold; protein chains use a contrasting palette. Includes the deposited Stm1 protein; unmodeled residues, water and ions are omitted. Native coordinates are preserved, independently of the approximate 30 nm catalog value.",
+      "provenance": "content/visualizations/models/sources/pdb-4v88-ribosome.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "4V88",
+        "source_sha256": "549c09673d17c603de0eba49ae6ed50830d4bbfecedb8dd765d8028e6276fd30",
+        "surface_grid_A": 2.6,
+        "display_sphere_radius_A": 2.8,
+        "surface_smoothing_A": 1.4,
+        "assembled_atoms": 199833
+      },
+      "src": "content/visualizations/models/pdb-4v88-ribosome.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1083316,
+      "sha256": "3dde33c1dd567ffd9df1b1c223b1524c4325435fb8ac33e04ecfde54bb896bae",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 54770,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "Ribosome \u00b7 yeast 80S"
+    },
+    {
+      "id": "pdb-5et3-fullerene",
+      "name": "Buckminsterfullerene",
+      "source": "https://www.rcsb.org/structure/5ET3",
+      "author": "Kim, K.-H., Ko, D.-K., Kim, Y.-T., Kim, N.H., Paul, J., Zhang, S.-Q., Murray, C.B., Acharya, R., DeGrado, W.F., Kim, Y.H., Grigoryan, G.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Buckminsterfullerene"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "presentation": {
+        "reference_size": 0.71,
+        "yaw": -18,
+        "pitch": 12,
+        "roughness": 0.72,
+        "layout_width_factor": 1.06,
+        "focus_scale_factor": 1.06
+      },
+      "note": "Experimental C60 cage from the 60C ligand in PDB 5ET3. The thin atoms and bonds mark nuclear positions, not van der Waals radii; the listed 0.71 nm is a nucleus-to-nucleus cage diameter. The surrounding binding peptide is omitted.",
+      "provenance": "content/visualizations/models/sources/pdb-5et3-fullerene.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "5ET3",
+        "source_sha256": "7bc315ea040c2a7c5462eedbffb69a346fdbea5d3576d0198a99404da71ffbee",
+        "atoms": 60,
+        "bonds": 90,
+        "nuclear_cage_diameter_nm": 0.7051721031379258
+      },
+      "src": "content/visualizations/models/pdb-5et3-fullerene.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 78296,
+      "sha256": "8271b2ae7048221da3f9e2b9b804340f80c5723a07bde84bd0f327d5e0110107",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3600,
+      "animations": 0,
+      "skins": 0,
+      "basis_url": "https://doi.org/10.1038/ncomms11429",
+      "basis_label": "PDB 5ET3 structure paper",
+      "link_label": "PDB 5ET3 coordinates"
+    },
+    {
+      "id": "pdb-6bno-actin",
+      "name": "Actin Filament",
+      "source": "https://www.rcsb.org/structure/6BNO",
+      "author": "Gurel, P.S., Kim, L.Y., Ruijgrok, P.V., Omabegho, T., Bryant, Z., Alushin, G.M.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Actin Filament"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "presentation": {
+        "reference_size": 7,
+        "yaw": -18,
+        "pitch": 12,
+        "roughness": 0.72,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.3
+      },
+      "note": "A 7 nm-long, flat-cut window through the experimental rabbit actin lattice of PDB 6BNO. Alternating deposited subunits have contrasting colors. Both ends are visualization cuts, not filament ends. The listed 7 nm is an approximate filament diameter; the irregular structural envelope can be wider. This short window does not show a complete helical crossover.",
+      "provenance": "content/visualizations/models/sources/pdb-6bno-actin.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "6BNO",
+        "source_sha256": "2ae9be349fc0652e24cf01bdc927ec4ebd6475df56e143649952a0790b73c828",
+        "surface_grid_A": 1.1,
+        "display_sphere_radius_A": 2.0,
+        "surface_smoothing_A": 0.8,
+        "assembled_atoms": 8748
+      },
+      "src": "content/visualizations/models/pdb-6bno-actin.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1097040,
+      "sha256": "be60bc0edc3a137977f833911ee027dc1397c999e3977827775e39d65b6afaad",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 54940,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "Actin Filament \u00b7 cut segment",
+      "basis_url": "https://doi.org/10.7554/eLife.31125",
+      "basis_label": "PDB 6BNO structure paper",
+      "link_label": "PDB 6BNO coordinates"
+    },
+    {
+      "id": "pdb-6dpu-microtubule",
+      "name": "Microtubule",
+      "source": "https://www.rcsb.org/structure/6DPU",
+      "author": "Zhang, R., LaFrance, B., Nogales, E.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Microtubule"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "presentation": {
+        "reference_size": 25,
+        "yaw": 15,
+        "pitch": 28,
+        "roughness": 0.72,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.3
+      },
+      "note": "A 20 nm-long, flat-cut window through a reconstructed 14-protofilament GMPCPP microtubule lattice from PDB 6DPU. Alpha tubulin is teal and beta tubulin violet. Neighboring-protofilament and longitudinal transforms are fitted to matching deposited C-alpha coordinates. The seam is inferred; seam-specific conformations and disordered tails are unresolved. The generic 25 nm diameter is approximate; this in-vitro 14-protofilament example is wider than a common 13-protofilament cellular microtubule.",
+      "provenance": "content/visualizations/models/sources/pdb-6dpu-microtubule.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "6DPU",
+        "source_sha256": "609965497713f3f86d796167a80d02bbf1c02720951b0e6a8d00915ba5af8977",
+        "protofilaments": 14,
+        "fit_rmsd_A": [
+          0.002327399282005989,
+          0.0032926031711584054
+        ],
+        "lateral_transform": [
+          [
+            0.9007014755376463,
+            0.43443834078821997,
+            0.00044612589313364204,
+            -94.12982396671373
+          ],
+          [
+            -0.4344385149098322,
+            0.9007014225909078,
+            0.0003591463764510694,
+            149.6762129759834
+          ],
+          [
+            -0.00024583679854184304,
+            -0.0005172722379638284,
+            0.9999998535144786,
+            9.246939736785066
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "longitudinal_transform": [
+          [
+            0.9999849760202869,
+            0.005398726727639961,
+            0.0008912022698219622,
+            -1.6494882468811056
+          ],
+          [
+            -0.005399385399273418,
+            0.9999850948157987,
+            0.0007367449978376831,
+            1.353070080877501
+          ],
+          [
+            -0.0008870502352311649,
+            -0.0007416357819927857,
+            0.9999992667814639,
+            84.4944662445341
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "surface_grid_A": 2,
+        "display_sphere_radius_A": 3.0,
+        "surface_smoothing_A": 1.2,
+        "assembled_atoms": 241646
+      },
+      "src": "content/visualizations/models/pdb-6dpu-microtubule.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1096984,
+      "sha256": "92fbb68def07fdabf8213bf62ddc36d706a40126d3129053764bed87695ca46c",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 54872,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "Microtubule \u00b7 14-protofilament segment",
+      "basis_url": "https://doi.org/10.1073/pnas.1802637115",
+      "basis_label": "PDB 6DPU structure paper",
+      "link_label": "PDB 6DPU coordinates"
+    },
+    {
+      "id": "pdb-6vxx-spike",
+      "name": "SARS-CoV-2 Spike",
+      "source": "https://www.rcsb.org/structure/6VXX",
+      "author": "Walls, A.C., Park, Y.J., Tortorici, M.A., Wall, A., McGuire, A.T., Veesler, D.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "SARS-CoV-2 Spike"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "presentation": {
+        "reference_size": 20,
+        "yaw": -20,
+        "pitch": 8,
+        "roughness": 0.72
+      },
+      "note": "PDB 6VXX closed prefusion spike ectodomain trimer, colored by protein chain, with only deposited glycan residues shown in gold. This engineered soluble construct resolves about 16 nm of the roughly 20 nm membrane-projecting spike; missing flexible stalk, membrane anchor and unresolved glycans are not invented. It is not the whole virus.",
+      "provenance": "content/visualizations/models/sources/pdb-6vxx-spike.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "6VXX",
+        "source_sha256": "74ceac62dc45e34818f7c6f32fc12690f250ad803b999c1d7399a362ecd86984",
+        "surface_grid_A": 1.5,
+        "display_sphere_radius_A": 2.0,
+        "surface_smoothing_A": 0.9,
+        "assembled_atoms": 23694
+      },
+      "src": "content/visualizations/models/pdb-6vxx-spike.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1100152,
+      "sha256": "1bded537939fecbdbe48a15539d33a93153c148c1124298a255c9d2081333c89",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 54886,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "SARS-CoV-2 Spike \u00b7 resolved ectodomain",
+      "basis_url": "https://doi.org/10.1016/j.cell.2020.02.058",
+      "basis_label": "PDB 6VXX structure paper",
+      "link_label": "PDB 6VXX coordinates"
+    },
+    {
+      "id": "pdb-7r5k-nuclear-pore",
+      "name": "Nuclear Pore Complex",
+      "source": "https://www.rcsb.org/structure/7R5K",
+      "author": "Mosalaganti, S., Obarska-Kosinska, A., Siggel, M., Taniguchi, R., Turonova, B., Zimmerli, C.E., Buczak, K., Schmidt, F.H., Margiotta, E., Mackmull, M.T., Hagen, W.J.H., Hummer, G., Kosinski, J., Beck, M.",
+      "license": "CC0-1.0",
+      "license_url": "https://www.wwpdb.org/about/usage-policies",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Nuclear Pore Complex"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "structural_model",
+      "presentation": {
+        "reference_size": 120,
+        "yaw": 15,
+        "pitch": -30,
+        "roughness": 0.72,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.3
+      },
+      "note": "Full eightfold assembly of PDB 7R5K, a constricted human nuclear pore scaffold modeled integratively using cryo-electron tomography and predicted protein structures. A deliberately coarse C-alpha envelope, colored by nucleoporin entity, preserves the central channel and deposited eightfold transforms. Disordered transport barrier, nuclear membranes and unresolved basket/filaments are absent. It is not an atomically resolved complete pore.",
+      "provenance": "content/visualizations/models/sources/pdb-7r5k-nuclear-pore.md",
+      "processing": {
+        "builder": "scripts/build_bio3d_models.py",
+        "coordinate_unit": "nm",
+        "source_coordinate_unit": "angstrom",
+        "pdb": "7R5K",
+        "source_sha256": "49c272f79bc55af95b846b6ffe6ebf9cd401f478abb82cdfe53ba13ea057fd2a",
+        "surface_grid_A": 6,
+        "display_sphere_radius_A": 7.5,
+        "surface_smoothing_A": 3.5,
+        "assembled_atoms": 624240
+      },
+      "src": "content/visualizations/models/pdb-7r5k-nuclear-pore.glb",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1031712,
+      "sha256": "676f890087bf4c514f1aee4988916df37b58871f595f3dfde1db1c69bb97e12c",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 54216,
+      "animations": 0,
+      "skins": 0,
+      "display_label": "Nuclear Pore Complex \u00b7 constricted scaffold",
+      "basis_url": "https://doi.org/10.1126/science.abm9506",
+      "basis_label": "PDB 7R5K structure paper",
+      "link_label": "PDB 7R5K coordinates"
     }
   ],
   "coverage_gaps": [
