@@ -9,7 +9,7 @@ import { waveModelMetadata, waveScenes } from './wave-models.js?v=d9360c0030';
 import { SCREEN_LINE_PX, labelNode as anchor, screenLine } from './model-overlay-nodes.js?v=ecd7a14690';
 import { footballFieldRenderScene } from './football-model.js?v=8ee95c682c';
 import { organelleModelMetadata, organelleScenes } from './organelle-models.js?v=2528c1eebb';
-import { nearbySpaceModelMetadata, cosmicScenes as nearbySpaceScenes } from './nearby-space-models.js?v=af76f82751';
+import { nearbySpaceModelMetadata, cosmicScenes as nearbySpaceScenes } from './nearby-space-models.js?v=ac35f7b8ae';
 import { outerSolarModelMetadata, outerSolarScenes } from './outer-solar-models.js?v=25caba771f';
 import { particleScaleMetadata, particleScaleScenes } from './particle-scale-models.js?v=43e11a5421';
 export { SCREEN_LINE_PX, screenLine };

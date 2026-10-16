@@ -66,8 +66,6 @@ test('Local Group uses catalog coordinates and renders recognizable galaxy cloud
     assert.ok(boundary.children.every(node => node.isLineLoop));
     const bounds = new THREE.Box3().setFromObject(boundary);
     assert.ok(Math.abs(bounds.getSize(new THREE.Vector3()).x * KPC / 1e23 - 1) < 1e-6);
-    assert.match(nearbySpaceModelMetadata['Local Group'].note, /not a dynamical\/orbital solution/);
-    assert.match(nearbySpaceModelMetadata['Local Group'].note, /one physical scale/);
     assert.equal(scene.getObjectByName('Milky Way').userData.galaxyRadiusKpc, MILKY_WAY.radius);
     for (const source of LOCAL_GROUP_GALAXIES)
         assert.equal(scene.getObjectByName(source.name).userData.galaxyRadiusKpc, source.radius);
@@ -78,7 +76,8 @@ test('Local Group uses catalog coordinates and renders recognizable galaxy cloud
 test('exports follow the procedural scene and metadata registry shape', () => {
     assert.equal(cosmicScenes['proxima-centauri-distance'], proximaCentauriDistanceScene);
     assert.equal(cosmicScenes['local-group'], localGroupScene);
-    assert.equal(nearbySpaceModelMetadata['Local Group'].presentation.reference_size, 1e23 / KPC);
-    assert.equal(nearbySpaceModelMetadata['Local Group'].basis_url, 'https://doi.org/10.1088/0004-6256/144/1/4');
+    // The Local Group item now uses the registered catalog GLB (local-group-mcconnachie-3d);
+    // a procedural entry here would shadow it.
+    assert.equal(nearbySpaceModelMetadata['Local Group'], undefined);
     assert.ok(LOCAL_GROUP_GALAXIES.length >= 12);
 });

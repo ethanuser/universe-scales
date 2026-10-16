@@ -5415,6 +5415,55 @@
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "local-group-mcconnachie-3d",
+      "source": "https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=J/AJ/144/4",
+      "link_label": "McConnachie nearby-galaxy catalog",
+      "author": "Catalog: McConnachie 2012 (AJ 144, 4; online update via VizieR); Milky Way image: NASA/JPL-Caltech/R. Hurt (SSC); 3D assembly: Universe Scales",
+      "license": "Scientific catalog used with citation (CDS/VizieR terms); NASA/JPL image use policy for the Milky Way texture (credit, not CC0)",
+      "license_url": "https://cds.unistra.fr/vizier-org/licences_vizier.html",
+      "license_files": [
+        "sources/nearby-space-models.md"
+      ],
+      "matches": {
+        "length": [
+          "Local Group"
+        ]
+      },
+      "geometry": "mesh",
+      "basis_url": "https://doi.org/10.1088/0004-6256/144/1/4",
+      "basis_label": "McConnachie (2012) nearby-galaxy catalog",
+      "presentation": {
+        "reference_size": 3240.78,
+        "layout_width_factor": 1.15,
+        "focus_scale_factor": 1.2,
+        "pitch": 14
+      },
+      "note": "The 74 catalogued galaxies within about 1.6 megaparsecs of the Local Group's center, at their measured positions and to one physical scale: the Milky Way (NASA/JPL's face-on map), Andromeda (M31) and Triangulum (M33) as star disks at their measured sizes, tilts and orientations, and the dwarf galaxies as glows sized by their measured half-light radii. The faint blue sphere is Andromeda's gas halo, which Hubble's Project AMIGA traced to about 1.3 million light-years, about halfway to us; the warm sphere is the Milky Way's dark-matter halo (radius about 215 kpc, from Cautun et al. 2020's mass). The outer faint sphere marks the listed span, about 10 million light-years. Disk structure, dwarf shapes and the Magellanic Clouds' sizes are illustrative; positions and distances are catalog values.",
+      "processing": {
+        "script": "scripts/build_local_group_model.py",
+        "catalog_sha256": "d41f798e0b2ecb9f46b175cdbdc4b6fb287e617e6a47a342b4927f6720728ea5",
+        "lg_radius_kpc": 1620,
+        "m31_halo_ly": 1300000.0
+      },
+      "src": "content/visualizations/models/local-group-mcconnachie-3d.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 513772,
+      "sha256": "07e0deb0c2dd0c4b25daf4ad260bb42aaab5c604f56bf349bfd18db3947987cd",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 9,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

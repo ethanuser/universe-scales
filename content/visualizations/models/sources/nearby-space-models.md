@@ -44,3 +44,17 @@ central catalog members legible; all 16 positions remain plotted.
 
 Factual catalog measurements are credited above; authored visualization code
 remains under the project code license.
+
+## Local Group in 3D (local-group-mcconnachie-3d, 2026-10-15)
+
+Replaces the procedural 16-galaxy scene. scripts/build_local_group_model.py reads McConnachie (2012,
+AJ 144, 4; online-updated table via VizieR J/AJ/144/4: Name, SubG, GLON, GLAT, D, D(LG), VMag, R2)
+and keeps the 74 galaxies within 1,620 kpc of the Local Group barycenter, at heliocentric galactic
+positions (kpc; galactic plane horizontal). Dwarfs: point blobs with Gaussian width = half-light
+radius (LMC/SMC illustrative 1.5/1 kpc), plus one soft glow each scaled by luminosity. Milky Way:
+NASA/JPL PIA10748 face-on concept sampled into 9,000 stars (Sun 8.18 kpc from the center). M31 and
+M33: exponential disks (scale lengths 5.3 / 1.8 kpc) at inclinations 77 / 54 deg and position angles
+38 / 23 deg, near side to the north-west; their structure is illustrative. Halos: M31's gas halo to
+1.3 million ly (Project AMIGA, Lehner et al. 2020, ApJ 900, 9); the Milky Way's R200 = 215 kpc,
+computed from Cautun et al. 2020's M200 = 1.08e12 Msun (arXiv:1911.04557). A faint sphere of
+radius 1,620 kpc around the MW-M31 midpoint marks the listed ~10.6 million ly span (approximate).

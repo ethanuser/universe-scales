@@ -178,11 +178,8 @@ export const nearbySpaceModelMetadata = Object.freeze({
             distance_bracket: Object.freeze({ bodies: ['Sun', 'Proxima Centauri'] }), layout_width_factor: 1.1,
             focus_scale_factor: 1.1, display_extent_factor: 1 }),
         basis_url: 'https://doi.org/10.3847/1538-3881/addabe', basis_label: 'A Demonstration of Interstellar Navigation Using New Horizons: Gaia DR3 parallax distance',
-        note: `The Sun and Proxima Centauri are separated by 1.301971 pc (${(PROXIMA_DISTANCE_M / LY).toFixed(3)} light-years), using the reciprocal Gaia DR3 parallax quoted in the cited astrometric analysis. Their rendered marker spheres are enlarged to 0.8% and 0.6% of the separation respectively; the stars are not drawn at physical diameter. The ${((PROXIMA_DISTANCE_M / 4e16 - 1) * 100).toFixed(1)}% difference from the listed 4e16 m is the catalog value used for the diagram; separation is represented in the source-derived physical units. NASA overview: https://science.nasa.gov/asset/hubble/proxima-centauri/` }),
-    'Local Group': Object.freeze({ id: 'local-group-procedural', procedural: 'local-group', geometry: 'mesh',
-        presentation: Object.freeze({ reference_size: 1e23 / KPC, layout_width_factor: 1.15,
-            focus_scale_factor: 1.15, display_extent_factor: 1 }),
-        basis_url: 'https://doi.org/10.1088/0004-6256/144/1/4', basis_label: 'McConnachie (2012) nearby-galaxy catalog; NASA Local Group overview', note: localGroupNote })
+        note: `The Sun and Proxima Centauri are separated by 1.301971 pc (${(PROXIMA_DISTANCE_M / LY).toFixed(3)} light-years), using the reciprocal Gaia DR3 parallax quoted in the cited astrometric analysis. Their rendered marker spheres are enlarged to 0.8% and 0.6% of the separation respectively; the stars are not drawn at physical diameter. The ${((PROXIMA_DISTANCE_M / 4e16 - 1) * 100).toFixed(1)}% difference from the listed 4e16 m is the catalog value used for the diagram; separation is represented in the source-derived physical units. NASA overview: https://science.nasa.gov/asset/hubble/proxima-centauri/` })
+    // Local Group: registered GLB local-group-mcconnachie-3d (scripts/build_local_group_model.py).
 });
 
 export const cosmicScenes = Object.freeze({
