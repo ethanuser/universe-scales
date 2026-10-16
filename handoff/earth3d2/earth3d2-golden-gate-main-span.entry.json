@@ -22,7 +22,10 @@
     "reference_size": 1280,
     "yaw": -38,
     "pitch": 12,
-    "layout_width_factor": 1.04
+    "layout_width_factor": 1.04,
+    "remove_nodes": [
+      "Model scope"
+    ]
   },
   "note": "Original dimensioned exterior diagram of the Golden Gate Bridge main span only. Tower centers are 4,200 ft (1,280.16 m) apart; the catalog rounds this to 1,280 m. The 90 ft deck width, 746 ft tower height, 500 ft tower height above the deck, main cable diameter and 50 ft suspender spacing follow the Bridge District. The main cable is a parabolic approximation with 144 m sag from the District-hosted statics chapter. Tower taper, bracing, trusses, deck profile, road markings and colors are authored exterior simplifications. The cut stops at the main towers; side spans, anchorages, terrain, submerged foundations and internal construction are omitted. This is not a structural engineering model.",
   "processing": {
@@ -46,5 +49,5 @@
   "triangle_count": 22288,
   "animations": 0,
   "skins": 0,
-  "display_label": "Golden Gate Bridge \u00b7 main span only"
+  "display_label": "Golden Gate Bridge · main span only"
 }
