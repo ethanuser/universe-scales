@@ -1,0 +1,73 @@
+{
+  "neuron_id": 109111,
+  "neuron_name": "BC140212B_21",
+  "archive": "Feldmeyer",
+  "note": "",
+  "age_scale": "Day",
+  "gender": "Male/Female",
+  "age_classification": "young adult",
+  "brain_region": [
+    "neocortex",
+    "somatosensory",
+    "barrel",
+    "layer 4"
+  ],
+  "cell_type": [
+    "interneuron",
+    "Non-fast spiking",
+    "Local projecting",
+    "non-Martinotti-like"
+  ],
+  "species": "rat",
+  "strain": "Wistar",
+  "scientific_name": "rattus norvegicus",
+  "stain": "biocytin",
+  "experiment_condition": [
+    "Control"
+  ],
+  "protocol": "in vitro",
+  "slicing_direction": "oblique coronal",
+  "reconstruction_software": "Neurolucida",
+  "objective_type": "oil",
+  "original_format": "Neurolucida.asc",
+  "domain": "Dendrites, Soma, Axon",
+  "attributes": "Diameter, 3D, Angles",
+  "magnification": "100",
+  "upload_date": "2019-08-19",
+  "deposition_date": "2019-04-16",
+  "shrinkage_reported": "Reported",
+  "shrinkage_corrected": "Corrected",
+  "reported_value": null,
+  "reported_xy": "1.1",
+  "reported_z": "2.1",
+  "corrected_value": null,
+  "corrected_xy": "1.1",
+  "corrected_z": "2.1",
+  "soma_surface": "848.216",
+  "surface": "30472.3",
+  "volume": "3215.48",
+  "slicing_thickness": "350",
+  "min_age": "17.0",
+  "max_age": "23.0",
+  "min_weight": "Not Reported",
+  "max_weight": "Not Reported",
+  "png_url": "http://neuromorpho.org/images/imageFiles/Feldmeyer/BC140212B_21.png",
+  "reference_pmid": [
+    "29329401"
+  ],
+  "reference_doi": [
+    "10.1093/cercor/bhx352"
+  ],
+  "physical_Integrity": "Dendrites & Axon Complete",
+  "_links": {
+    "self": {
+      "href": "http://neuromorpho.org/api/neuron/id/109111"
+    },
+    "measurements": {
+      "href": "http://neuromorpho.org/api/morphometry/id/109111"
+    },
+    "persistence_vector": {
+      "href": "http://neuromorpho.org/api/pvec/id/109111"
+    }
+  }
+}

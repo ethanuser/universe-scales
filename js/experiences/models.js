@@ -4,8 +4,9 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=ad10588828';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=aaf64f8e3d';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
+import './neuron-animation.js?v=a744312505';
 import { prepareModelPoints } from './model-points.js?v=1a62e15829';
 import { angularEntry, angularScene } from './angular-models.js?v=9445c96468';
 import { createAngularRig } from './angular-rig.js?v=9866c0e844';
@@ -79,7 +80,8 @@ function sampledModelPoints(instance) {
 function addHoverOverlay(instance) {
     const originals = [];
     instance.traverse(child => {
-        if ((child.isMesh || child.isPoints) && !child.userData.screenLine) originals.push(child);
+        if ((child.isMesh || child.isPoints) && !child.userData.screenLine
+            && child.userData.hoverOverlay !== false) originals.push(child);
     });
     return originals.map(child => {
         const overlay = child.clone(false);

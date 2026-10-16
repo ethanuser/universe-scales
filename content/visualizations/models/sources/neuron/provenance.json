@@ -1,0 +1,19 @@
+{
+  "swc": {
+    "url": "https://neuromorpho.org/dableFiles/feldmeyer/CNG%20version/BC140212B_21.CNG.swc",
+    "download_sha256": "b235930f0a19d50f0096300ebe977a24a4771fa1330dff2190d51fb8483f3a76"
+  },
+  "asc": {
+    "url": "https://neuromorpho.org/dableFiles/feldmeyer/Source-Version/BC140212B_21.asc",
+    "download_sha256": "900cb4be1dfb59a7dc26e6a331d27d4d21dfa755a21cf32b9d83e920d98d397d"
+  },
+  "metadata": {
+    "url": "https://neuromorpho.org/api/neuron/name/BC140212B_21",
+    "download_sha256": "2ee55dd69672648fe5dd8686b840c135fba1ea6e23e0c414995981afa109660a"
+  },
+  "license": {
+    "url": "https://neuromorpho.org/useterm.jsp",
+    "license": "CC-BY-4.0",
+    "checked": "2026-10-15"
+  }
+}

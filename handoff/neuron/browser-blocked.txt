@@ -1,0 +1,4 @@
+Production model_lab shot, audit and mobile commands could not launch Chromium.
+FATAL:base/apple/mach_port_rendezvous_mac.cc:155
+bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer: Permission denied (1100)
+No production browser/mobile verification was completed. CPU previews are not browser screenshots.

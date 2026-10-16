@@ -388,12 +388,6 @@ export const organelleModelMetadata = Object.freeze({
         basis_url: 'https://doi.org/10.1016/j.bbabio.2009.09.010',
         basis_label: 'Cristae architecture: electron tomography',
         note: 'A mitochondrion cut lengthwise. Its double membrane (a tan outer membrane around an orange inner membrane) encloses the matrix, where the inner membrane folds inward as about 17 perforated, plate-like cristae, the lamellar form seen in electron tomography of many animal cells. The long axis is the listed 10 micrometers. Real mitochondria vary a lot in shape and in cristae count and spacing, and are often much thinner; sizes and folds here are a schematic, not a reconstruction of one organelle.' }),
-    'Neuron': Object.freeze({ id: 'pyramidal-neuron-action-potential', procedural: 'neuron-action-potential', geometry: 'mesh',
-        presentation: Object.freeze({ reference_size: NEURON.span, layout_width_factor: 1.0, focus_scale_factor: 1.3,
-            display_extent_factor: 1, yaw: 18, pitch: 4 }),
-        basis_url: 'https://en.wikipedia.org/wiki/Action_potential',
-        basis_label: 'Action potential',
-        note: 'A pyramidal neuron and its local dendritic tree, spanning the listed 100 micrometers: a soma about 20 micrometers across with its nucleus, an apical dendrite, basal dendrites with spines, and an axon that leaves through the axon hillock and initial segment into a myelin sheath. The animation repeats one signal: orange input waves converge on the soma from the dendrites, the membrane at the axon initial segment crosses threshold (−55 mV) and fires a spike (peak +40 mV, watch the live readout), the yellow pulse runs down the axon with a bluish hyperpolarized tail, and a weaker spike echoes back into the dendrites. It is slowed roughly 20,000 times; a real spike lasts about a millisecond and is millimeters long, far longer than this whole cell. The axon, which can be a meter long, is cropped.' })
 });
 
 export const organelleScenes = Object.freeze({
