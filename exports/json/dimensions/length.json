@@ -2,22 +2,22 @@
   "base_unit": "meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 257,
-    "candidate_shortfall_to_preferred_target": 43,
+    "candidate_count": 258,
+    "candidate_shortfall_to_preferred_target": 42,
     "duplicate_candidate_count": 0,
     "empty_bin_count": 5,
     "preferred_max_items": 320,
     "preferred_target_items": 300,
-    "raw_candidate_count": 257,
+    "raw_candidate_count": 258,
     "required_min_items": 24,
-    "selected_count": 257,
+    "selected_count": 258,
     "selected_primary_count": 19,
-    "selected_secondary_count": 238,
+    "selected_secondary_count": 239,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 257
+      "secondary_reference": 258
     },
-    "target_selected_count": 257
+    "target_selected_count": 258
   },
   "description_format": "markdown",
   "dimension": "length",
@@ -8313,6 +8313,60 @@
       ],
       "summary_short": "The Suez Canal is about 193 kilometers long along its navigable route between the Mediterranean and Red seas.",
       "value": 193300.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Saturn's moon Hyperion has a mean diameter of about 270 kilometers, though its irregular body is longer in some directions than others. Cassini images reveal a sponge-like surface of deep, sharp-edged craters, and the moon tumbles chaotically rather than keeping one face toward Saturn. Its low density suggests much of its interior is empty space between loosely packed ice.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Saturn's moon Hyperion has a mean diameter of about 270 kilometers, though its irregular body is longer in some directions than others. Cassini images reveal a sponge-like surface of deep, sharp-edged craters, and the moon tumbles chaotically rather than keeping one face toward Saturn. Its low density suggests much of its interior is empty space between loosely packed ice.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Hyperion Moon",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "270000",
+          "source_url": "https://science.nasa.gov/saturn/moons/hyperion/"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-hyperion-moon",
+      "name": "Hyperion Moon",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://science.nasa.gov/saturn/moons/hyperion/",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-science-nasa-gov-saturn-moons-hyperion",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "hyperion",
+          "url": "https://science.nasa.gov/saturn/moons/hyperion/"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "Saturn's moon Hyperion has a mean diameter of about 270 kilometers, though its irregular body is longer in some directions than others.",
+      "value": 270000.0,
       "value_type": "derived",
       "wikidata_qid": null
     },

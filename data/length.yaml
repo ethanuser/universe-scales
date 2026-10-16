@@ -6982,6 +6982,51 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
+- id: obs:length:scenario-length-hyperion-moon
+  name: Hyperion Moon
+  value: 270000.0
+  description: Saturn's moon Hyperion has a mean diameter of about 270 kilometers, though its irregular body is longer in some directions than others. Cassini images reveal a sponge-like surface of deep, sharp-edged craters, and the moon tumbles chaotically rather than keeping one face toward Saturn. Its low density suggests much of its interior is empty space between loosely packed ice.
+  description_format: markdown
+  summary_short: Saturn's moon Hyperion has a mean diameter of about 270 kilometers, though its irregular body is longer in some directions than others.
+  description_medium: Saturn's moon Hyperion has a mean diameter of about 270 kilometers, though its irregular body is longer in some directions than others. Cassini images reveal a sponge-like surface of deep, sharp-edged craters, and the moon tumbles chaotically rather than keeping one face toward Saturn. Its low density suggests much of its interior is empty space between loosely packed ice.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    ingest_source: dataset/raw/legacy_yaml/length.yaml
+    legacy_item_name: Hyperion Moon
+    source_trace:
+      method: derived
+      original_value_text: '270000'
+      source_url: https://science.nasa.gov/saturn/moons/hyperion/
+  source: https://science.nasa.gov/saturn/moons/hyperion/
+  source_count: 2
+  sources:
+  - id: src:https-science-nasa-gov-saturn-moons-hyperion
+    url: https://science.nasa.gov/saturn/moons/hyperion/
+    title: hyperion
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-legacy-yaml-length-yaml
+    url: repo://dataset/raw/legacy_yaml/length.yaml
+    title: dataset/raw/legacy_yaml/length.yaml
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: legacy_seed
+    note: dataset/raw/legacy_yaml/length.yaml
+  wikidata_qid: null
+  value_type: derived
+  qualifiers: {}
 - id: obs:length:scenario-length-iss-orbital-altitude
   name: ISS Orbital Altitude
   value: 402336.0

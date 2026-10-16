@@ -815,6 +815,13 @@ items:
     length of 67 m, 1,005 cubic metres of pressurized volume and a mass of 419,725 kg. It is the largest
     single structure humans have built in orbit, slightly longer than the 91.4 m football field, and it
     circles Earth about every 90 minutes at five miles per second.
+- name: Hyperion Moon
+  value: 270000
+  source: https://science.nasa.gov/saturn/moons/hyperion/
+  description: Saturn's moon Hyperion has a mean diameter of about 270 kilometers, though its irregular
+    body is longer in some directions than others. Cassini images reveal a sponge-like surface of deep,
+    sharp-edged craters, and the moon tumbles chaotically rather than keeping one face toward Saturn. Its
+    low density suggests much of its interior is empty space between loosely packed ice.
 - name: Hyperion
   value: 116.2
   source: https://en.wikipedia.org/wiki/Hyperion_(tree)
