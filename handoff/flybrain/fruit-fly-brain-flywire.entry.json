@@ -1,0 +1,68 @@
+{
+  "id": "fruit-fly-brain-flywire",
+  "matches": {
+    "length": [
+      "Fruit Fly Brain"
+    ]
+  },
+  "source": "https://zenodo.org/records/10877326",
+  "basis_url": "https://doi.org/10.1038/s41586-024-07686-5",
+  "basis_label": "Schlegel et al. (2024): annotation and skeletonization",
+  "author": "FlyWire Consortium; Schlegel, Jefferis et al. (2024); adaptation: Universe Scales",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt"
+  ],
+  "geometry": "lines_and_density_envelope",
+  "representation": "scientific_reconstruction",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 800,
+    "yaw": -12,
+    "pitch": 10,
+    "focus_scale_factor": 1.35
+  },
+  "note": "2,200 real FlyWire v783 neurons, sampled across both optic lobes and central brain. Blue: optic; amber: central; violet: visual projection; pink: visual centrifugal. Simplified centreline paths in true micrometres; line thickness and colours are for visibility. The faint shell is a smoothed density envelope of this sample, not a segmented membrane. This is a small morphological sample of the whole-brain connectome, not its full synapse graph; crossing lines do not imply synapses. Approximately 800 \u00b5m across the sampled optic lobes, including lamina.",
+  "processing": {
+    "script": "scripts/build_flybrain_model.py",
+    "source_md5": "a4c104776f33ec539ef859064c4de3df",
+    "cache_sha256": "2acd9656a7b3d0b2cf5bccd36dbdd7c129f4b32361ff54c5efe16b96825f7b0c",
+    "annotations_sha256": "30be6c73975a70c56d930e27911f36455d3886e15abf383b78edd2a5d679e0b6",
+    "neuron_count": 2200,
+    "line_segments": 137209,
+    "rdp_tolerance_um": 1.0,
+    "terminal_pruning_start_um": 7.0,
+    "max_segments_per_neuron": {
+      "optic": 55,
+      "central": 70,
+      "visual_projection": 100,
+      "visual_centrifugal": 100
+    },
+    "density_voxel_um": 2.0,
+    "density_sigma_voxels": 2.5,
+    "density_relative_isovalue": 0.012,
+    "density_surface_step_voxels": 4,
+    "units": "micrometres",
+    "source_notes": "content/visualizations/models/sources/flybrain.md"
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 2536220,
+  "sha256": "48e24338383bc6a8f05003f0ca922d719c40b7b2acd301c1e4187f7e12aadd11",
+  "extensions_used": [
+    "KHR_materials_unlit",
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 6,
+  "triangle_count": 30768,
+  "animations": 0,
+  "skins": 0,
+  "src": "content/visualizations/models/fruit-fly-brain-flywire.glb"
+}

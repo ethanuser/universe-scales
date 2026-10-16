@@ -1,0 +1,20 @@
+{
+  "source_md5": "a4c104776f33ec539ef859064c4de3df",
+  "annotations_sha256": "30be6c73975a70c56d930e27911f36455d3886e15abf383b78edd2a5d679e0b6",
+  "annotations_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-024-07686-5/MediaObjects/41586_2024_7686_MOESM5_ESM.tsv",
+  "population_skeletons": 139273,
+  "quotas": {
+    "optic": 1000,
+    "central": 700,
+    "visual_projection": 400,
+    "visual_centrifugal": 100
+  },
+  "rdp_tolerance_um": 1.0,
+  "terminal_pruning_start_um": 7.0,
+  "max_segments_per_neuron": {
+    "optic": 55,
+    "central": 70,
+    "visual_projection": 100,
+    "visual_centrifugal": 100
+  }
+}
