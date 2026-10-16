@@ -1,0 +1,62 @@
+{
+  "id": "bio3d2-honeybee",
+  "source": "https://sketchfab.com/3d-models/western-honeybee-adult-worker-ct-scan-ee629bd30e4a47899de1b30b9b71c905",
+  "sketchfab_uid": "ee629bd30e4a47899de1b30b9b71c905",
+  "author": "etainproject on Sketchfab",
+  "sketchfab_author": "etainproject",
+  "license": "CC-BY-4.0",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Honeybee"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "scan",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "basis_url": "https://www.nature.com/articles/s41598-019-56948-0",
+  "basis_label": "Biological context / dimension source",
+  "presentation": {
+    "reference_size": 12.5,
+    "yaw": -12,
+    "pitch": 8,
+    "layout_width_factor": 1.3,
+    "display_label": "Honeybee (worker micro-CT)"
+  },
+  "note": "ETAIN / Arno Thielens worker honeybee micro-CT surface, in native millimetres. Its approximately 11 mm body is preserved within the catalog’s representative 12.5 mm scale, rather than enlarged to fill it. The preserved compact pose and unresolved/absent wing and leg detail remain as in the scan; no flying pose, hair or missing appendages are invented. Amber false colour is for inspection, not measured pigmentation.",
+  "processing": {
+    "script": "scripts/prepare_bio3d2_imports.mjs",
+    "source_model_name": "Western Honeybee - Adult Worker - CT Scan",
+    "source_sha256": "3764f5b78dd4d087da5d3a8650893383c4789fe3d756fbff01657e1cf950dbcc",
+    "source_bytes": 15443132,
+    "texture_size": 1024,
+    "operations": [
+      "Convert legacy specular-glossiness materials to supported metallic-roughness",
+      "Static-scene deduplication, flatten, join, weld",
+      "Simplify toward 50k triangles; error tolerance 0.005; preserve relative geometry",
+      "Prune and quantize positions/normals/UVs; no compressed mesh decoder"
+    ],
+    "provenance": "content/visualizations/models/sources/bio3d2-honeybee.md"
+  },
+  "src": "content/visualizations/models/bio3d2-honeybee.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 734404,
+  "sha256": "acea4502352c8e8cb41441630abaf8a5c6df7e5d1a0082c0852a2be5bb51e107",
+  "extensions_used": [
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 50000,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,49 @@
+{
+  "id": "bio3d2-platelet",
+  "name": "Human Platelet",
+  "source": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+  "basis_url": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+  "basis_label": "Biological basis and representative dimension",
+  "author": "Universe Scales contributors",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Human Platelet"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 2.5,
+    "yaw": -20,
+    "pitch": 22,
+    "layout_width_factor": 1.3,
+    "display_label": "Human Platelet (diagram)"
+  },
+  "note": "Resting discoid platelet, 2.5 µm across. An explanatory cutaway exposes granules and the peripheral microtubule band; no nucleus. Disc thickness, granule placement/count and band geometry are authored, not measurements or an EM reconstruction. Colours distinguish structures; they are not natural colours.",
+  "processing": {
+    "script": "scripts/build_bio3d2_cells.py",
+    "model_unit": "um",
+    "calibrated_quantity": "cell diameter",
+    "provenance": "content/visualizations/models/sources/bio3d2-platelet.md"
+  },
+  "src": "content/visualizations/models/bio3d2-platelet.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 388884,
+  "sha256": "9b10e7655b1df42a2f8bc536d0955cf3333faf73fb020eb0ba042e69ece043f5",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 19376,
+  "animations": 0,
+  "skins": 0
+}

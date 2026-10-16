@@ -1,0 +1,49 @@
+{
+  "id": "bio3d2-membrane",
+  "name": "Cell Membrane",
+  "source": "https://pubmed.ncbi.nlm.nih.gov/29689220/",
+  "basis_url": "https://pubmed.ncbi.nlm.nih.gov/29689220/",
+  "basis_label": "Biological basis and representative dimension",
+  "author": "Universe Scales contributors",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Cell Membrane"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 4,
+    "yaw": -22,
+    "pitch": 12,
+    "layout_width_factor": 1.3,
+    "display_label": "Cell Membrane (diagram)"
+  },
+  "note": "A 4 nm-thick schematic phospholipid bilayer patch. Teal hydrophilic heads face water on both sides; paired gold hydrophobic tails face inward. The small lateral window is authored to keep the thickness legible at true scale. Regular spacing, molecular shape, lipid count and colours are schematic, not atomic coordinates or an MD snapshot. Proteins, sterols and glycans are omitted.",
+  "processing": {
+    "script": "scripts/build_bio3d2_cells.py",
+    "model_unit": "nm",
+    "calibrated_quantity": "bilayer thickness",
+    "provenance": "content/visualizations/models/sources/bio3d2-membrane.md"
+  },
+  "src": "content/visualizations/models/bio3d2-membrane.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 388432,
+  "sha256": "a17f335166dd23eebc0d5b2f423931d3cf6aece1f28bd1c46c94352831fb3157",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 2,
+  "triangle_count": 18048,
+  "animations": 0,
+  "skins": 0
+}

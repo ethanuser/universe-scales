@@ -1,0 +1,22 @@
+{
+  "uid": "f300e988fa5d4e749b04445efebfba8a",
+  "name": "Rotifera",
+  "author": ".hapto",
+  "display_name": ".hapto GmbH",
+  "source": "https://sketchfab.com/3d-models/rotifera-f300e988fa5d4e749b04445efebfba8a",
+  "isDownloadable": true,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "https://vr-bodenleben.senckenberg.de/",
+  "source_archive_sha256": "f2dc61d2b96c8e70403244c76f1355135686337bb9b70ebc1e5941175233c6f0",
+  "source_archive_bytes": 4016914,
+  "staged_glb_sha256": "eda063d04599dde5378988996edb3efd588047c502277b4777df33c913022016",
+  "texture_size": 1024,
+  "retrieved": "2026-10-16"
+}

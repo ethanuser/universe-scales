@@ -1,0 +1,22 @@
+{
+  "uid": "7621abd3b4604d95bad90f9a1aaac51f",
+  "name": "Human Eye",
+  "author": "maskutfab",
+  "display_name": "ScannerDev",
+  "source": "https://sketchfab.com/3d-models/human-eye-7621abd3b4604d95bad90f9a1aaac51f",
+  "isDownloadable": true,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "Human Eye.",
+  "source_archive_sha256": "e4e95628a8a0efbd244c7088bf025be31e2d02dca02301103443f10d3376ff4e",
+  "source_archive_bytes": 870013,
+  "staged_glb_sha256": "633da23febfa5b1498110dba891ae296b2fb76b5dcdcf4d927aaf438808542b4",
+  "texture_size": 1024,
+  "retrieved": "2026-10-16"
+}

@@ -1,0 +1,210 @@
+{
+  "method": "Vendored GLTFLoader with material-free copy; native geometry and transforms; orthographic resting extents. Not browser, perspective, textures, transparency, lighting or UI verification.",
+  "requiredDatasetChange": "Tardigrade must become 152 um body length before publishing; native model reference is 152 um.",
+  "models": [
+    {
+      "id": "bio3d2-capillary",
+      "rawExtent": [
+        5.5,
+        7,
+        5.25
+      ],
+      "reference": 7,
+      "normalizedRestExtent": [
+        0.9790214371559739,
+        1.0483650469497319,
+        1.0366762309788584
+      ],
+      "displayedExtentPerValue": 1.0483650469497319,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-chloroplast",
+      "rawExtent": [
+        3.763008630010728,
+        1.9761258235963401,
+        1.8655739841540042
+      ],
+      "reference": 3.763008630010728,
+      "normalizedRestExtent": [
+        0.9834355006952717,
+        0.5512787008076345,
+        0.5071623977508446
+      ],
+      "displayedExtentPerValue": 0.9834355006952717,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-cone",
+      "rawExtent": [
+        4,
+        45,
+        3.200000047683716
+      ],
+      "reference": 45,
+      "normalizedRestExtent": [
+        0.30993198107102804,
+        0.964596926655741,
+        0.09662218275224682
+      ],
+      "displayedExtentPerValue": 0.964596926655741,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-egg",
+      "rawExtent": [
+        136,
+        136,
+        104.0306625366211
+      ],
+      "reference": 120,
+      "normalizedRestExtent": [
+        1.1139760609585716,
+        1.1252063341307221,
+        0.877029086030326
+      ],
+      "displayedExtentPerValue": 1.1252063341307221,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-eye",
+      "rawExtent": [
+        0.03382934257388115,
+        0.033823148047209706,
+        0.03530253159710153
+      ],
+      "reference": 0.03382934257388115,
+      "normalizedRestExtent": [
+        0.9998712707473083,
+        1.0003130219134877,
+        1.0281757575967116
+      ],
+      "displayedExtentPerValue": 1.0003130219134877,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-honeybee",
+      "rawExtent": [
+        10.999670028686523,
+        4.150850547950951,
+        4.042757230001885
+      ],
+      "reference": 12.5,
+      "normalizedRestExtent": [
+        0.85308249613508,
+        0.3348524556462489,
+        0.40990461409587997
+      ],
+      "displayedExtentPerValue": 0.85308249613508,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-membrane",
+      "rawExtent": [
+        3.5,
+        4,
+        2.299999952316284
+      ],
+      "reference": 4,
+      "normalizedRestExtent": [
+        0.9889561083100902,
+        1.1239470295595944,
+        0.9877558653298479
+      ],
+      "displayedExtentPerValue": 1.1239470295595944,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-neutrophil",
+      "rawExtent": [
+        12,
+        12,
+        9.623492002487183
+      ],
+      "reference": 12,
+      "normalizedRestExtent": [
+        0.9829200939734796,
+        0.9928291514142518,
+        0.7927715394404252
+      ],
+      "displayedExtentPerValue": 0.9928291514142518,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-platelet",
+      "rawExtent": [
+        2.5,
+        2.5,
+        0.4443972408771515
+      ],
+      "reference": 2.5,
+      "normalizedRestExtent": [
+        0.9409277050601643,
+        0.9372268698220945,
+        0.5057698424851484
+      ],
+      "displayedExtentPerValue": 0.9409277050601643,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-rotifer",
+      "rawExtent": [
+        12.667377428009553,
+        49.822585065849125,
+        10.827559076324096
+      ],
+      "reference": 49.822585065849125,
+      "normalizedRestExtent": [
+        0.2453141447298493,
+        1.0041883082242187,
+        0.22993590389426688
+      ],
+      "displayedExtentPerValue": 1.0041883082242187,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-tardigrade",
+      "rawExtent": [
+        163.80353546142578,
+        50.63909721374512,
+        57.345035552978516
+      ],
+      "reference": 152,
+      "normalizedRestExtent": [
+        1.065212380861853,
+        0.3676312952704538,
+        0.40966758533860603
+      ],
+      "displayedExtentPerValue": 1.065212380861853,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    },
+    {
+      "id": "bio3d2-yeast",
+      "rawExtent": [
+        6.099999904632568,
+        4.400000095367432,
+        3.150000035762787
+      ],
+      "reference": 5,
+      "normalizedRestExtent": [
+        1.1919983069461098,
+        0.8739105337345909,
+        0.7660057260300364
+      ],
+      "displayedExtentPerValue": 1.1919983069461098,
+      "layoutWidthFactor": 1.3,
+      "pass": true
+    }
+  ]
+}

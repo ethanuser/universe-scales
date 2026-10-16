@@ -1,0 +1,22 @@
+{
+  "uid": "ee629bd30e4a47899de1b30b9b71c905",
+  "name": "Western Honeybee - Adult Worker - CT Scan",
+  "author": "etainproject",
+  "display_name": "etainproject",
+  "source": "https://sketchfab.com/3d-models/western-honeybee-adult-worker-ct-scan-ee629bd30e4a47899de1b30b9b71c905",
+  "isDownloadable": true,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "*Apis mellifera* -  Worker - Western Honeybee - CT Scan\n\nFull body length 11.0 mm long, is 5.0 mm wide, and mass of approximately 900 mg\n\n<hr>\n\nPaper:  [Exposure of Insects to Radio-Frequency Electromagnetic Fields from 2 to 120 GHz](https://www.nature.com/articles/s41598-018-22271-3)\n\nPaper:  [Radio-Frequency Electromagnetic Field Exposure of Western Honey Bees](https://www.nature.com/articles/s41598-019-56948-0)\n\nAuthor: [Arno Thielens](https://orcid.org/0000-0002-8089-6382) \n\n![](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-019-56948-0/MediaObjects/41598_2019_56948_Fig4_HTML.png?as=webp)\n\nRelative electric field strength in and around a mid-sagittal plane of the Honey Bee Drone at the nine studied frequencies. Grey scale shows the electric field strengths relative to 1 V/m electric field strength.\n\n<hr>\n ETAIN has received funding from the European Union’s Horizon Europe research and innovation program under grant agreement No. 101057216\nhttps://www.etainproject.eu/",
+  "source_archive_sha256": "3764f5b78dd4d087da5d3a8650893383c4789fe3d756fbff01657e1cf950dbcc",
+  "source_archive_bytes": 15443132,
+  "staged_glb_sha256": "5837f1659ca1e704d6720f845de5305f707804c9ef775749e4a089e62f69ce9b",
+  "texture_size": 1024,
+  "retrieved": "2026-10-16"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "bio3d2-eye",
+  "source": "https://sketchfab.com/3d-models/human-eye-7621abd3b4604d95bad90f9a1aaac51f",
+  "sketchfab_uid": "7621abd3b4604d95bad90f9a1aaac51f",
+  "author": "ScannerDev on Sketchfab",
+  "sketchfab_author": "maskutfab",
+  "license": "CC-BY-4.0",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Human Eye"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "basis_url": "https://doi.org/10.1155/2014/503645",
+  "basis_label": "Biological context / dimension source",
+  "presentation": {
+    "measure_axis": "x",
+    "yaw": 160,
+    "pitch": 8,
+    "layout_width_factor": 1.3,
+    "display_label": "Human Eye (illustration)"
+  },
+  "note": "Authored external human-eye illustration by ScannerDev (maskutfab), uniformly calibrated to a representative 24 mm transverse eyeball diameter. The source sclera, iris, pupil and corneal surface are retained with their textures. It is not a patient scan or an optical/vascular reconstruction; the painted vessels are illustrative and no internal anatomy is claimed.",
+  "processing": {
+    "script": "scripts/prepare_bio3d2_imports.mjs",
+    "source_model_name": "Human Eye",
+    "source_sha256": "e4e95628a8a0efbd244c7088bf025be31e2d02dca02301103443f10d3376ff4e",
+    "source_bytes": 870013,
+    "texture_size": 1024,
+    "operations": [
+      "Convert legacy specular-glossiness materials to supported metallic-roughness",
+      "Static-scene deduplication, flatten, join, weld",
+      "Simplify toward 50k triangles; error tolerance 0.005; preserve relative geometry",
+      "Prune and quantize positions/normals/UVs; no compressed mesh decoder"
+    ],
+    "provenance": "content/visualizations/models/sources/bio3d2-eye.md"
+  },
+  "src": "content/visualizations/models/bio3d2-eye.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 397912,
+  "sha256": "471b34809da205326a3946aa7e7e133680c4257b6020f58784e946b4b73de26b",
+  "extensions_used": [
+    "KHR_materials_ior",
+    "KHR_materials_specular",
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 9216,
+  "animations": 0,
+  "skins": 0
+}

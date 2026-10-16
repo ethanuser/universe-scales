@@ -1,0 +1,49 @@
+{
+  "id": "bio3d2-neutrophil",
+  "name": "Neutrophil",
+  "source": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+  "basis_url": "https://www.histologyguide.org/slideview/MH-033hr-blood-smear/07-slide-1.html",
+  "basis_label": "Biological basis and representative dimension",
+  "author": "Universe Scales contributors",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Neutrophil"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 12,
+    "yaw": -15,
+    "pitch": 10,
+    "layout_width_factor": 1.3,
+    "display_label": "Neutrophil (diagram)"
+  },
+  "note": "A 12 µm representative neutrophil diagram with a connected three-lobed nucleus and cytoplasmic granules. The catalog diameter is a blood-smear convention; this rounded explanatory cutaway is not a measured smear or a reconstructed cell. Lobe shape, granule count, organelle proportions and colours are authored.",
+  "processing": {
+    "script": "scripts/build_bio3d2_cells.py",
+    "model_unit": "um",
+    "calibrated_quantity": "cell diameter",
+    "provenance": "content/visualizations/models/sources/bio3d2-neutrophil.md"
+  },
+  "src": "content/visualizations/models/bio3d2-neutrophil.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 733728,
+  "sha256": "65371cc4908d63d8b51b17a2168f30e743612e38b45d8e4bda48e238a8c09ba4",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 34480,
+  "animations": 0,
+  "skins": 0
+}
