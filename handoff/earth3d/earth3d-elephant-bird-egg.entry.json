@@ -1,0 +1,62 @@
+{
+  "id": "earth3d-elephant-bird-egg",
+  "source": "https://sketchfab.com/3d-models/elephant-bird-egg-c46a999a49d547d8bab39706d7a6b6ee",
+  "sketchfab_uid": "c46a999a49d547d8bab39706d7a6b6ee",
+  "author": "RISD Nature Lab (RISDNaturelab); scan by Vir Naidu",
+  "license": "CC-BY-4.0",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Elephant Bird Egg"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "specimen_scan",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "measure_axis": "y",
+    "yaw": -15,
+    "pitch": 5,
+    "pre_rotation": {
+      "x": -20.697266,
+      "z": 2.150853
+    }
+  },
+  "note": "Real surface scan of RISD Nature Lab accession 132.32, reassembled from eggshell fragments and presumed by the collection to be an elephant-bird egg. Uniformly calibrated to the catalog’s representative 33 cm long axis, not a measured dimension or confirmed species identification of this particular specimen. Scan cracks and repaired fragments are retained; no invented shell geometry.",
+  "processing": {
+    "script": "scripts/prepare_earth3d_imports.mjs",
+    "source_model_name": "Elephant Bird Egg",
+    "source_sha256": "a72f175fc58623041cfa045a8731dc9c1a6cb38548d5dc43129d13e317e6f10d",
+    "source_bytes": 19805196,
+    "texture_size": 1024,
+    "operations": [
+      "Static-scene deduplication, flatten, join and weld",
+      "Simplify toward 45k triangles with maximum error 0.0008 (no independent axis deformation)",
+      "Prune; quantize positions to 16 bits, normals to 12 bits and in-range UVs to 14 bits; no mesh compression"
+    ],
+    "provenance": "content/visualizations/models/sources/earth3d-elephant-bird-egg.md",
+    "alignment": "Surface-area-weighted principal long axis rigidly aligned to Y before calibration; pre-rotation X -20.697266 degrees, Z 2.150853 degrees."
+  },
+  "src": "content/visualizations/models/earth3d-elephant-bird-egg.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 937596,
+  "sha256": "15ccc8449144b3e8f620f14c96a18cb9993989452607053b2d8d93313b11c32c",
+  "extensions_used": [
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 44994,
+  "animations": 0,
+  "skins": 0,
+  "sketchfab_author": "RISDNaturelab"
+}

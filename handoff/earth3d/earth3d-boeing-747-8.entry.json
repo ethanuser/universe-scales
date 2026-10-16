@@ -1,0 +1,59 @@
+{
+  "id": "earth3d-boeing-747-8",
+  "source": "https://sketchfab.com/3d-models/boeing-747-8i-cd1977bedc32412fa1ce2cda23520b84",
+  "sketchfab_uid": "cd1977bedc32412fa1ce2cda23520b84",
+  "author": "AF267 (jsong.js.us) on Sketchfab",
+  "license": "CC-BY-4.0",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Boeing 747-8"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "measure_axis": "x",
+    "yaw": -15,
+    "pitch": 12
+  },
+  "note": "Authored Boeing 747-8 Intercontinental model by AF267 (jsong.js.us), originally configured for GeoFS. Calibrated uniformly nose to tail to the catalog’s 76.3 m overall length. The model’s span-to-length ratio is about 0.898, close to Boeing’s 68.4/76.3; local details, livery and landing gear are illustrative rather than an engineering survey. No geometry is stretched independently.",
+  "processing": {
+    "script": "scripts/prepare_earth3d_imports.mjs",
+    "source_model_name": "Boeing 747-8i",
+    "source_sha256": "c3684c87c07e876dd26fba64d89bf4dc89085647af7c1c509771b521a3241316",
+    "source_bytes": 2801303,
+    "texture_size": 1024,
+    "operations": [
+      "Static-scene deduplication, flatten, join and weld",
+      "Simplify toward 45k triangles with maximum error 0.0008 (no independent axis deformation)",
+      "Prune; quantize positions to 16 bits, normals to 12 bits and in-range UVs to 14 bits; no mesh compression"
+    ],
+    "provenance": "content/visualizations/models/sources/earth3d-boeing-747-8.md"
+  },
+  "src": "content/visualizations/models/earth3d-boeing-747-8.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1302052,
+  "sha256": "de692675f40cfe0355d7c032991bd0c1adeb2aba1041814fbba1372f12f96473",
+  "extensions_used": [
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 13,
+  "triangle_count": 45018,
+  "animations": 0,
+  "skins": 0,
+  "basis_url": "https://www.lufthansa.com/br/en/articles/explore-flying/essentials-surprising-lufthansa-numbers",
+  "basis_label": "Lufthansa: 747-8 Intercontinental overall length",
+  "sketchfab_author": "jsong.js.us"
+}

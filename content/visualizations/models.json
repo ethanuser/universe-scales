@@ -5543,6 +5543,731 @@
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "earth3d-a4-paper",
+      "source": "https://preview.sist.si/sist-preview/4087/9050e9a6768b43e2bcdedca70c895c61/ISO-216-1975.pdf",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "A4 Paper"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.297,
+        "yaw": -15,
+        "pitch": 9,
+        "roll": 0
+      },
+      "note": "ISO 216 A4: 210 \u00d7 297 mm. A flat, double-sided sheet surface; thickness is deliberately not modeled because ISO 216 defines the trimmed edges, not a paper stock. No exaggerated curl or thickness.",
+      "basis_url": "https://preview.sist.si/sist-preview/4087/9050e9a6768b43e2bcdedca70c895c61/ISO-216-1975.pdf",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 0.297,
+        "provenance": "content/visualizations/models/sources/earth3d-a4-paper.md"
+      },
+      "src": "content/visualizations/models/earth3d-a4-paper.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1368,
+      "sha256": "671f9b0e72732aac05b78cc403c1490e30d1739bceaafb81ad3b44971a4e72af",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 4,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-basketball",
+      "source": "https://au.wilson.com/pages/how-to-choose-a-basketball/1000",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Basketball"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.239,
+        "yaw": 20,
+        "pitch": 12,
+        "roll": 0
+      },
+      "note": "Representative size-7 basketball. Wilson specifies 29.5 inches circumference (238.51 mm derived diameter), rounded to the catalog\u2019s 239 mm. Original pebble texture and eight-panel channel pattern are illustrative.",
+      "basis_url": "https://au.wilson.com/pages/how-to-choose-a-basketball/1000",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 0.239,
+        "provenance": "content/visualizations/models/sources/earth3d-basketball.md"
+      },
+      "src": "content/visualizations/models/earth3d-basketball.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1054024,
+      "sha256": "ad03207c9debd87b785d31df71259f3569ccb9995e6a30490694fb41c7eb573f",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 16128,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-boeing-747-8",
+      "source": "https://sketchfab.com/3d-models/boeing-747-8i-cd1977bedc32412fa1ce2cda23520b84",
+      "sketchfab_uid": "cd1977bedc32412fa1ce2cda23520b84",
+      "author": "AF267 (jsong.js.us) on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Boeing 747-8"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "measure_axis": "x",
+        "yaw": -15,
+        "pitch": 12
+      },
+      "note": "Authored Boeing 747-8 Intercontinental model by AF267 (jsong.js.us), originally configured for GeoFS. Calibrated uniformly nose to tail to the catalog\u2019s 76.3 m overall length. The model\u2019s span-to-length ratio is about 0.898, close to Boeing\u2019s 68.4/76.3; local details, livery and landing gear are illustrative rather than an engineering survey. No geometry is stretched independently.",
+      "processing": {
+        "script": "scripts/prepare_earth3d_imports.mjs",
+        "source_model_name": "Boeing 747-8i",
+        "source_sha256": "c3684c87c07e876dd26fba64d89bf4dc89085647af7c1c509771b521a3241316",
+        "source_bytes": 2801303,
+        "texture_size": 1024,
+        "operations": [
+          "Static-scene deduplication, flatten, join and weld",
+          "Simplify toward 45k triangles with maximum error 0.0008 (no independent axis deformation)",
+          "Prune; quantize positions to 16 bits, normals to 12 bits and in-range UVs to 14 bits; no mesh compression"
+        ],
+        "provenance": "content/visualizations/models/sources/earth3d-boeing-747-8.md"
+      },
+      "src": "content/visualizations/models/earth3d-boeing-747-8.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1302052,
+      "sha256": "de692675f40cfe0355d7c032991bd0c1adeb2aba1041814fbba1372f12f96473",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 13,
+      "triangle_count": 45018,
+      "animations": 0,
+      "skins": 0,
+      "basis_url": "https://www.lufthansa.com/br/en/articles/explore-flying/essentials-surprising-lufthansa-numbers",
+      "basis_label": "Lufthansa: 747-8 Intercontinental overall length",
+      "sketchfab_author": "jsong.js.us"
+    },
+    {
+      "id": "earth3d-credit-card",
+      "source": "https://www.iso.org/obp/ui#iso:std:iso-iec:7810:ed-3:v1:en",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Credit Card"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.0856,
+        "yaw": -15,
+        "pitch": 12,
+        "roll": -7
+      },
+      "note": "ISO/IEC 7810 ID-1 envelope: 85.60 \u00d7 53.98 \u00d7 0.76 mm. Original fictitious unpersonalized card artwork; chip and graphic layout are illustrative. No account data or payment-brand marks.",
+      "basis_url": "https://www.iso.org/obp/ui#iso:std:iso-iec:7810:ed-3:v1:en",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 0.0856,
+        "provenance": "content/visualizations/models/sources/earth3d-credit-card.md"
+      },
+      "src": "content/visualizations/models/earth3d-credit-card.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 64296,
+      "sha256": "c3befba36ab8d02c045a1e6145095901468e5eab6bb3477e1021080fa63a7988",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 208,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-elephant-bird-egg",
+      "source": "https://sketchfab.com/3d-models/elephant-bird-egg-c46a999a49d547d8bab39706d7a6b6ee",
+      "sketchfab_uid": "c46a999a49d547d8bab39706d7a6b6ee",
+      "author": "RISD Nature Lab (RISDNaturelab); scan by Vir Naidu",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Elephant Bird Egg"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "specimen_scan",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "measure_axis": "y",
+        "yaw": -15,
+        "pitch": 5,
+        "pre_rotation": {
+          "x": -20.697266,
+          "z": 2.150853
+        }
+      },
+      "note": "Real surface scan of RISD Nature Lab accession 132.32, reassembled from eggshell fragments and presumed by the collection to be an elephant-bird egg. Uniformly calibrated to the catalog\u2019s representative 33 cm long axis, not a measured dimension or confirmed species identification of this particular specimen. Scan cracks and repaired fragments are retained; no invented shell geometry.",
+      "processing": {
+        "script": "scripts/prepare_earth3d_imports.mjs",
+        "source_model_name": "Elephant Bird Egg",
+        "source_sha256": "a72f175fc58623041cfa045a8731dc9c1a6cb38548d5dc43129d13e317e6f10d",
+        "source_bytes": 19805196,
+        "texture_size": 1024,
+        "operations": [
+          "Static-scene deduplication, flatten, join and weld",
+          "Simplify toward 45k triangles with maximum error 0.0008 (no independent axis deformation)",
+          "Prune; quantize positions to 16 bits, normals to 12 bits and in-range UVs to 14 bits; no mesh compression"
+        ],
+        "provenance": "content/visualizations/models/sources/earth3d-elephant-bird-egg.md",
+        "alignment": "Surface-area-weighted principal long axis rigidly aligned to Y before calibration; pre-rotation X -20.697266 degrees, Z 2.150853 degrees."
+      },
+      "src": "content/visualizations/models/earth3d-elephant-bird-egg.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 937596,
+      "sha256": "15ccc8449144b3e8f620f14c96a18cb9993989452607053b2d8d93313b11c32c",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 44994,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_author": "RISDNaturelab"
+    },
+    {
+      "id": "earth3d-gateway-arch",
+      "source": "https://www.nps.gov/jeff/planyourvisit/mathematical-equation.htm",
+      "basis_url": "https://www.nps.gov/jeff/planyourvisit/gateway-arch-fact-sheet.htm",
+      "basis_label": "National Park Service dimensions and exterior geometry",
+      "author": "Universe Scales, from National Park Service geometry",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Gateway Arch"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 192.024,
+        "yaw": -17,
+        "pitch": 3,
+        "environment": 0.85
+      },
+      "note": "Dimensioned exterior of the Gateway Arch, using the National Park Service weighted-catenary centroid equation and equilateral triangular sections tapering from 54 ft at the base to 17 ft at the crown. Cross-sectional area varies linearly with distance below the crown. Height and outer span are about 630 ft (192 m). Ground cuts follow the sloping legs. Interiors, foundations, panel joints and observation windows are omitted; steel finish and studio reflections are illustrative.",
+      "processing": {
+        "script": "scripts/build_gateway_arch.py",
+        "units": "metres",
+        "constants_feet": {
+          "A": 68.7672,
+          "C": 3.0022,
+          "L": 299.2239,
+          "H": 625.0925
+        },
+        "provenance": "content/visualizations/models/sources/earth3d-gateway-arch.md"
+      },
+      "src": "content/visualizations/models/earth3d-gateway-arch.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 167372,
+      "sha256": "399f0bd3497fcaa719a53810343e002408e0cb3f89aa2eecebd26b6e85b9a635",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3082,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-hindenburg",
+      "source": "https://sketchfab.com/3d-models/hindenburg-airship-b347e808f561465dab568fa61734e262",
+      "sketchfab_uid": "b347e808f561465dab568fa61734e262",
+      "author": "hank2 on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Hindenburg"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "pre_rotation": {
+          "y": 90
+        },
+        "measure_axis": "x",
+        "yaw": -8,
+        "pitch": 8
+      },
+      "note": "Authored Hindenburg airship by hank2, uniformly calibrated to 245 m overall length. Envelope, gondolas, fins and historically contextual tail markings are retained. The neutral envelope material is lightened for legibility; no independent axis scaling. Internal framework and gas bags are the artist\u2019s illustration, not a structural survey.",
+      "basis_url": "https://www.airships.net/hindenburg/disaster/commerce-department-report/",
+      "basis_label": "U.S. Commerce Department accident report: original dimensions",
+      "processing": {
+        "script": "scripts/prepare_earth3d_imports.mjs",
+        "source_model_name": "Hindenburg airship",
+        "source_sha256": "a41932b598ff81b644543c21f4046d5d74a80bf7ecfcab88096ad6012e03f842",
+        "source_bytes": 1188561,
+        "texture_size": 1024,
+        "operations": [
+          "Static-scene deduplication, flatten, join and weld",
+          "Simplify toward 45k triangles with maximum error 0.0008",
+          "Lighten only the neutral envelope material to linear RGB 0.65, roughness 0.58, metalness 0.08",
+          "Prune; quantize positions to 16 bits, normals to 12 bits and in-range UVs to 14 bits; no mesh compression"
+        ],
+        "provenance": "content/visualizations/models/sources/earth3d-hindenburg.md"
+      },
+      "src": "content/visualizations/models/earth3d-hindenburg.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2531076,
+      "sha256": "737f8e389684d53853be89e24cc25f808a69427fb8b9c1344490f9c7469b8239",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 69340,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_author": "hank2"
+    },
+    {
+      "id": "earth3d-komodo-dragon",
+      "source": "https://sketchfab.com/3d-models/komodo-a3bb3a390dd1466e9bbab4a994329d45",
+      "sketchfab_uid": "a3bb3a390dd1466e9bbab4a994329d45",
+      "author": "denys4624 on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Komodo Dragon"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "pre_rotation": {
+          "y": 90
+        },
+        "measure_axis": "x",
+        "yaw": -10,
+        "pitch": 7
+      },
+      "note": "Authored Komodo dragon illustration by denys4624, uniformly calibrated nose to tail to the catalog\u2019s representative 2.6 m adult-male length. The extended tail is included. This is an artist\u2019s animal, not a scan, measured specimen or anatomical reconstruction; surface details and pose are illustrative.",
+      "processing": {
+        "script": "scripts/prepare_earth3d_imports.mjs",
+        "source_model_name": "Komodo",
+        "source_sha256": "0da82072321346a8050c8619e4bbfad7c6edc1b3dd0a073cd2f37c4bf58d5694",
+        "source_bytes": 2303250,
+        "texture_size": 1024,
+        "operations": [
+          "Static-scene deduplication, flatten, join and weld",
+          "Simplify toward 45k triangles with maximum error 0.0008 (no independent axis deformation)",
+          "Prune; quantize positions to 16 bits, normals to 12 bits and in-range UVs to 14 bits; no mesh compression"
+        ],
+        "provenance": "content/visualizations/models/sources/earth3d-komodo-dragon.md"
+      },
+      "src": "content/visualizations/models/earth3d-komodo-dragon.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 874016,
+      "sha256": "fc7089d1cc02c4df4e708c589b51dc898b7a09528ab24289eb944aa57224017f",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 9,
+      "triangle_count": 16264,
+      "animations": 0,
+      "skins": 0,
+      "basis_url": "https://nationalzoo.si.edu/animals/komodo-dragon",
+      "basis_label": "Dimension / biological context source",
+      "sketchfab_author": "denys4624"
+    },
+    {
+      "id": "earth3d-meteor-crater",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://pubs.usgs.gov/publication/ofr20241062/full",
+      "basis_label": "USGS: Meteor Crater dimensions and geology",
+      "author": "Mapzen Terrain Tiles / Tilezen; terrain data courtesy of the U.S. Geological Survey; adaptation by Universe Scales",
+      "license": "Mapzen Terrain Tiles attribution; underlying USGS public-domain terrain data",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/earth3d-meteor-crater.md"
+      ],
+      "matches": {
+        "length": [
+          "Meteor Crater"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1186,
+        "yaw": 0,
+        "pitch": 48,
+        "layout_width_factor": 1.25,
+        "focus_scale_factor": 1.2
+      },
+      "note": "Meteor Crater in real terrain, sampled from Mapzen Terrarium elevation tiles on a 12 m grid. Horizontal and vertical metres use the same scale: no exaggerated relief, synthetic bowl or depth correction. The 1.44 km square includes context around the catalog\u2019s approximately 1.19 km crater diameter; the square is not the crater rim. Sandstone colors are an authored elevation palette, not satellite imagery or mapped geological strata. The flat underside is an arbitrary display cut, not a subsurface boundary. Mapzen / Tilezen; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.",
+      "processing": {
+        "script": "scripts/build_meteor_crater.py",
+        "units": "metres",
+        "vertical_gain": 1,
+        "source_grid_sha256": "afb5be3ce2b4cc2ebed9aafcf08213875b10e455831be9b908f109ef7e234f0d",
+        "provenance": "content/visualizations/models/sources/earth3d-meteor-crater/provenance.json"
+      },
+      "src": "content/visualizations/models/earth3d-meteor-crater.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 637336,
+      "sha256": "f2904b727fec4fbc28802119896b5fb5979f0e5dc4792150eecdbf12a89fc9c5",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 29762,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-silicon-wafer",
+      "source": "https://svmi.com/wp-content/uploads/2020/09/SV031.pdf",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Silicon Wafer"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.3,
+        "yaw": -15,
+        "pitch": 9,
+        "roll": 0,
+        "environment": 0.8
+      },
+      "note": "Bare polished 300 mm silicon wafer, using SVM SV031 nominal 775 \u00b5m thickness and a 1 mm-deep 90\u00b0 notch. No invented chip layout or enlarged circuitry; violet-gray appearance is illustrative.",
+      "basis_url": "https://svmi.com/wp-content/uploads/2020/09/SV031.pdf",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 0.3,
+        "provenance": "content/visualizations/models/sources/earth3d-silicon-wafer.md"
+      },
+      "src": "content/visualizations/models/earth3d-silicon-wafer.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 97696,
+      "sha256": "2390cd2900b5c5207ac68f1d9851e032cb965a53aea31202b01bd37d5ca8d3b5",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 2056,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-smartphone",
+      "source": "https://support.apple.com/en-us/121029",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Smartphone"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.1476,
+        "yaw": -15,
+        "pitch": 9,
+        "roll": 0
+      },
+      "note": "iPhone 16 body envelope from Apple: 147.6 \u00d7 71.6 \u00d7 7.8 mm. Original simplified exterior illustration, with authored screen art, corner curves, buttons and camera details; these small details are not engineering measurements. No internal geometry.",
+      "basis_url": "https://support.apple.com/en-us/121029",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 0.1476,
+        "provenance": "content/visualizations/models/sources/earth3d-smartphone.md"
+      },
+      "src": "content/visualizations/models/earth3d-smartphone.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 120444,
+      "sha256": "843b09919482f356b93646fd27e53de2697b6c68dff9269e264cbe1112c03d34",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 13,
+      "triangle_count": 980,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-table-tennis",
+      "source": "https://db.ittf.com/sites/default/files/public/2023-09/2023_ITTF_Statutes_clean_version2_2023-09-01_2.pdf",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Table Tennis Ball"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.04,
+        "yaw": 20,
+        "pitch": 12,
+        "roll": 0
+      },
+      "note": "ITTF Laws 2.3: 40 mm diameter. Original unbranded matte shell; printed markings and wall thickness are omitted.",
+      "basis_url": "https://db.ittf.com/sites/default/files/public/2023-09/2023_ITTF_Statutes_clean_version2_2023-09-01_2.pdf",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 0.04,
+        "provenance": "content/visualizations/models/sources/earth3d-table-tennis.md"
+      },
+      "src": "content/visualizations/models/earth3d-table-tennis.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 366372,
+      "sha256": "0a7e9f9bbd46fa910a0d0be929b308dccedcf2968598586d7c6e4c3fdda3db48",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 16128,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-tennis",
+      "source": "https://www.itftennis.com/media/11845/2024-rulebook-atp-update.pdf",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Tennis Ball"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.067,
+        "yaw": 20,
+        "pitch": 12,
+        "roll": 0
+      },
+      "note": "A representative 67 mm ball, within the ITF Type 1/2 diameter range 65.4\u201368.6 mm. Original felt texture and stitchless seam pattern are illustrative; no manufacturer is implied.",
+      "basis_url": "https://www.itftennis.com/media/11845/2024-rulebook-atp-update.pdf",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 0.067,
+        "provenance": "content/visualizations/models/sources/earth3d-tennis.md"
+      },
+      "src": "content/visualizations/models/earth3d-tennis.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1174488,
+      "sha256": "4ac87c52fc1b64f012ee71d38e6cf4261eb6b49bf96cc8aa22912cf46c4559e1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 16128,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d-vlt-mirror",
+      "source": "https://www.eso.org/sci/facilities/paranal/telescopes/ut/m1unit.html",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Very Large Telescope Mirror"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 8.2,
+        "yaw": -20,
+        "pitch": 16,
+        "roll": 0,
+        "environment": 0.9
+      },
+      "note": "VLT M1 dimensioned optical illustration: 8.2 m outer diameter, 1 m central hole, nominal 175 mm meniscus thickness. Concave surface follows the published 28.8 m radius and conic constant \u22121.004616. Back surface is a constant axial offset, not a measured rear surface. Cell and actuators omitted; reflections are a studio environment.",
+      "basis_url": "https://www.eso.org/sci/facilities/paranal/telescopes/ut/m1unit.html",
+      "basis_label": "Dimensional standard / technical source",
+      "processing": {
+        "script": "scripts/build_everyday_models.py",
+        "units": "metres",
+        "reference_size_m": 8.2,
+        "provenance": "content/visualizations/models/sources/earth3d-vlt-mirror.md"
+      },
+      "src": "content/visualizations/models/earth3d-vlt-mirror.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 701520,
+      "sha256": "3129ccd3658d109ed3541334f0b8e0f7ad09f290cb093e9f6dd473d44689667e",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 37632,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

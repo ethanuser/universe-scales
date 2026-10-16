@@ -1,0 +1,49 @@
+{
+  "id": "earth3d-meteor-crater",
+  "source": "https://registry.opendata.aws/terrain-tiles/",
+  "basis_url": "https://pubs.usgs.gov/publication/ofr20241062/full",
+  "basis_label": "USGS: Meteor Crater dimensions and geology",
+  "author": "Mapzen Terrain Tiles / Tilezen; terrain data courtesy of the U.S. Geological Survey; adaptation by Universe Scales",
+  "license": "Mapzen Terrain Tiles attribution; underlying USGS public-domain terrain data",
+  "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+  "license_files": [
+    "sources/earth3d-meteor-crater.md"
+  ],
+  "matches": {
+    "length": [
+      "Meteor Crater"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dem_terrain",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1186,
+    "yaw": 0,
+    "pitch": 48,
+    "layout_width_factor": 1.25,
+    "focus_scale_factor": 1.2
+  },
+  "note": "Meteor Crater in real terrain, sampled from Mapzen Terrarium elevation tiles on a 12 m grid. Horizontal and vertical metres use the same scale: no exaggerated relief, synthetic bowl or depth correction. The 1.44 km square includes context around the catalog\u2019s approximately 1.19 km crater diameter; the square is not the crater rim. Sandstone colors are an authored elevation palette, not satellite imagery or mapped geological strata. The flat underside is an arbitrary display cut, not a subsurface boundary. Mapzen / Tilezen; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.",
+  "processing": {
+    "script": "scripts/build_meteor_crater.py",
+    "units": "metres",
+    "vertical_gain": 1,
+    "source_grid_sha256": "afb5be3ce2b4cc2ebed9aafcf08213875b10e455831be9b908f109ef7e234f0d",
+    "provenance": "content/visualizations/models/sources/earth3d-meteor-crater/provenance.json"
+  },
+  "src": "content/visualizations/models/earth3d-meteor-crater.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 637336,
+  "sha256": "f2904b727fec4fbc28802119896b5fb5979f0e5dc4792150eecdbf12a89fc9c5",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 29762,
+  "animations": 0,
+  "skins": 0
+}

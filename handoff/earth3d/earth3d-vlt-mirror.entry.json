@@ -1,0 +1,48 @@
+{
+  "id": "earth3d-vlt-mirror",
+  "source": "https://www.eso.org/sci/facilities/paranal/telescopes/ut/m1unit.html",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Very Large Telescope Mirror"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 8.2,
+    "yaw": -20,
+    "pitch": 16,
+    "roll": 0,
+    "environment": 0.9
+  },
+  "note": "VLT M1 dimensioned optical illustration: 8.2 m outer diameter, 1 m central hole, nominal 175 mm meniscus thickness. Concave surface follows the published 28.8 m radius and conic constant −1.004616. Back surface is a constant axial offset, not a measured rear surface. Cell and actuators omitted; reflections are a studio environment.",
+  "basis_url": "https://www.eso.org/sci/facilities/paranal/telescopes/ut/m1unit.html",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 8.2,
+    "provenance": "content/visualizations/models/sources/earth3d-vlt-mirror.md"
+  },
+  "src": "content/visualizations/models/earth3d-vlt-mirror.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 701520,
+  "sha256": "3129ccd3658d109ed3541334f0b8e0f7ad09f290cb093e9f6dd473d44689667e",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 37632,
+  "animations": 0,
+  "skins": 0
+}

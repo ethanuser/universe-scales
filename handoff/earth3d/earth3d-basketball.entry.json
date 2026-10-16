@@ -1,0 +1,47 @@
+{
+  "id": "earth3d-basketball",
+  "source": "https://au.wilson.com/pages/how-to-choose-a-basketball/1000",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Basketball"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.239,
+    "yaw": 20,
+    "pitch": 12,
+    "roll": 0
+  },
+  "note": "Representative size-7 basketball. Wilson specifies 29.5 inches circumference (238.51 mm derived diameter), rounded to the catalog’s 239 mm. Original pebble texture and eight-panel channel pattern are illustrative.",
+  "basis_url": "https://au.wilson.com/pages/how-to-choose-a-basketball/1000",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 0.239,
+    "provenance": "content/visualizations/models/sources/earth3d-basketball.md"
+  },
+  "src": "content/visualizations/models/earth3d-basketball.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1054024,
+  "sha256": "ad03207c9debd87b785d31df71259f3569ccb9995e6a30490694fb41c7eb573f",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 16128,
+  "animations": 0,
+  "skins": 0
+}

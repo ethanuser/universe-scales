@@ -1,0 +1,48 @@
+{
+  "id": "earth3d-silicon-wafer",
+  "source": "https://svmi.com/wp-content/uploads/2020/09/SV031.pdf",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Silicon Wafer"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.3,
+    "yaw": -15,
+    "pitch": 9,
+    "roll": 0,
+    "environment": 0.8
+  },
+  "note": "Bare polished 300 mm silicon wafer, using SVM SV031 nominal 775 µm thickness and a 1 mm-deep 90° notch. No invented chip layout or enlarged circuitry; violet-gray appearance is illustrative.",
+  "basis_url": "https://svmi.com/wp-content/uploads/2020/09/SV031.pdf",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 0.3,
+    "provenance": "content/visualizations/models/sources/earth3d-silicon-wafer.md"
+  },
+  "src": "content/visualizations/models/earth3d-silicon-wafer.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 97696,
+  "sha256": "2390cd2900b5c5207ac68f1d9851e032cb965a53aea31202b01bd37d5ca8d3b5",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 2056,
+  "animations": 0,
+  "skins": 0
+}

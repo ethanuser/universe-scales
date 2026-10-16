@@ -1,0 +1,62 @@
+{
+  "id": "earth3d-komodo-dragon",
+  "source": "https://sketchfab.com/3d-models/komodo-a3bb3a390dd1466e9bbab4a994329d45",
+  "sketchfab_uid": "a3bb3a390dd1466e9bbab4a994329d45",
+  "author": "denys4624 on Sketchfab",
+  "license": "CC-BY-4.0",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Komodo Dragon"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "pre_rotation": {
+      "y": 90
+    },
+    "measure_axis": "x",
+    "yaw": -10,
+    "pitch": 7
+  },
+  "note": "Authored Komodo dragon illustration by denys4624, uniformly calibrated nose to tail to the catalog’s representative 2.6 m adult-male length. The extended tail is included. This is an artist’s animal, not a scan, measured specimen or anatomical reconstruction; surface details and pose are illustrative.",
+  "processing": {
+    "script": "scripts/prepare_earth3d_imports.mjs",
+    "source_model_name": "Komodo",
+    "source_sha256": "0da82072321346a8050c8619e4bbfad7c6edc1b3dd0a073cd2f37c4bf58d5694",
+    "source_bytes": 2303250,
+    "texture_size": 1024,
+    "operations": [
+      "Static-scene deduplication, flatten, join and weld",
+      "Simplify toward 45k triangles with maximum error 0.0008 (no independent axis deformation)",
+      "Prune; quantize positions to 16 bits, normals to 12 bits and in-range UVs to 14 bits; no mesh compression"
+    ],
+    "provenance": "content/visualizations/models/sources/earth3d-komodo-dragon.md"
+  },
+  "src": "content/visualizations/models/earth3d-komodo-dragon.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 874016,
+  "sha256": "fc7089d1cc02c4df4e708c589b51dc898b7a09528ab24289eb944aa57224017f",
+  "extensions_used": [
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 9,
+  "triangle_count": 16264,
+  "animations": 0,
+  "skins": 0,
+  "basis_url": "https://nationalzoo.si.edu/animals/komodo-dragon",
+  "basis_label": "Dimension / biological context source",
+  "sketchfab_author": "denys4624"
+}

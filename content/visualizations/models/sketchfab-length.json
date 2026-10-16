@@ -189,6 +189,68 @@
         "pitch": 12
       },
       "note": "e-sfera's authored model of the whole monument: the copper statue on Richard Morris Hunt's granite pedestal, standing inside the star-shaped walls of Fort Wood. Its full height, from the ground at the fort to the torch, is calibrated to the listed 92.99 m; in the model the statue is half of that height, matching the real 46.05 m statue on 46.94 m of pedestal and foundation. Details are simplified for a low-poly model."
+    },
+    {
+      "id": "earth3d-boeing-747-8",
+      "name": "Boeing 747-8",
+      "uid": "cd1977bedc32412fa1ce2cda23520b84",
+      "author": "jsong.js.us",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "yaw": -15,
+        "pitch": 12
+      },
+      "note": "Authored Boeing 747-8 Intercontinental model by AF267 (jsong.js.us), originally configured for GeoFS. Calibrated uniformly nose to tail to the catalog\u2019s 76.3 m overall length. The model\u2019s span-to-length ratio is about 0.898, close to Boeing\u2019s 68.4/76.3; local details, livery and landing gear are illustrative rather than an engineering survey. No geometry is stretched independently."
+    },
+    {
+      "id": "earth3d-elephant-bird-egg",
+      "name": "Elephant Bird Egg",
+      "uid": "c46a999a49d547d8bab39706d7a6b6ee",
+      "author": "RISDNaturelab",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "y",
+        "yaw": -15,
+        "pitch": 5,
+        "pre_rotation": {
+          "x": -20.697266,
+          "z": 2.150853
+        }
+      },
+      "note": "Real surface scan of RISD Nature Lab accession 132.32, reassembled from eggshell fragments and presumed by the collection to be an elephant-bird egg. Uniformly calibrated to the catalog\u2019s representative 33 cm long axis, not a measured dimension or confirmed species identification of this particular specimen. Scan cracks and repaired fragments are retained; no invented shell geometry."
+    },
+    {
+      "id": "earth3d-hindenburg",
+      "name": "Hindenburg",
+      "uid": "b347e808f561465dab568fa61734e262",
+      "author": "hank2",
+      "license": "by",
+      "presentation": {
+        "pre_rotation": {
+          "y": 90
+        },
+        "measure_axis": "x",
+        "yaw": -8,
+        "pitch": 8
+      },
+      "note": "Authored Hindenburg airship by hank2, uniformly calibrated to 245 m overall length. Envelope, gondolas, fins and historically contextual tail markings are retained. The neutral envelope material is lightened for legibility; no independent axis scaling. Internal framework and gas bags are the artist\u2019s illustration, not a structural survey."
+    },
+    {
+      "id": "earth3d-komodo-dragon",
+      "name": "Komodo Dragon",
+      "uid": "a3bb3a390dd1466e9bbab4a994329d45",
+      "author": "denys4624",
+      "license": "by",
+      "presentation": {
+        "pre_rotation": {
+          "y": 90
+        },
+        "measure_axis": "x",
+        "yaw": -10,
+        "pitch": 7
+      },
+      "note": "Authored Komodo dragon illustration by denys4624, uniformly calibrated nose to tail to the catalog\u2019s representative 2.6 m adult-male length. The extended tail is included. This is an artist\u2019s animal, not a scan, measured specimen or anatomical reconstruction; surface details and pose are illustrative."
     }
   ]
 }

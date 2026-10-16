@@ -1,0 +1,36 @@
+{
+  "center_lat": 35.0273,
+  "center_lon": -111.0225,
+  "aperture_m": 1440,
+  "grid": 121,
+  "sample_spacing_m": 12.0,
+  "vertical_gain": 1,
+  "source_zoom": 14,
+  "tiles": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/3138/6487.png",
+      "sha256": "587f601bd83c135004e7578ac5deeb8b2e87407a2565d65a6568af5f81b490cd",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/3139/6487.png",
+      "sha256": "db0ff49e4e2f018d15ed0372edbf366d3d087cdb7f4f66bb823b2093fa97713e",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/3138/6488.png",
+      "sha256": "739487b689d4ab563183f3728abd12ad5c0c561b62ad351ff7f7a0ebc7ce6b30",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/3139/6488.png",
+      "sha256": "3377f3b69588118bad73499c363a819ccc3eb070934941397a7f32d79b2d38bf",
+      "headers": {}
+    }
+  ],
+  "min_elevation_m": 1562.6501416618848,
+  "max_elevation_m": 1749.6654997399705,
+  "processing": "Bilinear resampling to a local east/south metric grid; no summit/depth correction, smoothing, or vertical exaggeration.",
+  "grid_sha256": "afb5be3ce2b4cc2ebed9aafcf08213875b10e455831be9b908f109ef7e234f0d",
+  "attribution": "Mapzen Terrain Tiles / Tilezen; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey."
+}
