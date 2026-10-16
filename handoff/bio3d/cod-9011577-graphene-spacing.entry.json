@@ -1,0 +1,56 @@
+{
+  "id": "cod-9011577-graphene-spacing",
+  "name": "Graphene Layer Spacing",
+  "display_label": "Graphene Layer Spacing \u00b7 AB-stacked lattice windows",
+  "source": "https://www.crystallography.net/cod/9011577.html",
+  "author": "Trucano, P.; Chen, R.; Crystallography Open Database",
+  "license": "CC0-1.0",
+  "license_url": "https://www.crystallography.net/cod/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Graphene Layer Spacing"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "measurement_diagram",
+  "basis_url": "https://doi.org/10.1038/258136a0",
+  "basis_label": "Neutron-diffraction graphite structure",
+  "link_label": "COD graphite coordinates",
+  "src": "content/visualizations/models/cod-9011577-graphene-spacing.glb",
+  "presentation": {
+    "reference_size": 0.335,
+    "pitch": 8,
+    "yaw": -15,
+    "roll": 0,
+    "layout_width_factor": 1.3,
+    "focus_scale_factor": 1.3
+  },
+  "note": "Two hexagonal windows of neighboring AB-stacked graphite sheets, derived from the neutron-diffraction cell of COD 9011577 (a = 2.464 \u00c5, c = 6.711 \u00c5). Their plane separation is c/2 = 0.33555 nm; the catalog value is the approximate 0.335 nm. The neutral connector measures plane to plane. Colored tubes trace nuclear positions and bonds; their thickness and colors are illustrative. These are tiny windows into extended sheets, not isolated benzene molecules, and the gap is not the thickness of a single graphene sheet.",
+  "provenance": "content/visualizations/models/sources/cod-9011577-graphene-spacing.md",
+  "processing": {
+    "builder": "scripts/build_graphene_spacing.py",
+    "coordinate_unit": "nm",
+    "pdb": "COD 9011577",
+    "cell_a_A": 2.464,
+    "cell_c_A": 6.711,
+    "layer_spacing_nm": 0.33555,
+    "retained_cif_sha256": "1d93baf0ce36817280f98ecc83fc260817281da502fe3185451677a1ddf0ed20"
+  },
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 17716,
+  "sha256": "f3bb2595f1fb27e43abc6a8bfdd628723affe62c33ef221aeb7d8a29b98bd301",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 672,
+  "animations": 0,
+  "skins": 0
+}

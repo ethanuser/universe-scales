@@ -1,0 +1,58 @@
+{
+  "id": "pdb-4v88-ribosome",
+  "name": "Ribosome",
+  "source": "https://www.rcsb.org/structure/4V88",
+  "author": "Ben-Shem, A., Garreau de Loubresse, N., Melnikov, S., Jenner, L., Yusupova, G., Yusupov, M.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.wwpdb.org/about/usage-policies",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Ribosome"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "structural_model",
+  "basis_url": "https://doi.org/10.1126/science.1212642",
+  "basis_label": "PDB 4V88 structure paper",
+  "link_label": "PDB 4V88 coordinates",
+  "presentation": {
+    "reference_size": 30,
+    "yaw": -18,
+    "pitch": 12,
+    "roughness": 0.72,
+    "layout_width_factor": 1.06,
+    "focus_scale_factor": 1.06
+  },
+  "note": "Author-defined biological assembly 1 of PDB 4V88: one yeast 80S ribosome, not the two particles in the asymmetric unit. Ribosomal RNA is gold; protein chains use a contrasting palette. Includes the deposited Stm1 protein; unmodeled residues, water and ions are omitted. Native coordinates are preserved, independently of the approximate 30 nm catalog value.",
+  "provenance": "content/visualizations/models/sources/pdb-4v88-ribosome.md",
+  "processing": {
+    "builder": "scripts/build_bio3d_models.py",
+    "coordinate_unit": "nm",
+    "source_coordinate_unit": "angstrom",
+    "pdb": "4V88",
+    "source_sha256": "549c09673d17c603de0eba49ae6ed50830d4bbfecedb8dd765d8028e6276fd30",
+    "surface_grid_A": 2.6,
+    "display_sphere_radius_A": 2.8,
+    "surface_smoothing_A": 1.4,
+    "assembled_atoms": 199833
+  },
+  "src": "content/visualizations/models/pdb-4v88-ribosome.glb",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1083316,
+  "sha256": "3dde33c1dd567ffd9df1b1c223b1524c4325435fb8ac33e04ecfde54bb896bae",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 54770,
+  "animations": 0,
+  "skins": 0,
+  "display_label": "Ribosome \u00b7 yeast 80S"
+}

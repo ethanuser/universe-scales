@@ -1,0 +1,56 @@
+{
+  "id": "pdb-5et3-fullerene",
+  "name": "Buckminsterfullerene",
+  "source": "https://www.rcsb.org/structure/5ET3",
+  "author": "Kim, K.-H., Ko, D.-K., Kim, Y.-T., Kim, N.H., Paul, J., Zhang, S.-Q., Murray, C.B., Acharya, R., DeGrado, W.F., Kim, Y.H., Grigoryan, G.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.wwpdb.org/about/usage-policies",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Buckminsterfullerene"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "structural_model",
+  "presentation": {
+    "reference_size": 0.71,
+    "yaw": -18,
+    "pitch": 12,
+    "roughness": 0.72,
+    "layout_width_factor": 1.06,
+    "focus_scale_factor": 1.06
+  },
+  "note": "Experimental C60 cage from the 60C ligand in PDB 5ET3. The thin atoms and bonds mark nuclear positions, not van der Waals radii; the listed 0.71 nm is a nucleus-to-nucleus cage diameter. The surrounding binding peptide is omitted.",
+  "provenance": "content/visualizations/models/sources/pdb-5et3-fullerene.md",
+  "processing": {
+    "builder": "scripts/build_bio3d_models.py",
+    "coordinate_unit": "nm",
+    "source_coordinate_unit": "angstrom",
+    "pdb": "5ET3",
+    "source_sha256": "7bc315ea040c2a7c5462eedbffb69a346fdbea5d3576d0198a99404da71ffbee",
+    "atoms": 60,
+    "bonds": 90,
+    "nuclear_cage_diameter_nm": 0.7051721031379258
+  },
+  "src": "content/visualizations/models/pdb-5et3-fullerene.glb",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 78296,
+  "sha256": "8271b2ae7048221da3f9e2b9b804340f80c5723a07bde84bd0f327d5e0110107",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 3600,
+  "animations": 0,
+  "skins": 0,
+  "basis_url": "https://doi.org/10.1038/ncomms11429",
+  "basis_label": "PDB 5ET3 structure paper",
+  "link_label": "PDB 5ET3 coordinates"
+}

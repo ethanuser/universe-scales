@@ -1,0 +1,65 @@
+{
+  "pdb": "6VXX",
+  "url": "https://files.rcsb.org/download/6VXX.cif.gz",
+  "source_sha256": "74ceac62dc45e34818f7c6f32fc12690f250ad803b999c1d7399a362ecd86984",
+  "compressed_sha256": "66713ab09836ca4b0c5b82dd9503bf83bfc0ac5618a2d5c6e88179eecaf687bb",
+  "retained_atoms": 23694,
+  "unit": "angstrom",
+  "citation": {
+    "id": "primary",
+    "journal_abbrev": "Cell",
+    "journal_id_ISSN": "1097-4172",
+    "journal_volume": "181",
+    "page_first": "281",
+    "pdbx_database_id_DOI": "10.1016/j.cell.2020.02.058",
+    "pdbx_database_id_PubMed": 32155444,
+    "rcsb_ORCID_identifiers": [
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ],
+    "rcsb_authors": [
+      "Walls, A.C.",
+      "Park, Y.J.",
+      "Tortorici, M.A.",
+      "Wall, A.",
+      "McGuire, A.T.",
+      "Veesler, D."
+    ],
+    "rcsb_journal_abbrev": "Cell",
+    "title": "Structure, Function, and Antigenicity of the SARS-CoV-2 Spike Glycoprotein.",
+    "year": 2020
+  },
+  "title": "Structure of the SARS-CoV-2 spike glycoprotein (closed state)",
+  "assembly_gen": [
+    {
+      "assembly_id": "1",
+      "oper_expression": "1",
+      "asym_id_list": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,AA,BA,CA,DA,EA,FA,GA,HA,IA,JA,KA,LA,MA,NA,OA,PA,QA,RA,SA,TA,UA,VA,WA,XA,YA"
+    }
+  ],
+  "operations": [
+    {
+      "id": "1",
+      "type": "identity operation",
+      "name": "1_555",
+      "symmetry_operation": "?",
+      "matrix[1][1]": "1.0000000000",
+      "matrix[1][2]": "0.0000000000",
+      "matrix[1][3]": "0.0000000000",
+      "vector[1]": "0.0000000000",
+      "matrix[2][1]": "0.0000000000",
+      "matrix[2][2]": "1.0000000000",
+      "matrix[2][3]": "0.0000000000",
+      "vector[2]": "0.0000000000",
+      "matrix[3][1]": "0.0000000000",
+      "matrix[3][2]": "0.0000000000",
+      "matrix[3][3]": "1.0000000000",
+      "vector[3]": "0.0000000000"
+    }
+  ],
+  "retained_npz_sha256": "5503f502c5f67d2054303345995275905357f251c6d2ddd77f61bdf225b0c30b"
+}

@@ -4,6 +4,27 @@ Start here if you are an AI agent (Codex, Claude, ...) or a new contributor pick
 up this repo. It is the shortest path to being productive; the longer READMEs linked
 below hold the details. Keep this file current when you change workflows.
 
+## 2026-10-16 bio3d worktree handoff
+
+- Nine CC0 coordinate-derived assets add C60, graphite interlayer spacing,
+  actin, nucleosome, spike ectodomain, microtubule, yeast ribosome, human nuclear
+  pore scaffold and TMV. Native model units are nm, with explicit physical
+  `reference_size` calibration. Do not normalize their bounding boxes to 1.
+- Offline builders: `scripts/build_bio3d_models.py` and
+  `scripts/build_graphene_spacing.py`. Source refresh is separate:
+  `scripts/prepare_bio3d_sources.py`. Compact pinned coordinates, deposited
+  assembly transforms and citations live in `models/sources/bio3d/`.
+- `scripts/audit_bio3d_models.mjs` uses the actual vendored GLTFLoader and checks
+  normalized geometry; `scripts/preview_bio3d_cpu.py` renders labeled CPU
+  rest/side previews. These do not verify WebGL, perspective or mobile UI.
+- Actin/microtubule/TMV ends are authored cuts; spike lacks the unresolved stalk;
+  NPC is an integrative C-alpha scaffold envelope. Full notes, skipped items,
+  final entry JSONs and integration checks: `handoff/bio3d/REPORT.md`.
+- No dataset/exports/images changed. Browser and commit checks remain for the
+  lead outside this sandbox. All nine new GLBs validate without errors/warnings;
+  full validation encounters 17 existing non-unit normals in the unchanged
+  `em-mitochondrion-jurkat` asset, owned by the mitochondrion job.
+
 ## 2026-10-15 neuron worktree handoff
 
 - Neuron now uses the uncropped NeuroMorpho.Org NMO_109111 Feldmeyer archive
