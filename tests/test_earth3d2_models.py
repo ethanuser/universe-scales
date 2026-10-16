@@ -63,7 +63,8 @@ class Earth3DSecondRound(unittest.TestCase):
                 face_n = np.cross(p[f[:, 1]]-p[f[:, 0]], p[f[:, 2]]-p[f[:, 0]])
                 self.assertGreater((face_n*n[f].mean(1)).sum(1).min(), 0)
                 self.assertGreater(n[:, 1].min(), 0)
-                self.assertIn('reflector only', self.entry(slug)['display_label'])
+                # The caveat lives in the note; on-screen names stay plain.
+                self.assertIn('reflector', self.entry(slug)['note'].lower())
 
     def test_ship_has_sourced_envelope_and_hull_faces_point_outward(self):
         doc, binary = self.raw('ever-given')
@@ -88,7 +89,7 @@ class Earth3DSecondRound(unittest.TestCase):
 
     def test_bridge_tower_centers_and_cable_apex_are_not_whole_bridge_length(self):
         entry = self.entry('golden-gate-main-span')
-        self.assertIn('main span only', entry['display_label'])
+        self.assertIn('main span', entry['note'].lower())
         doc, binary = self.raw('golden-gate-main-span')
         m = next(m for m in doc['meshes'] if m['name'] == 'Painted main cables and suspenders')
         p = accessor(doc, binary, m['primitives'][0]['attributes']['POSITION'])
