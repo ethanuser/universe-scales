@@ -401,8 +401,8 @@
     },
     {
       "path": "licenses/kenney-food-kit.txt",
-      "sha256": "32a081c2035dd4db47d850c83244da048165f0e53d71c076b76c1afc0590bc7f",
-      "bytes": 711
+      "sha256": "60bfec302d676181dff5b9bc6138f8316458b0aade3f198e02c22ae7e7006684",
+      "bytes": 684
     },
     {
       "path": "sources/coffee-mug-preview.png",
@@ -426,8 +426,8 @@
     },
     {
       "path": "licenses/kenney-car-kit.txt",
-      "sha256": "c33b7f6453d134deae7b1b8493717d9ccfa754c25ab97f6de89b88f8fda19b00",
-      "bytes": 696
+      "sha256": "847b37777af163f68fefce4e93fff3fb3333de5c4a9fcd3d96e92a589c6b648e",
+      "bytes": 669
     },
     {
       "path": "sources/family-car-preview.png",
@@ -471,8 +471,8 @@
     },
     {
       "path": "licenses/kenney-train-kit.txt",
-      "sha256": "8ad3a0453dc1416d54e9af692dafe875a24069d577fe64edb193d3c8d868881a",
-      "bytes": 762
+      "sha256": "d48690a478f5c51ca6ee70c04414bc73ea35a730c4e3ae320e594bf15c613072",
+      "bytes": 735
     },
     {
       "path": "sources/freight-train-car-preview.png",
@@ -486,8 +486,8 @@
     },
     {
       "path": "licenses/kenney-industrial-kit.txt",
-      "sha256": "60a8c5c31191256ec9779dc18745dea6d69c46f4b29703459ce064c1765a59ea",
-      "bytes": 708
+      "sha256": "9f9f6bbbec13eb15d1c2d71637f1d8d77524733e0ff4039b387590c16080ee4d",
+      "bytes": 681
     },
     {
       "path": "sources/shipping-container-preview.png",
