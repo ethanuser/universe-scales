@@ -1,4 +1,21 @@
-# Hercules-Corona Borealis GRB catalog view
+# Hercules-Corona Borealis: the reported region in 3D (current model)
+
+`hercules-corona-borealis-lightcone` (scripts/build_hcb_lightcone_model.py) draws the region where
+Horvath, Hakkila & Bagoly (2014, A&A 561, L12; arXiv:1401.0533) reported a concentration of
+gamma-ray bursts: centered at RA 17h00m, Dec +27.75 deg, redshift 1.6-2.1, axes about 3 x 2.2 Gpc
+(10 x 7 Gly), as listed in Wikipedia's summary of those papers. It is the matching curved slab of
+our past light cone at comoving distance 15.2-17.8 Gly (flat Planck 2018, the cosmology below),
+seen from outside, with its edges running the first 30% of the way back toward the Milky Way.
+The glow (bright rim, faint interior) marks the claimed region only: no galaxies or wall are
+implied, and the reality of the clustering is disputed. The two flashes are the Swift bursts with
+spectroscopic redshifts in this footprint (130612A, z = 2.006; 090418A, z = 1.608) from the
+bundled 2026-10-01 Swift table. A 0.52 Gly ball shows Laniakea's size for scale (not its position).
+Units: Gly comoving; reference size 10 Gly. Swift data are US-government (public domain).
+
+The earlier 2D sky-chart model, described below, was replaced; its builder
+(scripts/build_grb_structure_model.py) still provides the catalog parser and cosmology.
+
+## Earlier model: Hercules-Corona Borealis GRB catalog view
 
 ## What the model shows
 
