@@ -1,0 +1,12 @@
+{
+  "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+  "accessed": "2026-10-16",
+  "rows": [
+    "Compton wavelength                                          2.426 310 235 38 e-12    0.000 000 000 76 e-12    m",
+    "muon Compton wavelength                                     1.173 444 110 e-14       0.000 000 026 e-14       m",
+    "neutron Compton wavelength                                  1.319 590 903 82 e-15    0.000 000 000 67 e-15    m",
+    "proton Compton wavelength                                   1.321 409 853 60 e-15    0.000 000 000 41 e-15    m",
+    "reduced Planck constant times c in MeV fm                   197.326 980 4...         (exact)                  MeV fm",
+    "tau Compton wavelength                                      6.977 71 e-16            0.000 47 e-16            m"
+  ]
+}

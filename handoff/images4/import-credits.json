@@ -1,0 +1,74 @@
+[
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:9542National_Museum_of_Natural_History_17.jpg",
+    "title": "Lolong skeleton at the National Museum of Natural History, Manila",
+    "author": "Judgefloro",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "file": "images/length_lolong_the_crocodile.jpg",
+    "changes": "Added subject/representation caption; Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. Creator’s source page identifies the Lolong museum exhibit, including replica and skeleton, and explicitly dedicates the photograph under CC0. The selected frame visibly shows the suspended crocodile skeleton; the caption explicitly identifies a skeleton display rather than the living animal. No claim that photographic perspective measures his full 6.17 m body length."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:AMNHTitanosaur.jpg",
+    "title": "AMNH titanosaur skeletal cast",
+    "author": "D. Benjamin Miller",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "file": "images/length_titanosaur_cast.jpg",
+    "changes": "Cropped downloaded source to [0, 0, 3000, 836]; Lifted shadows using gamma 0.78; Added subject/representation caption; Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. Commons identifies this as the titanosaur skeleton cast at AMNH, photographed 18 January 2016, and the creator dedicates it under CC0. Used the original creator’s image, not the BY-SA derivative AMNHTitanosaur-03.jpg. Crop retains the visible head-to-tail cast and removes the separate fossil display on the right."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Observation_microscopique_de_grains_de_sable.jpg",
+    "title": "Individual sand grains through a microscope",
+    "author": "Thelasthedgehog",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "file": "images/length_grain_of_sand.jpg",
+    "changes": "Cropped downloaded source to [130, 430, 830, 1230]; Added subject/representation caption; Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. Source identifies microscopic observation of smooth sand and licenses the photograph CC BY 4.0. Crop isolates the resolved grains and excludes the dark eyepiece surroundings. No scale bar is invented; the pictured grains are not claimed to be exactly the representative 1 mm catalog size."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:May_31_2013_El_Reno,_OK_EF3.png",
+    "title": "El Reno tornado in its multiple-vortex stage, 31 May 2013",
+    "author": "Richard Thompson / NOAA Storm Prediction Center",
+    "license": "Public domain",
+    "license_url": "https://www.weather.gov/disclaimer",
+    "file": "images/length_el_reno_tornado.jpg",
+    "changes": "Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. Commons describes the El Reno 31 May 2013 tornado in its multiple-vortex stage, credits Richard Thompson at SPC, and marks it PD-USGov. The image itself carries the event/date/SPC attribution. It shows the tornado, not the parent storm from orbit; visible funnels are not asserted to outline the maximum damage width."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:201710_chloroplast.svg",
+    "title": "Chloroplast cutaway illustration",
+    "author": "DataBase Center for Life Science (DBCLS)",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "file": "images/length_chloroplast.jpg",
+    "changes": "Added subject/representation caption; Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. Commons identifies an isolated chloroplast illustration by DBCLS, originally doi:10.7875/togopic.2017.50, under CC BY 4.0 with a completed license review. This is a teaching cutaway showing thylakoid stacks, not a micrograph or measured architecture."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Tonga_Volcano_Eruption_2022-01-15_0320Z_to_0610Z_Himawari-8_visible.gif",
+    "title": "Hunga Tonga eruption plume, Himawari-8, 15 January 2022 05:20 UTC",
+    "author": "Japan Meteorological Agency (Himawari-8); Digital Typhoon / NII",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "file": "images/length_hunga_tonga_eruption_plume.jpg",
+    "changes": "Selected animation frame 80 (zero-based); Added subject/representation caption; Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. Source is the JMA / Digital Typhoon animation with explicit CC BY 4.0 terms, also linked to the compatible Japanese government data terms. Zero-based frame 80 visibly reads 2022-01-15 05:20:00 UTC and shows a large textured umbrella plume. Frame was fully decoded/composited by Pillow before export. Top-down view does not directly measure the plume’s height."
+  },
+  {
+    "source": "https://science.nasa.gov/asset/webb/trappist-1-system-orbit-comparison/",
+    "title": "TRAPPIST-1 system versus the Solar System — orbit comparison",
+    "author": "NASA, ESA, CSA, Joseph Olmsted (STScI)",
+    "license": "Public domain",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "file": "images/length_trappist_1_system.jpg",
+    "changes": "Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. NASA’s asset caption explicitly identifies all seven planet orbits b–h and compares their compact orbital span with the inner Solar System. This is the 2026 orbital comparison diagram, not a travel poster or a literal photograph of exoplanets. NASA image-use guidance applies (the Hubble/Webb copyright pages redirect there); the asset has no third-party copyright notice."
+  },
+  {
+    "source": "https://science.nasa.gov/asset/hubble/halo-around-the-andromeda-galaxy-illustration/",
+    "title": "Andromeda gaseous halo and 43 background-quasar sightlines — illustration",
+    "author": "NASA, ESA, and E. Wheatley (STScI)",
+    "license": "Public domain",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "file": "images/length_andromeda_gas_halo.jpg",
+    "changes": "Added subject/representation caption; Converted to JPEG at at most 1200 px image width; matching 300 px-wide thumbnail. NASA identifies this as a gas-halo illustration with the 43 background quasars used to probe absorption, not an optical image of visible halo gas. The source title says Illustration; the new caption preserves that distinction. NASA image-use guidance applies (Hubble copyright page redirects there); no third-party copyright notice appears on the asset."
+  }
+]
