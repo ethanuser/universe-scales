@@ -4,6 +4,30 @@ Start here if you are an AI agent (Codex, Claude, ...) or a new contributor pick
 up this repo. It is the shortest path to being productive; the longer READMEs linked
 below hold the details. Keep this file current when you change workflows.
 
+## 2026-10-15 neuron worktree handoff
+
+- Neuron now uses the uncropped NeuroMorpho.Org NMO_109111 Feldmeyer archive
+  reconstruction (CC BY 4.0), with measured process radii, original soma outline
+  and a path-distance action-potential annotation. Soma depth and pulse timing/
+  AIS location are authored proxies. Archive completeness does not rule out
+  biological truncation in the source brain slice.
+- Offline builder: `scripts/build_reconstructed_neuron.py`; optional source
+  preparation: `scripts/prepare_neuron_source.py`. Source and license details:
+  `content/visualizations/models/sources/neuron-model.md`.
+- **Pending integration:** the items job must change Neuron from 100 µm to
+  0.8 mm before publishing. Exact dataset text and entry JSON are in
+  `handoff/neuron/REPORT.md`. No dataset/exports/images were edited here.
+- `extras.hoverOverlay: false` excludes an annotation mesh/cloud from hover
+  highlighting; used by the initially transparent electrical halo.
+- 214 Node tests pass; Python suite runs 78 tests with one existing skip.
+  Neuron glTF validation: zero errors/warnings. Chromium launch is sandbox-
+  blocked (MachPortRendezvous permission denied), so production screenshots,
+  model-lab size audit and mobile validation remain pending. CPU geometry
+  previews are explicitly labeled and are not browser verification.
+- Git staging/commit is also sandbox-blocked at the worktree `index.lock`.
+  Files remain uncommitted; `handoff/neuron/commit.sh` prepares the requested
+  local commit when run outside this sandbox. It does not push/change branches.
+
 ## 2026-10-13 continuation
 
 - Explorer arrows are grouped after the item selector; Left/Right navigate items

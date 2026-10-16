@@ -1,0 +1,43 @@
+{
+  "validator": "Khronos glTF Validator",
+  "version": "2.0.0-dev.3.10",
+  "source": "https://github.com/KhronosGroup/glTF-Validator",
+  "models": [
+    {
+      "id": "neuromorpho-feldmeyer-neuron-109111",
+      "sha256": "c554b9df7b10f2f490531233dec9f65789abf17acdf7257105d501d6ad31c1d5",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales uncropped NeuroMorpho reconstruction",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 2689380
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 4,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 74214,
+        "totalTriangleCount": 127038,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    }
+  ]
+}

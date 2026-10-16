@@ -1,0 +1,83 @@
+{
+  "id": "neuromorpho-feldmeyer-neuron-109111",
+  "source": "https://neuromorpho.org/neuron_info.jsp?neuron_name=BC140212B_21",
+  "author": "Vishalini Emmenegger, Guanxiao Qi, Haijun Wang and Dirk Feldmeyer; NeuroMorpho.Org (RRID:SCR_002145)",
+  "license": "CC-BY-4.0",
+  "license_url": "https://neuromorpho.org/useterm.jsp",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt",
+    "sources/neuron-model.md"
+  ],
+  "matches": {
+    "length": [
+      "Neuron"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "reconstruction",
+  "basis_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6093438/",
+  "basis_label": "Emmenegger et al. (2018): morphology and electrophysiology",
+  "presentation": {
+    "reference_size": 800,
+    "layout_width_factor": 1.25,
+    "focus_scale_factor": 1.25,
+    "display_extent_factor": 1,
+    "roll": -127,
+    "pitch": 8,
+    "yaw": -10
+  },
+  "note": "A real rat barrel-cortex layer-4 interneuron: NeuroMorpho.Org NMO_109111 (BC140212B_21), reconstructed by Emmenegger, Qi, Wang and Feldmeyer. The entire archived axon (copper) and dendrites (jade) are retained, with measured radii and a soma based on its traced outline; only soma depth is an authored loft. The reconstruction spans about 0.8 mm, requiring the accompanying Neuron dataset update. NeuroMorpho catalogs dendrites and axon as complete; this was a brain-slice preparation, so biological truncations remain possible. The glowing annotation starts in an assumed proximal axon initial segment and follows actual axonal path distances into the branches. Pulse speed, width, light and initial-segment position are illustrative, not measured voltage or conduction in this cell. Reduced motion shows the resting neuron. NeuroMorpho.Org (RRID:SCR_002145); Emmenegger et al. (2018), doi:10.1093/cercor/bhx352; Tecuatl, Ljungquist & Ascoli (2024), doi:10.1096/fba.2024-00048.",
+  "processing": {
+    "units": "micrometers",
+    "sourceNodes": 65332,
+    "sourceSegments": 65329,
+    "retainedBranches": 785,
+    "crop": null,
+    "radiusGain": 1,
+    "positionErrorUm": 0.35,
+    "radiusErrorUm": 0.08,
+    "maxAxonPathUm": 965.469975990373,
+    "sourceBoundsUm": [
+      571.67,
+      791.52,
+      437.2
+    ],
+    "soma": "Observed Neurolucida XY contour; authored depth loft using SWC equivalent radius",
+    "script": "scripts/build_reconstructed_neuron.py",
+    "sources": {
+      "swc": {
+        "url": "https://neuromorpho.org/dableFiles/feldmeyer/CNG%20version/BC140212B_21.CNG.swc",
+        "download_sha256": "b235930f0a19d50f0096300ebe977a24a4771fa1330dff2190d51fb8483f3a76"
+      },
+      "asc": {
+        "url": "https://neuromorpho.org/dableFiles/feldmeyer/Source-Version/BC140212B_21.asc",
+        "download_sha256": "900cb4be1dfb59a7dc26e6a331d27d4d21dfa755a21cf32b9d83e920d98d397d"
+      },
+      "metadata": {
+        "url": "https://neuromorpho.org/api/neuron/name/BC140212B_21",
+        "download_sha256": "2ee55dd69672648fe5dd8686b840c135fba1ea6e23e0c414995981afa109660a"
+      },
+      "license": {
+        "url": "https://neuromorpho.org/useterm.jsp",
+        "license": "CC-BY-4.0",
+        "checked": "2026-10-15"
+      }
+    }
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 2694356,
+  "sha256": "c554b9df7b10f2f490531233dec9f65789abf17acdf7257105d501d6ad31c1d5",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 127038,
+  "animations": 0,
+  "skins": 0,
+  "src": "content/visualizations/models/neuromorpho-feldmeyer-neuron-109111.glb",
+  "volume_semantics": "cubic_linear_equivalent_approximation",
+  "closed_volume_checked": false,
+  "replaces": "pyramidal-neuron-action-potential"
+}
