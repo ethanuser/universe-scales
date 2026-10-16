@@ -1,0 +1,195 @@
+{
+  "method": "Vendored production GLTFLoader, with placeholder image decoding; native geometry + orthographic rest bounds. No WebGL, texture appearance, perspective, actual explorer or mobile certification.",
+  "models": [
+    {
+      "id": "micro3d-blu-ray-grooves",
+      "registered": true,
+      "nativeExtent": [
+        384,
+        329.59999084472656,
+        22.240000009536743
+      ],
+      "normalizedRestExtent": [
+        1.173777120880567,
+        1.0196156269600793,
+        0.6609255047833982
+      ],
+      "displayedExtentPerValue": 1.173777120880567,
+      "triangles": 58,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-dvd-grooves",
+      "registered": true,
+      "nativeExtent": [
+        888,
+        762.1999816894531,
+        131.07999992370605
+      ],
+      "normalizedRestExtent": [
+        1.173777120880567,
+        1.0130761965688386,
+        0.7585422494770198
+      ],
+      "displayedExtentPerValue": 1.173777120880567,
+      "triangles": 58,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-helium-charge",
+      "registered": true,
+      "nativeExtent": [
+        3.3704280853271484,
+        3.3704280853271484,
+        3.3704280853271484
+      ],
+      "normalizedRestExtent": [
+        1.0039975826694574,
+        1.0021345587579134,
+        0.9820578266306705
+      ],
+      "displayedExtentPerValue": 1.0039975826694574,
+      "triangles": 43072,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-inner-core",
+      "registered": true,
+      "nativeExtent": [
+        2443,
+        2443,
+        2443
+      ],
+      "normalizedRestExtent": [
+        1.000171443339813,
+        1.0001633286057028,
+        0.9999414710960577
+      ],
+      "displayedExtentPerValue": 1.000171443339813,
+      "triangles": 9203,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-karman-line",
+      "registered": true,
+      "nativeExtent": [
+        68,
+        100.3200036585331,
+        20.15999984741211
+      ],
+      "normalizedRestExtent": [
+        0.7030628338358557,
+        1.0497461423783307,
+        0.5605253563859174
+      ],
+      "displayedExtentPerValue": 1.0497461423783307,
+      "triangles": 2096,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-kola-depth",
+      "registered": true,
+      "nativeExtent": [
+        7710.35791015625,
+        12306.142889022827,
+        1822.0715999603271
+      ],
+      "normalizedRestExtent": [
+        0.6105583861999881,
+        1.0302299667769783,
+        0.4159625560298204
+      ],
+      "displayedExtentPerValue": 1.0302299667769783,
+      "triangles": 78,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-nanotube-gate",
+      "registered": true,
+      "nativeExtent": [
+        1,
+        1,
+        0.699999988079071
+      ],
+      "normalizedRestExtent": [
+        1.1982611029469825,
+        1.1837263198534722,
+        1.1296776690184172
+      ],
+      "displayedExtentPerValue": 1.1982611029469825,
+      "triangles": 768,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-optical-fiber",
+      "registered": true,
+      "nativeExtent": [
+        155.19137573242188,
+        155.1866683959961,
+        45
+      ],
+      "normalizedRestExtent": [
+        1.253544892493922,
+        1.2679576239283679,
+        0.4720159360423821
+      ],
+      "displayedExtentPerValue": 1.2679576239283679,
+      "triangles": 2312,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-paramecium",
+      "registered": true,
+      "nativeExtent": [
+        267.4695129394531,
+        82.64307403564453,
+        64.45404434204102
+      ],
+      "normalizedRestExtent": [
+        1.0539756419277675,
+        0.34461635521633516,
+        0.33365154491747995
+      ],
+      "displayedExtentPerValue": 1.0539756419277675,
+      "triangles": 59312,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "micro3d-spider-silk",
+      "registered": true,
+      "nativeExtent": [
+        3,
+        3,
+        1.7999999523162842
+      ],
+      "normalizedRestExtent": [
+        1.1646305230684117,
+        1.1342737071347155,
+        1.055902965664966
+      ],
+      "displayedExtentPerValue": 1.1646305230684117,
+      "triangles": 512,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    }
+  ]
+}

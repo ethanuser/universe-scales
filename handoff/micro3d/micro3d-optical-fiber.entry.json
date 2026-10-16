@@ -1,0 +1,56 @@
+{
+  "id": "micro3d-optical-fiber",
+  "source": "https://www.corning.com/catalog/coc/documents/product-family-specifications/0396_EMEA_BEN.pdf",
+  "basis_url": "https://www.corning.com/catalog/coc/documents/product-family-specifications/0396_EMEA_BEN.pdf",
+  "basis_label": "Measurement and representation basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Optical Fiber Cladding"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 125,
+    "yaw": -6,
+    "pitch": 4,
+    "layout_width_factor": 1.29
+  },
+  "note": "Original cross-section of a Corning SMF-28 Ultra type fiber: 8.2 \u00b5m nominal core diameter, 125 \u00b5m glass cladding diameter and 242 \u00b5m coating diameter. The core is not the 9.2 \u00b5m mode-field diameter. A quarter of the cladding and most of the coating are cut away. The surviving 10-degree coating sector preserves the full 121 \u00b5m outer radius; its thickness is not compressed to fit the glass diameter. Segment length (45 \u00b5m), cut orientations and opaque contrasting colors are authored presentation choices. No refractive-index profile, internal polymer-layer subdivision, propagating light ray or material transparency is simulated. The listed quantity measures glass diameter only.",
+  "processing": {
+    "script": "scripts/build_micro3d_models.py",
+    "units": "micrometres",
+    "source_note": "content/visualizations/models/sources/micro3d-optical-fiber.md",
+    "measurements": {
+      "core_diameter_um": 8.2,
+      "cladding_diameter_um": 125,
+      "coating_diameter_um": 242,
+      "displayed_coating_angles_deg": [
+        130,
+        140
+      ],
+      "axial_crop_um": 45
+    }
+  },
+  "src": "content/visualizations/models/micro3d-optical-fiber.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 86516,
+  "sha256": "8395fb30452b5b685e00b4b2c303b2c81f75b93fffd6bdbaee1679a9119871c5",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 14,
+  "triangle_count": 2312,
+  "animations": 0,
+  "skins": 0
+}

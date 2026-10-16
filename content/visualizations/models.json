@@ -1338,7 +1338,7 @@
         ]
       },
       "geometry": "mesh",
-      "note": "An atom-colored segment of human B-DNA with alternating A\u2013T and C\u2013G pairs, credited to alexanderesmith. The listed 2 nm measures double-helix width, not the length of this arbitrary segment; hydrogen is white, oxygen red, nitrogen blue, carbon gray, and phosphorus yellow.",
+      "note": "An atom-colored segment of human B-DNA with alternating A–T and C–G pairs, credited to alexanderesmith. The listed 2 nm measures double-helix width, not the length of this arbitrary segment; hydrogen is white, oxygen red, nitrogen blue, carbon gray, and phosphorus yellow.",
       "src": "content/visualizations/models/sketchfab-dna-helix.glb",
       "format": "glb",
       "gltf_version": "2.0",
@@ -5121,7 +5121,7 @@
         "pitch": 10,
         "focus_scale_factor": 1.35
       },
-      "note": "2,200 real FlyWire v783 neurons, sampled across both optic lobes and central brain. Blue: optic; amber: central; violet: visual projection; pink: visual centrifugal. Simplified centreline paths in true micrometres; line thickness and colours are for visibility. The faint shell is a smoothed density envelope of this sample, not a segmented membrane. This is a small morphological sample of the whole-brain connectome, not its full synapse graph; crossing lines do not imply synapses. Approximately 800 \u00b5m across the sampled optic lobes, including lamina.",
+      "note": "2,200 real FlyWire v783 neurons, sampled across both optic lobes and central brain. Blue: optic; amber: central; violet: visual projection; pink: visual centrifugal. Simplified centreline paths in true micrometres; line thickness and colours are for visibility. The faint shell is a smoothed density envelope of this sample, not a segmented membrane. This is a small morphological sample of the whole-brain connectome, not its full synapse graph; crossing lines do not imply synapses. Approximately 800 µm across the sampled optic lobes, including lamina.",
       "processing": {
         "script": "scripts/build_flybrain_model.py",
         "source_md5": "a4c104776f33ec539ef859064c4de3df",
@@ -5571,7 +5571,7 @@
         "pitch": 9,
         "roll": 0
       },
-      "note": "ISO 216 A4: 210 \u00d7 297 mm. A flat, double-sided sheet surface; thickness is deliberately not modeled because ISO 216 defines the trimmed edges, not a paper stock. No exaggerated curl or thickness.",
+      "note": "ISO 216 A4: 210 × 297 mm. A flat, double-sided sheet surface; thickness is deliberately not modeled because ISO 216 defines the trimmed edges, not a paper stock. No exaggerated curl or thickness.",
       "basis_url": "https://preview.sist.si/sist-preview/4087/9050e9a6768b43e2bcdedca70c895c61/ISO-216-1975.pdf",
       "basis_label": "Dimensional standard / technical source",
       "processing": {
@@ -5618,7 +5618,7 @@
         "pitch": 12,
         "roll": 0
       },
-      "note": "Representative size-7 basketball. Wilson specifies 29.5 inches circumference (238.51 mm derived diameter), rounded to the catalog\u2019s 239 mm. Original pebble texture and eight-panel channel pattern are illustrative.",
+      "note": "Representative size-7 basketball. Wilson specifies 29.5 inches circumference (238.51 mm derived diameter), rounded to the catalog’s 239 mm. Original pebble texture and eight-panel channel pattern are illustrative.",
       "basis_url": "https://au.wilson.com/pages/how-to-choose-a-basketball/1000",
       "basis_label": "Dimensional standard / technical source",
       "processing": {
@@ -5665,7 +5665,7 @@
         "yaw": -15,
         "pitch": 12
       },
-      "note": "Authored Boeing 747-8 Intercontinental model by AF267 (jsong.js.us), originally configured for GeoFS. Calibrated uniformly nose to tail to the catalog\u2019s 76.3 m overall length. The model\u2019s span-to-length ratio is about 0.898, close to Boeing\u2019s 68.4/76.3; local details, livery and landing gear are illustrative rather than an engineering survey. No geometry is stretched independently.",
+      "note": "Authored Boeing 747-8 Intercontinental model by AF267 (jsong.js.us), originally configured for GeoFS. Calibrated uniformly nose to tail to the catalog’s 76.3 m overall length. The model’s span-to-length ratio is about 0.898, close to Boeing’s 68.4/76.3; local details, livery and landing gear are illustrative rather than an engineering survey. No geometry is stretched independently.",
       "processing": {
         "script": "scripts/prepare_earth3d_imports.mjs",
         "source_model_name": "Boeing 747-8i",
@@ -5724,7 +5724,7 @@
         "pitch": 12,
         "roll": -7
       },
-      "note": "ISO/IEC 7810 ID-1 envelope: 85.60 \u00d7 53.98 \u00d7 0.76 mm. Original fictitious unpersonalized card artwork; chip and graphic layout are illustrative. No account data or payment-brand marks.",
+      "note": "ISO/IEC 7810 ID-1 envelope: 85.60 × 53.98 × 0.76 mm. Original fictitious unpersonalized card artwork; chip and graphic layout are illustrative. No account data or payment-brand marks.",
       "basis_url": "https://www.iso.org/obp/ui#iso:std:iso-iec:7810:ed-3:v1:en",
       "basis_label": "Dimensional standard / technical source",
       "processing": {
@@ -5775,7 +5775,7 @@
           "z": 2.150853
         }
       },
-      "note": "Real surface scan of RISD Nature Lab accession 132.32, reassembled from eggshell fragments and presumed by the collection to be an elephant-bird egg. Uniformly calibrated to the catalog\u2019s representative 33 cm long axis, not a measured dimension or confirmed species identification of this particular specimen. Scan cracks and repaired fragments are retained; no invented shell geometry.",
+      "note": "Real surface scan of RISD Nature Lab accession 132.32, reassembled from eggshell fragments and presumed by the collection to be an elephant-bird egg. Uniformly calibrated to the catalog’s representative 33 cm long axis, not a measured dimension or confirmed species identification of this particular specimen. Scan cracks and repaired fragments are retained; no invented shell geometry.",
       "processing": {
         "script": "scripts/prepare_earth3d_imports.mjs",
         "source_model_name": "Elephant Bird Egg",
@@ -5888,7 +5888,7 @@
         "yaw": -8,
         "pitch": 8
       },
-      "note": "Authored Hindenburg airship by hank2, uniformly calibrated to 245 m overall length. Envelope, gondolas, fins and historically contextual tail markings are retained. The neutral envelope material is lightened for legibility; no independent axis scaling. Internal framework and gas bags are the artist\u2019s illustration, not a structural survey. The swastikas on the tail fins of the original airship (and of the source model) are replaced here by plus signs; the red bands and white disks are kept.",
+      "note": "Authored Hindenburg airship by hank2, uniformly calibrated to 245 m overall length. Envelope, gondolas, fins and historically contextual tail markings are retained. The neutral envelope material is lightened for legibility; no independent axis scaling. Internal framework and gas bags are the artist’s illustration, not a structural survey. The swastikas on the tail fins of the original airship (and of the source model) are replaced here by plus signs; the red bands and white disks are kept.",
       "basis_url": "https://www.airships.net/hindenburg/disaster/commerce-department-report/",
       "basis_label": "U.S. Commerce Department accident report: original dimensions",
       "processing": {
@@ -5952,7 +5952,7 @@
         "yaw": -10,
         "pitch": 7
       },
-      "note": "Authored Komodo dragon illustration by denys4624, uniformly calibrated nose to tail to the catalog\u2019s representative 2.6 m adult-male length. The extended tail is included. This is an artist\u2019s animal, not a scan, measured specimen or anatomical reconstruction; surface details and pose are illustrative.",
+      "note": "Authored Komodo dragon illustration by denys4624, uniformly calibrated nose to tail to the catalog’s representative 2.6 m adult-male length. The extended tail is included. This is an artist’s animal, not a scan, measured specimen or anatomical reconstruction; surface details and pose are illustrative.",
       "processing": {
         "script": "scripts/prepare_earth3d_imports.mjs",
         "source_model_name": "Komodo",
@@ -6014,7 +6014,7 @@
         "layout_width_factor": 1.25,
         "focus_scale_factor": 1.2
       },
-      "note": "Meteor Crater in real terrain, sampled from Mapzen Terrarium elevation tiles on a 12 m grid. Horizontal and vertical metres use the same scale: no exaggerated relief, synthetic bowl or depth correction. The 1.44 km square includes context around the catalog\u2019s approximately 1.19 km crater diameter; the square is not the crater rim. Sandstone colors are an authored elevation palette, not satellite imagery or mapped geological strata. The flat underside is an arbitrary display cut, not a subsurface boundary. Mapzen / Tilezen; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.",
+      "note": "Meteor Crater in real terrain, sampled from Mapzen Terrarium elevation tiles on a 12 m grid. Horizontal and vertical metres use the same scale: no exaggerated relief, synthetic bowl or depth correction. The 1.44 km square includes context around the catalog’s approximately 1.19 km crater diameter; the square is not the crater rim. Sandstone colors are an authored elevation palette, not satellite imagery or mapped geological strata. The flat underside is an arbitrary display cut, not a subsurface boundary. Mapzen / Tilezen; United States 3DEP (formerly NED) and global GMTED2010 and SRTM terrain data courtesy of the U.S. Geological Survey.",
       "processing": {
         "script": "scripts/build_meteor_crater.py",
         "units": "metres",
@@ -6061,7 +6061,7 @@
         "roll": 0,
         "environment": 0.8
       },
-      "note": "Bare polished 300 mm silicon wafer, using SVM SV031 nominal 775 \u00b5m thickness and a 1 mm-deep 90\u00b0 notch. No invented chip layout or enlarged circuitry; violet-gray appearance is illustrative.",
+      "note": "Bare polished 300 mm silicon wafer, using SVM SV031 nominal 775 µm thickness and a 1 mm-deep 90° notch. No invented chip layout or enlarged circuitry; violet-gray appearance is illustrative.",
       "basis_url": "https://svmi.com/wp-content/uploads/2020/09/SV031.pdf",
       "basis_label": "Dimensional standard / technical source",
       "processing": {
@@ -6108,7 +6108,7 @@
         "pitch": 9,
         "roll": 0
       },
-      "note": "iPhone 16 body envelope from Apple: 147.6 \u00d7 71.6 \u00d7 7.8 mm. Original simplified exterior illustration, with authored screen art, corner curves, buttons and camera details; these small details are not engineering measurements. No internal geometry.",
+      "note": "iPhone 16 body envelope from Apple: 147.6 × 71.6 × 7.8 mm. Original simplified exterior illustration, with authored screen art, corner curves, buttons and camera details; these small details are not engineering measurements. No internal geometry.",
       "basis_url": "https://support.apple.com/en-us/121029",
       "basis_label": "Dimensional standard / technical source",
       "processing": {
@@ -6202,7 +6202,7 @@
         "pitch": 12,
         "roll": 0
       },
-      "note": "A representative 67 mm ball, within the ITF Type 1/2 diameter range 65.4\u201368.6 mm. Original felt texture and stitchless seam pattern are illustrative; no manufacturer is implied.",
+      "note": "A representative 67 mm ball, within the ITF Type 1/2 diameter range 65.4–68.6 mm. Original felt texture and stitchless seam pattern are illustrative; no manufacturer is implied.",
       "basis_url": "https://www.itftennis.com/media/11845/2024-rulebook-atp-update.pdf",
       "basis_label": "Dimensional standard / technical source",
       "processing": {
@@ -6250,7 +6250,7 @@
         "roll": 0,
         "environment": 0.9
       },
-      "note": "VLT M1 dimensioned optical illustration: 8.2 m outer diameter, 1 m central hole, nominal 175 mm meniscus thickness. Concave surface follows the published 28.8 m radius and conic constant \u22121.004616. Back surface is a constant axial offset, not a measured rear surface. Cell and actuators omitted; reflections are a studio environment.",
+      "note": "VLT M1 dimensioned optical illustration: 8.2 m outer diameter, 1 m central hole, nominal 175 mm meniscus thickness. Concave surface follows the published 28.8 m radius and conic constant −1.004616. Back surface is a constant axial offset, not a measured rear surface. Cell and actuators omitted; reflections are a studio environment.",
       "basis_url": "https://www.eso.org/sci/facilities/paranal/telescopes/ut/m1unit.html",
       "basis_label": "Dimensional standard / technical source",
       "processing": {
@@ -6276,7 +6276,7 @@
     {
       "id": "cod-9011577-graphene-spacing",
       "name": "Graphene Layer Spacing",
-      "display_label": "Graphene Layer Spacing \u00b7 AB-stacked lattice windows",
+      "display_label": "Graphene Layer Spacing · AB-stacked lattice windows",
       "source": "https://www.crystallography.net/cod/9011577.html",
       "author": "Trucano, P.; Chen, R.; Crystallography Open Database",
       "license": "CC0-1.0",
@@ -6303,7 +6303,7 @@
         "layout_width_factor": 1.3,
         "focus_scale_factor": 1.3
       },
-      "note": "Two hexagonal windows of neighboring AB-stacked graphite sheets, derived from the neutron-diffraction cell of COD 9011577 (a = 2.464 \u00c5, c = 6.711 \u00c5). Their plane separation is c/2 = 0.33555 nm; the catalog value is the approximate 0.335 nm. The neutral connector measures plane to plane. Colored tubes trace nuclear positions and bonds; their thickness and colors are illustrative. These are tiny windows into extended sheets, not isolated benzene molecules, and the gap is not the thickness of a single graphene sheet.",
+      "note": "Two hexagonal windows of neighboring AB-stacked graphite sheets, derived from the neutron-diffraction cell of COD 9011577 (a = 2.464 Å, c = 6.711 Å). Their plane separation is c/2 = 0.33555 nm; the catalog value is the approximate 0.335 nm. The neutral connector measures plane to plane. Colored tubes trace nuclear positions and bonds; their thickness and colors are illustrative. These are tiny windows into extended sheets, not isolated benzene molecules, and the gap is not the thickness of a single graphene sheet.",
       "provenance": "content/visualizations/models/sources/cod-9011577-graphene-spacing.md",
       "processing": {
         "builder": "scripts/build_graphene_spacing.py",
@@ -6442,7 +6442,7 @@
       "triangle_count": 50501,
       "animations": 0,
       "skins": 0,
-      "display_label": "Tobacco Mosaic Virus \u00b7 lattice reconstruction",
+      "display_label": "Tobacco Mosaic Virus · lattice reconstruction",
       "basis_url": "https://doi.org/10.1016/0022-2836(89)90391-4",
       "basis_label": "PDB 2TMV structure paper",
       "link_label": "PDB 2TMV coordinates"
@@ -6503,7 +6503,7 @@
       "triangle_count": 54770,
       "animations": 0,
       "skins": 0,
-      "display_label": "Ribosome \u00b7 yeast 80S"
+      "display_label": "Ribosome · yeast 80S"
     },
     {
       "id": "pdb-5et3-fullerene",
@@ -6614,7 +6614,7 @@
       "triangle_count": 54940,
       "animations": 0,
       "skins": 0,
-      "display_label": "Actin Filament \u00b7 cut segment",
+      "display_label": "Actin Filament · cut segment",
       "basis_url": "https://doi.org/10.7554/eLife.31125",
       "basis_label": "PDB 6BNO structure paper",
       "link_label": "PDB 6BNO coordinates"
@@ -6729,7 +6729,7 @@
       "triangle_count": 54872,
       "animations": 0,
       "skins": 0,
-      "display_label": "Microtubule \u00b7 14-protofilament segment",
+      "display_label": "Microtubule · 14-protofilament segment",
       "basis_url": "https://doi.org/10.1073/pnas.1802637115",
       "basis_label": "PDB 6DPU structure paper",
       "link_label": "PDB 6DPU coordinates"
@@ -6785,7 +6785,7 @@
       "triangle_count": 54886,
       "animations": 0,
       "skins": 0,
-      "display_label": "SARS-CoV-2 Spike \u00b7 resolved ectodomain",
+      "display_label": "SARS-CoV-2 Spike · resolved ectodomain",
       "basis_url": "https://doi.org/10.1016/j.cell.2020.02.058",
       "basis_label": "PDB 6VXX structure paper",
       "link_label": "PDB 6VXX coordinates"
@@ -6843,7 +6843,7 @@
       "triangle_count": 54216,
       "animations": 0,
       "skins": 0,
-      "display_label": "Nuclear Pore Complex \u00b7 constricted scaffold",
+      "display_label": "Nuclear Pore Complex · constricted scaffold",
       "basis_url": "https://doi.org/10.1126/science.abm9506",
       "basis_label": "PDB 7R5K structure paper",
       "link_label": "PDB 7R5K coordinates"
@@ -6878,7 +6878,7 @@
         "metalness": 0,
         "layout_width_factor": 1.35
       },
-      "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1\u00d7 vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The approximate catalog volcano width is smaller than this surrounding terrain window.",
+      "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1× vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The approximate catalog volcano width is smaller than this surrounding terrain window.",
       "processing": {
         "source_crop": "content/visualizations/models/sources/mola/mola-olympus-mons.npz",
         "source_crop_sha256": "bca04a104addc9aa8d53ed38b367aee9915b4f680adf505ee6b96762fac5d843",
@@ -6941,7 +6941,7 @@
         "roughness": 1,
         "metalness": 0
       },
-      "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1\u00d7 vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The catalog value is the approximate canyon-system length, not a traced centerline or the crop width.",
+      "note": "A window of actual Mars Global Surveyor MOLA elevations with spherical Mars curvature and 1× vertical relief. Colors encode elevation above the areoid and are not a surface photograph. The rectangular crop is context, not the feature boundary; coordinates are never stretched to the catalog length. The map uses a spherical reference areoid and does not reproduce the full Mars gravity field. The catalog value is the approximate canyon-system length, not a traced centerline or the crop width.",
       "processing": {
         "source_crop": "content/visualizations/models/sources/mola/mola-valles-marineris.npz",
         "source_crop_sha256": "4ca37e15daf025a53efe85a5d4f4469b18e3183528db7d573171e179640ac040",
@@ -9335,7 +9335,7 @@
       },
       "geometry": "mesh",
       "representation": "scientific-agency-illustration",
-      "note": "NASA VTAD\u2019s original oblate textured Saturn globe. The catalog mean diameter is calibrated against the source\u2019s equatorial-diameter scale, preserving polar flattening. Rings are shown at their true relative scale under the separate Saturn\u2019s Rings item; including them here would exceed the explorer\u2019s 1.3\u00d7 body-diameter extent rule. The texture is an illustrative global mosaic, not current weather.",
+      "note": "NASA VTAD’s original oblate textured Saturn globe. The catalog mean diameter is calibrated against the source’s equatorial-diameter scale, preserving polar flattening. Rings are shown at their true relative scale under the separate Saturn’s Rings item; including them here would exceed the explorer’s 1.3× body-diameter extent rule. The texture is an illustrative global mosaic, not current weather.",
       "source": "https://science.nasa.gov/resource/saturn-3d-model/",
       "author": "NASA Visualization Technology Applications and Development (VTAD)",
       "reference": "content/visualizations/models/sources/nasa-saturn-globe-length.md",
@@ -9391,7 +9391,7 @@
       },
       "geometry": "mesh",
       "representation": "scientific-agency-illustration",
-      "note": "NASA VTAD\u2019s original Saturn globe and ring meshes, retaining their textures and relative proportions. Calibration uses the catalog 280,360 km span to the F ring in the source\u2019s 120,536 km equatorial-diameter units. The model\u2019s outer edge is within 1% of that span. This is a main-ring view; the diffuse E ring and individual particles are not represented.",
+      "note": "NASA VTAD’s original Saturn globe and ring meshes, retaining their textures and relative proportions. Calibration uses the catalog 280,360 km span to the F ring in the source’s 120,536 km equatorial-diameter units. The model’s outer edge is within 1% of that span. This is a main-ring view; the diffuse E ring and individual particles are not represented.",
       "source": "https://science.nasa.gov/resource/saturn-3d-model/",
       "author": "NASA Visualization Technology Applications and Development (VTAD)",
       "reference": "content/visualizations/models/sources/nasa-saturn-main-rings.md",
@@ -9447,7 +9447,7 @@
       },
       "geometry": "mesh",
       "representation": "image-textured-cloud-cap",
-      "note": "Cassini PIA17652 false-color polar mosaic on a shallow idealized spherical cap. The jet\u2019s visible across-corners width is registered approximately to the catalog 25,000 km; the surrounding circular aperture is context and extends to about 1.28\u00d7. This is approximate image registration, not a georeferenced latitude/longitude map. Colors combine ultraviolet, visible and infrared wavelengths and are not natural vision. Geometry shows planetary curvature only, not measured cloud heights. The source is a 2012 image, not current weather or a six-sided solid object.",
+      "note": "Cassini PIA17652 false-color polar mosaic on a shallow idealized spherical cap. The jet’s visible across-corners width is registered approximately to the catalog 25,000 km; the surrounding circular aperture is context and extends to about 1.28×. This is approximate image registration, not a georeferenced latitude/longitude map. Colors combine ultraviolet, visible and infrared wavelengths and are not natural vision. Geometry shows planetary curvature only, not measured cloud heights. The source is a 2012 image, not current weather or a six-sided solid object.",
       "source": "https://science.nasa.gov/resource/saturns-streaming-hexagon-storm/",
       "author": "NASA/JPL-Caltech/SSI/Hampton University; cap assembled by Universe Scales",
       "reference": "content/visualizations/models/sources/cassini-saturn-hexagon.md",
@@ -9503,7 +9503,7 @@
       },
       "geometry": "mesh",
       "representation": "image-textured-cloud-patch",
-      "note": "An enhanced-color Juno cloud image (12 February 2019) draped over an idealized shallow cloud-top patch. The storm is shown at the catalog\u2019s representative April 2017 width of 16,350 km. This is an illustrative size comparison using later imagery, not a measured 2019 map or a claim that the storm\u2019s size stayed constant. The surrounding collar is context. Curvature is schematic; neither cloud heights nor storm depth are reconstructed. Credit NASA/JPL-Caltech/SwRI/MSSS; processing Kevin M. Gill, CC BY; cropped and draped by Universe Scales.",
+      "note": "An enhanced-color Juno cloud image (12 February 2019) draped over an idealized shallow cloud-top patch. The storm is shown at the catalog’s representative April 2017 width of 16,350 km. This is an illustrative size comparison using later imagery, not a measured 2019 map or a claim that the storm’s size stayed constant. The surrounding collar is context. Curvature is schematic; neither cloud heights nor storm depth are reconstructed. Credit NASA/JPL-Caltech/SwRI/MSSS; processing Kevin M. Gill, CC BY; cropped and draped by Universe Scales.",
       "source": "https://science.nasa.gov/photojournal/the-great-red-spot/",
       "author": "NASA/JPL-Caltech/SwRI/MSSS; image processing Kevin M. Gill; adapted by Universe Scales",
       "reference": "content/visualizations/models/sources/juno-great-red-spot.md",
@@ -9564,7 +9564,7 @@
       },
       "geometry": "mesh",
       "representation": "idealized-size-sphere",
-      "note": "An idealized untextured icy sphere at the 2,326 km diameter measured by Sicardy et al. (2011) from a stellar occultation (about \u00b112 km). It is not a spacecraft-derived terrain model: no resolved surface map of Eris is available here. Bright neutral material suggests its high reflectivity without inventing craters or albedo markings. Dysnomia is omitted.",
+      "note": "An idealized untextured icy sphere at the 2,326 km diameter measured by Sicardy et al. (2011) from a stellar occultation (about ±12 km). It is not a spacecraft-derived terrain model: no resolved surface map of Eris is available here. Bright neutral material suggests its high reflectivity without inventing craters or albedo markings. Dysnomia is omitted.",
       "source": "https://www.eso.org/public/news/eso1142/",
       "author": "Universe Scales",
       "reference": "content/visualizations/models/sources/eris-occultation-sphere.md",
@@ -9611,7 +9611,7 @@
       },
       "geometry": "mesh",
       "representation": "idealized-size-sphere",
-      "note": "A true-size smooth sphere at the catalog\u2019s 22.72 km equatorial-diameter estimate, twice the 11.36 km radius inferred by Choudhury et al. (2024) from NICER pulse-profile modeling and radio timing. It is not a resolved surface photograph. Sphericity and blue-white color are display conventions; hot spots, beams, atmosphere and gravitational lensing are not simulated. The 2024 radius has a 68% interval of -0.63/+0.95 km. A newer NICER analysis (arXiv:2512.08790) finds a broader, larger range, so this is explicitly the catalog\u2019s 2024 estimate, not a unique established radius.",
+      "note": "A true-size smooth sphere at the catalog’s 22.72 km equatorial-diameter estimate, twice the 11.36 km radius inferred by Choudhury et al. (2024) from NICER pulse-profile modeling and radio timing. It is not a resolved surface photograph. Sphericity and blue-white color are display conventions; hot spots, beams, atmosphere and gravitational lensing are not simulated. The 2024 radius has a 68% interval of -0.63/+0.95 km. A newer NICER analysis (arXiv:2512.08790) finds a broader, larger range, so this is explicitly the catalog’s 2024 estimate, not a unique established radius.",
       "source": "https://arxiv.org/abs/2407.06789",
       "author": "Universe Scales",
       "reference": "content/visualizations/models/sources/nicer-j0437-sphere.md",
@@ -9635,7 +9635,7 @@
           "Use an authored uniform material; no surface texture"
         ]
       },
-      "display_label": "PSR J0437-4715 \u00b7 2024 NICER estimate",
+      "display_label": "PSR J0437-4715 · 2024 NICER estimate",
       "src": "content/visualizations/models/nicer-j0437-sphere.glb",
       "format": "glb",
       "gltf_version": "2.0",
@@ -9659,7 +9659,7 @@
       },
       "geometry": "mesh",
       "representation": "idealized-size-sphere",
-      "note": "A smooth white-dwarf sphere calibrated to the catalog\u2019s approximate 11,300 km diameter. Bond et al. (2017) infer a radius of 0.008098 solar radii. The blue-white tint is illustrative; no resolved surface texture, accretion disk or surrounding halo is claimed. Brightness is adjusted for inspection, not compared photometrically with other stars.",
+      "note": "A smooth white-dwarf sphere calibrated to the catalog’s approximate 11,300 km diameter. Bond et al. (2017) infer a radius of 0.008098 solar radii. The blue-white tint is illustrative; no resolved surface texture, accretion disk or surrounding halo is claimed. Brightness is adjusted for inspection, not compared photometrically with other stars.",
       "source": "https://arxiv.org/abs/1703.10625",
       "author": "Universe Scales",
       "reference": "content/visualizations/models/sources/sirius-b-sphere.md",
@@ -9753,7 +9753,7 @@
       },
       "geometry": "mesh",
       "representation": "interferometry-constrained-roche-model",
-      "note": "An oblate Roche equipotential using Monnier et al. (2012) CHARA/MIRC concordance-model equatorial and polar radii, 2.726 and 2.418 solar radii. Latitude shading qualitatively illustrates gravity darkening (polar temperature 10,070 K, exponent 0.231); it is not an observed surface map or calibrated color photometry. The oblique inspection view deliberately exposes flattening. From Earth Vega is seen nearly pole-on (~6.2\u00b0), so this is not its sky orientation. Earlier Aufdenberg et al. (2006) modeling supports rapid rotation but gives different parameters.",
+      "note": "An oblate Roche equipotential using Monnier et al. (2012) CHARA/MIRC concordance-model equatorial and polar radii, 2.726 and 2.418 solar radii. Latitude shading qualitatively illustrates gravity darkening (polar temperature 10,070 K, exponent 0.231); it is not an observed surface map or calibrated color photometry. The oblique inspection view deliberately exposes flattening. From Earth Vega is seen nearly pole-on (~6.2°), so this is not its sky orientation. Earlier Aufdenberg et al. (2006) modeling supports rapid rotation but gives different parameters.",
       "source": "https://arxiv.org/html/1211.6055v1",
       "author": "Universe Scales",
       "reference": "content/visualizations/models/sources/vega-roche-photosphere.md",
@@ -9894,7 +9894,7 @@
       },
       "geometry": "mesh",
       "representation": "catalog-orbit-diagram",
-      "note": "JPL SBDB heliocentric osculating ellipse for Sedna at the pinned 2026 epoch. The ruler runs from the Sun\u2019s focus to aphelion, not across the whole ellipse. This source solution gives Q about 1,011 AU, differing from the catalog\u2019s older approximate 937 AU; coordinates are preserved without stretching. The diagram is a two-body snapshot, not a measured future trajectory. Sun and endpoint dots are enlarged location markers, not physical bodies.",
+      "note": "JPL SBDB heliocentric osculating ellipse for Sedna at the pinned 2026 epoch. The ruler runs from the Sun’s focus to aphelion, not across the whole ellipse. This source solution gives Q about 1,011 AU, differing from the catalog’s older approximate 937 AU; coordinates are preserved without stretching. The diagram is a two-body snapshot, not a measured future trajectory. Sun and endpoint dots are enlarged location markers, not physical bodies.",
       "source": "https://ssd-api.jpl.nasa.gov/doc/sbdb.html",
       "author": "NASA/JPL Solar System Dynamics; diagram by Universe Scales",
       "reference": "content/visualizations/models/sources/jpl-sedna-orbit.md",
@@ -9980,7 +9980,7 @@
       },
       "geometry": "mesh",
       "representation": "catalog-point-cloud",
-      "note": "4,615 actual catalog-object locations from the pinned JPL SBDB orbital elements, propagated with a two-body approximation to 16 October 2026 TDB. Selection: asteroid records with semimajor axis 30\u201350 AU, perihelion at least 30 AU, and computed distance 30\u201350 AU. This is a selected, discovery-biased subset, not all Kuiper Belt objects or an unbiased density map. Point colors and sizes are display glyphs, not body sizes or measured colors. The faint Neptune ellipse is a JPL J2000 reference orbit; the Sun is physically scaled and subpixel. No synthetic filler points are added.",
+      "note": "4,615 actual catalog-object locations from the pinned JPL SBDB orbital elements, propagated with a two-body approximation to 16 October 2026 TDB. Selection: asteroid records with semimajor axis 30–50 AU, perihelion at least 30 AU, and computed distance 30–50 AU. This is a selected, discovery-biased subset, not all Kuiper Belt objects or an unbiased density map. Point colors and sizes are display glyphs, not body sizes or measured colors. The faint Neptune ellipse is a JPL J2000 reference orbit; the Sun is physically scaled and subpixel. No synthetic filler points are added.",
       "source": "https://ssd-api.jpl.nasa.gov/doc/sbdb_query.html",
       "author": "NASA/JPL Solar System Dynamics; catalog visualization by Universe Scales",
       "reference": "content/visualizations/models/sources/jpl-kuiper-catalog.md",
@@ -10012,7 +10012,7 @@
         "operations": [
           "Retain actual JPL osculating elements and solve Kepler equation",
           "Propagate mean anomaly to a common display epoch with a fixed two-body approximation",
-          "Select computed heliocentric distance 30\u201350 AU; retain true coordinates",
+          "Select computed heliocentric distance 30–50 AU; retain true coordinates",
           "Shuffle deterministically for runtime LOD; add no synthetic objects"
         ]
       },
@@ -10100,7 +10100,7 @@
       },
       "geometry": "mesh",
       "representation": "spacecraft-derived-shape",
-      "note": "The DART final pre-impact global SPC shape v004, sampled from NASA NAIF\u2019s 1.940 m DSK. This is the shape before 26 September 2022, not a prediction of the reshaped asteroid. Catalog 151 m equivalent-volume diameter calibrates the closed mesh. Neutral gray is authored; no impact crater or ejecta is invented.",
+      "note": "The DART final pre-impact global SPC shape v004, sampled from NASA NAIF’s 1.940 m DSK. This is the shape before 26 September 2022, not a prediction of the reshaped asteroid. Catalog 151 m equivalent-volume diameter calibrates the closed mesh. Neutral gray is authored; no impact crater or ejecta is invented.",
       "source": "https://pds.nasa.gov/ds-view/pds/viewCollection.jsp?identifier=urn:nasa:pds:dart_shapemodel:data_derived_dimorphos_model_v004&version=1.0",
       "author": "NASA/Johns Hopkins APL DART team; NASA PDS/NAIF",
       "reference": "content/visualizations/models/sources/dart-dimorphos-preimpact.md",
@@ -10158,7 +10158,7 @@
       },
       "geometry": "mesh",
       "representation": "spacecraft-derived-shape",
-      "note": "The Cassini/Thomas 30k-plate measured shape of Saturn\u2019s moon Hyperion, not the redwood tree. Craters and major relief are from the archived shape, not procedural noise. Neutral gray is an authored albedo; unresolved small crater detail is absent. The catalog mean diameter calibrates the equivalent-volume diameter; an oblique pose foreshortens its long axis.",
+      "note": "The Cassini/Thomas 30k-plate measured shape of Saturn’s moon Hyperion, not the redwood tree. Craters and major relief are from the archived shape, not procedural noise. Neutral gray is an authored albedo; unresolved small crater detail is absent. The catalog mean diameter calibrates the equivalent-volume diameter; an oblique pose foreshortens its long axis.",
       "source": "https://data.nasa.gov/dataset/saturn-small-moon-shape-models-v1-0",
       "author": "Peter C. Thomas; NASA/JPL/Cassini ISS; NASA PDS Small Bodies Node",
       "reference": "content/visualizations/models/sources/cassini-hyperion-shape.md",
@@ -10236,7 +10236,7 @@
         "pitch": 0,
         "layout_width_factor": 1.15
       },
-      "note": "African-elephant exterior illustration by jimmyho905, uniformly calibrated to the catalog\u2019s 3.2 m representative adult-male shoulder height. In this neutral pose the highest mesh point is the dorsal withers above the forelegs; the head, ears and trunk are lower, so the Y extent measures foot to shoulder rather than body length or head height. A predominantly frontal resting view preserves the shoulder-height size comparison; drag to inspect the whole, longer body. The artist identifies the model as African Elephant; this is an illustrative savanna-elephant appearance, not a specimen scan, verified individual or measured male. Source geometry and textures are retained, the neutral skin bind pose is baked and the rig removed, and tangents are regenerated. No independent-axis scaling, shortened body or cropped anatomy. CC BY 4.0; adaptation by Universe Scales.",
+      "note": "African-elephant exterior illustration by jimmyho905, uniformly calibrated to the catalog’s 3.2 m representative adult-male shoulder height. In this neutral pose the highest mesh point is the dorsal withers above the forelegs; the head, ears and trunk are lower, so the Y extent measures foot to shoulder rather than body length or head height. A predominantly frontal resting view preserves the shoulder-height size comparison; drag to inspect the whole, longer body. The artist identifies the model as African Elephant; this is an illustrative savanna-elephant appearance, not a specimen scan, verified individual or measured male. Source geometry and textures are retained, the neutral skin bind pose is baked and the rig removed, and tangents are regenerated. No independent-axis scaling, shortened body or cropped anatomy. CC BY 4.0; adaptation by Universe Scales.",
       "processing": {
         "scripts": [
           "scripts/prepare_earth3d2_imports.py",
@@ -10299,7 +10299,7 @@
           "Scope qualifier"
         ]
       },
-      "note": "Original dimensioned diagram of the 305 m primary reflector only, as a spherical cap with 265 m curvature radius. Geometry uses equal horizontal and vertical metres. This is an idealized intact, pre-December-2020 surface, not the observatory\u2019s present condition. The rectangular texture approximates the published 3 \u00d7 6 ft aluminum panels, but is not a survey of their layout. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
+      "note": "Original dimensioned diagram of the 305 m primary reflector only, as a spherical cap with 265 m curvature radius. Geometry uses equal horizontal and vertical metres. This is an idealized intact, pre-December-2020 surface, not the observatory’s present condition. The rectangular texture approximates the published 3 × 6 ft aluminum panels, but is not a survey of their layout. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
       "processing": {
         "script": "scripts/build_earth3d2_structures.py",
         "units": "metres",
@@ -10349,7 +10349,7 @@
         "pitch": 17,
         "layout_width_factor": 1.02
       },
-      "note": "Original exterior illustration of Ever Given. Hull envelope uses the Panama Maritime Authority\u2019s 399.98 m length, 58.80 m moulded beam and 32.90 m moulded depth; the explorer uniformly calibrates to the catalog\u2019s 399.94 m length (a 0.01% difference), without independently stretching any axis. Accommodation and funnel locations are approximate readings of the report\u2019s general-arrangement drawing. Hull sections, keel/bow curves, superstructure dimensions, colors and machinery are authored simplifications, not shipyard measurements. The partial above-deck load uses nominal 40 ft high-cube boxes; its arrangement and colors are illustrative, not a container manifest or reconstruction of the 2021 grounding. Propeller, rudder, holds, interior, water and canal are omitted. This is not a naval-architecture or stability model.",
+      "note": "Original exterior illustration of Ever Given. Hull envelope uses the Panama Maritime Authority’s 399.98 m length, 58.80 m moulded beam and 32.90 m moulded depth; the explorer uniformly calibrates to the catalog’s 399.94 m length (a 0.01% difference), without independently stretching any axis. Accommodation and funnel locations are approximate readings of the report’s general-arrangement drawing. Hull sections, keel/bow curves, superstructure dimensions, colors and machinery are authored simplifications, not shipyard measurements. The partial above-deck load uses nominal 40 ft high-cube boxes; its arrangement and colors are illustrative, not a container manifest or reconstruction of the 2021 grounding. Propeller, rudder, holds, interior, water and canal are omitted. This is not a naval-architecture or stability model.",
       "processing": {
         "script": "scripts/build_earth3d2_ship.py",
         "units": "metres",
@@ -10411,7 +10411,7 @@
           "Scope qualifier"
         ]
       },
-      "note": "Original dimensioned diagram of the 500 m primary reflector only, as a spherical cap with 300 m curvature radius. Geometry uses equal horizontal and vertical metres. FAST\u2019s 500 m physical reflector is larger than its approximately 300 m illuminated aperture. This is its nominal spherical reference shape, not the actively deformed paraboloid during an observation. The triangular panel texture is an authored visual cue, not the measured panel layout or a panel-count claim. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
+      "note": "Original dimensioned diagram of the 500 m primary reflector only, as a spherical cap with 300 m curvature radius. Geometry uses equal horizontal and vertical metres. FAST’s 500 m physical reflector is larger than its approximately 300 m illuminated aperture. This is its nominal spherical reference shape, not the actively deformed paraboloid during an observation. The triangular panel texture is an authored visual cue, not the measured panel layout or a panel-count claim. Feed cabin/platform, suspension towers, cable network, surrounding ground and support structure are omitted. The zero-thickness, double-sided surface does not assert a solid metal bowl or a shell thickness; colors and reflections are illustrative.",
       "processing": {
         "script": "scripts/build_earth3d2_structures.py",
         "units": "metres",
@@ -10517,7 +10517,7 @@
           "Datum qualifier"
         ]
       },
-      "note": "Actual Kibo summit terrain, sampled from Mapzen Terrarium tiles on a 50 m grid, with no vertical exaggeration or summit correction. The authored 6.4 km square is a crop around the summit crater, not the full Kilimanjaro massif. The sides extend straight down to a sea-level display datum; they are arbitrary cuts, not cliffs, measured rock walls or the mountain\u2019s base. Calibration uses TANAPA\u2019s 5,895 m above-sea-level reference; the sampled grid maximum is about 5,886 m and is deliberately not forced to that reference. Elevation colors are illustrative, not observed geology, current snow or glacier boundaries. Mapzen / Tilezen; global SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey.",
+      "note": "Actual Kibo summit terrain, sampled from Mapzen Terrarium tiles on a 50 m grid, with no vertical exaggeration or summit correction. The authored 6.4 km square is a crop around the summit crater, not the full Kilimanjaro massif. The sides extend straight down to a sea-level display datum; they are arbitrary cuts, not cliffs, measured rock walls or the mountain’s base. Calibration uses TANAPA’s 5,895 m above-sea-level reference; the sampled grid maximum is about 5,886 m and is deliberately not forced to that reference. Elevation colors are illustrative, not observed geology, current snow or glacier boundaries. Mapzen / Tilezen; global SRTM and GMTED2010 terrain data courtesy of the U.S. Geological Survey.",
       "processing": {
         "script": "scripts/build_earth3d2_terrain.py",
         "units": "metres",
@@ -10569,7 +10569,7 @@
         "pitch": 8,
         "layout_width_factor": 1.02
       },
-      "note": "Sperm-whale exterior illustration by AneesAnimates, not a specimen scan or a measured individual. The original neutral bind pose is frozen, rigidly transformed and uniformly scaled nose to fluke to the catalog\u2019s 52 ft (15.8496 m) representative male length from NOAA. The source has no base-color map; gray-blue skin color is authored for this display. Source normal/roughness maps and sculpted wrinkles are retained; their local detail is illustrative rather than measured anatomy. The rig and animations are removed after baking joint transforms; the delivered model is static and remains freely rotatable. CC BY 4.0; adaptation by Universe Scales.",
+      "note": "Sperm-whale exterior illustration by AneesAnimates, not a specimen scan or a measured individual. The original neutral bind pose is frozen, rigidly transformed and uniformly scaled nose to fluke to the catalog’s 52 ft (15.8496 m) representative male length from NOAA. The source has no base-color map; gray-blue skin color is authored for this display. Source normal/roughness maps and sculpted wrinkles are retained; their local detail is illustrative rather than measured anatomy. The rig and animations are removed after baking joint transforms; the delivered model is static and remains freely rotatable. CC BY 4.0; adaptation by Universe Scales.",
       "processing": {
         "scripts": [
           "scripts/prepare_earth3d2_imports.py",
@@ -10630,7 +10630,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Human Capillary (diagram)"
       },
-      "note": "A short cutaway segment of a continuous capillary with a representative 7 \u00b5m outer diameter. The hollow lumen, endothelial wall, basal lamina and one endothelial nucleus are explanatory. Segment ends and viewing opening are authored cuts; segment length is not the catalog quantity. Wall/lamina thickness, nucleus size and cell seams are display proxies, not measurements from the cited TEM.",
+      "note": "A short cutaway segment of a continuous capillary with a representative 7 µm outer diameter. The hollow lumen, endothelial wall, basal lamina and one endothelial nucleus are explanatory. Segment ends and viewing opening are authored cuts; segment length is not the catalog quantity. Wall/lamina thickness, nucleus size and cell seams are display proxies, not measurements from the cited TEM.",
       "processing": {
         "script": "scripts/build_bio3d2_cells.py",
         "model_unit": "um",
@@ -10680,7 +10680,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Chloroplast (illustration)"
       },
-      "note": "Authored chloroplast cutaway by montanhabio, uniformly calibrated to the representative 5 \u00b5m long axis. The model shows envelope, thylakoid stacks and stromal connections with DNA indicated. It is a teaching illustration, not segmented EM or measured internal architecture. Green/gold false colours were added and the floating title removed. Internal proportions and disc counts are illustrative.",
+      "note": "Authored chloroplast cutaway by montanhabio, uniformly calibrated to the representative 5 µm long axis. The model shows envelope, thylakoid stacks and stromal connections with DNA indicated. It is a teaching illustration, not segmented EM or measured internal architecture. Green/gold false colours were added and the floating title removed. Internal proportions and disc counts are illustrative.",
       "processing": {
         "script": "scripts/prepare_bio3d2_imports.mjs",
         "source_model_name": "Chloroplast",
@@ -10742,7 +10742,7 @@
         "roll": -16,
         "display_label": "Human Cone Cell (diagram)"
       },
-      "note": "A representative 45 \u00b5m retinal cone-cell diagram, with a tapered folded-membrane outer segment, connecting cilium, mitochondria-rich inner segment, nucleus and synaptic pedicel. The total length follows the catalog\u2019s approximate convention; regional proportions vary across the retina. Internal lengths, visible fold count, mitochondria, colours and cutaway are authored explanatory geometry, not a human cell reconstruction.",
+      "note": "A representative 45 µm retinal cone-cell diagram, with a tapered folded-membrane outer segment, connecting cilium, mitochondria-rich inner segment, nucleus and synaptic pedicel. The total length follows the catalog’s approximate convention; regional proportions vary across the retina. Internal lengths, visible fold count, mitochondria, colours and cutaway are authored explanatory geometry, not a human cell reconstruction.",
       "processing": {
         "script": "scripts/build_bio3d2_cells.py",
         "model_unit": "um",
@@ -10791,7 +10791,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Human Egg Cell (diagram)"
       },
-      "note": "A representative 120 \u00b5m human MII oocyte (cell diameter, excluding the zona pellucida). A cutaway zona surrounds the oocyte, with a small first polar body in the perivitelline space and an indicated peripheral meiotic spindle. No interphase nucleus is shown. Coat thickness, spindle, granules and polar-body geometry/positions are illustrative, not a patient scan; cumulus cells are omitted.",
+      "note": "A representative 120 µm human MII oocyte (cell diameter, excluding the zona pellucida). A cutaway zona surrounds the oocyte, with a small first polar body in the perivitelline space and an indicated peripheral meiotic spindle. No interphase nucleus is shown. Coat thickness, spindle, granules and polar-body geometry/positions are illustrative, not a patient scan; cumulus cells are omitted.",
       "processing": {
         "script": "scripts/build_bio3d2_cells.py",
         "model_unit": "um",
@@ -10905,7 +10905,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Honeybee (worker micro-CT)"
       },
-      "note": "ETAIN / Arno Thielens worker honeybee micro-CT surface, in native millimetres. Its approximately 11 mm body is preserved within the catalog\u2019s representative 12.5 mm scale, rather than enlarged to fill it. The preserved compact pose and unresolved/absent wing and leg detail remain as in the scan; no flying pose, hair or missing appendages are invented. Amber false colour is for inspection, not measured pigmentation.",
+      "note": "ETAIN / Arno Thielens worker honeybee micro-CT surface, in native millimetres. Its approximately 11 mm body is preserved within the catalog’s representative 12.5 mm scale, rather than enlarged to fill it. The preserved compact pose and unresolved/absent wing and leg detail remain as in the scan; no flying pose, hair or missing appendages are invented. Amber false colour is for inspection, not measured pigmentation.",
       "processing": {
         "script": "scripts/prepare_bio3d2_imports.mjs",
         "source_model_name": "Western Honeybee - Adult Worker - CT Scan",
@@ -11015,7 +11015,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Neutrophil (diagram)"
       },
-      "note": "A 12 \u00b5m representative neutrophil diagram with a connected three-lobed nucleus and cytoplasmic granules. The catalog diameter is a blood-smear convention; this rounded explanatory cutaway is not a measured smear or a reconstructed cell. Lobe shape, granule count, organelle proportions and colours are authored.",
+      "note": "A 12 µm representative neutrophil diagram with a connected three-lobed nucleus and cytoplasmic granules. The catalog diameter is a blood-smear convention; this rounded explanatory cutaway is not a measured smear or a reconstructed cell. Lobe shape, granule count, organelle proportions and colours are authored.",
       "processing": {
         "script": "scripts/build_bio3d2_cells.py",
         "model_unit": "um",
@@ -11064,7 +11064,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Human Platelet (diagram)"
       },
-      "note": "Resting discoid platelet, 2.5 \u00b5m across. An explanatory cutaway exposes granules and the peripheral microtubule band; no nucleus. Disc thickness, granule placement/count and band geometry are authored, not measurements or an EM reconstruction. Colours distinguish structures; they are not natural colours.",
+      "note": "Resting discoid platelet, 2.5 µm across. An explanatory cutaway exposes granules and the peripheral microtubule band; no nucleus. Disc thickness, granule placement/count and band geometry are authored, not measurements or an EM reconstruction. Colours distinguish structures; they are not natural colours.",
       "processing": {
         "script": "scripts/build_bio3d2_cells.py",
         "model_unit": "um",
@@ -11114,7 +11114,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Rotifer (illustration)"
       },
-      "note": "A bdelloid rotifer illustration by .hapto GmbH for Senckenberg\u2019s soil-life project, uniformly calibrated corona-to-toes to the catalog\u2019s representative 200 \u00b5m length. The paired ciliated corona and telescoping body are authored anatomy, not a scan or an identified measured specimen. Original painted colours are retained in a light-responsive material; the cilia are static.",
+      "note": "A bdelloid rotifer illustration by .hapto GmbH for Senckenberg’s soil-life project, uniformly calibrated corona-to-toes to the catalog’s representative 200 µm length. The paired ciliated corona and telescoping body are authored anatomy, not a scan or an identified measured specimen. Original painted colours are retained in a light-responsive material; the cilia are static.",
       "processing": {
         "script": "scripts/prepare_bio3d2_imports.mjs",
         "source_model_name": "Rotifera",
@@ -11150,7 +11150,7 @@
     {
       "id": "bio3d2-tardigrade",
       "source": "https://tardigraph.meow-meow.io/resources/",
-      "author": "Tardigraph / Meow-Ludo; Gross, M\u00fcller, Hehn, Ferstl, Allner, Dierolf, Achterhold, Mayer and Pfeiffer (2019)",
+      "author": "Tardigraph / Meow-Ludo; Gross, Müller, Hehn, Ferstl, Allner, Dierolf, Achterhold, Mayer and Pfeiffer (2019)",
       "license": "CC-BY-4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_files": [
@@ -11166,15 +11166,15 @@
       "volume_semantics": "not_applicable",
       "closed_volume_checked": false,
       "basis_url": "https://doi.org/10.1186/s40851-019-0130-6",
-      "basis_label": "Nano-CT specimen and 152 \u00b5m body-length definition",
+      "basis_label": "Nano-CT specimen and 152 µm body-length definition",
       "presentation": {
         "reference_size": 152,
         "yaw": -12,
         "pitch": 10,
         "layout_width_factor": 1.3,
-        "display_label": "Tardigrade (152 \u00b5m nano-CT specimen)"
+        "display_label": "Tardigrade (152 µm nano-CT specimen)"
       },
-      "note": "Native-micrometre nano-CT reconstruction of one fixed, dried Hypsibius exemplaris from Gross et al. (2019), via Tardigraph\u2019s organ meshes and CT-traced body surface. The published 152 \u00b5m body length excludes the fourth leg pair; those legs remain in the mesh. The dorsal/front shell quarter is removed to expose original whole-body organ segmentations, with false colours. The independently registered head scan is omitted; labels identified as probable by Tardigraph remain interpretive. Drying shrinkage and resolution limit fine detail; this is one small specimen, not a species-wide standard. Dataset integration must use the 152 \u00b5m specimen definition.",
+      "note": "Native-micrometre nano-CT reconstruction of one fixed, dried Hypsibius exemplaris from Gross et al. (2019), via Tardigraph’s organ meshes and CT-traced body surface. The published 152 µm body length excludes the fourth leg pair; those legs remain in the mesh. The dorsal/front shell quarter is removed to expose original whole-body organ segmentations, with false colours. The independently registered head scan is omitted; labels identified as probable by Tardigraph remain interpretive. Drying shrinkage and resolution limit fine detail; this is one small specimen, not a species-wide standard. Dataset integration must use the 152 µm specimen definition.",
       "processing": {
         "script": "scripts/build_bio3d2_tardigrade.py",
         "model_unit": "um",
@@ -11229,7 +11229,7 @@
         "layout_width_factor": 1.3,
         "display_label": "Budding Yeast Cell (diagram)"
       },
-      "note": "A 5 \u00b5m mother cell with a small early bud. The bud extends beyond the calibrated mother-cell diameter. Cutaway wall, vacuole, nucleus and mitochondria are a sourced explanatory illustration, not segmented microscopy. Internal sizes, counts and positions are authored; wall thickness is a display proxy.",
+      "note": "A 5 µm mother cell with a small early bud. The bud extends beyond the calibrated mother-cell diameter. Cutaway wall, vacuole, nucleus and mitochondria are a sourced explanatory illustration, not segmented microscopy. Internal sizes, counts and positions are authored; wall thickness is a display proxy.",
       "processing": {
         "script": "scripts/build_bio3d2_cells.py",
         "model_unit": "um",
@@ -11247,6 +11247,234 @@
       "external_resources": [],
       "mesh_count": 5,
       "triangle_count": 26048,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "micro3d-helium-charge",
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?ral%7Csearch_for=charge",
+      "basis_url": "https://physics.nist.gov/cgi-bin/cuu/Value?ral%7Csearch_for=charge",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Helium Nucleus Charge Diameter"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measurement_diagram",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 3.357,
+        "yaw": -17,
+        "pitch": 12,
+        "layout_width_factor": 1.02
+      },
+      "note": "Helium-4 measurement diagram. Three thin guides mark twice the CODATA 2022 rms charge radius 1.6785(21) fm: 3.357 fm. An rms radius is a moment of the charge distribution, not a hard outer boundary. Four overlapping colored nucleon glyphs show two protons and two neutrons; their radii, positions, colors and static tetrahedral arrangement are authored symbols, not measured nucleon surfaces or a nuclear-structure reconstruction. No electron cloud is shown.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "femtometres",
+        "source_note": "content/visualizations/models/sources/micro3d-helium-charge.md",
+        "measurements": {
+          "rms_charge_radius_fm": 1.6785,
+          "rms_uncertainty_fm": 0.0021,
+          "diameter_fm": 3.357,
+          "nucleon_glyphs": "schematic only"
+        }
+      },
+      "src": "content/visualizations/models/micro3d-helium-charge.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 817760,
+      "sha256": "4f6d295a3c86f6f83ea1425622ebd5906993300ab05342fc49bb9a34aae91ec0",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 7,
+      "triangle_count": 43072,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "micro3d-karman-line",
+      "source": "https://www.fai.org/news/statement-about-karman-line",
+      "basis_url": "https://www.fai.org/news/statement-about-karman-line",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Karman Line"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measurement_diagram",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 100.0,
+        "yaw": -13,
+        "pitch": 14,
+        "layout_width_factor": 0.9
+      },
+      "note": "Local geometric altitude section: 100 km from sea level to the FAI Kármán-line convention, using equal horizontal and vertical kilometres. Two small spherical patches use the 6,371 km mean Earth radius used in PREM and radii 6,371 and 6,471 km. The upper cyan patch and gold ruler are measurement guides, not physical surfaces, a sharp atmosphere edge or a shell of air. The 68 by 18 km local window is an authored crop. No exponential-density scale, abrupt sky-color boundary, launch trajectory, topography or horizontally compressed globe is invented. The full Earth is omitted because its diameter is over 127 times the listed altitude.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "kilometres",
+        "source_note": "content/visualizations/models/sources/micro3d-karman-line.md",
+        "measurements": {
+          "conventional_altitude_km": 100.0,
+          "mean_earth_radius_km": 6371.0,
+          "radius_source": "https://link.springer.com/article/10.1140/epjc/s10052-022-10399-6",
+          "local_crop_km": [
+            68,
+            18
+          ],
+          "vertical_exaggeration": 1
+        }
+      },
+      "src": "content/visualizations/models/micro3d-karman-line.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 46336,
+      "sha256": "60dc77919fe764bdfcb8ebf5501d2db2c9ae5962e7e38f24aefea29145c10a6b",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 2096,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "micro3d-optical-fiber",
+      "source": "https://www.corning.com/catalog/coc/documents/product-family-specifications/0396_EMEA_BEN.pdf",
+      "basis_url": "https://www.corning.com/catalog/coc/documents/product-family-specifications/0396_EMEA_BEN.pdf",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Optical Fiber Cladding"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 125,
+        "yaw": -6,
+        "pitch": 4,
+        "layout_width_factor": 1.29
+      },
+      "note": "Original cross-section of a Corning SMF-28 Ultra type fiber: 8.2 µm nominal core diameter, 125 µm glass cladding diameter and 242 µm coating diameter. The core is not the 9.2 µm mode-field diameter. A quarter of the cladding and most of the coating are cut away. The surviving 10-degree coating sector preserves the full 121 µm outer radius; its thickness is not compressed to fit the glass diameter. Segment length (45 µm), cut orientations and opaque contrasting colors are authored presentation choices. No refractive-index profile, internal polymer-layer subdivision, propagating light ray or material transparency is simulated. The listed quantity measures glass diameter only.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "micrometres",
+        "source_note": "content/visualizations/models/sources/micro3d-optical-fiber.md",
+        "measurements": {
+          "core_diameter_um": 8.2,
+          "cladding_diameter_um": 125,
+          "coating_diameter_um": 242,
+          "displayed_coating_angles_deg": [
+            130,
+            140
+          ],
+          "axial_crop_um": 45
+        }
+      },
+      "src": "content/visualizations/models/micro3d-optical-fiber.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 86516,
+      "sha256": "8395fb30452b5b685e00b4b2c303b2c81f75b93fffd6bdbaee1679a9119871c5",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 14,
+      "triangle_count": 2312,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "micro3d-paramecium",
+      "source": "https://realmicrolife.com/paramecium-caudatum/",
+      "basis_url": "https://realmicrolife.com/paramecium-caudatum/",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Paramecium"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 250,
+        "yaw": -12,
+        "pitch": -15,
+        "roll": 3,
+        "layout_width_factor": 1.15
+      },
+      "note": "Original external morphology illustration of Paramecium caudatum, using a representative 250 µm cell-body length. Martin Kreutz’s microscopy observations document 170–300 µm cells, a rounded anterior, narrower posterior, an anteriorly widening oral groove, 80–120 longitudinal rows of paired cilia, and a tuft of 10–20 µm caudal cilia. This diagram uses 80 rows; ordinary 8 µm cilia and 14 µm caudal cilia, their static bend, spacing, diameter, the body width/depth and precise oral-groove profile are authored simplifications. Cilia extend beyond the calibrated 250 µm body. The cell is opaque for small-scale legibility; internal organelles, trichocysts and refractive contents are omitted. No source photograph is copied, and this is not a scan, measured specimen surface or reconstructed 3D microscopy volume.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "micrometres",
+        "source_note": "content/visualizations/models/sources/micro3d-paramecium.md",
+        "measurements": {
+          "representative_body_length_um": 250,
+          "observed_length_range_um": [
+            170,
+            300
+          ],
+          "observed_ciliary_row_range": [
+            80,
+            120
+          ],
+          "illustrated_ciliary_rows": 80,
+          "observed_caudal_cilia_um": [
+            10,
+            20
+          ],
+          "geometry": "original morphology illustration"
+        }
+      },
+      "src": "content/visualizations/models/micro3d-paramecium.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1644508,
+      "sha256": "8d10fab0b8de91ab515bd6ef7fc33fbd6653066ea7c51a337b265c839536fcb0",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 59312,
       "animations": 0,
       "skins": 0
     }
