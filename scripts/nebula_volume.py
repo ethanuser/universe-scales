@@ -78,6 +78,31 @@ def calibrated_samples(target, count, rng, q, gamma=0.7, mask=None):
     return x, y, color, alpha
 
 
+def grid_samples(target, spacing, rng, q, floor=0.004):
+    """Sprites on a jittered grid (spacing in px), for smooth glows without the
+    clumping of random sampling. Same return values as calibrated_samples."""
+    height, width = target.shape[:2]
+    ys, xs = np.mgrid[0:height:spacing, 0:width:spacing].astype(np.float64)
+    x = (xs + rng.random(xs.shape) * spacing).ravel()
+    y = (ys + rng.random(ys.shape) * spacing).ravel()
+    color = np.stack([sample_field(target[..., k], x, y) for k in range(3)], 1)
+    value = color.max(axis=1)
+    keep = value > floor
+    x, y, color, value = x[keep], y[keep], color[keep], value[keep]
+    alpha = value * spacing ** 2 / (KERNEL * (width * q) ** 2)
+    return x, y, color / value[:, None], alpha
+
+
+def elliptical_feather(shape, start=0.72, power=1.5, bottom=1.0):
+    """1 inside an ellipse inscribed in the image, fading to 0 at its edge.
+    bottom < 1 stretches the lower half so the fade reaches less far up."""
+    height, width = shape
+    yy, xx = np.mgrid[0:height, 0:width]
+    v = (yy + 0.5) / height * 2 - 1
+    r = np.hypot((xx + 0.5) / width * 2 - 1, np.where(v > 0, v * bottom, v))
+    return np.clip((1 - r) / (1 - start), 0, 1) ** power
+
+
 def smooth_noise(shape, sigma, rng):
     """Gaussian random field with unit standard deviation and correlation length ~sigma px."""
     field = ndimage.gaussian_filter(rng.standard_normal(shape), sigma, mode="wrap")

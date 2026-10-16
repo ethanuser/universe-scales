@@ -35,13 +35,13 @@ from scipy import ndimage
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from fetch_model_assets import read_glb  # noqa: E402
-from nebula_volume import add_cloud, calibrated_samples, load_rgb, sample_field, smooth_noise, split_stars  # noqa: E402
+from nebula_volume import add_cloud, calibrated_samples, elliptical_feather, grid_samples, load_rgb, sample_field, smooth_noise, split_stars  # noqa: E402
 from texture_padding import accessor_array  # noqa: E402
 from volume_glb import VolumeGLB  # noqa: E402
 
 PILLAR_LY = 5.0
 FIT = (14.3256, 480.865, 1138.424)   # px per mesh unit, image x of mesh z=0, image y of mesh base
-PER_PIXEL = {"rims": 1 / 160, "gas": 1 / 22, "fine": 1 / 110, "stars": 1 / 380, "bright": 1 / 120}
+PER_PIXEL = {"rims": 1 / 160, "gas": 1 / 22, "fine": 1 / 60, "stars": 1 / 380, "bright": 1 / 120}
 
 
 def load_mesh(path):
@@ -148,15 +148,16 @@ def build(mesh_path, image_path, output, seed=0x9111):
 
     # Gas outside the pillars, feathered at the photo's edges and given depth
     # through a soft slab around them.
-    yy, xx = np.mgrid[0:height, 0:width]
-    border = np.minimum.reduce([xx, width - 1 - xx, yy, height - 1 - yy]) / (0.1 * width)
-    feather = np.clip(border, 0, 1) ** 1.5
+    feather = elliptical_feather((height, width), 0.55, bottom=0.8)
     target = gas * (feather * (1 - inside))[..., None]
     depth_field = smooth_noise(gas.shape[:2], 70, rng)
-    for name, share, count, per_pixel, max_px, spread in (("ionized-gas-glow", 0.55, 5000, PER_PIXEL["gas"], 40, 0.55),
-                                                          ("ionized-gas", 0.45, 24000, PER_PIXEL["fine"], 9, 0.3)):
+    for name, share, count, per_pixel, max_px, spread in (("ionized-gas-glow", 0.7, 0, PER_PIXEL["gas"], 40, 0.55),
+                                                          ("ionized-gas", 0.3, 20000, PER_PIXEL["fine"], 14, 0.3)):
         q = per_pixel * PILLAR_LY / (width * ly_per_px)
-        x_px, y_px, color, alpha = calibrated_samples(target, count, rng, q, gamma=0.6)
+        if count:
+            x_px, y_px, color, alpha = calibrated_samples(target, count, rng, q, gamma=0.6)
+        else:
+            x_px, y_px, color, alpha = grid_samples(target, 13, rng, q)
         x, y = to_model(x_px, y_px)
         z = -0.3 + 0.9 * sample_field(depth_field, x_px, y_px) + rng.normal(0, spread, len(x))
         add_cloud(glb, name, np.column_stack([x, y, z]), color, alpha * share, per_pixel, max_px)
