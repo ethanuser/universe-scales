@@ -1,0 +1,52 @@
+{
+  "id": "earth3d-gateway-arch",
+  "source": "https://www.nps.gov/jeff/planyourvisit/mathematical-equation.htm",
+  "basis_url": "https://www.nps.gov/jeff/planyourvisit/gateway-arch-fact-sheet.htm",
+  "basis_label": "National Park Service dimensions and exterior geometry",
+  "author": "Universe Scales, from National Park Service geometry",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Gateway Arch"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 192.024,
+    "yaw": -17,
+    "pitch": 3,
+    "environment": 0.85
+  },
+  "note": "Dimensioned exterior of the Gateway Arch, using the National Park Service weighted-catenary centroid equation and equilateral triangular sections tapering from 54 ft at the base to 17 ft at the crown. Cross-sectional area varies linearly with distance below the crown. Height and outer span are about 630 ft (192 m). Ground cuts follow the sloping legs. Interiors, foundations, panel joints and observation windows are omitted; steel finish and studio reflections are illustrative.",
+  "processing": {
+    "script": "scripts/build_gateway_arch.py",
+    "units": "metres",
+    "constants_feet": {
+      "A": 68.7672,
+      "C": 3.0022,
+      "L": 299.2239,
+      "H": 625.0925
+    },
+    "provenance": "content/visualizations/models/sources/earth3d-gateway-arch.md"
+  },
+  "src": "content/visualizations/models/earth3d-gateway-arch.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 167372,
+  "sha256": "399f0bd3497fcaa719a53810343e002408e0cb3f89aa2eecebd26b6e85b9a635",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 3082,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,47 @@
+{
+  "id": "earth3d-table-tennis",
+  "source": "https://db.ittf.com/sites/default/files/public/2023-09/2023_ITTF_Statutes_clean_version2_2023-09-01_2.pdf",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Table Tennis Ball"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.04,
+    "yaw": 20,
+    "pitch": 12,
+    "roll": 0
+  },
+  "note": "ITTF Laws 2.3: 40 mm diameter. Original unbranded matte shell; printed markings and wall thickness are omitted.",
+  "basis_url": "https://db.ittf.com/sites/default/files/public/2023-09/2023_ITTF_Statutes_clean_version2_2023-09-01_2.pdf",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 0.04,
+    "provenance": "content/visualizations/models/sources/earth3d-table-tennis.md"
+  },
+  "src": "content/visualizations/models/earth3d-table-tennis.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 366372,
+  "sha256": "0a7e9f9bbd46fa910a0d0be929b308dccedcf2968598586d7c6e4c3fdda3db48",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 16128,
+  "animations": 0,
+  "skins": 0
+}

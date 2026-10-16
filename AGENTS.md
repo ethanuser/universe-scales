@@ -4,6 +4,26 @@ Start here if you are an AI agent (Codex, Claude, ...) or a new contributor pick
 up this repo. It is the shortest path to being productive; the longer READMEs linked
 below hold the details. Keep this file current when you change workflows.
 
+## 2026-10-16 earth3d handoff
+
+- Added 14 Length models: eight dimensioned everyday/optical objects, four
+  credited Sketchfab imports (egg scan, 747-8, Komodo dragon, Hindenburg), a
+  weighted-catenary Gateway Arch and unexaggerated Meteor Crater terrain.
+- Offline builders: `scripts/build_everyday_models.py`, `build_gateway_arch.py`,
+  `build_meteor_crater.py`; imported asset preparation:
+  `scripts/prepare_earth3d_imports.mjs`. Source notes are `sources/earth3d-*.md`.
+  Final entries, integration commands and review limitations: `handoff/earth3d/REPORT.md`.
+- No dataset, export, image or runtime JS/CSS changes. All 14 GLBs are under 3 MB,
+  self-contained and validate with zero errors/warnings. CPU resting extents
+  satisfy 0.6–1.3×; these are orthographic geometry checks, not model-lab approval.
+- 224 Node tests pass; Python runs 88 tests with one existing skip. Asset and
+  version checks pass. Full glTF validation still finds 17 errors in the existing
+  `em-mitochondrion-jurkat` asset; that asset was not changed here.
+- Chromium and git commits are documented sandbox limits. Per the lead's brief,
+  neither was retried. All rest/quarter-camera CPU previews were viewed; WebGL
+  shots, the actual explorer, the production size audit and mobile review remain
+  pending. Changes are uncommitted for the lead to review and commit.
+
 ## 2026-10-15 neuron worktree handoff
 
 - Neuron now uses the uncropped NeuroMorpho.Org NMO_109111 Feldmeyer archive

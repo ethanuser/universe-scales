@@ -1,0 +1,47 @@
+{
+  "id": "earth3d-a4-paper",
+  "source": "https://preview.sist.si/sist-preview/4087/9050e9a6768b43e2bcdedca70c895c61/ISO-216-1975.pdf",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "A4 Paper"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.297,
+    "yaw": -15,
+    "pitch": 9,
+    "roll": 0
+  },
+  "note": "ISO 216 A4: 210 × 297 mm. A flat, double-sided sheet surface; thickness is deliberately not modeled because ISO 216 defines the trimmed edges, not a paper stock. No exaggerated curl or thickness.",
+  "basis_url": "https://preview.sist.si/sist-preview/4087/9050e9a6768b43e2bcdedca70c895c61/ISO-216-1975.pdf",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 0.297,
+    "provenance": "content/visualizations/models/sources/earth3d-a4-paper.md"
+  },
+  "src": "content/visualizations/models/earth3d-a4-paper.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1368,
+  "sha256": "671f9b0e72732aac05b78cc403c1490e30d1739bceaafb81ad3b44971a4e72af",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 4,
+  "animations": 0,
+  "skins": 0
+}

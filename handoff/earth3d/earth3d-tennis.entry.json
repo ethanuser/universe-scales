@@ -1,0 +1,47 @@
+{
+  "id": "earth3d-tennis",
+  "source": "https://www.itftennis.com/media/11845/2024-rulebook-atp-update.pdf",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Tennis Ball"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.067,
+    "yaw": 20,
+    "pitch": 12,
+    "roll": 0
+  },
+  "note": "A representative 67 mm ball, within the ITF Type 1/2 diameter range 65.4–68.6 mm. Original felt texture and stitchless seam pattern are illustrative; no manufacturer is implied.",
+  "basis_url": "https://www.itftennis.com/media/11845/2024-rulebook-atp-update.pdf",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 0.067,
+    "provenance": "content/visualizations/models/sources/earth3d-tennis.md"
+  },
+  "src": "content/visualizations/models/earth3d-tennis.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1174488,
+  "sha256": "4ac87c52fc1b64f012ee71d38e6cf4261eb6b49bf96cc8aa22912cf46c4559e1",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 16128,
+  "animations": 0,
+  "skins": 0
+}

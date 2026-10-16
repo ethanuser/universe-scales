@@ -1,0 +1,20 @@
+{
+  "uid": "c46a999a49d547d8bab39706d7a6b6ee",
+  "name": "Elephant Bird Egg",
+  "author": {
+    "username": "RISDNaturelab",
+    "displayName": "RISD Nature Lab",
+    "profileUrl": "https://sketchfab.com/RISDNaturelab"
+  },
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "viewerUrl": "https://sketchfab.com/3d-models/elephant-bird-egg-c46a999a49d547d8bab39706d7a6b6ee",
+  "checked": "2026-10-16"
+}

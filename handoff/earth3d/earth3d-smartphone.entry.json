@@ -1,0 +1,47 @@
+{
+  "id": "earth3d-smartphone",
+  "source": "https://support.apple.com/en-us/121029",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Smartphone"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.1476,
+    "yaw": -15,
+    "pitch": 9,
+    "roll": 0
+  },
+  "note": "iPhone 16 body envelope from Apple: 147.6 × 71.6 × 7.8 mm. Original simplified exterior illustration, with authored screen art, corner curves, buttons and camera details; these small details are not engineering measurements. No internal geometry.",
+  "basis_url": "https://support.apple.com/en-us/121029",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 0.1476,
+    "provenance": "content/visualizations/models/sources/earth3d-smartphone.md"
+  },
+  "src": "content/visualizations/models/earth3d-smartphone.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 120444,
+  "sha256": "843b09919482f356b93646fd27e53de2697b6c68dff9269e264cbe1112c03d34",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 13,
+  "triangle_count": 980,
+  "animations": 0,
+  "skins": 0
+}

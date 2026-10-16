@@ -1,0 +1,20 @@
+{
+  "uid": "cd1977bedc32412fa1ce2cda23520b84",
+  "name": "Boeing 747-8i",
+  "author": {
+    "username": "jsong.js.us",
+    "displayName": "AF267",
+    "profileUrl": "https://sketchfab.com/jsong.js.us"
+  },
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "viewerUrl": "https://sketchfab.com/3d-models/boeing-747-8i-cd1977bedc32412fa1ce2cda23520b84",
+  "checked": "2026-10-16"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "earth3d-credit-card",
+  "source": "https://www.iso.org/obp/ui#iso:std:iso-iec:7810:ed-3:v1:en",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Credit Card"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 0.0856,
+    "yaw": -15,
+    "pitch": 12,
+    "roll": -7
+  },
+  "note": "ISO/IEC 7810 ID-1 envelope: 85.60 × 53.98 × 0.76 mm. Original fictitious unpersonalized card artwork; chip and graphic layout are illustrative. No account data or payment-brand marks.",
+  "basis_url": "https://www.iso.org/obp/ui#iso:std:iso-iec:7810:ed-3:v1:en",
+  "basis_label": "Dimensional standard / technical source",
+  "processing": {
+    "script": "scripts/build_everyday_models.py",
+    "units": "metres",
+    "reference_size_m": 0.0856,
+    "provenance": "content/visualizations/models/sources/earth3d-credit-card.md"
+  },
+  "src": "content/visualizations/models/earth3d-credit-card.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 64296,
+  "sha256": "c3befba36ab8d02c045a1e6145095901468e5eab6bb3477e1021080fa63a7988",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 208,
+  "animations": 0,
+  "skins": 0
+}

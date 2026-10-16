@@ -8,7 +8,8 @@ geometry, presentation, note, processing, ...). An optional "replaces": "<old id
 removes that entry and deletes its GLB when nothing else uses it. File stats
 (bytes, sha256, triangle_count, ...) are recomputed from MODEL.glb. When the entry
 has a "sketchfab_uid", the curated Sketchfab manifest entry for the same item is
-updated so `sketchfab_models.py` stays consistent with the registry.
+updated so `sketchfab_models.py` stays consistent with the registry. Optional
+"sketchfab_author" supplies the exact API username when "author" is a full credit.
 """
 
 import argparse
@@ -66,7 +67,7 @@ def register(entry_path, glb_path, dimension):
         manifest = json.loads(manifest_path.read_text())
         name = entry["matches"][dimension][0]
         curated = {"id": model_id, "name": name, "uid": uid,
-                   "author": entry["author"].removesuffix(" on Sketchfab"),
+                   "author": entry.get("sketchfab_author") or entry["author"].removesuffix(" on Sketchfab"),
                    "license": LICENSE_SLUGS.get(entry["license"], entry["license"])}
         if entry.get("presentation"):
             curated["presentation"] = entry["presentation"]
