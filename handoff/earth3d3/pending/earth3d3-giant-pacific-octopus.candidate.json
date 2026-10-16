@@ -1,0 +1,23 @@
+{
+  "status": "UNREGISTERED: physical arm-span calibration unresolved",
+  "source_evidence": "content/visualizations/models/sources/earth3d3-imports/7fb48f6cbcd54149bb23837a3ac09b2e.json",
+  "asset": "handoff/earth3d3/pending/earth3d3-giant-pacific-octopus.glb",
+  "processing": "Remove disconnected calibration cube; static flatten/join/weld; attribute-aware permissive simplification toward 55k at error 0.008; preserve atlas repeat via integer U translation; quantize; JPEG 1024 px",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 2809048,
+  "sha256": "cd0a6e1b2373a8b3ce6704bf72c3e7cefc67a0b4e5dd05b4982b2c31599574a5",
+  "extensions_used": [
+    "KHR_materials_unlit",
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 2,
+  "triangle_count": 78930,
+  "animations": 0,
+  "skins": 0
+}

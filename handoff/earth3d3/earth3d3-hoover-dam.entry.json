@@ -1,0 +1,56 @@
+{
+  "id": "earth3d3-hoover-dam",
+  "source": "https://www.usbr.gov/history/hoover.html",
+  "basis_url": "https://www.usbr.gov/history/hoover.html",
+  "basis_label": "Dimensions and anatomical or structural basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Hoover Dam"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 221.40672,
+    "yaw": 78,
+    "pitch": 5,
+    "layout_width_factor": 1.28
+  },
+  "note": "Original dimensioned arch-gravity illustration of Hoover Dam, with Bureau of Reclamation constraints: 726.4 ft structural height, 1,244 ft developed crest length, 660 ft base thickness, 45 ft crest thickness, and four 395 ft intake towers. The 500 ft arch-axis radius is documented in a CEC-hosted historical study; developed crest length is an arc length, not the straight chord. Tower positions and profiles follow the broad arrangement in USACE Water Control Manual Plate 3. Intermediate curvature, canyon narrowing, thickness interpolation, tower diameters/caps/placement, contraction joints, roadway and parapets are schematic authored geometry, not engineering sections or a surveyed mesh. Canyon terrain, powerhouses, spillways and bypass bridge are omitted. The oblique resting view exposes the massive wedge section while keeping the displayed extent near the listed structural height.",
+  "processing": {
+    "script": "scripts/build_earth3d3_models.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d3-hoover-dam.md",
+    "measured_constraints": {
+      "structural_height_m": 221.40672,
+      "developed_crest_length_m": 379.1712,
+      "base_thickness_m": 201.168,
+      "crest_thickness_m": 13.716000000000001,
+      "crest_axis_radius_m": 152.4,
+      "intake_towers": 4,
+      "intake_tower_height_m": 120.396
+    },
+    "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+  },
+  "src": "content/visualizations/models/earth3d3-hoover-dam.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1568048,
+  "sha256": "e7cfa63616e2d2968ff1acfc21008b825ef79cf93c10a39387c6f856d0ad8a45",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 12,
+  "triangle_count": 34896,
+  "animations": 0,
+  "skins": 0
+}

@@ -71,7 +71,11 @@ def parts(path, presentation):
                     normals /= np.maximum(np.linalg.norm(normals, axis=1)[:, None], 1e-20)
                 uv = accessor(doc, binary, attrs['TEXCOORD_0']) if 'TEXCOORD_0' in attrs else None
                 tex = textures[pbr['baseColorTexture']['index']] if 'baseColorTexture' in pbr else None
+                tex_def = doc['textures'][pbr['baseColorTexture']['index']] if tex is not None else {}
+                sampler = doc.get('samplers', [{}])[tex_def.get('sampler', 0)] if doc.get('samplers') else {}
                 result.append(dict(pos=pos, indices=indices.reshape(-1, 3), color=color, normals=normals, uv=uv, tex=tex,
+                                   wrap=(sampler.get('wrapS', 10497), sampler.get('wrapT', 10497)),
+                                   unlit='KHR_materials_unlit' in material.get('extensions', {}),
                                    mask=material.get('alphaCutoff', .5) if material.get('alphaMode') == 'MASK' else .01))
         for child in node.get('children', []):
             visit(child, world)
@@ -131,6 +135,13 @@ def render(parts, side=False, size=600):
             rgba = weights @ part['color'][ids]
             if part['tex'] is not None and part['uv'] is not None:
                 uv = weights @ part['uv'][ids]
+                # Wrapping happens after interpolation; wrapping each vertex first
+                # would produce incorrect interpolation across tile boundaries.
+                for axis, mode in enumerate(part.get('wrap', (33071, 33071))):
+                    if mode == 10497:
+                        uv[:, axis] %= 1
+                    elif mode == 33648:
+                        uv[:, axis] = 1-np.abs(uv[:, axis] % 2-1)
                 texture = part['tex']
                 tx = np.clip((uv[:, 0] * (texture.shape[1]-1)).astype(int), 0, texture.shape[1]-1)
                 ty = np.clip((uv[:, 1] * (texture.shape[0]-1)).astype(int), 0, texture.shape[0]-1)
@@ -142,6 +153,8 @@ def render(parts, side=False, size=600):
                 normals = np.tile(normal, (len(weights), 1))
             normals /= np.maximum(np.linalg.norm(normals, axis=1)[:, None], 1e-20)
             shade = .4 + .6 * np.abs(normals @ light)
+            if part.get('unlit'):
+                shade[:] = 1
             rgb = np.clip(rgba[:, :3] * shade[:, None], 0, 1)
             keep = rgba[:, 3] >= part['mask']
             iy, ix = np.where(mask)

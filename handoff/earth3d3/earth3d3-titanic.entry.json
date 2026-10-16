@@ -1,0 +1,63 @@
+{
+  "id": "earth3d3-titanic",
+  "source": "https://sketchfab.com/3d-models/titanic-fa41e6b093b84010a462ef190210d90b",
+  "basis_url": "https://atlanticliners.com/white_star_home/titanic_home/",
+  "basis_label": "Published length and context",
+  "sketchfab_uid": "fa41e6b093b84010a462ef190210d90b",
+  "sketchfab_author": "farhad.Guli",
+  "author": "farhad.Guli on Sketchfab",
+  "license": "CC-BY-4.0",
+  "license_url": "http://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt",
+    "sources/earth3d3-titanic.md"
+  ],
+  "matches": {
+    "length": [
+      "Titanic"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "authored_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "measure_axis": "x",
+    "layout_width_factor": 1.02,
+    "yaw": -20,
+    "pitch": 12
+  },
+  "note": "Authored RMS Titanic exterior by farhad.Guli, uniformly calibrated bow to stern to the catalog\u2019s 269.1 m overall length (882 ft 9 in is 269.0622 m). Hull, four funnels, superstructure and source rigging are retained. This is an artist\u2019s ship, not a scan or engineering reconstruction; local proportions, colors, deck fittings and rigging are illustrative. Simplification retains source linework as well as triangle meshes. No waterline crop, sinking pose or wreck geometry is introduced.",
+  "processing": {
+    "script": "scripts/prepare_earth3d3_imports.mjs",
+    "source_evidence": "content/visualizations/models/sources/earth3d3-imports/fa41e6b093b84010a462ef190210d90b.json",
+    "source_note": "content/visualizations/models/sources/earth3d3-titanic.md",
+    "source_archive_sha256": "a09371940f8e2f4f21fd4b6153cd215932d6432691646cdde35eb87d543f2e07",
+    "source_archive_bytes": 1704991,
+    "staged_glb_sha256": "986ed1352ba0be8dbaadf1336cca0152b831def22ec57e34bbc9830cd1f68eec",
+    "operations": [
+      "Static scene flatten/join/weld/dedup; preserve proportions",
+      "Convert legacy specular/glossiness materials to metallic/roughness",
+      "Simplify triangles toward 55k, error limit 0.012; retain ship linework",
+      "JPEG color maps <=1024 px; tree alpha texture PNG <=512 px",
+      "Quantize positions/normals/in-range UVs; no compressed meshes or textures"
+    ]
+  },
+  "src": "content/visualizations/models/earth3d3-titanic.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 2213180,
+  "sha256": "3e05e4846d7cdf6f92ddc85cabafe7e111f571dbfe34944e130575b13580db07",
+  "extensions_used": [
+    "KHR_mesh_quantization"
+  ],
+  "extensions_required": [
+    "KHR_mesh_quantization"
+  ],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 23,
+  "triangle_count": 79005,
+  "animations": 0,
+  "skins": 0
+}

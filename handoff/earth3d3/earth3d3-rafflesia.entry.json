@@ -1,0 +1,51 @@
+{
+  "id": "earth3d3-rafflesia",
+  "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:316069-1/general-information",
+  "basis_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:316069-1/general-information",
+  "basis_label": "Dimensions and anatomical or structural basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Rafflesia"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1,
+    "pitch": 62,
+    "yaw": -8,
+    "layout_width_factor": 1.04
+  },
+  "note": "Original botanical illustration of a representative 1 m Rafflesia arnoldii flower. Five fleshy, pale-spotted red-brown perigone lobes surround an open diaphragm and floral chamber with a central column and disk bearing processes. These anatomical relationships follow Kew, Nikolov et al. (2013) and the SIU Parasitic Plant Connection. Only the overall 1 m flower span is calibrated; lobe contours, thickness, chamber proportions, process count, bracts, colors and spot pattern are authored, not a measured specimen or scan. No leaves or independent stem are invented; the host and internal parasite are omitted.",
+  "processing": {
+    "script": "scripts/build_earth3d3_models.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d3-rafflesia.md",
+    "measured_constraints": {
+      "flower_span_m": 1,
+      "perigone_lobes": 5
+    },
+    "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+  },
+  "src": "content/visualizations/models/earth3d3-rafflesia.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 752236,
+  "sha256": "65c4b1b6d4dd526ed77f964ffb486addec699df14bc5de217b8e8c46558c5967",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 20,
+  "triangle_count": 32396,
+  "animations": 0,
+  "skins": 0
+}

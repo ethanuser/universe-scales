@@ -1,0 +1,21 @@
+{
+  "uid": "2c34fb28a756474eb8072a450c8f632b",
+  "name": "Redwood Tree 2",
+  "author": "rhcreations",
+  "source": "https://sketchfab.com/3d-models/redwood-tree-2-2c34fb28a756474eb8072a450c8f632b",
+  "api_url": "https://api.sketchfab.com/v3/models/2c34fb28a756474eb8072a450c8f632b",
+  "isDownloadable": true,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "A Redwood Tree with transparency made using Blender 2.79 and the cycles render engine.\n\nCheck out my blog at: https://rhcreations.tumblr.com/",
+  "source_archive_sha256": "66cba62b0e515c09ed0fe83a3a83522be3507df61e25acdc6bd91d996529bacb",
+  "source_archive_bytes": 16039429,
+  "staged_glb_sha256": "14638cbd1c147f62ca36d891e78c3a1626690ecc8b3f38e43995f4a70b0aa471",
+  "retrieved": "2026-10-16"
+}

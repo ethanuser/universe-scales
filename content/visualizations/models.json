@@ -11249,6 +11249,395 @@
       "triangle_count": 26048,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "earth3d3-giant-squid",
+      "source": "https://ocean.si.edu/ocean-life/invertebrates/giant-squid",
+      "basis_url": "https://ocean.si.edu/ocean-life/invertebrates/giant-squid",
+      "basis_label": "Dimensions and anatomical or structural basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Giant Squid"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 13,
+        "yaw": -8,
+        "pitch": 10,
+        "roll": -8,
+        "layout_width_factor": 1.02
+      },
+      "note": "Original Architeuthis anatomical illustration at a 13 m posterior-tip-to-feeding-club span, following the Smithsonian and Natural History Museum female maximum-length estimate. Eight shorter arms, two long feeding tentacles with distal clubs, terminal fins and large lateral eyes follow the Smithsonian anatomical diagram. All intermediate proportions, arm poses, sucker sizes/counts, surface colors and fin contours are authored; this is not a specimen reconstruction, scan, or claim that all squid reach this size. Feeding tentacles are extended to make the total-length definition visible. There are no colossal-squid hooks.",
+      "processing": {
+        "script": "scripts/build_earth3d3_models.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d3-giant-squid.md",
+        "measured_constraints": {
+          "total_length_m": 13,
+          "arms": 8,
+          "feeding_tentacles": 2
+        },
+        "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+      },
+      "src": "content/visualizations/models/earth3d3-giant-squid.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1379060,
+      "sha256": "1df0fa2c87478eb7cfca628d1c40148a5bdabb717e9c3ae3c0cb663233770260",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 67316,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d3-hoover-dam",
+      "source": "https://www.usbr.gov/history/hoover.html",
+      "basis_url": "https://www.usbr.gov/history/hoover.html",
+      "basis_label": "Dimensions and anatomical or structural basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Hoover Dam"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 221.40672,
+        "yaw": 78,
+        "pitch": 5,
+        "layout_width_factor": 1.28
+      },
+      "note": "Original dimensioned arch-gravity illustration of Hoover Dam, with Bureau of Reclamation constraints: 726.4 ft structural height, 1,244 ft developed crest length, 660 ft base thickness, 45 ft crest thickness, and four 395 ft intake towers. The 500 ft arch-axis radius is documented in a CEC-hosted historical study; developed crest length is an arc length, not the straight chord. Tower positions and profiles follow the broad arrangement in USACE Water Control Manual Plate 3. Intermediate curvature, canyon narrowing, thickness interpolation, tower diameters/caps/placement, contraction joints, roadway and parapets are schematic authored geometry, not engineering sections or a surveyed mesh. Canyon terrain, powerhouses, spillways and bypass bridge are omitted. The oblique resting view exposes the massive wedge section while keeping the displayed extent near the listed structural height.",
+      "processing": {
+        "script": "scripts/build_earth3d3_models.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d3-hoover-dam.md",
+        "measured_constraints": {
+          "structural_height_m": 221.40672,
+          "developed_crest_length_m": 379.1712,
+          "base_thickness_m": 201.168,
+          "crest_thickness_m": 13.716000000000001,
+          "crest_axis_radius_m": 152.4,
+          "intake_towers": 4,
+          "intake_tower_height_m": 120.396
+        },
+        "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+      },
+      "src": "content/visualizations/models/earth3d3-hoover-dam.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1568048,
+      "sha256": "e7cfa63616e2d2968ff1acfc21008b825ef79cf93c10a39387c6f856d0ad8a45",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 12,
+      "triangle_count": 34896,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d3-hyperion-redwood",
+      "source": "https://sketchfab.com/3d-models/redwood-tree-2-2c34fb28a756474eb8072a450c8f632b",
+      "basis_url": "https://www.guinnessworldrecords.com/world-records/tallest-tree-living",
+      "basis_label": "Published length and context",
+      "sketchfab_uid": "2c34fb28a756474eb8072a450c8f632b",
+      "sketchfab_author": "rhcreations",
+      "author": "rhcreations on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/earth3d3-hyperion-redwood.md"
+      ],
+      "matches": {
+        "length": [
+          "Hyperion"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "measure_axis": "y",
+        "layout_width_factor": 1.02
+      },
+      "note": "Redwood illustration by rhcreations, uniformly scaled base to crown to the current catalog\u2019s 116.2 m Hyperion height (the brief gives 116.22 m). It is a generic redwood tree model, not a scan, reconstruction, crown map or girth measurement of Hyperion. The shape, branch structure and foliage are authored; transparent foliage cards are retained as alpha-tested double-sided surfaces. The source\u2019s legacy specular/glossiness materials are converted to metallic/roughness. Guinness documents 116.07 m in 2019; that older measurement does not independently verify the current 2026 catalog figure. No exact location is included.",
+      "processing": {
+        "script": "scripts/prepare_earth3d3_imports.mjs",
+        "source_evidence": "content/visualizations/models/sources/earth3d3-imports/2c34fb28a756474eb8072a450c8f632b.json",
+        "source_note": "content/visualizations/models/sources/earth3d3-hyperion-redwood.md",
+        "source_archive_sha256": "66cba62b0e515c09ed0fe83a3a83522be3507df61e25acdc6bd91d996529bacb",
+        "source_archive_bytes": 16039429,
+        "staged_glb_sha256": "14638cbd1c147f62ca36d891e78c3a1626690ecc8b3f38e43995f4a70b0aa471",
+        "operations": [
+          "Static scene flatten/join/weld/dedup; preserve proportions",
+          "Convert legacy specular/glossiness materials to metallic/roughness",
+          "Simplify triangles toward 55k, error limit 0.012; retain ship linework",
+          "JPEG color maps <=1024 px; tree alpha texture PNG <=512 px",
+          "Quantize positions/normals/in-range UVs; no compressed meshes or textures"
+        ]
+      },
+      "src": "content/visualizations/models/earth3d3-hyperion-redwood.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1319316,
+      "sha256": "c7bc0772055ab1f4fca225ce754240a1a20919ef9b4ceb8e9cfed019282ecb99",
+      "extensions_used": [
+        "KHR_materials_ior",
+        "KHR_materials_specular",
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 3339,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d3-lolong",
+      "source": "https://www.guinnessworldrecords.com/world-records/117291-largest-crocodile-in-captivity-ever",
+      "basis_url": "https://www.guinnessworldrecords.com/world-records/117291-largest-crocodile-in-captivity-ever",
+      "basis_label": "Dimensions and anatomical or structural basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Lolong the Crocodile"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 6.17,
+        "yaw": -15,
+        "pitch": 20,
+        "layout_width_factor": 1.02
+      },
+      "note": "Original adult saltwater crocodile (Crocodylus porosus) anatomical illustration uniformly calibrated to Lolong\u2019s Guinness-verified 6.17 m nose-to-tail length. The Australian Museum supplies the broad snout, heavy adult build, dorsal eyes/nostrils, osteoderms, muscular tail and cream-colored belly. Head, girth, limbs, scute pattern/count, tail profile, colors and pose are authored generic adult geometry, not measurements or a reconstruction of Lolong himself. Mouth is almost closed; visible teeth are schematic and not a dental inventory. This is not a scan, juvenile, freshwater crocodile, alligator or game asset.",
+      "processing": {
+        "script": "scripts/build_earth3d3_models.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d3-lolong.md",
+        "measured_constraints": {
+          "nose_to_tail_length_m": 6.17
+        },
+        "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+      },
+      "src": "content/visualizations/models/earth3d3-lolong.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 724616,
+      "sha256": "c789e33af25d047232632c1b1d34e3e429895eec291ce29aa8577c97e8d36ac4",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 7,
+      "triangle_count": 33421,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d3-prelude-flng",
+      "source": "https://www.shell.com.au/about-us/what-we-do/gas-and-lng/prelude-flng-facility/prelude-overview.html",
+      "basis_url": "https://www.shell.com.au/about-us/what-we-do/gas-and-lng/prelude-flng-facility/prelude-overview.html",
+      "basis_label": "Dimensions and anatomical or structural basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Prelude FLNG"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 488,
+        "yaw": -20,
+        "pitch": 13,
+        "layout_width_factor": 1.05
+      },
+      "note": "Original exterior illustration of Prelude FLNG, using Shell\u2019s 488 m overall length and 74 m width and the International Gas Union 2015\u20132018 FLNG report\u2019s 42 m hull depth. The full hull is shown. Stern accommodation, the central pipe corridor, process modules and forward turret follow the broad arrangement visible in Shell\u2019s construction films; fourteen module frames refer to Shell\u2019s stated fourteen topside modules. Hull sections, module dimensions/equipment, crane and flare geometry, colors and all smaller details are authored schematic approximations, not a shipyard or process-engineering model. Subsea turret extent, mooring chains, risers, internal tanks and operational waterline are omitted.",
+      "processing": {
+        "script": "scripts/build_earth3d3_models.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d3-prelude-flng.md",
+        "measured_constraints": {
+          "length_m": 488,
+          "beam_m": 74,
+          "hull_depth_m": 42,
+          "topside_modules": 14
+        },
+        "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+      },
+      "src": "content/visualizations/models/earth3d3-prelude-flng.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 526760,
+      "sha256": "8dea2bae9e1ede600e1dbfc4d0e0600eb29ec33e365e71ea90aa0de2871ce762",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 9,
+      "triangle_count": 7892,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d3-rafflesia",
+      "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:316069-1/general-information",
+      "basis_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:316069-1/general-information",
+      "basis_label": "Dimensions and anatomical or structural basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Rafflesia"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1,
+        "pitch": 62,
+        "yaw": -8,
+        "layout_width_factor": 1.04
+      },
+      "note": "Original botanical illustration of a representative 1 m Rafflesia arnoldii flower. Five fleshy, pale-spotted red-brown perigone lobes surround an open diaphragm and floral chamber with a central column and disk bearing processes. These anatomical relationships follow Kew, Nikolov et al. (2013) and the SIU Parasitic Plant Connection. Only the overall 1 m flower span is calibrated; lobe contours, thickness, chamber proportions, process count, bracts, colors and spot pattern are authored, not a measured specimen or scan. No leaves or independent stem are invented; the host and internal parasite are omitted.",
+      "processing": {
+        "script": "scripts/build_earth3d3_models.py",
+        "units": "metres",
+        "source_note": "content/visualizations/models/sources/earth3d3-rafflesia.md",
+        "measured_constraints": {
+          "flower_span_m": 1,
+          "perigone_lobes": 5
+        },
+        "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+      },
+      "src": "content/visualizations/models/earth3d3-rafflesia.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 752236,
+      "sha256": "65c4b1b6d4dd526ed77f964ffb486addec699df14bc5de217b8e8c46558c5967",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 20,
+      "triangle_count": 32396,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d3-titanic",
+      "source": "https://sketchfab.com/3d-models/titanic-fa41e6b093b84010a462ef190210d90b",
+      "basis_url": "https://atlanticliners.com/white_star_home/titanic_home/",
+      "basis_label": "Published length and context",
+      "sketchfab_uid": "fa41e6b093b84010a462ef190210d90b",
+      "sketchfab_author": "farhad.Guli",
+      "author": "farhad.Guli on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/earth3d3-titanic.md"
+      ],
+      "matches": {
+        "length": [
+          "Titanic"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "authored_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "measure_axis": "x",
+        "layout_width_factor": 1.02,
+        "yaw": -20,
+        "pitch": 12
+      },
+      "note": "Authored RMS Titanic exterior by farhad.Guli, uniformly calibrated bow to stern to the catalog\u2019s 269.1 m overall length (882 ft 9 in is 269.0622 m). Hull, four funnels, superstructure and source rigging are retained. This is an artist\u2019s ship, not a scan or engineering reconstruction; local proportions, colors, deck fittings and rigging are illustrative. Simplification retains source linework as well as triangle meshes. No waterline crop, sinking pose or wreck geometry is introduced.",
+      "processing": {
+        "script": "scripts/prepare_earth3d3_imports.mjs",
+        "source_evidence": "content/visualizations/models/sources/earth3d3-imports/fa41e6b093b84010a462ef190210d90b.json",
+        "source_note": "content/visualizations/models/sources/earth3d3-titanic.md",
+        "source_archive_sha256": "a09371940f8e2f4f21fd4b6153cd215932d6432691646cdde35eb87d543f2e07",
+        "source_archive_bytes": 1704991,
+        "staged_glb_sha256": "986ed1352ba0be8dbaadf1336cca0152b831def22ec57e34bbc9830cd1f68eec",
+        "operations": [
+          "Static scene flatten/join/weld/dedup; preserve proportions",
+          "Convert legacy specular/glossiness materials to metallic/roughness",
+          "Simplify triangles toward 55k, error limit 0.012; retain ship linework",
+          "JPEG color maps <=1024 px; tree alpha texture PNG <=512 px",
+          "Quantize positions/normals/in-range UVs; no compressed meshes or textures"
+        ]
+      },
+      "src": "content/visualizations/models/earth3d3-titanic.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2213180,
+      "sha256": "3e05e4846d7cdf6f92ddc85cabafe7e111f571dbfe34944e130575b13580db07",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 23,
+      "triangle_count": 79005,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

@@ -1,0 +1,21 @@
+{
+  "uid": "fa41e6b093b84010a462ef190210d90b",
+  "name": "Titanic",
+  "author": "farhad.Guli",
+  "source": "https://sketchfab.com/3d-models/titanic-fa41e6b093b84010a462ef190210d90b",
+  "api_url": "https://api.sketchfab.com/v3/models/fa41e6b093b84010a462ef190210d90b",
+  "isDownloadable": true,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "Titanic 2012",
+  "source_archive_sha256": "a09371940f8e2f4f21fd4b6153cd215932d6432691646cdde35eb87d543f2e07",
+  "source_archive_bytes": 1704991,
+  "staged_glb_sha256": "986ed1352ba0be8dbaadf1336cca0152b831def22ec57e34bbc9830cd1f68eec",
+  "retrieved": "2026-10-16"
+}

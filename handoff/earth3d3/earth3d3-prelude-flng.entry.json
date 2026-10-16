@@ -1,0 +1,53 @@
+{
+  "id": "earth3d3-prelude-flng",
+  "source": "https://www.shell.com.au/about-us/what-we-do/gas-and-lng/prelude-flng-facility/prelude-overview.html",
+  "basis_url": "https://www.shell.com.au/about-us/what-we-do/gas-and-lng/prelude-flng-facility/prelude-overview.html",
+  "basis_label": "Dimensions and anatomical or structural basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Prelude FLNG"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 488,
+    "yaw": -20,
+    "pitch": 13,
+    "layout_width_factor": 1.05
+  },
+  "note": "Original exterior illustration of Prelude FLNG, using Shell\u2019s 488 m overall length and 74 m width and the International Gas Union 2015\u20132018 FLNG report\u2019s 42 m hull depth. The full hull is shown. Stern accommodation, the central pipe corridor, process modules and forward turret follow the broad arrangement visible in Shell\u2019s construction films; fourteen module frames refer to Shell\u2019s stated fourteen topside modules. Hull sections, module dimensions/equipment, crane and flare geometry, colors and all smaller details are authored schematic approximations, not a shipyard or process-engineering model. Subsea turret extent, mooring chains, risers, internal tanks and operational waterline are omitted.",
+  "processing": {
+    "script": "scripts/build_earth3d3_models.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d3-prelude-flng.md",
+    "measured_constraints": {
+      "length_m": 488,
+      "beam_m": 74,
+      "hull_depth_m": 42,
+      "topside_modules": 14
+    },
+    "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+  },
+  "src": "content/visualizations/models/earth3d3-prelude-flng.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 526760,
+  "sha256": "8dea2bae9e1ede600e1dbfc4d0e0600eb29ec33e365e71ea90aa0de2871ce762",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 9,
+  "triangle_count": 7892,
+  "animations": 0,
+  "skins": 0
+}
