@@ -1,0 +1,58 @@
+{
+ "id": "nasa-parker-perihelion-distance",
+ "author": "NASA; diagram assembled by Universe Scales",
+ "source": "https://svs.gsfc.nasa.gov/14741/",
+ "basis_url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+ "basis_label": "NASA solar radius",
+ "matches": {
+  "length": [
+   "Parker Solar Probe Closest Approach"
+  ]
+ },
+ "representation": "measurement-diagram",
+ "presentation": {
+  "reference_size": 1,
+  "roughness": 1,
+  "metalness": 0,
+  "layout_width_factor": 1.35
+ },
+ "note": "A Sun-to-encounter distance diagram for 24 December 2024. The ruler starts at the visible solar surface and spans the catalog altitude of about 6.1 million km; it does not start at the Sun's center. The Sun has the same physical scale. The amber point only marks the encounter location and is not the probe's size. The direction is illustrative, with no claim of orbital orientation or a full trajectory.",
+ "processing": {
+  "altitude_m": 6115507200,
+  "solar_radius_m": 695700000,
+  "source_models": [
+   {
+    "id": "nasa-sun",
+    "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+    "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+   }
+  ],
+  "operations": [
+   "Reuse the existing NASA Sun mesh and texture",
+   "Place a location marker one altitude beyond the photosphere",
+   "Author a surface-to-marker ruler; retain physical Sun/altitude proportions"
+  ]
+ },
+ "src": "content/visualizations/models/nasa-parker-perihelion-distance.glb",
+ "geometry": "mesh",
+ "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+ "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+ "license_files": [
+  "licenses/nasa-media-guidelines.html",
+  "licenses/nasa-3d-resources.README.md"
+ ],
+ "volume_semantics": "not_applicable",
+ "closed_volume_checked": false,
+ "format": "glb",
+ "gltf_version": "2.0",
+ "bytes": 364000,
+ "sha256": "4072c0c43e1894c65942def8eab0198f97dd1f361cb401979ffec64a92445cc4",
+ "extensions_used": [],
+ "extensions_required": [],
+ "decompression_required": [],
+ "external_resources": [],
+ "mesh_count": 3,
+ "triangle_count": 3296,
+ "animations": 0,
+ "skins": 0
+}

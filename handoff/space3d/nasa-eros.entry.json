@@ -1,0 +1,90 @@
+{
+  "id": "nasa-eros",
+  "source": "https://science.nasa.gov/resource/eros-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/Eros_1_10.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "NASA's low-polygon elongated mesh is retained, without substituting a sphere. Longest world-axis extent is calibrated to the item's long-axis length.",
+  "matches": {
+    "length": [
+      "Eros"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-eros.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 3260.121826171875
+  },
+  "reference": "content/visualizations/models/sources/nasa-eros.md",
+  "source_sha256": "4e4eab5ebf3553f78713b48db7dde601634094e85363caa5b48fbd869933b7b2",
+  "source_bytes": 2392188,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps",
+      "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+    ],
+    "prepared_sha256": "4e4eab5ebf3553f78713b48db7dde601634094e85363caa5b48fbd869933b7b2",
+    "textures": [
+      {
+        "name": "eros_norm.png",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "name": "eros_diff.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -1756.4544677734375,
+        -826.4843139648438,
+        -604.22119140625
+      ],
+      "max": [
+        1503.6673583984375,
+        854.3292846679688,
+        580.5714111328125
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 995724,
+  "sha256": "6c453ffd568adc0ab3904cc93ff3ecea3c8283e112f013657ae24da611e91f10",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 1536,
+  "animations": 0,
+  "skins": 0
+}

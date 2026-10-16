@@ -1,0 +1,35 @@
+{
+  "source_url": "https://pds-geosciences.wustl.edu/mgs/mgs-m-mola-5-megdr-l3-v1/mgsl_300x/meg016/megt90n000eb.img",
+  "source_sha256": "d18d9b9ab8c5516d02e157dd2cde0f1d0d160c21940e953ba22391269a545e7b",
+  "source_bytes": 33177600,
+  "label_sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a",
+  "operations": "Retain exact original int16 samples and their global row/column indices; no interpolation, smoothing, height correction or exaggeration",
+  "windows": [
+    {
+      "id": "mola-olympus-mons",
+      "item": "Olympus Mons Width",
+      "bounds": [
+        219.8,
+        12.5,
+        232.6,
+        24.5
+      ],
+      "stride": 2,
+      "reference_m": 585000,
+      "basis": "https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=27_Mons&Target=20_Mars"
+    },
+    {
+      "id": "mola-valles-marineris",
+      "item": "Valles Marineris",
+      "bounds": [
+        252,
+        -20,
+        322,
+        2
+      ],
+      "stride": 4,
+      "reference_m": 4000000,
+      "basis": "https://www.usgs.gov/centers/astrogeology-science-center/science/valles-marineris-grand-canyon-mars"
+    }
+  ]
+}

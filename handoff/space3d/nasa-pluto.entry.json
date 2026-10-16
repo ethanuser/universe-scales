@@ -1,0 +1,77 @@
+{
+  "id": "nasa-pluto",
+  "source": "https://science.nasa.gov/resource/pluto-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/l/Pluto_1_2374.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "New Horizons coverage is uneven: sharp encounter-hemisphere detail and lower-resolution or filled regions elsewhere are part of the NASA map.",
+  "matches": {
+    "length": [
+      "Pluto"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-pluto.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0000305175781
+  },
+  "reference": "content/visualizations/models/sources/nasa-pluto.md",
+  "source_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+  "source_bytes": 7009348,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+    "textures": [
+      {
+        "name": "pluto_equi.jpg",
+        "original_size": [
+          4096,
+          2048
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -499.9980163574219,
+        -499.989013671875,
+        -500.0010070800781
+      ],
+      "max": [
+        500.00201416015625,
+        500.0110168457031,
+        499.9989929199219
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 554360,
+  "sha256": "b66471a0e831862b61acdc2984cc0aa9fb624f5d9fbc41cc73e3b1cd60198493",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 20448,
+  "animations": 0,
+  "skins": 0
+}

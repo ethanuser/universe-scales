@@ -1,0 +1,190 @@
+{
+  "id": "nasa-hubble-space-telescope",
+  "source": "https://science.nasa.gov/resource/hubble-space-telescope-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/h/Hubble.glb",
+  "author": "NASA (individual model artist not identified)",
+  "note": "The open aperture door and solar arrays are retained. The source body has an approximately 13.2-unit axial barrel; the open door extends beyond it. Calibration uses that barrel length, with the extent overhead documented separately.",
+  "matches": {
+    "length": [
+      "Hubble Space Telescope"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-hubble-space-telescope.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0.15,
+    "reference_size": 13.2,
+    "yaw": -25,
+    "roll": 20,
+    "environment": 0.7
+  },
+  "reference": "content/visualizations/models/sources/nasa-hubble-space-telescope.md",
+  "source_sha256": "e6a40640d6846e8f5d9438821ebe2d7de730c8dadba1cc9dfdbcc148ff1052cd",
+  "source_bytes": 11463124,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps",
+      "Remove the untextured helper cube mesh attached to _root; retain all Hubble children",
+      "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+    ],
+    "prepared_sha256": "e6a40640d6846e8f5d9438821ebe2d7de730c8dadba1cc9dfdbcc148ff1052cd",
+    "textures": [
+      {
+        "name": "hubble_tex_01.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "hubble_AO_1.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "hubble_AO_light.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "foil_n.jpg",
+        "original_size": [
+          512,
+          512
+        ],
+        "size": [
+          512,
+          512
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "name": "hubble_tex_01.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "hubble_tex_03.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "hubble_tex_01.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "hubble_tex_02.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "hubble_tex_03.jpg",
+        "original_size": [
+          1024,
+          1024
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "name": "clear.png.001",
+        "original_size": [
+          128,
+          128
+        ],
+        "size": [
+          128,
+          128
+        ],
+        "mime_type": "image/png"
+      }
+    ],
+    "calibration": "explicit",
+    "source_bounds": {
+      "min": [
+        -5.5334738351703,
+        -6.214977327909992,
+        -6.343234488968063
+      ],
+      "max": [
+        5.5334654798313405,
+        10.511965688464784,
+        6.017541792966906
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 2751768,
+  "sha256": "584011de3b7f3002f2f1106faa104ef9f9cd12824af9c891cfc72bd41ab84fa2",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 10,
+  "triangle_count": 21117,
+  "animations": 0,
+  "skins": 0
+}

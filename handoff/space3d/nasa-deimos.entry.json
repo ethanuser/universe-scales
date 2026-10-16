@@ -1,0 +1,78 @@
+{
+ "id": "nasa-deimos",
+ "source": "https://science.nasa.gov/resource/deimos-mars-moon-3d-model/",
+ "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24879_Deimos_1_1000.glb",
+ "author": "NASA/JPL-Caltech",
+ "note": "NASA/JPL-Caltech's irregular Deimos mesh is retained. The mean-diameter item is calibrated by the mesh's equivalent-volume diameter, not its longest dimension. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+ "matches": {
+  "length": [
+   "Deimos"
+  ]
+ },
+ "representation": "scientific-agency-illustration",
+ "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+ "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+ "license_files": [
+  "licenses/nasa-media-guidelines.html",
+  "licenses/nasa-3d-resources.README.md"
+ ],
+ "geometry": "mesh",
+ "src": "content/visualizations/models/nasa-deimos.glb",
+ "presentation": {
+  "roughness": 1,
+  "metalness": 0,
+  "reference_size": 11.765826258871545,
+  "layout_width_factor": 1.35
+ },
+ "reference": "content/visualizations/models/sources/nasa-deimos.md",
+ "source_sha256": "5d5da763970acffe88aac26d3c3bd0fa66c5bef251d1bb4bfe2ae5fd723507e4",
+ "source_bytes": 1600012,
+ "processing": {
+  "operations": [
+   "Retain original NASA geometry, node transforms, UVs and materials",
+   "Resize embedded images; preserve alpha and lossless normal maps"
+  ],
+  "prepared_sha256": "5d5da763970acffe88aac26d3c3bd0fa66c5bef251d1bb4bfe2ae5fd723507e4",
+  "textures": [
+   {
+    "name": "deimos_tex_01.jpg",
+    "original_size": [
+     1024,
+     1024
+    ],
+    "size": [
+     1024,
+     1024
+    ],
+    "mime_type": "image/jpeg"
+   }
+  ],
+  "calibration": "volume-equivalent-diameter",
+  "source_bounds": {
+   "min": [
+    -7.231721878051758,
+    -6.287788391113281,
+    -5.431387424468994
+   ],
+   "max": [
+    7.780735015869141,
+    5.581928730010986,
+    5.074018955230713
+   ]
+  }
+ },
+ "volume_semantics": "not_applicable",
+ "closed_volume_checked": true,
+ "format": "glb",
+ "gltf_version": "2.0",
+ "bytes": 837388,
+ "sha256": "a1b4db5340dd9c564e871223d7b143529f789c1a80cd7a86d0c4ff88e3b19ba8",
+ "extensions_used": [],
+ "extensions_required": [],
+ "decompression_required": [],
+ "external_resources": [],
+ "mesh_count": 1,
+ "triangle_count": 32512,
+ "animations": 0,
+ "skins": 0
+}

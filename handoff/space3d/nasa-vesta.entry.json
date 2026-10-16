@@ -1,0 +1,90 @@
+{
+  "id": "nasa-vesta",
+  "source": "https://science.nasa.gov/resource/vesta-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/v/Vesta_1_100.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "NASA's irregular shape and source normal map are retained; fine normal-map detail does not change the calibrated mesh volume. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+  "matches": {
+    "length": [
+      "Vesta"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-vesta.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 5230.542455489969
+  },
+  "reference": "content/visualizations/models/sources/nasa-vesta.md",
+  "source_sha256": "6f00df4977c211a75fce65dd2badc9f39b12b58d3386e130c89f491dbc8f530b",
+  "source_bytes": 5073448,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps",
+      "Generate MikkTSpace tangents for normal-mapped primitives; prune unused export resources"
+    ],
+    "prepared_sha256": "6f00df4977c211a75fce65dd2badc9f39b12b58d3386e130c89f491dbc8f530b",
+    "textures": [
+      {
+        "name": "vesta_n.png",
+        "original_size": [
+          2048,
+          1024
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "name": "vesta_diff.jpg",
+        "original_size": [
+          2048,
+          1024
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "volume-equivalent-diameter",
+    "source_bounds": {
+      "min": [
+        -2824.76953125,
+        -2307.293701171875,
+        -2748.428955078125
+      ],
+      "max": [
+        2908.0302734375,
+        2321.3359375,
+        2813.850830078125
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": true,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1692952,
+  "sha256": "7244a7ee2fba6c7186bab1f9fcba346ec8dca98632a5a535da87773aefdf5c6a",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 34560,
+  "animations": 0,
+  "skins": 0
+}

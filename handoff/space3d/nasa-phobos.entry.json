@@ -1,0 +1,77 @@
+{
+  "id": "nasa-phobos",
+  "source": "https://science.nasa.gov/resource/phobos-mars-moon-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24878_Phobos_1_1000.glb",
+  "author": "NASA/JPL-Caltech",
+  "note": "NASA/JPL-Caltech's irregular Phobos mesh is retained. The mean-diameter item is calibrated by the mesh's equivalent-volume diameter, not its longest dimension. Uniform scale uses the equivalent-volume diameter of the closed source mesh; no axes are stretched independently.",
+  "matches": {
+    "length": [
+      "Phobos"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-phobos.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 23.37549105003315
+  },
+  "reference": "content/visualizations/models/sources/nasa-phobos.md",
+  "source_sha256": "757712101e4fbcf9527942ee664a3bc6dfe3ab460466b760f4bf51ee85dbd8d3",
+  "source_bytes": 3855016,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "757712101e4fbcf9527942ee664a3bc6dfe3ab460466b760f4bf51ee85dbd8d3",
+    "textures": [
+      {
+        "name": "phobos_tex_01.jpg",
+        "original_size": [
+          2048,
+          2048
+        ],
+        "size": [
+          1024,
+          1024
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "volume-equivalent-diameter",
+    "source_bounds": {
+      "min": [
+        -12.317031860351562,
+        -9.982095718383789,
+        -14.236000061035156
+      ],
+      "max": [
+        12.054115295410156,
+        10.538873672485352,
+        12.80151653289795
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": true,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 872112,
+  "sha256": "5ce0a4516b898c98b8202d630eb8e2634a29b430a6d32c51bfd11d5d95b074bc",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 32040,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,77 @@
+{
+  "id": "nasa-uranus",
+  "source": "https://science.nasa.gov/resource/uranus-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/u/Uranus_1_51118.glb",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "note": "Cloud appearance is an idealized NASA visualization; the sphere is not a time-resolved weather map.",
+  "matches": {
+    "length": [
+      "Uranus"
+    ]
+  },
+  "representation": "scientific-agency-illustration",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/nasa-uranus.glb",
+  "presentation": {
+    "roughness": 1,
+    "metalness": 0,
+    "reference_size": 1000.0
+  },
+  "reference": "content/visualizations/models/sources/nasa-uranus.md",
+  "source_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+  "source_bytes": 172652,
+  "processing": {
+    "operations": [
+      "Retain original NASA geometry, node transforms, UVs and materials",
+      "Resize embedded images; preserve alpha and lossless normal maps"
+    ],
+    "prepared_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+    "textures": [
+      {
+        "name": "Image_0",
+        "original_size": [
+          1024,
+          512
+        ],
+        "size": [
+          1024,
+          512
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ],
+    "calibration": "longest-extent",
+    "source_bounds": {
+      "min": [
+        -499.9960021972656,
+        -488.53648230166556,
+        -500.00050454770746
+      ],
+      "max": [
+        500.0039978027344,
+        488.53648230126214,
+        499.9994669500867
+      ]
+    }
+  },
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 152404,
+  "sha256": "0d0b8cdb16495c6319cc377871e6d84d235c60be02a5c4ebe3e241a747c80ffa",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 6048,
+  "animations": 0,
+  "skins": 0
+}

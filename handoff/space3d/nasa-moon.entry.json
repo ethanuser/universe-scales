@@ -1,0 +1,82 @@
+{
+  "id": "nasa-moon",
+  "source": "https://solarsystem.nasa.gov/resources/2366/earths-moon-3d-model/",
+  "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Moon_1_3474.glb",
+  "author": "NASA (individual model artist not identified in current asset metadata)",
+  "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "matches": {
+    "length": [
+      "Moon"
+    ],
+    "area": [
+      "Moon surface area"
+    ],
+    "volume": [
+      "Moon volume"
+    ]
+  },
+  "geometry": "sphere",
+  "note": "NASA-authored topology, UVs and materials; adapted to a centered unit sphere. An idealized spherical scale model, not a geodetic/oblateness or terrain model. Use r=(3V/(4*pi))^(1/3) for volume or r=sqrt(A/(4*pi)) for total surface area. Texture resolution reduced to at most 1024 pixels; see processing metadata. Legacy landing page is unavailable; the official NASA asset-host GLB remains available.",
+  "src": "content/visualizations/models/nasa-moon.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 295908,
+  "sha256": "3c1236e03b1a42e067a27cc0ae7c31889f99f121f2b7c690d80dc199f72b98e9",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 3072,
+  "animations": 0,
+  "skins": 0,
+  "source_sha256": "810baf23a81d10f5ba58a13c505dd6634b930ce46d2eabf99504d9bd059b3c90",
+  "source_bytes": 3276576,
+  "processing": {
+    "operations": [
+      "Normalize source POSITION and NORMAL vectors to unit radius; retain topology/UVs/materials",
+      "Remove source node scale; preserve source node rotation",
+      "Resize textures to <=1024px; JPEG color/emission quality 88, PNG normals",
+      "Pad texture-atlas gutters with nearest UV-island colors to prevent mipmap seam bleeding"
+    ],
+    "source_bounds": {
+      "min": [
+        -500.0000305175781,
+        -499.3760070800781,
+        -500.0000305175781
+      ],
+      "max": [
+        500.0000305175781,
+        499.3760070800781,
+        500.0000305175781
+      ],
+      "node": {
+        "mesh": 0,
+        "name": "Cube.008"
+      }
+    },
+    "textures": [
+      {
+        "name": "moon_diff.jpg",
+        "original_size": [
+          2048,
+          1536
+        ],
+        "size": [
+          1024,
+          768
+        ],
+        "mime_type": "image/jpeg"
+      }
+    ]
+  },
+  "volume_semantics": "analytic_sphere",
+  "closed_volume_checked": false,
+  "normalized_radius": 1,
+  "representation": "scientific-agency-illustration"
+}
