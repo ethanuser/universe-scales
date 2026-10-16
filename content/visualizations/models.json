@@ -12137,6 +12137,1001 @@
       "triangle_count": 38496,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "space3d3-alpha-cen-relative-orbit",
+      "matches": {
+        "length": [
+          "Alpha Centauri A-B Orbit"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://arxiv.org/html/1601.01636v1",
+      "reference": "content/visualizations/models/sources/space3d3-alpha-cen-relative-orbit.md",
+      "representation": "measurement-diagram",
+      "note": "Pourbaix & Boffin (2016) HARPS+ESO relative orbital solution: angular semimajor axis 17.66 arcsec / parallax 0.743 arcsec gives a = 23.7685 AU, e = 0.524 and P = 79.91 years. The blue ellipse is B\u2019s relative orbit in a frame centered on A; it is not a pair of barycentric trajectories. The authored orbital-plane inspection view exposes the intrinsic ellipse rather than its nearly edge-on sky projection. A and B are location glyphs, with B shown at periastron; stellar diameters are not implied.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 46.8,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 24,
+        "roll": -8
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "AU",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "physical_a_au": 23.768506056527592,
+        "eccentricity": 0.524,
+        "period_years": 79.91,
+        "periastron_separation_au": 11.313808882907134,
+        "apastron_separation_au": 36.22320323014805
+      },
+      "src": "content/visualizations/models/space3d3-alpha-cen-relative-orbit.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 40244,
+      "sha256": "831947d461a54b85c3ded31f9e1b5811c77476c3f659de84c66908c1f6b2c164",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 448,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-barnard-distance",
+      "matches": {
+        "length": [
+          "Barnard's Star Distance"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://imagine.gsfc.nasa.gov/features/cosmic/solar_neighborhood_info.html",
+      "reference": "content/visualizations/models/sources/space3d3-barnard-distance.md",
+      "representation": "measurement-diagram",
+      "note": "A heliocentric distance ruler using NASA\u2019s approximate 5.97-light-year distance to Barnard's Star. The endpoints mark locations and do not represent stellar radii or luminosity; the orientation is authored and is not a sky direction or 3D astrometric coordinate reconstruction. The point of the true-scale ruler is the separation between the systems. Subdivisions are equal fractions of that distance.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 5.9629,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "yaw": 12
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "ly",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "distance_ly": 5.97,
+        "exact_light_year_m": 9460730472580800,
+        "subdivision_count": 6,
+        "orientation_semantics": "Authored measurement axis, no celestial direction"
+      },
+      "src": "content/visualizations/models/space3d3-barnard-distance.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 16868,
+      "sha256": "ae09ad0faa064bbc69317e7ad9050aa60482b8e8ce3313addb229f79587d3eaa",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 448,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-galactic-center-distance",
+      "matches": {
+        "length": [
+          "Sun-Galactic Center Distance"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://arxiv.org/html/1904.05721v1",
+      "reference": "content/visualizations/models/sources/space3d3-galactic-center-distance.md",
+      "representation": "measurement-diagram",
+      "note": "A Sun-to-Galactic-center measurement diagram spanning the 2019 GRAVITY geometric distance of 8,178 pc. The only local cloud context is the same 141 measured Alves et al. (2020) Radcliffe cloud locations, drawn in true heliocentric Galactic Cartesian parsecs at the same scale. X points toward the Galactic Center; Galactic north is up. Endpoint glyphs are location aids, not the dimensions of the Sun or black hole. No Milky Way outline, star density or galactic bar is invented.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 8178,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 20,
+        "yaw": -10
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "pc",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "center_distance_pc": 8178,
+        "cloud_count": 141,
+        "vertical_exaggeration": 1,
+        "pinned_inputs": [
+          {
+            "file": "radcliffe-clouds.json",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-019-1874-z/MediaObjects/41586_2019_1874_MOESM1_ESM.html",
+            "source_bytes": 5179773,
+            "source_sha256": "ce974a580010f8adacd0f3be41137f54686701a82d235f99ab43a433adce0680",
+            "sha256": "e3636c5c465a139339a209c81f2fcb35f7bc3f14f53b047baa789e67864ede2e"
+          },
+          {
+            "file": "radcliffe-data-rights.json",
+            "url": "https://api.datacite.org/dois/10.7910/DVN/07L7YZ",
+            "source_bytes": 13707,
+            "source_sha256": "d44ec2a4754cdcd1c9b948626750aabf58737cc8b45a87175c44db7ddec0cb0e",
+            "sha256": "430b57e74fcac6e82c4902749b7722f0071cc1e550910e6baff8a68275f0d6d9"
+          }
+        ]
+      },
+      "src": "content/visualizations/models/space3d3-galactic-center-distance.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 21080,
+      "sha256": "f76e51578464c05bae7dcc5db4b23bd13b375d083cab8f696909083ca2605b61",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 448,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-geostationary-altitude",
+      "matches": {
+        "length": [
+          "Geostationary Orbit"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit",
+      "reference": "content/visualizations/models/sources/space3d3-geostationary-altitude.md",
+      "representation": "measurement-diagram",
+      "note": "A 35,786 km surface-to-orbit radial altitude, with the Earth at the same physical scale. The nearby cyan arc is only a 24-degree segment of the circular equatorial geostationary orbit, not its full diameter. The center-to-orbit radius is Earth\u2019s equatorial radius plus the listed altitude. The spacecraft point is a location glyph. The inspection pose foreshortens the radial ruler slightly; no coordinates are stretched.",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "yaw": 40,
+        "pitch": 25
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "reference distance",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "source_models": [
+          {
+            "id": "nasa-earth",
+            "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
+            "source": "https://science.nasa.gov/resource/earth-3d-model/"
+          }
+        ],
+        "altitude_km": 35786,
+        "earth_equatorial_radius_km": 6378.137,
+        "center_to_orbit_km": 42164.136999999995,
+        "shown_orbit_arc_degrees": 24
+      },
+      "src": "content/visualizations/models/space3d3-geostationary-altitude.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 138440,
+      "sha256": "73215a3958c339f28117de50a58187e397854b7e3c5acee13c2bdb66198e3a25",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 2432,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-iss-altitude",
+      "matches": {
+        "length": [
+          "ISS Orbital Altitude"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://www.nasa.gov/international-space-station/",
+      "reference": "content/visualizations/models/sources/space3d3-iss-altitude.md",
+      "representation": "measurement-diagram",
+      "note": "A local Earth cap with true spherical curvature and a surface-normal ruler to NASA\u2019s representative 250-mile (402.336 km) ISS altitude. The local cap is an arbitrary display window, not the whole Earth or an island boundary. Its 40 km underside is an authored cut, not crust depth. The ISS is a location glyph; its 109 m span is subpixel here. The altitude varies and this is not current telemetry. The ground imagery is the existing NASA global map with no invented terrain.",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 20,
+        "yaw": -12,
+        "roll": -10
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "reference distance",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [
+          "Preserve spherical curvature at the NASA mean radius",
+          "Sample existing global texture in a small equatorial window",
+          "Author a surface-normal altitude ruler; no ISS geometry enlargement"
+        ],
+        "source_models": [
+          {
+            "id": "nasa-earth",
+            "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
+            "source": "https://science.nasa.gov/resource/earth-3d-model/"
+          }
+        ],
+        "altitude_km": 402.336,
+        "earth_radius_km": 6371.0,
+        "cap_longitude_center_deg": -20,
+        "display_cut_depth_per_altitude": 0.1
+      },
+      "src": "content/visualizations/models/space3d3-iss-altitude.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 152256,
+      "sha256": "31bbf9a6ca55ada4d0f2c3d75c414eceed80237d61b527d61e8cfb89fa52d394",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 7,
+      "triangle_count": 3216,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-light-year-distance",
+      "matches": {
+        "length": [
+          "Light-Year"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://iauarchive.eso.org/public/themes/measuring/",
+      "reference": "content/visualizations/models/sources/space3d3-light-year-distance.md",
+      "representation": "measurement-diagram",
+      "note": "A straight one-light-year ruler, derived exactly from c = 299,792,458 m/s and one Julian year = 365.25 days of 86,400 s. Twelve equal marks divide the distance into twelfths of a Julian year, not calendar months. Endpoints and the line are authored measurement aids, not a wave, photon size, or an observed trajectory.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1.0,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "yaw": 12
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "ly",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "distance_ly": 1.0,
+        "exact_light_year_m": 9460730472580800,
+        "subdivision_count": 12,
+        "orientation_semantics": "Authored measurement axis, no celestial direction"
+      },
+      "src": "content/visualizations/models/space3d3-light-year-distance.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 16900,
+      "sha256": "d37f21f129d288187501a3bc905a3a08507b18ca19c4231c84a98c1de6c2f383",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 448,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-m87-eht-ring",
+      "matches": {
+        "length": [
+          "M87* Shadow"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "EHT Collaboration; registered image aperture assembled by Universe Scales",
+      "source": "https://www.eso.org/public/images/eso1907a/",
+      "reference": "content/visualizations/models/sources/space3d3-m87-eht-ring.md",
+      "representation": "observed-radio-image",
+      "note": "The real 2017 EHT reconstructed radio sky image (EHT Collaboration; ESO eso1907a), on a flat circular sky-plane aperture. The intensity ridge is registered approximately to the reported 42 \u00b1 3 microarcsec emission-ring diameter at 16.8 Mpc (~105.6 billion km). The catalog\u2019s ~103 billion km refers to this ring/shadow scale, not the event horizon. A feathered aperture cuts the outskirts at 1.24 ring diameters, preserving the intensity ridge. No 3D plasma, accretion geometry, or solid hole is inferred; rotation exposes a flat image. Orange is the published radio-intensity color mapping, not visible-light fire.",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "licenses/space3d3-rights.md"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 103000000000.0,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "km",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [
+          "Retain actual EHT color image; no generated replacement pixels",
+          "Fit approximate intensity ridge in the published JPEG, not a calibrated FITS/WCS image",
+          "Feather the circular aperture with vertex alpha beyond the intensity ridge; preserve square pixel aspect ratio"
+        ],
+        "angular_ring_diameter_microarcsec": 42,
+        "adopted_distance_mpc": 16.8,
+        "physical_ring_diameter_km": 105556257565.92001,
+        "image_registration_center_px": [
+          1994.101819828162,
+          1069.4851235831109
+        ],
+        "image_registration_ridge_diameter_px": 529.6569023546472,
+        "aperture_ring_diameters": 1.24,
+        "pinned_inputs": [
+          {
+            "file": "m87-eht.jpg",
+            "url": "https://cdn.eso.org/images/publicationjpg/eso1907a.jpg",
+            "source_bytes": 413166,
+            "source_sha256": "9b82865f14efc6d001d97d9eb6215e18de5f2ba8322b513f1673e2e2b2dca341",
+            "sha256": "9b82865f14efc6d001d97d9eb6215e18de5f2ba8322b513f1673e2e2b2dca341"
+          }
+        ]
+      },
+      "basis_url": "https://arxiv.org/abs/1906.11238",
+      "basis_label": "2019 EHT measured ring scale",
+      "src": "content/visualizations/models/space3d3-m87-eht-ring.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 243300,
+      "sha256": "9294c7bb196a83b202a47254aefbde36b1c0f8289e407ad4690ad892f8b62ee1",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 2816,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-radcliffe-clouds",
+      "matches": {
+        "length": [
+          "Radcliffe Wave"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Jo\u00e3o Alves, Catherine Zucker, Alyssa Goodman and collaborators; CC0 cloud data; assembly by Universe Scales",
+      "source": "https://doi.org/10.1038/s41586-019-1874-z",
+      "reference": "content/visualizations/models/sources/space3d3-radcliffe-clouds.md",
+      "representation": "catalog-position-diagram",
+      "note": "All 141 measured cloud locations selected as Radcliffe Wave members in Alves et al. (2020), extracted from the authors\u2019 interactive supplement. Heliocentric Galactic Cartesian parsecs remain isotropic: no vertical exaggeration, fitted sine wave, synthetic cloud fill, or invented connecting tube. Colors and finite point sprites are authored identification aids, not gas extent, density, or individual stars. The inspection frame aligns the observed long axis horizontally with Galactic north up. The Sun is a location glyph. The 500 pc bar is a physical ruler; the catalog\u2019s ~8,800 ly is an approximate chain length.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 2698.0922653128446,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 18,
+        "roll": -6
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "pc",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [
+          "Extract only the 141 selected observed cloud points",
+          "Swap Plotly x/y into the figure\u2019s explicitly named Galactic X/Y",
+          "Rigidly rotate only the Galactic plane; retain actual Z heights"
+        ],
+        "cloud_count": 141,
+        "galactic_in_plane_long_axis": [
+          0.4289353655202713,
+          0.9033351826459497
+        ],
+        "vertical_exaggeration": 1,
+        "view_matrix_rows": [
+          [
+            0.4289353655202713,
+            0.9033351826459497,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0.9033351826459497,
+            -0.4289353655202713,
+            0
+          ]
+        ],
+        "pinned_inputs": [
+          {
+            "file": "radcliffe-clouds.json",
+            "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-019-1874-z/MediaObjects/41586_2019_1874_MOESM1_ESM.html",
+            "source_bytes": 5179773,
+            "source_sha256": "ce974a580010f8adacd0f3be41137f54686701a82d235f99ab43a433adce0680",
+            "sha256": "e3636c5c465a139339a209c81f2fcb35f7bc3f14f53b047baa789e67864ede2e"
+          },
+          {
+            "file": "radcliffe-data-rights.json",
+            "url": "https://api.datacite.org/dois/10.7910/DVN/07L7YZ",
+            "source_bytes": 13707,
+            "source_sha256": "d44ec2a4754cdcd1c9b948626750aabf58737cc8b45a87175c44db7ddec0cb0e",
+            "sha256": "430b57e74fcac6e82c4902749b7722f0071cc1e550910e6baff8a68275f0d6d9"
+          }
+        ]
+      },
+      "src": "content/visualizations/models/space3d3-radcliffe-clouds.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 14644,
+      "sha256": "546515e58f62a79abaa41b6e3dca6fd4024ba705c7ed249d9ffba1b2b9f963a8",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 224,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-sgr-a-horizon",
+      "matches": {
+        "length": [
+          "Sagittarius A* Event Horizon"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://arxiv.org/html/1904.05721v1",
+      "reference": "content/visualizations/models/sources/space3d3-sgr-a-horizon.md",
+      "representation": "measurement-diagram",
+      "note": "A Schwarzschild reference horizon calculated as r_s = 2GM/c\u00b2 from the 2019 GRAVITY noise-model mass of 4.152 million solar masses. Its Euclidean drawing diameter is about 24.52 million km, close to the catalog\u2019s approximate 25.4 million km. This is a mass-based nonrotating reference boundary, not an observed black surface, EHT shadow, accretion disk, or embedding of curved space. Violet great circles and the rim are authored guides to the causal boundary; their thickness is not physical. Spin and mass uncertainty are not modeled.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 25400000.0,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 15,
+        "yaw": 18
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "km",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "mass_solar": 4152000,
+        "schwarzschild_radius_km": 12261894.319782227,
+        "spin_assumption": 0,
+        "solar_gm_km3_s2": 132712440041.27942
+      },
+      "src": "content/visualizations/models/space3d3-sgr-a-horizon.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 261744,
+      "sha256": "a460dad0d9c723fa7c1d50a1af75e1f0a891f98b4c5919921965047fdd72bac7",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 9024,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-sirius-distance",
+      "matches": {
+        "length": [
+          "Distance to Sirius"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://imagine.gsfc.nasa.gov/features/cosmic/solar_neighborhood_info.html",
+      "reference": "content/visualizations/models/sources/space3d3-sirius-distance.md",
+      "representation": "measurement-diagram",
+      "note": "A heliocentric distance ruler using NASA\u2019s approximate 8.6-light-year distance to Sirius. The endpoints mark locations and do not represent stellar radii or luminosity; the orientation is authored and is not a sky direction or 3D astrometric coordinate reconstruction. The point of the true-scale ruler is the separation between the systems. Subdivisions are equal fractions of that distance.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 8.6,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "yaw": 12
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "ly",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "distance_ly": 8.6,
+        "exact_light_year_m": 9460730472580800,
+        "subdivision_count": 8,
+        "orientation_semantics": "Authored measurement axis, no celestial direction"
+      },
+      "src": "content/visualizations/models/space3d3-sirius-distance.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 16900,
+      "sha256": "407a634b59a38ae7a2fec7644aecf6d988322320c383f7e56170f9ff47ef8339",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 448,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-sun-jupiter",
+      "matches": {
+        "length": [
+          "Sun-Jupiter Distance"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+      "reference": "content/visualizations/models/sources/space3d3-sun-jupiter.md",
+      "representation": "measurement-diagram",
+      "note": "NASA Sun and Jupiter image maps on idealized spheres, separated by the NASA fact-sheet semimajor axis of 778,479,000 km. Body radii and distance use the same physical scale. This is a representative center-to-center separation equal to a, not an orbital snapshot or the diameter of the orbit. Subpixel body outlines are location aids. Faint inner reference ellipses, where present, use JPL J2000 elements and are not simultaneous planet positions.",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 32
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "reference distance",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [
+          "Reuse embedded NASA maps; spherical mean-radius approximation",
+          "Place centers one published semimajor axis apart, preserve km ratios"
+        ],
+        "distance_km": 778479000,
+        "catalog_reference_km": 778500000,
+        "source_models": [
+          {
+            "id": "nasa-sun",
+            "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+            "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+          },
+          {
+            "id": "nasa-jupiter",
+            "sha256": "821c75e6a2268ab139d6fd87c1d0f37b86ca4985957e23e900936535b4bf9e50",
+            "source": "https://science.nasa.gov/resource/jupiter-3d-model/"
+          }
+        ]
+      },
+      "src": "content/visualizations/models/space3d3-sun-jupiter.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 295124,
+      "sha256": "6b105826c5584e99fce144ab3c6382e6995a761cca32f1a0b7b3643ea3e10e9a",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 4416,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-sun-mercury",
+      "matches": {
+        "length": [
+          "Sun-Mercury Distance"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html",
+      "reference": "content/visualizations/models/sources/space3d3-sun-mercury.md",
+      "representation": "measurement-diagram",
+      "note": "NASA Sun and Mercury image maps on idealized spheres, separated by the NASA fact-sheet semimajor axis of 57,909,000 km. Body radii and distance use the same physical scale. This is a representative center-to-center separation equal to a, not an orbital snapshot or the diameter of the orbit. Subpixel body outlines are location aids. Faint inner reference ellipses, where present, use JPL J2000 elements and are not simultaneous planet positions.",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 32
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "reference distance",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [
+          "Reuse embedded NASA maps; spherical mean-radius approximation",
+          "Place centers one published semimajor axis apart, preserve km ratios"
+        ],
+        "distance_km": 57909000,
+        "catalog_reference_km": 57900000,
+        "source_models": [
+          {
+            "id": "nasa-sun",
+            "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+            "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+          },
+          {
+            "id": "nasa-mercury",
+            "sha256": "8fc027684b074e73f4beb378b22a0ca168f782b6e2afc16e53a6e746deb7e7cf",
+            "source": "https://science.nasa.gov/resource/mercury-3d-model/"
+          }
+        ]
+      },
+      "src": "content/visualizations/models/space3d3-sun-mercury.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 290348,
+      "sha256": "2f9127745cb13d229314a88738dbdb1063826727101bf68ea4d06c067adac4c1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 4416,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-sun-neptune",
+      "matches": {
+        "length": [
+          "Sun-Neptune Distance"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+      "reference": "content/visualizations/models/sources/space3d3-sun-neptune.md",
+      "representation": "measurement-diagram",
+      "note": "NASA Sun and Neptune image maps on idealized spheres, separated by the NASA fact-sheet semimajor axis of 4,514,953,000 km. Body radii and distance use the same physical scale. This is a representative center-to-center separation equal to a, not an orbital snapshot or the diameter of the orbit. Subpixel body outlines are location aids. Faint inner reference ellipses, where present, use JPL J2000 elements and are not simultaneous planet positions.",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 32
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "reference distance",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [
+          "Reuse embedded NASA maps; spherical mean-radius approximation",
+          "Place centers one published semimajor axis apart, preserve km ratios"
+        ],
+        "distance_km": 4514953000,
+        "catalog_reference_km": 4514953000,
+        "source_models": [
+          {
+            "id": "nasa-sun",
+            "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+            "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+          },
+          {
+            "id": "nasa-neptune",
+            "sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5",
+            "source": "https://science.nasa.gov/resource/neptune-3d-model/"
+          }
+        ]
+      },
+      "requires_dataset": {
+        "name": "Sun-Neptune Distance",
+        "value_m": 4514953000000,
+        "reason": "Existing value 4514953000 is kilometers mistakenly stored as meters"
+      },
+      "src": "content/visualizations/models/space3d3-sun-neptune.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 291020,
+      "sha256": "328b0e178dd24eff410d18f2d0c7d7e3949243c7316489f404a88dc2ec2a1416",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 4416,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-trappist-orbits",
+      "matches": {
+        "length": [
+          "TRAPPIST-1 System"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://arxiv.org/html/2010.01074v2",
+      "reference": "content/visualizations/models/sources/space3d3-trappist-orbits.md",
+      "representation": "measurement-diagram",
+      "note": "Seven coplanar circular reference orbits use Agol et al. (2021) semimajor axes, planet radii and 0.1192-solar-radius star. The circular approximation omits their small measured eccentricities; planet phases and the inspection view are authored, not ephemeris. Planet/star radii share the AU orbit scale; thin outline markers keep tiny planets findable. Colors are illustrative and do not assert surface maps, oceans or habitability. The outer orbit\u2019s 0.12378 AU diameter is close to the catalog\u2019s rounded 0.1238 AU.",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 0.12380000000000001,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 30,
+        "roll": -14
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "AU",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [],
+        "planet_count": 7,
+        "star_radius_solar": 0.1192,
+        "circular_approximation": true,
+        "planet_parameters": [
+          {
+            "name": "b",
+            "a_au": 0.01154,
+            "radius_km": 7119
+          },
+          {
+            "name": "c",
+            "a_au": 0.0158,
+            "radius_km": 6995
+          },
+          {
+            "name": "d",
+            "a_au": 0.02227,
+            "radius_km": 5026
+          },
+          {
+            "name": "e",
+            "a_au": 0.02925,
+            "radius_km": 5868
+          },
+          {
+            "name": "f",
+            "a_au": 0.03849,
+            "radius_km": 6664
+          },
+          {
+            "name": "g",
+            "a_au": 0.04683,
+            "radius_km": 7204
+          },
+          {
+            "name": "h",
+            "a_au": 0.06189,
+            "radius_km": 4817
+          }
+        ],
+        "phase_semantics": "Authored positions; no date or dynamical state implied"
+      },
+      "src": "content/visualizations/models/space3d3-trappist-orbits.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 242332,
+      "sha256": "05cbb5ac2a05246f9d77f154372d38f28e65b0b733eac12858ee9b60231b8759",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 16,
+      "triangle_count": 5904,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "space3d3-webb-l2-trajectory",
+      "matches": {
+        "length": [
+          "James Webb Space Telescope Orbit"
+        ]
+      },
+      "geometry": "mesh",
+      "author": "Universe Scales; scientific teams credited in source notes",
+      "source": "https://science.nasa.gov/mission/webb/orbit/",
+      "reference": "content/visualizations/models/sources/space3d3-webb-l2-trajectory.md",
+      "representation": "measurement-diagram",
+      "note": "JPL Horizons JWST_merged geometric Earth-centered vectors for 1 January 2024\u20131 January 2025, sampled every two TDB days and rotated at each epoch into a Sun\u2013Earth co-rotating frame. The real non-closing trajectory is preserved, with no fabricated halo ellipse or amplified depth. The ruler spans NASA\u2019s approximate 1.5 million km Earth-to-L2 distance, not the halo diameter or a constant telescope range. A faint circular lunar mean-distance guide is context, not lunar ephemeris. Location glyphs are enlarged; the Earth and Moon have physical radii.",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1,
+        "layout_width_factor": 1.3,
+        "roughness": 1,
+        "metalness": 0,
+        "pitch": 22,
+        "yaw": -55
+      },
+      "processing": {
+        "builder": "scripts/build_space3d3_models.py",
+        "native_units": "reference distance",
+        "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+        "operations": [
+          "Read pinned JPL geometric position vectors; require identical dates",
+          "Construct an orthonormal co-rotating basis at every epoch",
+          "Connect adjacent samples without forcing closure"
+        ],
+        "source_models": [
+          {
+            "id": "nasa-earth",
+            "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
+            "source": "https://science.nasa.gov/resource/earth-3d-model/"
+          },
+          {
+            "id": "nasa-moon",
+            "sha256": "3c1236e03b1a42e067a27cc0ae7c31889f99f121f2b7c690d80dc199f72b98e9",
+            "source": "https://solarsystem.nasa.gov/resources/2366/earths-moon-3d-model/"
+          }
+        ],
+        "approximate_l2_distance_km": 1500000,
+        "epochs": 184,
+        "frame": "Earth center; X anti-Sun, Y ecliptic north, Z negative tangential",
+        "trajectory_range_km": [
+          1224353.851884157,
+          1753259.3736872203
+        ],
+        "pinned_inputs": [
+          {
+            "file": "webb-vectors.json",
+            "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27-170%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%40399%27&START_TIME=%272024-01-01%27&STOP_TIME=%272025-01-01%27&STEP_SIZE=%272+d%27&OUT_UNITS=%27KM-S%27&REF_PLANE=%27ECLIPTIC%27&REF_SYSTEM=%27ICRF%27&VEC_TABLE=%271%27&CSV_FORMAT=%27YES%27&VEC_CORR=%27NONE%27",
+            "source_bytes": 27365,
+            "source_sha256": "49fb34cea459f1eb540b93b21c844023326e69268c604b5a3db56b22eaa793e4",
+            "sha256": "9a7b10fa9145e00fbafe614078351dc4b5bdf02c69feecd1dc8ce0a697f9436e"
+          },
+          {
+            "file": "sun-vectors.json",
+            "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%2710%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%40399%27&START_TIME=%272024-01-01%27&STOP_TIME=%272025-01-01%27&STEP_SIZE=%272+d%27&OUT_UNITS=%27KM-S%27&REF_PLANE=%27ECLIPTIC%27&REF_SYSTEM=%27ICRF%27&VEC_TABLE=%271%27&CSV_FORMAT=%27YES%27&VEC_CORR=%27NONE%27",
+            "source_bytes": 27344,
+            "source_sha256": "96810fea74cc21a9e25d76c60a07ea0c669aca5971d6b832596c6369b6b62eb5",
+            "sha256": "9ff6d42265e7a7d04ed4bcc91dc0f1e69e5d609f4a8b33373c6f9d926575684a"
+          }
+        ]
+      },
+      "src": "content/visualizations/models/space3d3-webb-l2-trajectory.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 314548,
+      "sha256": "5219bc2f5c3a8b830cd1449070ef599964322952cce5e6f7e4aa955a7728f68e",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 7,
+      "triangle_count": 4864,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

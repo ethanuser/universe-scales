@@ -1,0 +1,95 @@
+{
+  "method": "CPU orthographic geometry, all primitive types; not production/WebGL verification",
+  "models": [
+    {
+      "id": "space3d3-alpha-cen-relative-orbit",
+      "extent_per_catalog_value": 1.0819200285037844,
+      "width_per_value": 1.0819200285037844,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-barnard-distance",
+      "extent_per_catalog_value": 0.9871782933547995,
+      "width_per_value": 0.9871782933547995,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-galactic-center-distance",
+      "extent_per_catalog_value": 1.1158968840165089,
+      "width_per_value": 1.1158968840165089,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-geostationary-altitude",
+      "extent_per_catalog_value": 1.2183756160272305,
+      "width_per_value": 1.2183756160272305,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-iss-altitude",
+      "extent_per_catalog_value": 1.220318514734685,
+      "width_per_value": 1.0150697407720395,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-light-year-distance",
+      "extent_per_catalog_value": 0.9860136106294979,
+      "width_per_value": 0.9860136106294979,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-m87-eht-ring",
+      "extent_per_catalog_value": 1.2758984723883495,
+      "width_per_value": 1.2707743763883494,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-radcliffe-clouds",
+      "extent_per_catalog_value": 1.0391386230031934,
+      "width_per_value": 1.0391386230031934,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-sgr-a-horizon",
+      "extent_per_catalog_value": 1.0529439211651321,
+      "width_per_value": 0.9655034532158067,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-sirius-distance",
+      "extent_per_catalog_value": 0.9860136540374533,
+      "width_per_value": 0.9860136540374533,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-sun-jupiter",
+      "extent_per_catalog_value": 1.1914764682078083,
+      "width_per_value": 1.1914764682078083,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-sun-mercury",
+      "extent_per_catalog_value": 1.0122131208981002,
+      "width_per_value": 1.0122131208981002,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-sun-neptune",
+      "extent_per_catalog_value": 1.1804035600094112,
+      "width_per_value": 1.1804035600094112,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-trappist-orbits",
+      "extent_per_catalog_value": 1.1237275218381677,
+      "width_per_value": 1.1237275218381677,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "space3d3-webb-l2-trajectory",
+      "extent_per_catalog_value": 1.219515831761604,
+      "width_per_value": 1.219515831761604,
+      "passes_extent_rule": true
+    }
+  ]
+}

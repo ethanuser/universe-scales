@@ -1,0 +1,70 @@
+{
+  "id": "space3d3-sun-neptune",
+  "matches": {
+    "length": [
+      "Sun-Neptune Distance"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html",
+  "reference": "content/visualizations/models/sources/space3d3-sun-neptune.md",
+  "representation": "measurement-diagram",
+  "note": "NASA Sun and Neptune image maps on idealized spheres, separated by the NASA fact-sheet semimajor axis of 4,514,953,000 km. Body radii and distance use the same physical scale. This is a representative center-to-center separation equal to a, not an orbital snapshot or the diameter of the orbit. Subpixel body outlines are location aids. Faint inner reference ellipses, where present, use JPL J2000 elements and are not simultaneous planet positions.",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "pitch": 32
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "reference distance",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [
+      "Reuse embedded NASA maps; spherical mean-radius approximation",
+      "Place centers one published semimajor axis apart, preserve km ratios"
+    ],
+    "distance_km": 4514953000,
+    "catalog_reference_km": 4514953000,
+    "source_models": [
+      {
+        "id": "nasa-sun",
+        "sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+        "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+      },
+      {
+        "id": "nasa-neptune",
+        "sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5",
+        "source": "https://science.nasa.gov/resource/neptune-3d-model/"
+      }
+    ]
+  },
+  "requires_dataset": {
+    "name": "Sun-Neptune Distance",
+    "value_m": 4514953000000,
+    "reason": "Existing value 4514953000 is kilometers mistakenly stored as meters"
+  },
+  "src": "content/visualizations/models/space3d3-sun-neptune.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 291020,
+  "sha256": "328b0e178dd24eff410d18f2d0c7d7e3949243c7316489f404a88dc2ec2a1416",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 6,
+  "triangle_count": 4416,
+  "animations": 0,
+  "skins": 0
+}

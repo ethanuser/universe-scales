@@ -1,0 +1,51 @@
+{
+  "id": "space3d3-sirius-distance",
+  "matches": {
+    "length": [
+      "Distance to Sirius"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://imagine.gsfc.nasa.gov/features/cosmic/solar_neighborhood_info.html",
+  "reference": "content/visualizations/models/sources/space3d3-sirius-distance.md",
+  "representation": "measurement-diagram",
+  "note": "A heliocentric distance ruler using NASA\u2019s approximate 8.6-light-year distance to Sirius. The endpoints mark locations and do not represent stellar radii or luminosity; the orientation is authored and is not a sky direction or 3D astrometric coordinate reconstruction. The point of the true-scale ruler is the separation between the systems. Subdivisions are equal fractions of that distance.",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 8.6,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "yaw": 12
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "ly",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [],
+    "distance_ly": 8.6,
+    "exact_light_year_m": 9460730472580800,
+    "subdivision_count": 8,
+    "orientation_semantics": "Authored measurement axis, no celestial direction"
+  },
+  "src": "content/visualizations/models/space3d3-sirius-distance.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 16900,
+  "sha256": "407a634b59a38ae7a2fec7644aecf6d988322320c383f7e56170f9ff47ef8339",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 5,
+  "triangle_count": 448,
+  "animations": 0,
+  "skins": 0
+}

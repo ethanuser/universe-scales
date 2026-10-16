@@ -1,0 +1,84 @@
+{
+  "validator": "Khronos glTF Validator",
+  "version": "2.0.0-dev.3.10",
+  "exit_code": 0,
+  "model_count": 166,
+  "issues": [
+    {
+      "id": "nasa-earth",
+      "errors": 0,
+      "warnings": 1,
+      "codes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ]
+    },
+    {
+      "id": "wine-bottle",
+      "errors": 0,
+      "warnings": 3,
+      "codes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ]
+    },
+    {
+      "id": "ceiling-fan",
+      "errors": 0,
+      "warnings": 2,
+      "codes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ]
+    },
+    {
+      "id": "sketchfab-giraffe",
+      "errors": 0,
+      "warnings": 876,
+      "codes": [
+        "ACCESSOR_JOINTS_USED_ZERO_WEIGHT",
+        "NODE_SKINNED_MESH_NON_ROOT"
+      ]
+    },
+    {
+      "id": "sketchfab-blue-whale",
+      "errors": 0,
+      "warnings": 979,
+      "codes": [
+        "ACCESSOR_JOINTS_USED_ZERO_WEIGHT",
+        "NODE_SKINNED_MESH_NON_ROOT"
+      ]
+    },
+    {
+      "id": "bucket",
+      "errors": 0,
+      "warnings": 3,
+      "codes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ]
+    },
+    {
+      "id": "nasa-earth-moon-distance",
+      "errors": 0,
+      "warnings": 1,
+      "codes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ]
+    },
+    {
+      "id": "nasa-sun-earth-au",
+      "errors": 0,
+      "warnings": 1,
+      "codes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ]
+    },
+    {
+      "id": "great-wall-network-globe",
+      "errors": 0,
+      "warnings": 1,
+      "codes": [
+        "MESH_PRIMITIVE_GENERATED_TANGENT_SPACE"
+      ]
+    }
+  ],
+  "total_errors": 0,
+  "total_warnings": 1867
+}

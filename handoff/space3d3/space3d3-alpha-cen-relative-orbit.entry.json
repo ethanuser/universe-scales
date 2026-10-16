@@ -1,0 +1,53 @@
+{
+  "id": "space3d3-alpha-cen-relative-orbit",
+  "matches": {
+    "length": [
+      "Alpha Centauri A-B Orbit"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://arxiv.org/html/1601.01636v1",
+  "reference": "content/visualizations/models/sources/space3d3-alpha-cen-relative-orbit.md",
+  "representation": "measurement-diagram",
+  "note": "Pourbaix & Boffin (2016) HARPS+ESO relative orbital solution: angular semimajor axis 17.66 arcsec / parallax 0.743 arcsec gives a = 23.7685 AU, e = 0.524 and P = 79.91 years. The blue ellipse is B\u2019s relative orbit in a frame centered on A; it is not a pair of barycentric trajectories. The authored orbital-plane inspection view exposes the intrinsic ellipse rather than its nearly edge-on sky projection. A and B are location glyphs, with B shown at periastron; stellar diameters are not implied.",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 46.8,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "pitch": 24,
+    "roll": -8
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "AU",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [],
+    "physical_a_au": 23.768506056527592,
+    "eccentricity": 0.524,
+    "period_years": 79.91,
+    "periastron_separation_au": 11.313808882907134,
+    "apastron_separation_au": 36.22320323014805
+  },
+  "src": "content/visualizations/models/space3d3-alpha-cen-relative-orbit.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 40244,
+  "sha256": "831947d461a54b85c3ded31f9e1b5811c77476c3f659de84c66908c1f6b2c164",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 448,
+  "animations": 0,
+  "skins": 0
+}

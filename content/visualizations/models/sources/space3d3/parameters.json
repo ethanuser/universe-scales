@@ -1,0 +1,43 @@
+{
+  "constants": {
+    "au_m": 149597870700,
+    "c_m_s": 299792458,
+    "julian_year_days": 365.25,
+    "day_s": 86400,
+    "pc_m": 30856775814913674,
+    "solar_radius_km": 695700,
+    "solar_gm_km3_s2": 132712440041.279419,
+    "sources": ["https://iauarchive.eso.org/public/themes/measuring/", "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html", "https://ssd.jpl.nasa.gov/astro_par.html"]
+  },
+  "bodies": {
+    "Earth": {"radius_km": 6371, "equatorial_radius_km": 6378.137, "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"},
+    "Moon": {"radius_km": 1737.5, "mean_orbit_radius_km": 384400, "source": "https://science.nasa.gov/moon/by-the-numbers/"},
+    "Mercury": {"radius_km": 2439.7, "semimajor_axis_km": 57909000, "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html"},
+    "Jupiter": {"radius_km": 69911, "semimajor_axis_km": 778479000, "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html"},
+    "Neptune": {"radius_km": 24622, "semimajor_axis_km": 4514953000, "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/neptunefact.html"}
+  },
+  "iss": {"representative_altitude_m": 402336, "definition": "250 statute miles converted with exact 1609.344 m/mile; representative altitude, not live telemetry", "source": "https://www.nasa.gov/international-space-station/"},
+  "geo": {"altitude_km": 35786, "source": "https://www.esa.int/ESA_Multimedia/Images/2020/03/Geostationary_orbit"},
+  "webb": {"approximate_l2_distance_km": 1500000, "source": "https://science.nasa.gov/mission/webb/orbit/"},
+  "alpha_cen": {
+    "angular_a_arcsec": 17.66, "parallax_arcsec": 0.743, "e": 0.524,
+    "period_julian_years": 79.91, "periastron_julian_year": 1955.66,
+    "source": "https://arxiv.org/html/1601.01636v1", "table": "Table 1 HARPS + ESO Coude Echelle orbital solution; physical a = angular a / parallax"
+  },
+  "trappist": {
+    "source": "https://arxiv.org/html/2010.01074v2", "table": "Agol et al. 2021 Tables 4 and 6",
+    "star_radius_solar": 0.1192,
+    "planets": [
+      {"name": "b", "a_au": 0.01154, "radius_km": 7119},
+      {"name": "c", "a_au": 0.01580, "radius_km": 6995},
+      {"name": "d", "a_au": 0.02227, "radius_km": 5026},
+      {"name": "e", "a_au": 0.02925, "radius_km": 5868},
+      {"name": "f", "a_au": 0.03849, "radius_km": 6664},
+      {"name": "g", "a_au": 0.04683, "radius_km": 7204},
+      {"name": "h", "a_au": 0.06189, "radius_km": 4817}
+    ]
+  },
+  "sgr_a": {"mass_solar": 4152000, "galactic_center_distance_pc": 8178, "source": "https://arxiv.org/html/1904.05721v1", "table": "2019 GRAVITY noise-model fit; Schwarzschild reference, not a spin measurement"},
+  "m87": {"ring_diameter_microarcsec": 42, "distance_mpc": 16.8, "source": "https://arxiv.org/abs/1906.11238", "image": "https://www.eso.org/public/images/eso1907a/", "image_license": "https://www.eso.org/public/outreach/copyright/", "registration": "Approximate registration of the published color image's intensity ridge to the 42 microarcsec ring; aperture deliberately crops faint outskirts"},
+  "nearby": {"barnard_distance_ly": 5.97, "sirius_distance_ly": 8.6, "source": "https://imagine.gsfc.nasa.gov/features/cosmic/solar_neighborhood_info.html"}
+}

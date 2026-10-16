@@ -1,0 +1,65 @@
+{
+  "id": "space3d3-iss-altitude",
+  "matches": {
+    "length": [
+      "ISS Orbital Altitude"
+    ]
+  },
+  "geometry": "mesh",
+  "author": "Universe Scales; scientific teams credited in source notes",
+  "source": "https://www.nasa.gov/international-space-station/",
+  "reference": "content/visualizations/models/sources/space3d3-iss-altitude.md",
+  "representation": "measurement-diagram",
+  "note": "A local Earth cap with true spherical curvature and a surface-normal ruler to NASA\u2019s representative 250-mile (402.336 km) ISS altitude. The local cap is an arbitrary display window, not the whole Earth or an island boundary. Its 40 km underside is an authored cut, not crust depth. The ISS is a location glyph; its 109 m span is subpixel here. The altitude varies and this is not current telemetry. The ground imagery is the existing NASA global map with no invented terrain.",
+  "license": "U.S. public-domain NASA media/data; credit the named science teams",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "license_files": [
+    "licenses/nasa-media-guidelines.html",
+    "licenses/nasa-3d-resources.README.md"
+  ],
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1,
+    "layout_width_factor": 1.3,
+    "roughness": 1,
+    "metalness": 0,
+    "pitch": 20,
+    "yaw": -12,
+    "roll": -10
+  },
+  "processing": {
+    "builder": "scripts/build_space3d3_models.py",
+    "native_units": "reference distance",
+    "parameters_sha256": "827534af6beca0d5091c76fb6d685f147bae1a0023450a4a5cec73a4ea8c58cb",
+    "operations": [
+      "Preserve spherical curvature at the NASA mean radius",
+      "Sample existing global texture in a small equatorial window",
+      "Author a surface-normal altitude ruler; no ISS geometry enlargement"
+    ],
+    "source_models": [
+      {
+        "id": "nasa-earth",
+        "sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
+        "source": "https://science.nasa.gov/resource/earth-3d-model/"
+      }
+    ],
+    "altitude_km": 402.336,
+    "earth_radius_km": 6371.0,
+    "cap_longitude_center_deg": -20,
+    "display_cut_depth_per_altitude": 0.1
+  },
+  "src": "content/visualizations/models/space3d3-iss-altitude.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 152256,
+  "sha256": "31bbf9a6ca55ada4d0f2c3d75c414eceed80237d61b527d61e8cfb89fa52d394",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 7,
+  "triangle_count": 3216,
+  "animations": 0,
+  "skins": 0
+}
