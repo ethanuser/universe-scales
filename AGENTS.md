@@ -528,6 +528,11 @@ Models (all checked in the real explorer with model_lab):
   Pipeline: scripts/nebula_volume.py + build_nebula_volumes.py (crab/ring/orion/carina/tarantula),
   build_pillars_model.py. Sprites are calibrated so the front view reproduces the photo
   (tests/test_nebula_volume.py). `pointSize.conserve` keeps brightness when capped/thinned.
+- Also from real catalogs: Local Group (74 McConnachie galaxies + M31 gas halo + MW dark halo,
+  build_local_group_model.py), Virgo Supercluster (869 2MRS galaxies, build_laniakea_galaxies.py
+  --region virgo), Pleiades (1,280 Gaia members, build_pleiades_model.py), Andromeda (KPNO image on a
+  77-degree disk, build_nebula_volumes.py andromeda). New items Muonic Hydrogen Atom and Weak Force
+  Range (procedural, atomic-models.js / particle-scale-models.js); Length caps now 300/320.
 - Milky Way (NASA/JPL concept + 26k 3D stars), Laniakea (11,733 real 2MRS galaxies,
   build_laniakea_galaxies.py), Hercules-Corona Borealis (reported region as a light-cone slab,
   build_hcb_lightcone_model.py), Electron (field-energy picture of r_e), Compton wavelengths
@@ -540,6 +545,8 @@ Data:
 - Length now has 255 items (Codex items job + review). Pillars of Creation fixed to 5 ly.
   New photos are credited in images/credits/length.json (CC BY / CC0 / PD only).
 - 25 items still show a gray placeholder; queued for Codex (images2 / space3d / bio3d / earth3d).
+  Those worktrees branch from a15f1ff, before the later model commits: expect version-hash and
+  models.json conflicts when merging (resolve as described below).
 Tools: scripts/repair_glb.py (validator fixes); asset lock records Kenney licenses as stored (LF).
 
 Codex workflow (the owner has spare Codex capacity):
