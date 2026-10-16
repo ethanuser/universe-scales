@@ -519,24 +519,38 @@ node scripts/model_lab.cjs audit
   and diff whitespace checks pass. Chromium touch emulation is verified; actual
   iOS/Android hardware testing remains necessary.
 
-## 2026-10-15 nebula volumes, Milky Way, human (Claude)
+## 2026-10-15 session (Claude + Codex): wonder pass
 
-- Orion, Carina, Tarantula and the Pillars are now 3D glowing volumes built from real photos
-  (`scripts/nebula_volume.py`, `scripts/build_nebula_volumes.py`, `scripts/build_pillars_model.py`).
-  Photos are split into stars and gas; gas into a smooth part (big glow sprites on a jittered grid)
-  and filaments (small importance-sampled sprites). Alphas are calibrated so the front view
-  reproduces the photo (tests/test_nebula_volume.py checks light conservation). Depth: Orion from
-  O'Dell 2009 + Pabst 2019 geometry; Pillars from STScI's 3D mesh wearing the Hubble image;
-  Carina/Tarantula illustrative shells. Provenance in sources/{orion,carina,tarantula,pillars}-model.md.
-  The old flat-sheet builders and their tests were removed.
-- `pointSize.conserve` (glTF extras) keeps an additive cloud's brightness when sprites hit their
-  `max` size or the LOD thins them (opacity gain, capped at 8x). Used by all nebula clouds.
-- Milky Way: NASA/JPL face-on concept as glowing disk + 26k sampled 3D stars (`build_milky_way_model.py`).
-- Human Height: Renderpeople photoscan (CC BY). Alternatives (X-ray skeleton, walking woman) were
-  prepared in a scratch dir; ask the owner if they prefer them.
-- `scripts/repair_glb.py` fixes EMPTY_ENTITY / missing POSITION bounds validator errors.
-- Asset lock: Kenney license files recorded as stored with LF endings (`* text=auto`).
-- Codex jobs run in worktrees under ../universe-scales-codex/{items,flybrain,neuron,angular}
-  (briefs in ../universe-scales-codex/briefs); merge their branches codex/* after review.
-- Still open: Laniakea 3D (CF4 rights question), Hercules-Corona Borealis, classical electron
-  radius visual, real-data mitochondrion (handoff script in ../universe-scales-codex/mito/handoff).
+Models (all checked in the real explorer with model_lab):
+- Nebulae as 3D glowing volumes from real photos: Orion (Hubble + KPNO wide image; O'Dell 2009 /
+  Pabst 2019 geometry), Carina (NOIRLab/N. Smith), Tarantula (ESO), Crab (Hubble; prolate filament
+  shell), Ring (Webb; barrel seen end-on), Pillars (STScI 3D mesh wearing Hubble's image).
+  Pipeline: scripts/nebula_volume.py + build_nebula_volumes.py (crab/ring/orion/carina/tarantula),
+  build_pillars_model.py. Sprites are calibrated so the front view reproduces the photo
+  (tests/test_nebula_volume.py). `pointSize.conserve` keeps brightness when capped/thinned.
+- Milky Way (NASA/JPL concept + 26k 3D stars), Laniakea (11,733 real 2MRS galaxies,
+  build_laniakea_galaxies.py), Hercules-Corona Borealis (reported region as a light-cone slab,
+  build_hcb_lightcone_model.py), Electron (field-energy picture of r_e), Compton wavelengths
+  (electron/muon/proton/tau), Human Height (Renderpeople photoscan, CC BY).
+- From Codex jobs: Neuron (NeuroMorpho NMO_109111 with axon + action-potential wave; item now
+  0.8 mm), Fruit Fly Brain (2,200 FlyWire neurons, CC BY Zenodo deposit; 0.8 mm), angular models
+  (34/42 observations animated), Mitochondrion (OpenOrganelle FIB-SEM, item now 4.3 um,
+  build_em_mitochondrion.py; procedural override removed).
+Data:
+- Length now has 255 items (Codex items job + review). Pillars of Creation fixed to 5 ly.
+  New photos are credited in images/credits/length.json (CC BY / CC0 / PD only).
+- 25 items still show a gray placeholder; queued for Codex (images2 / space3d / bio3d / earth3d).
+Tools: scripts/repair_glb.py (validator fixes); asset lock records Kenney licenses as stored (LF).
+
+Codex workflow (the owner has spare Codex capacity):
+- Worktrees in ../universe-scales-codex/<job> on branches codex/<job>; briefs in
+  ../universe-scales-codex/briefs (common.md + <job>.md); run with ../universe-scales-codex/run.sh <job>
+  (codex exec, workspace-write sandbox with network). The sandbox blocks git commits and Chromium:
+  the lead commits each worktree, runs model_lab on it, then merges into main. Version-hash merge
+  conflicts: keep either side and rerun scripts/bump_versions.py. models.json conflicts: keep main's
+  and re-register from handoff/<job>/<id>.entry.json. Registering needs the dataset item to exist.
+- Queued (started 03:30 2026-10-16 by run-after-reset.sh): space3d, bio3d, earth3d, images2.
+
+Open questions for the owner: CF4 Laniakea basin mesh rights (unused; galaxies used instead);
+alternative human models (X-ray skeleton, walking woman) available on request; public repo history
+still contains an email address (removing it needs a history rewrite).
