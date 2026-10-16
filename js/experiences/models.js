@@ -589,9 +589,10 @@ export class ModelStage {
     overlay(instance, w, h, scale, cx, view) {
         if (!instance.userData.overlays.length) return;
         // Annotations fade out well before their model does, so zooming away
-        // leaves clean objects: fully visible above 240 px, gone below 120 px.
+        // leaves clean objects (many share the radial view): fully visible above
+        // 320 px, gone below 180 px.
         const drawnPixels = instance.userData.drawSize * scale;
-        const opacity = THREE.MathUtils.clamp((drawnPixels - 120) / 120, 0, 1);
+        const opacity = THREE.MathUtils.clamp((drawnPixels - 180) / 140, 0, 1);
         if (!opacity && !instance.userData.overlays.some(node => node.userData.labelRole === 'dimension')) return;
         const toScreen = point => {
             const ndc = point.project(this.camera);
