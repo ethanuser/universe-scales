@@ -5495,6 +5495,54 @@
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "pleiades-gaia-3d",
+      "source": "https://vizier.cds.unistra.fr/viz-bin/VizieR?-source=J/A+A/616/A10",
+      "link_label": "Gaia cluster members",
+      "author": "Data: Gaia Collaboration, Babusiaux et al. 2018 (A&A 616, A10) and Gaia DR3 (ESA/Gaia/DPAC); 3D assembly: Universe Scales",
+      "license": "ESA Gaia data used with credit (CC BY-SA 3.0 IGO terms for ESA content; catalog cited)",
+      "license_url": "https://www.cosmos.esa.int/web/gaia/dr3",
+      "license_files": [
+        "sources/pleiades-model.md"
+      ],
+      "matches": {
+        "length": [
+          "Pleiades"
+        ]
+      },
+      "geometry": "mesh",
+      "basis_url": "https://doi.org/10.1051/0004-6361/201832843",
+      "basis_label": "Gaia DR2 cluster members (Babusiaux et al. 2018)",
+      "presentation": {
+        "reference_size": 86.0,
+        "layout_width_factor": 1.1,
+        "focus_scale_factor": 1.2
+      },
+      "note": "1,280 stars of the Pleiades, each placed in 3D at the distance Gaia measured from its parallax, about 444 light-years away; at rest you see the cluster as it appears in our sky (north up). Colors follow each star's brightness along the main sequence of this 100-million-year-old cluster, from hot blue-white stars to red dwarfs. Distance errors of a few light-years stretch the cluster slightly toward us. The seven named bright stars are too bright for precise Gaia distances, so they sit at the cluster's average distance. The faint blue glow, where starlight scatters off a passing dust cloud, is illustrative.",
+      "processing": {
+        "script": "scripts/build_pleiades_model.py",
+        "catalog_sha256": "ab32675f26a1e6ede10e09dbb74ea3d6b8a0a4b5cc0c5a240d26134c9eb9ab15",
+        "parallax_error_max_mas": 0.1,
+        "median_distance_ly": 443.7
+      },
+      "src": "content/visualizations/models/pleiades-gaia-3d.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 39596,
+      "sha256": "3aa2638881466396c4724af94f228f0a6d3639843baeca468445c7c98ab625df",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [
