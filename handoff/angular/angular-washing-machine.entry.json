@@ -1,0 +1,35 @@
+{
+  "id": "angular-washing-machine",
+  "procedural": "angular-machine",
+  "angular_kind": "washing-machine",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "Washing machine spin",
+      "Washing machine spin cycle"
+    ]
+  },
+  "source": "https://www.bosch-home.com/us/owner-support/washers/troubleshooting/not-spinning",
+  "note": "The perforated inner drum and its lifters rotate about the horizontal shaft. The cabinet, outer tub and door surround stay fixed. The front is opened to expose the drum; water and laundry are omitted.",
+  "presentation": {
+    "pitch": 12,
+    "yaw": -18
+  },
+  "angular_motion": {
+    "repetitions": 24,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": 1
+      }
+    ]
+  }
+}

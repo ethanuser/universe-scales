@@ -1,0 +1,39 @@
+{
+  "id": "angular-blender",
+  "procedural": "angular-machine",
+  "angular_kind": "blender",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "Blender blade"
+    ]
+  },
+  "source": "https://www.vitamix.com/media/catalog/product/file/Container-Use-and-Care-Owners-Manual.pdf",
+  "note": "Only the blade assembly and central shaft rotate. The base and jar remain fixed. The lid is removed and the jar is an illustrative cutaway to reveal the blade, with no fluid simulation.",
+  "presentation": {
+    "pitch": 25,
+    "yaw": -25,
+    "remove_nodes": [
+      "pitcher lid",
+      "lid perimeter seal",
+      "lid center plug"
+    ]
+  },
+  "angular_motion": {
+    "repetitions": 4,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1
+      }
+    ]
+  }
+}

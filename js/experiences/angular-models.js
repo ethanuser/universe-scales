@@ -1,5 +1,6 @@
 import * as THREE from '../vendor/three/three.module.min.js';
-import { buildAngularMachine } from './angular-machine-models.js?v=1d34c7795e';
+import { buildAngularMachine } from './angular-machine-models.js?v=e7b013a59a';
+import { observationWheel, gasTurbine, dentalTurbine, pulsar } from './angular-additional-models.js?v=ca4ddd3594';
 
 const metal = (color, roughness = 0.3) => {
     const material = new THREE.MeshStandardMaterial({ color, metalness: 0.7, roughness });
@@ -156,15 +157,32 @@ const specifications = [
         'https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens'],
     ['centrifuge', ['Ultracentrifuge rotor'], [0, 1, 0],
         'An exposed fixed-angle rotor: the rotor, tube holders and sealed tubes rotate together about the vertical spindle, inside a stationary base. Tube angles and apparatus proportions are illustrative; the protective cover is omitted.', 36, -15,
-        'https://www.beckman.com/centrifuges/rotors']
+        'https://www.beckman.com/centrifuges/rotors'],
+    ['observation-wheel', ['London Eye'], [0, 0, 1],
+        'A schematic of the London Eye with its full complement of 32 capsules. The wheel and capsule positions rotate about the fixed axle; capsule floors remain level through equal counter-rotation. The support stays fixed. Proportions and cable layout are illustrative, not surveyed geometry; temporary capsule removals are not represented.', 0, 0,
+        'https://www.londoneye.com/plan-your-visit/information-and-support/faqs/'],
+    ['gas-turbine', ['Fast gas turbine'], [0, 0, 1],
+        'An exposed axial gas-turbine stage. The turbine disk, blades and shaft rotate together; the casing and nozzle guide vanes stay fixed. Blade counts and profiles are illustrative, not a particular machine. Compressor, combustor, gas flow and thermal effects are omitted.', 0, 0,
+        'https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/powturba.html'],
+    ['dental-turbine', ['Dentist drill turbine'], [0, 0, 1],
+        'An opened air-turbine dental handpiece. The bucket rotor, chuck and bur rotate together; the handpiece body, air nozzle and bearing outer races stay fixed. The head cap is omitted. Geometry and blade count are illustrative, not a reconstruction or speed specification for a branded handpiece.', 0, 0,
+        'https://www.wh.com/en_global/dental-products/restoration-prosthetics/turbines/alegra'],
+    ['pulsar', ['Pulsar', 'Fast millisecond pulsar', 'Fastest known pulsar'], [0, 0, 1],
+        'A schematic rotating neutron star with a tilted magnetic axis and two emission-beam guides. The star, magnetic-axis guides and beams turn together; the neutral reference circle stays fixed. Colors, beam width, tilt and field loops are illustrative, not observations of these objects. Beams depict directions of radiation, not rigid matter; pulse visibility depends on the observer. This is not a relativistic magnetosphere simulation.', 0, 0,
+        'https://imagine.gsfc.nasa.gov/observatories/satellite/xmm/pulsar.html']
 ];
+const repetitions = { 'car-wheel': 5, 'record-player': 1, 'bicycle-wheel': 32, 'washing-machine': 24,
+    'hard-drive': 1, blender: 4, microwave: 1, centrifuge: 8, 'observation-wheel': 32,
+    'gas-turbine': 24, 'dental-turbine': 8, pulsar: 2 };
 export const angularModelEntries = Object.fromEntries(specifications.flatMap(([kind, names, axis, note, pitch, yaw, source]) => {
     const entry = { id: `angular-${kind}`, procedural: 'angular-machine', angular_kind: kind,
         geometry: 'mesh', representation: 'illustrative-mechanism', author: 'Universe Scales', license: 'MIT',
         matches: { 'angular-velocity': names }, source, note,
         presentation: { pitch, yaw, ...(kind === 'blender' ? {
-            remove_nodes: ['pitcher lid', 'lid perimeter seal', 'lid center plug'] } : {}) }, angular_motion: { rotations: [{ node: 'Rotor', axis,
-            ratio: kind === 'record-player' ? -1 : 1 }] } };
+            remove_nodes: ['pitcher lid', 'lid perimeter seal', 'lid center plug'] } : {}) }, angular_motion: {
+            repetitions: repetitions[kind], rotations: [{ node: 'Rotor', axis,
+            ratio: kind === 'record-player' ? -1 : 1 }, ...(kind === 'observation-wheel'
+                ? Array.from({ length: 32 }, (_, i) => ({ node: `Capsule${i}`, axis: [0, 0, 1], ratio: -1 })) : [])] } };
     return names.map(name => [name, entry]);
 }));
 for (const [name, hand] of [['Hour hand', 'HourHand'], ['Minute hand', 'MinuteHand'], ['Second hand', 'SecondHand']]) {
@@ -181,15 +199,22 @@ export function angularEntry(item, entries) {
     if (!entry?.angular_motion && angularModelEntries[item.name]) return angularModelEntries[item.name];
     if (!entry) return null;
     if (entry.id === 'ceiling-fan') return { ...entry, presentation: { ...entry.presentation, pitch: -26 },
-        angular_motion: { rotations: [{ node: 'ceiling_fan_blades', axis: [0, 1, 0] }] } };
+        angular_motion: { view_side: 'negative', repetitions: 4,
+            rotations: [{ node: 'ceiling_fan_blades', axis: [0, 1, 0] }] } };
     if (['nasa-earth', 'nasa-jupiter'].includes(entry.id)) return { ...entry,
         presentation: { ...entry.presentation, roll: -12 },
         note: `${entry.note} Viewed along the polar axis from the south pole, the globe turns clockwise at the listed angular speed. Atmospheric differential rotation is not simulated.`,
         angular_motion: { view_side: 'negative', rotations: [{ node: '$model', axis: [0, 1, 0] }] } };
+    if (entry.id === 'innerscene-city-bicycle-angular') return { ...entry,
+        angular_motion: { ...entry.angular_motion, repetitions: 28 } };
+    if (entry.id === 'sketchfab-drone-motor') return { ...entry,
+        angular_motion: { ...entry.angular_motion, repetitions: 2 } };
     return entry.angular_motion ? entry : null;
 }
 
 export function angularScene(kind) {
     return kind.startsWith('clock-') ? clock(kind.slice(6)) : kind === 'microwave' ? microwave()
-        : kind === 'centrifuge' ? centrifuge() : kind === 'car-wheel' ? carWheel() : buildAngularMachine(kind);
+        : kind === 'centrifuge' ? centrifuge() : kind === 'car-wheel' ? carWheel()
+        : kind === 'observation-wheel' ? observationWheel() : kind === 'gas-turbine' ? gasTurbine()
+        : kind === 'dental-turbine' ? dentalTurbine() : kind === 'pulsar' ? pulsar() : buildAngularMachine(kind);
 }

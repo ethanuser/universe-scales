@@ -130,7 +130,7 @@
             translating
                 ? `${notes[dim]} Both lanes start at $x=0$ and share the same distance and simulated time. Dots mark four equal time intervals, not equal distances. Each trial restarts both lanes when the selected item reaches the end; that reset is not a physical reversal or sudden braking. Images are identifiers, not scaled lengths. This is a hypothetical straight-line, constant-value model, not a reconstruction of impacts, gravity fields, or centripetal motion. A linear acceleration alone cannot determine a rotation rate without a radius and a motion model. Classical equations cease to apply near relativistic speeds. Above two trials per real second, the view shows a labeled static timing diagram instead of misleading sampled motion.`
                 : angular
-                  ? 'Angular velocity measures angle per second: $\\theta=\\omega t$. One turn is $2\\pi$ radians, so $f=\\omega/(2\\pi)$ and the period is $T=2\\pi/\\omega$. The view looks along each spindle: clockwise is the display convention for these speed magnitudes. Planets are viewed from the south pole. Only moving assemblies rotate; fixtures stay fixed. The circular marker counts turns. Orbital examples move around a center; reference photos stay fixed when no suitable model is available. Apparatus proportions are illustrative. Fit time to item makes slow or fast motion visible. Above eight turns per real second the diagram freezes to avoid misleading aliasing.'
+                  ? 'Angular velocity measures angle per second: $\\theta=\\omega t$. One turn is $2\\pi$ radians, so $f=\\omega/(2\\pi)$ and the period is $T=2\\pi/\\omega$. Views look along the spindle, with an oblique engine view to expose its journals. Clockwise is the display convention for these speed magnitudes. Planets are viewed from the south pole. Only moving assemblies rotate; fixtures stay fixed, and observation-wheel cabins stay level. The circular marker counts turns. Orbital examples are circular mean-speed diagrams, not to scale. When a model cannot load, reference photos stay fixed. Apparatus proportions are illustrative. Fit time to item makes slow or fast motion visible. The diagram freezes above eight repeating blade/spoke patterns per real second (eight turns for unpatterned models) to avoid misleading aliasing.'
                   : `${dim === 'sound-frequency' ? 'Sound frequency counts pressure cycles per second, not the movement of a pictured animal or instrument. The marker and sine wave are schematic timing guides, not a measured waveform, sound level, or wavelength. This visualization does not play sound.' : 'Frequency counts cycles per second. Explicit orbital examples revolve, rotation examples spin, and heartbeat or breathing examples pulse. Other examples use a schematic oscillator; its displacement and shape are illustrative, not measurements.'} The period is $T=1/f$ and the phase is $\\phi=2\\pi ft$. One complete orbit, pulse, or back-and-forth represents one cycle. Time controls change simulated time, not the recorded frequency. Above eight cycles per real second the diagram is static to avoid misleading aliasing.`
         );
 
@@ -238,7 +238,8 @@
         function renderCycle(item, lane, time) {
             const x = ctx.pair.length === 1 ? 500 : lane ? 750 : 250;
             const y = 220;
-            const state = cycleState(dim, item.value, time, ctx.clock.rate);
+            const repetitions = angular ? modelStage?.entry(item)?.angular_motion?.repetitions || 1 : 1;
+            const state = cycleState(dim, item.value, time, ctx.clock.rate, repetitions);
             const { phase, unresolved } = state;
             const screenPhase = angular ? -phase : phase;
             const kind = visualKind(dim, item.name);
@@ -279,6 +280,7 @@
                         50,
                         50
                     );
+                    if (angular) text(x, y + 30, /Moon|ISS/.test(item.name) ? 'Earth' : 'Sun');
                 } else {
                     if (!modeled) {
                         referencePhoto(item, x, y);

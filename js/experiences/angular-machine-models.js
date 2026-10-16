@@ -105,7 +105,7 @@ function washer() {
 
     // The stationary outer tub is open at the front and shown as a partial shell.
     const tub = group(housing, 'stationary outer tub', [0, 0.015, -0.02]);
-    cylinder(tub, 'outer tub rear bulkhead', 0.258, 0.258, 0.025, [0, 0, -0.13], MAT.shadowSteel, 64, 'z');
+    cylinder(tub, 'outer tub rear bulkhead', 0.258, 0.258, 0.025, [0, 0, -0.22], MAT.shadowSteel, 64, 'z');
     torus(tub, 'outer tub front lip', 0.259, 0.014, [0, 0, 0.145], MAT.shadowSteel, [0, 0, 0]);
     // Three broad arc panels leave a generous inspection window into the drum.
     for (let part = 0; part < 3; part++) {
@@ -114,9 +114,9 @@ function washer() {
         geo.rotateX(Math.PI / 2);
         mesh(tub, `outer tub cutaway panel ${part + 1}`, geo, MAT.shadowSteel, [0, 0, 0.015]);
     }
-    for (const x of [-0.205, 0.205]) {
-        cylinder(housing, `suspension damper ${x}`, 0.011, 0.014, 0.19, [x, -0.19, -0.12], MAT.steel, 12);
-        cylinder(housing, `counterweight boss ${x}`, 0.032, 0.032, 0.025, [x, 0.02, -0.155], MAT.darkEnamel, 24, 'z');
+    for (const x of [-0.26, 0.26]) {
+        cylinder(housing, `suspension damper ${x}`, 0.011, 0.014, 0.16, [x, -0.26, -0.12], MAT.steel, 12);
+        cylinder(housing, `counterweight boss ${x}`, 0.032, 0.032, 0.025, [x * 0.8, 0.02, -0.24], MAT.darkEnamel, 24, 'z');
     }
 
     // The drum is built around the Rotor origin; its shaft runs exactly on local Z.
@@ -129,7 +129,7 @@ function washer() {
     cylinder(rotor, 'drum hub', 0.045, 0.052, 0.045, [0, 0, -half - 0.025], MAT.brightSteel, 32, 'z');
     torus(rotor, 'rolled stainless drum mouth', r - 0.002, 0.008, [0, 0, half], MAT.brightSteel);
     // Thin longitudinal ribs and staggered dark perforation wells give the shell depth.
-    const holes = new THREE.InstancedMesh(new THREE.SphereGeometry(0.0035, 6, 4), MAT.black, 14 * 8);
+    const holes = new THREE.InstancedMesh(new THREE.SphereGeometry(0.0035, 6, 4), MAT.black, 14 * 8 + 6 * 24);
     holes.name = 'drum perforation recesses';
     const dummy = new THREE.Object3D();
     let index = 0;
@@ -139,6 +139,13 @@ function washer() {
         dummy.position.set(Math.cos(a) * (r - 0.001), Math.sin(a) * (r - 0.001), z);
         dummy.scale.set(1, 1, 0.42);
         dummy.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), new THREE.Vector3(Math.cos(a), Math.sin(a), 0));
+        dummy.updateMatrix(); holes.setMatrixAt(index++, dummy.matrix);
+    }
+    // Rear-face recesses make the turning drum visible in the axial view.
+    dummy.quaternion.identity();
+    for (let row = 0; row < 6; row++) for (let col = 0; col < 24; col++) {
+        const a = col * Math.PI / 12 + (row % 2) * Math.PI / 24, radius = 0.06 + row * 0.028;
+        dummy.position.set(Math.cos(a) * radius, Math.sin(a) * radius, -half + 0.006);
         dummy.updateMatrix(); holes.setMatrixAt(index++, dummy.matrix);
     }
     rotor.add(holes);
@@ -182,13 +189,19 @@ function hardDrive() {
     });
     cylinder(rotor, 'spindle hub', 0.010, 0.010, 0.018, [0, 0.001, 0], MAT.steel, 32);
     box(rotor, 'off-axis spindle witness tab', [0.009, 0.001, 0.002], [0.009, 0.0102, 0], MAT.brass, 0.0004);
-    cylinder(housing, 'actuator bearing post', 0.005, 0.006, 0.019, [0.039, 0.001, -0.050], MAT.brightSteel, 24);
-    // Fixed actuator arm lies above the disk stack, with a separate suspension and head slider.
-    const arm = box(housing, 'stationary actuator arm', [0.052, 0.0015, 0.005], [0.014, 0.007, -0.023], MAT.brightSteel, 0.001);
-    arm.rotation.y = -0.58;
-    cylinder(housing, 'actuator pivot cap', 0.008, 0.008, 0.003, [0.039, 0.009, -0.050], MAT.steel, 32);
-    box(housing, 'head suspension flexure', [0.018, 0.0008, 0.0018], [-0.009, 0.0058, -0.001], MAT.brass, 0.0004);
-    box(housing, 'read write head slider', [0.0045, 0.0015, 0.0035], [-0.019, 0.0052, 0.003], MAT.darkEnamel, 0.0005);
+    cylinder(housing, 'actuator bearing post', 0.005, 0.006, 0.027, [0.039, 0.001, -0.050], MAT.brightSteel, 24);
+    // Connect the bearing, arm, suspension and slider. All clear the top
+    // platter at y=0.0081; the old slider was buried inside that platter.
+    const a = new THREE.Vector3(0.039, 0.014, -0.050), b = new THREE.Vector3(-0.009, 0.014, -0.006);
+    const arm = box(housing, 'stationary actuator arm', [a.distanceTo(b), 0.0015, 0.005],
+        a.clone().add(b).multiplyScalar(0.5).toArray(), MAT.brightSteel, 0.0005);
+    arm.rotation.y = -Math.atan2(b.z - a.z, b.x - a.x);
+    cylinder(housing, 'actuator pivot cap', 0.008, 0.008, 0.003, [0.039, 0.016, -0.050], MAT.steel, 32);
+    const end = new THREE.Vector3(-0.019, 0.0105, 0.003), delta = end.clone().sub(b);
+    const flexure = box(housing, 'head suspension flexure', [delta.length(), 0.0008, 0.0018],
+        b.clone().add(end).multiplyScalar(0.5).toArray(), MAT.brass, 0.0002);
+    flexure.quaternion.setFromUnitVectors(new THREE.Vector3(1, 0, 0), delta.normalize());
+    box(housing, 'read write head slider', [0.0045, 0.0015, 0.0035], [-0.019, 0.0098, 0.003], MAT.darkEnamel, 0.0003);
     for (const [x, z] of [[-0.043, -0.062], [0.043, -0.062], [-0.043, 0.062], [0.043, 0.062]])
         cylinder(housing, `cover screw ${x}-${z}`, 0.0022, 0.0022, 0.0012, [x, 0.011, z], MAT.brass, 12);
     return root;
@@ -230,7 +243,7 @@ function recordPlayer() {
     ]);
     mesh(housing, 'fixed tubular tonearm', new THREE.TubeGeometry(armPath, 32, 0.0027, 8, false), MAT.brightSteel);
     box(housing, 'headshell', [0.018, 0.004, 0.009], [-0.006, 0.068, 0.066], MAT.darkEnamel, 0.002);
-    cylinder(housing, 'stylus', 0.0011, 0.0007, 0.009, [-0.006, 0.063, 0.067], MAT.brass, 12);
+    cylinder(housing, 'stylus', 0.0011, 0.0007, 0.014, [-0.006, 0.063, 0.067], MAT.brass, 12);
     return root;
 }
 
@@ -238,15 +251,15 @@ function bicycleWheel() {
     const d = { diameter: 0.70, width: 0.032, hubWidth: 0.10 };
     const { root, housing, rotor } = addRotorRoot('bicycle-wheel', d, 'Z', [0, 0, 0]);
     // A fixed fork and axle straddle the wheel; the rotating assembly is a side-on XY wheel.
-    box(housing, 'fork crown', [0.13, 0.045, 0.065], [0, 0.342, 0], MAT.blue, 0.012);
-    for (const x of [-0.045, 0.045]) {
+    box(housing, 'fork crown', [0.065, 0.045, 0.13], [0, 0.39, 0], MAT.blue, 0.012);
+    for (const side of [-0.060, 0.060]) {
         const path = new THREE.CatmullRomCurve3([
-            new THREE.Vector3(x, 0.345, 0), new THREE.Vector3(x * 0.95, 0.28, 0),
-            new THREE.Vector3(x * 0.8, 0.19, 0), new THREE.Vector3(x * 0.6, 0.08, 0),
-            new THREE.Vector3(x * 0.5, 0.012, 0)
+            new THREE.Vector3(0, 0.39, side), new THREE.Vector3(0, 0.28, side),
+            new THREE.Vector3(0, 0.19, side), new THREE.Vector3(0, 0.08, side),
+            new THREE.Vector3(0, 0, side)
         ]);
-        mesh(housing, `fixed fork blade ${x}`, new THREE.TubeGeometry(path, 32, 0.012, 12, false), MAT.blue);
-        box(housing, `fork dropout ${x}`, [0.030, 0.045, 0.052], [x * 0.5, 0.004, 0], MAT.steel, 0.007);
+        mesh(housing, `fixed fork blade ${side}`, new THREE.TubeGeometry(path, 32, 0.012, 12, false), MAT.blue);
+        box(housing, `fork dropout ${side}`, [0.030, 0.045, 0.020], [0, 0, side], MAT.steel, 0.007);
     }
     cylinder(housing, 'fixed through axle', 0.007, 0.007, 0.17, [0, 0, 0], MAT.brightSteel, 32, 'z');
     const R = 0.333;
@@ -308,7 +321,7 @@ function blender() {
     torus(housing, 'lid perimeter seal', 0.070, 0.0025, [0, 0.366, 0], MAT.rubber, [Math.PI / 2, 0, 0]);
     cylinder(housing, 'lid center plug', 0.021, 0.021, 0.009, [0, 0.383, 0], MAT.darkEnamel, 40);
     // A narrow stationary bearing ring holds the Y-axis rotor without burying the blades.
-    cylinder(housing, 'blade bearing collar', 0.025, 0.030, 0.018, [0, pivotY, 0], MAT.steel, 40);
+    torus(housing, 'blade bearing collar', 0.021, 0.004, [0, pivotY - 0.009, 0], MAT.steel, [Math.PI / 2, 0, 0]);
     cylinder(rotor, 'vertical drive shaft', 0.004, 0.004, 0.035, [0, -0.012, 0], MAT.brightSteel, 20);
     cylinder(rotor, 'four-blade hub', 0.014, 0.015, 0.010, [0, 0, 0], MAT.steel, 32);
     for (let i = 0; i < 4; i++) {

@@ -133,6 +133,19 @@ test('fast cycles freeze explicitly and fitting restores the recorded period', (
     assert.equal(M.cycleState('frequency', 8.01, 0.1).unresolved, true);
 });
 
+test('repeated spokes freeze before they can give a false reverse spin', () => {
+    const omega = 20, spokes = 28;
+    const real = M.cycleState('angular-velocity', omega, 0.2, 1, spokes);
+    assert.equal(real.unresolved, true);
+    assert.equal(real.phase, 0);
+    const fitted = 10 ** M.timeBounds('angular-velocity', omega).fit;
+    const slow = M.cycleState('angular-velocity', omega, Math.PI / (2 * omega), fitted, spokes);
+    assert.equal(slow.unresolved, false);
+    close(slow.visibleHz, 0.25);
+    close(slow.phase, Math.PI / 2);
+    assert.equal(M.cycleState('angular-velocity', omega, 0.2, fitted, 32).unresolved, false);
+});
+
 test('only actual rotation and orbit examples use rotary visuals', () => {
     assert.equal(
         M.visualKind('acceleration', "Earth's Rotation at Equator"),

@@ -8,8 +8,8 @@ import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, pr
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import './neuron-animation.js?v=a744312505';
 import { prepareModelPoints } from './model-points.js?v=1a62e15829';
-import { angularEntry, angularScene } from './angular-models.js?v=9445c96468';
-import { createAngularRig } from './angular-rig.js?v=9866c0e844';
+import { angularEntry, angularScene } from './angular-models.js?v=531edbd2cb';
+import { createAngularRig, angularSweepBounds } from './angular-rig.js?v=8f269aade6';
 
 const models = new Map();
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
@@ -404,10 +404,12 @@ export class ModelStage {
                     instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
                         THREE.MathUtils.degToRad(pose.yaw || 0), THREE.MathUtils.degToRad(pose.roll || 0));
                     if (instance.userData.angularRig)
-                        instance.userData.axialPose = instance.userData.angularRig.faceCamera(entry.angular_motion.view_side);
+                        instance.userData.axialPose = instance.userData.angularRig.faceCamera(entry.angular_motion.view_side, entry.angular_motion.view_tilt);
                     instance.updateMatrixWorld(true);
                     // Precise bounds so rotated poses sit on the ground instead of floating.
-                    const defaultBounds = new THREE.Box3().setFromObject(instance, true);
+                    const defaultBounds = instance.userData.angularRig
+                        ? angularSweepBounds(instance, instance.userData.angularRig)
+                        : new THREE.Box3().setFromObject(instance, true);
                     instance.userData.restExtent = defaultBounds.getSize(new THREE.Vector3());
                     instance.userData.anchorMinY = defaultBounds.min.y;
                     instance.userData.anchorMaxZ = defaultBounds.max.z;

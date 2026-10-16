@@ -1,0 +1,36 @@
+{
+  "id": "angular-hard-drive",
+  "procedural": "angular-machine",
+  "angular_kind": "hard-drive",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "Hard drive platter at 5400 rpm",
+      "Hard drive platter at 7200 rpm",
+      "Hard drive spindle"
+    ]
+  },
+  "source": "https://www.seagate.com/support/disc/manuals/ata/1621pma.pdf",
+  "note": "The disk platters and spindle rotate together. The exposed housing and read/write actuator stay fixed. The cover is removed for visibility; the diagram does not simulate seeking or magnetic bits.",
+  "presentation": {
+    "pitch": 38,
+    "yaw": -15
+  },
+  "angular_motion": {
+    "repetitions": 1,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1
+      }
+    ]
+  }
+}

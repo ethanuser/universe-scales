@@ -1,0 +1,36 @@
+{
+  "id": "angular-pulsar",
+  "procedural": "angular-machine",
+  "angular_kind": "pulsar",
+  "geometry": "mesh",
+  "representation": "illustrative-mechanism",
+  "author": "Universe Scales",
+  "license": "MIT",
+  "matches": {
+    "angular-velocity": [
+      "Pulsar",
+      "Fast millisecond pulsar",
+      "Fastest known pulsar"
+    ]
+  },
+  "source": "https://imagine.gsfc.nasa.gov/observatories/satellite/xmm/pulsar.html",
+  "note": "A schematic rotating neutron star with a tilted magnetic axis and two emission-beam guides. The star, magnetic-axis guides and beams turn together; the neutral reference circle stays fixed. Colors, beam width, tilt and field loops are illustrative, not observations of these objects. Beams depict directions of radiation, not rigid matter; pulse visibility depends on the observer. This is not a relativistic magnetosphere simulation.",
+  "presentation": {
+    "pitch": 0,
+    "yaw": 0
+  },
+  "angular_motion": {
+    "repetitions": 2,
+    "rotations": [
+      {
+        "node": "Rotor",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "ratio": 1
+      }
+    ]
+  }
+}

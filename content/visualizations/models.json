@@ -4797,7 +4797,7 @@
       },
       "representation": "downloaded-mechanism-component",
       "geometry": "mesh",
-      "note": "The crankshaft extracted from devkrsm's four-cylinder engine CAD model. Engine rpm measures this shaft's rotation, shown here looking along its axis. Pistons, connecting rods and the engine block are omitted; their reciprocating motion and combustion are not simulated. The counterweights and journals rotate as one rigid assembly. The displayed rate comes from the dataset, not a rated speed for this particular model.",
+      "note": "The crankshaft extracted from devkrsm's four-cylinder engine CAD model. Engine rpm measures this shaft's rotation, shown in an oblique inspection view so its journals remain visible beyond the end flange. Clockwise projected motion is a display convention for this unsigned speed. Pistons, connecting rods and the engine block are omitted; their reciprocating motion and combustion are not simulated. The counterweights and journals rotate as one rigid assembly. The displayed rate comes from the dataset, not a rated speed for this particular model.",
       "presentation": {
         "measure_axis": "y",
         "yaw": -90,
@@ -4815,7 +4815,9 @@
               1
             ]
           }
-        ]
+        ],
+        "view_tilt": 55,
+        "repetitions": 2
       },
       "processing": {
         "date": "2026-10-13",
@@ -4919,7 +4921,9 @@
       "source_bytes": 429940,
       "matches": {
         "angular-velocity": [
-          "Bicycle wheel"
+          "Bicycle wheel",
+          "Bicycle wheel at 20 km/h",
+          "Bicycle wheel at city speed"
         ]
       },
       "representation": "authored-mechanism",

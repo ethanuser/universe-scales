@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import * as THREE from '../js/vendor/three/three.module.min.js';
-import { createAngularRig } from '../js/experiences/angular-rig.js';
+import { createAngularRig, angularSweepBounds } from '../js/experiences/angular-rig.js';
 
 test('face-on clockwise convention preserves geared counter-rotation', () => {
     const root = new THREE.Group(), rotor = new THREE.Group(), geared = new THREE.Group();
@@ -49,4 +49,17 @@ test('authored orientation is preserved and negative phase ratios rotate clock h
     assert.ok(new THREE.Vector3(0, 1, 0).applyQuaternion(relative).distanceTo(new THREE.Vector3(1, 0, 0)) < 1e-12);
     rig.setPhase(0); assert.deepEqual(hand.quaternion.toArray(), rest.toArray());
     assert.throws(() => createAngularRig(root, { rotations: [{ node: 'Missing', axis: [0, 1, 0] }] }), /Missing angular rotor/);
+});
+
+test('full-turn bounds contain a thin propeller between sample phases and restore rest', () => {
+    const root = new THREE.Group(), rotor = new THREE.Group(); rotor.name = 'Rotor'; root.add(rotor);
+    rotor.add(new THREE.Mesh(new THREE.BoxGeometry(2, 0.04, 0.1)));
+    const rig = createAngularRig(root, { rotations: [{ node: 'Rotor', axis: [0, 0, 1] }] });
+    const bounds = angularSweepBounds(root, rig);
+    assert.ok(bounds.getSize(new THREE.Vector3()).y > 2, 'quarter turn no longer clips');
+    assert.equal(rotor.quaternion.angleTo(new THREE.Quaternion()), 0);
+    for (let i = 0; i < 100; i++) {
+        rig.setPhase(i * 0.073); root.updateMatrixWorld(true);
+        assert.ok(bounds.containsBox(new THREE.Box3().setFromObject(root, true)));
+    }
 });
