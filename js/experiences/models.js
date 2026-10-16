@@ -7,7 +7,7 @@ import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2
 import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=fcc23d4391';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import './neuron-animation.js?v=a744312505';
-import { prepareModelPoints } from './model-points.js?v=1a62e15829';
+import { prepareModelPoints } from './model-points.js?v=a7a090deac';
 import { angularEntry, angularScene } from './angular-models.js?v=531edbd2cb';
 import { createAngularRig, angularSweepBounds } from './angular-rig.js?v=8f269aade6';
 
@@ -200,7 +200,8 @@ async function load(entry) {
         if (entry.presentation && ['tint', 'color_gain', 'roughness', 'metalness', 'opaque', 'double_sided', 'emissive', 'environment']
             .some(key => key in entry.presentation)) {
             normalized.traverse(child => {
-                if (!child.isMesh) return;
+                // Glowing meshes carry a shader hook that Material.clone() would drop.
+                if (!child.isMesh || child.userData.additive) return;
                 const customize = original => {
                     const material = original.clone();
                     if (entry.presentation.tint) material.color.set(entry.presentation.tint);
@@ -411,6 +412,12 @@ export class ModelStage {
                         ? angularSweepBounds(instance, instance.userData.angularRig)
                         : new THREE.Box3().setFromObject(instance, true);
                     instance.userData.restExtent = defaultBounds.getSize(new THREE.Vector3());
+                    // Radius (model units) of a sphere around the origin that contains the
+                    // model in any orientation. Clip planes use it: per-frame boxes can be
+                    // stale for skinned meshes, letting a turned model cross the near plane.
+                    instance.userData.boundRadius = Math.max(...[0, 1].flatMap(i => [0, 1].flatMap(j => [0, 1].map(k =>
+                        new THREE.Vector3(i ? defaultBounds.max.x : defaultBounds.min.x, j ? defaultBounds.max.y : defaultBounds.min.y,
+                            k ? defaultBounds.max.z : defaultBounds.min.z).length()))));
                     instance.userData.anchorMinY = defaultBounds.min.y;
                     instance.userData.anchorMaxZ = defaultBounds.max.z;
                     instance.traverse(child => {
@@ -478,9 +485,9 @@ export class ModelStage {
         let far = distance + 1000, nearest = Infinity;
         for (const instance of this.instances.values()) {
             if (!instance?.visible) continue;
-            const bounds = new THREE.Box3().setFromObject(instance);
-            far = Math.max(far, distance - bounds.min.z + 100);
-            nearest = Math.min(nearest, distance - bounds.max.z);
+            const radius = (instance.userData.boundRadius ?? 1) * instance.scale.x * 1.02;
+            far = Math.max(far, distance - (instance.position.z - radius) + 100);
+            nearest = Math.min(nearest, distance - (instance.position.z + radius));
         }
         // A fixed 0.1..1e7 frustum made nearly coplanar parts flicker (fly wings,
         // painted lines on a field). The eye sits thousands of units back, so the

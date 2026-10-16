@@ -20,24 +20,37 @@ export function softPointSprite() {
     return sprite;
 }
 
+// Material.clone() does not copy shader hooks, so every clone of a glowing
+// material must call this again.
+function brightnessAlpha(material) {
+    material.onBeforeCompile = shader => {
+        shader.fragmentShader = shader.fragmentShader.replace('#include <premultiplied_alpha_fragment>',
+            '#include <premultiplied_alpha_fragment>\n\tgl_FragColor.a = max(gl_FragColor.r, max(gl_FragColor.g, gl_FragColor.b));');
+    };
+    material.customProgramCacheKey = () => 'additive-brightness-alpha';
+    return material;
+}
+
 // glTF extras `additive: true` (copied to userData) make a mesh or cloud glow:
 // overlapping parts add up and black is transparent, as for gas and starlight.
 function makeAdditive(node) {
     const apply = material => {
         const glowing = material.clone();
-        // Add color but leave canvas alpha untouched: the canvas is transparent
-        // over the CSS sky, and plain AdditiveBlending would also add alpha,
-        // turning additive black into opaque black. With premultiplied canvas
-        // compositing the color then adds onto whatever sky is behind.
+        // The canvas is transparent over the CSS sky. Adding color while leaving alpha
+        // at zero relies on how a browser composites "invalid" premultiplied pixels:
+        // Chrome shows them, Safari and Firefox drop them (the glow then appeared only
+        // under the hover outline). So output premultiplied color with alpha equal to
+        // its brightness and add both: rgb never exceeds alpha, black stays clear.
+        glowing.premultipliedAlpha = true;
         glowing.blending = THREE.CustomBlending;
         glowing.blendEquation = THREE.AddEquation;
-        glowing.blendSrc = THREE.SrcAlphaFactor;
+        glowing.blendSrc = THREE.OneFactor;
         glowing.blendDst = THREE.OneFactor;
-        glowing.blendSrcAlpha = THREE.ZeroFactor;
+        glowing.blendSrcAlpha = THREE.OneFactor;
         glowing.blendDstAlpha = THREE.OneFactor;
         glowing.transparent = true;
         glowing.depthWrite = false;
-        return glowing;
+        return brightnessAlpha(glowing);
     };
     node.material = Array.isArray(node.material) ? node.material.map(apply) : apply(node.material);
 }
@@ -49,6 +62,7 @@ export function prepareModelPoints(scene) {
     scene.traverse(node => {
         if (!node.isPoints || !node.userData.softPoints) return;
         node.material = node.material.clone();
+        if (node.userData.additive) brightnessAlpha(node.material);
         node.material.map = softPointSprite();
         node.material.transparent = true;
         node.material.depthWrite = false;
