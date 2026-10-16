@@ -1,0 +1,122 @@
+[
+  {
+    "id": "micro3d-blu-ray-grooves",
+    "source_bounds": [
+      384.0,
+      329.59999084472656,
+      22.240000009536743
+    ],
+    "rest_extent": 1.1737771208805667,
+    "side_extent": 1.0196156269600791
+  },
+  {
+    "id": "micro3d-dvd-grooves",
+    "source_bounds": [
+      888.0,
+      762.1999816894531,
+      131.07999992370605
+    ],
+    "rest_extent": 1.1737771208805667,
+    "side_extent": 1.0130761965688386
+  },
+  {
+    "id": "micro3d-helium-charge",
+    "source_bounds": [
+      3.3704280853271484,
+      3.3704280853271484,
+      3.3704280853271484
+    ],
+    "rest_extent": 1.0039975826694576,
+    "side_extent": 1.0021345587579134
+  },
+  {
+    "id": "micro3d-inner-core",
+    "source_bounds": [
+      2443.0,
+      2443.0,
+      2443.0
+    ],
+    "rest_extent": 1.000171443339813,
+    "side_extent": 1.0001633286057028
+  },
+  {
+    "id": "micro3d-karman-line",
+    "source_bounds": [
+      68.0,
+      100.3200036585331,
+      20.15999984741211
+    ],
+    "rest_extent": 1.0497461423783307,
+    "side_extent": 1.0497461423783307
+  },
+  {
+    "id": "micro3d-kola-depth",
+    "source_bounds": [
+      7710.35791015625,
+      12306.142889022827,
+      1822.0715999603271
+    ],
+    "rest_extent": 1.0302299667769783,
+    "side_extent": 1.0302299667769783
+  },
+  {
+    "id": "micro3d-nanotube-gate",
+    "source_bounds": [
+      1.0,
+      1.0,
+      0.699999988079071
+    ],
+    "rest_extent": 1.1982611029469823,
+    "side_extent": 1.1837263198534722
+  },
+  {
+    "id": "micro3d-optical-fiber",
+    "source_bounds": [
+      155.19137573242188,
+      155.1866683959961,
+      45.0
+    ],
+    "rest_extent": 1.267957623928368,
+    "side_extent": 1.267957623928368
+  },
+  {
+    "id": "micro3d-paramecium",
+    "source_bounds": [
+      267.4695129394531,
+      82.64307403564453,
+      64.45404434204102
+    ],
+    "rest_extent": 1.0539756419277677,
+    "side_extent": 0.34461635521633516
+  },
+  {
+    "id": "micro3d-spider-silk",
+    "source_bounds": [
+      3.0,
+      3.0,
+      1.7999999523162842
+    ],
+    "rest_extent": 1.164630523068412,
+    "side_extent": 1.1342737071347158
+  },
+  {
+    "id": "earth-prem-context",
+    "source_bounds": [
+      12742.0,
+      12742.0,
+      12742.0
+    ],
+    "rest_extent": 0.9998280525354251,
+    "side_extent": 0.9931869022252704
+  },
+  {
+    "id": "transistor-stack-context",
+    "source_bounds": [
+      13.28499984741211,
+      9.099999904632568,
+      1.2170000076293945
+    ],
+    "rest_extent": 0.9169088845491734,
+    "side_extent": 0.6930249603012111
+  }
+]

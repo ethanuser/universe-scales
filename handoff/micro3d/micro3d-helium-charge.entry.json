@@ -1,0 +1,52 @@
+{
+  "id": "micro3d-helium-charge",
+  "source": "https://physics.nist.gov/cgi-bin/cuu/Value?ral%7Csearch_for=charge",
+  "basis_url": "https://physics.nist.gov/cgi-bin/cuu/Value?ral%7Csearch_for=charge",
+  "basis_label": "Measurement and representation basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Helium Nucleus Charge Diameter"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "measurement_diagram",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 3.357,
+    "yaw": -17,
+    "pitch": 12,
+    "layout_width_factor": 1.02
+  },
+  "note": "Helium-4 measurement diagram. Three thin guides mark twice the CODATA 2022 rms charge radius 1.6785(21) fm: 3.357 fm. An rms radius is a moment of the charge distribution, not a hard outer boundary. Four overlapping colored nucleon glyphs show two protons and two neutrons; their radii, positions, colors and static tetrahedral arrangement are authored symbols, not measured nucleon surfaces or a nuclear-structure reconstruction. No electron cloud is shown.",
+  "processing": {
+    "script": "scripts/build_micro3d_models.py",
+    "units": "femtometres",
+    "source_note": "content/visualizations/models/sources/micro3d-helium-charge.md",
+    "measurements": {
+      "rms_charge_radius_fm": 1.6785,
+      "rms_uncertainty_fm": 0.0021,
+      "diameter_fm": 3.357,
+      "nucleon_glyphs": "schematic only"
+    }
+  },
+  "src": "content/visualizations/models/micro3d-helium-charge.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 817760,
+  "sha256": "4f6d295a3c86f6f83ea1425622ebd5906993300ab05342fc49bb9a34aae91ec0",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 7,
+  "triangle_count": 43072,
+  "animations": 0,
+  "skins": 0
+}

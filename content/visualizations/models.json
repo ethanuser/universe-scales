@@ -13132,6 +13132,234 @@
       "triangle_count": 4864,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "micro3d-helium-charge",
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?ral%7Csearch_for=charge",
+      "basis_url": "https://physics.nist.gov/cgi-bin/cuu/Value?ral%7Csearch_for=charge",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Helium Nucleus Charge Diameter"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measurement_diagram",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 3.357,
+        "yaw": -17,
+        "pitch": 12,
+        "layout_width_factor": 1.02
+      },
+      "note": "Helium-4 measurement diagram. Three thin guides mark twice the CODATA 2022 rms charge radius 1.6785(21) fm: 3.357 fm. An rms radius is a moment of the charge distribution, not a hard outer boundary. Four overlapping colored nucleon glyphs show two protons and two neutrons; their radii, positions, colors and static tetrahedral arrangement are authored symbols, not measured nucleon surfaces or a nuclear-structure reconstruction. No electron cloud is shown.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "femtometres",
+        "source_note": "content/visualizations/models/sources/micro3d-helium-charge.md",
+        "measurements": {
+          "rms_charge_radius_fm": 1.6785,
+          "rms_uncertainty_fm": 0.0021,
+          "diameter_fm": 3.357,
+          "nucleon_glyphs": "schematic only"
+        }
+      },
+      "src": "content/visualizations/models/micro3d-helium-charge.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 817760,
+      "sha256": "4f6d295a3c86f6f83ea1425622ebd5906993300ab05342fc49bb9a34aae91ec0",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 7,
+      "triangle_count": 43072,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "micro3d-karman-line",
+      "source": "https://www.fai.org/news/statement-about-karman-line",
+      "basis_url": "https://www.fai.org/news/statement-about-karman-line",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Karman Line"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measurement_diagram",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 100.0,
+        "yaw": -13,
+        "pitch": 14,
+        "layout_width_factor": 0.9
+      },
+      "note": "Local geometric altitude section: 100 km from sea level to the FAI K\u00e1rm\u00e1n-line convention, using equal horizontal and vertical kilometres. Two small spherical patches use the 6,371 km mean Earth radius used in PREM and radii 6,371 and 6,471 km. The upper cyan patch and gold ruler are measurement guides, not physical surfaces, a sharp atmosphere edge or a shell of air. The 68 by 18 km local window is an authored crop. No exponential-density scale, abrupt sky-color boundary, launch trajectory, topography or horizontally compressed globe is invented. The full Earth is omitted because its diameter is over 127 times the listed altitude.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "kilometres",
+        "source_note": "content/visualizations/models/sources/micro3d-karman-line.md",
+        "measurements": {
+          "conventional_altitude_km": 100.0,
+          "mean_earth_radius_km": 6371.0,
+          "radius_source": "https://link.springer.com/article/10.1140/epjc/s10052-022-10399-6",
+          "local_crop_km": [
+            68,
+            18
+          ],
+          "vertical_exaggeration": 1
+        }
+      },
+      "src": "content/visualizations/models/micro3d-karman-line.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 46336,
+      "sha256": "60dc77919fe764bdfcb8ebf5501d2db2c9ae5962e7e38f24aefea29145c10a6b",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 2096,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "micro3d-optical-fiber",
+      "source": "https://www.corning.com/catalog/coc/documents/product-family-specifications/0396_EMEA_BEN.pdf",
+      "basis_url": "https://www.corning.com/catalog/coc/documents/product-family-specifications/0396_EMEA_BEN.pdf",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Optical Fiber Cladding"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 125,
+        "yaw": -6,
+        "pitch": 4,
+        "layout_width_factor": 1.29
+      },
+      "note": "Original cross-section of a Corning SMF-28 Ultra type fiber: 8.2 \u00b5m nominal core diameter, 125 \u00b5m glass cladding diameter and 242 \u00b5m coating diameter. The core is not the 9.2 \u00b5m mode-field diameter. A quarter of the cladding and most of the coating are cut away. The surviving 10-degree coating sector preserves the full 121 \u00b5m outer radius; its thickness is not compressed to fit the glass diameter. Segment length (45 \u00b5m), cut orientations and opaque contrasting colors are authored presentation choices. No refractive-index profile, internal polymer-layer subdivision, propagating light ray or material transparency is simulated. The listed quantity measures glass diameter only.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "micrometres",
+        "source_note": "content/visualizations/models/sources/micro3d-optical-fiber.md",
+        "measurements": {
+          "core_diameter_um": 8.2,
+          "cladding_diameter_um": 125,
+          "coating_diameter_um": 242,
+          "displayed_coating_angles_deg": [
+            130,
+            140
+          ],
+          "axial_crop_um": 45
+        }
+      },
+      "src": "content/visualizations/models/micro3d-optical-fiber.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 86516,
+      "sha256": "8395fb30452b5b685e00b4b2c303b2c81f75b93fffd6bdbaee1679a9119871c5",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 14,
+      "triangle_count": 2312,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "micro3d-paramecium",
+      "source": "https://realmicrolife.com/paramecium-caudatum/",
+      "basis_url": "https://realmicrolife.com/paramecium-caudatum/",
+      "basis_label": "Measurement and representation basis",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Paramecium"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dimensioned_illustration",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 250,
+        "yaw": -12,
+        "pitch": -15,
+        "roll": 3,
+        "layout_width_factor": 1.15
+      },
+      "note": "Original external morphology illustration of Paramecium caudatum, using a representative 250 \u00b5m cell-body length. Martin Kreutz\u2019s microscopy observations document 170\u2013300 \u00b5m cells, a rounded anterior, narrower posterior, an anteriorly widening oral groove, 80\u2013120 longitudinal rows of paired cilia, and a tuft of 10\u201320 \u00b5m caudal cilia. This diagram uses 80 rows; ordinary 8 \u00b5m cilia and 14 \u00b5m caudal cilia, their static bend, spacing, diameter, the body width/depth and precise oral-groove profile are authored simplifications. Cilia extend beyond the calibrated 250 \u00b5m body. The cell is opaque for small-scale legibility; internal organelles, trichocysts and refractive contents are omitted. No source photograph is copied, and this is not a scan, measured specimen surface or reconstructed 3D microscopy volume.",
+      "processing": {
+        "script": "scripts/build_micro3d_models.py",
+        "units": "micrometres",
+        "source_note": "content/visualizations/models/sources/micro3d-paramecium.md",
+        "measurements": {
+          "representative_body_length_um": 250,
+          "observed_length_range_um": [
+            170,
+            300
+          ],
+          "observed_ciliary_row_range": [
+            80,
+            120
+          ],
+          "illustrated_ciliary_rows": 80,
+          "observed_caudal_cilia_um": [
+            10,
+            20
+          ],
+          "geometry": "original morphology illustration"
+        }
+      },
+      "src": "content/visualizations/models/micro3d-paramecium.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1644508,
+      "sha256": "8d10fab0b8de91ab515bd6ef7fc33fbd6653066ea7c51a337b265c839536fcb0",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 59312,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

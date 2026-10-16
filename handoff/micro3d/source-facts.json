@@ -1,0 +1,223 @@
+{
+  "opened": "2026-10-16",
+  "models": {
+    "micro3d-blu-ray-grooves": {
+      "sources": [
+        {
+          "title": "Hagemeier, Schake and Lehmann, 2019",
+          "url": "https://jsss.copernicus.org/articles/8/111/2019/",
+          "facts": "Nominal 320 nm pitch and 20 nm depth; measured specimen 324 nm and 24 nm."
+        },
+        {
+          "title": "Wu et al., 2021, Fig. 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8571286/",
+          "facts": "BD-R representative groove width 100 nm, depth 20 nm. Fig. 2 quotes approximate 200 nm ridges: this diagram uses nominal 320 nm pitch, not that specimen-specific ridge value."
+        }
+      ],
+      "measurements": {
+        "track_pitch_nm": 320.0,
+        "representative_groove_width_nm": 100.0,
+        "groove_depth_nm": 20.0,
+        "surface_crop_width_nm": 384.0,
+        "source_dimensions_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8571286/",
+        "edge_profile": "authored trapezoid, equal XYZ units"
+      }
+    },
+    "micro3d-dvd-grooves": {
+      "sources": [
+        {
+          "title": "ECMA-267, third edition, 2001, clause 10.6.2",
+          "url": "https://dev.ecma-international.org/wp-content/uploads/ECMA-267_3rd_edition_april_2001.pdf",
+          "facts": "0.74 micrometre nominal track pitch; local tolerance 0.03 micrometre. The standard is DVD-ROM; nominal DVD-R spacing is consistent with it, but groove shape is taken from the next study."
+        },
+        {
+          "title": "Wu et al., 2021, Fig. 2",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8571286/",
+          "facts": "DVD-R representative groove width 300 nm, depth 120 nm. Its approximately 450 nm ridge is not copied; nominal 740 nm center spacing is used here."
+        }
+      ],
+      "measurements": {
+        "track_pitch_nm": 740.0,
+        "representative_groove_width_nm": 300.0,
+        "groove_depth_nm": 120.0,
+        "surface_crop_width_nm": 888.0,
+        "source_dimensions_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8571286/",
+        "edge_profile": "authored trapezoid, equal XYZ units"
+      }
+    },
+    "micro3d-helium-charge": {
+      "sources": [
+        {
+          "title": "CODATA 2022 alpha-particle rms charge radius",
+          "url": "https://physics.nist.gov/cgi-bin/cuu/Value?ral%7Csearch_for=charge",
+          "facts": "1.6785 fm, standard uncertainty 0.0021 fm; twice the radius is 3.357 fm."
+        },
+        {
+          "title": "Krauth et al., 2021, independent muonic-helium determination",
+          "url": "https://www.nature.com/articles/s41586-021-03183-1",
+          "facts": "The 1.67824(83) fm result is a particular experiment, not the CODATA central value used here."
+        }
+      ],
+      "measurements": {
+        "rms_charge_radius_fm": 1.6785,
+        "rms_uncertainty_fm": 0.0021,
+        "diameter_fm": 3.357,
+        "nucleon_glyphs": "schematic only"
+      }
+    },
+    "micro3d-inner-core": {
+      "sources": [
+        {
+          "title": "Capozzi and Petcov, 2022, section 1",
+          "url": "https://link.springer.com/article/10.1140/epjc/s10052-022-10399-6",
+          "facts": "PREM inner-core radius 1,221.5 km, outer-core radius 3,480 km, mean Earth radius 6,371 km."
+        },
+        {
+          "title": "Dziewonski and Anderson, 1981, PREM bibliographic record",
+          "url": "https://authors.library.caltech.edu/records/rjkzg-1a346",
+          "facts": "Original reference model identification; numerical values above were read in the open 2022 research article."
+        }
+      ],
+      "measurements": {
+        "inner_core_radius_km": 1221.5,
+        "inner_core_diameter_km": 2443,
+        "catalog_reference_diameter_km": 2442,
+        "outer_core_radius_km": 3480,
+        "earth_radius_km": 6371
+      }
+    },
+    "micro3d-karman-line": {
+      "sources": [
+        {
+          "title": "FAI statement, 2018",
+          "url": "https://www.fai.org/news/statement-about-karman-line",
+          "facts": "100 km conventional altitude boundary."
+        },
+        {
+          "title": "Capozzi and Petcov, 2022, section 1",
+          "url": "https://link.springer.com/article/10.1140/epjc/s10052-022-10399-6",
+          "facts": "PREM mean Earth radius 6,371 km, used solely for local spherical curvature."
+        }
+      ],
+      "measurements": {
+        "conventional_altitude_km": 100.0,
+        "mean_earth_radius_km": 6371.0,
+        "radius_source": "https://link.springer.com/article/10.1140/epjc/s10052-022-10399-6",
+        "local_crop_km": [
+          68,
+          18
+        ],
+        "vertical_exaggeration": 1
+      }
+    },
+    "micro3d-kola-depth": {
+      "sources": [
+        {
+          "title": "Chayka et al., Scientific Reports, 2020, geological setting",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6981266/",
+          "facts": "Kola SG-3 is described as 12,262 m deep. Its geological observations do not establish a 3D bore trajectory."
+        },
+        {
+          "title": "Wrigley, 2023, drilling-history study",
+          "url": "https://journals.sagepub.com/doi/10.1177/02637758231185134",
+          "facts": "The historical discussion documents deviations, abandoned shafts and redrilling; a straight depth marker must not be described as a measured path."
+        }
+      ],
+      "measurements": {
+        "vertical_depth_m": 12262.0,
+        "trajectory": "not reconstructed",
+        "section_window": "authored context crop",
+        "orange_stroke": "depth annotation, not bore diameter"
+      }
+    },
+    "micro3d-nanotube-gate": {
+      "sources": [
+        {
+          "title": "Berkeley Lab Molecular Foundry research summary",
+          "url": "https://foundry.lbl.gov/2016/10/16/mos2-transistors-with-1-nanometer-gate-lengths/",
+          "facts": "Approximately 1 nm SWCNT gate; MoS2 channel and ZrO2 dielectric."
+        },
+        {
+          "title": "Berkeley Lab explanation and cross-sectional TEM",
+          "url": "https://newscenter.lbl.gov/2016/10/06/smallest-transistor-1-nm-gate/",
+          "facts": "The nanotube diameter sets gate length; source and drain are separate device terminals."
+        },
+        {
+          "title": "Desai et al. Science 2016, author-hosted paper and supplement",
+          "url": "https://nano.eecs.berkeley.edu/publications/Science_2016_1nm%20MoS2%20FETs.pdf",
+          "facts": "Fig. 2: ZrO2 thickness approximately 5.8 nm; Fig. 4 / Table S1: bilayer MoS2 thickness 1.3 nm; substrate SiO2 thickness 50 nm."
+        }
+      ],
+      "measurements": {
+        "physical_gate_length_nm": 1,
+        "axis_crop_nm": 0.7,
+        "boundary": "zero-thickness envelope",
+        "companion_zirconia_thickness_nm": 5.8,
+        "companion_mos2_thickness_nm": 1.3,
+        "companion_source": "https://nano.eecs.berkeley.edu/publications/Science_2016_1nm%20MoS2%20FETs.pdf"
+      }
+    },
+    "micro3d-optical-fiber": {
+      "sources": [
+        {
+          "title": "Corning family specification 0396_EMEA_BEN, page 3, 2017-10-18",
+          "url": "https://www.corning.com/catalog/coc/documents/product-family-specifications/0396_EMEA_BEN.pdf",
+          "facts": "SMF-28 Ultra core 8.2, cladding 125, coating 242 micrometres. The 9.2 micrometre mode-field diameter at 1310 nm is a different quantity."
+        }
+      ],
+      "measurements": {
+        "core_diameter_um": 8.2,
+        "cladding_diameter_um": 125,
+        "coating_diameter_um": 242,
+        "displayed_coating_angles_deg": [
+          130,
+          140
+        ],
+        "axial_crop_um": 45
+      }
+    },
+    "micro3d-paramecium": {
+      "sources": [
+        {
+          "title": "Martin Kreutz, Paramecium caudatum microscopy observations",
+          "url": "https://realmicrolife.com/paramecium-caudatum/",
+          "facts": "Diagnosis: 170-300 micrometre cells, rounded anterior/narrow posterior, oral groove widening toward anterior, 80-120 rows of paired cilia. Observed caudal cilia 10-20 micrometres. Fig. 3 shows a 250 micrometre cell; no photograph or outline is copied."
+        }
+      ],
+      "measurements": {
+        "representative_body_length_um": 250,
+        "observed_length_range_um": [
+          170,
+          300
+        ],
+        "observed_ciliary_row_range": [
+          80,
+          120
+        ],
+        "illustrated_ciliary_rows": 80,
+        "observed_caudal_cilia_um": [
+          10,
+          20
+        ],
+        "geometry": "original morphology illustration"
+      }
+    },
+    "micro3d-spider-silk": {
+      "sources": [
+        {
+          "title": "Kitagawa, Sasagawa and Kitayama, 1995",
+          "url": "https://www.jstage.jst.go.jp/article/jsms1963/44/497/44_497_153/_article/-char/en",
+          "facts": "Nephila clavata dragline diameter 2-5 micrometres; the exterior is described as featureless. A representative 3 micrometre diameter is already the catalog definition."
+        }
+      ],
+      "measurements": {
+        "representative_diameter_um": 3,
+        "published_diameter_range_um": [
+          2,
+          5
+        ],
+        "authored_crop_length_um": 1.8
+      }
+    }
+  }
+}

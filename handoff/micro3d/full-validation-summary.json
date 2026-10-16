@@ -1,0 +1,51 @@
+{
+  "exit_code": 0,
+  "models_checked": 162,
+  "failures": [
+    {
+      "id": "nasa-earth",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "id": "wine-bottle",
+      "errors": 0,
+      "warnings": 3
+    },
+    {
+      "id": "ceiling-fan",
+      "errors": 0,
+      "warnings": 2
+    },
+    {
+      "id": "sketchfab-giraffe",
+      "errors": 0,
+      "warnings": 876
+    },
+    {
+      "id": "sketchfab-blue-whale",
+      "errors": 0,
+      "warnings": 979
+    },
+    {
+      "id": "bucket",
+      "errors": 0,
+      "warnings": 3
+    },
+    {
+      "id": "nasa-earth-moon-distance",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "id": "nasa-sun-earth-au",
+      "errors": 0,
+      "warnings": 1
+    },
+    {
+      "id": "great-wall-network-globe",
+      "errors": 0,
+      "warnings": 1
+    }
+  ]
+}
