@@ -1,0 +1,78 @@
+[
+  {
+    "item": "Helium Nucleus Charge Diameter",
+    "file": "images/length_helium_nucleus_charge_diameter.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "thumbnail": "images/thumbs/length_helium_nucleus_charge_diameter.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "bytes": 101748,
+    "sha256": "ff1c4ba32020a27829eee7a6e48377075e8371e6ca7db13407e0ac1f78e37137",
+    "thumbnail_sha256": "c0dc6ab6101fc7bf2049bf04a9964d7fdd5027c4e3223d34bc5967a0e4ba2c86",
+    "license": "CC0"
+  },
+  {
+    "item": "Prelude FLNG",
+    "status": "missing approved image"
+  },
+  {
+    "item": "PSR J0437-4715 Neutron Star",
+    "file": "images/length_psr_j0437_4715_neutron_star.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "thumbnail": "images/thumbs/length_psr_j0437_4715_neutron_star.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "bytes": 109482,
+    "sha256": "122950f2b53abbcb43f72296503219412260347de3670eb3265d0706cec3e5df",
+    "thumbnail_sha256": "2b20d3980589e079eb1c248a5ceccd71dc50ec2031c3f199b5870ef99c6de633",
+    "license": "CC0"
+  },
+  {
+    "item": "Danyang-Kunshan Grand Bridge",
+    "status": "missing approved image"
+  },
+  {
+    "item": "Milky Way Central Bar",
+    "file": "images/length_milky_way_central_bar.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "thumbnail": "images/thumbs/length_milky_way_central_bar.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "bytes": 123332,
+    "sha256": "6650646c36cd445739a020791280b769391fe4134ced22e07cd1fc6d657fe2b1",
+    "thumbnail_sha256": "5bc3a2cc6572b94a44d66e6f74b9719a253d2d58184b85fd6ca96578058a19a5",
+    "license": "CC0"
+  },
+  {
+    "item": "Baryon Acoustic Oscillation Scale",
+    "file": "images/length_baryon_acoustic_oscillation_scale.jpg",
+    "dimensions": [
+      1200,
+      800
+    ],
+    "thumbnail": "images/thumbs/length_baryon_acoustic_oscillation_scale.jpg",
+    "thumbnail_dimensions": [
+      300,
+      200
+    ],
+    "bytes": 101386,
+    "sha256": "98180ec37ceb71e9f6b84aafc8357d78843e08b6a2f8f8efce809f139b07c7cc",
+    "thumbnail_sha256": "857d080cff7a6d0f3cbac6849d8b9302ddeaa2978a29b346147a00c6d8bd2b14",
+    "license": "CC0"
+  }
+]

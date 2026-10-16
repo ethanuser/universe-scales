@@ -1,0 +1,7 @@
+{
+  "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+  "original_svg": "handoff/images3/diagrams/helium_nucleus_charge_diameter.svg",
+  "license": "CC0",
+  "evidence": "NIST lists an alpha-particle rms charge radius of 1.6785(21) fm. The displayed diameter is twice this radius, rounded to 3.36 fm. The soft cloud is illustrative and the dashed circle marks an rms radius, not a nuclear surface or an enclosed-charge fraction.",
+  "accessed": "2026-10-16"
+}

@@ -1,0 +1,88 @@
+{
+  "pageid": 117026460,
+  "ns": 6,
+  "title": "File:2022 4 15 Prelude auf Karte.png",
+  "imagerepository": "local",
+  "imageinfo": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/2022_4_15_Prelude_auf_Karte.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:2022_4_15_Prelude_auf_Karte.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117026460",
+      "extmetadata": {
+        "DateTime": {
+          "value": "2022-04-19 17:12:58",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "2022 4 15 Prelude auf Karte",
+          "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "GFDL|License migration redundant|Prelude (ship, 2017)|Self-published work|Files uploaded by Dr. Hochhaus|Deletion requests April 2026",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "ImageDescription": {
+          "value": "Die Prelude im Bau, sie ankert jetzt vor Australien und verfl\u00fcssigt Erdgas",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2022",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dr._Karl-Heinz_Hochhaus\" title=\"User:Dr. Karl-Heinz Hochhaus\">Dr. Karl-Heinz Hochhaus</a>",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "CC BY 3.0",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Creative Commons Attribution 3.0",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://creativecommons.org/licenses/by/3.0",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "cc-by-3.0",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "accessed": "2026-10-16",
+  "prelude_flng": [
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:Prelude_(ship,_2017)_IMO_9360439,_Amerikhaven,_Port_of_Amsterdam.jpg",
+      "license": "CC0",
+      "decision": "Rejected: wrong vessel. The file names IMO 9360439 and shows an ordinary cargo ship. Prelude FLNG is IMO 9648714. A misleading Commons category membership is not subject verification."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:2022_4_15_Prelude_auf_Karte.png",
+      "license": "CC BY 3.0 claimed by montage uploader",
+      "decision": "Rejected: visual inspection shows a montage of a map, a Shell-branded rendering and several photographs. The record claims own work, but does not separately establish the embedded artwork/photo rights. The uploader's license alone does not resolve those rights. Original downloaded only to /tmp/images3-originals/prelude.png."
+    },
+    {
+      "source": "https://www.shell.com.au/about-us/what-we-do/gas-and-lng/prelude-flng-facility.html",
+      "decision": "Correct subject in operator photographs, but no allowed CC BY, CC0 or public-domain release established. Not imported."
+    },
+    {
+      "source": "https://www.flickr.com/search/?text=Prelude%20FLNG&license=4%2C9%2C10%2C11",
+      "decision": "Read-only Flickr search restricted to BY/CC0/public-domain licenses returned no matches. Openverse query saved separately likewise returned zero."
+    }
+  ],
+  "danyang_kunshan_grand_bridge": [
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:201603_Danyang-Kunshan_grand_bridge_(wuxi).JPG",
+      "license": "CC BY-SA 4.0",
+      "decision": "Correct subject; excluded license. The cropped version has the same underlying license."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/Category:Danyang%E2%80%93Kunshan_Grand_Bridge",
+      "decision": "Category checked. The Wuxi photos, Elias Cababie photo and maps use ShareAlike licenses, excluded by the brief."
+    },
+    {
+      "source": "https://www.flickr.com/photos/edward_zhao/8224595088",
+      "license": "All rights reserved",
+      "decision": "Correct-subject photographer description, but live photo-page license is all rights reserved. Not imported."
+    },
+    {
+      "source": "https://www.flickr.com/photos/34703494@N07/5910608939",
+      "license": "All rights reserved",
+      "decision": "Photograph caption identifies the Yangcheng Lake section, but live photo-page license is all rights reserved. Not imported."
+    },
+    {
+      "source": "https://www.flickr.com/search/?text=Danyang%20Kunshan&license=4%2C9%2C10%2C11",
+      "decision": "Restricted-license search returned no matches. Openverse query saved separately likewise returned zero."
+    }
+  ]
+}

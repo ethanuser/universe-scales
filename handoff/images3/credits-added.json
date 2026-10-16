@@ -1,0 +1,38 @@
+[
+  {
+    "file": "images/length_helium_nucleus_charge_diameter.jpg",
+    "source": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+    "title": "Helium-4 nucleus — original rms charge-diameter diagram",
+    "author": "Universe Scales (original explanatory diagram)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New original SVG; rendered to 1200 × 800 JPEG and a 300 × 200 thumbnail. NIST lists an alpha-particle rms charge radius of 1.6785(21) fm. The displayed diameter is twice this radius, rounded to 3.36 fm. The soft cloud is illustrative and the dashed circle marks an rms radius, not a nuclear surface or an enclosed-charge fraction."
+  },
+  {
+    "file": "images/length_psr_j0437_4715_neutron_star.jpg",
+    "source": "https://heasarc.gsfc.nasa.gov/docs/nicer/science_nuggets/20240822.html",
+    "title": "PSR J0437-4715 — original NICER equatorial-diameter diagram",
+    "author": "Universe Scales (original explanatory diagram)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New original SVG; rendered to 1200 × 800 JPEG and a 300 × 200 thumbnail. NASA's 22 August 2024 NICER summary gives an inferred equatorial radius of 11.36 km with 5–8% uncertainties. The diameter is twice the reported central radius, 22.72 km, shown as approximately 22.7 km. This is explicitly the 2024 result used by the dataset, not a claim to be a new radius analysis. Sphere color and coordinate grid are illustrative; no hot-spot geometry is invented."
+  },
+  {
+    "file": "images/length_milky_way_central_bar.jpg",
+    "source": "https://arxiv.org/abs/1504.01401",
+    "title": "Milky Way central bar — original long-bar measurement schematic",
+    "author": "Universe Scales (original explanatory diagram)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New original SVG; rendered to 1200 × 800 JPEG and a 300 × 200 thumbnail. Wegg, Gerhard and Portail (2015) infer a 5.0 ± 0.2 kpc half-length for their two-component bar and an angle of 28–33 degrees to the Sun–center line. The diagram uses an approximately 10 kpc full length and 30-degree orientation. Random star glyphs, the bar width and the Sun's radial placement are illustrative, explicitly not measured catalog positions. No spiral-arm geometry is asserted."
+  },
+  {
+    "file": "images/length_baryon_acoustic_oscillation_scale.jpg",
+    "source": "https://www.desi.lbl.gov/2026/07/30/new-desi-dr2-lyman-alpha-results-shed-light-on-dark-energy/",
+    "title": "Baryon acoustic oscillation scale — original galaxy-pair separation diagram",
+    "author": "Universe Scales (original explanatory diagram)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New original SVG; rendered to 1200 × 800 JPEG and a 300 × 200 thumbnail. DESI describes BAO as a slight excess of tracer pairs separated by about 150 Mpc, inherited from early-plasma sound waves. The diagram labels one present-day comoving pair separation, not a bubble diameter. The galaxy glyphs are illustrative, not a catalog or a measured pair. No numerical correlation-function data are invented or plotted."
+  }
+]
