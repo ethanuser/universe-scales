@@ -365,6 +365,30 @@
         "pitch": 12
       },
       "note": "Authored RMS Titanic exterior by farhad.Guli, uniformly calibrated bow to stern to the catalog\u2019s 269.1 m overall length (882 ft 9 in is 269.0622 m). Hull, four funnels, superstructure and source rigging are retained. This is an artist\u2019s ship, not a scan or engineering reconstruction; local proportions, colors, deck fittings and rigging are illustrative. Simplification retains source linework as well as triangle meshes. No waterline crop, sinking pose or wreck geometry is introduced."
+    },
+    {
+      "id": "sketchfab-bacteriophage-t4",
+      "name": "Bacteriophage T4",
+      "uid": "8e34ff590e1f42ef8f0bd20dd8e7a27a",
+      "author": "andresfranciscosanchez13",
+      "license": "by",
+      "presentation": {
+        "reference_size": 0.3231,
+        "layout_width_factor": 0.9,
+        "yaw": 20
+      },
+      "note": "An artist's model of bacteriophage T4 (andresfranciscosanchez13, CC BY 4.0): the icosahedral head that holds its DNA, the contractile tail sheath and the six long tail fibers that grab a bacterium. Scaled so head through tail is the listed 200 nanometers; the fibers reach below the baseplate. Illustrative shapes and colors, not a structure determination; the source's display platform was removed."
+    },
+    {
+      "id": "sketchfab-mimivirus",
+      "name": "Mimivirus",
+      "uid": "db55938777054444b5a3c53a1078593b",
+      "author": "AH (agher)",
+      "license": "by",
+      "presentation": {
+        "layout_width_factor": 1.0
+      },
+      "note": "An artist's model of a mimivirus particle (AH, CC BY 4.0): a capsid of repeated protein units bristling with surface fibers, scaled so its full width including the fibers is the listed 600 nanometers, larger than some bacteria. Illustrative, not a structure determination."
     }
   ]
 }

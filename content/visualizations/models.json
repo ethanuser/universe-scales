@@ -13360,6 +13360,151 @@
       "triangle_count": 59312,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "sketchfab-bacteriophage-t4",
+      "source": "https://sketchfab.com/3d-models/virus-bacteriophage-t4-8e34ff590e1f42ef8f0bd20dd8e7a27a",
+      "sketchfab_uid": "8e34ff590e1f42ef8f0bd20dd8e7a27a",
+      "author": "andresfranciscosanchez13 on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "matches": {
+        "length": [
+          "Bacteriophage T4"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "reference_size": 0.3231,
+        "layout_width_factor": 0.9,
+        "yaw": 20
+      },
+      "note": "An artist's model of bacteriophage T4 (andresfranciscosanchez13, CC BY 4.0): the icosahedral head that holds its DNA, the contractile tail sheath and the six long tail fibers that grab a bacterium. Scaled so head through tail is the listed 200 nanometers; the fibers reach below the baseplate. Illustrative shapes and colors, not a structure determination; the source's display platform was removed.",
+      "processing": {
+        "operations": [
+          "Removed the source's ground plane (node Object_4)",
+          "gltf-transform 4.5.0 weld, simplify (ratio 0.3, error 0.0005), prune, quantize"
+        ],
+        "source_model_name": "Virus (Bacteriophage T4)",
+        "source_author": "andresfranciscosanchez13"
+      },
+      "source_sha256": "b89625a76dd4805bb27ecb2c594473fd91cf9bde1ad2c7dad4dcccb4aab357e8",
+      "source_bytes": 747412,
+      "src": "content/visualizations/models/sketchfab-bacteriophage-t4.glb",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/sketchfab-bacteriophage-t4.md"
+      ],
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1171616,
+      "sha256": "efd8263124709db9d9adfe8cf51308d7296168dd56d1eae57539e6e996cfae27",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 64006,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "sketchfab-mimivirus",
+      "source": "https://sketchfab.com/3d-models/mimivirus-db55938777054444b5a3c53a1078593b",
+      "sketchfab_uid": "db55938777054444b5a3c53a1078593b",
+      "author": "AH (agher) on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "matches": {
+        "length": [
+          "Mimivirus"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "layout_width_factor": 1.0
+      },
+      "note": "An artist's model of a mimivirus particle (AH, CC BY 4.0): a capsid of repeated protein units bristling with surface fibers, scaled so its full width including the fibers is the listed 600 nanometers, larger than some bacteria. Illustrative, not a structure determination.",
+      "processing": {
+        "operations": [
+          "gltf-transform 4.5.0 weld, simplify (ratio 0.08, error 0.05; 525k to 42k triangles), resize textures to 512 px, prune, quantize"
+        ],
+        "source_model_name": "Mimivirus",
+        "source_author": "AH"
+      },
+      "source_sha256": "c615fa5a74d98e5fc01ff232f8eee381a0de257456cae992a1ff59afff1c35c6",
+      "source_bytes": 29407786,
+      "src": "content/visualizations/models/sketchfab-mimivirus.glb",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/sketchfab-mimivirus.md"
+      ],
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1667944,
+      "sha256": "bc08f434022f1f9dad28c54853a0ac19711ff9410c82e507d8a6051f8f80543e",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 42020,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "mycoplasma-cell-schematic",
+      "source": "https://en.wikipedia.org/wiki/Mycoplasma",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_files": [
+        "licenses/CC0-1.0.txt",
+        "sources/mycoplasma-cell-schematic.md"
+      ],
+      "matches": {
+        "length": [
+          "Mycoplasma Cell"
+        ]
+      },
+      "geometry": "mesh",
+      "presentation": {
+        "reference_size": 200,
+        "measure_axis": "y",
+        "layout_width_factor": 1.35,
+        "yaw": 25
+      },
+      "note": "A schematic mycoplasma cell 200 nanometers across, among the smallest free-living cells: a single translucent membrane with no cell wall, a short attachment tip, ribosome glyphs (each 20 nanometers, the size of a bacterial ribosome) and a coiled nucleoid of DNA. Shape is typical of Mycoplasma genitalium; the number and arrangement of parts are illustrative, not a reconstruction of one cell.",
+      "processing": {
+        "script": "scripts/build_mycoplasma_model.py"
+      },
+      "src": "content/visualizations/models/mycoplasma-cell-schematic.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 536504,
+      "sha256": "6098b90101fa286756ca8fcf1f15655ae5913dcac95f8554de38eaf1fa95b02d",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 28516,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

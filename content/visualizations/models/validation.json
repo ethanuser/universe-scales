@@ -22662,6 +22662,1342 @@
         "maxInfluences": 0,
         "maxAttributes": 2
       }
+    },
+    {
+      "id": "sketchfab-bacteriophage-t4",
+      "sha256": "efd8263124709db9d9adfe8cf51308d7296168dd56d1eae57539e6e996cfae27",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1165384
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 6,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 6,
+        "totalVertexCount": 48834,
+        "totalTriangleCount": 64006,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "sketchfab-mimivirus",
+      "sha256": "bc08f434022f1f9dad28c54853a0ac19711ff9410c82e507d8a6051f8f80543e",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 3,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/1/primitives/0/attributes/TANGENT"
+          },
+          {
+            "code": "UNUSED_MESH_TANGENT",
+            "message": "Tangents are not used because the material has no normal texture.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/0/attributes/TANGENT"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "glTF-Transform v4.5.0",
+        "extensionsUsed": [
+          "KHR_mesh_quantization"
+        ],
+        "extensionsRequired": [
+          "KHR_mesh_quantization"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1659728
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/1",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/2",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          },
+          {
+            "pointer": "/images/3",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 6,
+        "totalVertexCount": 34010,
+        "totalTriangleCount": 42020,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 5
+      }
+    },
+    {
+      "id": "mycoplasma-cell-schematic",
+      "sha256": "6098b90101fa286756ca8fcf1f15655ae5913dcac95f8554de38eaf1fa95b02d",
+      "issues": {
+        "numErrors": 192,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 0..2 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 3..5 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 6..8 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9..11 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 12..14 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 15..17 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 18..20 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 21..23 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 24..26 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 27..29 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 30..32 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 33..35 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 36..38 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 39..41 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 42..44 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 45..47 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 48..50 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 51..53 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 54..56 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 57..59 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 60..62 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 63..65 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 66..68 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 69..71 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 72..74 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 75..77 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 78..80 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 81..83 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 84..86 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 87..89 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 90..92 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 93..95 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 96..98 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 99..101 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 102..104 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 105..107 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 108..110 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 111..113 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 114..116 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 117..119 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 120..122 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 123..125 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 126..128 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 129..131 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 132..134 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 135..137 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 138..140 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 141..143 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 144..146 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 147..149 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 150..152 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 153..155 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 156..158 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 159..161 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 162..164 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 165..167 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 168..170 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 171..173 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 174..176 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 177..179 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 180..182 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 183..185 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 186..188 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 189..191 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/0/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 0..2 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 3..5 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 6..8 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9..11 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 12..14 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 15..17 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 18..20 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 21..23 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 24..26 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 27..29 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 30..32 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 33..35 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 36..38 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 39..41 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 42..44 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 45..47 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 48..50 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 51..53 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 54..56 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 57..59 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 60..62 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 63..65 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 66..68 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 69..71 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 72..74 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 75..77 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 78..80 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 81..83 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 84..86 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 87..89 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 90..92 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 93..95 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 96..98 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 99..101 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 102..104 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 105..107 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 108..110 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 111..113 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 114..116 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 117..119 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 120..122 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 123..125 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 126..128 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 129..131 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 132..134 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 135..137 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 138..140 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 141..143 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 144..146 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 147..149 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 150..152 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 153..155 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 156..158 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 159..161 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 162..164 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 165..167 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 168..170 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 171..173 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 174..176 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 177..179 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 180..182 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 183..185 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 186..188 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 189..191 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9216..9218 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9219..9221 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9222..9224 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9225..9227 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9228..9230 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9231..9233 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9234..9236 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9237..9239 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9240..9242 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9243..9245 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9246..9248 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9249..9251 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9252..9254 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9255..9257 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9258..9260 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9261..9263 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9264..9266 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9267..9269 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9270..9272 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9273..9275 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9276..9278 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9279..9281 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9282..9284 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9285..9287 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9288..9290 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9291..9293 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9294..9296 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9297..9299 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9300..9302 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9303..9305 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9306..9308 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9309..9311 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9312..9314 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9315..9317 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9318..9320 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9321..9323 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9324..9326 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9327..9329 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9330..9332 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9333..9335 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9336..9338 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9339..9341 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9342..9344 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9345..9347 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9348..9350 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9351..9353 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9354..9356 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9357..9359 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9360..9362 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9363..9365 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9366..9368 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9369..9371 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9372..9374 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9375..9377 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9378..9380 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9381..9383 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9384..9386 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9387..9389 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9390..9392 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9393..9395 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9396..9398 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9399..9401 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9402..9404 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          },
+          {
+            "code": "ACCESSOR_VECTOR3_NON_UNIT",
+            "message": "Vector3 at accessor indices 9405..9407 is not of unit length: 0.",
+            "severity": 0,
+            "pointer": "/meshes/1/primitives/0/attributes/NORMAL"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales Mycoplasma builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 533160
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 4,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 17600,
+        "totalTriangleCount": 28516,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
     }
   ]
 }
