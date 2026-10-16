@@ -1,0 +1,6 @@
+{
+  "source": "https://map.gsfc.nasa.gov/universe/WMAP_Universe.pdf",
+  "license": "CC0",
+  "original_svg": "handoff/images2/diagrams/hubble_radius.svg",
+  "evidence": "Derives R = c/H₀ algebraically from v = H₀d. Dimensionless axes. The circle denotes a distance marker, not an opaque shell or visibility boundary."
+}

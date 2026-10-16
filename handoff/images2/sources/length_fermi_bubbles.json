@@ -1,0 +1,95 @@
+{
+  "pageid": 57071504,
+  "ns": 6,
+  "title": "File:Fermi all-sky survey, 1-10 GeV, revealing Fermi Bubbles.jpg",
+  "index": 8,
+  "imagerepository": "local",
+  "imageinfo": [
+    {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Fermi_all-sky_survey%2C_1-10_GeV%2C_revealing_Fermi_Bubbles.jpg/1280px-Fermi_all-sky_survey%2C_1-10_GeV%2C_revealing_Fermi_Bubbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 1200,
+      "thumbheight": 619,
+      "responsiveUrls": {
+        "2": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Fermi_all-sky_survey%2C_1-10_GeV%2C_revealing_Fermi_Bubbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+      },
+      "thumbattribs": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Fermi_all-sky_survey%2C_1-10_GeV%2C_revealing_Fermi_Bubbles.jpg/1280px-Fermi_all-sky_survey%2C_1-10_GeV%2C_revealing_Fermi_Bubbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "decoding": "async",
+        "loading": "lazy",
+        "width": 1200,
+        "height": 619,
+        "srcset": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Fermi_all-sky_survey%2C_1-10_GeV%2C_revealing_Fermi_Bubbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Fermi_all-sky_survey%2C_1-10_GeV%2C_revealing_Fermi_Bubbles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fermi_all-sky_survey,_1-10_GeV,_revealing_Fermi_Bubbles.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=57071504",
+      "extmetadata": {
+        "DateTime": {
+          "value": "2017-03-13 20:27:39",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "Fermi all-sky survey, 1-10 GeV, revealing Fermi Bubbles",
+          "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Fermi Bubbles|PD NASA|Fermi Gamma-ray Space Telescope data",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "ImageDescription": {
+          "value": "A giant gamma-ray structure emerges by processing Fermi all-sky data at energies from 1 to 10 GeV. The dumbbell-shaped feature emerges from the galactic center and extends 50 degrees north and south from the plane of the Milky Way. A supermassive black hole weighing about 4 million times the sun's mass also lurks in the galactic center; these \"gamma-ray bubbles\" may have arisen as a result of a past eruption by the black hole or another source near the galactic center.",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.nasa.gov/mission_pages/GLAST/news/new-structure-briefing.html\">https://www.nasa.gov/mission_pages/GLAST/news/new-structure-briefing.html</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://www.nasa.gov/sites/default/files/thumbnails/image/df1_fermi_all-sky_1-10_gev.jpg\">image link</a>)",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "NASA/DOE/Fermi LAT/D. Finkbeiner, <i>et al</i>.",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "Public domain",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Public domain",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "false",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Copyrighted": {
+          "value": "False",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "pd",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "file": "images/length_one_nanometer_transistor_gate.jpg",
+    "source": "https://newscenter.lbl.gov/2016/10/06/smallest-transistor-1-nm-gate/",
+    "title": "One-nanometer transistor gate — original device cross-section schematic",
+    "author": "Universe Scales (original explanatory diagram)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New original SVG diagram from cited scientific facts; rasterized to 1200 × 800 JPEG and 300 px-wide thumbnail. Original geometric schematic of the reported 2016 MoS₂ channel, carbon-nanotube gate, ZrO₂ insulator and SiO₂ support. Only 1 nm nanotube diameter is dimensioned. No source artwork or microscopy pixels copied."
+  },
+  {
+    "file": "images/length_nucleosome.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Nucleosome_2.jpg",
+    "title": "File:Nucleosome 2.jpg",
+    "author": "TimVickers at English Wikipedia",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_mycoplasma_cell.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Mycoplasma_pneumoniae_cells_attached_to_ciliated_mucosal_cells.jpeg",
+    "title": "File:Mycoplasma pneumoniae cells attached to ciliated mucosal cells.jpeg",
+    "author": "Rottem et al.",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_dvd_track_pitch.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Microphotography_of_DVD_tracks_in_an_optical_microscope.jpg",
+    "title": "File:Microphotography of DVD tracks in an optical microscope.jpg",
+    "author": "Dr Anatoly",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_porphyrion.jpg",
+    "source": "https://doi.org/10.21203/rs.3.rs-3961204/v1",
+    "title": "Black hole jets on the scale of the Cosmic Web — Figure 1, upper panel (preprint)",
+    "author": "Martijn S. S. L. Oei et al.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Cropped upper radio-image panel from Figure 1 of the CC BY preprint; added subject caption; resized to at most 1200 px, JPEG and 300 px-wide thumbnail. Not the separately licensed Commons image or Nature version of record."
+  },
+  {
+    "file": "images/length_bootes_void.jpg",
+    "source": "https://www.flickr.com/photos/nasablueshift/9402300439",
+    "title": "Boötes Void — original conceptual underdensity illustration",
+    "author": "Universe Scales (original explanatory diagram)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New original SVG diagram from cited scientific facts; rasterized to 1200 × 800 JPEG and 300 px-wide thumbnail. Source caption describes an underdense region and foreground galaxies. The source map itself is BY-SA and was NOT copied. This is an original explanatory sketch with explicitly illustrative dots; no measured density field, member catalog, size or boundary is implied."
+  },
+  {
+    "file": "images/length_hubble_radius.jpg",
+    "source": "https://map.gsfc.nasa.gov/universe/WMAP_Universe.pdf",
+    "title": "Hubble radius — original Hubble-law explanatory diagram",
+    "author": "Universe Scales (original explanatory diagram)",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "New original SVG diagram from cited scientific facts; rasterized to 1200 × 800 JPEG and 300 px-wide thumbnail. Derives R = c/H₀ algebraically from v = H₀d. Dimensionless axes. The circle denotes a distance marker, not an opaque shell or visibility boundary."
+  },
+  {
+    "file": "images/length_fermi_bubbles.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Fermi_all-sky_survey,_1-10_GeV,_revealing_Fermi_Bubbles.jpg",
+    "title": "File:Fermi all-sky survey, 1-10 GeV, revealing Fermi Bubbles.jpg",
+    "author": "NASA/DOE/Fermi LAT/D. Finkbeiner, et al.",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_kola_superdeep_borehole.jpg",
+    "source": "https://journals.sagepub.com/doi/full/10.1177/02637758231185134",
+    "title": "The Kola Superdeep Borehole — Figure 1 in Going deep: Excavation, collaboration and imagination at the Kola Superdeep Borehole",
+    "author": "Justin Bennett (2016), figure credited in Charlotte Wrigley (2023), Environment and Planning D: Society and Space 41(3), 549–567",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Figure 1 from the CC BY article, resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail. Shows the surface cap, not the underground shaft."
+  },
+  {
+    "file": "images/length_local_void.jpg",
+    "source": "https://sketchfab.com/3d-models/cosmicflows-3-cosmography-of-the-local-void-78885b3d303d4b6e99cfe099b43929fb",
+    "title": "Cosmicflows-3: Cosmography of the Local Void — author’s model preview",
+    "author": "Daniel Pomarède; scientific work with R. Brent Tully, Romain Graziani, Hélène M. Courtois, Yehuda Hoffman and Edward J. Shaya",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Resized the author-published preview of the CC BY model; added caption identifying the black Local Void among neighboring voids; JPEG and 300 px-wide thumbnail. Inferred density isosurfaces, not a direct photograph."
+  },
+  {
+    "file": "images/length_radcliffe_wave.jpg",
+    "source": "https://www.aanda.org/articles/aa/abs/2022/08/aa43761-22/aa43761-22.html",
+    "title": "The Radcliffe wave as the gas spine of the Orion arm — Figure 2",
+    "author": "Cameren Swiggum et al.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Cropped Figure 2 from the authors’ accepted manuscript (arXiv:2204.06003); added subject/legend caption; JPEG and 300 px-wide thumbnail. Figure retains its rotated Galactic coordinates."
+  },
+  {
+    "file": "images/length_putative_giant_arc.jpg",
+    "source": "https://knowledge.lancashire.ac.uk/id/eprint/43480/",
+    "title": "A Giant Arc on the Sky — Figure 1",
+    "author": "Alexia M. Lopez, Roger G. Clowes and Gerard M. Williger",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Cropped Figure 1 from the accepted manuscript, preserving axes and color scale; added caption identifying the putative structure and absorption map; JPEG and 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_a4_paper.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Sheet_of_A4.svg",
+    "title": "File:Sheet of A4.svg",
+    "author": "Marnanel",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_comet_67p.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:67P_Churyumov-Gerasimenko_-_Rosetta_(32755885495).png",
+    "title": "File:67P Churyumov-Gerasimenko - Rosetta (32755885495).png",
+    "author": "Justin Cowart",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_human_cone_cell.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Human_Cone_Cell_(NIH_BioArt_210_-_630657).png",
+    "title": "File:Human Cone Cell (NIH BioArt 210 - 630657).png",
+    "author": "Courtesy of NIAID\n\nRyan Kissinger",
+    "license": "Public domain",
+    "license_url": "",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_human_egg_cell.jpg",
+    "source": "https://bioart.niaid.nih.gov/bioart/213",
+    "title": "Human Egg — NIH BIOART-000213",
+    "author": "Ryan Kissinger, NIAID Visual & Medical Arts; courtesy of NIAID",
+    "license": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "changes": "NIH schematic illustration, resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  },
+  {
+    "file": "images/length_ryugu.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:162173_Ryugu.png",
+    "title": "File:162173 Ryugu.png",
+    "author": "Anonymsiy",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "changes": "Resized to at most 1200 px and converted to JPEG; 300 px-wide thumbnail."
+  }
+]

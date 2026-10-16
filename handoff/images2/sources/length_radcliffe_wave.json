@@ -1,0 +1,8 @@
+{
+  "source": "https://www.aanda.org/articles/aa/abs/2022/08/aa43761-22/aa43761-22.html",
+  "asset_url": "https://arxiv.org/pdf/2204.06003",
+  "sha256": "ebfd6814c2517eda53a2d07e14ffceed0b5ba82034ee6122691a4d51cb6dcf10",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "evidence": "Publisher A&A 664, L13 (2022), DOI 10.1051/0004-6361/202243761, explicitly licenses article CC BY 4.0. The equivalent author manuscript was fetched from arXiv because publisher asset downloads returned HTTP 403. Figure 2 is original to Swiggum et al.; red points show cloud locations, background shows stellar density."
+}
