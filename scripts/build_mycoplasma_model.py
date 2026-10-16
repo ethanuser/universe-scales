@@ -42,9 +42,20 @@ def surface(radius_fn, rings=48, segments=64):
             c, d = a + segments, b + segments
             indices += [a, c, b, b, c, d]
     positions = np.array(positions)
-    normals = positions.copy(); normals[:, 0] = 0
-    normals /= np.maximum(np.linalg.norm(normals, axis=1, keepdims=True), 1e-9)
-    return positions, indices, normals
+    # Surface-of-revolution normal (-dr/dx, cos a, sin a); along the axis at the poles.
+    normals = []
+    for i in range(rings + 1):
+        t = i / rings
+        dt = 1e-4
+        slope = (radius_fn(min(1.0, t + dt)) - radius_fn(max(0.0, t - dt))) / ((min(1.0, t + dt) - max(0.0, t - dt)) * LENGTH_NM)
+        for j in range(segments):
+            a = 2 * math.pi * j / segments
+            if radius_fn(t) < 1e-6:
+                normals.append((1.0 if t > 0.5 else -1.0, 0.0, 0.0))
+            else:
+                n = np.array([-slope, math.cos(a), math.sin(a)])
+                normals.append(n / np.linalg.norm(n))
+    return positions, indices, np.array(normals)
 
 
 def profile(t, shrink=0.0):
