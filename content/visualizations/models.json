@@ -10321,8 +10321,7 @@
       "mesh_count": 1,
       "triangle_count": 32512,
       "animations": 0,
-      "skins": 0,
-      "display_label": "Arecibo \u00b7 pre-collapse reflector only"
+      "skins": 0
     },
     {
       "id": "earth3d2-ever-given",
@@ -10434,8 +10433,7 @@
       "mesh_count": 1,
       "triangle_count": 32512,
       "animations": 0,
-      "skins": 0,
-      "display_label": "FAST \u00b7 nominal reflector only"
+      "skins": 0
     },
     {
       "id": "earth3d2-golden-gate-main-span",
@@ -10487,8 +10485,7 @@
       "mesh_count": 5,
       "triangle_count": 22288,
       "animations": 0,
-      "skins": 0,
-      "display_label": "Golden Gate Bridge \u00b7 main span only"
+      "skins": 0
     },
     {
       "id": "earth3d2-kilimanjaro",
@@ -10510,7 +10507,6 @@
       "representation": "dem_terrain",
       "volume_semantics": "not_applicable",
       "closed_volume_checked": false,
-      "display_label": "Kilimanjaro \u00b7 summit window above sea level",
       "presentation": {
         "reference_size": 5895,
         "yaw": -8,
