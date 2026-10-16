@@ -1,0 +1,108 @@
+{
+  "pageid": 147100230,
+  "ns": 6,
+  "title": "File:How Baryon Acoustic Oscillations Are Used to Measure the Expanding Universe (noirlab2408e).jpg",
+  "index": 6,
+  "imagerepository": "local",
+  "imageinfo": [
+    {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg/1280px-How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 1200,
+      "thumbheight": 1350,
+      "responsiveUrls": {
+        "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg/3840px-How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+      },
+      "thumbattribs": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg/1280px-How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "decoding": "async",
+        "loading": "lazy",
+        "width": 1200,
+        "height": 1350,
+        "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg/3840px-How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_%28noirlab2408e%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:How_Baryon_Acoustic_Oscillations_Are_Used_to_Measure_the_Expanding_Universe_(noirlab2408e).jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=147100230",
+      "extmetadata": {
+        "DateTime": {
+          "value": "2024-04-05 08:02:45",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "How Baryon Acoustic Oscillations Are Used to Measure the Expanding Universe (noirlab2408e)",
+          "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "Illustrations|Dark Energy Spectroscopic Instrument|NOIRLab Images|NOIRLab files uploaded by OptimusPrimeBot",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "ImageDescription": {
+          "value": "This Hubble diagram from the Dark Energy Spectroscopic Instrument (<a rel=\"nofollow\" class=\"external text\" href=\"https://noirlab.edu/public/projects/desi/\">DESI</a>) reveals a characteristic pattern — <a class=\"external text\" href=\"https://en.wikipedia.org/wiki/Baryon_acoustic_oscillations\">baryon acoustic oscillations</a>, or BAO ‘bubbles’ — at different ages of the Universe. The amount of <a class=\"external text\" href=\"https://en.wikipedia.org/wiki/Dark_energy\">dark energy</a> determines how fast the Universe grows, and therefore the size of the bubbles. The solid and dashed lines represent predictions of how big the bubbles will be depending on whether dark energy evolves with time or not. DESI will gather more data to determine which model is a better description of the Universe.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "4 April 2024 (upload date)",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://noirlab.edu/public/images/noirlab2408e\">How Baryon Acoustic Oscillations Are Used to Measure the Expanding Universe</a>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "DESI collaboration/A. de Mattia",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "CC BY 4.0",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Creative Commons Attribution 4.0",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Attribution": {
+          "value": "NOIRLab",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://creativecommons.org/licenses/by/4.0",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "cc-by-4.0",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      }
+    }
+  ]
+}

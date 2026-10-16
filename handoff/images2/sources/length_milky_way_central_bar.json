@@ -1,0 +1,99 @@
+{
+  "pageid": 111409497,
+  "ns": 6,
+  "title": "File:Milky Way galaxy1.jpg",
+  "index": 11,
+  "imagerepository": "local",
+  "imageinfo": [
+    {
+      "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Milky_Way_galaxy1.jpg/1280px-Milky_Way_galaxy1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "thumbwidth": 1200,
+      "thumbheight": 1295,
+      "responsiveUrls": {
+        "2": "https://upload.wikimedia.org/wikipedia/commons/8/83/Milky_Way_galaxy1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+      },
+      "thumbattribs": {
+        "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Milky_Way_galaxy1.jpg/1280px-Milky_Way_galaxy1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "decoding": "async",
+        "loading": "lazy",
+        "width": 1200,
+        "height": 1295,
+        "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/83/Milky_Way_galaxy1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+      },
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Milky_Way_galaxy1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Milky_Way_galaxy1.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=111409497",
+      "extmetadata": {
+        "DateTime": {
+          "value": "2021-10-21 05:40:56",
+          "source": "mediawiki-metadata",
+          "hidden": ""
+        },
+        "ObjectName": {
+          "value": "Milky Way galaxy1",
+          "source": "mediawiki-metadata"
+        },
+        "CommonsMetadataExtension": {
+          "value": 1.2,
+          "source": "extension",
+          "hidden": ""
+        },
+        "Categories": {
+          "value": "PD NASA|Milky Way maps",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "Assessments": {
+          "value": "",
+          "source": "commons-categories",
+          "hidden": ""
+        },
+        "ImageDescription": {
+          "value": "Like early explorers mapping the continents of our globe, astronomers are busy charting the spiral structure of our galaxy, the Milky Way. Using infrared images from NASA's Spitzer Space Telescope, scientists have discovered that the Milky Way's elegant spiral structure is dominated by just two arms wrapping off the ends of a central bar of stars. Previously, our galaxy was thought to possess four major arms.\n<p>This artist's concept illustrates the new view of the Milky Way, along with other findings presented at the 212th American Astronomical Society meeting in St. Louis, Mo. The galaxy's two major arms (Scutum-Centaurus and Perseus) can be seen attached to the ends of a thick central bar, while the two now-demoted minor arms (Norma and Sagittarius) are less distinct and located between the major arms. The major arms consist of the highest densities of both young and old stars; the minor arms are primarily filled with gas and pockets of star-forming activity.\n</p><p>The artist's concept also includes a new spiral arm, called the \"Far-3 kiloparsec arm,\" discovered via a radio-telescope survey of gas in the Milky Way. This arm is shorter than the two major arms and lies along the bar of the galaxy.\n</p>\nOur sun lies near a small, partial arm called the Orion Arm, or Orion Spur, located between the Sagittarius and Perseus arms.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2020-10-19 05:54:40",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.nasa.gov/sites/default/files/thumbnails/image/main_milkyway-full_nasa_jpl-caltech.jpg\">https://www.nasa.gov/sites/default/files/thumbnails/image/main_milkyway-full_nasa_jpl-caltech.jpg</a>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "National Aeronautics and Space Administration",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "Public domain",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Public domain",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "false",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Copyrighted": {
+          "value": "False",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "License": {
+          "value": "pd",
+          "source": "commons-templates",
+          "hidden": ""
+        }
+      }
+    }
+  ]
+}

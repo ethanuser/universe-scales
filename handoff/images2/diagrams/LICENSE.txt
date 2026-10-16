@@ -1,0 +1,3 @@
+To the extent possible under law, Universe Scales has waived all copyright and related or neighboring rights to the original diagrams in this directory under CC0 1.0 Universal.
+https://creativecommons.org/publicdomain/zero/1.0/
+Scientific source images were not copied. Sources and representational limits are recorded in ../sources/.

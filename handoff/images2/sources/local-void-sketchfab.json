@@ -1,0 +1,177 @@
+{
+  "animationCount": 0,
+  "categories": [
+    {
+      "uid": "17d20ca7b35243d4a45171838b50704c",
+      "name": "Science & Technology",
+      "slug": "science-technology",
+      "uri": "https://api.sketchfab.com/v3/categories/17d20ca7b35243d4a45171838b50704c",
+      "icon": "https://static.sketchfab.com/static/builds/web/dist/static/assets/images/icons/categories/86b1bae49e0ed3f43b2d59b26700234e-v2.svg",
+      "thumbnails": [
+        {
+          "width": "512",
+          "height": "288",
+          "url": "https://static.sketchfab.com/categories/17d20ca7b35243d4a45171838b50704c/512x288.png"
+        },
+        {
+          "width": "800",
+          "height": "450",
+          "url": "https://static.sketchfab.com/categories/17d20ca7b35243d4a45171838b50704c/800x450.png"
+        }
+      ]
+    }
+  ],
+  "commentCount": 0,
+  "createdAt": "2018-07-02T11:02:05.728658",
+  "embedUrl": "https://sketchfab.com/models/78885b3d303d4b6e99cfe099b43929fb/embed",
+  "faceCount": 72984,
+  "isAgeRestricted": false,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "likeCount": 14,
+  "name": "Cosmicflows-3: Cosmography of the Local Void",
+  "publishedAt": "2018-07-02T12:45:37.151893",
+  "soundCount": 0,
+  "staffpickedAt": null,
+  "tags": [
+    {
+      "name": "astronomy",
+      "slug": "astronomy",
+      "uri": "https://api.sketchfab.com/v3/tags/astronomy"
+    },
+    {
+      "name": "void",
+      "slug": "void",
+      "uri": "https://api.sketchfab.com/v3/tags/void"
+    },
+    {
+      "name": "astrophysics",
+      "slug": "astrophysics",
+      "uri": "https://api.sketchfab.com/v3/tags/astrophysics"
+    },
+    {
+      "name": "galaxies",
+      "slug": "galaxies",
+      "uri": "https://api.sketchfab.com/v3/tags/galaxies"
+    },
+    {
+      "name": "cosmology",
+      "slug": "cosmology",
+      "uri": "https://api.sketchfab.com/v3/tags/cosmology"
+    },
+    {
+      "name": "cosmography",
+      "slug": "cosmography",
+      "uri": "https://api.sketchfab.com/v3/tags/cosmography"
+    },
+    {
+      "name": "space",
+      "slug": "space",
+      "uri": "https://api.sketchfab.com/v3/tags/space"
+    }
+  ],
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "339fa7f055a14c52931aa0a757d101d1",
+        "width": 1920,
+        "height": 1080,
+        "size": 169406,
+        "url": "https://media.sketchfab.com/models/78885b3d303d4b6e99cfe099b43929fb/thumbnails/1dc5ffebc5bb4d58a919c0a4c0fa93e3/67ebca6a2a364b3b8e6a14ec779dba51.jpeg"
+      },
+      {
+        "uid": "ee4809ed15574b65b72d4d3d25f0655e",
+        "width": 1024,
+        "height": 576,
+        "size": 69795,
+        "url": "https://media.sketchfab.com/models/78885b3d303d4b6e99cfe099b43929fb/thumbnails/1dc5ffebc5bb4d58a919c0a4c0fa93e3/2a3ed6d6e1f14a938070ac432b1a586e.jpeg"
+      },
+      {
+        "uid": "b64a34be79f64f6eae61dc107d9ff3c2",
+        "width": 720,
+        "height": 405,
+        "size": 44710,
+        "url": "https://media.sketchfab.com/models/78885b3d303d4b6e99cfe099b43929fb/thumbnails/1dc5ffebc5bb4d58a919c0a4c0fa93e3/90ebf2fd5bc54884bafde5949c981355.jpeg"
+      },
+      {
+        "uid": "77b19e00cfdd40348815935824dc3293",
+        "width": 256,
+        "height": 144,
+        "size": 10620,
+        "url": "https://media.sketchfab.com/models/78885b3d303d4b6e99cfe099b43929fb/thumbnails/1dc5ffebc5bb4d58a919c0a4c0fa93e3/9db1e4870b084a868c876e11d78c3622.jpeg"
+      },
+      {
+        "uid": "6cbc3bfe132140e38f53b14fed39005e",
+        "width": 64,
+        "height": 36,
+        "size": 1480,
+        "url": "https://media.sketchfab.com/models/78885b3d303d4b6e99cfe099b43929fb/thumbnails/1dc5ffebc5bb4d58a919c0a4c0fa93e3/14673b5f07fc4ab4a9e2c85417fe2f05.jpeg"
+      }
+    ]
+  },
+  "uid": "78885b3d303d4b6e99cfe099b43929fb",
+  "uri": "https://api.sketchfab.com/v3/models/78885b3d303d4b6e99cfe099b43929fb",
+  "user": {
+    "uid": "2df94a01e35648809ec4a8c9162460a4",
+    "username": "pomarede",
+    "displayName": "Daniel Pomarède",
+    "account": "pro",
+    "profileUrl": "https://sketchfab.com/pomarede",
+    "avatar": {
+      "uid": "b0ba418fa344431a90dd8ca7091a252d",
+      "uri": "https://api.sketchfab.com/v3/avatars/b0ba418fa344431a90dd8ca7091a252d",
+      "images": [
+        {
+          "width": 32,
+          "height": 32,
+          "size": 668,
+          "url": "https://media.sketchfab.com/avatars/b0ba418fa344431a90dd8ca7091a252d/9674ecfd7e7a4fdeaa28fb16f9dc0c02.jpeg"
+        },
+        {
+          "width": 48,
+          "height": 48,
+          "size": 1035,
+          "url": "https://media.sketchfab.com/avatars/b0ba418fa344431a90dd8ca7091a252d/398679bac70640db9661a7d37e68e5c4.jpeg"
+        },
+        {
+          "width": 90,
+          "height": 90,
+          "size": 2629,
+          "url": "https://media.sketchfab.com/avatars/b0ba418fa344431a90dd8ca7091a252d/c1084c9497544671bcdc596b23c4281a.jpeg"
+        },
+        {
+          "width": 100,
+          "height": 100,
+          "size": 3108,
+          "url": "https://media.sketchfab.com/avatars/b0ba418fa344431a90dd8ca7091a252d/40dcd7c8e5104632a4f9d31d3be0a9c1.jpeg"
+        }
+      ]
+    },
+    "uri": "https://api.sketchfab.com/v3/users/2df94a01e35648809ec4a8c9162460a4"
+  },
+  "vertexCount": 36809,
+  "viewCount": 4125,
+  "viewerUrl": "https://sketchfab.com/3d-models/cosmicflows-3-cosmography-of-the-local-void-78885b3d303d4b6e99cfe099b43929fb",
+  "isDownloadable": true,
+  "isProtected": false,
+  "description": "This interactive 3D map has been produced as part of the following research paper: \"Cosmicflows-3: Cosmography of the Local Void\" by R. Brent Tully, Daniel Pomarède, Romain Graziani, Hélène M. Courtois, Yehuda Hoffman, and Edward J. Shaya, The Astrophysical Journal 880 (2019) 24 \nPreprint: https://arxiv.org/abs/1905.08329\n\nThis is the interactive version of Figure 6 of the article, where surfaces of all voids in the *Cosmicflows-3* model at overdensity levels -0.7 and -1.1 are shown. The Local Void is\ncolored black, the Hercules Void is blue, the Sculptor Void is yellow and all other voids are colored green. The central signpost anchored at the Milky Way location has 5,000 km/s-long arrows pointing to the SGX (red), SGY (green), SGZ (blue) directions of the Supergalactic Coordinate System. Annotations indicate the locations of a number of selected local minima of the density field.\n\nA video map has also been produced as part of this publication and is available here: https://vimeo.com/326346346",
+  "price": null,
+  "downloadCount": 111,
+  "editorUrl": "https://sketchfab.com/models/78885b3d303d4b6e99cfe099b43929fb/edit",
+  "status": {
+    "warning": {},
+    "processing": "SUCCEEDED"
+  },
+  "source": "website",
+  "hasCommentsDisabled": false,
+  "updatedAt": "2022-07-07T23:29:51.154278",
+  "pbrType": null,
+  "textureCount": 0,
+  "materialCount": 13
+}

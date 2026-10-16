@@ -1,0 +1,297 @@
+[
+  {
+    "item": "Helium Nucleus Charge Diameter",
+    "file": "images/length_helium_nucleus_charge_diameter.jpg",
+    "status": "missing approved source"
+  },
+  {
+    "item": "One-Nanometer Transistor Gate",
+    "file": "images/length_one_nanometer_transistor_gate.jpg",
+    "size": [
+      1200,
+      800
+    ],
+    "thumbnail": [
+      300,
+      200
+    ],
+    "bytes": 93100,
+    "sha256": "a42275eeaf2971ba40b9c64f802a6c5ea4eed1cf0ef4fec825b5ebe19082b63b",
+    "license": "CC0"
+  },
+  {
+    "item": "Nucleosome",
+    "file": "images/length_nucleosome.jpg",
+    "size": [
+      742,
+      528
+    ],
+    "thumbnail": [
+      300,
+      213
+    ],
+    "bytes": 92797,
+    "sha256": "50012b055ca3542f677a1979be833a3671ae2027059730ef9bfcf88d30955a1d",
+    "license": "Public domain"
+  },
+  {
+    "item": "Mycoplasma Cell",
+    "file": "images/length_mycoplasma_cell.jpg",
+    "size": [
+      900,
+      676
+    ],
+    "thumbnail": [
+      300,
+      225
+    ],
+    "bytes": 129367,
+    "sha256": "379b3215f3d33aca372bdce2b1cfded995d12630b5b43043b737ddbc68c83096",
+    "license": "CC BY 3.0"
+  },
+  {
+    "item": "DVD Track Pitch",
+    "file": "images/length_dvd_track_pitch.jpg",
+    "size": [
+      1200,
+      900
+    ],
+    "thumbnail": [
+      300,
+      225
+    ],
+    "bytes": 126463,
+    "sha256": "ea3f637841f89fbc39fcc4d6e42c8ce18525934091603d3a196b79d1a05105f5",
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Danyang-Kunshan Grand Bridge",
+    "file": "images/length_danyang_kunshan_grand_bridge.jpg",
+    "status": "missing approved source"
+  },
+  {
+    "item": "Porphyrion",
+    "file": "images/length_porphyrion.jpg",
+    "size": [
+      1200,
+      1068
+    ],
+    "thumbnail": [
+      300,
+      267
+    ],
+    "bytes": 264502,
+    "sha256": "587d269aec217f574798f84cc3ef3bedd3711547b85ed8d0a5ee41fe160f2886",
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Bootes Void",
+    "file": "images/length_bootes_void.jpg",
+    "size": [
+      1200,
+      800
+    ],
+    "thumbnail": [
+      300,
+      200
+    ],
+    "bytes": 79188,
+    "sha256": "e6ec1803dfd27fa3c0cf808d8853997f72234460c6c22c0a3887dbd8f4535a94",
+    "license": "CC0"
+  },
+  {
+    "item": "Hubble Radius",
+    "file": "images/length_hubble_radius.jpg",
+    "size": [
+      1200,
+      800
+    ],
+    "thumbnail": [
+      300,
+      200
+    ],
+    "bytes": 75662,
+    "sha256": "b8d9dd3d9171b086571dfc42e2aa3428a91d83289febeda355748432e09586de",
+    "license": "CC0"
+  },
+  {
+    "item": "Fermi Bubbles",
+    "file": "images/length_fermi_bubbles.jpg",
+    "size": [
+      1200,
+      619
+    ],
+    "thumbnail": [
+      300,
+      155
+    ],
+    "bytes": 216972,
+    "sha256": "2430846aae2e05fb10edc5ca75da6f1b3bbe856d147783b00f3d09f5ef5d99c6",
+    "license": "Public domain"
+  },
+  {
+    "item": "Kola Superdeep Borehole",
+    "file": "images/length_kola_superdeep_borehole.jpg",
+    "size": [
+      1200,
+      679
+    ],
+    "thumbnail": [
+      300,
+      170
+    ],
+    "bytes": 236950,
+    "sha256": "d1088b13c2bd5fc0a6a2997b0f7c67849919b9361ca7cb400016b245d1bee1c6",
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Light-Year",
+    "file": "images/length_light_year.jpg",
+    "status": "missing approved source"
+  },
+  {
+    "item": "Local Void",
+    "file": "images/length_local_void.jpg",
+    "size": [
+      1200,
+      755
+    ],
+    "thumbnail": [
+      300,
+      189
+    ],
+    "bytes": 118143,
+    "sha256": "03a1e4d49a4fe5961006c903364aae75ce3cedfa8d539e3c4e784bee39b3560d",
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Milky Way Central Bar",
+    "file": "images/length_milky_way_central_bar.jpg",
+    "status": "missing approved source"
+  },
+  {
+    "item": "Radcliffe Wave",
+    "file": "images/length_radcliffe_wave.jpg",
+    "size": [
+      972,
+      1017
+    ],
+    "thumbnail": [
+      300,
+      314
+    ],
+    "bytes": 82269,
+    "sha256": "73b6ff10d4487e83dfc24a89c11ac82e8fdbacff1962a94da9e0bd283438c646",
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Putative Giant Arc",
+    "file": "images/length_putative_giant_arc.jpg",
+    "size": [
+      912,
+      765
+    ],
+    "thumbnail": [
+      300,
+      252
+    ],
+    "bytes": 154945,
+    "sha256": "3007a5280d72efdad43b1f70a1eada94cf0b6cc6cf4766cfb380371146f46209",
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "A4 Paper",
+    "file": "images/length_a4_paper.jpg",
+    "size": [
+      848,
+      1200
+    ],
+    "thumbnail": [
+      300,
+      425
+    ],
+    "bytes": 41510,
+    "sha256": "0b001b92902c37fc91d77a61cb46d6c12806188fdf66016e7d2b8f74441e7d0f",
+    "license": "CC0"
+  },
+  {
+    "item": "Comet 67P",
+    "file": "images/length_comet_67p.jpg",
+    "size": [
+      1200,
+      1200
+    ],
+    "thumbnail": [
+      300,
+      300
+    ],
+    "bytes": 297550,
+    "sha256": "6cbaa2073ecefd8b96b9959cbe65dd25d614b3ecd19aac749211cd2195721610",
+    "license": "CC BY 2.0"
+  },
+  {
+    "item": "Credit Card",
+    "file": "images/length_credit_card.jpg",
+    "status": "missing approved source"
+  },
+  {
+    "item": "Human Cone Cell",
+    "file": "images/length_human_cone_cell.jpg",
+    "size": [
+      335,
+      1200
+    ],
+    "thumbnail": [
+      300,
+      1075
+    ],
+    "bytes": 35922,
+    "sha256": "2059e5e7d8d4da545e29da1c754ed015cbefe059736157ad7b0f6141dd1859d0",
+    "license": "Public domain"
+  },
+  {
+    "item": "Human Egg Cell",
+    "file": "images/length_human_egg_cell.jpg",
+    "size": [
+      1200,
+      1057
+    ],
+    "thumbnail": [
+      300,
+      264
+    ],
+    "bytes": 119202,
+    "sha256": "c62d88319b42a35ed815f12990d2ad500f57b30fca2a590c8762e86b873e14d0",
+    "license": "Public domain"
+  },
+  {
+    "item": "Prelude FLNG",
+    "file": "images/length_prelude_flng.jpg",
+    "status": "missing approved source"
+  },
+  {
+    "item": "PSR J0437-4715 Neutron Star",
+    "file": "images/length_psr_j0437_4715_neutron_star.jpg",
+    "status": "missing approved source"
+  },
+  {
+    "item": "Ryugu",
+    "file": "images/length_ryugu.jpg",
+    "size": [
+      1167,
+      1167
+    ],
+    "thumbnail": [
+      300,
+      300
+    ],
+    "bytes": 161238,
+    "sha256": "ce7b2e25be113ef483d308161d851ad619a5ea49737f37dcbefe1219f24f1e1d",
+    "license": "CC BY 4.0"
+  },
+  {
+    "item": "Baryon Acoustic Oscillation Scale",
+    "file": "images/length_baryon_acoustic_oscillation_scale.jpg",
+    "status": "missing approved source"
+  }
+]
