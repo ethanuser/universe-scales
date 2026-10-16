@@ -2752,60 +2752,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A neuron and its local branches span roughly 100 micrometers. Cell bodies range from a few micrometers to about 100 in the largest motor neurons, and the dendrites around a typical cell body reach out tens of micrometers, while the axon can run over a meter and carry electrical signals called action potentials. Neurons pass those signals across synapses in about a millisecond. The brain contains about 86 billion neurons, each connecting to thousands of others.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A neuron and its local branches span roughly 100 micrometers. Cell bodies range from a few micrometers to about 100 in the largest motor neurons, and the dendrites around a typical cell body reach out tens of micrometers, while the axon can run over a meter and carry electrical signals called action potentials. Neurons pass those signals across synapses in about a millisecond. The brain contains about 86 billion neurons, each connecting to thousands of others.",
-      "display_status": "display",
-      "facts": {
-        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
-        "legacy_item_name": "Neuron",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "1e-4",
-          "source_url": "https://en.wikipedia.org/wiki/Neuron"
-        }
-      },
-      "hook": null,
-      "id": "obs:length:scenario-length-neuron",
-      "name": "Neuron",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Neuron",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-neuron",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Neuron",
-          "url": "https://en.wikipedia.org/wiki/Neuron"
-        },
-        {
-          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
-          "license_text": "MIT",
-          "note": "dataset/raw/legacy_yaml/length.yaml",
-          "publisher": "universe-scales repo",
-          "role": "legacy_seed",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/legacy_yaml/length.yaml",
-          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
-        }
-      ],
-      "summary_short": "A neuron and its local branches span roughly 100 micrometers.",
-      "value": 0.0001,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "A human egg cell is about 120 micrometers across, among the largest individual cells in the body. Its generous cytoplasm provides material for the earliest stages after fertilization, while the much smaller sperm mainly contributes genetic material. The egg's diameter is comparable with the width of a human hair, bringing a single cell close to the edge of unaided human vision.",
       "description_format": "markdown",
       "description_long": null,
@@ -3130,18 +3076,18 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "An adult fruit fly brain spans roughly 0.7 millimeters across, including the optic lobes that process its visual world. In 2024, the FlyWire collaboration published a wiring diagram of an adult female brain containing about 139,000 neurons and more than fifty million synapses. A structure narrower than a grain of sand can therefore support flight, navigation, learning and the coordination of an entire animal.",
+      "description": "An adult fruit fly brain spans roughly 0.8 millimeters from one optic lobe to the other, as measured in the FlyWire reconstruction. In 2024 the FlyWire collaboration published the complete wiring diagram of this female brain, about 139,000 neurons joined by more than fifty million synapses. The model shows 2,200 of those reconstructed neurons, colored by broad class. A brain smaller than a poppy seed steers flight, navigation, learning and courtship.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "An adult fruit fly brain spans roughly 0.7 millimeters across, including the optic lobes that process its visual world. In 2024, the FlyWire collaboration published a wiring diagram of an adult female brain containing about 139,000 neurons and more than fifty million synapses. A structure narrower than a grain of sand can therefore support flight, navigation, learning and the coordination of an entire animal.",
+      "description_medium": "An adult fruit fly brain spans roughly 0.8 millimeters from one optic lobe to the other, as measured in the FlyWire reconstruction. In 2024 the FlyWire collaboration published the complete wiring diagram of this female brain, about 139,000 neurons joined by more than fifty million synapses. The model shows 2,200 of those reconstructed neurons, colored by broad class. A brain smaller than a poppy seed steers flight, navigation, learning and courtship.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Fruit Fly Brain",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "0.0007",
-          "source_url": "https://www.nature.com/articles/s41586-025-08746-0"
+          "original_value_text": "0.0008",
+          "source_url": "https://doi.org/10.1038/s41586-024-07558-y"
         }
       },
       "hook": null,
@@ -3150,19 +3096,19 @@
       "qualifiers": {},
       "quality_flags": [],
       "review_status": "accepted",
-      "source": "https://www.nature.com/articles/s41586-025-08746-0",
+      "source": "https://doi.org/10.1038/s41586-024-07558-y",
       "source_count": 2,
       "sources": [
         {
-          "id": "src:https-www-nature-com-articles-s41586-025-08746-0",
+          "id": "src:https-doi-org-10-1038-s41586-024-07558-y",
           "license_text": null,
           "note": null,
-          "publisher": "www.nature.com",
+          "publisher": "doi.org",
           "role": "external_source",
           "source_class": "secondary_reference",
           "source_type": "web_page",
-          "title": "s41586-025-08746-0",
-          "url": "https://www.nature.com/articles/s41586-025-08746-0"
+          "title": "s41586-024-07558-y",
+          "url": "https://doi.org/10.1038/s41586-024-07558-y"
         },
         {
           "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
@@ -3176,8 +3122,62 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "An adult fruit fly brain spans roughly 0.7 millimeters across, including the optic lobes that process its visual world.",
-      "value": 0.0007,
+      "summary_short": "An adult fruit fly brain spans roughly 0.8 millimeters from one optic lobe to the other, as measured in the FlyWire reconstruction.",
+      "value": 0.0008,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "A reconstructed rat cortical interneuron spans roughly 0.8 millimeters, including its dendrites and the axon that branches through nearby tissue. The explorer shows NeuroMorpho.Org cell NMO_109111, traced from a layer-4 barrel-cortex neuron by Emmenegger and colleagues, with its full traced geometry. The traveling glow illustrates an action potential starting near the cell body and spreading through the axon's branches; its speed and position are explanatory, not measured for this cell. Some neurons send axons over a meter, from the spinal cord to the foot.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "A reconstructed rat cortical interneuron spans roughly 0.8 millimeters, including its dendrites and the axon that branches through nearby tissue. The explorer shows NeuroMorpho.Org cell NMO_109111, traced from a layer-4 barrel-cortex neuron by Emmenegger and colleagues, with its full traced geometry. The traveling glow illustrates an action potential starting near the cell body and spreading through the axon's branches; its speed and position are explanatory, not measured for this cell. Some neurons send axons over a meter, from the spinal cord to the foot.",
+      "display_status": "display",
+      "facts": {
+        "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
+        "legacy_item_name": "Neuron",
+        "source_trace": {
+          "method": "derived",
+          "original_value_text": "8e-4",
+          "source_url": "https://neuromorpho.org/neuron_info.jsp?neuron_name=BC140212B_21"
+        }
+      },
+      "hook": null,
+      "id": "obs:length:scenario-length-neuron",
+      "name": "Neuron",
+      "qualifiers": {},
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://neuromorpho.org/neuron_info.jsp?neuron_name=BC140212B_21",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-neuromorpho-org-neuron-info-jsp-neuron-name-bc140212b-21",
+          "license_text": null,
+          "note": null,
+          "publisher": "neuromorpho.org",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "neuron info.jsp",
+          "url": "https://neuromorpho.org/neuron_info.jsp?neuron_name=BC140212B_21"
+        },
+        {
+          "id": "src:repo-dataset-raw-legacy-yaml-length-yaml",
+          "license_text": "MIT",
+          "note": "dataset/raw/legacy_yaml/length.yaml",
+          "publisher": "universe-scales repo",
+          "role": "legacy_seed",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/legacy_yaml/length.yaml",
+          "url": "repo://dataset/raw/legacy_yaml/length.yaml"
+        }
+      ],
+      "summary_short": "A reconstructed rat cortical interneuron spans roughly 0.8 millimeters, including its dendrites and the axon that branches through nearby tissue.",
+      "value": 0.0008,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -3724,10 +3724,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The bee hummingbird of Cuba is the smallest bird, with females about 6.1 cm long and males about 5.5 cm, weighing roughly 2 to 2.6 g. Its wings beat 80 to 200 times per second, and each egg is about the size of a coffee bean. Nearly any insect-sized animal can fly, but few warm-blooded animals this small can sustain the metabolism that powers hovering.",
+      "description": "A male bee hummingbird is about 5.5 centimeters long, placing a complete bird near the dimensions of a large insect. This Cuban hummingbird sustains hovering flight with rapid wingbeats while feeding at flowers, where its small body and slender bill bring it close to the nectar. The female is slightly larger, so this marker uses a representative male length rather than a limit shared by every individual.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The bee hummingbird of Cuba is the smallest bird, with females about 6.1 cm long and males about 5.5 cm, weighing roughly 2 to 2.6 g. Its wings beat 80 to 200 times per second, and each egg is about the size of a coffee bean. Nearly any insect-sized animal can fly, but few warm-blooded animals this small can sustain the metabolism that powers hovering.",
+      "description_medium": "A male bee hummingbird is about 5.5 centimeters long, placing a complete bird near the dimensions of a large insect. This Cuban hummingbird sustains hovering flight with rapid wingbeats while feeding at flowers, where its small body and slender bill bring it close to the nectar. The female is slightly larger, so this marker uses a representative male length rather than a limit shared by every individual.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -3770,7 +3770,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The bee hummingbird of Cuba is the smallest bird, with females about 6.1 cm long and males about 5.5 cm, weighing roughly 2 to 2.6 g.",
+      "summary_short": "A male bee hummingbird is about 5.5 centimeters long, placing a complete bird near the dimensions of a large insect.",
       "value": 0.055,
       "value_type": "derived",
       "wikidata_qid": null
@@ -3832,10 +3832,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The ID-1 card format measures 85.60 by 53.98 mm and is 0.76 mm thick, thinner than a grain of sand. The geometry was first designed in inches (3.370 by 2.125) and later fixed in metric by the international standard. Payment cards, driving licences and European standard identity cards all share it, so one rectangle of plastic fits wallets, readers and machines worldwide.",
+      "description": "The ID-1 card format has a long edge of 85.60 millimeters, a short edge of 53.98 millimeters and a thickness of 0.76 millimeters. Shared dimensions let payment cards and many identity cards fit the same kinds of wallets and readers. A precise rectangle creates compatibility between everyday objects made around the world, sitting close to the spread wings of a small butterfly.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The ID-1 card format measures 85.60 by 53.98 mm and is 0.76 mm thick, thinner than a grain of sand. The geometry was first designed in inches (3.370 by 2.125) and later fixed in metric by the international standard. Payment cards, driving licences and European standard identity cards all share it, so one rectangle of plastic fits wallets, readers and machines worldwide.",
+      "description_medium": "The ID-1 card format has a long edge of 85.60 millimeters, a short edge of 53.98 millimeters and a thickness of 0.76 millimeters. Shared dimensions let payment cards and many identity cards fit the same kinds of wallets and readers. A precise rectangle creates compatibility between everyday objects made around the world, sitting close to the spread wings of a small butterfly.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -3878,7 +3878,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The ID-1 card format measures 85.60 by 53.98 mm and is 0.76 mm thick, thinner than a grain of sand.",
+      "summary_short": "The ID-1 card format has a long edge of 85.60 millimeters, a short edge of 53.98 millimeters and a thickness of 0.76 millimeters.",
       "value": 0.0856,
       "value_type": "derived",
       "wikidata_qid": null
@@ -4048,10 +4048,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The titan beetle (Titanus giganteus) of South American rainforests reaches over 170 mm, longer than a smartphone is tall and well beyond the 10 cm butterfly wingspan on the scale. Adults defend themselves with sharp spines and powerful jaws. It is one of the longest beetles known, a reminder of how far insect body plans can be stretched when they are not limited by a spiracle breathing system.",
+      "description": "The titan beetle of South American rainforests can exceed seventeen centimeters in body length, longer than a smartphone is tall. Its heavy body, spiny thorax and powerful jaws give an unusually imposing form to an insect that still fits within a hand's span. The measurement follows the body rather than the antennae, which helps distinguish its size from that of other long-horned beetles.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The titan beetle (Titanus giganteus) of South American rainforests reaches over 170 mm, longer than a smartphone is tall and well beyond the 10 cm butterfly wingspan on the scale. Adults defend themselves with sharp spines and powerful jaws. It is one of the longest beetles known, a reminder of how far insect body plans can be stretched when they are not limited by a spiracle breathing system.",
+      "description_medium": "The titan beetle of South American rainforests can exceed seventeen centimeters in body length, longer than a smartphone is tall. Its heavy body, spiny thorax and powerful jaws give an unusually imposing form to an insect that still fits within a hand's span. The measurement follows the body rather than the antennae, which helps distinguish its size from that of other long-horned beetles.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -4094,7 +4094,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The titan beetle (Titanus giganteus) of South American rainforests reaches over 170 mm, longer than a smartphone is tall and well beyond the 10 cm butterfly wingspan on the scale.",
+      "summary_short": "The titan beetle of South American rainforests can exceed seventeen centimeters in body length, longer than a smartphone is tall.",
       "value": 0.17,
       "value_type": "derived",
       "wikidata_qid": null
@@ -4210,10 +4210,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Queen Alexandra's birdwing of Papua New Guinea is the largest butterfly. Females reach, and slightly exceed, a wingspan of 25 to 28 cm, while males are smaller at roughly 16 to 20 cm. A female's wings span more than two and a half times the 10 cm butterfly on the scale and are wider than a house cat is long.",
+      "description": "A female Queen Alexandra's birdwing can span about twenty-six centimeters across its wings, within a reported range of roughly twenty-five to twenty-eight centimeters. This large butterfly lives in Papua New Guinea, with males smaller than females. Its wings extend well beyond the insect's body, so this marker measures the spread flight surfaces rather than the body length used for a beetle or fly.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Queen Alexandra's birdwing of Papua New Guinea is the largest butterfly. Females reach, and slightly exceed, a wingspan of 25 to 28 cm, while males are smaller at roughly 16 to 20 cm. A female's wings span more than two and a half times the 10 cm butterfly on the scale and are wider than a house cat is long.",
+      "description_medium": "A female Queen Alexandra's birdwing can span about twenty-six centimeters across its wings, within a reported range of roughly twenty-five to twenty-eight centimeters. This large butterfly lives in Papua New Guinea, with males smaller than females. Its wings extend well beyond the insect's body, so this marker measures the spread flight surfaces rather than the body length used for a beetle or fly.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -4256,7 +4256,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Queen Alexandra's birdwing of Papua New Guinea is the largest butterfly.",
+      "summary_short": "A female Queen Alexandra's birdwing can span about twenty-six centimeters across its wings, within a reported range of roughly twenty-five to twenty-eight centimeters.",
       "value": 0.26,
       "value_type": "derived",
       "wikidata_qid": null
@@ -4318,10 +4318,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The 300 mm silicon wafer has been the chip industry's standard since 1999. The polished disk is only 775 micrometres thick, thinner than a millimetre of sand, and weighs about 125 g, yet it is patterned with features measured in nanometres. A larger 450 mm wafer was proposed but is still listed as experimental and not in general use.",
+      "description": "A large silicon wafer used in chip manufacturing is three hundred millimeters across. Its polished surface can carry many integrated circuits at once, each patterned with details enormously smaller than the disc that supports them. The wafer is a thin slice of a grown crystal, placing the industrial material at an everyday scale while its finished electronic features belong in the microscopic world.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The 300 mm silicon wafer has been the chip industry's standard since 1999. The polished disk is only 775 micrometres thick, thinner than a millimetre of sand, and weighs about 125 g, yet it is patterned with features measured in nanometres. A larger 450 mm wafer was proposed but is still listed as experimental and not in general use.",
+      "description_medium": "A large silicon wafer used in chip manufacturing is three hundred millimeters across. Its polished surface can carry many integrated circuits at once, each patterned with details enormously smaller than the disc that supports them. The wafer is a thin slice of a grown crystal, placing the industrial material at an everyday scale while its finished electronic features belong in the microscopic world.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -4364,7 +4364,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The 300 mm silicon wafer has been the chip industry's standard since 1999.",
+      "summary_short": "A large silicon wafer used in chip manufacturing is three hundred millimeters across.",
       "value": 0.3,
       "value_type": "derived",
       "wikidata_qid": null
@@ -4534,10 +4534,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The flower of Rafflesia arnoldii, a rainforest plant of Southeast Asia, grows to about 1 m across and weighs up to 11 kg, among the largest single flowers on Earth. The plant has no leaves, stems or even roots visible, living entirely inside Tetrastigma vines as a parasite until the bloom breaks through. A flower about as wide as a standard doorway for a toddler to crawl through sits in the middle of the human scale.",
+      "description": "A Rafflesia arnoldii flower can grow to about one meter across, making a single bloom comparable with a doorway in width. The plant lives as a parasite within a host vine and lacks the familiar visible leaves and stems of most flowering plants. Its bloom emerges as a large, temporary structure, concentrating the scale of the organism's visible life into one extraordinary flower.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The flower of Rafflesia arnoldii, a rainforest plant of Southeast Asia, grows to about 1 m across and weighs up to 11 kg, among the largest single flowers on Earth. The plant has no leaves, stems or even roots visible, living entirely inside Tetrastigma vines as a parasite until the bloom breaks through. A flower about as wide as a standard doorway for a toddler to crawl through sits in the middle of the human scale.",
+      "description_medium": "A Rafflesia arnoldii flower can grow to about one meter across, making a single bloom comparable with a doorway in width. The plant lives as a parasite within a host vine and lacks the familiar visible leaves and stems of most flowering plants. Its bloom emerges as a large, temporary structure, concentrating the scale of the organism's visible life into one extraordinary flower.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -4580,7 +4580,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The flower of Rafflesia arnoldii, a rainforest plant of Southeast Asia, grows to about 1 m across and weighs up to 11 kg, among the largest single flowers on Earth.",
+      "summary_short": "A Rafflesia arnoldii flower can grow to about one meter across, making a single bloom comparable with a doorway in width.",
       "value": 1.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -4968,10 +4968,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Lolong, a saltwater crocodile caught in the Philippines and held in captivity, was 6.17 m long and weighed 1,075 kg, among the largest crocodiles ever caught alive. Typical adult males are 3.5 to 5 m, so Lolong was roughly a metre longer than a large specimen. The species has the highest bite force quotient recorded for any animal, measured at 16,414 newtons for a 4.59 m, 531 kg individual.",
+      "description": "Lolong, a saltwater crocodile caught in the Philippines, measured 6.17 meters long and weighed more than a tonne. That exceptional body length exceeded the usual dimensions of mature males, showing why a record specimen needs to be distinguished from a typical animal. His length was greater than a giraffe's standing height, putting the crocodile's horizontal silhouette among the largest living land-associated animals on the scale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Lolong, a saltwater crocodile caught in the Philippines and held in captivity, was 6.17 m long and weighed 1,075 kg, among the largest crocodiles ever caught alive. Typical adult males are 3.5 to 5 m, so Lolong was roughly a metre longer than a large specimen. The species has the highest bite force quotient recorded for any animal, measured at 16,414 newtons for a 4.59 m, 531 kg individual.",
+      "description_medium": "Lolong, a saltwater crocodile caught in the Philippines, measured 6.17 meters long and weighed more than a tonne. That exceptional body length exceeded the usual dimensions of mature males, showing why a record specimen needs to be distinguished from a typical animal. His length was greater than a giraffe's standing height, putting the crocodile's horizontal silhouette among the largest living land-associated animals on the scale.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -5014,7 +5014,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Lolong, a saltwater crocodile caught in the Philippines and held in captivity, was 6.17 m long and weighed 1,075 kg, among the largest crocodiles ever caught alive.",
+      "summary_short": "Lolong, a saltwater crocodile caught in the Philippines, measured 6.17 meters long and weighed more than a tonne.",
       "value": 6.17,
       "value_type": "derived",
       "wikidata_qid": null
@@ -5508,10 +5508,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "In 2020 the research ship Falkor filmed an estimated 150-foot (about 46 m) siphonophore in deep canyons off Western Australia, seemingly the longest animal ever recorded. A siphonophore is not a single body but a floating colony of many specialised clones strung along a stem, working together like one animal. This one was about one and a half times the length of a blue whale.",
+      "description": "In 2020 the research ship Falkor filmed an estimated 150-foot (about 46 m) siphonophore in deep canyons off Western Australia, an unusually large observed colony. A siphonophore is not a single body but a floating colony of many specialised clones strung along a stem, working together like one animal. This one was about one and a half times the length of a blue whale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "In 2020 the research ship Falkor filmed an estimated 150-foot (about 46 m) siphonophore in deep canyons off Western Australia, seemingly the longest animal ever recorded. A siphonophore is not a single body but a floating colony of many specialised clones strung along a stem, working together like one animal. This one was about one and a half times the length of a blue whale.",
+      "description_medium": "In 2020 the research ship Falkor filmed an estimated 150-foot (about 46 m) siphonophore in deep canyons off Western Australia, an unusually large observed colony. A siphonophore is not a single body but a floating colony of many specialised clones strung along a stem, working together like one animal. This one was about one and a half times the length of a blue whale.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -5554,7 +5554,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "In 2020 the research ship Falkor filmed an estimated 150-foot (about 46 m) siphonophore in deep canyons off Western Australia, seemingly the longest animal ever recorded.",
+      "summary_short": "In 2020 the research ship Falkor filmed an estimated 150-foot (about 46 m) siphonophore in deep canyons off Western Australia, an unusually large observed colony.",
       "value": 45.7,
       "value_type": "derived",
       "wikidata_qid": null
@@ -5562,10 +5562,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The 747-8 Intercontinental is 76.25 m long with a 68.40 m wingspan, making it the longest passenger airliner in service, ahead of the Airbus A340-600 by about 0.95 m. It is two and a half blue whales long, and its wingspan is wider than the Statue of Liberty is far from tip to heel. It carries the hump-fronted profile of the original 1960s 747 stretched into its longest form.",
+      "description": "The Boeing 747-8 Intercontinental is 76.25 meters long, with wings spanning 68.40 meters. Its stretched fuselage extends the familiar raised-forward-deck profile of the earlier 747, carrying a large passenger cabin within a structure that must also endure the forces of flight. Its nose-to-tail length is about two and a half times that of a blue whale, with an equally striking span across its wings.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The 747-8 Intercontinental is 76.25 m long with a 68.40 m wingspan, making it the longest passenger airliner in service, ahead of the Airbus A340-600 by about 0.95 m. It is two and a half blue whales long, and its wingspan is wider than the Statue of Liberty is far from tip to heel. It carries the hump-fronted profile of the original 1960s 747 stretched into its longest form.",
+      "description_medium": "The Boeing 747-8 Intercontinental is 76.25 meters long, with wings spanning 68.40 meters. Its stretched fuselage extends the familiar raised-forward-deck profile of the earlier 747, carrying a large passenger cabin within a structure that must also endure the forces of flight. Its nose-to-tail length is about two and a half times that of a blue whale, with an equally striking span across its wings.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -5608,7 +5608,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The 747-8 Intercontinental is 76.25 m long with a 68.40 m wingspan, making it the longest passenger airliner in service, ahead of the Airbus A340-600 by about 0.95 m.",
+      "summary_short": "The Boeing 747-8 Intercontinental is 76.25 meters long, with wings spanning 68.40 meters.",
       "value": 76.25,
       "value_type": "derived",
       "wikidata_qid": null
@@ -5778,10 +5778,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Hyperion, a coast redwood in Redwood National Park, was measured at 116.22 m in 2026, taller than a Saturn V rocket and about 23 m above the Statue of Liberty. Its trunk holds about 530 cubic metres of wood. The National Park Service closed access to the tree's location in 2022 after visitors trampled the base, with penalties of up to six months in jail and a US$5,000 fine.",
+      "description": "Hyperion, a coast redwood in California, was measured at about 116.2 meters tall in 2026. An entire living tree rises above the height of the space station's end-to-end span, supported by wood built over many years of growth. The measurement follows height above the base, a familiar vertical dimension that makes a single organism comparable with substantial engineered structures.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Hyperion, a coast redwood in Redwood National Park, was measured at 116.22 m in 2026, taller than a Saturn V rocket and about 23 m above the Statue of Liberty. Its trunk holds about 530 cubic metres of wood. The National Park Service closed access to the tree's location in 2022 after visitors trampled the base, with penalties of up to six months in jail and a US$5,000 fine.",
+      "description_medium": "Hyperion, a coast redwood in California, was measured at about 116.2 meters tall in 2026. An entire living tree rises above the height of the space station's end-to-end span, supported by wood built over many years of growth. The measurement follows height above the base, a familiar vertical dimension that makes a single organism comparable with substantial engineered structures.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -5824,7 +5824,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Hyperion, a coast redwood in Redwood National Park, was measured at 116.22 m in 2026, taller than a Saturn V rocket and about 23 m above the Statue of Liberty.",
+      "summary_short": "Hyperion, a coast redwood in California, was measured at about 116.2 meters tall in 2026.",
       "value": 116.2,
       "value_type": "derived",
       "wikidata_qid": null
@@ -6318,10 +6318,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Prelude FLNG is a floating gas-liquefaction plant 488 m long and 74 m wide, displacing around 600,000 tonnes when fully loaded. It is the largest floating liquefied-natural-gas platform and the longest vessel ever built, beating Seawise Giant. Stood on end, it would reach well over half the height of the Burj Khalifa.",
+      "description": "Prelude FLNG is a floating gas-liquefaction facility 488 meters long and seventy-four meters wide. Rather than transporting cargo between ports like an ordinary ship, it provides a platform for processing gas offshore, with a vast arrangement of industrial equipment above its hull. Its length exceeds that of many large ocean liners; stood on end, it would reach well over half the height of the Burj Khalifa.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Prelude FLNG is a floating gas-liquefaction plant 488 m long and 74 m wide, displacing around 600,000 tonnes when fully loaded. It is the largest floating liquefied-natural-gas platform and the longest vessel ever built, beating Seawise Giant. Stood on end, it would reach well over half the height of the Burj Khalifa.",
+      "description_medium": "Prelude FLNG is a floating gas-liquefaction facility 488 meters long and seventy-four meters wide. Rather than transporting cargo between ports like an ordinary ship, it provides a platform for processing gas offshore, with a vast arrangement of industrial equipment above its hull. Its length exceeds that of many large ocean liners; stood on end, it would reach well over half the height of the Burj Khalifa.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -6364,7 +6364,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Prelude FLNG is a floating gas-liquefaction plant 488 m long and 74 m wide, displacing around 600,000 tonnes when fully loaded.",
+      "summary_short": "Prelude FLNG is a floating gas-liquefaction facility 488 meters long and seventy-four meters wide.",
       "value": 488.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -6912,10 +6912,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Lake Baikal in Siberia is 1,642 m deep at its maximum, almost exactly twice the height of the Burj Khalifa, and 636 km long. It is about 25 to 30 million years old, the oldest lake, and holds around 19 percent of the planet's unfrozen fresh water. It is the deepest lake on Earth.",
+      "description": "Lake Baikal in Siberia is 1,642 m deep at its maximum, almost exactly twice the height of the Burj Khalifa, and 636 km long. It is about 25 to 30 million years old, the oldest lake, and holds around 19 percent of the planet's unfrozen fresh water. Its measured maximum depth makes it the deepest lake on Earth.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Lake Baikal in Siberia is 1,642 m deep at its maximum, almost exactly twice the height of the Burj Khalifa, and 636 km long. It is about 25 to 30 million years old, the oldest lake, and holds around 19 percent of the planet's unfrozen fresh water. It is the deepest lake on Earth.",
+      "description_medium": "Lake Baikal in Siberia is 1,642 m deep at its maximum, almost exactly twice the height of the Burj Khalifa, and 636 km long. It is about 25 to 30 million years old, the oldest lake, and holds around 19 percent of the planet's unfrozen fresh water. Its measured maximum depth makes it the deepest lake on Earth.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -7398,17 +7398,17 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Deimos is about 12.4 kilometers across in mean diameter, a small, irregular moon of Mars. Its subdued, dusty surface contrasts with the sharply cratered appearance of some other small bodies, while its weak gravity gives loose material a different environment from that on Earth. An entire moon occupies a scale comparable with a deep borehole's length rather than the dimensions of a planet.",
+      "description": "Deimos is about 12.5 kilometers across in mean diameter, a small, irregular moon of Mars. Its subdued, dusty surface contrasts with the sharply cratered appearance of some other small bodies, while its weak gravity gives loose material a different environment from that on Earth. An entire moon occupies a scale comparable with a deep borehole's length rather than the dimensions of a planet.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Deimos is about 12.4 kilometers across in mean diameter, a small, irregular moon of Mars. Its subdued, dusty surface contrasts with the sharply cratered appearance of some other small bodies, while its weak gravity gives loose material a different environment from that on Earth. An entire moon occupies a scale comparable with a deep borehole's length rather than the dimensions of a planet.",
+      "description_medium": "Deimos is about 12.5 kilometers across in mean diameter, a small, irregular moon of Mars. Its subdued, dusty surface contrasts with the sharply cratered appearance of some other small bodies, while its weak gravity gives loose material a different environment from that on Earth. An entire moon occupies a scale comparable with a deep borehole's length rather than the dimensions of a planet.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Deimos",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "12400.0",
+          "original_value_text": "12540",
           "source_url": "https://en.wikipedia.org/wiki/Deimos_(moon)"
         }
       },
@@ -7444,18 +7444,18 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Deimos is about 12.4 kilometers across in mean diameter, a small, irregular moon of Mars.",
-      "value": 12400.0,
+      "summary_short": "Deimos is about 12.5 kilometers across in mean diameter, a small, irregular moon of Mars.",
+      "value": 12540.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "At its narrowest the Strait of Gibraltar is 7.7 nautical miles (about 14.2 km) wide, with depths between 300 and 900 m. Europe and Africa are visible from each other across it, and it connects the Mediterranean with the Atlantic. The gap is shorter than Manhattan is long.",
+      "description": "The Strait of Gibraltar narrows to about 14.2 kilometers between Europe and Africa. It links the Atlantic Ocean with the Mediterranean Sea, making a short gap between continents an important route for water exchange and shipping. This marker follows the narrowest crossing rather than the length of the strait, a distance shorter than Manhattan Island from end to end.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "At its narrowest the Strait of Gibraltar is 7.7 nautical miles (about 14.2 km) wide, with depths between 300 and 900 m. Europe and Africa are visible from each other across it, and it connects the Mediterranean with the Atlantic. The gap is shorter than Manhattan is long.",
+      "description_medium": "The Strait of Gibraltar narrows to about 14.2 kilometers between Europe and Africa. It links the Atlantic Ocean with the Mediterranean Sea, making a short gap between continents an important route for water exchange and shipping. This marker follows the narrowest crossing rather than the length of the strait, a distance shorter than Manhattan Island from end to end.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -7498,7 +7498,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "At its narrowest the Strait of Gibraltar is 7.7 nautical miles (about 14.2 km) wide, with depths between 300 and 900 m.",
+      "summary_short": "The Strait of Gibraltar narrows to about 14.2 kilometers between Europe and Africa.",
       "value": 14200.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -7560,17 +7560,17 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Phobos has a mean diameter of about 22.5 kilometers, though its irregular shape makes its longest dimension larger. This small moon circles Mars so closely that it moves across the Martian sky much faster than Earth's Moon does across ours. A whole natural satellite can therefore be comparable in width to an island or a city, far below the scale of the planet it accompanies.",
+      "description": "Phobos has a mean diameter of about 22.2 kilometers, though its irregular shape makes its longest dimension larger. This small moon circles Mars so closely that it moves across the Martian sky much faster than Earth's Moon does across ours. A whole natural satellite can therefore be comparable in width to an island or a city, far below the scale of the planet it accompanies.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Phobos has a mean diameter of about 22.5 kilometers, though its irregular shape makes its longest dimension larger. This small moon circles Mars so closely that it moves across the Martian sky much faster than Earth's Moon does across ours. A whole natural satellite can therefore be comparable in width to an island or a city, far below the scale of the planet it accompanies.",
+      "description_medium": "Phobos has a mean diameter of about 22.2 kilometers, though its irregular shape makes its longest dimension larger. This small moon circles Mars so closely that it moves across the Martian sky much faster than Earth's Moon does across ours. A whole natural satellite can therefore be comparable in width to an island or a city, far below the scale of the planet it accompanies.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
         "legacy_item_name": "Phobos",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "22533.0",
+          "original_value_text": "22160",
           "source_url": "https://en.wikipedia.org/wiki/Phobos_(moon)"
         }
       },
@@ -7606,8 +7606,8 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Phobos has a mean diameter of about 22.5 kilometers, though its irregular shape makes its longest dimension larger.",
-      "value": 22533.0,
+      "summary_short": "Phobos has a mean diameter of about 22.2 kilometers, though its irregular shape makes its longest dimension larger.",
+      "value": 22160.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -8535,10 +8535,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The National Park Service lists the surveyed length of Mammoth Cave in Kentucky at 426 miles (685 km) to date, a figure that keeps growing as explorers link new passages. It is the longest known cave system and is longer than the Grand Canyon. Stretched in a line, its passages would cross several states.",
+      "description": "The surveyed passages of Mammoth Cave in Kentucky total about 685 kilometers in the National Park Service's cited inventory. This is an accumulated route length through a branching underground network, rather than the distance between two entrances or the width of a chamber. Explorers can increase the total by connecting more passages, revealing how a folded, connected system fits great length into a much smaller region.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The National Park Service lists the surveyed length of Mammoth Cave in Kentucky at 426 miles (685 km) to date, a figure that keeps growing as explorers link new passages. It is the longest known cave system and is longer than the Grand Canyon. Stretched in a line, its passages would cross several states.",
+      "description_medium": "The surveyed passages of Mammoth Cave in Kentucky total about 685 kilometers in the National Park Service's cited inventory. This is an accumulated route length through a branching underground network, rather than the distance between two entrances or the width of a chamber. Explorers can increase the total by connecting more passages, revealing how a folded, connected system fits great length into a much smaller region.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -8581,7 +8581,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The National Park Service lists the surveyed length of Mammoth Cave in Kentucky at 426 miles (685 km) to date, a figure that keeps growing as explorers link new passages.",
+      "summary_short": "The surveyed passages of Mammoth Cave in Kentucky total about 685 kilometers in the National Park Service's cited inventory.",
       "value": 685000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -9399,10 +9399,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The greatest distance on a great-circle route entirely within the contiguous United States is 2,802 miles (4,509 km), running coast to coast between Florida and Washington state. That is more than a third of Earth's diameter, and the country is so wide that a four-hour time difference separates its coasts.",
+      "description": "The longest great-circle route entirely within the contiguous United States is about 4,509 kilometers, between the coasts of Florida and Washington. This follows a path on Earth's curved surface, rather than measuring the country along a horizontal line on a map. The span exceeds a third of Earth's diameter, connecting a continental journey with the scale of the whole planet beneath it.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The greatest distance on a great-circle route entirely within the contiguous United States is 2,802 miles (4,509 km), running coast to coast between Florida and Washington state. That is more than a third of Earth's diameter, and the country is so wide that a four-hour time difference separates its coasts.",
+      "description_medium": "The longest great-circle route entirely within the contiguous United States is about 4,509 kilometers, between the coasts of Florida and Washington. This follows a path on Earth's curved surface, rather than measuring the country along a horizontal line on a map. The span exceeds a third of Earth's diameter, connecting a continental journey with the scale of the whole planet beneath it.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -9445,7 +9445,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The greatest distance on a great-circle route entirely within the contiguous United States is 2,802 miles (4,509 km), running coast to coast between Florida and Washington state.",
+      "summary_short": "The longest great-circle route entirely within the contiguous United States is about 4,509 kilometers, between the coasts of Florida and Washington.",
       "value": 4509000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -9453,10 +9453,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The Sahara stretches roughly 4,800 km from the Atlantic Ocean to the Red Sea and covers 9.2 million square kilometres, making it the largest hot desert. It is about 1,800 km wide at its widest. Its east-west span is about the same as the width of the contiguous United States.",
+      "description": "The Sahara extends roughly 4,800 kilometers from east to west across northern Africa. Its landscapes include broad rocky and gravel-covered regions as well as the sand dunes that often represent it in photographs. This marker follows the desert's long dimension, a continental span comparable with a crossing of the contiguous United States and far greater than any individual dune field.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The Sahara stretches roughly 4,800 km from the Atlantic Ocean to the Red Sea and covers 9.2 million square kilometres, making it the largest hot desert. It is about 1,800 km wide at its widest. Its east-west span is about the same as the width of the contiguous United States.",
+      "description_medium": "The Sahara extends roughly 4,800 kilometers from east to west across northern Africa. Its landscapes include broad rocky and gravel-covered regions as well as the sand dunes that often represent it in photographs. This marker follows the desert's long dimension, a continental span comparable with a crossing of the contiguous United States and far greater than any individual dune field.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -9499,7 +9499,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The Sahara stretches roughly 4,800 km from the Atlantic Ocean to the Red Sea and covers 9.2 million square kilometres, making it the largest hot desert.",
+      "summary_short": "The Sahara extends roughly 4,800 kilometers from east to west across northern Africa.",
       "value": 4800000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -9781,10 +9781,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mars is about 6,780 km across, a little over half of Earth's diameter. Because Earth's surface is mostly ocean, Mars has about as much total surface area as all of Earth's dry land. It holds the Solar System's tallest volcano and largest canyon, both of which appear elsewhere on this scale.",
+      "description": "Mars has a mean diameter of about 6,779 kilometers, a little over half Earth's width. Its surface records impact craters, enormous volcanoes, canyons and traces of past water activity, providing evidence of a complex planetary history. Because most of Earth is covered by oceans, the total surface of the smaller planet is comparable in area with all of Earth's exposed land.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Mars is about 6,780 km across, a little over half of Earth's diameter. Because Earth's surface is mostly ocean, Mars has about as much total surface area as all of Earth's dry land. It holds the Solar System's tallest volcano and largest canyon, both of which appear elsewhere on this scale.",
+      "description_medium": "Mars has a mean diameter of about 6,779 kilometers, a little over half Earth's width. Its surface records impact craters, enormous volcanoes, canyons and traces of past water activity, providing evidence of a complex planetary history. Because most of Earth is covered by oceans, the total surface of the smaller planet is comparable in area with all of Earth's exposed land.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -9827,7 +9827,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Mars is about 6,780 km across, a little over half of Earth's diameter.",
+      "summary_short": "Mars has a mean diameter of about 6,779 kilometers, a little over half Earth's width.",
       "value": 6779000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -9835,10 +9835,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The Trans-Siberian Railway runs 9,289 km (5,772 miles) from Moscow to Vladivostok, the longest railway line in the world, crossing seven time zones. That is about one and a half times the length of the Amazon River. It is shorter than the Great Wall of China but runs in a nearly unbroken line.",
+      "description": "The Trans-Siberian Railway's route from Moscow to Vladivostok runs about 9,289 kilometers. Rails connect cities and landscapes across a large portion of Eurasia, turning a continental distance into a continuous path traveled by trains. The marker measures the railway route rather than the straight-line separation of its ends, placing one engineered connection above the length of the Amazon River on this scale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The Trans-Siberian Railway runs 9,289 km (5,772 miles) from Moscow to Vladivostok, the longest railway line in the world, crossing seven time zones. That is about one and a half times the length of the Amazon River. It is shorter than the Great Wall of China but runs in a nearly unbroken line.",
+      "description_medium": "The Trans-Siberian Railway's route from Moscow to Vladivostok runs about 9,289 kilometers. Rails connect cities and landscapes across a large portion of Eurasia, turning a continental distance into a continuous path traveled by trains. The marker measures the railway route rather than the straight-line separation of its ends, placing one engineered connection above the length of the Amazon River on this scale.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -9881,7 +9881,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The Trans-Siberian Railway runs 9,289 km (5,772 miles) from Moscow to Vladivostok, the longest railway line in the world, crossing seven time zones.",
+      "summary_short": "The Trans-Siberian Railway's route from Moscow to Vladivostok runs about 9,289 kilometers.",
       "value": 9289000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -9889,10 +9889,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Sirius B is a white dwarf, the exposed core of a dead star, with 1.02 times the Sun's mass packed into a globe about 11,300 km across, slightly smaller than Earth. A single cubic centimetre of its material would weigh nearly three tonnes. It was the first white dwarf ever identified, found in 1862 as a faint companion to Sirius, the brightest star in our night sky.",
+      "description": "Sirius B is a white dwarf about 11,300 kilometers across, slightly smaller than Earth despite containing roughly the mass of the Sun. It is the dense remnant of a star, shining beside the much brighter Sirius A in our nearby stellar neighborhood. Compressing a stellar mass into a planetary diameter produces a radically different kind of object from the planets beside it on this scale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Sirius B is a white dwarf, the exposed core of a dead star, with 1.02 times the Sun's mass packed into a globe about 11,300 km across, slightly smaller than Earth. A single cubic centimetre of its material would weigh nearly three tonnes. It was the first white dwarf ever identified, found in 1862 as a faint companion to Sirius, the brightest star in our night sky.",
+      "description_medium": "Sirius B is a white dwarf about 11,300 kilometers across, slightly smaller than Earth despite containing roughly the mass of the Sun. It is the dense remnant of a star, shining beside the much brighter Sirius A in our nearby stellar neighborhood. Compressing a stellar mass into a planetary diameter produces a radically different kind of object from the planets beside it on this scale.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -9935,7 +9935,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Sirius B is a white dwarf, the exposed core of a dead star, with 1.02 times the Sun's mass packed into a globe about 11,300 km across, slightly smaller than Earth.",
+      "summary_short": "Sirius B is a white dwarf about 11,300 kilometers across, slightly smaller than Earth despite containing roughly the mass of the Sun.",
       "value": 11300000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -10981,10 +10981,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, with about 4.3 million times the Sun's mass. Its event horizon, the boundary beyond which light cannot escape, is roughly 25 million km across, about 18 times the width of the Sun and smaller than the orbit of Mercury. The [Event Horizon Telescope](https://en.wikipedia.org/wiki/Event_Horizon_Telescope) captured the glowing ring around it in 2022.",
+      "description": "For a non-rotating black hole with Sagittarius A*'s estimated mass, the event horizon would be about twenty-five million kilometers across. The horizon marks a causal boundary beyond which light cannot escape, rather than a glowing material surface. The Event Horizon Telescope observes emission around a larger shadow, so the image and this mass-based reference diameter describe different parts of the same black-hole environment.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, with about 4.3 million times the Sun's mass. Its event horizon, the boundary beyond which light cannot escape, is roughly 25 million km across, about 18 times the width of the Sun and smaller than the orbit of Mercury. The [Event Horizon Telescope](https://en.wikipedia.org/wiki/Event_Horizon_Telescope) captured the glowing ring around it in 2022.",
+      "description_medium": "For a non-rotating black hole with Sagittarius A*'s estimated mass, the event horizon would be about twenty-five million kilometers across. The horizon marks a causal boundary beyond which light cannot escape, rather than a glowing material surface. The Event Horizon Telescope observes emission around a larger shadow, so the image and this mass-based reference diameter describe different parts of the same black-hole environment.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -11027,7 +11027,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Sagittarius A* is the supermassive black hole at the center of the Milky Way, with about 4.3 million times the Sun's mass.",
+      "summary_short": "For a non-rotating black hole with Sagittarius A*'s estimated mass, the event horizon would be about twenty-five million kilometers across.",
       "value": 25400000000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -11580,10 +11580,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Sedna is a dwarf planet roughly 900 km wide whose orbit swings from 76 AU out to 937 AU (140 billion km), over 30 times Neptune's distance. At that far end sunlight is faint enough that the Sun looks like a very bright star, and a single orbit takes about 11,400 years, far longer than recorded history. Nothing known explains how Sedna reached such an orbit, and it hints at unseen influences in the distant Solar System.",
+      "description": "Sedna reaches about 937 astronomical units from the Sun at the farthest point of its elongated orbit, roughly 140 billion kilometers. Its path carries it far beyond the region occupied by the major planets, with a full circuit taking many thousands of years. This marker measures the Sun-to-object distance at aphelion, an orbital extreme whose origin remains an active question about the distant Solar System.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Sedna is a dwarf planet roughly 900 km wide whose orbit swings from 76 AU out to 937 AU (140 billion km), over 30 times Neptune's distance. At that far end sunlight is faint enough that the Sun looks like a very bright star, and a single orbit takes about 11,400 years, far longer than recorded history. Nothing known explains how Sedna reached such an orbit, and it hints at unseen influences in the distant Solar System.",
+      "description_medium": "Sedna reaches about 937 astronomical units from the Sun at the farthest point of its elongated orbit, roughly 140 billion kilometers. Its path carries it far beyond the region occupied by the major planets, with a full circuit taking many thousands of years. This marker measures the Sun-to-object distance at aphelion, an orbital extreme whose origin remains an active question about the distant Solar System.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -11626,7 +11626,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Sedna is a dwarf planet roughly 900 km wide whose orbit swings from 76 AU out to 937 AU (140 billion km), over 30 times Neptune's distance.",
+      "summary_short": "Sedna reaches about 937 astronomical units from the Sun at the farthest point of its elongated orbit, roughly 140 billion kilometers.",
       "value": 140000000000000.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -12018,10 +12018,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Sirius, the brightest star in the night sky, lies 8.6 light-years from the Sun, so the light you see from it tonight left about 8.6 years ago. That is about twice as far as the nearest star, Proxima Centauri, yet close enough that Sirius has a faint white-dwarf companion, Sirius B, whose size appears earlier on this scale.",
+      "description": "Sirius lies about 8.6 light-years from the Sun, so the light reaching us tonight began its journey more than eight years ago. The system includes the bright star Sirius A and the compact white dwarf Sirius B, two very different objects sharing a stellar neighborhood. Their distance is roughly twice that of Proxima Centauri, placing another familiar point of light among the nearest stars.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Sirius, the brightest star in the night sky, lies 8.6 light-years from the Sun, so the light you see from it tonight left about 8.6 years ago. That is about twice as far as the nearest star, Proxima Centauri, yet close enough that Sirius has a faint white-dwarf companion, Sirius B, whose size appears earlier on this scale.",
+      "description_medium": "Sirius lies about 8.6 light-years from the Sun, so the light reaching us tonight began its journey more than eight years ago. The system includes the bright star Sirius A and the compact white dwarf Sirius B, two very different objects sharing a stellar neighborhood. Their distance is roughly twice that of Proxima Centauri, placing another familiar point of light among the nearest stars.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -12064,7 +12064,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "Sirius, the brightest star in the night sky, lies 8.6 light-years from the Sun, so the light you see from it tonight left about 8.6 years ago.",
+      "summary_short": "Sirius lies about 8.6 light-years from the Sun, so the light reaching us tonight began its journey more than eight years ago.",
       "value": 8.136228206419488e+16,
       "value_type": "derived",
       "wikidata_qid": null
@@ -12833,10 +12833,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The Andromeda Galaxy, 2.5 million light-years away, has a bright disk about 152,000 light-years across, the largest galaxy in our Local Group and nearly one and a half times as wide as the Milky Way's disk. Its full disk would appear about six times the width of the Moon if our eyes were sensitive enough. It is approaching the Milky Way and the two are expected to merge in several billion years.",
+      "description": "Andromeda's bright stellar disk has a characteristic diameter of about 152,000 light-years when measured to a defined surface-brightness contour. Fainter stars and gas continue beyond that contour, so the number is an observational convention rather than a sharp galactic edge. Its visible disk is broader than the Milky Way's on this scale, while the much larger surrounding gas halo appears farther along the explorer.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The Andromeda Galaxy, 2.5 million light-years away, has a bright disk about 152,000 light-years across, the largest galaxy in our Local Group and nearly one and a half times as wide as the Milky Way's disk. Its full disk would appear about six times the width of the Moon if our eyes were sensitive enough. It is approaching the Milky Way and the two are expected to merge in several billion years.",
+      "description_medium": "Andromeda's bright stellar disk has a characteristic diameter of about 152,000 light-years when measured to a defined surface-brightness contour. Fainter stars and gas continue beyond that contour, so the number is an observational convention rather than a sharp galactic edge. Its visible disk is broader than the Milky Way's on this scale, while the much larger surrounding gas halo appears farther along the explorer.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -12879,7 +12879,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The Andromeda Galaxy, 2.5 million light-years away, has a bright disk about 152,000 light-years across, the largest galaxy in our Local Group and nearly one and a half times as wide as the Milky Way's disk.",
+      "summary_short": "Andromeda's bright stellar disk has a characteristic diameter of about 152,000 light-years when measured to a defined surface-brightness contour.",
       "value": 1.4366914819423805e+21,
       "value_type": "derived",
       "wikidata_qid": null
@@ -13720,10 +13720,10 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The Hubble radius is the distance, about 14.4 billion light-years (4,420 megaparsecs), at which the expansion of space carries galaxies away at the speed of light. This does not violate relativity, since the galaxies are not moving through space that fast, and we can still see galaxies beyond this distance because the Hubble radius itself grows with time. It is only about a third of the 46.5 billion light-year radius of the observable universe.",
+      "description": "The Hubble radius is about 14.4 billion light-years for the expansion rate used here, marking where recession in the idealized expanding universe equals the speed of light. It is not the edge of what we can observe: light travels through a universe whose expansion rate changes over time. The observable universe's radius is much larger, so a recession-speed marker and a visibility horizon occupy different positions on the scale.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "The Hubble radius is the distance, about 14.4 billion light-years (4,420 megaparsecs), at which the expansion of space carries galaxies away at the speed of light. This does not violate relativity, since the galaxies are not moving through space that fast, and we can still see galaxies beyond this distance because the Hubble radius itself grows with time. It is only about a third of the 46.5 billion light-year radius of the observable universe.",
+      "description_medium": "The Hubble radius is about 14.4 billion light-years for the expansion rate used here, marking where recession in the idealized expanding universe equals the speed of light. It is not the edge of what we can observe: light travels through a universe whose expansion rate changes over time. The observable universe's radius is much larger, so a recession-speed marker and a visibility horizon occupy different positions on the scale.",
       "display_status": "display",
       "facts": {
         "ingest_source": "dataset/raw/legacy_yaml/length.yaml",
@@ -13766,7 +13766,7 @@
           "url": "repo://dataset/raw/legacy_yaml/length.yaml"
         }
       ],
-      "summary_short": "The Hubble radius is the distance, about 14.4 billion light-years (4,420 megaparsecs), at which the expansion of space carries galaxies away at the speed of light.",
+      "summary_short": "The Hubble radius is about 14.4 billion light-years for the expansion rate used here, marking where recession in the idealized expanding universe equals the speed of light.",
       "value": 1.3623451880516352e+26,
       "value_type": "derived",
       "wikidata_qid": null

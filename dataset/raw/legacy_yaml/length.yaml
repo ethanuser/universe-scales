@@ -378,14 +378,15 @@ items:
     visible spectrum, giving the brain signals it can compare to produce color vision. The whole cell
     is far longer than the wavelengths it detects, because detecting light also requires cellular machinery
     to maintain and transmit the signal.
-- description: A neuron and its local branches span roughly 100 micrometers. Cell bodies range from a
-    few micrometers to about 100 in the largest motor neurons, and the dendrites around a typical cell
-    body reach out tens of micrometers, while the axon can run over a meter and carry electrical signals
-    called action potentials. Neurons pass those signals across synapses in about a millisecond. The brain
-    contains about 86 billion neurons, each connecting to thousands of others.
+- description: A reconstructed rat cortical interneuron spans roughly 0.8 millimeters, including its
+    dendrites and the axon that branches through nearby tissue. The explorer shows NeuroMorpho.Org cell
+    NMO_109111, traced from a layer-4 barrel-cortex neuron by Emmenegger and colleagues, with its full
+    traced geometry. The traveling glow illustrates an action potential starting near the cell body and
+    spreading through the axon's branches; its speed and position are explanatory, not measured for this
+    cell. Some neurons send axons over a meter, from the spinal cord to the foot.
   name: Neuron
-  source: https://en.wikipedia.org/wiki/Neuron
-  value: 1e-4
+  source: https://neuromorpho.org/neuron_info.jsp?neuron_name=BC140212B_21
+  value: 8e-4
 - description: The diameter of human hair, a remarkable biological fiber that grows continuously throughout
     life. Hair is stronger than steel by weight and can stretch up to 30% before breaking. Each hair follicle
     cycles through growth phases lasting 2-7 years, which is why hair can grow so long. The diameter varies
@@ -438,13 +439,13 @@ items:
     through films of water on moss and other surfaces. Some species survive severe drying by entering
     a dormant state, making an animal of microscopic dimensions unusually resilient to losing water.
 - name: Fruit Fly Brain
-  value: 0.0007
-  source: https://www.nature.com/articles/s41586-025-08746-0
-  description: An adult fruit fly brain spans roughly 0.7 millimeters across, including the optic lobes
-    that process its visual world. In 2024, the FlyWire collaboration published a wiring diagram of an
-    adult female brain containing about 139,000 neurons and more than fifty million synapses. A structure
-    narrower than a grain of sand can therefore support flight, navigation, learning and the coordination
-    of an entire animal.
+  value: 0.0008
+  source: https://doi.org/10.1038/s41586-024-07558-y
+  description: An adult fruit fly brain spans roughly 0.8 millimeters from one optic lobe to the other,
+    as measured in the FlyWire reconstruction. In 2024 the FlyWire collaboration published the complete
+    wiring diagram of this female brain, about 139,000 neurons joined by more than fifty million synapses.
+    The model shows 2,200 of those reconstructed neurons, colored by broad class. A brain smaller than
+    a poppy seed steers flight, navigation, learning and courtship.
 - description: The size of sand grains, the building blocks of beaches and deserts. Sand forms through
     the weathering of rocks over millions of years, with each grain representing a tiny piece of geological
     history. The size determines how sand behaves - fine sand flows like liquid when dry but becomes solid
