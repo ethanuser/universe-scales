@@ -9,6 +9,10 @@ export const QUARK_RADIUS_LIMIT_M = 4.3e-19;
 export const PROTON_RMS_CHARGE_RADIUS_M = 0.84075e-15;
 export const CLASSICAL_ELECTRON_RADIUS_M = 2.8179403205e-15;
 export const NEUTRINO_WAVELENGTH_1MEV_M = 1.239841984e-12;
+// Compton wavelengths h / (m c), 2022 CODATA (NIST), as listed in the Length data.
+export const COMPTON_WAVELENGTHS_M = Object.freeze({
+    Electron: 2.42631023538e-12, Muon: 1.17344411e-14, Proton: 1.3214098536e-15, Tau: 6.97771e-16 });
+const COMPTON_COLORS = Object.freeze({ Electron: 0x4f7fc4, Muon: 0x3c9c8f, Proton: 0xb2584a, Tau: 0x7a5bb5 });
 
 const ORIGIN_X = -0.5;
 const END_X = 0.5;
@@ -168,8 +172,25 @@ export function neutrinoWavelengthScene() {
     return scene;
 }
 
+// One Compton wavelength, lambda = h / (m c): a photon this long carries the particle's
+// whole rest energy, since E = h c / lambda = m c^2.
+export function comptonWavelengthScene(entry = {}) {
+    const particle = entry.particle || 'Electron';
+    const scene = neutrinoWavelengthScene();
+    const wave = scene.getObjectByName('one-de-broglie-wavelength');
+    wave.name = 'one-compton-wavelength';
+    wave.material.color.setHex(COMPTON_COLORS[particle]);
+    const dot = new THREE.Mesh(new THREE.SphereGeometry(0.025, 20, 12), new THREE.MeshBasicMaterial({ color: COMPTON_COLORS[particle] }));
+    dot.name = 'particle-marker';
+    dot.position.set(ORIGIN_X - 0.06, 0, 0);
+    scene.add(dot);
+    scene.add(labelNode(particle.toLowerCase(), new THREE.Vector3(ORIGIN_X - 0.06, 0.07, 0)));
+    scene.add(labelNode(`A photon this long carries the ${particle.toLowerCase()}'s rest energy, mc²`, new THREE.Vector3(0, 0.3, 0)));
+    return scene;
+}
+
 registerAnimation('neutrino-phase', (root, elapsed) => {
-    const wave = root.getObjectByName('one-de-broglie-wavelength');
+    const wave = root.getObjectByName('one-de-broglie-wavelength') || root.getObjectByName('one-compton-wavelength');
     if (!wave) return;
     // A slow illustrative phase, independent of the neutrino's physical frequency.
     const position = wave.geometry.attributes.position, normal = wave.geometry.attributes.normal;
@@ -220,6 +241,30 @@ export const particleScaleMetadata = Object.freeze({
         basis_url: 'https://physics.nist.gov/cgi-bin/cuu/Value?re',
         basis_label: 'Classical electron radius: 2022 CODATA',
         note: 'The electron itself is the dark dot: experiments find it point-like, smaller than 10^-18 m (the dot is enlarged). The blue haze is the energy stored in its electric field, drawn with density proportional to the field energy (which falls as 1/r^4), cropped just beyond the sphere. The sphere marks the classical electron radius r_e = 2.8179403205e-15 m (2022 CODATA): the field outside it holds exactly half the electron\'s rest energy, mc^2/2, and the field outside r_e/2 (inner ring) holds all of it. That is why r_e is the size at which classical physics breaks down for the electron; it is not the physical radius or a measured surface. The sphere spans twice the listed radius.' }),
+    'Electron Compton Wavelength': Object.freeze({ id: 'electron-compton-wavelength', procedural: 'compton-wavelength', particle: 'Electron',
+        name: 'Electron Compton Wavelength', dimension: 'length', value: COMPTON_WAVELENGTHS_M.Electron, unit: 'm', geometry: 'mesh',
+        representation: 'measurement_diagram', presentation,
+        basis_url: 'https://physics.nist.gov/cuu/Constants/Table/allascii.txt',
+        basis_label: 'Compton wavelengths: 2022 CODATA',
+        note: 'One Compton wavelength of the electron, h / (m c). A photon with exactly this wavelength carries the electron\'s entire rest energy, m c^2, so it is roughly the length scale at which probing the particle with light makes new particles appear. It is a wavelength, not the particle\'s size; the dot only marks the particle. The wave is a schematic amplitude; its slow phase animation is illustrative.' }),
+    'Muon Compton Wavelength': Object.freeze({ id: 'muon-compton-wavelength', procedural: 'compton-wavelength', particle: 'Muon',
+        name: 'Muon Compton Wavelength', dimension: 'length', value: COMPTON_WAVELENGTHS_M.Muon, unit: 'm', geometry: 'mesh',
+        representation: 'measurement_diagram', presentation,
+        basis_url: 'https://physics.nist.gov/cuu/Constants/Table/allascii.txt',
+        basis_label: 'Compton wavelengths: 2022 CODATA',
+        note: 'One Compton wavelength of the muon, h / (m c). A photon with exactly this wavelength carries the muon\'s entire rest energy, m c^2, so it is roughly the length scale at which probing the particle with light makes new particles appear. It is a wavelength, not the particle\'s size; the dot only marks the particle. The wave is a schematic amplitude; its slow phase animation is illustrative.' }),
+    'Proton Compton Wavelength': Object.freeze({ id: 'proton-compton-wavelength', procedural: 'compton-wavelength', particle: 'Proton',
+        name: 'Proton Compton Wavelength', dimension: 'length', value: COMPTON_WAVELENGTHS_M.Proton, unit: 'm', geometry: 'mesh',
+        representation: 'measurement_diagram', presentation,
+        basis_url: 'https://physics.nist.gov/cuu/Constants/Table/allascii.txt',
+        basis_label: 'Compton wavelengths: 2022 CODATA',
+        note: 'One Compton wavelength of the proton, h / (m c). A photon with exactly this wavelength carries the proton\'s entire rest energy, m c^2, so it is roughly the length scale at which probing the particle with light makes new particles appear. It is a wavelength, not the particle\'s size; the dot only marks the particle. The wave is a schematic amplitude; its slow phase animation is illustrative.' }),
+    'Tau Compton Wavelength': Object.freeze({ id: 'tau-compton-wavelength', procedural: 'compton-wavelength', particle: 'Tau',
+        name: 'Tau Compton Wavelength', dimension: 'length', value: COMPTON_WAVELENGTHS_M.Tau, unit: 'm', geometry: 'mesh',
+        representation: 'measurement_diagram', presentation,
+        basis_url: 'https://physics.nist.gov/cuu/Constants/Table/allascii.txt',
+        basis_label: 'Compton wavelengths: 2022 CODATA',
+        note: 'One Compton wavelength of the tau, h / (m c). A photon with exactly this wavelength carries the tau\'s entire rest energy, m c^2, so it is roughly the length scale at which probing the particle with light makes new particles appear. It is a wavelength, not the particle\'s size; the dot only marks the particle. The wave is a schematic amplitude; its slow phase animation is illustrative.' }),
     '1 MeV Neutrino Wavelength': Object.freeze({ id: 'neutrino-wavelength-1mev', procedural: 'neutrino-wavelength-1mev',
         name: '1 MeV Neutrino Wavelength', dimension: 'length', value: NEUTRINO_WAVELENGTH_1MEV_M, unit: 'm', geometry: 'mesh',
         representation: 'measurement_diagram', presentation,
@@ -234,5 +279,6 @@ export const particleScaleScenes = Object.freeze({
     'hera-quark-radius-limit': quarkRadiusLimitScene,
     'proton-rms-charge-radius': protonRmsRadiusScene,
     'classical-electron-radius': classicalElectronRadiusScene,
-    'neutrino-wavelength-1mev': neutrinoWavelengthScene
+    'neutrino-wavelength-1mev': neutrinoWavelengthScene,
+    'compton-wavelength': comptonWavelengthScene
 });

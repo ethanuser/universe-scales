@@ -5,13 +5,14 @@ import {
     CLASSICAL_ELECTRON_RADIUS_M, NEUTRINO_WAVELENGTH_1MEV_M, PLANCK_LENGTH_M,
     PROTON_RMS_CHARGE_RADIUS_M, QUARK_RADIUS_LIMIT_M,
     particleScaleMetadata, particleScaleScenes, PROTON_CLOUD_CROP_RMS, protonRadialCdf,
-    ELECTRON_FIELD_CROP, electronFieldEnergyOutside
+    ELECTRON_FIELD_CROP, electronFieldEnergyOutside, COMPTON_WAVELENGTHS_M
 } from '../js/experiences/particle-scale-models.js';
 import { waveAnimation } from '../js/experiences/wave-models.js';
 
-test('particle scale catalog has five exact dataset names and matching scene factories', () => {
+test('particle scale catalog has exact dataset names and matching scene factories', () => {
     assert.deepEqual(Object.keys(particleScaleMetadata), [
-        'Planck Length', 'Quark', 'Proton Radius', 'Electron', '1 MeV Neutrino Wavelength'
+        'Planck Length', 'Quark', 'Proton Radius', 'Electron', 'Electron Compton Wavelength', 'Muon Compton Wavelength',
+        'Proton Compton Wavelength', 'Tau Compton Wavelength', '1 MeV Neutrino Wavelength'
     ]);
     for (const entry of Object.values(particleScaleMetadata)) {
         assert.ok(entry.id);
@@ -25,7 +26,7 @@ test('particle scale catalog has five exact dataset names and matching scene fac
         assert.equal(entry.presentation.reference_size, 1);
         assert.equal(typeof particleScaleScenes[entry.procedural], 'function');
     }
-    assert.equal(Object.keys(particleScaleScenes).length, 5);
+    assert.equal(Object.keys(particleScaleScenes).length, 6);
     assert.equal(particleScaleMetadata['1 MeV Neutrino Wavelength'].value, NEUTRINO_WAVELENGTH_1MEV_M);
 });
 
@@ -130,4 +131,11 @@ test('electron field energy labels follow U(r) = (mc^2 / 2)(r_e / r)', () => {
     const e = 1.602176634e-19, eps0 = 8.8541878188e-12, mc2 = 9.1093837139e-31 * 299792458 ** 2;
     const fieldOutside = e * e / (8 * Math.PI * eps0 * CLASSICAL_ELECTRON_RADIUS_M);
     assert.ok(Math.abs(fieldOutside / mc2 - 0.5) < 1e-8);
+});
+
+test('Compton wavelengths are h / (m c) for the 2022 CODATA masses', () => {
+    const h = 6.62607015e-34, c = 299792458;
+    const masses = { Electron: 9.1093837139e-31, Muon: 1.883531627e-28, Proton: 1.67262192595e-27, Tau: 3.16754e-27 };
+    for (const [particle, mass] of Object.entries(masses))
+        assert.ok(Math.abs(h / (mass * c) / COMPTON_WAVELENGTHS_M[particle] - 1) < 2e-4, particle);
 });
