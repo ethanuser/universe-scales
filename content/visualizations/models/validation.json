@@ -16744,7 +16744,7 @@
     },
     {
       "id": "earth3d-hindenburg",
-      "sha256": "737f8e389684d53853be89e24cc25f808a69427fb8b9c1344490f9c7469b8239",
+      "sha256": "72908dc0b19bb94b7eac6f7d1d75e31a3be9158ea6033e7c673db9e1d3785a9a",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -16767,7 +16767,7 @@
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 2525016
+            "byteLength": 2525880
           }
         ],
         "animationCount": 0,
@@ -16776,9 +16776,9 @@
         "hasSkins": false,
         "hasTextures": false,
         "hasDefaultScene": true,
-        "drawCallCount": 6,
-        "totalVertexCount": 131811,
-        "totalTriangleCount": 69340,
+        "drawCallCount": 7,
+        "totalVertexCount": 131843,
+        "totalTriangleCount": 68948,
         "maxUVs": 0,
         "maxInfluences": 0,
         "maxAttributes": 2

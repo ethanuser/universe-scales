@@ -26,3 +26,9 @@ Opened `https://api.sketchfab.com/v3/models/b347e808f561465dab568fa61734e262` on
 Original model title: Hindenburg airship. Source glTF archive: 1,188,561 bytes; SHA-256 `a41932b598ff81b644543c21f4046d5d74a80bf7ecfcab88096ad6012e03f842`.
 
 Source archives and temporary download URLs are not committed. Staging reads the owner’s token from a file; neither tokens nor download URLs appear in the model, evidence files or report. The delivered self-contained GLB contains only PNG/JPEG textures and plain/quantized glTF geometry, with no Draco, Meshopt, KTX2 or WebP.
+
+## Tail markings
+
+The source model (like LZ 129 itself from 1936) carries swastikas on the tail fins. They are replaced
+with plus signs of the same span by `scripts/patch_hindenburg_markings.py` (408 triangles removed,
+four plus signs added on the white disks); the red bands and white disks are unchanged.
