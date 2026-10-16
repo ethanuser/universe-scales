@@ -99,13 +99,16 @@
       "note": "Open-wing monarch illustration. The wingtip-to-wingtip mesh extent represents the listed wingspan."
     },
     {
-      "id": "sketchfab-human-anatomical",
+      "id": "sketchfab-human-dennis-posed",
       "name": "Human Height",
-      "uid": "15a422001834483c9750ce6117d59cc1",
-      "author": "Dessen",
+      "uid": "e211ffd52a96416e89c0cc415a388d61",
+      "author": "renderpeople",
       "license": "by",
-      "replaces": "sketchfab-human-scan",
-      "note": "Neutral-pose human anatomy study. The mesh is normalized to the representative 1.7 m height, not presented as a measurement of the artist's reference."
+      "presentation": {
+        "measure_axis": "y",
+        "layout_width_factor": 0.4
+      },
+      "note": "Photogrammetry-style 3D scan of a real adult man standing naturally (Renderpeople 'Dennis Posed 004', published CC BY 4.0 by Renderpeople): fully textured, wearing a suit, one hand in a pocket, no nudity. The calibrated height is the full vertical extent from shoe soles to the top of the hair, scaled to the representative 1.7 m, so it is not a measurement of the scanned person (the source scan stands about 1.87 m). Original 8k textures reduced to 1024 px; geometry kept at about 100k triangles."
     },
     {
       "id": "sketchfab-domestic-cat",

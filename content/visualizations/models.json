@@ -1264,15 +1264,13 @@
       "closed_volume_checked": false
     },
     {
-      "id": "sketchfab-human-anatomical",
+      "id": "sketchfab-human-dennis-posed",
       "presentation": {
         "measure_axis": "y",
-        "layout_width_factor": 0.6,
-        "roughness": 0.9,
-        "metalness": 0
+        "layout_width_factor": 0.4
       },
-      "source": "https://sketchfab.com/3d-models/male-body-15a422001834483c9750ce6117d59cc1",
-      "author": "Dessen on Sketchfab",
+      "source": "https://sketchfab.com/3d-models/dennis-posed-004-male-standing-business-model-e211ffd52a96416e89c0cc415a388d61",
+      "author": "renderpeople on Sketchfab",
       "license": "CC-BY-4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "license_files": [
@@ -1284,31 +1282,36 @@
         ]
       },
       "geometry": "mesh",
-      "note": "Neutral-pose human anatomy study. The mesh is normalized to the representative 1.7 m height, not presented as a measurement of the artist's reference.",
-      "src": "content/visualizations/models/sketchfab-human-anatomical.glb",
+      "note": "Photogrammetry-style 3D scan of a real adult man standing naturally (Renderpeople 'Dennis Posed 004', published CC BY 4.0 by Renderpeople): fully textured, wearing a suit, one hand in a pocket, no nudity. The calibrated height is the full vertical extent from shoe soles to the top of the hair, scaled to the representative 1.7 m, so it is not a measurement of the scanned person (the source scan stands about 1.87 m). Original 8k textures reduced to 1024 px; geometry kept at about 100k triangles.",
+      "src": "content/visualizations/models/sketchfab-human-dennis-posed.glb",
       "format": "glb",
       "gltf_version": "2.0",
-      "bytes": 1580560,
-      "sha256": "eece918e14c3e5d443cc9829fd0552c193976b76321a1e10afa335b67ce72614",
-      "extensions_used": [],
-      "extensions_required": [],
+      "bytes": 1726616,
+      "sha256": "5e8285fa24a6f8b9f709de363e4c8d24af3f090d58b2baa3c842f39c320e50aa",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
       "decompression_required": [],
       "external_resources": [],
       "mesh_count": 1,
-      "triangle_count": 20764,
+      "triangle_count": 99964,
       "animations": 0,
       "skins": 0,
-      "sketchfab_uid": "15a422001834483c9750ce6117d59cc1",
-      "source_sha256": "18d089b25b9470034ba82d9066f17e1a308a2dec9a4c697644029f9b72ceb5d2",
-      "source_bytes": 606626,
+      "sketchfab_uid": "e211ffd52a96416e89c0cc415a388d61",
+      "source_sha256": "c450407037ecda73325ae8ef0dd71d6ab811bbc3f6233edad19217c16bfc0097",
+      "source_bytes": 9831931,
       "processing": {
         "operations": [
           "Embed glTF buffers and images into GLB",
-          "Resize textures to at most 512px",
-          "Remove animations for static Length presentation"
+          "Resize textures to at most 1024px",
+          "Remove animations for static Length presentation",
+          "Weld vertices, prune unused resources, quantize vertex attributes (KHR_mesh_quantization); triangle count unchanged"
         ],
-        "source_model_name": "Male Body",
-        "source_author": "Dessen"
+        "source_model_name": "Dennis Posed 004 - Male Standing Business Model",
+        "source_author": "renderpeople"
       },
       "volume_semantics": "cubic_linear_equivalent_approximation",
       "closed_volume_checked": false
