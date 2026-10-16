@@ -4,7 +4,8 @@ import * as THREE from '../js/vendor/three/three.module.min.js';
 import {
     CLASSICAL_ELECTRON_RADIUS_M, NEUTRINO_WAVELENGTH_1MEV_M, PLANCK_LENGTH_M,
     PROTON_RMS_CHARGE_RADIUS_M, QUARK_RADIUS_LIMIT_M,
-    particleScaleMetadata, particleScaleScenes, PROTON_CLOUD_CROP_RMS, protonRadialCdf
+    particleScaleMetadata, particleScaleScenes, PROTON_CLOUD_CROP_RMS, protonRadialCdf,
+    ELECTRON_FIELD_CROP, electronFieldEnergyOutside
 } from '../js/experiences/particle-scale-models.js';
 import { waveAnimation } from '../js/experiences/wave-models.js';
 
@@ -33,7 +34,8 @@ test('scene bounds remain close to one reference unit and geometry budgets stay 
         const scene = makeScene();
         const dimensions = new THREE.Box3().setFromObject(scene, true).getSize(new THREE.Vector3());
         const extent = Math.max(dimensions.x, dimensions.y, dimensions.z);
-        const maxExtent = id === 'proton-rms-charge-radius' ? 2 * PROTON_CLOUD_CROP_RMS : 1.3;
+        const maxExtent = id === 'proton-rms-charge-radius' ? 2 * PROTON_CLOUD_CROP_RMS
+            : id === 'classical-electron-radius' ? 2 * ELECTRON_FIELD_CROP : 1.3;
         assert.ok(extent > 0.9 && extent <= maxExtent, `${id} extent ${extent}`);
         assert.ok(scene.children.length <= 80, `${id} has ${scene.children.length} children`);
         let triangles = 0;
@@ -119,4 +121,13 @@ test('neutrino value is a 1 MeV de Broglie wavelength, not particle size', () =>
     assert.ok(Math.abs(NEUTRINO_WAVELENGTH_1MEV_M - h * c / energy) < 5e-22);
     assert.equal(particleScaleMetadata['1 MeV Neutrino Wavelength'].value, NEUTRINO_WAVELENGTH_1MEV_M);
     assert.match(particleScaleMetadata['1 MeV Neutrino Wavelength'].note, /not an intrinsic neutrino size/);
+});
+
+test('electron field energy labels follow U(r) = (mc^2 / 2)(r_e / r)', () => {
+    assert.equal(electronFieldEnergyOutside(1), 0.5);
+    assert.equal(electronFieldEnergyOutside(0.5), 1);
+    // r_e = e^2 / (4 pi eps0 m c^2), so e^2 / (8 pi eps0 r_e) = m c^2 / 2 (CODATA 2022 values).
+    const e = 1.602176634e-19, eps0 = 8.8541878188e-12, mc2 = 9.1093837139e-31 * 299792458 ** 2;
+    const fieldOutside = e * e / (8 * Math.PI * eps0 * CLASSICAL_ELECTRON_RADIUS_M);
+    assert.ok(Math.abs(fieldOutside / mc2 - 0.5) < 1e-8);
 });

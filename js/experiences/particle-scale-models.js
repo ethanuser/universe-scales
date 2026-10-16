@@ -2,6 +2,7 @@
 // not literal hard boundaries of fundamental particles.
 import * as THREE from '../vendor/three/three.module.min.js';
 import { registerAnimation } from './model-animation.js?v=540ebe0ea0';
+import { labelNode } from './model-overlay-nodes.js?v=ecd7a14690';
 
 export const PLANCK_LENGTH_M = 1.616255e-35;
 export const QUARK_RADIUS_LIMIT_M = 4.3e-19;
@@ -94,9 +95,59 @@ export function protonRmsRadiusScene() {
     return scene;
 }
 
+// Units: r_e = 1. A point charge's field stores energy density u ~ 1/r^4, so the energy
+// in a thin shell goes as 1/r^2 and the energy outside radius r is e^2/(8 pi eps0 r) =
+// (mc^2/2)(r_e/r): half the electron's rest energy lies outside r_e, all of it outside r_e/2.
+export const ELECTRON_FIELD_CROP = 1.3;
+export const electronFieldEnergyOutside = r => 0.5 / r;  // in units of mc^2
+
 export function classicalElectronRadiusScene() {
-    const scene = new THREE.Group();
-    measurementRail(scene);
+    const scene = new THREE.Group(), positions = [], colors = [];
+    let seed = 0xe1ec7;
+    const random = () => ((seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0) + 0.5) / 4294967296;
+    const near = new THREE.Color(0x3b2f98), far = new THREE.Color(0x8fb2dc), inner = 0.1;
+    // Radii drawn with weight 1/r^2 (inverse CDF), so dot density follows field energy.
+    while (positions.length < 12000 * 3) {
+        const t = random(), r = 1 / (1 / inner - t * (1 / inner - 1 / ELECTRON_FIELD_CROP));
+        if (r > 1 && random() > (ELECTRON_FIELD_CROP - r) / (ELECTRON_FIELD_CROP - 1)) continue;
+        const z = 2 * random() - 1, angle = 2 * Math.PI * random(), planar = Math.sqrt(1 - z * z);
+        positions.push(r * planar * Math.cos(angle), r * planar * Math.sin(angle), r * z);
+        const color = near.clone().lerp(far, Math.sqrt((r - inner) / (ELECTRON_FIELD_CROP - inner)));
+        colors.push(color.r, color.g, color.b);
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    const field = new THREE.Points(geometry, new THREE.PointsMaterial({ vertexColors: true,
+        size: 1.6, sizeAttenuation: false, transparent: true, opacity: 0.5, depthWrite: false }));
+    field.name = 'electric-field-energy';
+    field.userData.softPoints = true;
+    field.userData.pointSize = { max: 2.2, perPixel: 1 / 70 };
+    scene.add(field);
+    const shell = new THREE.Mesh(new THREE.SphereGeometry(1, 48, 24), new THREE.MeshBasicMaterial({
+        color: 0x7e9cc4, transparent: true, opacity: 0.07, depthWrite: false }));
+    shell.name = 'classical-electron-radius-sphere';
+    scene.add(shell);
+    const ring = (radius, opacity, name) => {
+        const loop = new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 160 },
+            (_, i) => new THREE.Vector3(radius * Math.cos(i * Math.PI / 80), radius * Math.sin(i * Math.PI / 80), 0))),
+            new THREE.LineBasicMaterial({ color: 0x4d5f9a, transparent: true, opacity, depthWrite: false }));
+        loop.name = name;
+        scene.add(loop);
+    };
+    ring(1, 0.75, 'classical-electron-radius-circle');
+    ring(0.5, 0.45, 'half-radius-circle');
+    const rail = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, 0, 0), new THREE.Vector3(1, 0, 0)]),
+        new THREE.LineBasicMaterial({ color: 0x2e3a66, depthTest: false }));
+    rail.name = 'radius-marker';
+    scene.add(rail);
+    const core = new THREE.Mesh(new THREE.SphereGeometry(0.03, 20, 12), new THREE.MeshBasicMaterial({ color: 0x1c1846 }));
+    core.name = 'point-electron-marker';
+    scene.add(core);
+    scene.add(labelNode('r_e = 2.82 fm', new THREE.Vector3(0.55, 0.06, 0)));
+    scene.add(labelNode('Field energy outside: half of mc²', new THREE.Vector3(0, 1.08, 0)));
+    scene.add(labelNode('Outside r_e/2: all of mc²', new THREE.Vector3(-0.42, -0.42, 0)));
+    scene.add(labelNode('Electron: a point, < 10⁻¹⁸ m', new THREE.Vector3(0.02, -0.07, 0)));
     return scene;
 }
 
@@ -164,10 +215,11 @@ export const particleScaleMetadata = Object.freeze({
     'Electron': Object.freeze({ id: 'classical-electron-radius', procedural: 'classical-electron-radius',
         display_label: 'Classical Electron Radius',
         name: 'Electron', dimension: 'length', value: CLASSICAL_ELECTRON_RADIUS_M, unit: 'm',
-        geometry: 'mesh', representation: 'measurement_diagram', presentation,
-        basis_url: 'https://physics.nist.gov/cuu/Constants/Table/allascii.txt',
+        geometry: 'mesh', representation: 'measurement_diagram', presentation: Object.freeze({ ...presentation,
+            layout_width_factor: 2.6, focus_scale_factor: 3, display_extent_factor: 2.5 }),
+        basis_url: 'https://physics.nist.gov/cgi-bin/cuu/Value?re',
         basis_label: 'Classical electron radius: 2022 CODATA',
-        note: 'The ruler marks the classical electron radius r_e = 2.8179403205(13)e-15 m, a derived electromagnetic length scale (equivalently alpha^2 a_0), not the physical radius or measured extent of an electron. The endpoint is a scale marker, not a particle surface.' }),
+        note: 'The electron itself is the dark dot: experiments find it point-like, smaller than 10^-18 m (the dot is enlarged). The blue haze is the energy stored in its electric field, drawn with density proportional to the field energy (which falls as 1/r^4), cropped just beyond the sphere. The sphere marks the classical electron radius r_e = 2.8179403205e-15 m (2022 CODATA): the field outside it holds exactly half the electron\'s rest energy, mc^2/2, and the field outside r_e/2 (inner ring) holds all of it. That is why r_e is the size at which classical physics breaks down for the electron; it is not the physical radius or a measured surface. The sphere spans twice the listed radius.' }),
     '1 MeV Neutrino Wavelength': Object.freeze({ id: 'neutrino-wavelength-1mev', procedural: 'neutrino-wavelength-1mev',
         name: '1 MeV Neutrino Wavelength', dimension: 'length', value: NEUTRINO_WAVELENGTH_1MEV_M, unit: 'm', geometry: 'mesh',
         representation: 'measurement_diagram', presentation,

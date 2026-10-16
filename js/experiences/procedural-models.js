@@ -11,7 +11,7 @@ import { footballFieldRenderScene } from './football-model.js?v=8ee95c682c';
 import { organelleModelMetadata, organelleScenes } from './organelle-models.js?v=2528c1eebb';
 import { nearbySpaceModelMetadata, cosmicScenes as nearbySpaceScenes } from './nearby-space-models.js?v=af76f82751';
 import { outerSolarModelMetadata, outerSolarScenes } from './outer-solar-models.js?v=25caba771f';
-import { particleScaleMetadata, particleScaleScenes } from './particle-scale-models.js?v=0e5fe37846';
+import { particleScaleMetadata, particleScaleScenes } from './particle-scale-models.js?v=569cc6b009';
 export { SCREEN_LINE_PX, screenLine };
 
 // Distance diagrams (Earth-Moon, AU) get a U-shaped bracket below the two
