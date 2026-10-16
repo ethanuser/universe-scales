@@ -1,0 +1,50 @@
+{
+  "id": "earth3d3-lolong",
+  "source": "https://www.guinnessworldrecords.com/world-records/117291-largest-crocodile-in-captivity-ever",
+  "basis_url": "https://www.guinnessworldrecords.com/world-records/117291-largest-crocodile-in-captivity-ever",
+  "basis_label": "Dimensions and anatomical or structural basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Lolong the Crocodile"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 6.17,
+    "yaw": -15,
+    "pitch": 20,
+    "layout_width_factor": 1.02
+  },
+  "note": "Original adult saltwater crocodile (Crocodylus porosus) anatomical illustration uniformly calibrated to Lolong\u2019s Guinness-verified 6.17 m nose-to-tail length. The Australian Museum supplies the broad snout, heavy adult build, dorsal eyes/nostrils, osteoderms, muscular tail and cream-colored belly. Head, girth, limbs, scute pattern/count, tail profile, colors and pose are authored generic adult geometry, not measurements or a reconstruction of Lolong himself. Mouth is almost closed; visible teeth are schematic and not a dental inventory. This is not a scan, juvenile, freshwater crocodile, alligator or game asset.",
+  "processing": {
+    "script": "scripts/build_earth3d3_models.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d3-lolong.md",
+    "measured_constraints": {
+      "nose_to_tail_length_m": 6.17
+    },
+    "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+  },
+  "src": "content/visualizations/models/earth3d3-lolong.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 724616,
+  "sha256": "c789e33af25d047232632c1b1d34e3e429895eec291ce29aa8577c97e8d36ac4",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 7,
+  "triangle_count": 33421,
+  "animations": 0,
+  "skins": 0
+}

@@ -1,0 +1,21 @@
+{
+  "uid": "7fb48f6cbcd54149bb23837a3ac09b2e",
+  "name": "CC0 \u30df\u30ba\u30c0\u30b3 \ud83d\udc19 North Pacific Giant Octopus",
+  "author": "ffishAsia-and-floraZia",
+  "source": "https://sketchfab.com/3d-models/cc0-north-pacific-giant-octopus-7fb48f6cbcd54149bb23837a3ac09b2e",
+  "api_url": "https://api.sketchfab.com/v3/models/7fb48f6cbcd54149bb23837a3ac09b2e",
+  "isDownloadable": true,
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/7c23a1ba438d4306920229c12afcb5f9",
+    "label": "CC0 Public Domain",
+    "fullName": "CC0 Public Domain",
+    "requirements": "Credit is not mandatory. Commercial use is allowed.",
+    "url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "slug": "cc0"
+  },
+  "description": "License: **CC0**  \n\n  \nAnimalia \u52d5\u7269\u754c  \n\u3000Mollusca \u8edf\u4f53\u52d5\u7269\u9580  \n\u3000\u3000Cephalopoda \u982d\u8db3\u7db1  \n\u3000\u3000\u3000Octobrachiata \u516b\u8155\u5f62\u76ee  \n\u3000\u3000\u3000\u3000Octopodidae \u30de\u30c0\u30b3\u79d1  \n\u3000\u3000\u3000\u3000\u3000Enteroctopus \u30df\u30ba\u30c0\u30b3\u5c5e  \n\u3000\u3000\u3000\u3000\u3000\u3000Enteroctopus dofleini \u30df\u30ba\u30c0\u30b3  \n  \n\u30bf\u30b3 \u86f8",
+  "source_archive_sha256": "dc8c67bd1c0b061fd714d6bb4fe265891c37cb12a1f1085cd5632fd0e8942cc8",
+  "source_archive_bytes": 42594276,
+  "staged_glb_sha256": "d690de00f66639eee07b44be8965df95ace14351c19163b727ae2314f6c9570d",
+  "retrieved": "2026-10-16"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "earth3d3-giant-squid",
+  "source": "https://ocean.si.edu/ocean-life/invertebrates/giant-squid",
+  "basis_url": "https://ocean.si.edu/ocean-life/invertebrates/giant-squid",
+  "basis_label": "Dimensions and anatomical or structural basis",
+  "author": "Universe Scales",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_files": [
+    "licenses/CC0-1.0.txt"
+  ],
+  "matches": {
+    "length": [
+      "Giant Squid"
+    ]
+  },
+  "geometry": "mesh",
+  "representation": "dimensioned_illustration",
+  "volume_semantics": "not_applicable",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 13,
+    "yaw": -8,
+    "pitch": 10,
+    "roll": -8,
+    "layout_width_factor": 1.02
+  },
+  "note": "Original Architeuthis anatomical illustration at a 13 m posterior-tip-to-feeding-club span, following the Smithsonian and Natural History Museum female maximum-length estimate. Eight shorter arms, two long feeding tentacles with distal clubs, terminal fins and large lateral eyes follow the Smithsonian anatomical diagram. All intermediate proportions, arm poses, sucker sizes/counts, surface colors and fin contours are authored; this is not a specimen reconstruction, scan, or claim that all squid reach this size. Feeding tentacles are extended to make the total-length definition visible. There are no colossal-squid hooks.",
+  "processing": {
+    "script": "scripts/build_earth3d3_models.py",
+    "units": "metres",
+    "source_note": "content/visualizations/models/sources/earth3d3-giant-squid.md",
+    "measured_constraints": {
+      "total_length_m": 13,
+      "arms": 8,
+      "feeding_tentacles": 2
+    },
+    "details": "All other shapes, placements, surface pattern and colors are authored illustration controls, not measured data."
+  },
+  "src": "content/visualizations/models/earth3d3-giant-squid.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 1379060,
+  "sha256": "1df0fa2c87478eb7cfca628d1c40148a5bdabb717e9c3ae3c0cb663233770260",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 67316,
+  "animations": 0,
+  "skins": 0
+}

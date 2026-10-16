@@ -339,6 +339,32 @@
         "display_label": "Honeybee (worker micro-CT)"
       },
       "note": "ETAIN / Arno Thielens worker honeybee micro-CT surface, in native millimetres. Its approximately 11 mm body is preserved within the catalog\u2019s representative 12.5 mm scale, rather than enlarged to fill it. The preserved compact pose and unresolved/absent wing and leg detail remain as in the scan; no flying pose, hair or missing appendages are invented. Amber false colour is for inspection, not measured pigmentation."
+    },
+    {
+      "id": "earth3d3-hyperion-redwood",
+      "name": "Hyperion",
+      "uid": "2c34fb28a756474eb8072a450c8f632b",
+      "author": "rhcreations",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "y",
+        "layout_width_factor": 1.02
+      },
+      "note": "Redwood illustration by rhcreations, uniformly scaled base to crown to the current catalog\u2019s 116.2 m Hyperion height (the brief gives 116.22 m). It is a generic redwood tree model, not a scan, reconstruction, crown map or girth measurement of Hyperion. The shape, branch structure and foliage are authored; transparent foliage cards are retained as alpha-tested double-sided surfaces. The source\u2019s legacy specular/glossiness materials are converted to metallic/roughness. Guinness documents 116.07 m in 2019; that older measurement does not independently verify the current 2026 catalog figure. No exact location is included."
+    },
+    {
+      "id": "earth3d3-titanic",
+      "name": "Titanic",
+      "uid": "fa41e6b093b84010a462ef190210d90b",
+      "author": "farhad.Guli",
+      "license": "by",
+      "presentation": {
+        "measure_axis": "x",
+        "layout_width_factor": 1.02,
+        "yaw": -20,
+        "pitch": 12
+      },
+      "note": "Authored RMS Titanic exterior by farhad.Guli, uniformly calibrated bow to stern to the catalog\u2019s 269.1 m overall length (882 ft 9 in is 269.0622 m). Hull, four funnels, superstructure and source rigging are retained. This is an artist\u2019s ship, not a scan or engineering reconstruction; local proportions, colors, deck fittings and rigging are illustrative. Simplification retains source linework as well as triangle meshes. No waterline crop, sinking pose or wreck geometry is introduced."
     }
   ]
 }
