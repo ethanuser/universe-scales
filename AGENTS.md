@@ -258,6 +258,15 @@ first-party ES imports; vendored imports stay unchanged. `--check` fails if any 
 
 ## Adding or replacing a model (proven workflow)
 
+**Owner rule (2026-10-18): public data only, no 3D models made from scratch.** A new model must be
+either an existing openly licensed model or scan (Smithsonian 3D, NASA/PDS, NIH 3D, MorphoSource,
+museum scans, Sketchfab CC BY/CC0, Wikimedia Commons), lightly processed, or a direct conversion of a
+public dataset whose values set the geometry (DEM/bathymetry, star and galaxy catalogs, 3D dust/gas
+maps, CT volumes, public GIS vectors), optionally textured with public imagery. No procedural or
+hand-authored geometry, schematics, scale diagrams, stand-in primitives or depth invented from a
+photo. If no public source exists, the item keeps its photo. (Earlier procedural/diagram models
+predate this rule.)
+
 1. Find candidates: `SSL_CERT_FILE=/etc/ssl/cert.pem python3 scripts/sketchfab_models.py search 'query'`
    (CC-BY or CC0, downloadable). Prefer scientific sources (NIH 3D, PDB, scans) when they look good.
 2. Stage outside the repo with the owner's token file (never commit or print the token):
@@ -638,7 +647,9 @@ Codex workflow (the owner has spare Codex capacity):
   bare primitives left out because their photos/diagrams explained more). Lead added T4 phage and
   mimivirus (Sketchfab CC BY) and a Mycoplasma schematic (scripts/build_mycoplasma_model.py): OpenAI's
   bio filter blocks microbe briefs. 201 of 258 items modeled.
-- Round 5 queued at 19:30 2026-10-16: earth3d4, terrain3d2, deepsky3d.
+- Round 5 (started 2026-10-18; the 2026-10-16 launch never ran): earth3d4 (organisms and structures
+  from scans), terrain3d2 (DEM + public GIS), deepsky3d (catalogs and surveys), under the owner's new
+  public-data-only rule (see "Adding or replacing a model"). Briefs: ../universe-scales-codex/briefs.
 
 ## 2026-10-16 radial Length explorer (Claude)
 
