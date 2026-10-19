@@ -62,6 +62,13 @@ CONFIG = {
 }
 
 
+# Built but not registered after the lead's WebGL review (2026-10-18): the Thor DEM crop reads
+# as a draped sheet rather than a cliff, and the sparse Hunga stereo samples read as floating dots.
+# Their pinned inputs stay so the decision can be revisited; the default build skips them.
+UNREGISTERED = {'mount-thor', 'hunga-tonga'}
+REGISTERED = [name for name in CONFIG if name not in UNREGISTERED]
+
+
 def pin(name, arrays, records, extra=None):
     folder=SOURCE/name;folder.mkdir(parents=True,exist_ok=True)
     np.savez_compressed(folder/'data.npz',**arrays)
@@ -294,6 +301,6 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('names',nargs='*',choices=list(CONFIG))
     parser.add_argument('--prepare',action='store_true');parser.add_argument('--cache',type=Path,default=Path('/tmp/terrain3d2'))
     args=parser.parse_args();args.cache.mkdir(parents=True,exist_ok=True)
-    for name in args.names or list(CONFIG):
+    for name in args.names or REGISTERED:
         if args.prepare:prepare(name,args.cache)
         build(name)

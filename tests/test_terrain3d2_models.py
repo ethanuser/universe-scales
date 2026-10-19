@@ -10,7 +10,7 @@ import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
-from build_terrain3d2_models import CONFIG, SOURCE
+from build_terrain3d2_models import CONFIG, REGISTERED, SOURCE
 from build_terrain3d_models import frame
 from fetch_model_assets import inspect_glb
 from render_glb_preview import accessor, read_glb
@@ -22,7 +22,7 @@ class Terrain3D2Models(unittest.TestCase):
 
     def test_pinned_inputs_and_registered_assets_have_verified_hashes_and_no_decoders(self):
         registry={e['id']:e for e in json.loads((ROOT/'content/visualizations/models.json').read_text())['models']}
-        for name in CONFIG:
+        for name in REGISTERED:
             with self.subTest(name=name):
                 meta=json.loads((SOURCE/name/'provenance.json').read_text())
                 self.assertTrue(meta['sources'])
@@ -38,7 +38,8 @@ class Terrain3D2Models(unittest.TestCase):
                 self.assertNotIn('display_label',e)
 
     def test_terrain_contains_only_source_vertices_without_blocks_walls_or_rulers(self):
-        for name,c in CONFIG.items():
+        for name in REGISTERED:
+            c=CONFIG[name]
             with self.subTest(name=name):
                 with np.load(SOURCE/name/'data.npz') as a:
                     p=frame(c,a['lonlat'],a['heights'].astype(float)*c['gain'])
@@ -47,33 +48,10 @@ class Terrain3D2Models(unittest.TestCase):
                 q=doc['meshes'][0]['primitives'][0]
                 actual=accessor(doc,binary,q['attributes']['POSITION'])
                 np.testing.assert_array_equal(actual,p.reshape(-1,3).astype(np.float32))
-                self.assertEqual(len(doc['meshes']),3 if name=='hunga-tonga' else 1)
+                self.assertEqual(len(doc['meshes']),1)
                 self.assertFalse(any('screenLine' in n.get('extras',{}) for n in doc['nodes']))
                 normals=accessor(doc,binary,q['attributes']['NORMAL'])
                 np.testing.assert_allclose(np.linalg.norm(normals,axis=1),1,atol=2e-7)
-
-    def test_hunga_retains_measured_heights_quality_holes_and_native_neighbors(self):
-        with np.load(SOURCE/'hunga-tonga/data.npz') as a:
-            valid=a['cloud_valid'];heights=a['cloud_m'];quality=a['quality']
-            self.assertEqual(int(valid.sum()),449)
-            self.assertTrue((quality[valid]>=1).all())
-            self.assertAlmostEqual(float(heights[valid].max()),58357.004,places=2)
-            p=frame(CONFIG['hunga-tonga'],a['cloud_ll'],np.where(valid,heights,0)).astype(np.float32)
-            self.assertLess(float(a['heights'].min()),-2000)
-        doc,binary=read_glb(ROOT/self.entry('hunga-tonga')['src'])
-        point=doc['meshes'][2]['primitives'][0]
-        self.assertEqual(point['mode'],0)
-        np.testing.assert_array_equal(accessor(doc,binary,point['attributes']['POSITION']),p[valid])
-        surface=doc['meshes'][1]['primitives'][0]
-        actual=accessor(doc,binary,surface['attributes']['POSITION'])
-        lookup={tuple(v):i for i,v in enumerate(p.reshape(-1,3))}
-        native=np.array([lookup[tuple(v)] for v in actual])
-        self.assertTrue(valid.ravel()[native].all())
-        idx=accessor(doc,binary,surface['indices']).reshape(-1,3)
-        native=native[idx];cols=valid.shape[1]
-        self.assertTrue((np.ptp(native//cols,axis=1)<=1).all())
-        self.assertTrue((np.ptp(native%cols,axis=1)<=1).all())
-        self.assertLess(len(actual),valid.size)  # no geometric gap filling
 
     def test_vector_data_are_identified_original_features(self):
         trail=json.loads(gzip.decompress((SOURCE/'appalachian-trail/vectors.geojson.gz').read_bytes()))
