@@ -1,0 +1,57 @@
+............../Users/ethan/Documents/GitHub/universe-scales/venv/lib/python3.13/site-packages/skimage/measure/_marching_cubes_lewiner.py:237: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  ar.shape = shape
+/Users/ethan/Documents/GitHub/universe-scales/venv/lib/python3.13/site-packages/skimage/measure/_marching_cubes_lewiner.py:213: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  faces.shape = -1, 3
+.................................................................................s......../Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b121990>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b121210>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b121d50>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b121f30>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b3be2f0>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b3bee30>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b3bff10>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b0c8220>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b0c8130>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b0c8400>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ethan/Documents/GitHub/universe-scales-codex/deepsky3d/scripts/build_neuron_model.py:49: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x10b0c8310>
+  values = tuple(float(value) for value in (x, y, z, radius))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.............................................
+----------------------------------------------------------------------
+Ran 149 tests in 3.622s
+
+OK (skipped=1)
+Virgo Supercluster: 2 catalog rows; 7,688 byte GLB; reference 30.66 GLB Mpc; output /var/folders/3q/mb_q88c95qdc7_pnc7q371pw0000gn/T/tmpk8hhitgk/output/virgo-supercluster-sdss-window.glb
+Sloan Great Wall: 2 catalog rows; 7,672 byte GLB; reference 450.00 GLB Mpc; output /var/folders/3q/mb_q88c95qdc7_pnc7q371pw0000gn/T/tmpk8hhitgk/output/sloan-great-wall-sdss-window.glb
+/var/folders/3q/mb_q88c95qdc7_pnc7q371pw0000gn/T/tmpnrbf6j84/great-wall-network-globe.glb: 424,264 bytes; 3,110 triangles; 1 source paths; total ruler 21196.18 km
+Ready Cat Length: 0.00 MB, 1 triangles
+Imported 1 model(s)
+Ready Water Molecule: 0.00 MB, 1 triangles
+Imported 1 model(s)
+Review 1 candidates for Cat Length: /var/folders/3q/mb_q88c95qdc7_pnc7q371pw0000gn/T/tmpjsx4i9kr/review.html
+Approved Cat Length: Cat by new-artist. Run import --only sketchfab-cat with your token file.
+Ready City bus envelope volume: 0.00 MB, 1 triangles
+Imported 1 model(s)
+Skip City bus envelope volume: Staged GLB checksum mismatch
+Imported 0 model(s)

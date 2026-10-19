@@ -13505,6 +13505,374 @@
       "triangle_count": 28516,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "bao-boss-galaxy-slice",
+      "source": "https://www.sdss4.org/dr17/",
+      "author": "Sloan Digital Sky Survey / BOSS",
+      "license": "SDSS public-release catalog data (public domain)",
+      "license_url": "https://www.sdss.org/collaboration/image-use-policy/",
+      "note": "Actual BOSS galaxy redshifts from SDSS DR17 in a 150 by 150 by 40 Mpc comoving slice centered at RA=180 degrees, Dec=20 degrees, z=0.475. Positions use flat LCDM with H0=70 km/s/Mpc and Omega_m=0.27. This is a survey sample spanning the approximate BAO separation scale, not an individual acoustic shell or an identified BAO structure. The BAO excess requires a statistical pair-correlation measurement across a much larger sample and cannot be inferred by eye from this patch. Colors encode redshift, not galaxy color. All points come from the catalog; no patterns are imposed.",
+      "src": "content/visualizations/models/bao-boss-galaxy-slice.glb",
+      "matches": {
+        "length": [
+          "Baryon Acoustic Oscillation Scale"
+        ]
+      },
+      "geometry": "point cloud",
+      "representation": "catalog",
+      "reference": "https://arxiv.org/abs/astro-ph/0501171",
+      "reference_label": "Scientific basis",
+      "license_files": [
+        "sources/deepsky3d-models.md"
+      ],
+      "volume_semantics": "not_a_volume",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 150.0,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "layout_width_factor": 1.05
+      },
+      "processing": {
+        "generator": "scripts/build_deepsky3d_models.py",
+        "operations": [
+          "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+          "Native units: Mpc; 141 distinct source records.",
+          "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+        ]
+      },
+      "derived_statistics": {
+        "records": 141,
+        "unit": "Mpc",
+        "extent": [
+          144.65114814401414,
+          148.86372398062477,
+          39.00303413884444
+        ]
+      },
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 3424,
+      "sha256": "df1d9817573fa0b89f16ac2a4c9e0cfa2a6853657d5262048f5529abdd75cb99",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "bootes-void-sdss-slice",
+      "source": "https://www.sdss4.org/dr17/",
+      "author": "Sloan Digital Sky Survey; Kirshner et al. (1987)",
+      "license": "SDSS public-release catalog data (public domain)",
+      "license_url": "https://www.sdss.org/collaboration/image-use-policy/",
+      "note": "SDSS DR17 spectroscopic galaxies in a 150 by 150 by 40 Mpc slice centered on the published Bootes Void position and cz=15,500 km/s. The historical H0=50 km/s/Mpc convention is retained because this item's 124-Mpc diameter comes from that convention; adopting H0=70 changes that diameter to about 89 Mpc. Catalog redshifts are converted using cz/H0 without a peculiar-velocity correction. The plotted slice includes the sparse center and surrounding galaxies; it does not define membership or a spherical boundary. Survey incompleteness remains. Colors encode redshift, not galaxy color, and every point is an actual catalog location.",
+      "src": "content/visualizations/models/bootes-void-sdss-slice.glb",
+      "matches": {
+        "length": [
+          "Bootes Void"
+        ]
+      },
+      "geometry": "point cloud",
+      "representation": "catalog",
+      "reference": "https://articles.adsabs.harvard.edu/pdf/1987ApJ...314..493K",
+      "reference_label": "Scientific basis",
+      "license_files": [
+        "sources/deepsky3d-models.md"
+      ],
+      "volume_semantics": "not_a_volume",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 124.0,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "layout_width_factor": 1.25
+      },
+      "processing": {
+        "generator": "scripts/build_deepsky3d_models.py",
+        "operations": [
+          "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+          "Native units: Mpc; 1343 distinct source records.",
+          "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+        ]
+      },
+      "derived_statistics": {
+        "records": 1343,
+        "unit": "Mpc",
+        "extent": [
+          149.79757068976758,
+          149.87972698162662,
+          39.969598829023596
+        ]
+      },
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 22664,
+      "sha256": "ef871d9afa7d487cd893e1b2eb6c659e90a567bc82697ac82abc28e2d2391db6",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "lmc-gaia-disk",
+      "source": "https://gea.esac.esa.int/archive/",
+      "author": "ESA/Gaia/DPAC; van der Marel & Cioni (2001); Pietrzynski et al. (2019)",
+      "license": "Gaia open data (credit required)",
+      "license_url": "https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/",
+      "note": "Gaia DR3 candidate LMC stars at their measured sky positions and observed BP-RP colors, intersected with the published 34.7-degree stellar disk plane at 49.59 kpc. Proper-motion and parallax cuts reduce Milky Way contamination. The plane is an ensemble distance approximation: individual stellar depths, disk thickness and gas are not measured here. The 9.86-kpc disk aperture follows this item's characteristic diameter; fainter outskirts continue beyond it. Brightness is compressed for display and colors are an ordered BP-RP palette. No invented stars or depth scatter.",
+      "src": "content/visualizations/models/lmc-gaia-disk.glb",
+      "matches": {
+        "length": [
+          "Large Magellanic Cloud"
+        ]
+      },
+      "geometry": "point cloud",
+      "representation": "catalog",
+      "reference": "https://arxiv.org/abs/astro-ph/0105339",
+      "reference_label": "Scientific basis",
+      "license_files": [
+        "sources/deepsky3d-models.md"
+      ],
+      "volume_semantics": "not_a_volume",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 9.860000000000001,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "layout_width_factor": 1.05
+      },
+      "processing": {
+        "generator": "scripts/build_deepsky3d_models.py",
+        "operations": [
+          "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+          "Native units: kpc; 23420 distinct source records.",
+          "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+        ]
+      },
+      "derived_statistics": {
+        "records": 23420,
+        "unit": "kpc",
+        "extent": [
+          9.318994963239842,
+          8.637557849639865,
+          5.601370448802676
+        ]
+      },
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 375876,
+      "sha256": "351e1f7fc91916e003ee0ae57cb6bb1f10b08342a056b8fa96ec28a114c32e8b",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "local-void-2mrs-slice",
+      "source": "https://lweb.cfa.harvard.edu/~dfabricant/huchra/2mass/",
+      "author": "Huchra et al. (2012), 2MASS Redshift Survey; Tully et al. (2019)",
+      "license": "2MRS public scientific catalog (credit required)",
+      "license_url": "https://lweb.cfa.harvard.edu/~dfabricant/huchra/2mass/",
+      "note": "Actual 2MASS Redshift Survey galaxies in a 60 by 60 by 20 Mpc section through the Local Void's Aquila, Lacerta and Andromeda minima. Positions are barycentric redshift-space distances cz/H0, H0=75 km/s/Mpc, in supergalactic coordinates. The displayed window is a section through the void and surrounding galaxies, not its boundary or full volume. Flux limits, peculiar velocities and the Milky Way's zone of avoidance affect the apparent emptiness; missing survey regions must not be read as empty space. Every displayed point is a catalog galaxy; none were deleted to sculpt a cavity. Colors are for visibility, not observed galaxy colors.",
+      "src": "content/visualizations/models/local-void-2mrs-slice.glb",
+      "matches": {
+        "length": [
+          "Local Void"
+        ]
+      },
+      "geometry": "point cloud",
+      "representation": "catalog",
+      "reference": "https://arxiv.org/abs/1905.08329",
+      "reference_label": "Scientific basis",
+      "license_files": [
+        "sources/deepsky3d-models.md"
+      ],
+      "volume_semantics": "not_a_volume",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 60.0,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "layout_width_factor": 1.05
+      },
+      "processing": {
+        "generator": "scripts/build_deepsky3d_models.py",
+        "operations": [
+          "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+          "Native units: Mpc; 471 distinct source records.",
+          "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+        ]
+      },
+      "derived_statistics": {
+        "records": 471,
+        "unit": "Mpc",
+        "extent": [
+          59.96223289838436,
+          58.43824904211544,
+          19.973151902488798
+        ]
+      },
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 8708,
+      "sha256": "8499f2cac5dbd22534d56e9e3bae2a0b93c96dfb21ddf51aebae2ce85d681bdb",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "omega-centauri-gaia-members",
+      "source": "https://zenodo.org/records/4891252",
+      "author": "Eugene Vasiliev & Holger Baumgardt; ESA/Gaia/DPAC",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Gaia EDR3 stars brighter than G=16 assigned greater than 99% membership probability by Vasiliev & Baumgardt (2021), with observed BP-RP colors. Sky positions are projected onto a plane at the measured 5.43-kpc cluster distance; individual stellar depths cannot be resolved, so rotation reveals a flat map, not a reconstructed sphere. A 150-light-year aperture matches this item's characteristic span; members outside it are excluded. The bright cut avoids the strong central incompleteness of faint Gaia sources, but the innermost core remains incomplete. Astrometric quality flags are retained in the source subset but not used to cut sky positions. Brightness is compressed and the color palette follows BP-RP; no synthetic core, stars or depth scatter.",
+      "src": "content/visualizations/models/omega-centauri-gaia-members.glb",
+      "matches": {
+        "length": [
+          "Omega Centauri"
+        ]
+      },
+      "geometry": "point cloud",
+      "representation": "catalog",
+      "reference": "https://arxiv.org/abs/2102.09568",
+      "reference_label": "Scientific basis",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/deepsky3d-models.md"
+      ],
+      "volume_semantics": "not_a_volume",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 45.99020906783258,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "layout_width_factor": 1.05
+      },
+      "processing": {
+        "generator": "scripts/build_deepsky3d_models.py",
+        "operations": [
+          "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+          "Native units: pc; 7313 distinct source records.",
+          "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+        ]
+      },
+      "derived_statistics": {
+        "records": 7313,
+        "unit": "pc",
+        "extent": [
+          45.43250529491506,
+          45.883069207813,
+          0.0
+        ]
+      },
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 118176,
+      "sha256": "0bcd429dc485ea71a6255327792558d3bedfb4afd6037895a903133a7bdb852b",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "orion-arm-edenhofer-dust",
+      "source": "https://zenodo.org/records/8187943",
+      "author": "Gordian Edenhofer, Catherine Zucker, Philipp Frank, Andrew K. Saydjari, Joshua S. Speagle, Douglas Finkbeiner & Torsten Ensslin",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Direct conversion of Edenhofer et al.'s three-dimensional extinction-density reconstruction around the Sun. The 1,072-pc-wide local window lies within the Local/Orion Arm and approximately matches this item's 3,500-light-year width. It is not a measurement of the arm's full width, length or boundary. Each point is a 16-pc-spaced sample of the published Cartesian mean grid; the densest 5% of finite samples reveal nearby cloud structure. Colors encode log extinction density, not emitted light, and omitted low-density or unavailable samples are not empty space. No invented clouds, stars, depth or arm shape.",
+      "src": "content/visualizations/models/orion-arm-edenhofer-dust.glb",
+      "matches": {
+        "length": [
+          "Orion Arm"
+        ]
+      },
+      "geometry": "point cloud",
+      "representation": "survey",
+      "reference": "https://arxiv.org/abs/2308.01295",
+      "reference_label": "Scientific basis",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt",
+        "sources/deepsky3d-models.md"
+      ],
+      "volume_semantics": "not_a_volume",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1073.104878249427,
+        "yaw": 0,
+        "pitch": 0,
+        "roll": 0,
+        "layout_width_factor": 1.05
+      },
+      "processing": {
+        "generator": "scripts/build_deepsky3d_models.py",
+        "operations": [
+          "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+          "Native units: pc; 15707 distinct source records.",
+          "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+        ]
+      },
+      "derived_statistics": {
+        "records": 15707,
+        "unit": "pc",
+        "extent": [
+          1072,
+          1072,
+          944
+        ]
+      },
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 252412,
+      "sha256": "e29d8ffb4922b9f21dc72fa35cf30dc5ffe92bebc1cbd6066bfa52602ef26724",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

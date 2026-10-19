@@ -1,5 +1,27 @@
 # Agent Handoff Guide
 
+## 2026-10-18 deepsky3d handoff
+
+- Six additions from public data: inclined Gaia LMC candidates, bright Gaia Omega
+  Centauri members on an explicitly flat distance plane, Edenhofer's actual local
+  3D dust grid for Orion Arm, 2MRS Local Void and SDSS Bootes/BOSS BAO sections.
+  No synthetic objects, depth, rulers or boundary shapes. Existing models untouched.
+- Offline builder: `scripts/build_deepsky3d_models.py`; source preparation:
+  `prepare_deepsky3d_sources.py` and `prepare_deepsky3d_dust.py`. Pinned numeric
+  sources, original hashes and dust FITS byte-range hashes: `sources/deepsky3d/`.
+  Dust acquisition uses exact source ranges rather than the entire 15.66-GB FITS.
+- Native physical coordinates are calibrated by explicit `reference_size`, never
+  stretched to the bounding box. Bootes retains its source's historical H0=50
+  convention; BAO is a real catalog sample at the separation scale, not a shell.
+- Six GLBs total 781 kB, each below 0.4 MB, with zero validator errors/warnings.
+  Node: 228 passing. Python: 149 run, one existing skip. Assets/versions pass.
+  All CPU rest/quarter/small previews viewed and vendored-loader extent checks pass.
+  These do not certify WebGL, production size audit, radial explorer or mobile.
+- Final entries, skipped-source research, exact Bootes/Porphyrion wording fixes
+  and review limits: `handoff/deepsky3d/REPORT.md`. No dataset/exports/images or
+  runtime JS/CSS changes. Browser/git sandbox restrictions were not retried;
+  changes remain uncommitted for the lead. No shared-venv dependencies installed.
+
 ## 2026-10-16 terrain3d handoff
 
 - Nine geographic Length assets: Angel/Victoria Falls terrain, Gibraltar with

@@ -1,0 +1,34 @@
+{
+  "checked": "2026-10-18 America/Chicago",
+  "sources": [
+    {
+      "dataset": "Gaia DR3",
+      "source": "https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/",
+      "permission": "Open and free to use with ESA/Gaia/DPAC credit; inspected final paragraph",
+      "evidence_sha256": "0f70c12b6bec734435c34fd369c1c57360849fea32f8b340b1b08b5e341f703c"
+    },
+    {
+      "dataset": "Vasiliev & Baumgardt 2021 catalog v2",
+      "source": "https://zenodo.org/api/records/4891252",
+      "license_id": "cc-by-4.0",
+      "evidence_sha256": "0f14f3d56b9301c472b44ef6c45606aa08440fac84773eafbbb23c549e83e282"
+    },
+    {
+      "dataset": "2MRS",
+      "source": "https://lweb.cfa.harvard.edu/~dfabricant/huchra/2mass/",
+      "permission": "Producer explicitly calls final survey public; public scientific catalog reuse authorized in job. No explicit CC/commercial grant asserted.",
+      "evidence_sha256": "109e71d0372fc62e465f6bc961f479adf38a536d6bd0c5d52f27863d7e8e426c"
+    },
+    {
+      "dataset": "SDSS DR17/BOSS",
+      "source": "https://www.sdss.org/collaboration/image-use-policy/",
+      "permission": "Public-release data placed in public domain by producer policy; images separately CC BY."
+    },
+    {
+      "dataset": "Edenhofer et al. 3D dust mean grid",
+      "source": "https://zenodo.org/api/records/8187943",
+      "license_id": "cc-by-4.0",
+      "evidence_sha256": "0d64fb0fed040f96419fc164a65e2e71c6e8f0e7eea2ca9a73103b62f3e389d7"
+    }
+  ]
+}

@@ -22845,6 +22845,240 @@
         "maxInfluences": 0,
         "maxAttributes": 2
       }
+    },
+    {
+      "id": "bao-boss-galaxy-slice",
+      "sha256": "df1d9817573fa0b89f16ac2a4c9e0cfa2a6853657d5262048f5529abdd75cb99",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales direct public catalog conversion",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 2256
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 141,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "bootes-void-sdss-slice",
+      "sha256": "ef871d9afa7d487cd893e1b2eb6c659e90a567bc82697ac82abc28e2d2391db6",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales direct public catalog conversion",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 21488
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 1343,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "lmc-gaia-disk",
+      "sha256": "351e1f7fc91916e003ee0ae57cb6bb1f10b08342a056b8fa96ec28a114c32e8b",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales direct public catalog conversion",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 374720
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 23420,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "local-void-2mrs-slice",
+      "sha256": "8499f2cac5dbd22534d56e9e3bae2a0b93c96dfb21ddf51aebae2ce85d681bdb",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales direct public catalog conversion",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 7536
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 471,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "omega-centauri-gaia-members",
+      "sha256": "0bcd429dc485ea71a6255327792558d3bedfb4afd6037895a903133a7bdb852b",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales direct public catalog conversion",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 117008
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 7313,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "orion-arm-edenhofer-dust",
+      "sha256": "e29d8ffb4922b9f21dc72fa35cf30dc5ffe92bebc1cbd6066bfa52602ef26724",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales direct public catalog conversion",
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 251312
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 15707,
+        "totalTriangleCount": 0,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
     }
   ]
 }

@@ -1,0 +1,125 @@
+{
+  "method": "Actual vendored GLTFLoader; precise point coordinates and physical rest normalization. No WebGL, perspective, actual explorer or mobile certification.",
+  "models": [
+    {
+      "id": "bao-boss-galaxy-slice",
+      "bytes": 3424,
+      "points": 141,
+      "triangles": 0,
+      "lines": 0,
+      "draws": 1,
+      "nativeExtent": [
+        144.65115356445312,
+        148.8637237548828,
+        39.003034591674805
+      ],
+      "normalizedRestExtent": [
+        0.9643410237630209,
+        0.9924248250325521,
+        0.26002023061116536
+      ],
+      "ratio": 0.9924248250325521,
+      "pass": true
+    },
+    {
+      "id": "bootes-void-sdss-slice",
+      "bytes": 22664,
+      "points": 1343,
+      "triangles": 0,
+      "lines": 0,
+      "draws": 1,
+      "nativeExtent": [
+        149.79756927490234,
+        149.87972259521484,
+        39.9695987701416
+      ],
+      "normalizedRestExtent": [
+        1.208044913507277,
+        1.2087074402839906,
+        0.32233547395275486
+      ],
+      "ratio": 1.2087074402839906,
+      "pass": true
+    },
+    {
+      "id": "lmc-gaia-disk",
+      "bytes": 375876,
+      "points": 23420,
+      "triangles": 0,
+      "lines": 0,
+      "draws": 1,
+      "nativeExtent": [
+        9.318994998931885,
+        8.637557983398438,
+        5.601370573043823
+      ],
+      "normalizedRestExtent": [
+        0.9451313386340652,
+        0.876020079452174,
+        0.5680903218097183
+      ],
+      "ratio": 0.9451313386340652,
+      "pass": true
+    },
+    {
+      "id": "local-void-2mrs-slice",
+      "bytes": 8708,
+      "points": 471,
+      "triangles": 0,
+      "lines": 0,
+      "draws": 1,
+      "nativeExtent": [
+        59.96223258972168,
+        58.43824768066406,
+        19.97315216064453
+      ],
+      "normalizedRestExtent": [
+        0.9993705431620279,
+        0.9739707946777343,
+        0.3328858693440755
+      ],
+      "ratio": 0.9993705431620279,
+      "pass": true
+    },
+    {
+      "id": "omega-centauri-gaia-members",
+      "bytes": 118176,
+      "points": 7313,
+      "triangles": 0,
+      "lines": 0,
+      "draws": 1,
+      "nativeExtent": [
+        45.432504653930664,
+        45.8830680847168,
+        0
+      ],
+      "normalizedRestExtent": [
+        0.987873409901674,
+        0.9976703523361297,
+        0
+      ],
+      "ratio": 0.9976703523361297,
+      "pass": true
+    },
+    {
+      "id": "orion-arm-edenhofer-dust",
+      "bytes": 252412,
+      "points": 15707,
+      "triangles": 0,
+      "lines": 0,
+      "draws": 1,
+      "nativeExtent": [
+        1072,
+        1072,
+        944
+      ],
+      "normalizedRestExtent": [
+        0.9989703911781396,
+        0.9989703911781396,
+        0.879690344470302
+      ],
+      "ratio": 0.9989703911781396,
+      "pass": true
+    }
+  ]
+}

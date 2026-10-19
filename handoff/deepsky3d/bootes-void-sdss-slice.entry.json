@@ -1,0 +1,61 @@
+{
+  "id": "bootes-void-sdss-slice",
+  "source": "https://www.sdss4.org/dr17/",
+  "author": "Sloan Digital Sky Survey; Kirshner et al. (1987)",
+  "license": "SDSS public-release catalog data (public domain)",
+  "license_url": "https://www.sdss.org/collaboration/image-use-policy/",
+  "note": "SDSS DR17 spectroscopic galaxies in a 150 by 150 by 40 Mpc slice centered on the published Bootes Void position and cz=15,500 km/s. The historical H0=50 km/s/Mpc convention is retained because this item's 124-Mpc diameter comes from that convention; adopting H0=70 changes that diameter to about 89 Mpc. Catalog redshifts are converted using cz/H0 without a peculiar-velocity correction. The plotted slice includes the sparse center and surrounding galaxies; it does not define membership or a spherical boundary. Survey incompleteness remains. Colors encode redshift, not galaxy color, and every point is an actual catalog location.",
+  "src": "content/visualizations/models/bootes-void-sdss-slice.glb",
+  "matches": {
+    "length": [
+      "Bootes Void"
+    ]
+  },
+  "geometry": "point cloud",
+  "representation": "catalog",
+  "reference": "https://articles.adsabs.harvard.edu/pdf/1987ApJ...314..493K",
+  "reference_label": "Scientific basis",
+  "license_files": [
+    "sources/deepsky3d-models.md"
+  ],
+  "volume_semantics": "not_a_volume",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 124.0,
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0,
+    "layout_width_factor": 1.25
+  },
+  "processing": {
+    "generator": "scripts/build_deepsky3d_models.py",
+    "operations": [
+      "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+      "Native units: Mpc; 1343 distinct source records.",
+      "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+    ]
+  },
+  "derived_statistics": {
+    "records": 1343,
+    "unit": "Mpc",
+    "extent": [
+      149.79757068976758,
+      149.87972698162662,
+      39.969598829023596
+    ]
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 22664,
+  "sha256": "ef871d9afa7d487cd893e1b2eb6c659e90a567bc82697ac82abc28e2d2391db6",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 0,
+  "animations": 0,
+  "skins": 0
+}

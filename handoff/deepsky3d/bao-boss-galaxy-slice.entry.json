@@ -1,0 +1,61 @@
+{
+  "id": "bao-boss-galaxy-slice",
+  "source": "https://www.sdss4.org/dr17/",
+  "author": "Sloan Digital Sky Survey / BOSS",
+  "license": "SDSS public-release catalog data (public domain)",
+  "license_url": "https://www.sdss.org/collaboration/image-use-policy/",
+  "note": "Actual BOSS galaxy redshifts from SDSS DR17 in a 150 by 150 by 40 Mpc comoving slice centered at RA=180 degrees, Dec=20 degrees, z=0.475. Positions use flat LCDM with H0=70 km/s/Mpc and Omega_m=0.27. This is a survey sample spanning the approximate BAO separation scale, not an individual acoustic shell or an identified BAO structure. The BAO excess requires a statistical pair-correlation measurement across a much larger sample and cannot be inferred by eye from this patch. Colors encode redshift, not galaxy color. All points come from the catalog; no patterns are imposed.",
+  "src": "content/visualizations/models/bao-boss-galaxy-slice.glb",
+  "matches": {
+    "length": [
+      "Baryon Acoustic Oscillation Scale"
+    ]
+  },
+  "geometry": "point cloud",
+  "representation": "catalog",
+  "reference": "https://arxiv.org/abs/astro-ph/0501171",
+  "reference_label": "Scientific basis",
+  "license_files": [
+    "sources/deepsky3d-models.md"
+  ],
+  "volume_semantics": "not_a_volume",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 150.0,
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0,
+    "layout_width_factor": 1.05
+  },
+  "processing": {
+    "generator": "scripts/build_deepsky3d_models.py",
+    "operations": [
+      "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+      "Native units: Mpc; 141 distinct source records.",
+      "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+    ]
+  },
+  "derived_statistics": {
+    "records": 141,
+    "unit": "Mpc",
+    "extent": [
+      144.65114814401414,
+      148.86372398062477,
+      39.00303413884444
+    ]
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 3424,
+  "sha256": "df1d9817573fa0b89f16ac2a4c9e0cfa2a6853657d5262048f5529abdd75cb99",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 0,
+  "animations": 0,
+  "skins": 0
+}

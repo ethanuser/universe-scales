@@ -1,0 +1,61 @@
+{
+  "id": "local-void-2mrs-slice",
+  "source": "https://lweb.cfa.harvard.edu/~dfabricant/huchra/2mass/",
+  "author": "Huchra et al. (2012), 2MASS Redshift Survey; Tully et al. (2019)",
+  "license": "2MRS public scientific catalog (credit required)",
+  "license_url": "https://lweb.cfa.harvard.edu/~dfabricant/huchra/2mass/",
+  "note": "Actual 2MASS Redshift Survey galaxies in a 60 by 60 by 20 Mpc section through the Local Void's Aquila, Lacerta and Andromeda minima. Positions are barycentric redshift-space distances cz/H0, H0=75 km/s/Mpc, in supergalactic coordinates. The displayed window is a section through the void and surrounding galaxies, not its boundary or full volume. Flux limits, peculiar velocities and the Milky Way's zone of avoidance affect the apparent emptiness; missing survey regions must not be read as empty space. Every displayed point is a catalog galaxy; none were deleted to sculpt a cavity. Colors are for visibility, not observed galaxy colors.",
+  "src": "content/visualizations/models/local-void-2mrs-slice.glb",
+  "matches": {
+    "length": [
+      "Local Void"
+    ]
+  },
+  "geometry": "point cloud",
+  "representation": "catalog",
+  "reference": "https://arxiv.org/abs/1905.08329",
+  "reference_label": "Scientific basis",
+  "license_files": [
+    "sources/deepsky3d-models.md"
+  ],
+  "volume_semantics": "not_a_volume",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 60.0,
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0,
+    "layout_width_factor": 1.05
+  },
+  "processing": {
+    "generator": "scripts/build_deepsky3d_models.py",
+    "operations": [
+      "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+      "Native units: Mpc; 471 distinct source records.",
+      "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+    ]
+  },
+  "derived_statistics": {
+    "records": 471,
+    "unit": "Mpc",
+    "extent": [
+      59.96223289838436,
+      58.43824904211544,
+      19.973151902488798
+    ]
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 8708,
+  "sha256": "8499f2cac5dbd22534d56e9e3bae2a0b93c96dfb21ddf51aebae2ce85d681bdb",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 0,
+  "animations": 0,
+  "skins": 0
+}
