@@ -1,0 +1,41 @@
+{
+  "id": "el-reno",
+  "acquired": "2026-10-18",
+  "sources": [
+    {
+      "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-97.98831476527444%2C35.42593388359005%2C-97.93168523472555%2C35.47206611640995&bboxSR=4326&imageSR=4326&size=145%2C145&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&adjustAspectRatio=false&f=image",
+      "sha256": "a125a24ebda0e8fe25698db5911a7509dd3a745502deb1156f9bac885d58ac5e",
+      "role": "USGS 3DEP land elevation; unrendered signed float TIFF"
+    },
+    {
+      "url": "https://services.dat.noaa.gov/arcgis/rest/services/nws_damageassessmenttoolkit/DamageViewer/FeatureServer/2/query?where=event_id%3D%27ElReno_Poly%27&outFields=objectid%2Cefscale%2Cevent_id%2Cstormdate%2Clength%2Cwidth&outSR=4326&f=geojson&returnGeometry=true",
+      "sha256": "9203560e7bf924bf919ad915bd57b25381bb524bc050823ca06e6be079872a39",
+      "feature_count": 1
+    },
+    {
+      "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/exportImage?bbox=-97.98811949103117%2C35.42609296025495%2C-97.93188050896882%2C35.47190703974505&bboxSR=4326&imageSR=4326&size=1024%2C1024&format=jpg&bandIds=0%2C1%2C2&adjustAspectRatio=false&f=image",
+      "sha256": "f55915c045e321c5156eef859afd3a7dd34467673f3484802ca7b669eefcd54e",
+      "role": "USGS NAIP-only natural-color aerial mosaic; current geographic context, not 2013 damage imagery"
+    }
+  ],
+  "files": {
+    "data.npz": "fab1ed1a8df2e9d4182de2b218ba53ca10d239224655e33aa640f24503504901",
+    "vectors.geojson.gz": "b50bbf3f971d4a079d2a88d08ccc47aaa2bd0f4dce4efb133e12eeeff0229bc2"
+  },
+  "processing": "Data coordinates set every geometric vertex; no normalization to the catalog value, procedural geometry, added volume, rulers or interpolated gap filling.",
+  "imagery_catalog_check": {
+    "url": "https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer/query?where=Category%3D1&geometry=-97.96%2C35.449&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2CName%2CYear%2Cacquisition_date%2Cagency%2Craster_name&returnGeometry=false&f=json",
+    "sha256": "83cd951f0c7f1f844919a04f1c879800c002ba29176315034156ada44e4149f7",
+    "source_attributes": [
+      {
+        "OBJECTID": 151147,
+        "Name": "m_3509733_nw_14_060_20210529",
+        "Year": 2021,
+        "acquisition_date": 1622246400000,
+        "agency": "USDA",
+        "raster_name": "m_3509733_nw_14_060_20210529"
+      }
+    ],
+    "scope": "Center tile only; other mosaic tiles may have different dates."
+  }
+}

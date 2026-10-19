@@ -1,0 +1,30 @@
+{
+  "id": "mount-thor",
+  "acquired": "2026-10-18",
+  "sources": [
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5218/4092.png",
+      "sha256": "9c44fc6113918cccdc92802c255239016fd64fa55c838bdde6d0ce744fc61d7b",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5218/4093.png",
+      "sha256": "7ecfd3f180f99e236d6cf0f13d269d9b9c3ed432dfdf9eab9120b6492d8719b7",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5219/4092.png",
+      "sha256": "b4874f616c3efd3e1fb9acb3b6ff74fd1261ac84e8527f8aeb05acff2589c968",
+      "headers": {}
+    },
+    {
+      "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/14/5219/4093.png",
+      "sha256": "f79f2149d0d11bdf64dd354d499b68116dfb2f107bb0652e55aa13d51701ad0a",
+      "headers": {}
+    }
+  ],
+  "files": {
+    "data.npz": "f5f389dd9f42fcc7192da448b56aefc5f2f85eb6d1f2cdb769c888b923706a77"
+  },
+  "processing": "Data coordinates set every geometric vertex; no normalization to the catalog value, procedural geometry, added volume, rulers or interpolated gap filling."
+}

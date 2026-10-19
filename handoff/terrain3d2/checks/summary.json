@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-18",
+  "node": {
+    "run": 228,
+    "pass": 228,
+    "fail": 0
+  },
+  "python": {
+    "run": 145,
+    "skipped": 1,
+    "fail": 0
+  },
+  "asset_check": {
+    "glbs": 195,
+    "exact_name_matches": 206,
+    "pass": true
+  },
+  "version_check": {
+    "stale_references": 0
+  },
+  "new_model_validation": [
+    {
+      "id": "terrain3d2-appalachian-trail",
+      "sha256": "e50b1bd06140e64da3cd438dd91dfab9573cab9321861dcebc74a7696db30478",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "terrain3d2-chicxulub",
+      "sha256": "e1f29f458c26339f89f9d4003972bf859881a98ce72e340909be689a52939328",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "terrain3d2-el-reno",
+      "sha256": "4aec01fbc5b8b05648c6c9adf2186e7e0acb73df3a5a6101f304bc227c790c31",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "terrain3d2-hunga-tonga",
+      "sha256": "24e48b838ac7bf978578eb4418732d5b5ac95de5cccd6dfaefe4a79c695af840",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "terrain3d2-mount-thor",
+      "sha256": "7c24f2eb40fae7c6c51e48f72a1414e8ff18709fe9e873f03fa49ee6860185d1",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "full_validation": {
+    "models": 195,
+    "errors": 0,
+    "unchanged_assets_with_warnings": 9
+  },
+  "browser": "Not retried per explicit known-sandbox instruction; production audit, explorer and mobile pending.",
+  "geometry_and_cpu_previews": "../loader-audit.json and ../previews/geometry-audit.json; no WebGL certification."
+}

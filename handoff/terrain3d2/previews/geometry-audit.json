@@ -1,0 +1,30 @@
+{
+  "method": "Render all terrain3d handoff models using the existing CPU depth rasterizer.\n\nThese orthographic rest/side images do not verify WebGL, production materials,\nconstant-pixel line widths, labels, perspective, explorer grounding, or mobile.\n",
+  "models": [
+    {
+      "id": "terrain3d2-appalachian-trail",
+      "rest_extent": 0.6745835925963293,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d2-chicxulub",
+      "rest_extent": 1.1428283854166668,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d2-el-reno",
+      "rest_extent": 1.2188434924655398,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d2-hunga-tonga",
+      "rest_extent": 1.1382576100948192,
+      "passes_extent_rule": true
+    },
+    {
+      "id": "terrain3d2-mount-thor",
+      "rest_extent": 1.248311127894691,
+      "passes_extent_rule": true
+    }
+  ]
+}

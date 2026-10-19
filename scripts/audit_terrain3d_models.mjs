@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import * as THREE from '../js/vendor/three/three.module.min.js';
 
 const root = new URL('../', import.meta.url);
+const job = process.argv[2] || 'terrain3d';
+if (!/^terrain3d2?$/.test(job)) throw new Error('Expected terrain3d or terrain3d2 handoff');
 const threeURL = new URL('../js/vendor/three/three.module.min.js', import.meta.url).href;
 const moduleURL = s => `data:text/javascript;base64,${Buffer.from(s).toString('base64')}`;
 const utilities = moduleURL(fs.readFileSync(new URL('js/vendor/three/addons/utils/BufferGeometryUtils.js', root), 'utf8')
@@ -17,10 +19,10 @@ globalThis.createImageBitmap = async () => ({ width: 1, height: 1, close() {} })
 globalThis.ProgressEvent = class { constructor(type, init) { Object.assign(this, init); } };
 const { GLTFLoader } = await import(loaderURL);
 const registry = JSON.parse(fs.readFileSync(new URL('content/visualizations/models.json', root))).models;
-const files = fs.readdirSync(new URL('handoff/terrain3d', root)).filter(p => p.endsWith('.entry.json')).sort();
+const files = fs.readdirSync(new URL(`handoff/${job}`, root)).filter(p => p.endsWith('.entry.json')).sort();
 const results = [];
 for (const file of files) {
-    const entry = JSON.parse(fs.readFileSync(new URL(`handoff/terrain3d/${file}`, root)));
+    const entry = JSON.parse(fs.readFileSync(new URL(`handoff/${job}/${file}`, root)));
     const registered = registry.find(m => m.id === entry.id);
     if ((!registered || registered.sha256 !== entry.sha256)) {
         throw new Error(`Entry/registry mismatch: ${entry.id}`);
@@ -47,7 +49,7 @@ for (const file of files) {
         displayedExtentPerValue, triangles, points, lines, pass };
     results.push(result); console.log(JSON.stringify(result));
 }
-fs.writeFileSync(new URL('handoff/terrain3d/loader-audit.json', root), JSON.stringify({
+fs.writeFileSync(new URL(`handoff/${job}/loader-audit.json`, root), JSON.stringify({
     method: 'Vendored production GLTFLoader, with placeholder image decoding; native geometry + orthographic rest bounds. No WebGL, texture appearance, perspective, actual explorer or mobile certification.',
     models: results
 }, null, 2)+'\n');

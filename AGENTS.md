@@ -728,3 +728,28 @@ still contains an email address (removing it needs a history rewrite).
 - Final entries, sources, deferred targets, integration and review details:
   `handoff/earth3d2/REPORT.md`. Official SUE scan is CC BY-NC and was excluded.
 
+## 2026-10-18 terrain3d2 handoff
+
+- Five direct public-data additions: Mount Thor terrain, the NPS Appalachian
+  treadway over relief, an NWS El Reno damage-survey crop over USGS terrain/NAIP,
+  measured NASA Hunga Tonga stereo cloud tops, and a Chicxulub gravity-anomaly
+  surface. Ten other targets were skipped with specific source/calibration
+  reasons in `handoff/terrain3d2/REPORT.md`. No dataset/exports/images/runtime
+  JS/CSS changes; no invented rulers, blocks, walls, traces or plume volume.
+- Offline builder: `scripts/build_terrain3d2_models.py`; `--prepare` optionally
+  acquires sources (NASA preparation alone needs netCDF4). Pinned grids, original
+  vectors, requests and rights metadata: `models/sources/terrain3d2/`.
+- Thor's height map cannot resolve its overhang; Hunga intentionally retains
+  sparse retrieval gaps; El Reno shows damage coverage, not a funnel-width
+  boundary. Chicxulub's plotted vertical coordinate is 500 display m/mGal,
+  **not crater depth**. The trail is the June-2023 alignment, not a 2024 inventory.
+- Existing audit/CPU scripts now accept the new handoff: `node
+  scripts/audit_terrain3d_models.mjs terrain3d2` and `./venv/bin/python
+  scripts/preview_terrain3d_cpu.py --job terrain3d2`; original defaults unchanged.
+- Five GLBs below 2.34 MB / 42k triangles, zero validator errors/warnings.
+  Vendored-loader CPU resting extents pass 0.6–1.3×; all final rest/quarter CPU
+  previews were viewed. Node: 228 passing; Python: 145 run, one skip. Asset and
+  version checks pass. Full validation has zero errors and existing warnings in
+  nine unchanged assets. Browser/mobile/production audit remain for the lead;
+  known Chromium/git sandbox limits were not retried. Work is uncommitted.
+

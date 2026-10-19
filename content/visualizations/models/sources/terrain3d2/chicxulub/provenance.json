@@ -1,0 +1,18 @@
+{
+  "id": "chicxulub",
+  "acquired": "2026-10-18",
+  "sources": [
+    {
+      "url": "https://topex.ucsd.edu/cgi-bin/get_data.cgi?north=22.22077316622251&south=20.37922683377749&west=-90.53828145952245&east=-88.56171854047754&mag=0.1",
+      "sha256": "6a3e607e919d1f60e087ac5293904670370eb2805b017e2826e499a02b1810f3",
+      "units": "mGal",
+      "grid_version": "V33.1",
+      "vertical_display_metres_per_mgal": 500
+    }
+  ],
+  "files": {
+    "data.npz": "7c8838a62ceb23615db1fcc32d5e51032b7939d7c33aad3b0f58daa5cc0b4604",
+    "rights-and-grid.json": "f493529a9ef75dfcfad66f66ed413bef94d35abd38d36ae0ba31f578c7b63c8e"
+  },
+  "processing": "Data coordinates set every geometric vertex; no normalization to the catalog value, procedural geometry, added volume, rulers or interpolated gap filling."
+}

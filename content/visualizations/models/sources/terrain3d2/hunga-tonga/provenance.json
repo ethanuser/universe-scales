@@ -1,0 +1,46 @@
+{
+  "id": "hunga-tonga",
+  "acquired": "2026-10-18",
+  "sources": [
+    {
+      "url": "https://science-data.larc.nasa.gov/LaRC-SD-Publications/2022-11-22-001-KMB/data/A2022015.0430.stereo_CTH.nc",
+      "sha256": "138c5c1b5bc88ef2c15d126d1bfa72ecaf932e3e2c3fe841a01ea3f3b24eb84b",
+      "metadata": {
+        "license": "No constraints on data access or use",
+        "platform": "GOES-17/Himawari-8",
+        "spatial_resolution": "2.0 km",
+        "time_coverage_start": "2022-01-15T04:36:44Z",
+        "time_coverage_end": "2022-01-15T04:37:32Z",
+        "date_created": "2022-01-24T23:05:04Z",
+        "product_version": "1.0"
+      }
+    },
+    {
+      "url": "https://gis.ngdc.noaa.gov/arcgis/rest/services/DEM_mosaics/ETOPO1_ice_surface/ImageServer/exportImage?bbox=-175.71197713270993%2C-20.931952467338846%2C-175.08802286729008%2C-20.348047532661155&bboxSR=4326&imageSR=4326&size=65%2C65&format=tiff&pixelType=F32&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&adjustAspectRatio=false&f=image",
+      "sha256": "8a6180b2fd443928b877360a2500bdd21c5641302ee6043972f6fc3faa3cbe2a",
+      "role": "NOAA ETOPO1 sampled ocean elevations, native 1 arc-minute grid; unrendered signed float TIFF"
+    }
+  ],
+  "files": {
+    "data.npz": "8c78afcd4efa1282e8530001677490b383baf8aacf33f864aafcebcb63b9eaa8"
+  },
+  "processing": "Data coordinates set every geometric vertex; no normalization to the catalog value, procedural geometry, added volume, rulers or interpolated gap filling.",
+  "retrieval_selection": {
+    "bounds_lonlat": [
+      -175.7071774845144,
+      -20.927460890918248,
+      -175.0928225154856,
+      -20.352539109081754
+    ],
+    "minimum_quality": 1,
+    "native_shape": [
+      32,
+      35
+    ],
+    "retained_pixels": 449,
+    "height_range_m": [
+      32503.001953125,
+      58357.00390625
+    ]
+  }
+}
