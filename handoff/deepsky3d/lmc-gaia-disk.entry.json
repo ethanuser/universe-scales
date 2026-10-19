@@ -1,0 +1,61 @@
+{
+  "id": "lmc-gaia-disk",
+  "source": "https://gea.esac.esa.int/archive/",
+  "author": "ESA/Gaia/DPAC; van der Marel & Cioni (2001); Pietrzynski et al. (2019)",
+  "license": "Gaia open data (credit required)",
+  "license_url": "https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/",
+  "note": "Gaia DR3 candidate LMC stars at their measured sky positions and observed BP-RP colors, intersected with the published 34.7-degree stellar disk plane at 49.59 kpc. Proper-motion and parallax cuts reduce Milky Way contamination. The plane is an ensemble distance approximation: individual stellar depths, disk thickness and gas are not measured here. The 9.86-kpc disk aperture follows this item's characteristic diameter; fainter outskirts continue beyond it. Brightness is compressed for display and colors are an ordered BP-RP palette. No invented stars or depth scatter.",
+  "src": "content/visualizations/models/lmc-gaia-disk.glb",
+  "matches": {
+    "length": [
+      "Large Magellanic Cloud"
+    ]
+  },
+  "geometry": "point cloud",
+  "representation": "catalog",
+  "reference": "https://arxiv.org/abs/astro-ph/0105339",
+  "reference_label": "Scientific basis",
+  "license_files": [
+    "sources/deepsky3d-models.md"
+  ],
+  "volume_semantics": "not_a_volume",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 9.860000000000001,
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0,
+    "layout_width_factor": 1.05
+  },
+  "processing": {
+    "generator": "scripts/build_deepsky3d_models.py",
+    "operations": [
+      "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+      "Native units: kpc; 23420 distinct source records.",
+      "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+    ]
+  },
+  "derived_statistics": {
+    "records": 23420,
+    "unit": "kpc",
+    "extent": [
+      9.318994963239842,
+      8.637557849639865,
+      5.601370448802676
+    ]
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 375876,
+  "sha256": "351e1f7fc91916e003ee0ae57cb6bb1f10b08342a056b8fa96ec28a114c32e8b",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 0,
+  "animations": 0,
+  "skins": 0
+}

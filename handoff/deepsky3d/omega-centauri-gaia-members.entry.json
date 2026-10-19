@@ -1,0 +1,62 @@
+{
+  "id": "omega-centauri-gaia-members",
+  "source": "https://zenodo.org/records/4891252",
+  "author": "Eugene Vasiliev & Holger Baumgardt; ESA/Gaia/DPAC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Gaia EDR3 stars brighter than G=16 assigned greater than 99% membership probability by Vasiliev & Baumgardt (2021), with observed BP-RP colors. Sky positions are projected onto a plane at the measured 5.43-kpc cluster distance; individual stellar depths cannot be resolved, so rotation reveals a flat map, not a reconstructed sphere. A 150-light-year aperture matches this item's characteristic span; members outside it are excluded. The bright cut avoids the strong central incompleteness of faint Gaia sources, but the innermost core remains incomplete. Astrometric quality flags are retained in the source subset but not used to cut sky positions. Brightness is compressed and the color palette follows BP-RP; no synthetic core, stars or depth scatter.",
+  "src": "content/visualizations/models/omega-centauri-gaia-members.glb",
+  "matches": {
+    "length": [
+      "Omega Centauri"
+    ]
+  },
+  "geometry": "point cloud",
+  "representation": "catalog",
+  "reference": "https://arxiv.org/abs/2102.09568",
+  "reference_label": "Scientific basis",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt",
+    "sources/deepsky3d-models.md"
+  ],
+  "volume_semantics": "not_a_volume",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 45.99020906783258,
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0,
+    "layout_width_factor": 1.05
+  },
+  "processing": {
+    "generator": "scripts/build_deepsky3d_models.py",
+    "operations": [
+      "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+      "Native units: pc; 7313 distinct source records.",
+      "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+    ]
+  },
+  "derived_statistics": {
+    "records": 7313,
+    "unit": "pc",
+    "extent": [
+      45.43250529491506,
+      45.883069207813,
+      0.0
+    ]
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 118176,
+  "sha256": "0bcd429dc485ea71a6255327792558d3bedfb4afd6037895a903133a7bdb852b",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 0,
+  "animations": 0,
+  "skins": 0
+}

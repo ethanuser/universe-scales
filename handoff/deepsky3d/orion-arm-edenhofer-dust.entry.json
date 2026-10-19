@@ -1,0 +1,62 @@
+{
+  "id": "orion-arm-edenhofer-dust",
+  "source": "https://zenodo.org/records/8187943",
+  "author": "Gordian Edenhofer, Catherine Zucker, Philipp Frank, Andrew K. Saydjari, Joshua S. Speagle, Douglas Finkbeiner & Torsten Ensslin",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "Direct conversion of Edenhofer et al.'s three-dimensional extinction-density reconstruction around the Sun. The 1,072-pc-wide local window lies within the Local/Orion Arm and approximately matches this item's 3,500-light-year width. It is not a measurement of the arm's full width, length or boundary. Each point is a 16-pc-spaced sample of the published Cartesian mean grid; the densest 5% of finite samples reveal nearby cloud structure. Colors encode log extinction density, not emitted light, and omitted low-density or unavailable samples are not empty space. No invented clouds, stars, depth or arm shape.",
+  "src": "content/visualizations/models/orion-arm-edenhofer-dust.glb",
+  "matches": {
+    "length": [
+      "Orion Arm"
+    ]
+  },
+  "geometry": "point cloud",
+  "representation": "survey",
+  "reference": "https://arxiv.org/abs/2308.01295",
+  "reference_label": "Scientific basis",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt",
+    "sources/deepsky3d-models.md"
+  ],
+  "volume_semantics": "not_a_volume",
+  "closed_volume_checked": false,
+  "presentation": {
+    "reference_size": 1073.104878249427,
+    "yaw": 0,
+    "pitch": 0,
+    "roll": 0,
+    "layout_width_factor": 1.05
+  },
+  "processing": {
+    "generator": "scripts/build_deepsky3d_models.py",
+    "operations": [
+      "Direct conversion of hash-pinned public catalog coordinates; physical units retained.",
+      "Native units: pc; 15707 distinct source records.",
+      "One soft point per selected record; no generated geometry, rulers, random depths or filler stars."
+    ]
+  },
+  "derived_statistics": {
+    "records": 15707,
+    "unit": "pc",
+    "extent": [
+      1072,
+      1072,
+      944
+    ]
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 252412,
+  "sha256": "e29d8ffb4922b9f21dc72fa35cf30dc5ffe92bebc1cbd6066bfa52602ef26724",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 0,
+  "animations": 0,
+  "skins": 0
+}
