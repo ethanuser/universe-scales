@@ -1,0 +1,45 @@
+{
+  "method": "Vendored production GLTFLoader, placeholder image decoding, exact per-vertex bounds with registry pre-rotation/calibration/rest pose. No WebGL, transparency, perspective, explorer or mobile verification.",
+  "models": [
+    {
+      "id": "earth3d4-fruit-fly",
+      "bytes": 2193556,
+      "sha256": "c67b48ea8cca1b2d4394a9a1a4af5695474b7e1760dc4d31c13229ef5781fd59",
+      "triangles": 89963,
+      "meshes": 1,
+      "nativeExtent": [
+        2.0327755212783813,
+        1.2754864564190653,
+        1.751684610089919
+      ],
+      "calibrationReference": 1.7721210623885464,
+      "normalizedRestExtent": [
+        1.184964473868399,
+        0.781581479120171,
+        1.040817156247173
+      ],
+      "displayedExtentPerValue": 1.184964473868399,
+      "pass": true
+    },
+    {
+      "id": "earth3d4-trex-skeleton",
+      "bytes": 1897736,
+      "sha256": "6cda97d275fcca9878522e51213dd4a505aa354a085b62386362414036b51327",
+      "triangles": 55000,
+      "meshes": 1,
+      "nativeExtent": [
+        9.736420386805651,
+        3.4319359624996086,
+        2.0620161275231137
+      ],
+      "calibrationReference": 9.736420386805651,
+      "normalizedRestExtent": [
+        0.9734693096357813,
+        0.35248436552209783,
+        0.36535281004662074
+      ],
+      "displayedExtentPerValue": 0.9734693096357813,
+      "pass": true
+    }
+  ]
+}

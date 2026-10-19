@@ -389,6 +389,40 @@
         "layout_width_factor": 1.0
       },
       "note": "An artist's model of a mimivirus particle (AH, CC BY 4.0): a capsid of repeated protein units bristling with surface fibers, scaled so its full width including the fibers is the listed 600 nanometers, larger than some bacteria. Illustrative, not a structure determination."
+    },
+    {
+      "id": "earth3d4-fruit-fly",
+      "name": "Fruit Fly",
+      "uid": "ad29b897bd2b4e27bb04ab9d31baa117",
+      "author": "etainproject",
+      "license": "by",
+      "presentation": {
+        "pre_rotation": {
+          "y": 90
+        },
+        "reference_size": 1.7721210623885464,
+        "yaw": -12,
+        "pitch": 8,
+        "layout_width_factor": 1.3
+      },
+      "note": "Female Drosophila melanogaster micro-CT scan from the ETAIN project; reared in the Wijnen lab at the University of Southampton, scanned by Orestis Katsamenis and processed by Felipe Ribas. The source scan geometry, orange CT material and preserved-specimen pose are retained. Uniformly scaled between head and abdomen-tip surface landmarks to the catalog\u2019s representative 2.5 mm body length; legs, wings and bristles extend beyond that measurement. This is a stained, fixed laboratory specimen, not natural surface coloration or a living flight pose."
+    },
+    {
+      "id": "earth3d4-trex-skeleton",
+      "name": "Tyrannosaurus Rex SUE",
+      "uid": "77e21c4e5d65468bbe11780ae0557b95",
+      "author": "rigsters",
+      "license": "by",
+      "presentation": {
+        "pre_rotation": {
+          "y": 55
+        },
+        "measure_axis": "x",
+        "yaw": -12,
+        "pitch": 0,
+        "layout_width_factor": 1.1
+      },
+      "note": "Photogrammetry scan by Rigsters of a Tyrannosaurus rex skeleton replica displayed at Knuthenborg Safaripark, Denmark. This is a different replica, not SUE or a scan of SUE\u2019s fossils; it is uniformly scaled to the catalog\u2019s approximate 12.3 m length using the skull-to-tail longitudinal extent. The replica\u2019s pose and proportions are retained. A rapid single-loop capture leaves holes and incomplete surfaces, especially visible from the reverse side; these have not been filled with invented bones or surfaces."
     }
   ]
 }

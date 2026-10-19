@@ -1,0 +1,23 @@
+{
+  "uid": "77e21c4e5d65468bbe11780ae0557b95",
+  "name": "Tyrannosaurus Rex skeleton",
+  "author": "rigsters",
+  "license": "by",
+  "source": "https://sketchfab.com/3d-models/tyrannosaurus-rex-skeleton-77e21c4e5d65468bbe11780ae0557b95",
+  "description": "Tyrannosaurus rex was one of the largest carnivorous dinosaurs that ever lived. Everything about this ferocious predator, from its thick, heavy skull to its 4-foot-long (1.2-meter-long) jaw, was designed for maximum bone-crushing action.\n\nThis particular replica of T-REX's skeleton is on display in Knuthenborg Safaripark, Denmark. \n\nThe photogrammetric capture has been done spontaneously, as a part of recreational visit to the park. \nDue to other participants of the visit not 'feeling for' photogrammetric capture, it had to be done extra-fast, resulting in a single 'loop' of photographs.\n\nCapture time: <2min\n\nNumber of photos: 133\n\nSoftware: Reality Capture\n\n\n![](https://rigsters.com/sketchfab_img/tyrannosaurus_rex_3d_capture_rigsters.gif)\n![](https://rigsters.com/sketchfab_img/Tyrannosaurus_Rex_skeleton_3d_scan_rigsters.JPG)\n\nFeel free to tweak, modify and re-use it in your projects.",
+  "source_sha256": "8b9e4c5c9af64593eb2c44b920ce58fae1411501a6d0ee61e6034b9e05c04d16",
+  "source_bytes": 60522238,
+  "texture_size": 1024,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 9985072,
+  "sha256": "7c5a120a081f6b0b3f574ce44807fd533933dccf8ea9d51bd506a7059da11e74",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 4,
+  "triangle_count": 250240,
+  "animations": 0,
+  "skins": 0
+}

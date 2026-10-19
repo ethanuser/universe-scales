@@ -13505,6 +13505,140 @@
       "triangle_count": 28516,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "earth3d4-fruit-fly",
+      "source": "https://sketchfab.com/3d-models/drosophila-adult-fruit-fly-ct-scan-ad29b897bd2b4e27bb04ab9d31baa117",
+      "sketchfab_uid": "ad29b897bd2b4e27bb04ab9d31baa117",
+      "sketchfab_author": "etainproject",
+      "author": "ETAIN project; Orestis Katsamenis (scan), Felipe Ribas (mesh processing)",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Fruit Fly"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measured_specimen_surface",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "pre_rotation": {
+          "y": 90
+        },
+        "reference_size": 1.7721210623885464,
+        "yaw": -12,
+        "pitch": 8,
+        "layout_width_factor": 1.3
+      },
+      "note": "Female Drosophila melanogaster micro-CT scan from the ETAIN project; reared in the Wijnen lab at the University of Southampton, scanned by Orestis Katsamenis and processed by Felipe Ribas. The source scan geometry, orange CT material and preserved-specimen pose are retained. Uniformly scaled between head and abdomen-tip surface landmarks to the catalog\u2019s representative 2.5 mm body length; legs, wings and bristles extend beyond that measurement. This is a stained, fixed laboratory specimen, not natural surface coloration or a living flight pose.",
+      "basis_url": "https://www.lw.uni-leipzig.de/en/institut-fuer-biologie/departments/genetics/triphan-technische-verhaltensneurogenetik/lueckenueberwindung",
+      "basis_label": "Body-length context",
+      "processing": {
+        "script": "scripts/prepare_earth3d4_imports.mjs",
+        "source_model_name": "Drosophila - Adult Fruit Fly - CT Scan",
+        "source_sha256": "210b91eb9bb8bbb8bbbb69c9372cf954c53aca7c1428769af5c5766f07ef661e",
+        "source_bytes": 24251114,
+        "staged_sha256": "00e14941b30e3a017426984ec45372972501235bc41d54e7e193f5ddccb7ef6e",
+        "texture_size": 1024,
+        "simplification_target": 90000,
+        "simplification_error": 0.002,
+        "operations": [
+          "Pack the downloadable glTF as self-contained GLB; resize original textures to at most 1024 pixels",
+          "Static scene deduplication, flatten, join, weld; decimate existing surfaces",
+          "Prune unused resources; quantize positions to 16 bits, normals to 12 bits, UVs to 14 bits; no decoder compression",
+          "Preserve source materials, geometry proportions and pose; no added geometry or labels"
+        ],
+        "provenance": "content/visualizations/models/sources/earth3d4-fruit-fly.md"
+      },
+      "src": "content/visualizations/models/earth3d4-fruit-fly.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2193556,
+      "sha256": "c67b48ea8cca1b2d4394a9a1a4af5695474b7e1760dc4d31c13229ef5781fd59",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 89963,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "earth3d4-trex-skeleton",
+      "source": "https://sketchfab.com/3d-models/tyrannosaurus-rex-skeleton-77e21c4e5d65468bbe11780ae0557b95",
+      "sketchfab_uid": "77e21c4e5d65468bbe11780ae0557b95",
+      "sketchfab_author": "rigsters",
+      "author": "Rigsters on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Tyrannosaurus Rex SUE"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measured_specimen_surface",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "pre_rotation": {
+          "y": 55
+        },
+        "measure_axis": "x",
+        "yaw": -12,
+        "pitch": 0,
+        "layout_width_factor": 1.1
+      },
+      "note": "Photogrammetry scan by Rigsters of a Tyrannosaurus rex skeleton replica displayed at Knuthenborg Safaripark, Denmark. This is a different replica, not SUE or a scan of SUE\u2019s fossils; it is uniformly scaled to the catalog\u2019s approximate 12.3 m length using the skull-to-tail longitudinal extent. The replica\u2019s pose and proportions are retained. A rapid single-loop capture leaves holes and incomplete surfaces, especially visible from the reverse side; these have not been filled with invented bones or surfaces.",
+      "basis_url": "https://www.fieldmuseum.org/blog/how-well-do-you-know-sue",
+      "basis_label": "SUE size context; displayed replica differs",
+      "processing": {
+        "script": "scripts/prepare_earth3d4_imports.mjs",
+        "source_model_name": "Tyrannosaurus Rex skeleton",
+        "source_sha256": "8b9e4c5c9af64593eb2c44b920ce58fae1411501a6d0ee61e6034b9e05c04d16",
+        "source_bytes": 60522238,
+        "staged_sha256": "7c5a120a081f6b0b3f574ce44807fd533933dccf8ea9d51bd506a7059da11e74",
+        "texture_size": 1024,
+        "simplification_target": 55000,
+        "simplification_error": 0.002,
+        "operations": [
+          "Pack the downloadable glTF as self-contained GLB; resize original textures to at most 1024 pixels",
+          "Static scene deduplication, flatten, join, weld; decimate existing surfaces",
+          "Prune unused resources; quantize positions to 16 bits, normals to 12 bits, UVs to 14 bits; no decoder compression",
+          "Preserve source materials, geometry proportions and pose; no added geometry or labels"
+        ],
+        "provenance": "content/visualizations/models/sources/earth3d4-trex-skeleton.md"
+      },
+      "src": "content/visualizations/models/earth3d4-trex-skeleton.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1897736,
+      "sha256": "6cda97d275fcca9878522e51213dd4a505aa354a085b62386362414036b51327",
+      "extensions_used": [
+        "KHR_mesh_quantization"
+      ],
+      "extensions_required": [
+        "KHR_mesh_quantization"
+      ],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 55000,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

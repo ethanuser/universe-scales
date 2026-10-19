@@ -1,5 +1,19 @@
 # Agent Handoff Guide
 
+## 2026-10-18 earth3d4 handoff
+
+- Public scans only: ETAIN's female Drosophila micro-CT and Rigsters' T. rex
+  skeleton replica scan. The latter is a different replica, not SUE; the note
+  states this. Nineteen targets remain photo-only for license, scope or data gaps.
+- `scripts/prepare_earth3d4_imports.mjs` processes pinned external staging files;
+  `audit_earth3d4_models.mjs` uses the vendored loader. CPU review:
+  `./venv/bin/python scripts/preview_earth3d4_cpu.py`. Sources, final entries,
+  detailed search/skip audit and lead integration: `handoff/earth3d4/REPORT.md`.
+- Both assets are under 3 MB, validate with zero errors/warnings and pass CPU
+  resting extents. No dataset/exports/images/runtime JS/CSS edits. Node: 228
+  passing; Python: 140 run, one skip. Browser coverage hit the documented sandbox
+  block; production WebGL/explorer/mobile review remains pending. Uncommitted.
+
 ## 2026-10-16 terrain3d handoff
 
 - Nine geographic Length assets: Angel/Victoria Falls terrain, Gibraltar with

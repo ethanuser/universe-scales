@@ -1,0 +1,23 @@
+{
+  "uid": "ad29b897bd2b4e27bb04ab9d31baa117",
+  "name": "Drosophila - Adult Fruit Fly - CT Scan",
+  "author": "etainproject",
+  "license": "by",
+  "source": "https://sketchfab.com/3d-models/drosophila-adult-fruit-fly-ct-scan-ad29b897bd2b4e27bb04ab9d31baa117",
+  "description": "*Drosophila* anatomy from a CT-Scan.\n\n**Name:** Drosophila melanogaster- Fruit Fly - Adult\n**Order:** Diptera\n**Family:** Drosophilidae\n**Species:** Drosophila melanogaster\n**Stage:** adult - female\n**Origin:** Reared in the lab of Herman Wijnen at University of Southampton, UK, in 2022\n**Classification:** 2022 by Herman Wijnen of University of Southampton, UK, and [Duncan Bell](https://www.researchgate.net/profile/Geoffrey-Bell-2)\nof Suffolk University\n**Preservation:**  Fixed in Bouin’s solution, then stained for 2d in Lugol’s solution prior to scanning in ultrapure water.\n**Scanning:**  Done by dr. Orestis Katsamenis using a custom Nikon XTH225ST μCT system. \n**Post-Processing:** Model processed by [Felipe Ribas](https://orcid.org/0009-0003-0433-4542) using Blender.\n**Publication Date:** 22/07/2024\n\n<hr>\n\nETAIN has received funding from the European Union’s Horizon Europe research and innovation program under grant agreement No. 101057216\nhttps://www.etainproject.eu/",
+  "source_sha256": "210b91eb9bb8bbb8bbbb69c9372cf954c53aca7c1428769af5c5766f07ef661e",
+  "source_bytes": 24251114,
+  "texture_size": 1024,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 40171100,
+  "sha256": "00e14941b30e3a017426984ec45372972501235bc41d54e7e193f5ddccb7ef6e",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 15,
+  "triangle_count": 1499663,
+  "animations": 0,
+  "skins": 0
+}
