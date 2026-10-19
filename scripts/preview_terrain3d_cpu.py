@@ -4,6 +4,7 @@
 These orthographic rest/side images do not verify WebGL, production materials,
 constant-pixel line widths, labels, perspective, explorer grounding, or mobile.
 """
+import argparse
 import json
 import math
 from pathlib import Path
@@ -14,9 +15,12 @@ from preview_space3d2_cpu import render
 
 
 if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--job',choices=['terrain3d','terrain3d2'],default='terrain3d')
+    job=parser.parse_args().job
     root=Path(__file__).resolve().parents[1]
-    entries=sorted((root/'handoff/terrain3d').glob('*.entry.json'))
-    dest=root/'handoff/terrain3d/previews';dest.mkdir(parents=True,exist_ok=True)
+    entries=sorted((root/f'handoff/{job}').glob('*.entry.json'))
+    dest=root/f'handoff/{job}/previews';dest.mkdir(parents=True,exist_ok=True)
     audit=[];tiles=[]
     for path in entries:
         e=json.loads(path.read_text());panel=Image.new('RGB',(1120,615),'#07121e')

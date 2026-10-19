@@ -13505,6 +13505,264 @@
       "triangle_count": 28516,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "terrain3d2-appalachian-trail",
+      "source": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/ANST_Facilities/FeatureServer/7",
+      "basis_url": "https://www.nps.gov/appa/planyourvisit/maps.htm",
+      "basis_label": "Source data and geographic context",
+      "author": "National Park Service Appalachian National Scenic Trail and Appalachian Trail Conservancy, 2023 treadway GPS data; Mapzen/Tilezen terrain, USGS SRTM/GMTED2010/3DEP and NOAA ETOPO1 bathymetry.",
+      "license": "Public NPS GIS data (source liability and access notice retained); US-government elevation with Mapzen attribution",
+      "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+      "license_files": [
+        "sources/terrain3d2-appalachian-trail.md"
+      ],
+      "matches": {
+        "length": [
+          "Appalachian Trail"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 3536400.0,
+        "pitch": 68.0,
+        "yaw": 0,
+        "roll": -28.0,
+        "layout_width_factor": 1.3
+      },
+      "processing": {
+        "script": "scripts/build_terrain3d2_models.py",
+        "units": "metres",
+        "vertical_gain": 8.0,
+        "provenance": "content/visualizations/models/sources/terrain3d2/appalachian-trail/provenance.json",
+        "source_files": {
+          "data.npz": "8f48e962506944d2ea553f92b64401cb2fd217417fa9ad8238905ca30a520d97",
+          "vectors.geojson.gz": "7c5c4867f7d68e067535d9fa857427d45bc59684b40a81d27686238ae39d0e5d"
+        }
+      },
+      "note": "All 30 original NPS A.T. Treadway features (June 2023 version, GPS surveys from 1998\u20132022 plus supplemental information) are drawn over eastern-US relief. Separate club sections, source bends and gaps are retained. The bright line is a widened map symbol rasterized onto the terrain, not the width of the footpath. Relief is exaggerated 8\u00d7; horizontal coordinates and Earth curvature retain geographic scale. The regional aperture supplies context and its edges do not measure trail length. The 3,536.4 km catalog quantity is accumulated walking distance, not map extent; the source is not claimed to be the 2024 alignment. This is not a navigation or property-access map. No crop walls, underside, stand, independent ruler or schematic geometry is included. National Park Service Appalachian National Scenic Trail and Appalachian Trail Conservancy, 2023 treadway GPS data; Mapzen/Tilezen terrain, USGS SRTM/GMTED2010/3DEP and NOAA ETOPO1 bathymetry.",
+      "src": "content/visualizations/models/terrain3d2-appalachian-trail.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1193772,
+      "sha256": "e50b1bd06140e64da3cd438dd91dfab9573cab9321861dcebc74a7696db30478",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 32768,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d2-chicxulub",
+      "source": "https://topex.ucsd.edu/cgi-bin/get_data.cgi",
+      "basis_url": "https://topex.ucsd.edu/marine_grav/mar_grav.html",
+      "basis_label": "Source data and geographic context",
+      "author": "Scripps Institution of Oceanography / UC San Diego, Sandwell et al. (2014), global gravity V33.1; EGM2008 contribution over land.",
+      "license": "Public Scripps gravity grid; provider data-management plan states unrestricted distribution; citation retained",
+      "license_url": "https://topex.ucsd.edu/pub/sandwell/SF_geodesy_proposal.pdf",
+      "license_files": [
+        "sources/terrain3d2-chicxulub.md"
+      ],
+      "matches": {
+        "length": [
+          "Chicxulub Crater"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "scientific_data_surface",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 180000.0,
+        "pitch": 63.0,
+        "yaw": 0.0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "processing": {
+        "script": "scripts/build_terrain3d2_models.py",
+        "units": "metres",
+        "vertical_gain": 1.0,
+        "provenance": "content/visualizations/models/sources/terrain3d2/chicxulub/provenance.json",
+        "source_files": {
+          "data.npz": "7c8838a62ceb23615db1fcc32d5e51032b7939d7c33aad3b0f58daa5cc0b4604",
+          "rights-and-grid.json": "f493529a9ef75dfcfad66f66ed413bef94d35abd38d36ae0ba31f578c7b63c8e"
+        }
+      },
+      "note": "A direct conversion of the Scripps 1-minute global gravity-anomaly grid V33.1 around Chicxulub. Horizontal coordinates retain geographic metre scale. The vertical coordinate plots gravity anomaly at 500 display metres per mGal, relative to 0 mGal: it is not elevation, crater depth, geological relief or seismic topography. Colors also encode the recorded anomaly, with no radial template, ring, crater rim or inferred crater surface added. The 205 km authored aperture is geographic context for the approximately 180 km catalog diameter, not a measured crater boundary. Marine gravity and the EGM2008 land field have different information content; the landward crater signature is comparatively coarse. No crop walls, underside, stand, independent ruler or schematic geometry is included. Scripps Institution of Oceanography / UC San Diego, Sandwell et al. (2014), global gravity V33.1; EGM2008 contribution over land.",
+      "src": "content/visualizations/models/terrain3d2-chicxulub.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 924092,
+      "sha256": "e1f29f458c26339f89f9d4003972bf859881a98ce72e340909be689a52939328",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 28084,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d2-el-reno",
+      "source": "https://services.dat.noaa.gov/arcgis/rest/services/nws_damageassessmenttoolkit/DamageViewer/FeatureServer/2",
+      "basis_url": "https://www.weather.gov/oun/events-20130531",
+      "basis_label": "Source data and geographic context",
+      "author": "NOAA National Weather Service Damage Assessment Toolkit, ElReno_Poly survey feature; USGS 3DEP terrain; USDA NAIP public-domain orthophotography via USGS The National Map.",
+      "license": "US-government public-domain survey, elevation and NAIP imagery",
+      "license_url": "https://www.weather.gov/disclaimer",
+      "license_files": [
+        "sources/terrain3d2-el-reno.md"
+      ],
+      "matches": {
+        "length": [
+          "El Reno Tornado"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 4184.2944,
+        "pitch": 65.0,
+        "yaw": 0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "processing": {
+        "script": "scripts/build_terrain3d2_models.py",
+        "units": "metres",
+        "vertical_gain": 1.0,
+        "provenance": "content/visualizations/models/sources/terrain3d2/el-reno/provenance.json",
+        "source_files": {
+          "data.npz": "fab1ed1a8df2e9d4182de2b218ba53ca10d239224655e33aa640f24503504901",
+          "vectors.geojson.gz": "b50bbf3f971d4a079d2a88d08ccc47aaa2bd0f4dce4efb133e12eeeff0229bc2"
+        }
+      },
+      "note": "A 5.1 km square terrain aperture south of El Reno airport with the clipped original NWS Damage Assessment Toolkit polygon identified as ElReno_Poly (31 May 2013). Orange marks mapped damage-survey coverage on unexaggerated USGS 3DEP terrain. Public USDA NAIP aerial imagery supplies later geographic context, not a photograph of the tornado or its 2013 damage; the catalog tile at the aperture center is dated 29 May 2021. The full polygon is pinned, but its longer eastward track lies outside this deliberately local aperture. The polygon is not an instantaneous funnel, a measured wind-field surface, or an exact outline of the published maximum 2.6-mile tornado width. No vortex, funnel, moving centerline or artificial width boundary is constructed. The polygon source retains its historical EF3+ attribute; this does not revise the NWS event rating. No crop walls, underside, stand, independent ruler or schematic geometry is included. NOAA National Weather Service Damage Assessment Toolkit, ElReno_Poly survey feature; USGS 3DEP terrain; USDA NAIP public-domain orthophotography via USGS The National Map.",
+      "src": "content/visualizations/models/terrain3d2-el-reno.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2339436,
+      "sha256": "4aec01fbc5b8b05648c6c9adf2186e7e0acb73df3a5a6101f304bc227c790c31",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 41472,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d2-hunga-tonga",
+      "source": "https://science-data.larc.nasa.gov/LaRC-SD-Publications/2022-11-22-001-KMB/",
+      "basis_url": "https://science-data.larc.nasa.gov/LaRC-SD-Publications/2022-11-22-001-KMB/",
+      "basis_label": "Source data and geographic context",
+      "author": "Kristopher Bedka and Konstantin Khlopenkov, NASA Langley Research Center; GOES-17/Himawari-8 stereo retrievals, 15 January 2022; NOAA ETOPO1 ocean-floor elevations.",
+      "license": "NASA dataset: No constraints on data access or use; NOAA public-domain bathymetry",
+      "license_url": "https://science-data.larc.nasa.gov/LaRC-SD-Publications/2022-11-22-001-KMB/data/A2022015.0430.stereo_CTH.nc",
+      "license_files": [
+        "sources/terrain3d2-hunga-tonga.md"
+      ],
+      "matches": {
+        "length": [
+          "Hunga Tonga Eruption Plume"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "scientific_data_surface",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 58000.0,
+        "pitch": 10.0,
+        "yaw": 0.0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "processing": {
+        "script": "scripts/build_terrain3d2_models.py",
+        "units": "metres",
+        "vertical_gain": 1.0,
+        "provenance": "content/visualizations/models/sources/terrain3d2/hunga-tonga/provenance.json",
+        "source_files": {
+          "data.npz": "8c78afcd4efa1282e8530001677490b383baf8aacf33f864aafcebcb63b9eaa8"
+        }
+      },
+      "note": "A direct mesh of measured cloud-top stereo heights in a 64 km aperture near the eruption, from NASA nominal 04:30 UTC retrievals (actual line observation times about 04:36\u201304:37 UTC) on 15 January 2022. Only native neighboring retrieval pixels with quality rating at least 1 are connected; missing or low-confidence pixels remain holes. All 449 retained observations are also shown as point markers at their measured positions; marker size is a visibility symbol, not a droplet size. The selected source reaches 58.357 km, without height correction or vertical exaggeration. The lower separate surface is historical NOAA ETOPO1 ocean bathymetry at geographic scale, not a post-eruption seafloor survey. Cloud-top brightness uses the co-recorded Himawari-8 infrared brightness temperature, not true-color imagery. This is the observed upper surface at one time, not a reconstructed plume volume, density, eruption column or full umbrella-cloud extent. No stem, skirts, sides or particles are invented. No crop walls, underside, stand, independent ruler or schematic geometry is included. Kristopher Bedka and Konstantin Khlopenkov, NASA Langley Research Center; GOES-17/Himawari-8 stereo retrievals, 15 January 2022; NOAA ETOPO1 ocean-floor elevations.",
+      "src": "content/visualizations/models/terrain3d2-hunga-tonga.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 306932,
+      "sha256": "24e48b838ac7bf978578eb4418732d5b5ac95de5cccd6dfaefe4a79c695af840",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 8549,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "terrain3d2-mount-thor",
+      "source": "https://registry.opendata.aws/terrain-tiles/",
+      "basis_url": "https://geonames.nrcan.gc.ca/search-place-names/unique?id=OAQLW&wbdisable=true",
+      "basis_label": "Source data and geographic context",
+      "author": "Mapzen/Tilezen; Polar Geospatial Center / ArcticDEM; Natural Resources Canada / CDEM. ArcticDEM support: NSF-OPP awards 1043681, 1559691, 1542736, 1810976 and 2129685.",
+      "license": "ArcticDEM CC-BY-4.0 and Canadian Open Government Licence elevation; Mapzen attribution",
+      "license_url": "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "license_files": [
+        "sources/terrain3d2-mount-thor.md"
+      ],
+      "matches": {
+        "length": [
+          "Mount Thor Cliff"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "dem_terrain",
+      "volume_semantics": "not_applicable",
+      "closed_volume_checked": false,
+      "presentation": {
+        "reference_size": 1200.0,
+        "pitch": 5.0,
+        "yaw": 65.0,
+        "roll": 0,
+        "layout_width_factor": 1.3
+      },
+      "processing": {
+        "script": "scripts/build_terrain3d2_models.py",
+        "units": "metres",
+        "vertical_gain": 1.0,
+        "provenance": "content/visualizations/models/sources/terrain3d2/mount-thor/provenance.json",
+        "source_files": {
+          "data.npz": "f5f389dd9f42fcc7192da448b56aefc5f2f85eb6d1f2cdb769c888b923706a77"
+        }
+      },
+      "note": "Public Mapzen elevation tiles in a 1.4 km east-west by 1.0 km north-south aperture across the west face of Thor Peak. Tilezen documents ArcticDEM and Canadian elevation as sources at this latitude; per-tile provider headers are absent, so their precise local mix is not asserted. Horizontal distances and elevations retain metre units; vertical exaggeration is 1\u00d7. A single-valued DEM cannot represent the overhang and rounds the steep face. This is a cropped terrain surface, not a complete rock-face scan or a surveyed 1,200 m cliff-height measurement. No summit-height adjustment or gap filling is performed by this builder. A separate direct ArcticDEM service trial had major no-data holes and was rejected. No crop walls, underside, stand, independent ruler or schematic geometry is included. Mapzen/Tilezen; Polar Geospatial Center / ArcticDEM; Natural Resources Canada / CDEM. ArcticDEM support: NSF-OPP awards 1043681, 1559691, 1542736, 1810976 and 2129685.",
+      "src": "content/visualizations/models/terrain3d2-mount-thor.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 995508,
+      "sha256": "7c24f2eb40fae7c6c51e48f72a1414e8ff18709fe9e873f03fa49ee6860185d1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 36864,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

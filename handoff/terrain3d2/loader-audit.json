@@ -1,0 +1,100 @@
+{
+  "method": "Vendored production GLTFLoader, with placeholder image decoding; native geometry + orthographic rest bounds. No WebGL, texture appearance, perspective, actual explorer or mobile certification.",
+  "models": [
+    {
+      "id": "terrain3d2-appalachian-trail",
+      "registered": true,
+      "nativeExtent": [
+        2193215.75,
+        222580.94750976562,
+        2263471.75
+      ],
+      "normalizedRestExtent": [
+        0.5428297068033785,
+        0.6745835925963293,
+        0.46321521996873294
+      ],
+      "displayedExtentPerValue": 0.6745835925963293,
+      "triangles": 32768,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d2-chicxulub",
+      "registered": true,
+      "nativeExtent": [
+        205709.109375,
+        31200,
+        203970.703125
+      ],
+      "normalizedRestExtent": [
+        1.1428283854166668,
+        1.0830575042782473,
+        0.5478614193456501
+      ],
+      "displayedExtentPerValue": 1.1428283854166668,
+      "triangles": 28084,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d2-el-reno",
+      "registered": true,
+      "nativeExtent": [
+        5100,
+        37.812744140625,
+        5100
+      ],
+      "normalizedRestExtent": [
+        1.2188434924655398,
+        1.1069716986787195,
+        0.5170414179387269
+      ],
+      "displayedExtentPerValue": 1.2188434924655398,
+      "triangles": 41472,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d2-hunga-tonga",
+      "registered": true,
+      "nativeExtent": [
+        64000,
+        61239.327392578125,
+        64000
+      ],
+      "normalizedRestExtent": [
+        1.103448275862069,
+        1.1382576100948192,
+        1.2289410449317748
+      ],
+      "displayedExtentPerValue": 1.1382576100948192,
+      "triangles": 8549,
+      "points": 449,
+      "lines": 0,
+      "pass": true
+    },
+    {
+      "id": "terrain3d2-mount-thor",
+      "registered": true,
+      "nativeExtent": [
+        1400,
+        1361.5203857421875,
+        1000
+      ],
+      "normalizedRestExtent": [
+        1.248311127894691,
+        1.1752430811686216,
+        1.349687861163225
+      ],
+      "displayedExtentPerValue": 1.248311127894691,
+      "triangles": 36864,
+      "points": 0,
+      "lines": 0,
+      "pass": true
+    }
+  ]
+}

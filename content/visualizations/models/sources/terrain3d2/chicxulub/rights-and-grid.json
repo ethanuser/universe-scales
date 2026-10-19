@@ -1,0 +1,12 @@
+{
+  "opened": "2026-10-18",
+  "data_use_source": "https://topex.ucsd.edu/pub/sandwell/SF_geodesy_proposal.pdf",
+  "data_use_page": 38,
+  "data_use_quote": "There are no restrictions on this site",
+  "data_use_scope": "Provider statement about distribution of global bathymetry and gravity grids; the MB-System GPL in the preceding paragraph concerns software, not these numerical data. No claim of a Creative Commons license is made.",
+  "pdf_sha256": "813ee34f5d3258b50048a8288deafcf5b287275b84a640e8aabf7db46f18f303",
+  "grid_documentation_url": "https://topex.ucsd.edu/pub/global_grav_1min/README_V33.txt",
+  "grid_documentation_sha256": "42eb6e9b2e8e9e4e578ab369f5f11117cb9c6df4adcf2ad8a69e428a6fe20de8",
+  "grid_version": "V33.1 as identified by the extractor page on acquisition date",
+  "version_note": "The public directory also has V34 files; the extractor explicitly identifies its gravity grid as V33.1. Native grid sampling is 1 minute; the documented marine low-pass filter has half gain at 16 km. Grid sampling is not effective spatial resolution."
+}
