@@ -1852,8 +1852,9 @@ items:
 - name: Porphyrion
   value: 2.159974307043957e+23
   source: https://www.nature.com/articles/s41586-024-07879-y
-  description: Porphyrion's two black-hole jets span about seven megaparsecs, or twenty-three million
-    light-years, from end to end in projection. They carry energy far outside their host galaxy and into
+  description: Porphyrion's two black-hole jets have an estimated total extent of about seven megaparsecs,
+    or twenty-three million light-years; their directly measured projected span is about 6.43 megaparsecs.
+    They carry energy far outside their host galaxy and into
     the environment of the cosmic web. This measurement follows the extended radio-emitting structure
     rather than the galaxy's stars, making an outflow from one central engine wider than an entire small
     group of galaxies.
@@ -1884,8 +1885,9 @@ items:
 - name: Bootes Void
   value: 3.8262402010492955e+24
   source: https://en.wikipedia.org/wiki/Bo%C3%B6tes_void
-  description: The Bootes Void has a characteristic diameter of about 124 megaparsecs when using an estimate
-    of 62 megaparsecs for its radius. It is a region with far fewer galaxies than a typical volume of
+  description: The Bootes Void has a historical diameter estimate of about 124 megaparsecs using a radius
+    of 62 megaparsecs and H0 = 50 km/s/Mpc; the same redshift span corresponds to about 89 megaparsecs for
+    H0 = 70 km/s/Mpc. It is a region with far fewer galaxies than a typical volume of
     similar size, rather than an empty bubble with a hard wall. Its dimensions depend on how its boundary
     and distance scale are defined, placing absence itself among the largest structures on this scale.
 - name: Baryon Acoustic Oscillation Scale

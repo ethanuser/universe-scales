@@ -661,9 +661,16 @@ Codex workflow (the owner has spare Codex capacity):
   bare primitives left out because their photos/diagrams explained more). Lead added T4 phage and
   mimivirus (Sketchfab CC BY) and a Mycoplasma schematic (scripts/build_mycoplasma_model.py): OpenAI's
   bio filter blocks microbe briefs. 201 of 258 items modeled.
-- Round 5 (started 2026-10-18; the 2026-10-16 launch never ran): earth3d4 (organisms and structures
-  from scans), terrain3d2 (DEM + public GIS), deepsky3d (catalogs and surveys), under the owner's new
-  Codex-only public-data rule (see "Adding or replacing a model"). Briefs: ../universe-scales-codex/briefs.
+- Round 5 (merged 2026-10-18), under the owner's Codex-only public-data rule (see "Adding or replacing
+  a model"): earth3d4 (fruit fly micro-CT, a T. rex replica scan scaled to SUE), terrain3d2
+  (Appalachian Trail, El Reno, Chicxulub gravity), deepsky3d (Gaia LMC and Omega Centauri, Edenhofer
+  dust Orion Arm, 2MRS Local Void, SDSS Bootes Void). Lead rejected after WebGL review: Mount Thor
+  (DEM reads as a draped sheet), Hunga Tonga (sparse floating stereo samples) and the BOSS BAO slice
+  (141 points read as noise); their builders keep them in `UNREGISTERED` with pinned inputs. Dataset
+  wording fixed for Bootes Void (H0 = 50 convention) and Porphyrion (6.43 Mpc projected, ~7 Mpc total,
+  checked against arXiv:2411.08630). 211 of 258 items modeled. Each job's REPORT.md lists what it
+  searched for the 47 photo-only items; most lack openly licensed scans or data, so further models for
+  them are Claude's to build (procedural is allowed for Claude, not Codex).
 
 ## 2026-10-16 radial Length explorer (Claude)
 
@@ -730,7 +737,7 @@ still contains an email address (removing it needs a history rewrite).
 
 ## 2026-10-18 terrain3d2 handoff
 
-- Five direct public-data additions: Mount Thor terrain, the NPS Appalachian
+- (Lead: Thor and Hunga were later unregistered, see round 5 above.) Five direct public-data additions: Mount Thor terrain, the NPS Appalachian
   treadway over relief, an NWS El Reno damage-survey crop over USGS terrain/NAIP,
   measured NASA Hunga Tonga stereo cloud tops, and a Chicxulub gravity-anomaly
   surface. Ten other targets were skipped with specific source/calibration
@@ -755,7 +762,7 @@ still contains an email address (removing it needs a history rewrite).
 
 ## 2026-10-18 deepsky3d handoff
 
-- Six additions from public data: inclined Gaia LMC candidates, bright Gaia Omega
+- (Lead: the BAO slice was later unregistered, see round 5 above.) Six additions from public data: inclined Gaia LMC candidates, bright Gaia Omega
   Centauri members on an explicitly flat distance plane, Edenhofer's actual local
   3D dust grid for Orion Arm, 2MRS Local Void and SDSS Bootes/BOSS BAO sections.
   No synthetic objects, depth, rulers or boundary shapes. Existing models untouched.
