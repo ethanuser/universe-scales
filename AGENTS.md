@@ -258,8 +258,8 @@ first-party ES imports; vendored imports stay unchanged. `--check` fails if any 
 
 ## Adding or replacing a model (proven workflow)
 
-**Owner rule (2026-10-18): public data only, no 3D models made from scratch.** A new model must be
-either an existing openly licensed model or scan (Smithsonian 3D, NASA/PDS, NIH 3D, MorphoSource,
+**Owner rule (2026-10-18), for Codex jobs only: public data only, no 3D models made from scratch.**
+Claude may still build models (procedural, schematic, diagrams). A Codex model must be either an existing openly licensed model or scan (Smithsonian 3D, NASA/PDS, NIH 3D, MorphoSource,
 museum scans, Sketchfab CC BY/CC0, Wikimedia Commons), lightly processed, or a direct conversion of a
 public dataset whose values set the geometry (DEM/bathymetry, star and galaxy catalogs, 3D dust/gas
 maps, CT volumes, public GIS vectors), optionally textured with public imagery. No procedural or
@@ -649,7 +649,7 @@ Codex workflow (the owner has spare Codex capacity):
   bio filter blocks microbe briefs. 201 of 258 items modeled.
 - Round 5 (started 2026-10-18; the 2026-10-16 launch never ran): earth3d4 (organisms and structures
   from scans), terrain3d2 (DEM + public GIS), deepsky3d (catalogs and surveys), under the owner's new
-  public-data-only rule (see "Adding or replacing a model"). Briefs: ../universe-scales-codex/briefs.
+  Codex-only public-data rule (see "Adding or replacing a model"). Briefs: ../universe-scales-codex/briefs.
 
 ## 2026-10-16 radial Length explorer (Claude)
 
