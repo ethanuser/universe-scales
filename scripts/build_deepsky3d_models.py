@@ -244,11 +244,17 @@ def build(kind, output_dir=MODELS):
     return {"id":cfg["id"],"records":len(ids),"bytes":entry["bytes"],"extent":entry["derived_statistics"]["extent"]}
 
 
+# Built but not registered after the lead's WebGL review (2026-10-18): 141 BOSS galaxies are too
+# sparse to read as anything at this scale. The pinned slice stays; the default build skips it.
+UNREGISTERED = {"bao"}
+REGISTERED = [kind for kind in CONFIG if kind not in UNREGISTERED]
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--only",choices=CONFIG)
     args=parser.parse_args()
-    for kind in ([args.only] if args.only else CONFIG):print(json.dumps(build(kind)))
+    for kind in ([args.only] if args.only else REGISTERED):print(json.dumps(build(kind)))
 
 
 if __name__=="__main__":

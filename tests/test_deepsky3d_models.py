@@ -63,7 +63,8 @@ class DeepskyCatalogTests(unittest.TestCase):
 
     def test_final_glbs_contain_exactly_selected_catalog_positions(self):
         expected={"orionarm":15707,"lmc":23420,"omega":7313,"localvoid":471,"bootes":1343,"bao":141}
-        for kind,cfg in sky.CONFIG.items():
+        for kind in sky.REGISTERED:
+            cfg=sky.CONFIG[kind]
             with self.subTest(kind=kind):
                 p,color,alpha,ids=sky.catalog_geometry(kind)
                 self.assertEqual(len(p),expected[kind])
