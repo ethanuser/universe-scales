@@ -1,0 +1,581 @@
+{
+  "checked_on": "2026-10-18",
+  "queries": [
+    {
+      "query": "dust mite",
+      "downloadable_filter": true,
+      "returned": 2,
+      "error": null
+    },
+    {
+      "query": "cat flea",
+      "downloadable_filter": true,
+      "returned": 1,
+      "error": null
+    },
+    {
+      "query": "fruit fly CT",
+      "downloadable_filter": true,
+      "returned": 2,
+      "error": null
+    },
+    {
+      "query": "Paedophryne",
+      "downloadable_filter": true,
+      "returned": 1,
+      "error": null
+    },
+    {
+      "query": "microhylid",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "bumblebee bat",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "bee hummingbird",
+      "downloadable_filter": true,
+      "returned": 4,
+      "error": null
+    },
+    {
+      "query": "titan beetle",
+      "downloadable_filter": true,
+      "returned": 1,
+      "error": null
+    },
+    {
+      "query": "Ornithoptera alexandrae",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "birdwing",
+      "downloadable_filter": true,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "Meganeura",
+      "downloadable_filter": true,
+      "returned": 8,
+      "error": null
+    },
+    {
+      "query": "wandering albatross",
+      "downloadable_filter": true,
+      "returned": 1,
+      "error": null
+    },
+    {
+      "query": "giant pacific octopus",
+      "downloadable_filter": true,
+      "returned": 6,
+      "error": null
+    },
+    {
+      "query": "Tyrannosaurus skeleton scan",
+      "downloadable_filter": true,
+      "returned": 3,
+      "error": null
+    },
+    {
+      "query": "Patagotitan",
+      "downloadable_filter": true,
+      "returned": 3,
+      "error": null
+    },
+    {
+      "query": "titanosaur skeleton",
+      "downloadable_filter": true,
+      "returned": 2,
+      "error": null
+    },
+    {
+      "query": "siphonophore",
+      "downloadable_filter": true,
+      "returned": 15,
+      "error": null
+    },
+    {
+      "query": "Vivian hailstone",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Giza scan",
+      "downloadable_filter": true,
+      "returned": 22,
+      "error": null
+    },
+    {
+      "query": "Kola borehole",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "spider silk",
+      "downloadable_filter": true,
+      "returned": 13,
+      "error": null
+    },
+    {
+      "query": "blu ray AFM",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "DVD AFM",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Danyang Kunshan",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Great Pyramid",
+      "downloadable_filter": false,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "Khufu",
+      "downloadable_filter": false,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "Titanus",
+      "downloadable_filter": false,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "Craseonycteris",
+      "downloadable_filter": false,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "hummingbird",
+      "downloadable_filter": false,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "albatross",
+      "downloadable_filter": false,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "flea",
+      "downloadable_filter": false,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "Dermatophagoides",
+      "downloadable_filter": false,
+      "returned": 2,
+      "error": null
+    },
+    {
+      "query": "Paedophryne",
+      "downloadable_filter": false,
+      "returned": 4,
+      "error": null
+    },
+    {
+      "query": "titanosaur",
+      "downloadable_filter": false,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "Meganeura fossil",
+      "downloadable_filter": false,
+      "returned": 1,
+      "error": null
+    },
+    {
+      "query": "Microhyla",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Gastrophryne",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Kaloula",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Microhylidae",
+      "downloadable_filter": true,
+      "returned": 2,
+      "error": null
+    },
+    {
+      "query": "Melisuga",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "alexandrae",
+      "downloadable_filter": true,
+      "returned": 24,
+      "error": null
+    },
+    {
+      "query": "Dreadnoughtus skeleton",
+      "downloadable_filter": true,
+      "returned": 1,
+      "error": null
+    },
+    {
+      "query": "Argentinosaurus skeleton",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Meganeuropsis",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    },
+    {
+      "query": "Craseonycteris thonglongyai",
+      "downloadable_filter": true,
+      "returned": 0,
+      "error": null
+    }
+  ],
+  "candidate_details": [
+    {
+      "uid": "29ea8fe6ca89488db3affe730818b59d",
+      "name": "Dust Mite",
+      "api": "https://api.sketchfab.com/v3/models/29ea8fe6ca89488db3affe730818b59d",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "38d385d956044fa3a2e9d71bfa7d4e8c",
+      "name": "Dust mite",
+      "api": "https://api.sketchfab.com/v3/models/38d385d956044fa3a2e9d71bfa7d4e8c",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "e343c81f94354dbaacb965d4381b60de",
+      "name": "Cat Flea",
+      "api": "https://api.sketchfab.com/v3/models/e343c81f94354dbaacb965d4381b60de",
+      "downloadable": true,
+      "license_slug": "by-nc",
+      "license_url": "http://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    {
+      "uid": "ad29b897bd2b4e27bb04ab9d31baa117",
+      "name": "Drosophila - Adult Fruit Fly - CT Scan",
+      "api": "https://api.sketchfab.com/v3/models/ad29b897bd2b4e27bb04ab9d31baa117",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "a61c41c9097943c5a4b1570a927ccbad",
+      "name": "Drosophila melanogaster - CT Scan - Point Cloud",
+      "api": "https://api.sketchfab.com/v3/models/a61c41c9097943c5a4b1570a927ccbad",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "e41959eb372f482380813a3323fbf9cb",
+      "name": "Paedophryne verrucosa - diceCT scan",
+      "api": "https://api.sketchfab.com/v3/models/e41959eb372f482380813a3323fbf9cb",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "692a5cdc90d14778b3268a2c15a0f65d",
+      "name": "Cairn's Birdwing",
+      "api": "https://api.sketchfab.com/v3/models/692a5cdc90d14778b3268a2c15a0f65d",
+      "downloadable": true,
+      "license_slug": "by-sa",
+      "license_url": "http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "uid": "7fb48f6cbcd54149bb23837a3ac09b2e",
+      "name": "CC0 \u30df\u30ba\u30c0\u30b3 \ud83d\udc19 North Pacific Giant Octopus",
+      "api": "https://api.sketchfab.com/v3/models/7fb48f6cbcd54149bb23837a3ac09b2e",
+      "downloadable": true,
+      "license_slug": "cc0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "uid": "77e21c4e5d65468bbe11780ae0557b95",
+      "name": "Tyrannosaurus Rex skeleton",
+      "api": "https://api.sketchfab.com/v3/models/77e21c4e5d65468bbe11780ae0557b95",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "0390e81bbbc74aa38b4021a0b58c6115",
+      "name": "Day 279: Full-scale Tyrannosaurus rex skeleton",
+      "api": "https://api.sketchfab.com/v3/models/0390e81bbbc74aa38b4021a0b58c6115",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "5c8e2fdfabe145d3a95c001ae91b1d6e",
+      "name": "T-rex_whole_mm_1-20_scale",
+      "api": "https://api.sketchfab.com/v3/models/5c8e2fdfabe145d3a95c001ae91b1d6e",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "a48cde44e8a045d2968fca28ce62c7ae",
+      "name": "Patagotitan mayorum by MebaLab",
+      "api": "https://api.sketchfab.com/v3/models/a48cde44e8a045d2968fca28ce62c7ae",
+      "downloadable": true,
+      "license_slug": "by-sa",
+      "license_url": "http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "uid": "d32ebb0bac7f4ae983b6a6c558519934",
+      "name": "Patagotitan mayorum Life-size Landmark Replica",
+      "api": "https://api.sketchfab.com/v3/models/d32ebb0bac7f4ae983b6a6c558519934",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "5b8704c6512f4829b1c9553f7280d79b",
+      "name": "Patagotitan",
+      "api": "https://api.sketchfab.com/v3/models/5b8704c6512f4829b1c9553f7280d79b",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "fd2e4e9b94f247bea462cfd112cf43cd",
+      "name": "DeepPIV 3DR - Slender siphonophore (Bargmannia)",
+      "api": "https://api.sketchfab.com/v3/models/fd2e4e9b94f247bea462cfd112cf43cd",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "9e5d3673a072496396ea01c70c288ddf",
+      "name": "DeepPIV 3DR - Bird's head siphonophore (Resomia)",
+      "api": "https://api.sketchfab.com/v3/models/9e5d3673a072496396ea01c70c288ddf",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "1b68540b71fc435c92614963a022a00c",
+      "name": "DeepPIV 3DR - Giant siphonophore (Praya dubia)",
+      "api": "https://api.sketchfab.com/v3/models/1b68540b71fc435c92614963a022a00c",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "bf0b8d2378914a66a2e1f94f63d63543",
+      "name": "Lab 3DR - Common siphonophore (Nanomia bijuga)",
+      "api": "https://api.sketchfab.com/v3/models/bf0b8d2378914a66a2e1f94f63d63543",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "185e494500cd4b8b80f15306ce5a64d8",
+      "name": "DeepPIV 3DR - Thorny siphonophore (Vogtia sp.)",
+      "api": "https://api.sketchfab.com/v3/models/185e494500cd4b8b80f15306ce5a64d8",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "18d3bf13e5474c36aa1e655ce03c1c60",
+      "name": "DeepPIV 3DR - Red siphonophore (Marrus)",
+      "api": "https://api.sketchfab.com/v3/models/18d3bf13e5474c36aa1e655ce03c1c60",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "7a17175b3042472cb22b4a4c557ddee1",
+      "name": "DeepPIV 3DR - Siphonophore (Erenna richardi)",
+      "api": "https://api.sketchfab.com/v3/models/7a17175b3042472cb22b4a4c557ddee1",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "2b6dca3f92a6462c822bcf70f486092d",
+      "name": "DeepPIV 3DR - String siphonophore (Apolemia)",
+      "api": "https://api.sketchfab.com/v3/models/2b6dca3f92a6462c822bcf70f486092d",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "143204bc898e4452b773f0d3490a6fea",
+      "name": "DeepPIV 3DR - Slender siphonophore (Bargmannia)",
+      "api": "https://api.sketchfab.com/v3/models/143204bc898e4452b773f0d3490a6fea",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "142856c1663c49669cc2c8114ecb0253",
+      "name": "DeepPIV 3DR - Knobby siphonophore (Halistemma)",
+      "api": "https://api.sketchfab.com/v3/models/142856c1663c49669cc2c8114ecb0253",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "669f7f29f10846529d24e62316a224e7",
+      "name": "DeepPIV 3DR - Crystal siphonophore (Frillagalma)",
+      "api": "https://api.sketchfab.com/v3/models/669f7f29f10846529d24e62316a224e7",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "3dc944d5985d4047a9b027dae64c54aa",
+      "name": "DeepPIV 3DR - Christmas tree siphonophore",
+      "api": "https://api.sketchfab.com/v3/models/3dc944d5985d4047a9b027dae64c54aa",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "7c25c69d83604e12b34c96f515aecaf2",
+      "name": "DeepPIV 3DR - Siphonophore (Apolemia rubriversa)",
+      "api": "https://api.sketchfab.com/v3/models/7c25c69d83604e12b34c96f515aecaf2",
+      "downloadable": true,
+      "license_slug": "by-nc-sa",
+      "license_url": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    {
+      "uid": "4a9d9b8553b14ccda32033cbb6c2c9b7",
+      "name": "Marrus/Deep-Sea Jellyfish (Siphonophora)",
+      "api": "https://api.sketchfab.com/v3/models/4a9d9b8553b14ccda32033cbb6c2c9b7",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "3d522a466930425aaf32ddd822b1d051",
+      "name": "fd01.c6dd.e2f1.87fe.abc7.83fa.3ed1.4b5",
+      "api": "https://api.sketchfab.com/v3/models/3d522a466930425aaf32ddd822b1d051",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "871c039a49d44adcbd0b1a4afa8c6bd6",
+      "name": "Hummingbird",
+      "api": "https://api.sketchfab.com/v3/models/871c039a49d44adcbd0b1a4afa8c6bd6",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "7dcfe97830d64b1ba45492fca6dfc9b2",
+      "name": "Albatross",
+      "api": "https://api.sketchfab.com/v3/models/7dcfe97830d64b1ba45492fca6dfc9b2",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "4a251113722f4d969b6cf2ca5f35c502",
+      "name": "The Great Pyramid of Giza",
+      "api": "https://api.sketchfab.com/v3/models/4a251113722f4d969b6cf2ca5f35c502",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "eb0e2b6782ee4309892947f044a8eecd",
+      "name": "Flea",
+      "api": "https://api.sketchfab.com/v3/models/eb0e2b6782ee4309892947f044a8eecd",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "e92f3170453345eca475776dfe1dedec",
+      "name": "Meganeura monyi",
+      "api": "https://api.sketchfab.com/v3/models/e92f3170453345eca475776dfe1dedec",
+      "downloadable": false,
+      "license_slug": null,
+      "license_url": null
+    },
+    {
+      "uid": "71fd3c8c04a640e5b6ef5577cc8878be",
+      "name": "Dreadnoughtus",
+      "api": "https://api.sketchfab.com/v3/models/71fd3c8c04a640e5b6ef5577cc8878be",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "1c5be391573e4753917239ab091f2a2a",
+      "name": "Paedophryne amauensis LSUMZ95004",
+      "api": "https://api.sketchfab.com/v3/models/1c5be391573e4753917239ab091f2a2a",
+      "downloadable": false,
+      "license_slug": null,
+      "license_url": null
+    },
+    {
+      "uid": "d95bbc16552c4f859fdc1409f4a709ad",
+      "name": "Phrynomantis annectens - diceCT frog",
+      "api": "https://api.sketchfab.com/v3/models/d95bbc16552c4f859fdc1409f4a709ad",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "uid": "efd757df9f3e493e9e741971e63deeb8",
+      "name": "Dreadnoughtus skeleton",
+      "api": "https://api.sketchfab.com/v3/models/efd757df9f3e493e9e741971e63deeb8",
+      "downloadable": true,
+      "license_slug": "by",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

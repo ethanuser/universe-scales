@@ -1,0 +1,17 @@
+{
+  "method": "Two manually identified surface vertices on the original CT mesh: posterior abdomen tip and anterior head surface; Euclidean distance in centered source scene units. Abdomen-tip selection refined to the rearmost source vertex in a restricted abdomen patch, excluding legs and wings. Legs, bristles and wings are excluded from body-length calibration and retained in geometry. See annotated CPU calibration preview.",
+  "source_staged_sha256": "00e14941b30e3a017426984ec45372972501235bc41d54e7e193f5ddccb7ef6e",
+  "landmarks_centered_source_units": [
+    [
+      0.05405052378773689,
+      -0.14770430140197266,
+      -0.8747057020664216
+    ],
+    [
+      0.002302415668964386,
+      0.26014897413551785,
+      0.849066585302353
+    ]
+  ],
+  "reference_size": 1.7721210623885464
+}
