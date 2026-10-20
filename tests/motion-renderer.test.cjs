@@ -341,6 +341,25 @@ test('failed models and registry requests retain real photos rather than drawn s
     }
 });
 
+test('orbital models translate at the stored rate without passing that rate to axial spin', () => {
+    const draws = [];
+    class ModelStage {
+        entry() { return null; }
+        begin() {}
+        finish() {}
+        drawOrbit(...args) { draws.push(args); return {center: true, body: true}; }
+    }
+    const { ctx } = fixture('angular-velocity', [2*Math.PI], ['Earth orbit around the Sun'], {models: {ModelStage}});
+    ctx.renderer.render(.25);
+    const [item,x,y,bodyX,bodyY] = draws.at(-1);
+    assert.equal(item.name, 'Earth orbit around the Sun');
+    assert.equal(x,500); assert.equal(y,220);
+    assert.ok(Math.abs(bodyX-500)<1e-9);
+    assert.equal(bodyY,330);
+    assert.equal(ctx.stage.all(node => node.tag === 'image').length, 0);
+    assert.equal(ctx.stage.all(node => node.tag === 'circle' && node.attributes.class === 'shape').length, 0);
+});
+
 test('broken image URLs are not retried on every frame and never become rotor drawings', async () => {
     const { ctx } = fixture('angular-velocity', [1], ['Ceiling fan'], { image: () => 'fallback.jpg' });
     await settle();

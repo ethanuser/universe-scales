@@ -9,6 +9,7 @@ import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import './neuron-animation.js?v=a744312505';
 import { prepareModelPoints } from './model-points.js?v=a7a090deac';
 import { angularEntry, angularScene } from './angular-models.js?v=531edbd2cb';
+import { orbitalAssets, orbitalEntry } from './angular-orbits.js?v=b50491e0cc';
 import { createAngularRig, angularSweepBounds } from './angular-rig.js?v=8f269aade6';
 
 const models = new Map();
@@ -281,9 +282,34 @@ export class ModelStage {
         return this.environmentMap;
     }
     entry(item) {
-        if (this.ctx.dimension === 'angular-velocity') return angularEntry(item, this.entries);
+        if (this.orbitEntries?.has(item)) return this.orbitEntries.get(item);
+        if (this.ctx.dimension === 'angular-velocity') return orbitalEntry(item, this.entries) || angularEntry(item, this.entries);
         return (this.ctx.dimension === 'length' && proceduralLength[item.name]) ||
             this.entries.find(e => e.matches?.[this.ctx.dimension]?.includes(item.name));
+    }
+    orbitalBodies(item) {
+        if (this.ctx.dimension !== 'angular-velocity') return null;
+        this.orbitItems ||= new Map();
+        this.orbitEntries ||= new Map();
+        if (!this.orbitItems.has(item)) {
+            const assets = orbitalAssets(item, this.entries);
+            if (!assets) return null;
+            const body = { name: item.name }, center = { name: assets.centerName };
+            // Distinct identities prevent two comparison lanes from moving the
+            // same instance. Geometry loading still shares the source asset.
+            this.orbitEntries.set(body, { ...assets.body, angular_motion: undefined });
+            this.orbitEntries.set(center, { ...assets.center, angular_motion: undefined });
+            this.orbitItems.set(item, { body, center });
+        }
+        return this.orbitItems.get(item);
+    }
+    drawOrbit(item, x, y, bodyX, bodyY) {
+        const bodies = this.orbitalBodies(item);
+        if (!bodies) return { center: false, body: false };
+        return {
+            center: this.draw(bodies.center, x, y, 62, undefined, true),
+            body: this.draw(bodies.body, bodyX, bodyY, item.name === 'ISS orbit' ? 68 : 48, undefined, true)
+        };
     }
     pick(clientX, clientY) {
         if (!this.renderer || this.disposed) return null;
@@ -381,7 +407,7 @@ export class ModelStage {
             + 130 * THREE.MathUtils.clamp((exponent + 1) / 7, 0, 1);
         for (const instance of this.instances.values()) if (instance) instance.visible = false;
     }
-    draw(item, x, y, size, phase) {
+    draw(item, x, y, size, phase, centered = false) {
         const entry = this.entry(item);
         if (!entry || this.unavailable || this.disposed) return false;
         if (!this.instances.has(item)) {
@@ -448,6 +474,11 @@ export class ModelStage {
         if (entry.angular_motion) {
             const extent = instance.userData.restExtent;
             size = Math.min(size, 240 / extent.y, 310 / extent.x);
+        }
+        if (centered) {
+            const extent = instance.userData.restExtent;
+            size /= Math.max(extent.x, extent.y);
+            y += extent.y * size / 2;
         }
         const pose = entry.presentation || {};
         const rotation = this.rotations.get(item) || { yaw: 0, pitch: 0 };
@@ -684,6 +715,8 @@ export class ModelStage {
         for (const instance of this.instances.values())
             for (const overlay of instance?.userData.hoverOverlays || []) overlay.material.dispose();
         this.instances.clear();
+        this.orbitItems?.clear();
+        this.orbitEntries?.clear();
     }
 }
 window.ScaleModels = { ModelStage, convexHull, insideHull };

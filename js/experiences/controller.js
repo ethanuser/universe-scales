@@ -542,6 +542,8 @@
                 addSource(model?.link_label || (model?.procedural ? 'Model basis' : '3D model'), modelSource);
             if (model?.basis_url && model.basis_url !== modelSource && model.basis_url !== item.source)
                 addSource('Model basis', model.basis_url);
+            for (const source of model?.additional_sources || [])
+                addSource(source.label || 'Model source', source.url);
             if (sources.childNodes.length) this.detail.append(sources);
             this.detail.scrollTop = 0;
         }

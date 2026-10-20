@@ -268,19 +268,20 @@
                     class: 'motion-phase-guide'
                 });
                 if (kind === 'orbit') {
-                    ctx.stage.append(
-                        spoke,
-                        svg('circle', { cx: x, cy: y, r: 9, class: 'shape' })
-                    );
+                    const bodyX = x + 110 * Math.cos(screenPhase), bodyY = y - 110 * Math.sin(screenPhase);
+                    const bodies = angular && modelStage?.drawOrbit?.(item, x, y, bodyX, bodyY);
+                    ctx.stage.append(spoke);
+                    if (!bodies?.center) ctx.stage.append(svg('circle', { cx: x, cy: y, r: 9, class: 'shape' }));
                     ctx.object(
                         ctx.stage,
                         item,
-                        x + 110 * Math.cos(screenPhase),
-                        y - 110 * Math.sin(screenPhase) + 25,
+                        bodyX,
+                        bodyY + 25,
                         50,
-                        50
+                        50,
+                        { image: !bodies?.body }
                     );
-                    if (angular) text(x, y + 30, /Moon|ISS/.test(item.name) ? 'Earth' : 'Sun');
+                    if (angular) text(x, y + 50, /Moon|ISS/.test(item.name) ? 'Earth' : 'Sun');
                 } else {
                     if (!modeled) {
                         referencePhoto(item, x, y);

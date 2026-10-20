@@ -1,5 +1,25 @@
 # Agent Handoff Guide
 
+## 2026-10-20 angular sourced-body continuation
+
+- All eight orbital observations now reuse existing local NASA/public-source
+  assets: Pluto, Mars, Earth, Venus, Mercury, Moon (two labels), and ISS. Sun/Earth
+  centers also use their existing models. No mesh, dataset value or plaque changed.
+- `angular-orbits.js` maps source IDs; `ModelStage.orbitalBodies` keeps distinct
+  per-lane instances. `drawOrbit` positions/fits them without axial spin. Existing
+  circular mean-speed guides remain illustrative, not ephemerides or size scales.
+- Both asset source links appear in details. Source scope, assumptions and the
+  Claude collaboration boundary: `sources/angular-orbits.md`. Existing authored
+  mechanisms and Earth/Jupiter/Saturn spin rigs are preserved.
+- Model lab angular mode now checks both orbital bodies at four phases, including
+  fixed centers/attitudes and moving orbiters. Desktop and mobile-width orbital
+  captures succeeded in this main-checkout session; earlier worktree sandbox
+  failures do not apply to these new captures.
+- Verification: 230 Node tests; all 38 displayed angular observations pass the
+  browser motion audit (8 orbital, 30 spin). All 200 GLB asset checks and content
+  hashes pass. Mobile gesture/fullscreen checks pass, but the suite exits nonzero
+  for unrelated missing `length_hyperion_moon` original/thumbnail requests.
+
 ## 2026-10-18 earth3d4 handoff
 
 - Public scans only: ETAIN's female Drosophila micro-CT and Rigsters' T. rex

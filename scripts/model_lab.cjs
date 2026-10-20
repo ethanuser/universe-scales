@@ -438,6 +438,37 @@ const commands = {
                     [...view.settings.querySelectorAll('button')].find(button => button.textContent === 'Fit time to item').click();
                     return !!view.modelEntry(view.item);
                 }, index);
+                if (modeled && /\borbit\b/i.test(name)) {
+                    await page.waitForFunction(() => {
+                        const view = app.experiences, stage = view.renderer.modelStage;
+                        const bodies = stage.orbitalBodies(view.item);
+                        return bodies && stage.instances.get(bodies.body) && stage.instances.get(bodies.center);
+                    }, null, { timeout: 30000 });
+                    const poses = [];
+                    for (const [sample, phase] of [0, Math.PI / 2, Math.PI, 3 * Math.PI / 2].entries()) {
+                        poses.push(await page.evaluate(phase => {
+                            const view = app.experiences, stage = view.renderer.modelStage;
+                            view.clock.time = phase / view.item.value; view.renderer.render(view.clock.time);
+                            const bodies = stage.orbitalBodies(view.item);
+                            const state = item => {
+                                const model = stage.instances.get(item);
+                                return { position: model.position.toArray(), rotation: model.quaternion.toArray(),
+                                    visible: model.visible, source: stage.entry(item).source, rig: !!model.userData.angularRig };
+                            };
+                            return { body: state(bodies.body), center: state(bodies.center) };
+                        }, phase));
+                        await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, `${prefix}-${sample}.png`) });
+                    }
+                    const centerFixed = poses.every(pose => JSON.stringify(pose.center) === JSON.stringify(poses[0].center));
+                    const fixedAttitude = poses.every(pose => JSON.stringify(pose.body.rotation) === JSON.stringify(poses[0].body.rotation));
+                    const moved = poses.every((pose,i) => !i || JSON.stringify(pose.body.position) !== JSON.stringify(poses[i-1].body.position));
+                    const passed = centerFixed && fixedAttitude && moved && poses.every(pose =>
+                        pose.body.visible && pose.center.visible && !pose.body.rig && !pose.center.rig);
+                    results.push({ ...observation, orbital: true, passed, poses });
+                    if (!passed) throw new Error(`Orbital body placement failed: ${name}`);
+                    console.log(`${index}: ${name}: sourced 3D bodies, fixed center/attitude, moving orbiter`);
+                    continue;
+                }
                 if (!modeled) {
                     const orbital = /\borbit\b/i.test(name);
                     for (const [sample, phase] of [0, Math.PI / 2, Math.PI, 3 * Math.PI / 2, ...seconds.map(time => time * observation.value)].entries()) {
