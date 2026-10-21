@@ -177,55 +177,6 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:hardness:entity-fingernail-hardness
-  name: Fingernail
-  value: 25000000.0
-  description: Fingernail hardness is a familiar body-scale material reference.
-  description_format: markdown
-  summary_short: Fingernail hardness is a familiar body-scale material reference.
-  description_medium: Fingernail hardness is a familiar body-scale material reference.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Fingernail
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted MPa to Pa.
-      method: derived
-      original_value_text: '25000000.0'
-      source_basis: Representative hardness.
-      source_unit: MPa
-      source_url: https://en.wikipedia.org/wiki/Nail_(anatomy)
-      source_value_text: 25 MPa
-  source: https://en.wikipedia.org/wiki/Nail_(anatomy)
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-nail-anatomy
-    url: https://en.wikipedia.org/wiki/Nail_(anatomy)
-    title: Nail (anatomy)
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:hardness:entity-wood-hardness
   name: Wood
   value: 30000000.0
@@ -257,55 +208,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-wood
     url: https://en.wikipedia.org/wiki/Wood
     title: Wood
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
-- id: obs:hardness:entity-lead-hardness
-  name: Lead
-  value: 50000000.0
-  description: Lead is a canonical very soft metal.
-  description_format: markdown
-  summary_short: Lead is a canonical very soft metal.
-  description_medium: Lead is a canonical very soft metal.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Lead
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted MPa to Pa.
-      method: derived
-      original_value_text: '50000000.0'
-      source_basis: Representative indentation hardness.
-      source_unit: MPa
-      source_url: https://en.wikipedia.org/wiki/Lead
-      source_value_text: 50 MPa
-  source: https://en.wikipedia.org/wiki/Lead
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-lead
-    url: https://en.wikipedia.org/wiki/Lead
-    title: Lead
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -569,55 +471,6 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:hardness:entity-concrete-hardness
-  name: Concrete
-  value: 500000000.0
-  description: Concrete is relatively hard in indentation terms but brittle.
-  description_format: markdown
-  summary_short: Concrete is relatively hard in indentation terms but brittle.
-  description_medium: Concrete is relatively hard in indentation terms but brittle.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Concrete
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted MPa to Pa.
-      method: derived
-      original_value_text: '500000000.0'
-      source_basis: Representative hardness.
-      source_unit: MPa
-      source_url: https://en.wikipedia.org/wiki/Concrete
-      source_value_text: 500 MPa
-  source: https://en.wikipedia.org/wiki/Concrete
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-concrete
-    url: https://en.wikipedia.org/wiki/Concrete
-    title: Concrete
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:hardness:scenario-hardness-brass
   name: Brass
   value: 500000000.0
@@ -716,55 +569,6 @@ items:
   wikidata_qid: null
   value_type: derived
   qualifiers: {}
-- id: obs:hardness:entity-brass-hardness
-  name: Brass
-  value: 1500000000.0
-  description: Brass is harder than aluminum but still well below hardened steels.
-  description_format: markdown
-  summary_short: Brass is harder than aluminum but still well below hardened steels.
-  description_medium: Brass is harder than aluminum but still well below hardened steels.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Brass
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted GPa to Pa.
-      method: derived
-      original_value_text: '1500000000.0'
-      source_basis: Representative hardness.
-      source_unit: GPa
-      source_url: https://en.wikipedia.org/wiki/Brass
-      source_value_text: 1.5 GPa
-  source: https://en.wikipedia.org/wiki/Brass
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-brass
-    url: https://en.wikipedia.org/wiki/Brass
-    title: Brass
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:hardness:scenario-hardness-mild-steel
   name: Mild steel
   value: 1500000000.0
@@ -814,55 +618,6 @@ items:
   value_type: measured
   qualifiers:
     measurement: hardness
-- id: obs:hardness:entity-mild-steel-hardness
-  name: Mild steel
-  value: 2000000000.0
-  description: Mild steel gives a familiar engineering hardness reference.
-  description_format: markdown
-  summary_short: Mild steel gives a familiar engineering hardness reference.
-  description_medium: Mild steel gives a familiar engineering hardness reference.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Mild steel
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted GPa to Pa.
-      method: derived
-      original_value_text: '2000000000.0'
-      source_basis: Representative hardness.
-      source_unit: GPa
-      source_url: https://en.wikipedia.org/wiki/Steel
-      source_value_text: 2 GPa
-  source: https://en.wikipedia.org/wiki/Steel
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-steel
-    url: https://en.wikipedia.org/wiki/Steel
-    title: Steel
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:hardness:entity-stainless-steel-hardness
   name: Stainless steel
   value: 2500000000.0
@@ -1108,55 +863,6 @@ items:
   value_type: measured
   qualifiers:
     measurement: hardness
-- id: obs:hardness:entity-quartz-hardness
-  name: Quartz
-  value: 11000000000.0
-  description: Quartz is a classic mineral-hardness reference.
-  description_format: markdown
-  summary_short: Quartz is a classic mineral-hardness reference.
-  description_medium: Quartz is a classic mineral-hardness reference.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Quartz
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted GPa to Pa.
-      method: derived
-      original_value_text: '11000000000.0'
-      source_basis: Representative hardness.
-      source_unit: GPa
-      source_url: https://en.wikipedia.org/wiki/Quartz
-      source_value_text: 11 GPa
-  source: https://en.wikipedia.org/wiki/Quartz
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-quartz
-    url: https://en.wikipedia.org/wiki/Quartz
-    title: Quartz
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:hardness:entity-silicon-hardness
   name: Silicon
   value: 12000000000.0
@@ -1237,55 +943,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-zirconium-dioxide
     url: https://en.wikipedia.org/wiki/Zirconium_dioxide
     title: Zirconium dioxide
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
-- id: obs:hardness:entity-tungsten-carbide-hardness
-  name: Tungsten carbide
-  value: 17000000000.0
-  description: Carbides sit in the very-hard-tool-material regime.
-  description_format: markdown
-  summary_short: Carbides sit in the very-hard-tool-material regime.
-  description_medium: Carbides sit in the very-hard-tool-material regime.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Tungsten carbide
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted GPa to Pa.
-      method: derived
-      original_value_text: '17000000000.0'
-      source_basis: Representative hardness.
-      source_unit: GPa
-      source_url: https://en.wikipedia.org/wiki/Tungsten_carbide
-      source_value_text: 17 GPa
-  source: https://en.wikipedia.org/wiki/Tungsten_carbide
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-tungsten-carbide
-    url: https://en.wikipedia.org/wiki/Tungsten_carbide
-    title: Tungsten carbide
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -1433,55 +1090,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-cubic-boron-nitride
     url: https://en.wikipedia.org/wiki/Cubic_boron_nitride
     title: Cubic boron nitride
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-hardness-json
-    url: repo://dataset/raw/curated/hardness.json
-    title: dataset/raw/curated/hardness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
-- id: obs:hardness:entity-diamond-hardness
-  name: Diamond
-  value: 80000000000.0
-  description: Diamond remains the iconic hardness benchmark.
-  description_format: markdown
-  summary_short: Diamond remains the iconic hardness benchmark.
-  description_medium: Diamond remains the iconic hardness benchmark.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Diamond
-    ingest_source: dataset/raw/curated/hardness.json
-    source_trace:
-      conversion_note: Converted GPa to Pa.
-      method: derived
-      original_value_text: '80000000000.0'
-      source_basis: Representative hardness.
-      source_unit: GPa
-      source_url: https://en.wikipedia.org/wiki/Diamond
-      source_value_text: 80 GPa
-  source: https://en.wikipedia.org/wiki/Diamond
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-diamond
-    url: https://en.wikipedia.org/wiki/Diamond
-    title: Diamond
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

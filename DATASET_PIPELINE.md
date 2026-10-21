@@ -161,6 +161,23 @@ Audit generated descriptions against the museum-plaque style standard:
 ./venv/bin/python scripts/dataset/audit_content.py --dimension length --dimension costs --dimension duration --dimension energy --dimension temperature
 ```
 
+## Duplicate Examples
+
+Display selection keeps one representative of a repeated example. Generic
+quantity wording and conversion/derivation metadata do not create a separate
+example. Explicit conditions, dates and different measurement definitions remain
+part of the identity; equal numerical values alone never imply duplication.
+
+Known naming variants are declared in a dimension profile's `display_equivalents`
+list. Each group supplies `labels` and optionally a `preferred_id` for the retained
+observation. This covers cases such as Moon orbit/Moon orbit around Earth and
+rounded/period-derived clock-hand rates. Otherwise the existing source-quality
+and content ranking chooses the representative. Alternate observations and their
+source traces remain queryable with `selected_for_display: false`.
+
+Scoped rebuilds refresh both `exports/frontend/<dimension>.yaml` and its `data/`
+deployment copy for every dimension, including those outside the flagship set.
+
 ## Contributor Workflow
 
 1. Add or revise curated observations in `dataset/raw/curated/<dimension>.json`.

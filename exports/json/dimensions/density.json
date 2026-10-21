@@ -2,20 +2,22 @@
   "base_unit": "kilograms_per_cubic_meter",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 41,
-    "candidate_shortfall_to_preferred_target": 9,
+    "candidate_count": 40,
+    "candidate_shortfall_to_preferred_target": 10,
+    "duplicate_candidate_count": 0,
     "empty_bin_count": 17,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 40,
     "required_min_items": 24,
-    "selected_count": 41,
+    "selected_count": 40,
     "selected_primary_count": 7,
-    "selected_secondary_count": 34,
+    "selected_secondary_count": 33,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 41
+      "secondary_reference": 40
     },
-    "target_selected_count": 41
+    "target_selected_count": 40
   },
   "description_format": "markdown",
   "dimension": "density",
@@ -470,62 +472,6 @@
         }
       ],
       "summary_short": "Density of dry air near sea level under standard conditions.",
-      "value": 1.225,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Representative density of dry air at sea level.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Representative density of dry air at sea level.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Dry air at sea level",
-        "ingest_source": "dataset/raw/curated/density.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "1.225",
-          "source_url": "https://en.wikipedia.org/wiki/Density_of_air"
-        }
-      },
-      "hook": null,
-      "id": "obs:density:scenario-dry-air-sea-level-density",
-      "name": "Dry air at sea level",
-      "qualifiers": {
-        "measurement": "gas density"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Density_of_air",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-density-of-air",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Density of air",
-          "url": "https://en.wikipedia.org/wiki/Density_of_air"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/density.json",
-          "url": "repo://dataset/raw/curated/density.json"
-        }
-      ],
-      "summary_short": "Representative density of dry air at sea level.",
       "value": 1.225,
       "value_type": "measured",
       "wikidata_qid": null

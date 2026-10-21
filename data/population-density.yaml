@@ -81,55 +81,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:population-density:entity-population-density-mongolia
-  name: Mongolia
-  value: 2.0
-  description: Mongolia is a classic low-density national example.
-  description_format: markdown
-  summary_short: Mongolia is a classic low-density national example.
-  description_medium: Mongolia is a classic low-density national example.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Mongolia
-    ingest_source: dataset/raw/curated/population-density.json
-    source_trace:
-      derivation_note: population / land area
-      method: derived
-      original_value_text: '2.0'
-      source_basis: Population divided by land area.
-      source_unit: people/km^2
-      source_url: https://en.wikipedia.org/wiki/Mongolia
-      source_value_text: ~2
-  source: https://en.wikipedia.org/wiki/Mongolia
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-mongolia
-    url: https://en.wikipedia.org/wiki/Mongolia
-    title: Mongolia
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-population-density-json
-    url: repo://dataset/raw/curated/population-density.json
-    title: dataset/raw/curated/population-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:population-density:entity-population-density-mongolia:2
   name: Mongolia
   value: 2.2
@@ -161,55 +112,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-mongolia
     url: https://en.wikipedia.org/wiki/Mongolia
     title: Mongolia
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-population-density-json
-    url: repo://dataset/raw/curated/population-density.json
-    title: dataset/raw/curated/population-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:population-density:entity-population-density-namibia
-  name: Namibia
-  value: 3.0
-  description: Namibia anchors the very sparse end of modern national population density.
-  description_format: markdown
-  summary_short: Namibia anchors the very sparse end of modern national population density.
-  description_medium: Namibia anchors the very sparse end of modern national population density.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Namibia
-    ingest_source: dataset/raw/curated/population-density.json
-    source_trace:
-      derivation_note: population / land area
-      method: derived
-      original_value_text: '3.0'
-      source_basis: Population divided by land area.
-      source_unit: people/km^2
-      source_url: https://en.wikipedia.org/wiki/Namibia
-      source_value_text: ~3.0
-  source: https://en.wikipedia.org/wiki/Namibia
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-namibia
-    url: https://en.wikipedia.org/wiki/Namibia
-    title: Namibia
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -596,55 +498,6 @@ items:
       source_unit: people/km^2
       source_url: https://en.wikipedia.org/wiki/Germany
       source_value_text: ~233
-  source: https://en.wikipedia.org/wiki/Germany
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-germany
-    url: https://en.wikipedia.org/wiki/Germany
-    title: Germany
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-population-density-json
-    url: repo://dataset/raw/curated/population-density.json
-    title: dataset/raw/curated/population-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:population-density:entity-population-density-germany
-  name: Germany
-  value: 240.0
-  description: Germany is densely populated for a large industrial state.
-  description_format: markdown
-  summary_short: Germany is densely populated for a large industrial state.
-  description_medium: Germany is densely populated for a large industrial state.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Germany
-    ingest_source: dataset/raw/curated/population-density.json
-    source_trace:
-      derivation_note: population / land area
-      method: derived
-      original_value_text: '240'
-      source_basis: Population divided by land area.
-      source_unit: people/km^2
-      source_url: https://en.wikipedia.org/wiki/Germany
-      source_value_text: ~240
   source: https://en.wikipedia.org/wiki/Germany
   source_count: 2
   sources:
@@ -1141,55 +994,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-hong-kong
     url: https://en.wikipedia.org/wiki/Hong_Kong
     title: Hong Kong
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-population-density-json
-    url: repo://dataset/raw/curated/population-density.json
-    title: dataset/raw/curated/population-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:population-density:entity-population-density-singapore
-  name: Singapore
-  value: 8000.0
-  description: Singapore is a dense city-state benchmark.
-  description_format: markdown
-  summary_short: Singapore is a dense city-state benchmark.
-  description_medium: Singapore is a dense city-state benchmark.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Singapore
-    ingest_source: dataset/raw/curated/population-density.json
-    source_trace:
-      derivation_note: population / land area
-      method: derived
-      original_value_text: '8000'
-      source_basis: Population divided by land area.
-      source_unit: people/km^2
-      source_url: https://en.wikipedia.org/wiki/Singapore
-      source_value_text: ~8,000
-  source: https://en.wikipedia.org/wiki/Singapore
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-singapore
-    url: https://en.wikipedia.org/wiki/Singapore
-    title: Singapore
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

@@ -2,20 +2,22 @@
   "base_unit": "people_per_square_kilometer",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 32,
-    "candidate_shortfall_to_preferred_target": 18,
-    "empty_bin_count": 10,
+    "candidate_count": 28,
+    "candidate_shortfall_to_preferred_target": 22,
+    "duplicate_candidate_count": 4,
+    "empty_bin_count": 11,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 32,
     "required_min_items": 24,
-    "selected_count": 32,
-    "selected_primary_count": 14,
-    "selected_secondary_count": 18,
+    "selected_count": 28,
+    "selected_primary_count": 13,
+    "selected_secondary_count": 15,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 32
+      "secondary_reference": 28
     },
-    "target_selected_count": 32
+    "target_selected_count": 28
   },
   "description_format": "markdown",
   "dimension": "population-density",
@@ -85,64 +87,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Mongolia is a classic low-density national example.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Mongolia is a classic low-density national example.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Mongolia",
-        "ingest_source": "dataset/raw/curated/population-density.json",
-        "source_trace": {
-          "derivation_note": "population / land area",
-          "method": "derived",
-          "original_value_text": "2.0",
-          "source_basis": "Population divided by land area.",
-          "source_unit": "people/km^2",
-          "source_url": "https://en.wikipedia.org/wiki/Mongolia",
-          "source_value_text": "~2"
-        }
-      },
-      "hook": null,
-      "id": "obs:population-density:entity-population-density-mongolia",
-      "name": "Mongolia",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Mongolia",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-mongolia",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Mongolia",
-          "url": "https://en.wikipedia.org/wiki/Mongolia"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-population-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/population-density.json",
-          "url": "repo://dataset/raw/curated/population-density.json"
-        }
-      ],
-      "summary_short": "Mongolia is a classic low-density national example.",
-      "value": 2.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "Mongolia is one of the sparsest inhabited countries on Earth.",
       "description_format": "markdown",
       "description_long": null,
@@ -195,64 +139,6 @@
       ],
       "summary_short": "Mongolia is one of the sparsest inhabited countries on Earth.",
       "value": 2.2,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Namibia anchors the very sparse end of modern national population density.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Namibia anchors the very sparse end of modern national population density.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Namibia",
-        "ingest_source": "dataset/raw/curated/population-density.json",
-        "source_trace": {
-          "derivation_note": "population / land area",
-          "method": "derived",
-          "original_value_text": "3.0",
-          "source_basis": "Population divided by land area.",
-          "source_unit": "people/km^2",
-          "source_url": "https://en.wikipedia.org/wiki/Namibia",
-          "source_value_text": "~3.0"
-        }
-      },
-      "hook": null,
-      "id": "obs:population-density:entity-population-density-namibia",
-      "name": "Namibia",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Namibia",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-namibia",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Namibia",
-          "url": "https://en.wikipedia.org/wiki/Namibia"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-population-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/population-density.json",
-          "url": "repo://dataset/raw/curated/population-density.json"
-        }
-      ],
-      "summary_short": "Namibia anchors the very sparse end of modern national population density.",
-      "value": 3.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -717,64 +603,6 @@
       ],
       "summary_short": "Germany sits in the dense-but-not-urban national band.",
       "value": 233.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Germany is densely populated for a large industrial state.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Germany is densely populated for a large industrial state.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Germany",
-        "ingest_source": "dataset/raw/curated/population-density.json",
-        "source_trace": {
-          "derivation_note": "population / land area",
-          "method": "derived",
-          "original_value_text": "240",
-          "source_basis": "Population divided by land area.",
-          "source_unit": "people/km^2",
-          "source_url": "https://en.wikipedia.org/wiki/Germany",
-          "source_value_text": "~240"
-        }
-      },
-      "hook": null,
-      "id": "obs:population-density:entity-population-density-germany",
-      "name": "Germany",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Germany",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-germany",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Germany",
-          "url": "https://en.wikipedia.org/wiki/Germany"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-population-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/population-density.json",
-          "url": "repo://dataset/raw/curated/population-density.json"
-        }
-      ],
-      "summary_short": "Germany is densely populated for a large industrial state.",
-      "value": 240.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -1355,64 +1183,6 @@
       ],
       "summary_short": "Hong Kong sits in the very high density urban territory range.",
       "value": 7000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Singapore is a dense city-state benchmark.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Singapore is a dense city-state benchmark.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Singapore",
-        "ingest_source": "dataset/raw/curated/population-density.json",
-        "source_trace": {
-          "derivation_note": "population / land area",
-          "method": "derived",
-          "original_value_text": "8000",
-          "source_basis": "Population divided by land area.",
-          "source_unit": "people/km^2",
-          "source_url": "https://en.wikipedia.org/wiki/Singapore",
-          "source_value_text": "~8,000"
-        }
-      },
-      "hook": null,
-      "id": "obs:population-density:entity-population-density-singapore",
-      "name": "Singapore",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Singapore",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-singapore",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Singapore",
-          "url": "https://en.wikipedia.org/wiki/Singapore"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-population-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/population-density.json",
-          "url": "repo://dataset/raw/curated/population-density.json"
-        }
-      ],
-      "summary_short": "Singapore is a dense city-state benchmark.",
-      "value": 8000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },

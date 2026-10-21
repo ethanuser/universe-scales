@@ -246,6 +246,11 @@
     ]
   },
   "volume": {
+    "display_equivalents": [
+      {"labels": ["Soda can", "Soda can volume"]},
+      {"labels": ["Swimming pool", "Swimming pool volume"]},
+      {"labels": ["Shipping container", "Shipping container volume"]}
+    ],
     "frontend_group": "geometry",
     "frontend_group_label": "Geometry & Scale",
     "frontend_order": 220,
@@ -325,6 +330,9 @@
     ]
   },
   "acceleration": {
+    "display_equivalents": [
+      {"labels": ["Earth Surface Gravity (1 g)", "Earth Surface Gravity"]}
+    ],
     "frontend_group": "motion",
     "frontend_group_label": "Motion & Mechanics",
     "frontend_order": 340,
@@ -456,6 +464,11 @@
     "preferred_max_items": 80
   },
   "torque": {
+    "display_equivalents": [
+      {"labels": ["Bicycle pedal on a climb", "Bicycle pedal"]},
+      {"labels": ["Car wheel lug nut", "Car lug nut", "Torque wrench on a car lug nut"]},
+      {"labels": ["Family car engine", "Car engine"]}
+    ],
     "name": "Torque",
     "frontend_group": "motion",
     "frontend_group_label": "Motion & Mechanics",
@@ -541,6 +554,44 @@
   },
   "angular-velocity": {
     "name": "Angular Velocity",
+    "display_equivalents": [
+      {
+        "labels": ["Moon orbit around Earth", "Moon orbit"],
+        "preferred_id": "obs:angular-velocity:entity-moon-orbit-angular-velocity"
+      },
+      {
+        "labels": ["Hour hand"],
+        "preferred_id": "obs:angular-velocity:scenario-hour-hand-angular-velocity"
+      },
+      {
+        "labels": ["Minute hand"],
+        "preferred_id": "obs:angular-velocity:scenario-minute-hand-angular-velocity"
+      },
+      {
+        "labels": ["Washing machine spin cycle", "Washing machine spin"],
+        "preferred_id": "obs:angular-velocity:entity-washing-machine-spin"
+      },
+      {
+        "labels": ["Hard drive platter at 7200 rpm", "Hard drive spindle"],
+        "preferred_id": "obs:angular-velocity:entity-hard-drive-7200rpm"
+      },
+      {
+        "labels": ["Bicycle wheel at 20 km/h", "Bicycle wheel at city speed", "Bicycle wheel"],
+        "preferred_id": "obs:angular-velocity:scenario-angular-velocity-bicycle-wheel-20kmh"
+      },
+      {
+        "labels": ["Ceiling fan"],
+        "preferred_id": "obs:angular-velocity:entity-ceiling-fan-angular-velocity"
+      },
+      {
+        "labels": ["Blender blade"],
+        "preferred_id": "obs:angular-velocity:entity-blender-blade-speed"
+      },
+      {
+        "labels": ["Fastest known pulsar", "Fast millisecond pulsar"],
+        "preferred_id": "obs:angular-velocity:entity-psr-j1748-2446ad-angular-velocity"
+      }
+    ],
     "frontend_group": "motion",
     "frontend_group_label": "Motion & Mechanics",
     "frontend_order": 390,
@@ -725,6 +776,9 @@
     ]
   },
   "flow-rate": {
+    "display_equivalents": [
+      {"labels": ["Human cardiac output", "Cardiac output"]}
+    ],
     "name": "Flow Rate",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
@@ -809,6 +863,9 @@
     ]
   },
   "concentration": {
+    "display_equivalents": [
+      {"labels": ["Pure liquid water molecules", "Pure water molecules", "Pure water"]}
+    ],
     "name": "Concentration",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
@@ -1037,6 +1094,10 @@
     ]
   },
   "strain": {
+    "display_equivalents": [
+      {"labels": ["Steel yield strain", "Steel elastic strain"]},
+      {"labels": ["Rubber band extension", "Rubber band stretch"]}
+    ],
     "name": "Strain",
     "frontend_group": "materials",
     "frontend_group_label": "Materials & Matter",
@@ -1549,6 +1610,10 @@
     ]
   },
   "flops": {
+    "display_equivalents": [
+      {"labels": ["NVIDIA GeForce RTX 3090", "NVIDIA RTX 3090"]},
+      {"labels": ["IBM Blue Gene/L"], "preferred_id": "obs:flops:entity-flops-ibm-blue-gene-l:2"}
+    ],
     "name": "FLOPs",
     "frontend_group": "information",
     "frontend_group_label": "Information & Computation",

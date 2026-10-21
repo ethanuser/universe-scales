@@ -2,20 +2,22 @@
   "base_unit": "moles_per_cubic_meter",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 40,
-    "candidate_shortfall_to_preferred_target": 10,
+    "candidate_count": 37,
+    "candidate_shortfall_to_preferred_target": 13,
+    "duplicate_candidate_count": 3,
     "empty_bin_count": 7,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 40,
     "required_min_items": 24,
-    "selected_count": 40,
+    "selected_count": 37,
     "selected_primary_count": 17,
-    "selected_secondary_count": 23,
+    "selected_secondary_count": 20,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 40
+      "secondary_reference": 37
     },
-    "target_selected_count": 40
+    "target_selected_count": 37
   },
   "description_format": "markdown",
   "dimension": "concentration",
@@ -546,64 +548,6 @@
       ],
       "summary_short": "Blood potassium is tightly regulated in a narrow millimolar band.",
       "value": 4.1,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A typical fasting blood glucose concentration is around five millimolar.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A typical fasting blood glucose concentration is around five millimolar.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Blood glucose",
-        "ingest_source": "dataset/raw/curated/concentration.json",
-        "source_trace": {
-          "conversion_note": "Converted millimolar to mol/m^3.",
-          "method": "derived",
-          "original_value_text": "5.0",
-          "source_basis": "Representative fasting blood glucose.",
-          "source_unit": "mM",
-          "source_url": "https://en.wikipedia.org/wiki/Blood_sugar_level",
-          "source_value_text": "5 mM"
-        }
-      },
-      "hook": null,
-      "id": "obs:concentration:entity-blood-glucose-concentration",
-      "name": "Blood glucose",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Blood_sugar_level",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-blood-sugar-level",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Blood sugar level",
-          "url": "https://en.wikipedia.org/wiki/Blood_sugar_level"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-concentration-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/concentration.json",
-          "url": "repo://dataset/raw/curated/concentration.json"
-        }
-      ],
-      "summary_short": "A typical fasting blood glucose concentration is around five millimolar.",
-      "value": 5.0,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -2184,122 +2128,6 @@
       ],
       "summary_short": "Concentrated sulfuric acid is tens of moles per liter.",
       "value": 18000.0,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Pure liquid water corresponds to about 55.5 moles of H2O per liter.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Pure liquid water corresponds to about 55.5 moles of H2O per liter.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Pure liquid water molecules",
-        "ingest_source": "dataset/raw/curated/concentration.json",
-        "source_trace": {
-          "conversion_note": "Converted molarity to mol/m^3.",
-          "method": "derived",
-          "original_value_text": "55500.0",
-          "source_basis": "Molar concentration of liquid water.",
-          "source_unit": "M",
-          "source_url": "https://en.wikipedia.org/wiki/Water",
-          "source_value_text": "55.5 M"
-        }
-      },
-      "hook": null,
-      "id": "obs:concentration:entity-liquid-water-molarity",
-      "name": "Pure liquid water molecules",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Water",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-water",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Water",
-          "url": "https://en.wikipedia.org/wiki/Water"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-concentration-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/concentration.json",
-          "url": "repo://dataset/raw/curated/concentration.json"
-        }
-      ],
-      "summary_short": "Pure liquid water corresponds to about 55.5 moles of H2O per liter.",
-      "value": 55500.0,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Liquid water itself is a dense fluid of about 55.5 molar.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Liquid water itself is a dense fluid of about 55.5 molar.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Pure water molecules",
-        "ingest_source": "dataset/raw/curated/concentration.json",
-        "source_trace": {
-          "conversion_note": "Converted mol/L to mol/m^3.",
-          "method": "derived",
-          "original_value_text": "55500.0",
-          "source_basis": "Molecular concentration of liquid water.",
-          "source_unit": "M",
-          "source_url": "https://en.wikipedia.org/wiki/Water",
-          "source_value_text": "55.5 M"
-        }
-      },
-      "hook": null,
-      "id": "obs:concentration:entity-pure-water-molecule-concentration",
-      "name": "Pure water molecules",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Water",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-water",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Water",
-          "url": "https://en.wikipedia.org/wiki/Water"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-concentration-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/concentration.json",
-          "url": "repo://dataset/raw/curated/concentration.json"
-        }
-      ],
-      "summary_short": "Liquid water itself is a dense fluid of about 55.5 molar.",
-      "value": 55500.0,
       "value_type": "derived",
       "wikidata_qid": null
     },

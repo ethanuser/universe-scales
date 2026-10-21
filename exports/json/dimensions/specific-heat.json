@@ -2,20 +2,22 @@
   "base_unit": "joules_per_kilogram_kelvin",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 28,
-    "candidate_shortfall_to_preferred_target": 22,
+    "candidate_count": 26,
+    "candidate_shortfall_to_preferred_target": 24,
+    "duplicate_candidate_count": 2,
     "empty_bin_count": 10,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 28,
     "required_min_items": 24,
-    "selected_count": 28,
+    "selected_count": 26,
     "selected_primary_count": 14,
-    "selected_secondary_count": 14,
+    "selected_secondary_count": 12,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 28
+      "secondary_reference": 26
     },
-    "target_selected_count": 28
+    "target_selected_count": 26
   },
   "description_format": "markdown",
   "dimension": "specific-heat",
@@ -713,63 +715,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Aluminum combines high conductivity with moderate specific heat.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Aluminum combines high conductivity with moderate specific heat.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Aluminum",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "897.0",
-          "source_basis": "Representative specific heat.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Aluminium",
-          "source_value_text": "897 J/(kg*K)"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:entity-aluminum-specific-heat",
-      "name": "Aluminum",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Aluminium",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-aluminium",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Aluminium",
-          "url": "https://en.wikipedia.org/wiki/Aluminium"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Aluminum combines high conductivity with moderate specific heat.",
-      "value": 897.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "Aluminum is a common lightweight engineering metal with a moderate heat capacity.",
       "description_format": "markdown",
       "description_long": null,
@@ -1108,63 +1053,6 @@
       ],
       "summary_short": "Water vapor sits around two kilojoules per kilogram kelvin.",
       "value": 2000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Ice stores much more heat per kilogram than most solids.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Ice stores much more heat per kilogram than most solids.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Ice",
-        "ingest_source": "dataset/raw/curated/specific-heat.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "2090.0",
-          "source_basis": "Representative specific heat.",
-          "source_unit": "J/(kg*K)",
-          "source_url": "https://en.wikipedia.org/wiki/Ice",
-          "source_value_text": "2090 J/(kg*K)"
-        }
-      },
-      "hook": null,
-      "id": "obs:specific-heat:entity-ice-specific-heat",
-      "name": "Ice",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Ice",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-ice",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Ice",
-          "url": "https://en.wikipedia.org/wiki/Ice"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-specific-heat-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/specific-heat.json",
-          "url": "repo://dataset/raw/curated/specific-heat.json"
-        }
-      ],
-      "summary_short": "Ice stores much more heat per kilogram than most solids.",
-      "value": 2090.0,
       "value_type": "measured",
       "wikidata_qid": null
     },

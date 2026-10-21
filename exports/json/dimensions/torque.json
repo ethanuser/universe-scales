@@ -2,20 +2,22 @@
   "base_unit": "newton_meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 42,
-    "candidate_shortfall_to_preferred_target": 8,
+    "candidate_count": 36,
+    "candidate_shortfall_to_preferred_target": 14,
+    "duplicate_candidate_count": 6,
     "empty_bin_count": 11,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 42,
     "required_min_items": 24,
-    "selected_count": 42,
+    "selected_count": 36,
     "selected_primary_count": 13,
-    "selected_secondary_count": 29,
+    "selected_secondary_count": 23,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 42
+      "secondary_reference": 36
     },
-    "target_selected_count": 42
+    "target_selected_count": 36
   },
   "description_format": "markdown",
   "dimension": "torque",
@@ -1121,63 +1123,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Climbing on a bike can require sustained pedal torque comparable to a firm hand twist.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Climbing on a bike can require sustained pedal torque comparable to a firm hand twist.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Bicycle pedal on a climb",
-        "ingest_source": "dataset/raw/curated/torque.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "40.0",
-          "source_basis": "Representative cyclist pedal torque during a climb.",
-          "source_unit": "N\u00b7m",
-          "source_url": "https://en.wikipedia.org/wiki/Bicycle",
-          "source_value_text": "40 N\u00b7m"
-        }
-      },
-      "hook": null,
-      "id": "obs:torque:scenario-torque-bicycle-pedal-climb",
-      "name": "Bicycle pedal on a climb",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Bicycle",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-bicycle",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Bicycle",
-          "url": "https://en.wikipedia.org/wiki/Bicycle"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-torque-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/torque.json",
-          "url": "repo://dataset/raw/curated/torque.json"
-        }
-      ],
-      "summary_short": "Climbing on a bike can require sustained pedal torque comparable to a firm hand twist.",
-      "value": 40.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "A small outboard motor can put tens of newton-meters into its prop shaft.",
       "description_format": "markdown",
       "description_long": null,
@@ -1292,177 +1237,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A compact impact driver can deliver torque above most hand tools.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A compact impact driver can deliver torque above most hand tools.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Impact driver",
-        "ingest_source": "dataset/raw/curated/torque.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "80.0",
-          "source_basis": "Representative consumer impact-driver torque.",
-          "source_unit": "N*m",
-          "source_url": "https://en.wikipedia.org/wiki/Impact_driver",
-          "source_value_text": "80 N*m"
-        }
-      },
-      "hook": null,
-      "id": "obs:torque:entity-impact-driver-torque",
-      "name": "Impact driver",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Impact_driver",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-impact-driver",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Impact driver",
-          "url": "https://en.wikipedia.org/wiki/Impact_driver"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-torque-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/torque.json",
-          "url": "repo://dataset/raw/curated/torque.json"
-        }
-      ],
-      "summary_short": "A compact impact driver can deliver torque above most hand tools.",
-      "value": 80.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A mid-sized motorcycle engine produces torque a little above one hundred newton-meters.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A mid-sized motorcycle engine produces torque a little above one hundred newton-meters.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Motorcycle engine",
-        "ingest_source": "dataset/raw/curated/torque.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "110.0",
-          "source_basis": "Representative large-motorcycle engine torque.",
-          "source_unit": "N*m",
-          "source_url": "https://en.wikipedia.org/wiki/Motorcycle",
-          "source_value_text": "110 N*m"
-        }
-      },
-      "hook": null,
-      "id": "obs:torque:entity-motorcycle-engine-torque",
-      "name": "Motorcycle engine",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Motorcycle",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-motorcycle",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Motorcycle",
-          "url": "https://en.wikipedia.org/wiki/Motorcycle"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-torque-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/torque.json",
-          "url": "repo://dataset/raw/curated/torque.json"
-        }
-      ],
-      "summary_short": "A mid-sized motorcycle engine produces torque a little above one hundred newton-meters.",
-      "value": 110.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A familiar torque scale from automotive lug-nut tightening.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A familiar torque scale from automotive lug-nut tightening.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Car wheel lug nut",
-        "ingest_source": "dataset/raw/curated/torque.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "120.0",
-          "source_basis": "Representative lug-nut torque specification.",
-          "source_unit": "N*m",
-          "source_url": "https://en.wikipedia.org/wiki/Lug_nut",
-          "source_value_text": "120"
-        }
-      },
-      "hook": null,
-      "id": "obs:torque:entity-lug-nut-torque",
-      "name": "Car wheel lug nut",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Lug_nut",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-lug-nut",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Lug nut",
-          "url": "https://en.wikipedia.org/wiki/Lug_nut"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-torque-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/torque.json",
-          "url": "repo://dataset/raw/curated/torque.json"
-        }
-      ],
-      "summary_short": "A familiar torque scale from automotive lug-nut tightening.",
-      "value": 120.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "Car wheel lug nuts are tightened with a substantial but still human-scale torque.",
       "description_format": "markdown",
       "description_long": null,
@@ -1515,63 +1289,6 @@
         }
       ],
       "summary_short": "Car wheel lug nuts are tightened with a substantial but still human-scale torque.",
-      "value": 120.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Wheel lug nuts on passenger cars are tightened to a triple-digit torque range.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Wheel lug nuts on passenger cars are tightened to a triple-digit torque range.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Torque wrench on a car lug nut",
-        "ingest_source": "dataset/raw/curated/torque.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "120.0",
-          "source_basis": "Representative lug-nut tightening torque.",
-          "source_unit": "N\u00b7m",
-          "source_url": "https://en.wikipedia.org/wiki/Lug_nut",
-          "source_value_text": "120 N\u00b7m"
-        }
-      },
-      "hook": null,
-      "id": "obs:torque:scenario-torque-car-lug-nut-wrench",
-      "name": "Torque wrench on a car lug nut",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Lug_nut",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-lug-nut",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Lug nut",
-          "url": "https://en.wikipedia.org/wiki/Lug_nut"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-torque-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/torque.json",
-          "url": "repo://dataset/raw/curated/torque.json"
-        }
-      ],
-      "summary_short": "Wheel lug nuts on passenger cars are tightened to a triple-digit torque range.",
       "value": 120.0,
       "value_type": "measured",
       "wikidata_qid": null
@@ -1689,63 +1406,6 @@
       ],
       "summary_short": "Impact drivers reach high torque by striking the fastener with repeated impulses.",
       "value": 200.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A representative peak torque for a family car engine.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A representative peak torque for a family car engine.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Family car engine",
-        "ingest_source": "dataset/raw/curated/torque.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "250.0",
-          "source_basis": "Representative passenger-car engine torque.",
-          "source_unit": "N*m",
-          "source_url": "https://en.wikipedia.org/wiki/Torque",
-          "source_value_text": "250"
-        }
-      },
-      "hook": null,
-      "id": "obs:torque:entity-car-engine-torque",
-      "name": "Family car engine",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Torque",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-torque",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Torque",
-          "url": "https://en.wikipedia.org/wiki/Torque"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-torque-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/torque.json",
-          "url": "repo://dataset/raw/curated/torque.json"
-        }
-      ],
-      "summary_short": "A representative peak torque for a family car engine.",
-      "value": 250.0,
       "value_type": "measured",
       "wikidata_qid": null
     },

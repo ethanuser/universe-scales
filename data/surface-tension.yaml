@@ -28,54 +28,6 @@ frontend_group: materials
 frontend_group_label: Materials & Matter
 frontend_order: 470
 items:
-- id: obs:surface-tension:entity-liquid-helium-surface-tension
-  name: Liquid helium
-  value: 0.00037
-  description: Liquid helium has unusually low surface tension.
-  description_format: markdown
-  summary_short: Liquid helium has unusually low surface tension.
-  description_medium: Liquid helium has unusually low surface tension.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Liquid helium
-    ingest_source: dataset/raw/curated/surface-tension.json
-    source_trace:
-      method: direct
-      original_value_text: '0.00037'
-      source_basis: Representative surface tension.
-      source_unit: N/m
-      source_url: https://en.wikipedia.org/wiki/Helium
-      source_value_text: 0.00037 N/m
-  source: https://en.wikipedia.org/wiki/Helium
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-helium
-    url: https://en.wikipedia.org/wiki/Helium
-    title: Helium
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-surface-tension-json
-    url: repo://dataset/raw/curated/surface-tension.json
-    title: dataset/raw/curated/surface-tension.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:surface-tension:scenario-surface-tension-liquid-helium
   name: Liquid helium
   value: 0.000375
@@ -541,54 +493,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-methanol
     url: https://en.wikipedia.org/wiki/Methanol
     title: Methanol
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-surface-tension-json
-    url: repo://dataset/raw/curated/surface-tension.json
-    title: dataset/raw/curated/surface-tension.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:surface-tension:entity-ethanol-surface-tension
-  name: Ethanol
-  value: 0.0223
-  description: Alcohol wets surfaces much more readily than water partly because of lower surface tension.
-  description_format: markdown
-  summary_short: Alcohol wets surfaces much more readily than water partly because of lower surface tension.
-  description_medium: Alcohol wets surfaces much more readily than water partly because of lower surface tension.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Ethanol
-    ingest_source: dataset/raw/curated/surface-tension.json
-    source_trace:
-      method: direct
-      original_value_text: '0.0223'
-      source_basis: Representative surface tension.
-      source_unit: N/m
-      source_url: https://en.wikipedia.org/wiki/Ethanol
-      source_value_text: 0.0223 N/m
-  source: https://en.wikipedia.org/wiki/Ethanol
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-ethanol
-    url: https://en.wikipedia.org/wiki/Ethanol
-    title: Ethanol
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

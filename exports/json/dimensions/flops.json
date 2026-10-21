@@ -2,20 +2,22 @@
   "base_unit": "flops",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 33,
-    "candidate_shortfall_to_preferred_target": 17,
+    "candidate_count": 29,
+    "candidate_shortfall_to_preferred_target": 21,
+    "duplicate_candidate_count": 4,
     "empty_bin_count": 10,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 33,
     "required_min_items": 24,
-    "selected_count": 33,
+    "selected_count": 29,
     "selected_primary_count": 14,
-    "selected_secondary_count": 19,
+    "selected_secondary_count": 15,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 33
+      "secondary_reference": 29
     },
-    "target_selected_count": 33
+    "target_selected_count": 29
   },
   "description_format": "markdown",
   "dimension": "flops",
@@ -433,120 +435,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "The PS3 Cell processor is a consumer-hardware floating-point reference.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The PS3 Cell processor is a consumer-hardware floating-point reference.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "PlayStation 3 Cell processor",
-        "ingest_source": "dataset/raw/curated/flops.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "230000000000.0",
-          "source_basis": "Approximate peak floating-point throughput of the Cell processor.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/PlayStation_3",
-          "source_value_text": "230 GFLOPS"
-        }
-      },
-      "hook": null,
-      "id": "obs:flops:entity-flops-playstation-3-cell",
-      "name": "PlayStation 3 Cell processor",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/PlayStation_3",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-playstation-3",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "PlayStation 3",
-          "url": "https://en.wikipedia.org/wiki/PlayStation_3"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flops-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flops.json",
-          "url": "repo://dataset/raw/curated/flops.json"
-        }
-      ],
-      "summary_short": "The PS3 Cell processor is a consumer-hardware floating-point reference.",
-      "value": 230000000000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Blue Gene/L brought supercomputing into the hundreds of gigaflops.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Blue Gene/L brought supercomputing into the hundreds of gigaflops.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "IBM Blue Gene/L",
-        "ingest_source": "dataset/raw/curated/flops.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "570000000000.0",
-          "source_basis": "Reported peak performance for Blue Gene/L.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/Blue_Gene",
-          "source_value_text": "570 GFLOPS"
-        }
-      },
-      "hook": null,
-      "id": "obs:flops:entity-flops-ibm-blue-gene-l",
-      "name": "IBM Blue Gene/L",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Blue_Gene",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-blue-gene",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Blue Gene",
-          "url": "https://en.wikipedia.org/wiki/Blue_Gene"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flops-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flops.json",
-          "url": "repo://dataset/raw/curated/flops.json"
-        }
-      ],
-      "summary_short": "Blue Gene/L brought supercomputing into the hundreds of gigaflops.",
-      "value": 570000000000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "Integrated laptop and tablet GPUs anchor the low-teraflop range.",
       "description_format": "markdown",
       "description_long": null,
@@ -887,63 +775,6 @@
         }
       ],
       "summary_short": "A high-end consumer GPU is a useful tens-of-teraflops anchor.",
-      "value": 35600000000000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "The RTX 3090 is a consumer GPU with high teraflop throughput.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The RTX 3090 is a consumer GPU with high teraflop throughput.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "NVIDIA RTX 3090",
-        "ingest_source": "dataset/raw/curated/flops.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "35600000000000.0",
-          "source_basis": "Approximate FP32 peak throughput for RTX 3090.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/GeForce_30_series",
-          "source_value_text": "35.6 TFLOPS"
-        }
-      },
-      "hook": null,
-      "id": "obs:flops:entity-flops-nvidia-rtx-3090",
-      "name": "NVIDIA RTX 3090",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/GeForce_30_series",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-geforce-30-series",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "GeForce 30 series",
-          "url": "https://en.wikipedia.org/wiki/GeForce_30_series"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flops-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flops.json",
-          "url": "repo://dataset/raw/curated/flops.json"
-        }
-      ],
-      "summary_short": "The RTX 3090 is a consumer GPU with high teraflop throughput.",
       "value": 35600000000000.0,
       "value_type": "measured",
       "wikidata_qid": null
@@ -1404,63 +1235,6 @@
       ],
       "summary_short": "TPU v3 is a notable tensor accelerator reference.",
       "value": 420000000000000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Tianhe-2 is an important pre-exascale supercomputer benchmark.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Tianhe-2 is an important pre-exascale supercomputer benchmark.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Tianhe-2",
-        "ingest_source": "dataset/raw/curated/flops.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "3.4e+16",
-          "source_basis": "Published peak performance for Tianhe-2.",
-          "source_unit": "FLOP/s",
-          "source_url": "https://en.wikipedia.org/wiki/Tianhe-2",
-          "source_value_text": "34 PFLOPS"
-        }
-      },
-      "hook": null,
-      "id": "obs:flops:entity-flops-tianhe-2",
-      "name": "Tianhe-2",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Tianhe-2",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-tianhe-2",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Tianhe-2",
-          "url": "https://en.wikipedia.org/wiki/Tianhe-2"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flops-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flops.json",
-          "url": "repo://dataset/raw/curated/flops.json"
-        }
-      ],
-      "summary_short": "Tianhe-2 is an important pre-exascale supercomputer benchmark.",
-      "value": 3.4e+16,
       "value_type": "measured",
       "wikidata_qid": null
     },

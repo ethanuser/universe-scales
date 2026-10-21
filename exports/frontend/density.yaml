@@ -408,52 +408,6 @@ items:
   qualifiers:
     condition: sea level standard atmosphere
     measurement: bulk density
-- id: obs:density:scenario-dry-air-sea-level-density
-  name: Dry air at sea level
-  value: 1.225
-  description: Representative density of dry air at sea level.
-  description_format: markdown
-  summary_short: Representative density of dry air at sea level.
-  description_medium: Representative density of dry air at sea level.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Dry air at sea level
-    ingest_source: dataset/raw/curated/density.json
-    source_trace:
-      method: direct
-      original_value_text: '1.225'
-      source_url: https://en.wikipedia.org/wiki/Density_of_air
-  source: https://en.wikipedia.org/wiki/Density_of_air
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-density-of-air
-    url: https://en.wikipedia.org/wiki/Density_of_air
-    title: Density of air
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-density-json
-    url: repo://dataset/raw/curated/density.json
-    title: dataset/raw/curated/density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: gas density
 - id: obs:density:entity-styrofoam-density
   name: Styrofoam
   value: 30.0

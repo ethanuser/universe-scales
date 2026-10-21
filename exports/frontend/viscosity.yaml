@@ -974,55 +974,6 @@ items:
   value_type: measured
   qualifiers:
     measurement: dynamic viscosity
-- id: obs:viscosity:scenario-viscosity-maple-syrup
-  name: Maple syrup
-  value: 2.5
-  description: Syrups are where viscosity becomes viscerally obvious.
-  description_format: markdown
-  summary_short: Syrups are where viscosity becomes viscerally obvious.
-  description_medium: Syrups are where viscosity becomes viscerally obvious.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Maple syrup
-    ingest_source: dataset/raw/curated/viscosity.json
-    source_trace:
-      method: direct
-      original_value_text: '2.5'
-      source_basis: Representative maple syrup viscosity at room temperature.
-      source_unit: Pa*s
-      source_url: https://en.wikipedia.org/wiki/Maple_syrup
-      source_value_text: '2.5'
-  source: https://en.wikipedia.org/wiki/Maple_syrup
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-maple-syrup
-    url: https://en.wikipedia.org/wiki/Maple_syrup
-    title: Maple syrup
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-viscosity-json
-    url: repo://dataset/raw/curated/viscosity.json
-    title: dataset/raw/curated/viscosity.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers:
-    measurement: dynamic viscosity
 - id: obs:viscosity:entity-maple-syrup-viscosity
   name: Maple syrup
   value: 3.0

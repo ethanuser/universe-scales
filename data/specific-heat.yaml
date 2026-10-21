@@ -609,54 +609,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:specific-heat:entity-aluminum-specific-heat
-  name: Aluminum
-  value: 897.0
-  description: Aluminum combines high conductivity with moderate specific heat.
-  description_format: markdown
-  summary_short: Aluminum combines high conductivity with moderate specific heat.
-  description_medium: Aluminum combines high conductivity with moderate specific heat.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Aluminum
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '897.0'
-      source_basis: Representative specific heat.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Aluminium
-      source_value_text: 897 J/(kg*K)
-  source: https://en.wikipedia.org/wiki/Aluminium
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-aluminium
-    url: https://en.wikipedia.org/wiki/Aluminium
-    title: Aluminium
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:specific-heat:scenario-specific-heat-aluminum
   name: Aluminum
   value: 900.0
@@ -928,54 +880,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-steam
     url: https://en.wikipedia.org/wiki/Steam
     title: Steam
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-specific-heat-json
-    url: repo://dataset/raw/curated/specific-heat.json
-    title: dataset/raw/curated/specific-heat.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:specific-heat:entity-ice-specific-heat
-  name: Ice
-  value: 2090.0
-  description: Ice stores much more heat per kilogram than most solids.
-  description_format: markdown
-  summary_short: Ice stores much more heat per kilogram than most solids.
-  description_medium: Ice stores much more heat per kilogram than most solids.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Ice
-    ingest_source: dataset/raw/curated/specific-heat.json
-    source_trace:
-      method: direct
-      original_value_text: '2090.0'
-      source_basis: Representative specific heat.
-      source_unit: J/(kg*K)
-      source_url: https://en.wikipedia.org/wiki/Ice
-      source_value_text: 2090 J/(kg*K)
-  source: https://en.wikipedia.org/wiki/Ice
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-ice
-    url: https://en.wikipedia.org/wiki/Ice
-    title: Ice
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

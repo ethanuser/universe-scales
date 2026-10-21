@@ -1,5 +1,26 @@
 # Agent Handoff Guide
 
+## 2026-10-20 display deduplication
+
+- Display selection now recognizes explicit `display_equivalents` groups in
+  dimension profiles. Moon orbit, clock rounding, washing-machine spin, bicycle
+  variants, 7200-rpm spindle and 716-Hz pulsar duplicates are consolidated. Angular
+  Velocity exports contain 32 distinct examples and seven orbital examples.
+- Generic quantity/derivation qualifiers do not split identical examples;
+  conditions, dates and unknown measurement definitions remain distinct. The
+  selected site corpus has no repeated display labels. Original alternate source
+  records remain in the database with `selected_for_display: false`.
+- Rebuilt 18 affected dimensions through staged scoped merges; 135 unrelated
+  per-dimension files stayed byte-identical. The non-flagship `data/` deployment
+  copy is now refreshed by scoped rebuilds, fixing stale duplicate lists. The
+  acceleration fallback is synchronized with the existing canonical export.
+- 230 Node tests pass; Python runs 159 tests with one existing skip. Dataset
+  verification without determinism passes, and all 32 angular observations pass
+  the production browser audit. No description Markdown or GLB was edited.
+- Removed four obsolete registry aliases for retired soda-can/container/bicycle
+  labels; the surviving entries keep the same models. All 200 GLBs and 207
+  remaining exact-name matches verify.
+
 ## 2026-10-20 angular sourced-body continuation
 
 - All eight orbital observations now reuse existing local NASA/public-source

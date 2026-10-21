@@ -2,20 +2,22 @@
   "base_unit": "farmers_per_square_kilometer_arable_land",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 29,
-    "candidate_shortfall_to_preferred_target": 21,
-    "empty_bin_count": 7,
+    "candidate_count": 24,
+    "candidate_shortfall_to_preferred_target": 26,
+    "duplicate_candidate_count": 5,
+    "empty_bin_count": 8,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 29,
     "required_min_items": 24,
-    "selected_count": 29,
-    "selected_primary_count": 17,
-    "selected_secondary_count": 12,
+    "selected_count": 24,
+    "selected_primary_count": 16,
+    "selected_secondary_count": 8,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 29
+      "secondary_reference": 24
     },
-    "target_selected_count": 29
+    "target_selected_count": 24
   },
   "description_format": "markdown",
   "dimension": "agricultural-density",
@@ -382,64 +384,6 @@
       "summary_short": "Canada\u2019s mechanized agriculture keeps agricultural density low.",
       "value": 4.0,
       "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Argentina has a relatively mechanized farming structure.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Argentina has a relatively mechanized farming structure.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Argentina",
-        "ingest_source": "dataset/raw/curated/agricultural-density.json",
-        "source_trace": {
-          "derivation_note": "farmers / arable land area",
-          "method": "derived",
-          "original_value_text": "5",
-          "source_basis": "Farmers divided by arable land area.",
-          "source_unit": "farmers/km^2 arable",
-          "source_url": "https://en.wikipedia.org/wiki/Argentina",
-          "source_value_text": "~5"
-        }
-      },
-      "hook": null,
-      "id": "obs:agricultural-density:entity-agricultural-density-argentina",
-      "name": "Argentina",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Argentina",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-argentina",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Argentina",
-          "url": "https://en.wikipedia.org/wiki/Argentina"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-agricultural-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/agricultural-density.json",
-          "url": "repo://dataset/raw/curated/agricultural-density.json"
-        }
-      ],
-      "summary_short": "Argentina has a relatively mechanized farming structure.",
-      "value": 5.0,
-      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -853,124 +797,6 @@
       ],
       "summary_short": "Spain is a useful mid-low agricultural-density country.",
       "value": 25.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "France is an example of moderately mechanized intensive farming.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "France is an example of moderately mechanized intensive farming.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "France",
-        "ingest_source": "dataset/raw/curated/agricultural-density.json",
-        "source_trace": {
-          "derivation_note": "farmers / arable land",
-          "method": "derived",
-          "original_value_text": "30",
-          "source_basis": "Farmers divided by arable land area.",
-          "source_unit": "farmers/km^2 arable",
-          "source_url": "https://en.wikipedia.org/wiki/Agricultural_density",
-          "source_value_text": "~30"
-        }
-      },
-      "hook": null,
-      "id": "obs:agricultural-density:entity-agricultural-density-france",
-      "name": "France",
-      "qualifiers": {
-        "measure": "farmers per km^2 arable"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Agricultural_density",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-agricultural-density",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Agricultural density",
-          "url": "https://en.wikipedia.org/wiki/Agricultural_density"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-agricultural-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/agricultural-density.json",
-          "url": "repo://dataset/raw/curated/agricultural-density.json"
-        }
-      ],
-      "summary_short": "France is an example of moderately mechanized intensive farming.",
-      "value": 30.0,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Germany reflects a heavily mechanized agricultural sector.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Germany reflects a heavily mechanized agricultural sector.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Germany",
-        "ingest_source": "dataset/raw/curated/agricultural-density.json",
-        "source_trace": {
-          "derivation_note": "farmers / arable land area",
-          "method": "derived",
-          "original_value_text": "35",
-          "source_basis": "Farmers divided by arable land area.",
-          "source_unit": "farmers/km^2 arable",
-          "source_url": "https://en.wikipedia.org/wiki/Germany",
-          "source_value_text": "~35"
-        }
-      },
-      "hook": null,
-      "id": "obs:agricultural-density:entity-agricultural-density-germany",
-      "name": "Germany",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Germany",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-germany",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Germany",
-          "url": "https://en.wikipedia.org/wiki/Germany"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-agricultural-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/agricultural-density.json",
-          "url": "repo://dataset/raw/curated/agricultural-density.json"
-        }
-      ],
-      "summary_short": "Germany reflects a heavily mechanized agricultural sector.",
-      "value": 35.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
@@ -1391,64 +1217,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Rwanda is a dense smallholder-farming benchmark.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Rwanda is a dense smallholder-farming benchmark.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Rwanda",
-        "ingest_source": "dataset/raw/curated/agricultural-density.json",
-        "source_trace": {
-          "derivation_note": "farmers / arable land area",
-          "method": "derived",
-          "original_value_text": "450",
-          "source_basis": "Farmers divided by arable land area.",
-          "source_unit": "farmers/km^2 arable",
-          "source_url": "https://en.wikipedia.org/wiki/Rwanda",
-          "source_value_text": "~450"
-        }
-      },
-      "hook": null,
-      "id": "obs:agricultural-density:entity-agricultural-density-rwanda",
-      "name": "Rwanda",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Rwanda",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-rwanda",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Rwanda",
-          "url": "https://en.wikipedia.org/wiki/Rwanda"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-agricultural-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/agricultural-density.json",
-          "url": "repo://dataset/raw/curated/agricultural-density.json"
-        }
-      ],
-      "summary_short": "Rwanda is a dense smallholder-farming benchmark.",
-      "value": 450.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "Pakistan has a substantial farming population density.",
       "description_format": "markdown",
       "description_long": null,
@@ -1619,66 +1387,6 @@
       ],
       "summary_short": "Vietnam has a dense smallholder farming structure.",
       "value": 600.0,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "India\u2019s agricultural density is very high in many states.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "India\u2019s agricultural density is very high in many states.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "India",
-        "ingest_source": "dataset/raw/curated/agricultural-density.json",
-        "source_trace": {
-          "derivation_note": "farmers / arable land",
-          "method": "derived",
-          "original_value_text": "700",
-          "source_basis": "Farmers divided by arable land area.",
-          "source_unit": "farmers/km^2 arable",
-          "source_url": "https://en.wikipedia.org/wiki/Agriculture_in_India",
-          "source_value_text": "~700"
-        }
-      },
-      "hook": null,
-      "id": "obs:agricultural-density:entity-agricultural-density-india",
-      "name": "India",
-      "qualifiers": {
-        "measure": "farmers per km^2 arable"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Agriculture_in_India",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-agriculture-in-india",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Agriculture in India",
-          "url": "https://en.wikipedia.org/wiki/Agriculture_in_India"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-agricultural-density-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/agricultural-density.json",
-          "url": "repo://dataset/raw/curated/agricultural-density.json"
-        }
-      ],
-      "summary_short": "India\u2019s agricultural density is very high in many states.",
-      "value": 700.0,
       "value_type": "derived",
       "wikidata_qid": null
     },

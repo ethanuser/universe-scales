@@ -27,9 +27,9 @@ test('axial presentation keeps spindles camera-parallel and primary rotation clo
 });
 
 test('every procedural angular observation has a valid moving assembly and a fixed housing', () => {
-    const corpus = fs.readFileSync(new URL('../data/angular-velocity.yaml', import.meta.url), 'utf8');
+    const corpus = JSON.parse(fs.readFileSync(new URL('../dataset/raw/curated/angular-velocity.json', import.meta.url), 'utf8'));
     for (const [name, entry] of Object.entries(angularModelEntries)) {
-        assert.ok(corpus.includes(`  name: ${name}\n`), `${name} matches the dataset`);
+        assert.ok(corpus.some(item => item.canonical_name === name), `${name} matches the source dataset or a retained alias`);
         assert.ok(entry.source.startsWith('https://'));
         const scene = angularScene(entry.angular_kind);
         const rig = createAngularRig(scene, entry.angular_motion);
@@ -98,7 +98,7 @@ test('new sourced angular assets bind real components without spinning unrelated
 
 test('downloaded bicycle replaces the fallback and rotates wheels separately from its frame', () => {
     const registry = JSON.parse(fs.readFileSync(new URL('../content/visualizations/models.json', import.meta.url)));
-    const entry = angularEntry({name: 'Bicycle wheel'}, registry.models);
+    const entry = angularEntry({name: 'Bicycle wheel at 20 km/h'}, registry.models);
     assert.equal(entry.id, 'innerscene-city-bicycle-angular');
     assert.equal(entry.license, 'CC0-1.0');
     assert.ok(entry.bytes < 500000 && entry.triangle_count < 15000);

@@ -1106,55 +1106,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:odor-concentration:entity-odor-concentration-limonene
-  name: Limonene
-  value: 20.0
-  description: Limonene is a common citrus odorant.
-  description_format: markdown
-  summary_short: Limonene is a common citrus odorant.
-  description_medium: Limonene is a common citrus odorant.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Limonene
-    ingest_source: dataset/raw/curated/odor-concentration.json
-    source_trace:
-      derivation_note: odor threshold estimate
-      method: derived
-      original_value_text: '20'
-      source_basis: Low odor threshold concentration.
-      source_unit: ppbv
-      source_url: https://en.wikipedia.org/wiki/Limonene
-      source_value_text: 20 ppbv
-  source: https://en.wikipedia.org/wiki/Limonene
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-limonene
-    url: https://en.wikipedia.org/wiki/Limonene
-    title: Limonene
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-odor-concentration-json
-    url: repo://dataset/raw/curated/odor-concentration.json
-    title: dataset/raw/curated/odor-concentration.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:odor-concentration:entity-odor-concentration-methyl-salicylate
   name: Methyl salicylate
   value: 20.0

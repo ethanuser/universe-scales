@@ -128,56 +128,6 @@ items:
   value_type: derived
   qualifiers:
     measure: people per km^2 arable
-- id: obs:physiological-density:entity-physiological-density-australia
-  name: Australia
-  value: 100.0
-  description: Australia remains low when adjusted for arable land.
-  description_format: markdown
-  summary_short: Australia remains low when adjusted for arable land.
-  description_medium: Australia remains low when adjusted for arable land.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Australia
-    ingest_source: dataset/raw/curated/physiological-density.json
-    source_trace:
-      derivation_note: population / arable land
-      method: derived
-      original_value_text: '100'
-      source_basis: Population divided by arable land area.
-      source_unit: people/km^2 arable
-      source_url: https://en.wikipedia.org/wiki/Physiological_density
-      source_value_text: ~100
-  source: https://en.wikipedia.org/wiki/Physiological_density
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-physiological-density
-    url: https://en.wikipedia.org/wiki/Physiological_density
-    title: Physiological density
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-physiological-density-json
-    url: repo://dataset/raw/curated/physiological-density.json
-    title: dataset/raw/curated/physiological-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measure: people per km^2 arable
 - id: obs:physiological-density:entity-physiological-density-brazil
   name: Brazil
   value: 140.0
@@ -378,55 +328,6 @@ items:
   value_type: derived
   qualifiers:
     measure: people per km^2 arable
-- id: obs:physiological-density:entity-physiological-density-france
-  name: France
-  value: 400.0
-  description: France has moderate physiological density because it has substantial arable land.
-  description_format: markdown
-  summary_short: France has moderate physiological density because it has substantial arable land.
-  description_medium: France has moderate physiological density because it has substantial arable land.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: France
-    ingest_source: dataset/raw/curated/physiological-density.json
-    source_trace:
-      derivation_note: population / arable land area
-      method: derived
-      original_value_text: '400'
-      source_basis: Population divided by arable land area.
-      source_unit: people/km^2 arable
-      source_url: https://en.wikipedia.org/wiki/France
-      source_value_text: ~400
-  source: https://en.wikipedia.org/wiki/France
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-france
-    url: https://en.wikipedia.org/wiki/France
-    title: France
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-physiological-density-json
-    url: repo://dataset/raw/curated/physiological-density.json
-    title: dataset/raw/curated/physiological-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:physiological-density:entity-physiological-density-germany
   name: Germany
   value: 550.0
@@ -773,56 +674,6 @@ items:
   value_type: derived
   qualifiers:
     measure: people per km^2 arable
-- id: obs:physiological-density:entity-physiological-density-japan
-  name: Japan
-  value: 1100.0
-  description: Japan’s arable land is tight relative to its population.
-  description_format: markdown
-  summary_short: Japan’s arable land is tight relative to its population.
-  description_medium: Japan’s arable land is tight relative to its population.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Japan
-    ingest_source: dataset/raw/curated/physiological-density.json
-    source_trace:
-      derivation_note: population / arable land
-      method: derived
-      original_value_text: '1100'
-      source_basis: Population divided by arable land area.
-      source_unit: people/km^2 arable
-      source_url: https://en.wikipedia.org/wiki/Physiological_density
-      source_value_text: ~1,100
-  source: https://en.wikipedia.org/wiki/Physiological_density
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-physiological-density
-    url: https://en.wikipedia.org/wiki/Physiological_density
-    title: Physiological density
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-physiological-density-json
-    url: repo://dataset/raw/curated/physiological-density.json
-    title: dataset/raw/curated/physiological-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measure: people per km^2 arable
 - id: obs:physiological-density:entity-physiological-density-saudi-arabia
   name: Saudi Arabia
   value: 1400.0
@@ -873,55 +724,6 @@ items:
   value_type: derived
   qualifiers:
     measure: people per km^2 arable
-- id: obs:physiological-density:entity-physiological-density-rwanda
-  name: Rwanda
-  value: 1500.0
-  description: Rwanda is a classic high physiological-density country.
-  description_format: markdown
-  summary_short: Rwanda is a classic high physiological-density country.
-  description_medium: Rwanda is a classic high physiological-density country.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Rwanda
-    ingest_source: dataset/raw/curated/physiological-density.json
-    source_trace:
-      derivation_note: population / arable land area
-      method: derived
-      original_value_text: '1500'
-      source_basis: Population divided by arable land area.
-      source_unit: people/km^2 arable
-      source_url: https://en.wikipedia.org/wiki/Rwanda
-      source_value_text: ~1,500
-  source: https://en.wikipedia.org/wiki/Rwanda
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-rwanda
-    url: https://en.wikipedia.org/wiki/Rwanda
-    title: Rwanda
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-physiological-density-json
-    url: repo://dataset/raw/curated/physiological-density.json
-    title: dataset/raw/curated/physiological-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:physiological-density:entity-physiological-density-vietnam
   name: Vietnam
   value: 1700.0
@@ -1021,56 +823,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:physiological-density:entity-physiological-density-india
-  name: India
-  value: 2200.0
-  description: India’s physiological density is high even before considering regional variation.
-  description_format: markdown
-  summary_short: India’s physiological density is high even before considering regional variation.
-  description_medium: India’s physiological density is high even before considering regional variation.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: India
-    ingest_source: dataset/raw/curated/physiological-density.json
-    source_trace:
-      derivation_note: population / arable land
-      method: derived
-      original_value_text: '2200'
-      source_basis: Population divided by arable land area.
-      source_unit: people/km^2 arable
-      source_url: https://en.wikipedia.org/wiki/Physiological_density
-      source_value_text: ~2,200
-  source: https://en.wikipedia.org/wiki/Physiological_density
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-physiological-density
-    url: https://en.wikipedia.org/wiki/Physiological_density
-    title: Physiological density
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-physiological-density-json
-    url: repo://dataset/raw/curated/physiological-density.json
-    title: dataset/raw/curated/physiological-density.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measure: people per km^2 arable
 - id: obs:physiological-density:entity-physiological-density-rwanda:2
   name: Rwanda
   value: 2500.0

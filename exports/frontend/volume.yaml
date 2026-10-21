@@ -154,13 +154,13 @@ items:
   qualifiers:
     derivation: (4/3)*pi*r^3
     measurement: volume
-- id: obs:volume:entity-water
+- id: obs:volume:entity-water-molecule-volume
   name: Water molecule volume
-  value: 1.1e-29
-  description: Characteristic occupied volume of one water molecule.
+  value: 3.0e-29
+  description: Approximate molecular volume of a water molecule.
   description_format: markdown
-  summary_short: Characteristic occupied volume of one water molecule.
-  description_medium: Characteristic occupied volume of one water molecule.
+  summary_short: Approximate molecular volume of a water molecule.
+  description_medium: Approximate molecular volume of a water molecule.
   description_long: null
   hook: null
   caveats: null
@@ -173,7 +173,7 @@ items:
     ingest_source: dataset/raw/curated/volume.json
     source_trace:
       method: derived
-      original_value_text: '1.1e-29'
+      original_value_text: 3e-29
       source_url: https://en.wikipedia.org/wiki/Water
   source: https://en.wikipedia.org/wiki/Water
   source_count: 2
@@ -196,10 +196,10 @@ items:
     source_type: local_file
     role: curation_manifest
     note: null
-  wikidata_qid: Q283
+  wikidata_qid: null
   value_type: derived
   qualifiers:
-    measurement: single molecule volume
+    measurement: molecular volume
 - id: obs:volume:entity-sars-cov-2
   name: SARS-CoV-2 virion volume
   value: 4.2e-22
@@ -228,6 +228,54 @@ items:
   - id: src:https-en-wikipedia-org-wiki-sars-cov-2
     url: https://en.wikipedia.org/wiki/SARS-CoV-2
     title: SARS-CoV-2
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    measurement: volume
+- id: obs:volume:entity-influenza-virus
+  name: Influenza virion volume
+  value: 9.0e-22
+  description: Approximate volume of a spherical influenza virion.
+  description_format: markdown
+  summary_short: Approximate volume of a spherical influenza virion.
+  description_medium: Approximate volume of a spherical influenza virion.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Influenza virion volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: 9e-22
+      source_url: https://en.wikipedia.org/wiki/Influenza
+  source: https://en.wikipedia.org/wiki/Influenza
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-influenza
+    url: https://en.wikipedia.org/wiki/Influenza
+    title: Influenza
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference
@@ -434,52 +482,6 @@ items:
   qualifiers:
     derivation: (4/3)*pi*r^3
     measurement: volume
-- id: obs:volume:scenario-grain-of-sand-volume:2
-  name: Grain of sand volume
-  value: 1.0e-12
-  description: Representative volume of a grain of sand.
-  description_format: markdown
-  summary_short: Representative volume of a grain of sand.
-  description_medium: Representative volume of a grain of sand.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Grain of sand volume
-    ingest_source: dataset/raw/curated/volume.json
-    source_trace:
-      method: derived
-      original_value_text: 1e-12
-      source_url: https://en.wikipedia.org/wiki/Sand
-  source: https://en.wikipedia.org/wiki/Sand
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-sand
-    url: https://en.wikipedia.org/wiki/Sand
-    title: Sand
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-volume-json
-    url: repo://dataset/raw/curated/volume.json
-    title: dataset/raw/curated/volume.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measurement: particle volume
 - id: obs:volume:scenario-grain-of-sand-volume
   name: Grain of sand volume
   value: 5.0e-10
@@ -758,52 +760,6 @@ items:
     note: null
   wikidata_qid: null
   value_type: derived
-  qualifiers:
-    measurement: capacity
-- id: obs:volume:scenario-soda-can
-  name: Soda can
-  value: 0.000355
-  description: Capacity of a standard soda can.
-  description_format: markdown
-  summary_short: Capacity of a standard soda can.
-  description_medium: Capacity of a standard soda can.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Soda can
-    ingest_source: dataset/raw/curated/volume.json
-    source_trace:
-      method: direct
-      original_value_text: '0.000355'
-      source_url: https://en.wikipedia.org/wiki/Drink_can
-  source: https://en.wikipedia.org/wiki/Drink_can
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-drink-can
-    url: https://en.wikipedia.org/wiki/Drink_can
-    title: Drink can
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-volume-json
-    url: repo://dataset/raw/curated/volume.json
-    title: dataset/raw/curated/volume.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
   qualifiers:
     measurement: capacity
 - id: obs:volume:scenario-soda-can-volume
@@ -1220,52 +1176,6 @@ items:
   value_type: derived
   qualifiers:
     measurement: interior capacity
-- id: obs:volume:scenario-shipping-container
-  name: Shipping container
-  value: 33.2
-  description: Representative internal volume of a standard shipping container.
-  description_format: markdown
-  summary_short: Representative internal volume of a standard shipping container.
-  description_medium: Representative internal volume of a standard shipping container.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Shipping container
-    ingest_source: dataset/raw/curated/volume.json
-    source_trace:
-      method: derived
-      original_value_text: '33.2'
-      source_url: https://en.wikipedia.org/wiki/Intermodal_container
-  source: https://en.wikipedia.org/wiki/Intermodal_container
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-intermodal-container
-    url: https://en.wikipedia.org/wiki/Intermodal_container
-    title: Intermodal container
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-volume-json
-    url: repo://dataset/raw/curated/volume.json
-    title: dataset/raw/curated/volume.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measurement: internal volume
 - id: obs:volume:scenario-swimming-pool
   name: Swimming pool
   value: 40.0
@@ -1282,52 +1192,6 @@ items:
   quality_flags: []
   facts:
     canonical_name: Swimming pool
-    ingest_source: dataset/raw/curated/volume.json
-    source_trace:
-      method: derived
-      original_value_text: '40.0'
-      source_url: https://en.wikipedia.org/wiki/Swimming_pool
-  source: https://en.wikipedia.org/wiki/Swimming_pool
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-swimming-pool
-    url: https://en.wikipedia.org/wiki/Swimming_pool
-    title: Swimming pool
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-volume-json
-    url: repo://dataset/raw/curated/volume.json
-    title: dataset/raw/curated/volume.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers:
-    measurement: water volume
-- id: obs:volume:scenario-swimming-pool-volume
-  name: Swimming pool volume
-  value: 40.0
-  description: Representative volume of a backyard swimming pool.
-  description_format: markdown
-  summary_short: Representative volume of a backyard swimming pool.
-  description_medium: Representative volume of a backyard swimming pool.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Swimming pool volume
     ingest_source: dataset/raw/curated/volume.json
     source_trace:
       method: derived
@@ -2001,6 +1865,52 @@ items:
     role: curation_manifest
     note: null
   wikidata_qid: Q2
+  value_type: measured
+  qualifiers:
+    measurement: planetary volume
+- id: obs:volume:entity-jupiter
+  name: Jupiter volume
+  value: 1.431e+24
+  description: Volume of Jupiter.
+  description_format: markdown
+  summary_short: Volume of Jupiter.
+  description_medium: Volume of Jupiter.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: seeded
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Jupiter volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      method: direct
+      original_value_text: '1.431e+24'
+      source_url: https://en.wikipedia.org/wiki/Jupiter
+  source: https://en.wikipedia.org/wiki/Jupiter
+  source_count: 2
+  sources:
+  - id: src:https-en-wikipedia-org-wiki-jupiter
+    url: https://en.wikipedia.org/wiki/Jupiter
+    title: Jupiter
+    publisher: Wikipedia
+    license_text: CC BY-SA 4.0
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: Q319
   value_type: measured
   qualifiers:
     measurement: planetary volume

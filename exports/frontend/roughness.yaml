@@ -758,54 +758,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:roughness:entity-skin-roughness
-  name: Human skin
-  value: 2.0e-05
-  description: Skin texture spans tens of micrometers or more.
-  description_format: markdown
-  summary_short: Skin texture spans tens of micrometers or more.
-  description_medium: Skin texture spans tens of micrometers or more.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Human skin
-    ingest_source: dataset/raw/curated/roughness.json
-    source_trace:
-      method: direct
-      original_value_text: 2e-05
-      source_basis: Representative roughness.
-      source_unit: m
-      source_url: https://en.wikipedia.org/wiki/Skin
-      source_value_text: 2e-5 m
-  source: https://en.wikipedia.org/wiki/Skin
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-skin
-    url: https://en.wikipedia.org/wiki/Skin
-    title: Skin
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-roughness-json
-    url: repo://dataset/raw/curated/roughness.json
-    title: dataset/raw/curated/roughness.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:roughness:entity-drywall-roughness
   name: Unpainted drywall
   value: 5.0e-05

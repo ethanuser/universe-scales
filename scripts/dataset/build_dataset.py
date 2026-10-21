@@ -102,7 +102,18 @@ DISPLAY_GENERIC_MEASUREMENTS = {
     "angular-velocity": {
         "angular speed", "rotational speed", "rotational velocity", "rotation rate",
         "blade speed", "blade rotation", "clock hand rotation",
+        "orbital angular velocity", "wheel spin", "drum speed", "spindle speed",
     },
+    "agricultural-density": {"farmers per km^2 arable"},
+    "physiological-density": {"people per km^2 arable"},
+    "concentration": {"molar concentration", "molecular number concentration"},
+    "flow-rate": {"fluid delivery rate", "hose flow", "hydrant discharge", "river discharge", "heart pump output"},
+    "roughness": {"surface roughness"},
+    "specific-heat": {"specific heat capacity"},
+    "torque": {"peak engine torque", "crank torque", "tightening torque"},
+    "strain": {"dimensionless strain"},
+    "viscosity": {"dynamic viscosity"},
+    "volume": {"particle volume", "single molecule volume", "molecular volume", "effective atomic volume", "interior capacity", "internal volume"},
     "friction-coefficient": {"coefficient of friction"},
 }
 
@@ -1280,8 +1291,18 @@ class DatasetBuilder:
 
     def select_display_representatives(self, rows: list[sqlite3.Row]) -> list[sqlite3.Row]:
         by_label: dict[tuple[str, str], list[sqlite3.Row]] = defaultdict(list)
+        preferred_ids: set[str] = set()
         for row in rows:
-            by_label[(row["dimension_id"], normalize_display_text(row["label"]))].append(row)
+            slug = row["dimension_id"].removeprefix("dim:")
+            label = normalize_display_text(row["label"])
+            for group in self.dimension_profile(slug).get("display_equivalents", []):
+                labels = [normalize_display_text(name) for name in group["labels"]]
+                if label in labels:
+                    label = labels[0]
+                    if group.get("preferred_id"):
+                        preferred_ids.add(group["preferred_id"])
+                    break
+            by_label[(row["dimension_id"], label)].append(row)
 
         representatives: list[sqlite3.Row] = []
         for (dimension_id, _), label_rows in by_label.items():
@@ -1311,7 +1332,8 @@ class DatasetBuilder:
                 groups[(identity, measurement_identity, row["snapshot_date"] or "")].append(row)
             for candidates in groups.values():
                 representatives.append(
-                    max(candidates, key=self.display_representative_rank) if len(candidates) > 1 else candidates[0]
+                    max(candidates, key=lambda row: (row["id"] in preferred_ids, self.display_representative_rank(row)))
+                    if len(candidates) > 1 else candidates[0]
                 )
         return sorted(representatives, key=lambda row: (row["value_base"], row["id"]))
 

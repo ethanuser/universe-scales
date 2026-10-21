@@ -182,6 +182,12 @@ class RebuildDimensionTests(unittest.TestCase):
         self.assertEqual((self.root / "exports" / "frontend" / "length.yaml").read_text(), "version: new\n")
         self.assertEqual((self.root / "data" / "length.yaml").read_text(), "version: new\n")
 
+    def test_missing_staged_site_copy_is_refreshed_from_frontend_export(self):
+        (self.stage / "data" / "length.yaml").unlink()
+        rebuild_dimension.merge_dimension(self.root, self.stage, "length")
+        self.assertEqual((self.root / "data" / "length.yaml").read_bytes(),
+                         (self.root / "exports" / "frontend" / "length.yaml").read_bytes())
+
     def test_staging_redirects_outputs_but_keeps_raw_inputs_and_root(self):
         original_class = build_dataset.DatasetBuilder
 

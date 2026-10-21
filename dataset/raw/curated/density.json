@@ -460,7 +460,9 @@
     "canonical_name": "Dry air at sea level",
     "category": "physics",
     "dimension": "density",
-    "display_eligible": true,
+    "display_eligible": false,
+    "review_status": "deprecated",
+    "quality_flags": ["duplicate_of:entity:air"],
     "qualifiers": {
       "measurement": "gas density"
     },

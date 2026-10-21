@@ -2,20 +2,22 @@
   "base_unit": "parts_per_billion_by_volume",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 30,
-    "candidate_shortfall_to_preferred_target": 20,
+    "candidate_count": 29,
+    "candidate_shortfall_to_preferred_target": 21,
+    "duplicate_candidate_count": 1,
     "empty_bin_count": 9,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 30,
     "required_min_items": 24,
-    "selected_count": 30,
+    "selected_count": 29,
     "selected_primary_count": 15,
-    "selected_secondary_count": 15,
+    "selected_secondary_count": 14,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 30
+      "secondary_reference": 29
     },
-    "target_selected_count": 30
+    "target_selected_count": 29
   },
   "description_format": "markdown",
   "dimension": "odor-concentration",
@@ -1297,64 +1299,6 @@
       ],
       "summary_short": "Limonene is a citrus odorant with a higher threshold than the ultra-potent compounds.",
       "value": 15.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Limonene is a common citrus odorant.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Limonene is a common citrus odorant.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Limonene",
-        "ingest_source": "dataset/raw/curated/odor-concentration.json",
-        "source_trace": {
-          "derivation_note": "odor threshold estimate",
-          "method": "derived",
-          "original_value_text": "20",
-          "source_basis": "Low odor threshold concentration.",
-          "source_unit": "ppbv",
-          "source_url": "https://en.wikipedia.org/wiki/Limonene",
-          "source_value_text": "20 ppbv"
-        }
-      },
-      "hook": null,
-      "id": "obs:odor-concentration:entity-odor-concentration-limonene",
-      "name": "Limonene",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Limonene",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-limonene",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Limonene",
-          "url": "https://en.wikipedia.org/wiki/Limonene"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-odor-concentration-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/odor-concentration.json",
-          "url": "repo://dataset/raw/curated/odor-concentration.json"
-        }
-      ],
-      "summary_short": "Limonene is a common citrus odorant.",
-      "value": 20.0,
       "value_type": "measured",
       "wikidata_qid": null
     },

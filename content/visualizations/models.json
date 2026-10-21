@@ -544,7 +544,6 @@
       ],
       "matches": {
         "volume": [
-          "Soda can",
           "Soda can volume"
         ]
       },
@@ -1852,7 +1851,6 @@
       ],
       "matches": {
         "volume": [
-          "Shipping container",
           "Shipping container volume"
         ]
       },
@@ -4903,9 +4901,7 @@
       "source_bytes": 429940,
       "matches": {
         "angular-velocity": [
-          "Bicycle wheel",
-          "Bicycle wheel at 20 km/h",
-          "Bicycle wheel at city speed"
+          "Bicycle wheel at 20 km/h"
         ]
       },
       "representation": "authored-mechanism",

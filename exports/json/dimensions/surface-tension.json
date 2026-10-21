@@ -2,20 +2,22 @@
   "base_unit": "newtons_per_meter",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 43,
-    "candidate_shortfall_to_preferred_target": 7,
+    "candidate_count": 41,
+    "candidate_shortfall_to_preferred_target": 9,
+    "duplicate_candidate_count": 2,
     "empty_bin_count": 11,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 43,
     "required_min_items": 24,
-    "selected_count": 43,
+    "selected_count": 41,
     "selected_primary_count": 13,
-    "selected_secondary_count": 30,
+    "selected_secondary_count": 28,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 43
+      "secondary_reference": 41
     },
-    "target_selected_count": 43
+    "target_selected_count": 41
   },
   "description_format": "markdown",
   "dimension": "surface-tension",
@@ -24,63 +26,6 @@
   "frontend_group_label": "Materials & Matter",
   "frontend_order": 470,
   "items": [
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Liquid helium has unusually low surface tension.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Liquid helium has unusually low surface tension.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Liquid helium",
-        "ingest_source": "dataset/raw/curated/surface-tension.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.00037",
-          "source_basis": "Representative surface tension.",
-          "source_unit": "N/m",
-          "source_url": "https://en.wikipedia.org/wiki/Helium",
-          "source_value_text": "0.00037 N/m"
-        }
-      },
-      "hook": null,
-      "id": "obs:surface-tension:entity-liquid-helium-surface-tension",
-      "name": "Liquid helium",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Helium",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-helium",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Helium",
-          "url": "https://en.wikipedia.org/wiki/Helium"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-surface-tension-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/surface-tension.json",
-          "url": "repo://dataset/raw/curated/surface-tension.json"
-        }
-      ],
-      "summary_short": "Liquid helium has unusually low surface tension.",
-      "value": 0.00037,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
     {
       "caveats": null,
       "content_status": "seeded",
@@ -654,63 +599,6 @@
       ],
       "summary_short": "Methanol is similar to ethanol but slightly different in capillary behavior.",
       "value": 0.0221,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Alcohol wets surfaces much more readily than water partly because of lower surface tension.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Alcohol wets surfaces much more readily than water partly because of lower surface tension.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Ethanol",
-        "ingest_source": "dataset/raw/curated/surface-tension.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.0223",
-          "source_basis": "Representative surface tension.",
-          "source_unit": "N/m",
-          "source_url": "https://en.wikipedia.org/wiki/Ethanol",
-          "source_value_text": "0.0223 N/m"
-        }
-      },
-      "hook": null,
-      "id": "obs:surface-tension:entity-ethanol-surface-tension",
-      "name": "Ethanol",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Ethanol",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-ethanol",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Ethanol",
-          "url": "https://en.wikipedia.org/wiki/Ethanol"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-surface-tension-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/surface-tension.json",
-          "url": "repo://dataset/raw/curated/surface-tension.json"
-        }
-      ],
-      "summary_short": "Alcohol wets surfaces much more readily than water partly because of lower surface tension.",
-      "value": 0.0223,
       "value_type": "measured",
       "wikidata_qid": null
     },

@@ -226,55 +226,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:flow-rate:entity-iv-drip-flow
-  name: IV drip
-  value: 8.0e-10
-  description: A slow IV drip is still far above microfluidic chip flows.
-  description_format: markdown
-  summary_short: A slow IV drip is still far above microfluidic chip flows.
-  description_medium: A slow IV drip is still far above microfluidic chip flows.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: IV drip
-    ingest_source: dataset/raw/curated/flow-rate.json
-    source_trace:
-      conversion_note: Converted milliliters per hour to cubic meters per second.
-      method: derived
-      original_value_text: 8e-10
-      source_basis: Representative slow IV-drip rate.
-      source_unit: mL/h
-      source_url: https://en.wikipedia.org/wiki/Intravenous_therapy
-      source_value_text: about 3 mL/h
-  source: https://en.wikipedia.org/wiki/Intravenous_therapy
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-intravenous-therapy
-    url: https://en.wikipedia.org/wiki/Intravenous_therapy
-    title: Intravenous therapy
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-flow-rate-json
-    url: repo://dataset/raw/curated/flow-rate.json
-    title: dataset/raw/curated/flow-rate.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:flow-rate:scenario-flow-rate-drip-irrigation-emitter
   name: Drip irrigation emitter
   value: 1.0e-09
@@ -668,55 +619,6 @@ items:
   value_type: derived
   qualifiers:
     measurement: heart pump output
-- id: obs:flow-rate:entity-human-cardiac-output
-  name: Human cardiac output
-  value: 8.33e-05
-  description: A resting adult pumps about five liters of blood each minute.
-  description_format: markdown
-  summary_short: A resting adult pumps about five liters of blood each minute.
-  description_medium: A resting adult pumps about five liters of blood each minute.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Human cardiac output
-    ingest_source: dataset/raw/curated/flow-rate.json
-    source_trace:
-      conversion_note: Converted liters per minute to cubic meters per second.
-      method: derived
-      original_value_text: '8.33e-05'
-      source_basis: Representative human cardiac output.
-      source_unit: L/min
-      source_url: https://en.wikipedia.org/wiki/Cardiac_output
-      source_value_text: 5 L/min
-  source: https://en.wikipedia.org/wiki/Cardiac_output
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-cardiac-output
-    url: https://en.wikipedia.org/wiki/Cardiac_output
-    title: Cardiac output
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-flow-rate-json
-    url: repo://dataset/raw/curated/flow-rate.json
-    title: dataset/raw/curated/flow-rate.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:flow-rate:entity-kitchen-faucet-flow
   name: Kitchen faucet
   value: 0.0001
@@ -1111,55 +1013,6 @@ items:
   value_type: derived
   qualifiers:
     measurement: hose flow
-- id: obs:flow-rate:entity-garden-hose-flow
-  name: Garden hose
-  value: 0.0006
-  description: A garden hose produces a substantial household flow rate.
-  description_format: markdown
-  summary_short: A garden hose produces a substantial household flow rate.
-  description_medium: A garden hose produces a substantial household flow rate.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Garden hose
-    ingest_source: dataset/raw/curated/flow-rate.json
-    source_trace:
-      conversion_note: Converted liters per minute to cubic meters per second.
-      method: derived
-      original_value_text: '0.0006'
-      source_basis: Representative garden-hose flow rate.
-      source_unit: L/min
-      source_url: https://en.wikipedia.org/wiki/Hose
-      source_value_text: 36 L/min
-  source: https://en.wikipedia.org/wiki/Hose
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-hose
-    url: https://en.wikipedia.org/wiki/Hose
-    title: Hose
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-flow-rate-json
-    url: repo://dataset/raw/curated/flow-rate.json
-    title: dataset/raw/curated/flow-rate.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: derived
-  qualifiers: {}
 - id: obs:flow-rate:entity-toilet-flush-flow
   name: Toilet flush peak flow
   value: 0.002
@@ -1257,54 +1110,6 @@ items:
     note: null
   wikidata_qid: null
   value_type: derived
-  qualifiers: {}
-- id: obs:flow-rate:entity-fire-hydrant-flow
-  name: Fire hydrant
-  value: 0.015
-  description: A fully opened fire hydrant reaches into the hundred-liter-per-second regime.
-  description_format: markdown
-  summary_short: A fully opened fire hydrant reaches into the hundred-liter-per-second regime.
-  description_medium: A fully opened fire hydrant reaches into the hundred-liter-per-second regime.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Fire hydrant
-    ingest_source: dataset/raw/curated/flow-rate.json
-    source_trace:
-      method: direct
-      original_value_text: '0.015'
-      source_basis: Representative fire-hydrant discharge rate.
-      source_unit: m^3/s
-      source_url: https://en.wikipedia.org/wiki/Fire_hydrant
-      source_value_text: 0.015 m^3/s
-  source: https://en.wikipedia.org/wiki/Fire_hydrant
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-fire-hydrant
-    url: https://en.wikipedia.org/wiki/Fire_hydrant
-    title: Fire hydrant
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-flow-rate-json
-    url: repo://dataset/raw/curated/flow-rate.json
-    title: dataset/raw/curated/flow-rate.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
   qualifiers: {}
 - id: obs:flow-rate:scenario-flow-rate-fire-hydrant
   name: Fire hydrant
@@ -1914,54 +1719,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-congo-river
     url: https://en.wikipedia.org/wiki/Congo_River
     title: Congo River
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-flow-rate-json
-    url: repo://dataset/raw/curated/flow-rate.json
-    title: dataset/raw/curated/flow-rate.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:flow-rate:entity-amazon-river-flow
-  name: Amazon River
-  value: 209000.0
-  description: The Amazon is the largest river by discharge on Earth.
-  description_format: markdown
-  summary_short: The Amazon is the largest river by discharge on Earth.
-  description_medium: The Amazon is the largest river by discharge on Earth.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Amazon River
-    ingest_source: dataset/raw/curated/flow-rate.json
-    source_trace:
-      method: direct
-      original_value_text: '209000.0'
-      source_basis: Representative Amazon discharge.
-      source_unit: m^3/s
-      source_url: https://en.wikipedia.org/wiki/Amazon_River
-      source_value_text: '209000'
-  source: https://en.wikipedia.org/wiki/Amazon_River
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-amazon-river
-    url: https://en.wikipedia.org/wiki/Amazon_River
-    title: Amazon River
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

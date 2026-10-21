@@ -3,12 +3,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { orbitalAssets, orbitalEntry } from '../js/experiences/angular-orbits.js';
 
-test('all eight orbital observations reuse local credited bodies without modifying spin or length entries', () => {
+test('all seven distinct orbital observations reuse local credited bodies without modifying spin or length entries', () => {
     const registry = JSON.parse(fs.readFileSync(new URL('../content/visualizations/models.json', import.meta.url)));
     const before = JSON.stringify(registry);
     const names = fs.readFileSync(new URL('../data/angular-velocity.yaml', import.meta.url), 'utf8')
         .split('\n').filter(line => /^  name: .*\borbit\b/.test(line)).map(line => line.slice(8));
-    assert.equal(names.length, 8);
+    assert.equal(names.length, 7);
+    assert.ok(names.includes('Moon orbit around Earth'));
+    assert.ok(!names.includes('Moon orbit'));
     for (const name of names) {
         const assets = orbitalAssets({name}, registry.models);
         assert.ok(assets, name);

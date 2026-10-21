@@ -2,20 +2,22 @@
   "base_unit": "meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 31,
-    "candidate_shortfall_to_preferred_target": 19,
+    "candidate_count": 30,
+    "candidate_shortfall_to_preferred_target": 20,
+    "duplicate_candidate_count": 1,
     "empty_bin_count": 10,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 31,
     "required_min_items": 24,
-    "selected_count": 31,
+    "selected_count": 30,
     "selected_primary_count": 14,
-    "selected_secondary_count": 17,
+    "selected_secondary_count": 16,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 31
+      "secondary_reference": 30
     },
-    "target_selected_count": 31
+    "target_selected_count": 30
   },
   "description_format": "markdown",
   "dimension": "roughness",
@@ -887,63 +889,6 @@
         }
       ],
       "summary_short": "Fine abrasives are still much rougher than precision surfaces.",
-      "value": 2e-05,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Skin texture spans tens of micrometers or more.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Skin texture spans tens of micrometers or more.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Human skin",
-        "ingest_source": "dataset/raw/curated/roughness.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "2e-05",
-          "source_basis": "Representative roughness.",
-          "source_unit": "m",
-          "source_url": "https://en.wikipedia.org/wiki/Skin",
-          "source_value_text": "2e-5 m"
-        }
-      },
-      "hook": null,
-      "id": "obs:roughness:entity-skin-roughness",
-      "name": "Human skin",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Skin",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-skin",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Skin",
-          "url": "https://en.wikipedia.org/wiki/Skin"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-roughness-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/roughness.json",
-          "url": "repo://dataset/raw/curated/roughness.json"
-        }
-      ],
-      "summary_short": "Skin texture spans tens of micrometers or more.",
       "value": 2e-05,
       "value_type": "measured",
       "wikidata_qid": null

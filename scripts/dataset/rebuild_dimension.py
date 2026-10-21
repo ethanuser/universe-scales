@@ -333,6 +333,12 @@ def stage_outputs(root: Path, stage: Path, slug: str, subject_ids: set[str]) -> 
     staged_site_yaml = stage / "data" / f"{slug}.yaml"
     if staged_site_yaml.exists():
         outputs[site_yaml] = staged_site_yaml
+    else:
+        # The full builder copies only flagship dimensions into data/. A scoped
+        # rebuild must also refresh deployment copies of every other dimension.
+        staged_site_yaml = prepared / f"{slug}-site.yaml"
+        shutil.copy2(outputs[frontend_yaml], staged_site_yaml)
+        outputs[site_yaml] = staged_site_yaml
 
     return outputs
 

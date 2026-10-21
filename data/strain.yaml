@@ -468,54 +468,6 @@ items:
   wikidata_qid: null
   value_type: measured
   qualifiers: {}
-- id: obs:strain:entity-steel-yield-strain
-  name: Steel yield strain
-  value: 0.002
-  description: Steel begins to yield at only a few tenths of a percent strain.
-  description_format: markdown
-  summary_short: Steel begins to yield at only a few tenths of a percent strain.
-  description_medium: Steel begins to yield at only a few tenths of a percent strain.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Steel yield strain
-    ingest_source: dataset/raw/curated/strain.json
-    source_trace:
-      method: direct
-      original_value_text: '0.002'
-      source_basis: Representative steel yield strain.
-      source_unit: strain
-      source_url: https://en.wikipedia.org/wiki/Yield_(engineering)
-      source_value_text: '0.002'
-  source: https://en.wikipedia.org/wiki/Yield_(engineering)
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-yield-engineering
-    url: https://en.wikipedia.org/wiki/Yield_(engineering)
-    title: Yield (engineering)
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-strain-json
-    url: repo://dataset/raw/curated/strain.json
-    title: dataset/raw/curated/strain.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
 - id: obs:strain:scenario-strain-steel-elastic-strain
   name: Steel elastic strain
   value: 0.002
@@ -886,54 +838,6 @@ items:
   - id: src:https-en-wikipedia-org-wiki-spandex
     url: https://en.wikipedia.org/wiki/Spandex
     title: Spandex
-    publisher: Wikipedia
-    license_text: CC BY-SA 4.0
-    source_class: secondary_reference
-    source_type: web_page
-    role: external_source
-    note: null
-  - id: src:repo-dataset-raw-curated-strain-json
-    url: repo://dataset/raw/curated/strain.json
-    title: dataset/raw/curated/strain.json
-    publisher: universe-scales repo
-    license_text: MIT
-    source_class: legacy_manual
-    source_type: local_file
-    role: curation_manifest
-    note: null
-  wikidata_qid: null
-  value_type: measured
-  qualifiers: {}
-- id: obs:strain:entity-rubber-band-strain
-  name: Rubber band extension
-  value: 1.0
-  description: Elastomers can sustain order-unity strain.
-  description_format: markdown
-  summary_short: Elastomers can sustain order-unity strain.
-  description_medium: Elastomers can sustain order-unity strain.
-  description_long: null
-  hook: null
-  caveats: null
-  content_status: seeded
-  review_status: accepted
-  display_status: display
-  quality_flags: []
-  facts:
-    canonical_name: Rubber band extension
-    ingest_source: dataset/raw/curated/strain.json
-    source_trace:
-      method: direct
-      original_value_text: '1.0'
-      source_basis: Representative rubber-band strain.
-      source_unit: strain
-      source_url: https://en.wikipedia.org/wiki/Rubber
-      source_value_text: '1'
-  source: https://en.wikipedia.org/wiki/Rubber
-  source_count: 2
-  sources:
-  - id: src:https-en-wikipedia-org-wiki-rubber
-    url: https://en.wikipedia.org/wiki/Rubber
-    title: Rubber
     publisher: Wikipedia
     license_text: CC BY-SA 4.0
     source_class: secondary_reference

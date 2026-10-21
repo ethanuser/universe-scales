@@ -2,20 +2,22 @@
   "base_unit": "pascal_seconds",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 34,
-    "candidate_shortfall_to_preferred_target": 16,
+    "candidate_count": 33,
+    "candidate_shortfall_to_preferred_target": 17,
+    "duplicate_candidate_count": 1,
     "empty_bin_count": 11,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 34,
     "required_min_items": 24,
-    "selected_count": 34,
+    "selected_count": 33,
     "selected_primary_count": 13,
-    "selected_secondary_count": 21,
+    "selected_secondary_count": 20,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 34
+      "secondary_reference": 33
     },
-    "target_selected_count": 34
+    "target_selected_count": 33
   },
   "description_format": "markdown",
   "dimension": "viscosity",
@@ -1147,65 +1149,6 @@
       ],
       "summary_short": "Pure glycerol is thick enough to reach around one or two pascal-seconds near room temperature.",
       "value": 1.5,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Syrups are where viscosity becomes viscerally obvious.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Syrups are where viscosity becomes viscerally obvious.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Maple syrup",
-        "ingest_source": "dataset/raw/curated/viscosity.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "2.5",
-          "source_basis": "Representative maple syrup viscosity at room temperature.",
-          "source_unit": "Pa*s",
-          "source_url": "https://en.wikipedia.org/wiki/Maple_syrup",
-          "source_value_text": "2.5"
-        }
-      },
-      "hook": null,
-      "id": "obs:viscosity:scenario-viscosity-maple-syrup",
-      "name": "Maple syrup",
-      "qualifiers": {
-        "measurement": "dynamic viscosity"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Maple_syrup",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-maple-syrup",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Maple syrup",
-          "url": "https://en.wikipedia.org/wiki/Maple_syrup"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-viscosity-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/viscosity.json",
-          "url": "repo://dataset/raw/curated/viscosity.json"
-        }
-      ],
-      "summary_short": "Syrups are where viscosity becomes viscerally obvious.",
-      "value": 2.5,
       "value_type": "measured",
       "wikidata_qid": null
     },

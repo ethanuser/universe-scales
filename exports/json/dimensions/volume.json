@@ -2,20 +2,22 @@
   "base_unit": "cubic_meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 52,
-    "candidate_shortfall_to_preferred_target": 0,
+    "candidate_count": 48,
+    "candidate_shortfall_to_preferred_target": 2,
+    "duplicate_candidate_count": 6,
     "empty_bin_count": 4,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 54,
     "required_min_items": 24,
-    "selected_count": 50,
+    "selected_count": 48,
     "selected_primary_count": 20,
-    "selected_secondary_count": 30,
+    "selected_secondary_count": 28,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 50
+      "secondary_reference": 48
     },
-    "target_selected_count": 50
+    "target_selected_count": 48
   },
   "description_format": "markdown",
   "dimension": "volume",
@@ -143,25 +145,25 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Characteristic occupied volume of one water molecule.",
+      "description": "Approximate molecular volume of a water molecule.",
       "description_format": "markdown",
       "description_long": null,
-      "description_medium": "Characteristic occupied volume of one water molecule.",
+      "description_medium": "Approximate molecular volume of a water molecule.",
       "display_status": "display",
       "facts": {
         "canonical_name": "Water molecule volume",
         "ingest_source": "dataset/raw/curated/volume.json",
         "source_trace": {
           "method": "derived",
-          "original_value_text": "1.1e-29",
+          "original_value_text": "3e-29",
           "source_url": "https://en.wikipedia.org/wiki/Water"
         }
       },
       "hook": null,
-      "id": "obs:volume:entity-water",
+      "id": "obs:volume:entity-water-molecule-volume",
       "name": "Water molecule volume",
       "qualifiers": {
-        "measurement": "single molecule volume"
+        "measurement": "molecular volume"
       },
       "quality_flags": [],
       "review_status": "accepted",
@@ -191,10 +193,10 @@
           "url": "repo://dataset/raw/curated/volume.json"
         }
       ],
-      "summary_short": "Characteristic occupied volume of one water molecule.",
-      "value": 1.1e-29,
+      "summary_short": "Approximate molecular volume of a water molecule.",
+      "value": 3e-29,
       "value_type": "derived",
-      "wikidata_qid": "Q283"
+      "wikidata_qid": null
     },
     {
       "caveats": null,
@@ -251,6 +253,64 @@
       ],
       "summary_short": "Approximate volume of a spherical coronavirus particle.",
       "value": 4.2e-22,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Approximate volume of a spherical influenza virion.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Approximate volume of a spherical influenza virion.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Influenza virion volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "derivation_note": "(4/3)*pi*r^3",
+          "method": "derived",
+          "original_value_text": "9e-22",
+          "source_url": "https://en.wikipedia.org/wiki/Influenza"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-influenza-virus",
+      "name": "Influenza virion volume",
+      "qualifiers": {
+        "derivation": "(4/3)*pi*r^3",
+        "measurement": "volume"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://en.wikipedia.org/wiki/Influenza",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-influenza",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Influenza",
+          "url": "https://en.wikipedia.org/wiki/Influenza"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Approximate volume of a spherical influenza virion.",
+      "value": 9e-22,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -477,62 +537,6 @@
       ],
       "summary_short": "Volume of a representative coarse salt grain treated as a sphere.",
       "value": 5.2e-13,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Representative volume of a grain of sand.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Representative volume of a grain of sand.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Grain of sand volume",
-        "ingest_source": "dataset/raw/curated/volume.json",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "1e-12",
-          "source_url": "https://en.wikipedia.org/wiki/Sand"
-        }
-      },
-      "hook": null,
-      "id": "obs:volume:scenario-grain-of-sand-volume:2",
-      "name": "Grain of sand volume",
-      "qualifiers": {
-        "measurement": "particle volume"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Sand",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-sand",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Sand",
-          "url": "https://en.wikipedia.org/wiki/Sand"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-volume-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/volume.json",
-          "url": "repo://dataset/raw/curated/volume.json"
-        }
-      ],
-      "summary_short": "Representative volume of a grain of sand.",
-      "value": 1e-12,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -874,62 +878,6 @@
       "summary_short": "Representative capacity of a coffee mug.",
       "value": 0.0003,
       "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Capacity of a standard soda can.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Capacity of a standard soda can.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Soda can",
-        "ingest_source": "dataset/raw/curated/volume.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.000355",
-          "source_url": "https://en.wikipedia.org/wiki/Drink_can"
-        }
-      },
-      "hook": null,
-      "id": "obs:volume:scenario-soda-can",
-      "name": "Soda can",
-      "qualifiers": {
-        "measurement": "capacity"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Drink_can",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-drink-can",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Drink can",
-          "url": "https://en.wikipedia.org/wiki/Drink_can"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-volume-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/volume.json",
-          "url": "repo://dataset/raw/curated/volume.json"
-        }
-      ],
-      "summary_short": "Capacity of a standard soda can.",
-      "value": 0.000355,
-      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -1439,62 +1387,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Representative internal volume of a standard shipping container.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Representative internal volume of a standard shipping container.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Shipping container",
-        "ingest_source": "dataset/raw/curated/volume.json",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "33.2",
-          "source_url": "https://en.wikipedia.org/wiki/Intermodal_container"
-        }
-      },
-      "hook": null,
-      "id": "obs:volume:scenario-shipping-container",
-      "name": "Shipping container",
-      "qualifiers": {
-        "measurement": "internal volume"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Intermodal_container",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-intermodal-container",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Intermodal container",
-          "url": "https://en.wikipedia.org/wiki/Intermodal_container"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-volume-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/volume.json",
-          "url": "repo://dataset/raw/curated/volume.json"
-        }
-      ],
-      "summary_short": "Representative internal volume of a standard shipping container.",
-      "value": 33.2,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "Representative volume of a small backyard swimming pool.",
       "description_format": "markdown",
       "description_long": null,
@@ -1544,62 +1436,6 @@
         }
       ],
       "summary_short": "Representative volume of a small backyard swimming pool.",
-      "value": 40.0,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Representative volume of a backyard swimming pool.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Representative volume of a backyard swimming pool.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Swimming pool volume",
-        "ingest_source": "dataset/raw/curated/volume.json",
-        "source_trace": {
-          "method": "derived",
-          "original_value_text": "40.0",
-          "source_url": "https://en.wikipedia.org/wiki/Swimming_pool"
-        }
-      },
-      "hook": null,
-      "id": "obs:volume:scenario-swimming-pool-volume",
-      "name": "Swimming pool volume",
-      "qualifiers": {
-        "measurement": "water volume"
-      },
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Swimming_pool",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-swimming-pool",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Swimming pool",
-          "url": "https://en.wikipedia.org/wiki/Swimming_pool"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-volume-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/volume.json",
-          "url": "repo://dataset/raw/curated/volume.json"
-        }
-      ],
-      "summary_short": "Representative volume of a backyard swimming pool.",
       "value": 40.0,
       "value_type": "derived",
       "wikidata_qid": null
@@ -2389,6 +2225,62 @@
       "value": 1.083e+21,
       "value_type": "measured",
       "wikidata_qid": "Q2"
+    },
+    {
+      "caveats": null,
+      "content_status": "seeded",
+      "description": "Volume of Jupiter.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Volume of Jupiter.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Jupiter volume",
+        "ingest_source": "dataset/raw/curated/volume.json",
+        "source_trace": {
+          "method": "direct",
+          "original_value_text": "1.431e+24",
+          "source_url": "https://en.wikipedia.org/wiki/Jupiter"
+        }
+      },
+      "hook": null,
+      "id": "obs:volume:entity-jupiter",
+      "name": "Jupiter volume",
+      "qualifiers": {
+        "measurement": "planetary volume"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://en.wikipedia.org/wiki/Jupiter",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-en-wikipedia-org-wiki-jupiter",
+          "license_text": "CC BY-SA 4.0",
+          "note": null,
+          "publisher": "Wikipedia",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "Jupiter",
+          "url": "https://en.wikipedia.org/wiki/Jupiter"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-volume-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/volume.json",
+          "url": "repo://dataset/raw/curated/volume.json"
+        }
+      ],
+      "summary_short": "Volume of Jupiter.",
+      "value": 1.431e+24,
+      "value_type": "measured",
+      "wikidata_qid": "Q319"
     },
     {
       "caveats": null,

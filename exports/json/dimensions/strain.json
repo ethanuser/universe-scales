@@ -2,20 +2,22 @@
   "base_unit": "strain",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 22,
-    "candidate_shortfall_to_preferred_target": 28,
+    "candidate_count": 20,
+    "candidate_shortfall_to_preferred_target": 30,
+    "duplicate_candidate_count": 2,
     "empty_bin_count": 13,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 22,
     "required_min_items": 24,
-    "selected_count": 22,
+    "selected_count": 20,
     "selected_primary_count": 11,
-    "selected_secondary_count": 11,
-    "selected_shortfall_to_required_min": 0,
+    "selected_secondary_count": 9,
+    "selected_shortfall_to_required_min": 4,
     "source_class_distribution": {
-      "secondary_reference": 22
+      "secondary_reference": 20
     },
-    "target_selected_count": 22
+    "target_selected_count": 20
   },
   "description_format": "markdown",
   "dimension": "strain",
@@ -547,63 +549,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "Steel begins to yield at only a few tenths of a percent strain.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Steel begins to yield at only a few tenths of a percent strain.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Steel yield strain",
-        "ingest_source": "dataset/raw/curated/strain.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.002",
-          "source_basis": "Representative steel yield strain.",
-          "source_unit": "strain",
-          "source_url": "https://en.wikipedia.org/wiki/Yield_(engineering)",
-          "source_value_text": "0.002"
-        }
-      },
-      "hook": null,
-      "id": "obs:strain:entity-steel-yield-strain",
-      "name": "Steel yield strain",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Yield_(engineering)",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-yield-engineering",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Yield (engineering)",
-          "url": "https://en.wikipedia.org/wiki/Yield_(engineering)"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-strain-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/strain.json",
-          "url": "repo://dataset/raw/curated/strain.json"
-        }
-      ],
-      "summary_short": "Steel begins to yield at only a few tenths of a percent strain.",
-      "value": 0.002,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "Structural steel leaves the linear elastic range at small strain.",
       "description_format": "markdown",
       "description_long": null,
@@ -1062,63 +1007,6 @@
       ],
       "summary_short": "Stretch textiles operate at very large everyday strains.",
       "value": 0.3,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "Elastomers can sustain order-unity strain.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "Elastomers can sustain order-unity strain.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Rubber band extension",
-        "ingest_source": "dataset/raw/curated/strain.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "1.0",
-          "source_basis": "Representative rubber-band strain.",
-          "source_unit": "strain",
-          "source_url": "https://en.wikipedia.org/wiki/Rubber",
-          "source_value_text": "1"
-        }
-      },
-      "hook": null,
-      "id": "obs:strain:entity-rubber-band-strain",
-      "name": "Rubber band extension",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Rubber",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-rubber",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Rubber",
-          "url": "https://en.wikipedia.org/wiki/Rubber"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-strain-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/strain.json",
-          "url": "repo://dataset/raw/curated/strain.json"
-        }
-      ],
-      "summary_short": "Elastomers can sustain order-unity strain.",
-      "value": 1.0,
       "value_type": "measured",
       "wikidata_qid": null
     },

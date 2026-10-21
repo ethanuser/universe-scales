@@ -2,20 +2,22 @@
   "base_unit": "cubic_meters_per_second",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 43,
-    "candidate_shortfall_to_preferred_target": 7,
+    "candidate_count": 38,
+    "candidate_shortfall_to_preferred_target": 12,
+    "duplicate_candidate_count": 5,
     "empty_bin_count": 4,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 43,
     "required_min_items": 24,
-    "selected_count": 43,
+    "selected_count": 38,
     "selected_primary_count": 20,
-    "selected_secondary_count": 23,
+    "selected_secondary_count": 18,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 43
+      "secondary_reference": 38
     },
-    "target_selected_count": 43
+    "target_selected_count": 38
   },
   "description_format": "markdown",
   "dimension": "flow-rate",
@@ -250,64 +252,6 @@
       "summary_short": "A slow medical infusion can be just tens of picoliters per second.",
       "value": 5e-11,
       "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A slow IV drip is still far above microfluidic chip flows.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A slow IV drip is still far above microfluidic chip flows.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "IV drip",
-        "ingest_source": "dataset/raw/curated/flow-rate.json",
-        "source_trace": {
-          "conversion_note": "Converted milliliters per hour to cubic meters per second.",
-          "method": "derived",
-          "original_value_text": "8e-10",
-          "source_basis": "Representative slow IV-drip rate.",
-          "source_unit": "mL/h",
-          "source_url": "https://en.wikipedia.org/wiki/Intravenous_therapy",
-          "source_value_text": "about 3 mL/h"
-        }
-      },
-      "hook": null,
-      "id": "obs:flow-rate:entity-iv-drip-flow",
-      "name": "IV drip",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Intravenous_therapy",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-intravenous-therapy",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Intravenous therapy",
-          "url": "https://en.wikipedia.org/wiki/Intravenous_therapy"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flow-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flow-rate.json",
-          "url": "repo://dataset/raw/curated/flow-rate.json"
-        }
-      ],
-      "summary_short": "A slow IV drip is still far above microfluidic chip flows.",
-      "value": 8e-10,
-      "value_type": "derived",
       "wikidata_qid": null
     },
     {
@@ -775,64 +719,6 @@
       ],
       "summary_short": "Resting cardiac output is a useful physiology benchmark in liters per minute.",
       "value": 8.3e-05,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A resting adult pumps about five liters of blood each minute.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A resting adult pumps about five liters of blood each minute.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Human cardiac output",
-        "ingest_source": "dataset/raw/curated/flow-rate.json",
-        "source_trace": {
-          "conversion_note": "Converted liters per minute to cubic meters per second.",
-          "method": "derived",
-          "original_value_text": "8.33e-05",
-          "source_basis": "Representative human cardiac output.",
-          "source_unit": "L/min",
-          "source_url": "https://en.wikipedia.org/wiki/Cardiac_output",
-          "source_value_text": "5 L/min"
-        }
-      },
-      "hook": null,
-      "id": "obs:flow-rate:entity-human-cardiac-output",
-      "name": "Human cardiac output",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Cardiac_output",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-cardiac-output",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Cardiac output",
-          "url": "https://en.wikipedia.org/wiki/Cardiac_output"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flow-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flow-rate.json",
-          "url": "repo://dataset/raw/curated/flow-rate.json"
-        }
-      ],
-      "summary_short": "A resting adult pumps about five liters of blood each minute.",
-      "value": 8.33e-05,
       "value_type": "derived",
       "wikidata_qid": null
     },
@@ -1308,64 +1194,6 @@
     {
       "caveats": null,
       "content_status": "seeded",
-      "description": "A garden hose produces a substantial household flow rate.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A garden hose produces a substantial household flow rate.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Garden hose",
-        "ingest_source": "dataset/raw/curated/flow-rate.json",
-        "source_trace": {
-          "conversion_note": "Converted liters per minute to cubic meters per second.",
-          "method": "derived",
-          "original_value_text": "0.0006",
-          "source_basis": "Representative garden-hose flow rate.",
-          "source_unit": "L/min",
-          "source_url": "https://en.wikipedia.org/wiki/Hose",
-          "source_value_text": "36 L/min"
-        }
-      },
-      "hook": null,
-      "id": "obs:flow-rate:entity-garden-hose-flow",
-      "name": "Garden hose",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Hose",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-hose",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Hose",
-          "url": "https://en.wikipedia.org/wiki/Hose"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flow-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flow-rate.json",
-          "url": "repo://dataset/raw/curated/flow-rate.json"
-        }
-      ],
-      "summary_short": "A garden hose produces a substantial household flow rate.",
-      "value": 0.0006,
-      "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
       "description": "A toilet flush briefly produces a few liters per second.",
       "description_format": "markdown",
       "description_long": null,
@@ -1477,63 +1305,6 @@
       "summary_short": "A fire hose can deliver roughly ten liters each second.",
       "value": 0.01,
       "value_type": "derived",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "A fully opened fire hydrant reaches into the hundred-liter-per-second regime.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "A fully opened fire hydrant reaches into the hundred-liter-per-second regime.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Fire hydrant",
-        "ingest_source": "dataset/raw/curated/flow-rate.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "0.015",
-          "source_basis": "Representative fire-hydrant discharge rate.",
-          "source_unit": "m^3/s",
-          "source_url": "https://en.wikipedia.org/wiki/Fire_hydrant",
-          "source_value_text": "0.015 m^3/s"
-        }
-      },
-      "hook": null,
-      "id": "obs:flow-rate:entity-fire-hydrant-flow",
-      "name": "Fire hydrant",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Fire_hydrant",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-fire-hydrant",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Fire hydrant",
-          "url": "https://en.wikipedia.org/wiki/Fire_hydrant"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flow-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flow-rate.json",
-          "url": "repo://dataset/raw/curated/flow-rate.json"
-        }
-      ],
-      "summary_short": "A fully opened fire hydrant reaches into the hundred-liter-per-second regime.",
-      "value": 0.015,
-      "value_type": "measured",
       "wikidata_qid": null
     },
     {
@@ -2278,63 +2049,6 @@
       ],
       "summary_short": "The Congo River is a giant tropical river with enormous discharge.",
       "value": 41000.0,
-      "value_type": "measured",
-      "wikidata_qid": null
-    },
-    {
-      "caveats": null,
-      "content_status": "seeded",
-      "description": "The Amazon is the largest river by discharge on Earth.",
-      "description_format": "markdown",
-      "description_long": null,
-      "description_medium": "The Amazon is the largest river by discharge on Earth.",
-      "display_status": "display",
-      "facts": {
-        "canonical_name": "Amazon River",
-        "ingest_source": "dataset/raw/curated/flow-rate.json",
-        "source_trace": {
-          "method": "direct",
-          "original_value_text": "209000.0",
-          "source_basis": "Representative Amazon discharge.",
-          "source_unit": "m^3/s",
-          "source_url": "https://en.wikipedia.org/wiki/Amazon_River",
-          "source_value_text": "209000"
-        }
-      },
-      "hook": null,
-      "id": "obs:flow-rate:entity-amazon-river-flow",
-      "name": "Amazon River",
-      "qualifiers": {},
-      "quality_flags": [],
-      "review_status": "accepted",
-      "source": "https://en.wikipedia.org/wiki/Amazon_River",
-      "source_count": 2,
-      "sources": [
-        {
-          "id": "src:https-en-wikipedia-org-wiki-amazon-river",
-          "license_text": "CC BY-SA 4.0",
-          "note": null,
-          "publisher": "Wikipedia",
-          "role": "external_source",
-          "source_class": "secondary_reference",
-          "source_type": "web_page",
-          "title": "Amazon River",
-          "url": "https://en.wikipedia.org/wiki/Amazon_River"
-        },
-        {
-          "id": "src:repo-dataset-raw-curated-flow-rate-json",
-          "license_text": "MIT",
-          "note": null,
-          "publisher": "universe-scales repo",
-          "role": "curation_manifest",
-          "source_class": "legacy_manual",
-          "source_type": "local_file",
-          "title": "dataset/raw/curated/flow-rate.json",
-          "url": "repo://dataset/raw/curated/flow-rate.json"
-        }
-      ],
-      "summary_short": "The Amazon is the largest river by discharge on Earth.",
-      "value": 209000.0,
       "value_type": "measured",
       "wikidata_qid": null
     },
