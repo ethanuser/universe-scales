@@ -1,5 +1,30 @@
 # Agent Handoff Guide
 
+## 2026-10-20 sourced clock/deck continuation
+
+- Imported Innerscene's CC0 Round Time clock (894 kB, 9,468 triangles) and Walnut
+  Spin deck (1.223 MB, 13,688 triangles) for five angular observations. Existing
+  hour/minute hands and record/mat/groove parts rotate about the source hub;
+  the case/dial/tonearm stay fixed. The source has no second hand, so that slot
+  retains Claude's illustration. The deck motor pulley is omitted.
+- `prepare_angular_imports.py` pins source hashes and groups existing parts
+  without generating mesh geometry. Follow with glTF Transform 4.5.0 `tangents`
+  for portable normal-map shading. Both GLBs validate with zero errors/warnings.
+  Full provenance/rebuild/limitations: `sources/angular-imports.md`.
+- Clock variants use distinct cache IDs and hide the other hand. Angular model
+  creation now waits for the registry to prevent an early procedural fallback
+  from persisting over a downloaded model. Failed registry loads still allow
+  fallbacks. `model_lab.cjs angular --start "Item name"` verifies fresh deep links
+  and checks actual loaded IDs against the selected registry entry.
+- Reviewed production rest/rotated and 393 px screenshots. A Luna visual critic
+  scored clock execution/accuracy 8/8 and deck 9/8. Existing symmetric grooves
+  and a plain label make the small phase dial useful. No dataset values, plaques
+  or authored mechanisms were changed in this batch.
+- Checks: 232 Node tests; Python ran 161 with one existing skip; all 32 angular
+  observations passed the browser audit. Final tangent-corrected imports passed
+  all five examples at mobile width. Asset verification covers 202 self-contained
+  GLBs and 212 exact-name matches; version hashes and diff whitespace pass.
+
 ## 2026-10-20 display deduplication
 
 - Display selection now recognizes explicit `display_equivalents` groups in

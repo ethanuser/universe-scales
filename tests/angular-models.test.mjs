@@ -116,3 +116,41 @@ test('downloaded bicycle replaces the fallback and rotates wheels separately fro
         assert.ok(rotor.children.every(index => !housing.children.includes(index)));
     }
 });
+
+test('sourced clock hands use isolated pivots and distinct load identities', () => {
+    const registry = JSON.parse(fs.readFileSync(new URL('../content/visualizations/models.json', import.meta.url)));
+    const hour = angularEntry({name: 'Hour hand'}, registry.models);
+    const minute = angularEntry({name: 'Minute hand'}, registry.models);
+    assert.equal(hour.src, minute.src);
+    assert.notEqual(hour.id, minute.id, 'load cache must not reuse the other hidden-hand variant');
+    for (const [entry, hand, omitted] of [[hour, 'Hour', 'Minute'], [minute, 'Minute', 'Hour']]) {
+        assert.equal(entry.procedural, undefined);
+        assert.equal(entry.license, 'CC0-1.0');
+        assert.deepEqual(entry.angular_motion.rotations, [{node: `${hand}HandRotor`, axis: [0,0,1]}]);
+        assert.deepEqual(entry.presentation.remove_nodes, [`${omitted}HandRotor`]);
+        const bytes = fs.readFileSync(new URL(`../${entry.src}`, import.meta.url));
+        const gltf = JSON.parse(bytes.subarray(20, 20+bytes.readUInt32LE(12)));
+        const rotor = gltf.nodes.find(node => node.name === `${hand}HandRotor`);
+        const hub = gltf.nodes.find(node => node.name === 'Clock hand hub');
+        assert.deepEqual(rotor.translation, hub.translation);
+        assert.equal(rotor.children.length, 1);
+    }
+});
+
+test('record-speed observations reuse the sourced deck and keep the tonearm outside its rotor', () => {
+    const registry = JSON.parse(fs.readFileSync(new URL('../content/visualizations/models.json', import.meta.url)));
+    for (const name of ['33 1/3 rpm record', '45 rpm vinyl record', '78 rpm record']) {
+        const entry = angularEntry({name}, registry.models);
+        assert.equal(entry.id, 'innerscene-walnut-spin-angular');
+        assert.equal(entry.procedural, undefined);
+        assert.equal(entry.license, 'CC0-1.0');
+        const bytes = fs.readFileSync(new URL(`../${entry.src}`, import.meta.url));
+        const gltf = JSON.parse(bytes.subarray(20, 20+bytes.readUInt32LE(12)));
+        const rotor = gltf.nodes.find(node => node.name === 'RecordRotor');
+        const spindle = gltf.nodes.find(node => node.name === 'Spindle');
+        assert.deepEqual(rotor.translation, spindle.translation);
+        const moving = rotor.children.map(i => gltf.nodes[i].name);
+        assert.ok(moving.includes('Vinyl record') && moving.includes('Record centre label'));
+        assert.ok(!moving.includes('Articulated tonearm') && !moving.includes('Spindle'));
+    }
+});

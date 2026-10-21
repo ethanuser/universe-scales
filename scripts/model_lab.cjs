@@ -417,7 +417,7 @@ const commands = {
         const [out = '/tmp/angular-model-lab', ...requested] = positional;
         fs.mkdirSync(out, { recursive: true });
         await withBrowser(options.size || '1280x900', async (page, base, errors) => {
-            await page.goto(`${base}/?dimension=angular-velocity&item=Ceiling%20fan`);
+            await page.goto(`${base}/?dimension=angular-velocity&item=${encodeURIComponent(options.start || 'Ceiling fan')}`);
             await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.entries.length);
             const observations = await page.evaluate(requested => {
                 const view = app.experiences;
@@ -503,6 +503,8 @@ const commands = {
                             quaternion: rotation.node.quaternion.toArray(), pivot: rotation.node.position.toArray(),
                             axis: rotation.axis.clone().transformDirection(rotation.node.matrixWorld).toArray(),
                             ratio: rotation.ratio })),
+                            actualModelId: instance.userData.modelEntryId,
+                            expectedModelId: view.modelEntry(view.item).id,
                             tilt: view.modelEntry(view.item).angular_motion.view_tilt || 0,
                             housing: stationary.map(node => ({ name: node.name, matrix: node.matrixWorld.toArray() })) };
                     }, phase));
@@ -511,6 +513,7 @@ const commands = {
                 }
                 const moved = snapshots[0].rotors.every((rotor, index) =>
                     rotor.quaternion.some((value, axis) => Math.abs(value - snapshots[1].rotors[index].quaternion[axis]) > 1e-6));
+                const correctAsset = snapshots.every(snapshot => snapshot.actualModelId === snapshot.expectedModelId);
                 const fixed = snapshots.every(snapshot => JSON.stringify(snapshots[0].housing) === JSON.stringify(snapshot.housing));
                 const pivotsFixed = snapshots.every(snapshot => snapshots[0].rotors.every((rotor, index) =>
                     JSON.stringify(rotor.pivot) === JSON.stringify(snapshot.rotors[index].pivot)));
@@ -528,12 +531,12 @@ const commands = {
                     return JSON.stringify(before) === JSON.stringify(rig.rotations.map(rotation => rotation.node.quaternion.toArray()))
                         && view.stage.textContent.includes('Too fast to resolve');
                 });
-                results.push({ ...observation, moved, fixed, pivotsFixed, clockwiseAxial, frozen, snapshots });
-                console.log(`${name}: rotor ${moved ? 'turns' : 'FAILED'}, housing ${fixed ? 'fixed' : 'MOVED'}, pivot ${pivotsFixed ? 'fixed' : 'MOVED'}, axial CW ${clockwiseAxial ? 'yes' : 'FAILED'}, high-rate ${frozen ? 'static' : 'FAILED'}`);
+                results.push({ ...observation, correctAsset, moved, fixed, pivotsFixed, clockwiseAxial, frozen, snapshots });
+                console.log(`${name}: asset ${correctAsset ? 'correct' : 'WRONG'}, rotor ${moved ? 'turns' : 'FAILED'}, housing ${fixed ? 'fixed' : 'MOVED'}, pivot ${pivotsFixed ? 'fixed' : 'MOVED'}, axial CW ${clockwiseAxial ? 'yes' : 'FAILED'}, high-rate ${frozen ? 'static' : 'FAILED'}`);
             }
             fs.writeFileSync(path.join(out, 'audit.json'), JSON.stringify({ results, errors }, null, 2));
             if (results.some(result => result.missingModel || (!result.orbital &&
-                (!result.moved || !result.fixed || !result.pivotsFixed || !result.clockwiseAxial || !result.frozen))) || errors.length) {
+                (!result.correctAsset || !result.moved || !result.fixed || !result.pivotsFixed || !result.clockwiseAxial || !result.frozen))) || errors.length) {
                 console.log(errors); process.exitCode = 1;
             }
         });

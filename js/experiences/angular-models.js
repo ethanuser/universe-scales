@@ -198,6 +198,14 @@ export function angularEntry(item, entries) {
     const entry = entries.find(model => model.matches?.['angular-velocity']?.includes(item.name));
     if (!entry?.angular_motion && angularModelEntries[item.name]) return angularModelEntries[item.name];
     if (!entry) return null;
+    if (entry.id === 'innerscene-clock-angular') {
+        const selected = item.name === 'Hour hand' ? 'Hour' : 'Minute';
+        const omitted = selected === 'Hour' ? 'Minute' : 'Hour';
+        return { ...entry, id: `${entry.id}-${selected.toLowerCase()}`,
+            presentation: { ...entry.presentation, remove_nodes: [`${omitted}HandRotor`] },
+            angular_motion: { ...entry.angular_motion,
+                rotations: [{ node: `${selected}HandRotor`, axis: [0, 0, 1] }] } };
+    }
     if (entry.id === 'ceiling-fan') return { ...entry, presentation: { ...entry.presentation, pitch: -26 },
         angular_motion: { view_side: 'negative', repetitions: 4,
             rotations: [{ node: 'ceiling_fan_blades', axis: [0, 1, 0] }] } };

@@ -8,7 +8,7 @@ import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, pr
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import './neuron-animation.js?v=a744312505';
 import { prepareModelPoints } from './model-points.js?v=a7a090deac';
-import { angularEntry, angularScene } from './angular-models.js?v=531edbd2cb';
+import { angularEntry, angularScene } from './angular-models.js?v=d1fdf1228b';
 import { orbitalAssets, orbitalEntry } from './angular-orbits.js?v=b50491e0cc';
 import { createAngularRig, angularSweepBounds } from './angular-rig.js?v=8f269aade6';
 
@@ -243,6 +243,7 @@ async function load(entry) {
 export class ModelStage {
     constructor(ctx, redraw, onRegistryReady) {
         this.ctx = ctx; this.redraw = redraw; this.instances = new Map(); this.entries = [];
+        this.registryReady = false;
         this.rotations = new Map(); this.hulls = new Map();
         this.waveStart = performance.now();
         try {
@@ -265,6 +266,7 @@ export class ModelStage {
             registry.then(data => {
                 if (this.disposed) return;
                 this.entries = data.models || [];
+                this.registryReady = true;
                 this.ctx.updateDetail();
                 onRegistryReady?.();
                 redraw();
@@ -282,6 +284,9 @@ export class ModelStage {
         return this.environmentMap;
     }
     entry(item) {
+        // Wait for sourced entries before caching a procedural fallback. An
+        // early fallback otherwise survives after the registry has arrived.
+        if (this.ctx.dimension === 'angular-velocity' && !this.registryReady) return null;
         if (this.orbitEntries?.has(item)) return this.orbitEntries.get(item);
         if (this.ctx.dimension === 'angular-velocity') return orbitalEntry(item, this.entries) || angularEntry(item, this.entries);
         return (this.ctx.dimension === 'length' && proceduralLength[item.name]) ||
@@ -455,6 +460,7 @@ export class ModelStage {
                             }
                     });
                     instance.userData.modelItem = item;
+                    instance.userData.modelEntryId = entry.id;
                     Object.assign(instance.userData, { screenLines: [], overlays: [], clouds: [] });
                     instance.traverse(child => {
                         if (child.userData.screenLine) instance.userData.screenLines.push(child);

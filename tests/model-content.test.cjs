@@ -95,7 +95,7 @@ test('new length and volume models have exact matches, credits, and bounded file
         'wine-glass': ['volume', 'Wine glass volume'],
         'freight-train-car': ['volume', 'Freight train car volume'],
         'sketchfab-isuzu-city-bus': ['volume', 'City bus envelope volume'],
-        'shipping-container': ['volume', 'Shipping container'],
+        'shipping-container': ['volume', 'Shipping container volume'],
         'sketchfab-teaspoon': ['volume', 'Teaspoon'],
     };
     for (const [id, [dimension, name]] of Object.entries(expected)) {
