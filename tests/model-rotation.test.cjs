@@ -213,3 +213,48 @@ test('rapid pointer events keep all motion samples but schedule only one redraw'
     stage.releaseRotate(item);
     assert.ok(stage.rotations.get(item).velocity > 0, 'coalescing must not lose flick velocity');
 });
+
+test('registry lookups, including photo-only misses, are reused after readiness', () => {
+    const stage = Object.create(context.window.ScaleModels.ModelStage.prototype);
+    stage.ctx = { dimension: 'volume' };
+    stage.entryCache = new WeakMap();
+    stage.registryReady = true;
+    let searches = 0;
+    const entry = { id: 'test', matches: { volume: ['Modeled item'] } };
+    stage.entries = { find(predicate) { searches++; return predicate(entry) ? entry : undefined; } };
+    const modeled = { name: 'Modeled item' }, photo = { name: 'Photo-only item' };
+    assert.equal(stage.entry(modeled), entry);
+    assert.equal(stage.entry(photo), undefined);
+    for (let i = 0; i < 10; i++) {
+        assert.equal(stage.entry(modeled), entry);
+        assert.equal(stage.entry(photo), undefined);
+    }
+    assert.equal(searches, 2);
+});
+
+test('registry misses before readiness do not poison later model selection', () => {
+    const stage = Object.create(context.window.ScaleModels.ModelStage.prototype);
+    Object.assign(stage, { ctx: { dimension: 'volume' }, entryCache: new WeakMap(), entries: [], registryReady: false });
+    const item = { name: 'Late model' };
+    assert.equal(stage.entry(item), undefined);
+    const entry = { matches: { volume: [item.name] } };
+    stage.entries.push(entry);
+    stage.registryReady = true;
+    assert.equal(stage.entry(item), entry);
+});
+
+test('simultaneous load completions request only one redraw and stop after disposal', () => {
+    const stage = Object.create(context.window.ScaleModels.ModelStage.prototype);
+    let redraws = 0;
+    stage.redraw = () => { redraws++; };
+    stage.queueLoadRedraw();
+    const frame = nextFrame;
+    stage.queueLoadRedraw();
+    assert.equal(nextFrame, frame);
+    frame();
+    assert.equal(redraws, 1);
+    stage.queueLoadRedraw();
+    stage.disposed = true;
+    nextFrame();
+    assert.equal(redraws, 1);
+});

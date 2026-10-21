@@ -1559,6 +1559,15 @@
    "changes": "New original SVG; 1200 \u00d7 800 JPEG and 300 \u00d7 200 thumbnail. Guinness reports Hyperion at 116.07 m in 2019, rounded here to approximately 116 m. Original generic coast-redwood silhouette, not a verified photograph or reconstruction of its crown. Does not corroborate the dataset\u2019s unsourced 116.2 m / 2026 claim."
   },
   {
+   "file": "images/length_hyperion_moon.jpg",
+   "source": "https://science.nasa.gov/photojournal/spongy-surface/",
+   "title": "Spongy Surface (PIA17194)",
+   "author": "NASA/JPL-Caltech/Space Science Institute",
+   "license": "NASA public domain",
+   "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+   "changes": "NASA Photojournal JPEG retained at 1024 x 1024; generated 300 px-wide thumbnail. Processed Cassini narrow-angle image of Hyperion captured May 31, 2015, during the final close approach to this irregular moon; not a review composite."
+  },
+  {
    "file": "images/length_longest_lightning_flash.jpg",
    "source": "https://wmo.int/news/media-centre/wmo-certifies-megaflash-lightning-record-usa",
    "title": "Longest Lightning Flash \u2014 original explanatory diagram",

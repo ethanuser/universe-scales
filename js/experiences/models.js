@@ -244,6 +244,7 @@ export class ModelStage {
     constructor(ctx, redraw, onRegistryReady) {
         this.ctx = ctx; this.redraw = redraw; this.instances = new Map(); this.entries = [];
         this.registryReady = false;
+        this.entryCache = new WeakMap();
         this.rotations = new Map(); this.hulls = new Map();
         this.waveStart = performance.now();
         try {
@@ -266,6 +267,7 @@ export class ModelStage {
             registry.then(data => {
                 if (this.disposed) return;
                 this.entries = data.models || [];
+                this.entryCache = new WeakMap();
                 this.registryReady = true;
                 this.ctx.updateDetail();
                 onRegistryReady?.();
@@ -288,9 +290,22 @@ export class ModelStage {
         // early fallback otherwise survives after the registry has arrived.
         if (this.ctx.dimension === 'angular-velocity' && !this.registryReady) return null;
         if (this.orbitEntries?.has(item)) return this.orbitEntries.get(item);
-        if (this.ctx.dimension === 'angular-velocity') return orbitalEntry(item, this.entries) || angularEntry(item, this.entries);
-        return (this.ctx.dimension === 'length' && proceduralLength[item.name]) ||
-            this.entries.find(e => e.matches?.[this.ctx.dimension]?.includes(item.name));
+        if (this.entryCache.has(item)) return this.entryCache.get(item);
+        const entry = this.ctx.dimension === 'angular-velocity'
+            ? orbitalEntry(item, this.entries) || angularEntry(item, this.entries)
+            : (this.ctx.dimension === 'length' && proceduralLength[item.name]) ||
+                this.entries.find(e => e.matches?.[this.ctx.dimension]?.includes(item.name));
+        // Layout asks for each item's presentation several times per frame.
+        // Do not cache misses until the asynchronous registry has arrived.
+        if (this.registryReady) this.entryCache.set(item, entry);
+        return entry;
+    }
+    queueLoadRedraw() {
+        if (this.loadFrame || this.disposed) return;
+        this.loadFrame = requestAnimationFrame(() => {
+            this.loadFrame = null;
+            if (!this.disposed) this.redraw();
+        });
     }
     orbitalBodies(item) {
         if (this.ctx.dimension !== 'angular-velocity') return null;
@@ -407,6 +422,9 @@ export class ModelStage {
         else this.lastReturnFrame = null;
     }
     begin(exponent = 0, eyeY) {
+        // A camera/input frame already includes any models that just loaded.
+        cancelAnimationFrame(this.loadFrame);
+        this.loadFrame = null;
         // Radial layouts pass the screen center: objects sit above and below it.
         this.eyeY = eyeY ?? 500 - (globalThis.ScaleJourney?.BASELINE ?? 405)
             + 130 * THREE.MathUtils.clamp((exponent + 1) / 7, 0, 1);
@@ -428,7 +446,7 @@ export class ModelStage {
                         try { instance.userData.angularRig = createAngularRig(instance, entry.angular_motion); }
                         catch (error) {
                             console.warn(`Cannot animate ${entry.id}: ${error.message}`);
-                            this.redraw();
+                            this.queueLoadRedraw();
                             return;
                         }
                     }
@@ -470,7 +488,7 @@ export class ModelStage {
                     this.instances.set(item, instance);
                     this.scene.add(instance);
                 }
-                this.redraw();
+                this.queueLoadRedraw();
             });
         }
         const instance = this.instances.get(item);
@@ -714,6 +732,7 @@ export class ModelStage {
         cancelAnimationFrame(this.returnFrame);
         cancelAnimationFrame(this.waveFrame);
         cancelAnimationFrame(this.inputFrame);
+        cancelAnimationFrame(this.loadFrame);
         this.environmentMap?.dispose();
         this.renderer?.dispose();
         this.renderer?.forceContextLoss();

@@ -25,6 +25,8 @@
 //       Adjacent-item camera continuity, repeated arrow keys and toolbar/search controls.
 //   node scripts/model_lab.cjs performance ["Item"] [--mobile] [--gpu] [--trace /tmp/trace.json]
 //       Actual frame and JS timings; --gpu isolates visible models, --trace records Chromium GPU/paint work.
+//   node scripts/model_lab.cjs streaming OUT_DIR [--mobile]
+//       Delayed registry/mesh, zoom cutoffs, warm revisits and parsed-cache reuse after remount.
 //   node scripts/model_lab.cjs labels ["Item" ...] [--zooms 0.35,0.6,1,1.5] [--views rest,side]
 //       Check rendered label collisions over zoom/rotation; exits nonzero on overlap or load errors.
 //
@@ -97,6 +99,127 @@ const describe = m => `${m.name.padEnd(34)} ${String(m.model || 'photo').padEnd(
         (m.warnings.length ? `  !! ${m.warnings.join('; ')}` : '') : m.model ? 'FAILED TO LOAD' : '');
 
 const commands = {
+    async streaming({ positional, options }) {
+        const [out = '/tmp/streaming-model-lab'] = positional;
+        fs.mkdirSync(out, { recursive: true });
+        const entry = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/visualizations/models.json')))
+            .models.find(entry => entry.matches?.length?.includes('Earth Diameter'));
+        if (!entry?.src) throw new Error('Earth must have a downloaded model for the streaming test');
+        await withBrowser(options.mobile ? '393x852' : '1280x900', async (page, base, errors) => {
+            let releaseRegistry, releaseMesh, requests = 0;
+            const registryGate = new Promise(resolve => { releaseRegistry = resolve; });
+            const meshGate = new Promise(resolve => { releaseMesh = resolve; });
+            const isEarth = url => new URL(url).pathname === `/${entry.src}`;
+            page.on('request', request => { if (isEarth(request.url())) requests++; });
+            await page.route('**/content/visualizations/models.json', async route => {
+                await registryGate; await route.continue();
+            });
+            await page.route('**/*.glb*', async route => {
+                if (isEarth(route.request().url())) await meshGate;
+                await route.continue();
+            });
+            const checks = [];
+            try {
+                await page.goto(`${base}/?dimension=length&item=Earth%20Diameter`);
+                await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage);
+                const pendingRegistry = await page.evaluate(() => ({
+                    pending: !app.experiences.renderer.modelStage.registryReady,
+                    images: app.experiences.stage.querySelectorAll('image').length
+                }));
+                checks.push({ test: 'registry loading does not flash photos', passed: pendingRegistry.pending && !pendingRegistry.images, ...pendingRegistry });
+                releaseRegistry();
+                await page.waitForFunction(() => {
+                    const view = app.experiences;
+                    return view.renderer.modelStage.instances.has(view.item);
+                });
+                const pendingMesh = await page.evaluate(() => {
+                    const view = app.experiences;
+                    const node = view.stage.querySelector(`[data-model-index="${view.index}"]`);
+                    return { state: node?.dataset.modelState, images: node?.querySelectorAll('image').length ?? -1 };
+                });
+                checks.push({ test: 'mesh loading keeps its model slot, not a photo', passed: pendingMesh.state === 'loading' && !pendingMesh.images, ...pendingMesh });
+                releaseMesh();
+                await page.waitForFunction(() => {
+                    const view = app.experiences;
+                    return view.renderer.modelStage.instances.get(view.item)?.visible;
+                });
+                await page.waitForTimeout(1500);
+                const zoomChecks = await page.evaluate(async () => {
+                    const view = app.experiences, stage = view.renderer.modelStage;
+                    const input = view.stageFrame.querySelector('.experience-camera-slider input');
+                    const target = view.items.find(item => item.name === 'Earth Diameter');
+                    const original = Number(input.value), instance = stage.instances.get(target);
+                    globalThis.streamingGeometry = null;
+                    instance.traverse(node => { if (!streamingGeometry && node.geometry) streamingGeometry = node.geometry; });
+                    const samples = [];
+                    for (let step = 0; step <= 28; step++) {
+                        input.value = original + step * 0.05;
+                        view.renderer.render();
+                        const photos = [...view.stage.querySelectorAll('.experience-object')].filter(node => {
+                            const name = node.getAttribute('aria-label').slice('Focus '.length);
+                            const item = view.items.find(item => item.name === name);
+                            return stage.entry(item) && node.querySelector('image');
+                        }).length;
+                        samples.push({ photos, visible: instance.visible });
+                        await new Promise(requestAnimationFrame);
+                    }
+                    input.value = original;
+                    view.renderer.render();
+                    return { noModelPhotos: samples.every(sample => sample.photos === 0),
+                        hiddenWhenSmall: samples.some(sample => !sample.visible),
+                        warmRevisit: stage.instances.get(target) === instance && instance.visible };
+                });
+                for (const [test, passed] of Object.entries(zoomChecks)) checks.push({ test, passed });
+                await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, 'warm-earth.png') });
+                const requestsBeforeRemount = requests;
+                await page.evaluate(() => {
+                    app.experiences.setMode('log', false);
+                    app.experiences.setMode('interactive', false);
+                });
+                await page.waitForFunction(() => {
+                    const view = app.experiences;
+                    const target = view.items.find(item => item.name === 'Earth Diameter');
+                    return view.renderer?.modelStage?.instances.get(target)?.visible;
+                });
+                const sharedGeometry = await page.evaluate(() => {
+                    let shared = false;
+                    const view = app.experiences;
+                    const target = view.items.find(item => item.name === 'Earth Diameter');
+                    view.renderer.modelStage.instances.get(target).traverse(node => { shared ||= node.geometry === streamingGeometry; });
+                    return shared;
+                });
+                checks.push({ test: 'remount reuses parsed geometry without another model request',
+                    passed: sharedGeometry && requests === requestsBeforeRemount, sharedGeometry, requests });
+                await page.waitForTimeout(700);
+                checks.push({ test: 'explicit selection remains selected after settling and remount',
+                    passed: await page.evaluate(() => app.experiences.item.name === 'Earth Diameter') });
+                await page.evaluate(() => {
+                    const view = app.experiences;
+                    const index = view.items.findIndex(item => item.name === 'Trans-Siberian Railway');
+                    if (index < 0 || view.modelEntry(view.items[index])) throw new Error('Choose a genuinely photo-only item');
+                    view.focus(index);
+                });
+                await page.waitForFunction(() => {
+                    const view = app.experiences;
+                    return [...view.stage.querySelectorAll('.experience-object')].some(node =>
+                        node.getAttribute('aria-label') === 'Focus Trans-Siberian Railway' && node.querySelector('image'));
+                });
+                checks.push({ test: 'genuinely photo-only objects still render photos', passed: true });
+            } catch (error) {
+                console.error(JSON.stringify({ checks, errors, state: await page.evaluate(() => {
+                    const view = app.experiences, stage = view.renderer?.modelStage;
+                    return { item: view.item?.name, active: view.active, registryReady: stage?.registryReady,
+                        unavailable: stage?.unavailable, disposed: stage?.disposed,
+                        instances: stage && [...stage.instances].map(([item, instance]) => ({ name: item.name, loaded: !!instance, visible: instance?.visible })) };
+                }) }, null, 2));
+                await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, 'failure.png') });
+                throw error;
+            } finally { releaseRegistry(); releaseMesh(); }
+            fs.writeFileSync(path.join(out, 'streaming.json'), JSON.stringify({ checks, errors }, null, 2));
+            console.log(JSON.stringify({ checks, errors }, null, 2));
+            if (checks.some(check => !check.passed) || errors.length) process.exitCode = 1;
+        }, Boolean(options.mobile));
+    },
     async navigation({ positional }) {
         const [out = '/tmp/navigation-model-lab'] = positional;
         fs.mkdirSync(out, { recursive: true });
@@ -105,8 +228,8 @@ const commands = {
             await page.waitForFunction(() => globalThis.app?.experiences?.renderer && globalThis.ScaleModels);
             await page.waitForTimeout(2500);
             const result = await page.evaluate(async () => {
-                const view = app.experiences, original = ScaleJourney.layout;
-                ScaleJourney.layout = (...args) => {
+                const view = app.experiences, original = ScaleJourney.radialLayout;
+                ScaleJourney.radialLayout = (...args) => {
                     const entries = original(...args);
                     globalThis.navigationLayout = entries;
                     return entries;
@@ -153,7 +276,9 @@ const commands = {
                         return samples.slice(1).every((point,j) => (point[i]-samples[j][i])*direction >= -.01);
                     });
                     closeSizeHops.push({ key, monotonic, durationMs: lastMovement-start,
-                        centered: Math.abs(navigationLayout[target].x-500)<.01,
+                        framed: Math.abs(Number(view.stageFrame.querySelector('.experience-camera-slider input').value) -
+                            ScaleJourney.frameExponent(view.items, target, 1) -
+                            Math.log10(view.modelEntry(view.items[target])?.presentation?.focus_scale_factor || 1)) < .001,
                         selected: view.index === target });
                 }
                 const rect = element => element.getBoundingClientRect().toJSON();
@@ -172,7 +297,7 @@ const commands = {
             if (result.immediateJump > 0.01 || !result.monotonic || !result.targetHeld ||
                 result.settled !== result.expectedSettled || !result.repeatedAdvance || !result.arrowsAfterSelector ||
                 !result.equalButtonSizes || !result.searchFocused ||
-                result.closeSizeHops.some(hop => !hop.monotonic || !hop.centered || !hop.selected) || errors.length) process.exitCode = 1;
+                result.closeSizeHops.some(hop => !hop.monotonic || !hop.framed || !hop.selected) || errors.length) process.exitCode = 1;
         });
     },
     async mobile({ positional }) {

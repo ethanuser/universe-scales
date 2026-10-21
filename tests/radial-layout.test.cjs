@@ -52,3 +52,13 @@ test('the camera only zooms: screen radius scales with drawn size, focus follows
     assert.equal(index, 150);
     assert.ok(RADIAL_SIZE > 0);
 });
+
+test('prepared radial placement reuses dimensions without repeating registry lookups', () => {
+    const options = { width: 1000, widthFactor, extentFactor: item => item === items[0] ? 1.2 : 1 };
+    const placement = radialPlacement(items, 1, options);
+    const expected = radialLayout(items, -3, 1, options);
+    const actual = radialLayout(items, -3, 1, { width: 1000, placement,
+        widthFactor() { throw new Error('presentation must already be prepared'); },
+        extentFactor() { throw new Error('presentation must already be prepared'); } });
+    assert.deepEqual(actual, expected);
+});

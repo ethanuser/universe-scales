@@ -5,6 +5,7 @@
     const line = (x1, y1, x2, y2) => svg('line', { x1, y1, x2, y2, stroke: 'currentColor', 'stroke-width': 2 });
     let worldPromise;
     const MIN_DRAWN_PX = 0.5;
+    const MIN_MODEL_PX = 14;
     function createSpatialInput(element, { interaction = {}, onStart, onPan, onEnd }) {
         const previousTouchAction = element.style.touchAction;
         const previousUserSelect = element.style.userSelect;
@@ -140,10 +141,11 @@
         ctx.updateComparison = () => {};
         const camera = new ScaleJourney.Camera(zoom.value, Number(zoom.input.min), Number(zoom.input.max));
         const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-        let frame, previousTime, disposed = false;
+        let frame, previousTime, disposed = false, pinnedFocus = null;
         const focusTransition = new ScaleJourney.FocusTransition();
         const currentPose = () => {
             const options = layoutOptions(), exponent = camera.value * (options.exponentFactor ?? 1);
+            if (options.radial) return { exponent, worldX: 0 };
             const entries = ScaleJourney.layout(ctx.items, exponent, options.order ?? order,
                 { ...options, ...focusTransition.options() });
             return { exponent, worldX: entries[0].cameraWorld };
@@ -154,7 +156,7 @@
             if (options.radial) {
                 // Radial layouts never pan: the selected item is the one at the camera's scale.
                 const index = ScaleJourney.radialFocus(ctx.items, camera.value, order);
-                if (camera.glideTime == null && index !== ctx.index) ctx.focus(index, false);
+                if (pinnedFocus == null && camera.glideTime == null && index !== ctx.index) ctx.focus(index, false);
                 render();
                 return;
             }
@@ -182,6 +184,7 @@
             if (!frame) previousTime = null;
         };
         const aim = (value, focusIndex, focusWindow = 0.3) => {
+            pinnedFocus = focusIndex ?? null;
             focusTransition.stop(currentPose());
             if (focusIndex != null) focusTransition.set(focusIndex, value * (layoutOptions().exponentFactor ?? 1), focusWindow);
             camera.aim(value);
@@ -192,6 +195,9 @@
         // must slide (in pixels at the current zoom), so a hop between two
         // near-identical sizes still reads as a deliberate camera move.
         const hop = (value, focusIndex, focusWindow = 0.3) => {
+            // A manual selection must survive equal/near-equal size neighbors.
+            // Only direct scale input resumes automatic nearest-size selection.
+            pinnedFocus = focusIndex ?? null;
             value = clamp(value, camera.min, camera.max);
             if (reduceMotion.matches || focusIndex == null) { aim(value, focusIndex, focusWindow); return; }
             const options = layoutOptions();
@@ -229,6 +235,7 @@
                 camera.snap(camera.value);
             },
             onPan: dx => {
+                pinnedFocus = null;
                 if (frame) cancelAnimationFrame(frame);
                 frame = null; previousTime = null;
                 camera.snap(camera.value - dx * 0.0012);
@@ -266,7 +273,8 @@
         zoom.input.max = ScaleJourney.frameExponent(ctx.items, ctx.items.length - 1, order);
         zoom.set(clamp(zoom.value, Number(zoom.input.min), Number(zoom.input.max)));
         zoom.input.setAttribute('aria-label', 'Scale camera');
-        let land, modelStage, disposed = false;
+        let land, modelStage, disposed = false, rulerHTML, attributedModel = null;
+        let placement, placementWidth, placementReady;
         const widthFactor = item => {
             if (order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)) return 2 / Math.sqrt(Math.PI);
             if (order === 2 && item.name === 'Earth surface area') return 1.6;
@@ -293,6 +301,11 @@
         zoom.element.classList.add('experience-camera-slider');
         zoom.output.hidden = true;
         ctx.stageFrame.append(ruler, zoom.element);
+        ctx.caption.textContent = order === 1
+            ? 'All objects share one camera that only zooms. Each sits at a distance from the center proportional to its own size, so objects at the current scale ring the center and smaller ones gather toward it; the arrangement is for reading, not physical distance. The ruler uses the listed length; photo framing is approximate. Distances, radii and object diameters retain their dataset definitions. Models are hidden when too small to read or still loading, rather than replaced with photos.'
+            : order === 2
+            ? 'Outlined disks or squares have the listed area; photos identify the subject and do not define its outline. Earth uses an Equal Earth map whose entire footprint includes land and ocean. This is a continuous area journey, not a geographic map. Model/photo sources and geometry conventions are documented with the assets.'
+            : 'Downloaded spherical models are sized using diameter = (6V/pi)^(1/3). Non-spherical models and photos use an equivalent-volume span V^(1/3), not a measured physical outline or mesh volume. A bottle capacity is not the volume of its glass. Object spacing is editorial, not a real spatial distribution.';
         ctx.modelEntry = item => modelStage?.entry(item);
         const attachModels = () => {
             if (disposed || modelStage || !root.ScaleModels) return;
@@ -336,8 +349,13 @@
             ruler.style.color = ctx.stage.style.color;
             // Keep nearby offscreen objects mounted so the SVG viewport, rather than
             // JavaScript culling, controls the exact moment they cross an edge.
+            if (radial && (!placement || placementWidth !== view.width || placementReady !== modelStage?.registryReady)) {
+                placement = ScaleJourney.radialPlacement(ctx.items, order, { ...view, widthFactor, extentFactor });
+                placementWidth = view.width;
+                placementReady = modelStage?.registryReady;
+            }
             const entries = radial
-                ? ScaleJourney.radialLayout(ctx.items, zoom.value, order, { ...view, widthFactor, extentFactor, overscan: 40 })
+                ? ScaleJourney.radialLayout(ctx.items, zoom.value, order, { ...view, placement, overscan: 40 })
                 : ScaleJourney.layout(ctx.items, zoom.value, order, {
                     ...view,
                     widthFactor,
@@ -345,8 +363,6 @@
                     overscan: view.width * 0.75
                 });
             const labels = [];
-            let renderedModels = 0;
-            let clipped = false;
             entries.filter(entry => entry.visible).forEach(({item, x, y, size}) => {
                 const entry = modelStage?.entry(item);
                 // A sphere's diameter differs from the cube root of its volume.
@@ -356,16 +372,17 @@
                     ? size * 2/Math.sqrt(Math.PI) : visualSize * modelExtent;
                 // Sub-pixel objects would still fetch their GLB or photo; they load when they grow.
                 if (extent * view.scale < MIN_DRAWN_PX) return;
-                clipped ||= y - extent < 0 || x - extent/2 < view.left || x + extent/2 > view.left + view.width;
+                // Do not flash a photo while the model registry/mesh loads, or
+                // substitute one when a distant model crosses its draw threshold.
+                const useModel = order !== 2 && entry && !modelStage?.unavailable;
+                if (order !== 2 && !modelStage?.registryReady && !modelStage?.unavailable) return;
+                if (radial && useModel && extent * view.scale < MIN_MODEL_PX) return;
                 const g = ctx.object(ctx.stage, item, x, y, extent, extent, { image: false });
-                if (order !== 2 && entry) {
+                if (useModel) {
                     g.dataset.modelIndex = ctx.items.indexOf(item);
                     g.style.pointerEvents = 'none';
                 }
-                // In the radial view many small objects converge on the center; they show as
-                // photos until they are big enough for a 3D model to read.
-                const isModel = order !== 2 && (!radial || extent * view.scale >= 14) && modelStage?.draw(item, x, y, visualSize);
-                if (isModel) renderedModels++;
+                if (useModel) g.dataset.modelState = modelStage.draw(item, x, y, visualSize) ? 'ready' : 'loading';
                 else if (order === 2 && item.name === 'Earth surface area' && land) {
                     const projection = d3.geoEqualEarth().scale(1).translate([0, 0]);
                     const path = d3.geoPath(projection);
@@ -417,16 +434,15 @@
             const rulerWidth = 112;
             const rulerValue = power(zoom.value) * rulerWidth / ((radial ? ScaleJourney.RADIAL_SIZE : ScaleJourney.BASE_SIZE) * view.scale);
             rulerLine.style.width = `${rulerWidth}px`;
-            rulerLabel.innerHTML = ctx.app.formatTooltipValueHTML(
+            const nextRulerHTML = ctx.app.formatTooltipValueHTML(
                 ctx.app.formatValueForCurrentUnit(rulerValue, 2, true),
                 ctx.app.getCurrentUnitDefinition()?.symbol || 'm');
-            ctx.caption.textContent = order === 1
-                ? 'All objects share one camera that only zooms. Each sits at a distance from the center proportional to its own size, so objects at the current scale ring the center and smaller ones gather toward it; the arrangement is for reading, not physical distance. The ruler and image span use the listed length; image framing is approximate. Distances, radii and object diameters retain their dataset definitions. Downloaded models are used when available.'
-                : order === 2
-                ? 'Outlined disks or squares have the listed area; photos identify the subject and do not define its outline. Earth uses an Equal Earth map whose entire footprint includes land and ocean. This is a continuous area journey, not a geographic map. Model/photo sources and geometry conventions are documented with the assets.'
-                : 'Downloaded spherical models are sized using diameter = (6V/pi)^(1/3). Non-spherical models and photos use an equivalent-volume span V^(1/3), not a measured physical outline or mesh volume. A bottle capacity is not the volume of its glass. Object spacing is editorial, not a real spatial distribution.';
-            ctx.attribution.replaceChildren();
+            if (nextRulerHTML !== rulerHTML) rulerLabel.innerHTML = rulerHTML = nextRulerHTML;
+            navigationControl.update();
             const current = modelStage?.entry(ctx.item);
+            if (current === attributedModel) return;
+            attributedModel = current;
+            ctx.attribution.replaceChildren();
             if (current?.procedural) {
                 ctx.attribution.append(document.createTextNode('Procedural 3D illustration'));
                 if (current.basis_url) {
@@ -448,9 +464,8 @@
                 ctx.attribution.append(source, document.createTextNode(' · '), license);
                 if (current.sketchfab_uid) ctx.attribution.append(document.createTextNode(' · adapted for web'));
             }
-            navigationControl.update();
         }
-        return { render, focus: frame => {
+        return { render, get modelStage() { return modelStage; }, focus: frame => {
             if (frame) {
                 const presentation = modelStage?.entry(ctx.item)?.presentation || {};
                 const exponent = ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor}) +

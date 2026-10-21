@@ -1,5 +1,40 @@
 # Agent Handoff Guide
 
+## 2026-10-20 explorer streaming/performance continuation
+
+- Modeled spatial objects never fall back to photos while loading or below the
+  radial 14 CSS-pixel readability threshold. Until the registry is ready, defer
+  spatial photos too, preventing an initial photo-to-mesh flash. Genuinely
+  photo-only items and the no-WebGL fallback retain images; Area is unchanged.
+- Registry matches (including misses) are cached per item after readiness.
+  Radial placement/dimensions are prepared once per viewport class and registry
+  readiness, instead of rebuilding presentation lookups/cache keys every frame.
+  Ruler markup/credits update only when changed; model load completions share a
+  redraw. Geometry, quantities, plaques and radial positions are unchanged.
+- Explicit radial selections now remain pinned after glides/remounts, even with
+  nearby-sized items. Wheel, slider or panning resumes automatic scale selection.
+  Rotation does not clear the pin. The navigation harness now measures the
+  radial layout and includes each entry's focus-scale factor.
+- Parsed models already live in a page-wide promise cache; stage instances stay
+  available offscreen. This batch preserves that behavior, without preloading
+  the whole catalog. The cache remains unbounded; decoded geometry/textures can
+  consume much more memory than GLB bytes. GPU state is recreated on mode
+  remounts. A future bounded cache needs resource ownership/refcounts before
+  disposing shared textures/geometries, not blind offscreen disposal.
+- `node scripts/model_lab.cjs streaming OUT [--mobile]` deliberately delays the
+  registry/Earth mesh, checks tiny-model hiding and photo-only preservation,
+  then verifies instance reuse and shared parsed geometry across a mode remount
+  with just one model request. Both desktop/mobile pass all eight checks.
+- Milky Way rotation CPU median fell from ~3.4 to ~1.3 ms; desktop/mobile
+  Chromium SwiftShader frame medians stayed ~16.7 ms. These are emulation results,
+  not physical-phone guarantees. All 13 touch/fullscreen checks pass.
+- Repaired Hyperion Moon's missing original/thumbnail using NASA Photojournal
+  PIA17194, with NASA/JPL-Caltech/Space Science Institute credit in length.json.
+  Older handoff integration claims were checked against main, not reimported.
+- Checks: 236 Node tests pass; Python runs 161 with one existing skip. All 202
+  GLBs/212 exact-name matches and version hashes verify. Existing NumPy/SQLite
+  warnings remain. No dataset values, descriptions or model geometry changed.
+
 ## 2026-10-20 sourced clock/deck continuation
 
 - Imported Innerscene's CC0 Round Time clock (894 kB, 9,468 triangles) and Walnut

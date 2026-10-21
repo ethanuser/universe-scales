@@ -216,23 +216,21 @@
             }
             chosen ||= { x: size * base * 4 * stretchX * Math.cos(start), y: size * base * 4 * stretchY * Math.sin(start) };
             placed.push({ ...chosen, size, box });
-            offsets[index] = { u: chosen.x / size, v: chosen.y / size };
+            offsets[index] = { u: chosen.x / size, v: chosen.y / size, length: size,
+                logLength: Math.log10(items[index].value) / order, extent: extents[index], box };
         });
         radialCache.set(key, offsets);
         if (radialCache.size > 8) radialCache.delete(radialCache.keys().next().value);
         return offsets;
     }
     function radialLayout(items, exponent, order = 1, options = {}) {
-        const offsets = radialPlacement(items, order, options);
+        const offsets = options.placement || radialPlacement(items, order, options);
         const left = options.left ?? 0, right = left + (options.width ?? 1000);
         const overscan = Math.max(0, options.overscan ?? 0);
         const pixelsPerUnit = RADIAL_SIZE / 10 ** exponent;
         return items.map((item, index) => {
-            const length = 10 ** (Math.log10(item.value) / order);
-            const size = RADIAL_SIZE * 10 ** Math.max(-300, Math.min(296, Math.log10(item.value) / order - exponent));
-            const factor = options.widthFactor?.(item) ?? 1;
-            const extent = options.extentFactor?.(item) ?? 1;
-            const box = radialBox(item, factor, extent);
+            const { length, logLength, extent, box } = offsets[index];
+            const size = RADIAL_SIZE * 10 ** Math.max(-300, Math.min(296, logLength - exponent));
             const x = CENTER_X + offsets[index].u * length * pixelsPerUnit;
             const center = RADIAL_CENTER_Y - offsets[index].v * length * pixelsPerUnit;
             const width = size * 2 * box.halfWidth;
