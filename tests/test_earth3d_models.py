@@ -20,7 +20,9 @@ class EarthModels(unittest.TestCase):
         return np.concatenate([part['pos'] for part in scene]), scene
 
     def test_spherical_objects_are_isotropic(self):
-        for slug in ['table-tennis', 'tennis', 'basketball']:
+        # Basketball now uses a real photoscan; its irregularities must not be
+        # forced into the exact sphere used by these remaining illustrations.
+        for slug in ['table-tennis', 'tennis']:
             with self.subTest(slug=slug):
                 vertices, _ = self.vertices(slug)
                 # parts() normalizes by longest dimension, so all axes must be 1.
@@ -69,8 +71,16 @@ class EarthModels(unittest.TestCase):
     def test_every_delivery_is_self_contained_small_and_calibrated(self):
         entries = sorted((ROOT/'handoff/earth3d').glob('*.entry.json'))
         self.assertEqual(len(entries), 14)
+        registry = json.loads((ROOT/'content/visualizations/models.json').read_text())
+        current = {name: model for model in registry['models']
+                   for name in model.get('matches', {}).get('length', [])}
         for path in entries:
             entry = json.loads(path.read_text())
+            # A replacement intentionally removes the retired GLB. Continue
+            # checking the active delivery for that item, including real scans.
+            active = current[entry['matches']['length'][0]]
+            if active['id'] != entry['id']:
+                entry = active
             with self.subTest(model=entry['id']):
                 stats = inspect_glb((ROOT/entry['src']).read_bytes())
                 self.assertLess(stats['bytes'], 3_000_000)

@@ -1,0 +1,699 @@
+{
+  "retrieved": "2026-10-23",
+  "scope": "First page (up to 24 downloadable results) per stated Sketchfab API query, followed by targeted primary-source/data research documented in REPORT.md. Counts describe the scoped search, not a claim of catalog-wide absence. Candidate license labels here come from search responses; the selected source slug and downloadability were verified against its model-detail API.",
+  "items": [
+    {
+      "item": "Human Platelet",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "platelet",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=platelet&downloadable=true&count=24",
+          "returned": 23,
+          "cc_by_or_cc0": 13
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "08fed7ab59514804b07804e40a57ef33",
+          "name": "blood platelet / thrombocyte",
+          "source": "https://sketchfab.com/models/08fed7ab59514804b07804e40a57ef33",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Chloroplast",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "chloroplast",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=chloroplast&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 21
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "30bc55b2f763415f9222f876c564be97",
+          "name": "Chloroplast",
+          "source": "https://sketchfab.com/models/30bc55b2f763415f9222f876c564be97",
+          "license_label": "CC Attribution"
+        },
+        {
+          "uid": "4c02b0c865d440f0a0b971d77d6e315e",
+          "name": "Chloroplast",
+          "source": "https://sketchfab.com/models/4c02b0c865d440f0a0b971d77d6e315e",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Human Capillary",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "capillary",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=capillary&downloadable=true&count=24",
+          "returned": 16,
+          "cc_by_or_cc0": 11
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "8f7c6cd4dcb84bdb99e5be9621de941d",
+          "name": "Perivascular Adipose with Vascular Capillary",
+          "source": "https://sketchfab.com/models/8f7c6cd4dcb84bdb99e5be9621de941d",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Neutrophil",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "neutrophil",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=neutrophil&downloadable=true&count=24",
+          "returned": 12,
+          "cc_by_or_cc0": 10
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "829962af9e004626b7e9dbbb353013ae",
+          "name": "Neutrophil-Final",
+          "source": "https://sketchfab.com/models/829962af9e004626b7e9dbbb353013ae",
+          "license_label": "CC Attribution"
+        },
+        {
+          "uid": "b3b89170675a4976876eab0d550ea937",
+          "name": "【Leukocyte】Neutrophil",
+          "source": "https://sketchfab.com/models/b3b89170675a4976876eab0d550ea937",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Human Cone Cell",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "cone cell",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=cone+cell&downloadable=true&count=24",
+          "returned": 6,
+          "cc_by_or_cc0": 6
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "6ca887505d5143cd9b8c575b3c6453bd",
+          "name": "Blue Cone Cell (Low Poly)",
+          "source": "https://sketchfab.com/models/6ca887505d5143cd9b8c575b3c6453bd",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Human Egg Cell",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "oocyte",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=oocyte&downloadable=true&count=24",
+          "returned": 0,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Human Eye",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "human eye",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=human+eye&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 23
+        },
+        {
+          "query": "human eye scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=human+eye+scan&downloadable=true&count=24",
+          "returned": 9,
+          "cc_by_or_cc0": 6
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "e94ef889864045c1a971facce4c65e73",
+          "name": "Model of human eye",
+          "source": "https://sketchfab.com/models/e94ef889864045c1a971facce4c65e73",
+          "license_label": "CC Attribution-NonCommercial"
+        }
+      ]
+    },
+    {
+      "item": "Human Hair",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "human hair scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=human+hair+scan&downloadable=true&count=24",
+          "returned": 16,
+          "cc_by_or_cc0": 8
+        },
+        {
+          "query": "hair micro CT",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=hair+micro+CT&downloadable=true&count=24",
+          "returned": 0,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Table Tennis Ball",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "table tennis ball scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=table+tennis+ball+scan&downloadable=true&count=24",
+          "returned": 2,
+          "cc_by_or_cc0": 1
+        },
+        {
+          "query": "ping pong ball",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=ping+pong+ball&downloadable=true&count=24",
+          "returned": 18,
+          "cc_by_or_cc0": 15
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "f509fb43ad4647238cb4c74b38ab9c8a",
+          "name": "Used Paddle & Ball",
+          "source": "https://sketchfab.com/models/f509fb43ad4647238cb4c74b38ab9c8a",
+          "license_label": "CC Attribution-NoDerivs"
+        }
+      ]
+    },
+    {
+      "item": "Tennis Ball",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "tennis ball",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=tennis+ball&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 17
+        },
+        {
+          "query": "tennis ball scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=tennis+ball+scan&downloadable=true&count=24",
+          "returned": 4,
+          "cc_by_or_cc0": 2
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "1c4dea9a63a64ef994c1f757ad3204a9",
+          "name": "Tennis ball",
+          "source": "https://sketchfab.com/models/1c4dea9a63a64ef994c1f757ad3204a9",
+          "license_label": "CC Attribution-NonCommercial-ShareAlike"
+        },
+        {
+          "uid": "25cc6bcb3a15453398dafc1b74a81a4f",
+          "name": "My dog's tennis ball",
+          "source": "https://sketchfab.com/models/25cc6bcb3a15453398dafc1b74a81a4f",
+          "license_label": "Free Standard"
+        },
+        {
+          "uid": "6da5ede54a3a43eea44f311b02eeb136",
+          "name": "Tennis Ball and Moccasin",
+          "source": "https://sketchfab.com/models/6da5ede54a3a43eea44f311b02eeb136",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Credit Card",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "credit card",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=credit+card&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 24
+        },
+        {
+          "query": "credit card scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=credit+card+scan&downloadable=true&count=24",
+          "returned": 0,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Smartphone",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "smartphone",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=smartphone&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 17
+        },
+        {
+          "query": "smartphone scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=smartphone+scan&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 21
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Basketball",
+      "decision": "replace",
+      "searches": [
+        {
+          "query": "basketball scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=basketball+scan&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 21
+        },
+        {
+          "query": "basket ball",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=basket+ball&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 22
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "008e9eacb9044b11b358a0c2bdae1934",
+          "name": "Rugged Basketball",
+          "source": "https://sketchfab.com/models/008e9eacb9044b11b358a0c2bdae1934",
+          "license_label": "CC Attribution"
+        },
+        {
+          "uid": "e4850557b63446acab091cd6bf31041c",
+          "name": "Basketball",
+          "source": "https://sketchfab.com/models/e4850557b63446acab091cd6bf31041c",
+          "license_label": "CC Attribution"
+        },
+        {
+          "uid": "626e14783853422b9df77280c3504f70",
+          "name": "Basket Ball Scan",
+          "source": "https://sketchfab.com/models/626e14783853422b9df77280c3504f70",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "A4 Paper",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "A4 paper",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=A4+paper&downloadable=true&count=24",
+          "returned": 20,
+          "cc_by_or_cc0": 20
+        },
+        {
+          "query": "A4 paper scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=A4+paper+scan&downloadable=true&count=24",
+          "returned": 0,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Silicon Wafer",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "silicon wafer",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=silicon+wafer&downloadable=true&count=24",
+          "returned": 18,
+          "cc_by_or_cc0": 17
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Rafflesia",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "rafflesia",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=rafflesia&downloadable=true&count=24",
+          "returned": 10,
+          "cc_by_or_cc0": 10
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "af22b00c74be4dd589b0ab14ce0da82c",
+          "name": "Rafflesia - World's Largest Flower (Scaniverse)",
+          "source": "https://sketchfab.com/models/af22b00c74be4dd589b0ab14ce0da82c",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Komodo Dragon",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "komodo dragon",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=komodo+dragon&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 19
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "09a82ad5c86e44abbcc1f37c2f862042",
+          "name": "Komodo Dragon (NHMW-ZOO-HS-23783)",
+          "source": "https://sketchfab.com/models/09a82ad5c86e44abbcc1f37c2f862042",
+          "license_label": "CC Attribution-NonCommercial"
+        },
+        {
+          "uid": "3116cc16e8aa4871898a6dfb982b2611",
+          "name": "Model 116A - Komodo Dragon",
+          "source": "https://sketchfab.com/models/3116cc16e8aa4871898a6dfb982b2611",
+          "license_label": "CC Attribution-NonCommercial"
+        },
+        {
+          "uid": "c6602993155a45858c310ef57b2bda80",
+          "name": "Varanus Komodoensis UF28219",
+          "source": "https://sketchfab.com/models/c6602993155a45858c310ef57b2bda80",
+          "license_label": "CC Attribution"
+        },
+        {
+          "uid": "c606f322fc54498ca0053331f78c17b4",
+          "name": "Komodo Dragon Weta Cave",
+          "source": "https://sketchfab.com/models/c606f322fc54498ca0053331f78c17b4",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Lolong the Crocodile",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "saltwater crocodile",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=saltwater+crocodile&downloadable=true&count=24",
+          "returned": 9,
+          "cc_by_or_cc0": 6
+        },
+        {
+          "query": "crocodylus porosus",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=crocodylus+porosus&downloadable=true&count=24",
+          "returned": 4,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "7ab8c721e8724897a6d1b8b9c54d4016",
+          "name": "Saltwater Crocodile Skull",
+          "source": "https://sketchfab.com/models/7ab8c721e8724897a6d1b8b9c54d4016",
+          "license_label": "CC Attribution-NonCommercial-ShareAlike"
+        },
+        {
+          "uid": "09493ca87c94408ca140c6275d526665",
+          "name": "saltwater croc - craniopagus conjoined twins",
+          "source": "https://sketchfab.com/models/09493ca87c94408ca140c6275d526665",
+          "license_label": "CC Attribution-NonCommercial-NoDerivs"
+        }
+      ]
+    },
+    {
+      "item": "Giant Squid",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "giant squid",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=giant+squid&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 22
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "62b115df53e04bd4a81f775b80a63451",
+          "name": "Giant Squid",
+          "source": "https://sketchfab.com/models/62b115df53e04bd4a81f775b80a63451",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Very Large Telescope Mirror",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "VLT mirror",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=VLT+mirror&downloadable=true&count=24",
+          "returned": 0,
+          "cc_by_or_cc0": 0
+        },
+        {
+          "query": "VLT Unit telescope",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=VLT+Unit+telescope&downloadable=true&count=24",
+          "returned": 1,
+          "cc_by_or_cc0": 1
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Boeing 747-8",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Boeing 747 scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Boeing+747+scan&downloadable=true&count=24",
+          "returned": 0,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Hyperion",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "redwood scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=redwood+scan&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 21
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "a779106caffd475fa910bfa424e30bde",
+          "name": "Muir Woods - Redwood 1",
+          "source": "https://sketchfab.com/models/a779106caffd475fa910bfa424e30bde",
+          "license_label": "CC Attribution"
+        },
+        {
+          "uid": "5f61ba354d964a889629a3e89051522a",
+          "name": "Eldridge Optimized-01",
+          "source": "https://sketchfab.com/models/5f61ba354d964a889629a3e89051522a",
+          "license_label": "CC Attribution-NonCommercial-NoDerivs"
+        }
+      ]
+    },
+    {
+      "item": "Gateway Arch",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Gateway Arch",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Gateway+Arch&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 22
+        },
+        {
+          "query": "Gateway Arch scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Gateway+Arch+scan&downloadable=true&count=24",
+          "returned": 7,
+          "cc_by_or_cc0": 6
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "5015279eea634a0aa2822103c8e52fcd",
+          "name": "St. Louis Gateway Arch",
+          "source": "https://sketchfab.com/models/5015279eea634a0aa2822103c8e52fcd",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Hoover Dam",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Hoover Dam",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Hoover+Dam&downloadable=true&count=24",
+          "returned": 7,
+          "cc_by_or_cc0": 4
+        },
+        {
+          "query": "Hoover Dam scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Hoover+Dam+scan&downloadable=true&count=24",
+          "returned": 0,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "3a19a6a0344141d9bfe9ec7c3171566c",
+          "name": "Hoover Dam - Part 1",
+          "source": "https://sketchfab.com/models/3a19a6a0344141d9bfe9ec7c3171566c",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Hindenburg",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Hindenburg",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Hindenburg&downloadable=true&count=24",
+          "returned": 10,
+          "cc_by_or_cc0": 8
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Titanic",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Titanic",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Titanic&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 19
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Arecibo Telescope",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Arecibo",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Arecibo&downloadable=true&count=24",
+          "returned": 4,
+          "cc_by_or_cc0": 3
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "a6a84919914c4cb194ef43b614308036",
+          "name": "Arecibo Telescope - Collapsed",
+          "source": "https://sketchfab.com/models/a6a84919914c4cb194ef43b614308036",
+          "license_label": "CC Attribution"
+        }
+      ]
+    },
+    {
+      "item": "Ever Given",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Ever Given",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Ever+Given&downloadable=true&count=24",
+          "returned": 24,
+          "cc_by_or_cc0": 20
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Prelude FLNG",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Prelude FLNG",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Prelude+FLNG&downloadable=true&count=24",
+          "returned": 1,
+          "cc_by_or_cc0": 0
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "FAST Radio Telescope",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "FAST telescope",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=FAST+telescope&downloadable=true&count=24",
+          "returned": 2,
+          "cc_by_or_cc0": 2
+        }
+      ],
+      "candidates": []
+    },
+    {
+      "item": "Golden Gate Bridge Main Span",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "Golden Gate Bridge scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=Golden+Gate+Bridge+scan&downloadable=true&count=24",
+          "returned": 8,
+          "cc_by_or_cc0": 6
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "1b99d26280d14dbc9af585988cf7c0ef",
+          "name": "Day 153: Golden Gate Bridge - 1scanaday",
+          "source": "https://sketchfab.com/models/1b99d26280d14dbc9af585988cf7c0ef",
+          "license_label": "CC Attribution"
+        },
+        {
+          "uid": "5ab9ad84c07948d1bde691cb4772ebab",
+          "name": "Walking on the Golden Gate Bridge",
+          "source": "https://sketchfab.com/models/5ab9ad84c07948d1bde691cb4772ebab",
+          "license_label": "CC Attribution-NonCommercial-ShareAlike"
+        }
+      ]
+    },
+    {
+      "item": "Football Field",
+      "decision": "retain",
+      "searches": [
+        {
+          "query": "football field scan",
+          "api_url": "https://api.sketchfab.com/v3/search?type=models&q=football+field+scan&downloadable=true&count=24",
+          "returned": 5,
+          "cc_by_or_cc0": 5
+        }
+      ],
+      "candidates": [
+        {
+          "uid": "2d0f3ccc3a5f4576ab40b9d4bb80cf56",
+          "name": "Field",
+          "source": "https://sketchfab.com/models/2d0f3ccc3a5f4576ab40b9d4bb80cf56",
+          "license_label": "CC Attribution"
+        }
+      ]
+    }
+  ]
+}

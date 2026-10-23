@@ -1,0 +1,25 @@
+{
+  "method": "Vendored production GLTFLoader, placeholder image decoding, exact per-vertex bounds with registry pre-rotation/calibration/rest pose. No WebGL, transparency, perspective, explorer or mobile verification.",
+  "models": [
+    {
+      "id": "upgrade3d-basketball-scan",
+      "bytes": 433972,
+      "sha256": "7ea82620c57a5e141da30ca64caa2993b1651b19ed0624e7116a228ffa26437f",
+      "triangles": 16472,
+      "meshes": 1,
+      "nativeExtent": [
+        1.395780965404351,
+        1.3912982428326728,
+        1.3905232505867486
+      ],
+      "calibrationReference": 1.395780965404351,
+      "normalizedRestExtent": [
+        1,
+        0.9967883767705777,
+        0.9962331376140533
+      ],
+      "displayedExtentPerValue": 1,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "method": "Textured CPU orthographic previews with registry transforms; not production model_lab.",
+  "source_bounds": {
+    "before": [
+      0.23899999260902405,
+      0.23899999260902405,
+      0.23899999260902405
+    ],
+    "after": [
+      1.395780965404351,
+      1.3912982428326728,
+      1.3905232505867486
+    ]
+  },
+  "views": [
+    {
+      "view": "rest",
+      "before": 0.9999851431939157,
+      "after": 1.0
+    },
+    {
+      "view": "quarter-turn",
+      "before": 0.9999137079428752,
+      "after": 0.9967883767705776
+    }
+  ]
+}

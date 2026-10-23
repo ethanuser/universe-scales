@@ -1,0 +1,20 @@
+{
+  "source_pages": [
+    "https://bio3d-vision.github.io/platelet-description.html",
+    "https://leapmanlab.github.io/dense-cell/"
+  ],
+  "archives": [
+    {
+      "url": "https://www.dropbox.com/s/tgmwv9kegijfrao/images_and_labels_json.zip?dl=1",
+      "bytes": 98175690,
+      "sha256": "f3cf91fe06a165d48c7a60afc2209926db975fe01ec1db39b226d0ff5cc4c2d1"
+    },
+    {
+      "url": "https://www.dropbox.com/s/68yclbraqq1diza/platelet_data_1219.zip?dl=1",
+      "bytes": 188671885,
+      "sha256": "d1c8cdd2693947008890648e7158e770a5f4353d68304c045f54255e8dcec132"
+    }
+  ],
+  "method": "Instance-mask RLE decoded in C order using the source convert.py convention. Bounds are compared against every volume face. Dense-cell semantic classes 1-6 are unioned and checked as connected components; this cannot separate touching cells.",
+  "conclusion": "No platelet-sized fully interior instance in the 24/50-slice instance-label volumes. Dense-cell test semantic foreground is one component touching the z boundaries; no unambiguous complete cell instance can be extracted directly from those labels."
+}

@@ -423,6 +423,19 @@
         "layout_width_factor": 1.1
       },
       "note": "Photogrammetry scan by Rigsters of a Tyrannosaurus rex skeleton replica displayed at Knuthenborg Safaripark, Denmark. This is a different replica, not SUE or a scan of SUE\u2019s fossils; it is uniformly scaled to the catalog\u2019s approximate 12.3 m length using the skull-to-tail longitudinal extent. The replica\u2019s pose and proportions are retained. A rapid single-loop capture leaves holes and incomplete surfaces, especially visible from the reverse side; these have not been filled with invented bones or surfaces."
+    },
+    {
+      "id": "upgrade3d-basketball-scan",
+      "name": "Basketball",
+      "uid": "008e9eacb9044b11b358a0c2bdae1934",
+      "author": "robin.sculac",
+      "license": "by",
+      "presentation": {
+        "yaw": 0,
+        "pitch": 0,
+        "layout_width_factor": 1.02
+      },
+      "note": "Photogrammetry of a worn Spalding basketball by robin.sculac, captured with 3DF Zephyr. The photographed seams, pebbling, printed markings and wear replace the original dimensioned illustration. The source does not identify its ball size or supply a measured diameter: this specimen is uniformly calibrated to the catalog\u2019s representative 239 mm diameter, rather than claimed to be a measured size-7 ball. Source proportions, colors and scan irregularities are retained; no surface was filled, reshaped or generated."
     }
   ]
 }

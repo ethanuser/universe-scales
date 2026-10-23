@@ -1,5 +1,9 @@
 # Basketball: 3D model provenance
 
+Superseded by the licensed photoscan documented in
+[`upgrade3d-basketball-scan.md`](upgrade3d-basketball-scan.md). This file records
+the previous illustration; its original builder is not the current import path.
+
 Representative size-7 basketball. Wilson specifies 29.5 inches circumference (238.51 mm derived diameter), rounded to the catalog’s 239 mm. Original pebble texture and eight-panel channel pattern are illustrative.
 
 - Source: https://au.wilson.com/pages/how-to-choose-a-basketball/1000
