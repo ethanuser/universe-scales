@@ -249,6 +249,10 @@ export class ModelStage {
         this.waveStart = performance.now();
         try {
             this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            // Checking compile logs forces every new shader to finish compiling synchronously,
+            // which was most of the stall when models appear. Without it, compileAsync (see
+            // warm) compiles in parallel. Add ?shaderchecks to the URL to debug shaders.
+            this.renderer.debug.checkShaderErrors = /[?&]shaderchecks\b/.test(location.search);
             if (ctx.dimension === 'angular-velocity') {
                 this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
                 this.renderer.toneMappingExposure = 0.85;
@@ -338,7 +342,8 @@ export class ModelStage {
             clientY < rect.top || clientY > rect.bottom) return null;
         const point = { x: clientX - rect.left, y: clientY - rect.top };
         return [...this.hulls.values()]
-            .filter(hull => insideHull(point, hull.polygon))
+            .filter(hull => (!hull.circle || Math.hypot(point.x - hull.circle.x, point.y - hull.circle.y) <= hull.circle.r) &&
+                hull.polygon.length >= 3 && insideHull(point, hull.polygon))
             .sort((a, b) => b.depth - a.depth)[0]?.item || null;
     }
     setHover(item, pointer) {
@@ -430,67 +435,99 @@ export class ModelStage {
             + 130 * THREE.MathUtils.clamp((exponent + 1) / 7, 0, 1);
         for (const instance of this.instances.values()) if (instance) instance.visible = false;
     }
+    // Start loading an item's model without drawing it, so it is parsed, on the GPU and
+    // ready by the time it scrolls or zooms into view. Returns true once it is ready.
+    prefetch(item) {
+        const entry = this.entry(item);
+        if (!entry || this.unavailable || this.disposed) return false;
+        if (!this.instances.has(item)) this.ensure(item, entry);
+        return !!this.instances.get(item);
+    }
+    // Models currently fetching or parsing; callers throttle prefetching with it.
+    get pending() { return this.pendingLoads || 0; }
+    ensure(item, entry) {
+        this.pendingLoads = (this.pendingLoads || 0) + 1;
+        this.instances.set(item, null);
+        load(entry).then(model => {
+            if (this.disposed) return;
+            if (model) {
+                const instance = clone(model);
+                instance.userData.waveRoots = waveAnimation.animationRoots(instance);
+                instance.userData.pickPoints = sampledModelPoints(instance);
+                instance.userData.hoverOverlays = addHoverOverlay(instance);
+                if (entry.angular_motion) {
+                    try { instance.userData.angularRig = createAngularRig(instance, entry.angular_motion); }
+                    catch (error) {
+                        console.warn(`Cannot animate ${entry.id}: ${error.message}`);
+                        this.pendingLoads--;
+                        this.queueLoadRedraw();
+                        return;
+                    }
+                }
+                const pose = entry.presentation || {};
+                instance.rotation.order = 'XYZ';
+                instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
+                    THREE.MathUtils.degToRad(pose.yaw || 0), THREE.MathUtils.degToRad(pose.roll || 0));
+                if (instance.userData.angularRig)
+                    instance.userData.axialPose = instance.userData.angularRig.faceCamera(entry.angular_motion.view_side, entry.angular_motion.view_tilt);
+                instance.updateMatrixWorld(true);
+                // Precise bounds so rotated poses sit on the ground instead of floating.
+                const defaultBounds = instance.userData.angularRig
+                    ? angularSweepBounds(instance, instance.userData.angularRig)
+                    : new THREE.Box3().setFromObject(instance, true);
+                instance.userData.restExtent = defaultBounds.getSize(new THREE.Vector3());
+                // Radius (model units) of a sphere around the origin that contains the
+                // model in any orientation. Clip planes use it: per-frame boxes can be
+                // stale for skinned meshes, letting a turned model cross the near plane.
+                instance.userData.boundRadius = Math.max(...[0, 1].flatMap(i => [0, 1].flatMap(j => [0, 1].map(k =>
+                    new THREE.Vector3(i ? defaultBounds.max.x : defaultBounds.min.x, j ? defaultBounds.max.y : defaultBounds.min.y,
+                        k ? defaultBounds.max.z : defaultBounds.min.z).length()))));
+                instance.userData.anchorMinY = defaultBounds.min.y;
+                instance.userData.anchorMaxZ = defaultBounds.max.z;
+                instance.traverse(child => {
+                    for (const material of [child.material].flat())
+                        if (material?.userData.environment) {
+                            material.envMap = this.environment();
+                            material.envMapIntensity = material.userData.environment;
+                        }
+                });
+                instance.userData.modelItem = item;
+                instance.userData.modelEntryId = entry.id;
+                Object.assign(instance.userData, { screenLines: [], overlays: [], clouds: [] });
+                instance.traverse(child => {
+                    if (child.userData.screenLine) instance.userData.screenLines.push(child);
+                    if (child.userData.label || child.userData.outline) instance.userData.overlays.push(child);
+                    if (child.userData.pointSize) instance.userData.clouds.push(child);
+                });
+                this.instances.set(item, instance);
+                this.scene.add(instance);
+                this.warm(instance);
+            }
+            this.pendingLoads--;
+            this.queueLoadRedraw();
+        });
+    }
+    // Upload textures and compile shaders while the instance is still hidden; doing it on
+    // the first visible frame stalls that frame and makes the model visibly pop in.
+    warm(instance) {
+        try {
+            instance.traverse(child => {
+                for (const material of [child.material].flat()) {
+                    if (!material) continue;
+                    for (const value of Object.values(material))
+                        if (value?.isTexture) this.renderer.initTexture(value);
+                }
+            });
+            instance.visible = true;
+            const compiled = this.renderer.compileAsync?.(instance, this.camera, this.scene);
+            instance.visible = false;
+            compiled?.catch?.(() => {});
+        } catch { instance.visible = false; }
+    }
     draw(item, x, y, size, phase, centered = false) {
         const entry = this.entry(item);
         if (!entry || this.unavailable || this.disposed) return false;
-        if (!this.instances.has(item)) {
-            this.instances.set(item, null);
-            load(entry).then(model => {
-                if (this.disposed) return;
-                if (model) {
-                    const instance = clone(model);
-                    instance.userData.waveRoots = waveAnimation.animationRoots(instance);
-                    instance.userData.pickPoints = sampledModelPoints(instance);
-                    instance.userData.hoverOverlays = addHoverOverlay(instance);
-                    if (entry.angular_motion) {
-                        try { instance.userData.angularRig = createAngularRig(instance, entry.angular_motion); }
-                        catch (error) {
-                            console.warn(`Cannot animate ${entry.id}: ${error.message}`);
-                            this.queueLoadRedraw();
-                            return;
-                        }
-                    }
-                    const pose = entry.presentation || {};
-                    instance.rotation.order = 'XYZ';
-                    instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
-                        THREE.MathUtils.degToRad(pose.yaw || 0), THREE.MathUtils.degToRad(pose.roll || 0));
-                    if (instance.userData.angularRig)
-                        instance.userData.axialPose = instance.userData.angularRig.faceCamera(entry.angular_motion.view_side, entry.angular_motion.view_tilt);
-                    instance.updateMatrixWorld(true);
-                    // Precise bounds so rotated poses sit on the ground instead of floating.
-                    const defaultBounds = instance.userData.angularRig
-                        ? angularSweepBounds(instance, instance.userData.angularRig)
-                        : new THREE.Box3().setFromObject(instance, true);
-                    instance.userData.restExtent = defaultBounds.getSize(new THREE.Vector3());
-                    // Radius (model units) of a sphere around the origin that contains the
-                    // model in any orientation. Clip planes use it: per-frame boxes can be
-                    // stale for skinned meshes, letting a turned model cross the near plane.
-                    instance.userData.boundRadius = Math.max(...[0, 1].flatMap(i => [0, 1].flatMap(j => [0, 1].map(k =>
-                        new THREE.Vector3(i ? defaultBounds.max.x : defaultBounds.min.x, j ? defaultBounds.max.y : defaultBounds.min.y,
-                            k ? defaultBounds.max.z : defaultBounds.min.z).length()))));
-                    instance.userData.anchorMinY = defaultBounds.min.y;
-                    instance.userData.anchorMaxZ = defaultBounds.max.z;
-                    instance.traverse(child => {
-                        for (const material of [child.material].flat())
-                            if (material?.userData.environment) {
-                                material.envMap = this.environment();
-                                material.envMapIntensity = material.userData.environment;
-                            }
-                    });
-                    instance.userData.modelItem = item;
-                    instance.userData.modelEntryId = entry.id;
-                    Object.assign(instance.userData, { screenLines: [], overlays: [], clouds: [] });
-                    instance.traverse(child => {
-                        if (child.userData.screenLine) instance.userData.screenLines.push(child);
-                        if (child.userData.label || child.userData.outline) instance.userData.overlays.push(child);
-                        if (child.userData.pointSize) instance.userData.clouds.push(child);
-                    });
-                    this.instances.set(item, instance);
-                    this.scene.add(instance);
-                }
-                this.queueLoadRedraw();
-            });
-        }
+        if (!this.instances.has(item)) this.ensure(item, entry);
         const instance = this.instances.get(item);
         if (!instance) return false;
         if (phase != null) instance.userData.angularRig?.setPhase(phase);
@@ -525,7 +562,7 @@ export class ModelStage {
     }
     finish(exponent = 0) {
         if (!this.renderer || this.disposed) return;
-        const box = this.ctx.stage.getBoundingClientRect();
+        const box = this.ctx.stage._size || this.ctx.stage.getBoundingClientRect();
         const w = Math.max(1, box.width), h = Math.max(1, box.height);
         if (this.viewportWidth !== w || this.viewportHeight !== h) {
             this.renderer.setSize(w, h, false);
@@ -606,20 +643,31 @@ export class ModelStage {
                 }
             }
             this.overlay(instance, w, h, scale, cx, view);
+            // Pick outlines are projected lazily: only when the pointer is inside a model's
+            // bounding circle. Reprojecting every model on every zoom frame was the costliest
+            // script work while zooming.
             const matrix = new THREE.Matrix4().multiplyMatrices(viewProjection, instance.matrixWorld);
-            let cache = instance.userData.projectedHull;
-            if (!cache || cache.width !== w || cache.height !== h || !cache.matrix.equals(matrix)) {
-                const projected = [], ndc = new THREE.Vector3();
-                for (const point of instance.userData.pickPoints || []) {
-                    ndc.copy(point).applyMatrix4(matrix);
-                    if (!Number.isFinite(ndc.x) || !Number.isFinite(ndc.y) || ndc.z < -1 || ndc.z > 1) continue;
-                    projected.push({ x: (ndc.x + 1) * w / 2, y: (1 - ndc.y) * h / 2 });
+            const center = new THREE.Vector3().setFromMatrixPosition(instance.matrixWorld).applyMatrix4(viewProjection);
+            const radius = (instance.userData.boundRadius ?? 1) * instance.scale.x * 1.05 *
+                pixelsPerUnit(Math.max(1, distance - instance.position.z - (instance.userData.boundRadius ?? 1) * instance.scale.x));
+            this.hulls.set(item, {
+                item, depth: instance.position.z,
+                circle: { x: (center.x + 1) * w / 2, y: (1 - center.y) * h / 2, r: radius },
+                get polygon() {
+                    let cache = instance.userData.projectedHull;
+                    if (!cache || cache.width !== w || cache.height !== h || !cache.matrix.equals(matrix)) {
+                        const projected = [], ndc = new THREE.Vector3();
+                        for (const point of instance.userData.pickPoints || []) {
+                            ndc.copy(point).applyMatrix4(matrix);
+                            if (!Number.isFinite(ndc.x) || !Number.isFinite(ndc.y) || ndc.z < -1 || ndc.z > 1) continue;
+                            projected.push({ x: (ndc.x + 1) * w / 2, y: (1 - ndc.y) * h / 2 });
+                        }
+                        cache = { width: w, height: h, matrix, polygon: convexHull(projected) };
+                        instance.userData.projectedHull = cache;
+                    }
+                    return cache.polygon;
                 }
-                cache = { width: w, height: h, matrix, polygon: convexHull(projected) };
-                instance.userData.projectedHull = cache;
-            }
-            const polygon = cache.polygon;
-            if (polygon.length >= 3) this.hulls.set(item, { item, polygon, depth: instance.position.z });
+            });
         }
         this.hovered = this.pointer && !this.draggingItem
             ? this.pick(this.pointer.x, this.pointer.y) : null;

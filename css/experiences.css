@@ -449,6 +449,7 @@
 .experience-detail-image-button {
     display: block;
     width: 100%;
+    height: 160px;
     margin: 0 0 18px;
     padding: 0;
     border: 0;
@@ -464,10 +465,12 @@
 .experience-detail-image {
     display: block;
     width: 100%;
-    max-height: 160px;
+    height: 100%;
     object-fit: contain;
     transition: opacity 0.3s ease;
 }
+.experience-detail-image-button.is-loading { cursor: default; }
+.experience-detail-image-button.is-loading .experience-detail-image { opacity: 0; }
 .experience-detail-image-button:hover .experience-detail-image,
 .experience-detail-image-button:focus-visible .experience-detail-image {
     opacity: 0.1;

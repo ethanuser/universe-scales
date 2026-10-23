@@ -228,11 +228,14 @@
         const left = options.left ?? 0, right = left + (options.width ?? 1000);
         const overscan = Math.max(0, options.overscan ?? 0);
         const pixelsPerUnit = RADIAL_SIZE / 10 ** exponent;
+        // A pan (in world units, the same units as an object's offset from the origin)
+        // moves that world point, rather than the origin, to the center of the view.
+        const shiftX = (options.pan?.x ?? 0) * pixelsPerUnit, shiftY = (options.pan?.y ?? 0) * pixelsPerUnit;
         return items.map((item, index) => {
             const { length, logLength, extent, box } = offsets[index];
             const size = RADIAL_SIZE * 10 ** Math.max(-300, Math.min(296, logLength - exponent));
-            const x = CENTER_X + offsets[index].u * length * pixelsPerUnit;
-            const center = RADIAL_CENTER_Y - offsets[index].v * length * pixelsPerUnit;
+            const x = CENTER_X + offsets[index].u * length * pixelsPerUnit - shiftX;
+            const center = RADIAL_CENTER_Y - offsets[index].v * length * pixelsPerUnit + shiftY;
             const width = size * 2 * box.halfWidth;
             const leftEdge = x - width / 2, rightEdge = x + width / 2;
             const top = center - size * box.top, bottom = center + size * box.bottom;

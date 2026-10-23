@@ -472,12 +472,17 @@
             this.previous.disabled = this.index === 0;
             this.next.disabled = this.index === this.items.length - 1;
             this.clock.reset();
-            this.updateDetail();
+            // While the camera sweeps through scales the selection changes many times a
+            // second; rebuild the side panel once it settles instead of on every change.
+            clearTimeout(this.detailTimer);
+            if (frame) this.updateDetail();
+            else this.detailTimer = setTimeout(() => { if (this.active) this.updateDetail(); }, 160);
             this.updateComparison();
             this.renderer?.focus?.(frame);
             this.renderer?.render(0);
         }
         updateDetail() {
+            clearTimeout(this.detailTimer);
             const item = this.item;
             const model = this.modelEntry?.(item);
             const title = dom('h2', '', model?.display_label || item.name);
@@ -505,29 +510,10 @@
             if (modelNote) modelNote.append(dom('h3', '', 'What this 3D model shows'),
                 dom('p', '', model.note));
             this.detail.replaceChildren(title, value, ...(modelNote ? [modelNote] : []), prose);
-            const thumbnailButton = dom('button', 'experience-detail-image-button');
-            thumbnailButton.type = 'button';
-            thumbnailButton.hidden = true;
-            thumbnailButton.setAttribute('aria-label', `Open full image of ${item.name}`);
-            const thumbnail = dom('img', 'experience-detail-image');
-            thumbnail.alt = `${item.name} (illustrative image)`;
-            thumbnailButton.append(thumbnail);
-            this.detail.prepend(thumbnailButton);
-            this.resolveImage(item)
-                .then((info) => {
-                    if (!thumbnail.isConnected || this.item !== item) return;
-                    const src = typeof info === 'string' ? info : info?.path;
-                    if (!src) return;
-                    const fullPath = typeof info === 'string' ? info : info.fullPath || info.path;
-                    thumbnailButton.onclick = () => this.app.openImageModal(fullPath, item.name);
-                    thumbnail.onload = () => {
-                        thumbnailButton.hidden = false;
-                    };
-                    thumbnail.onerror = () => {
-                        thumbnailButton.hidden = true;
-                    };
-                    thumbnail.src = src;
-                });
+            // The panel is rebuilt when the registry arrives or units change: reuse the
+            // same image element so it does not reload and push the text down again.
+            if (this.detailImage?.item !== item) this.detailImage = this.detailThumbnail(item);
+            if (!this.detailImage.missing) this.detail.prepend(this.detailImage.button);
             const sources = dom('div', 'experience-detail-sources');
             const addSource = (label, href) => {
                 if (!/^https?:\/\//.test(href || '')) return;
@@ -546,6 +532,30 @@
                 addSource(source.label || 'Model source', source.url);
             if (sources.childNodes.length) this.detail.append(sources);
             this.detail.scrollTop = 0;
+        }
+        detailThumbnail(item) {
+            // The button reserves its full height before the image arrives; the image
+            // fades in, so nothing below it moves. Only a missing image collapses it.
+            const state = { item, missing: this.images.get(item) === '' };
+            const button = state.button = dom('button', 'experience-detail-image-button is-loading');
+            button.type = 'button';
+            button.setAttribute('aria-label', `Open full image of ${item.name}`);
+            const thumbnail = dom('img', 'experience-detail-image');
+            thumbnail.alt = `${item.name} (illustrative image)`;
+            thumbnail.decoding = 'async';
+            button.append(thumbnail);
+            const collapse = () => { state.missing = true; button.remove(); };
+            this.resolveImage(item).then((info) => {
+                if (this.detailImage !== state) return;
+                const src = typeof info === 'string' ? info : info?.path;
+                if (!src) return collapse();
+                const fullPath = typeof info === 'string' ? info : info.fullPath || info.path;
+                button.onclick = () => this.app.openImageModal(fullPath, item.name);
+                thumbnail.onload = () => button.classList.remove('is-loading');
+                thumbnail.onerror = collapse;
+                thumbnail.src = src;
+            });
+            return state;
         }
         updateComparison() {
             this.comparison.replaceChildren();

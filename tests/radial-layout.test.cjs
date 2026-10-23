@@ -62,3 +62,15 @@ test('prepared radial placement reuses dimensions without repeating registry loo
         extentFactor() { throw new Error('presentation must already be prepared'); } });
     assert.deepEqual(actual, expected);
 });
+
+test('a pan to an item\'s world point centers that item and shifts everything equally', () => {
+    const placement = radialPlacement(items, 1, { width: 1000 });
+    const k = 120, exponent = Math.log10(items[k].value);
+    const pan = { x: placement[k].u * placement[k].length, y: placement[k].v * placement[k].length };
+    const still = radialLayout(items, exponent, 1, { width: 1000, placement });
+    const moved = radialLayout(items, exponent, 1, { width: 1000, placement, pan });
+    assert.ok(Math.abs(moved[k].x - 500) < 1e-6 && Math.abs(moved[k].center - 250) < 1e-6);
+    const dx = moved[110].x - still[110].x, dy = moved[110].center - still[110].center;
+    for (const index of [100, 116, 124])
+        assert.ok(Math.abs(moved[index].x - still[index].x - dx) < 1e-6 && Math.abs(moved[index].center - still[index].center - dy) < 1e-6);
+});

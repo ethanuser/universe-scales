@@ -101,8 +101,25 @@
         };
     }
     R.createSpatialInput = createSpatialInput;
+    // The stage's size, kept current by a ResizeObserver. Reading layout every frame,
+    // right after the SVG is rebuilt, forced a synchronous layout on each frame.
+    function stageSize(stage) {
+        if (!stage._sizeObserver && typeof ResizeObserver !== 'undefined') {
+            stage._size = stage.getBoundingClientRect();
+            stage._sizeObserver = new ResizeObserver(([entry]) => {
+                const box = entry.borderBoxSize?.[0];
+                const size = box ? { width: box.inlineSize, height: box.blockSize } : entry.target.getBoundingClientRect();
+                if (size.width === stage._size?.width && size.height === stage._size?.height) return;
+                stage._size = size;
+                stage._onResize?.();
+            });
+            stage._sizeObserver.observe(stage);
+        }
+        return stage._size || stage.getBoundingClientRect();
+    }
+    R.stageSize = stageSize;
     function viewport(ctx) {
-        const box = ctx.stage.getBoundingClientRect();
+        const box = stageSize(ctx.stage);
         const width = box.width < 600 ? 560 : 1000;
         const left = (1000 - width) / 2;
         ctx.stage.setAttribute('viewBox', `${left} 0 ${width} 500`);
@@ -143,6 +160,51 @@
         const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
         let frame, previousTime, disposed = false, pinnedFocus = null;
         const focusTransition = new ScaleJourney.FocusTransition();
+        // Radial view: a selected object is centered by panning to it. A selection glide is
+        // one zoom about the fixed point shared by the start and end views, so every object
+        // moves along a straight line. Afterwards the pan holds while zooming out around the
+        // object and eases off when zooming in past it, where smaller objects gather around
+        // the world origin. Any manual zoom first freezes the current pan, so nothing jumps.
+        let anchor = null, panGlide = null;
+        const panAt = exponent => {
+            if (panGlide) {
+                const { from, to, start, end, startTime, seconds } = panGlide;
+                const zooming = Math.abs(end - start) >= 0.05;
+                const elapsed = (performance.now() - startTime) / 1000;
+                if (zooming ? camera.glideTime == null : elapsed >= seconds) {
+                    anchor = { index: panGlide.index, exponent: end };
+                    panGlide = null;
+                } else if (zooming) {
+                    const q = 10 ** (start - end), grow = 10 ** (exponent - start);
+                    const fixed = axis => (from[axis] - to[axis] * q) / (1 - q);
+                    return { x: fixed('x') - (fixed('x') - from.x) * grow, y: fixed('y') - (fixed('y') - from.y) * grow };
+                } else {
+                    const u = clamp(elapsed / seconds, 0, 1), eased = u * u * (3 - 2 * u);
+                    return { x: from.x + (to.x - from.x) * eased, y: from.y + (to.y - from.y) * eased };
+                }
+            }
+            if (!anchor) return { x: 0, y: 0 };
+            const delta = exponent - anchor.exponent;
+            if (delta > 2.5 || delta < -3) { anchor = null; return { x: 0, y: 0 }; }
+            // A settled selection follows its item (the layout may still be refining);
+            // a frozen manual pan keeps its world point.
+            const point = anchor.index != null ? layoutOptions().radialWorld?.(anchor.index) : anchor;
+            if (!point) return { x: 0, y: 0 };
+            const weight = delta <= 0 ? 1 : Math.exp(-2.5 * delta * delta);
+            return { x: point.x * weight, y: point.y * weight };
+        };
+        const freezePan = () => {
+            if (!layoutOptions().radial || (!panGlide && !anchor)) return;
+            anchor = { ...panAt(camera.value), exponent: camera.value };
+            panGlide = null;
+        };
+        const glidePan = (index, exponent, seconds) => {
+            const to = layoutOptions().radialWorld?.(index);
+            const from = panAt(camera.value);
+            if (to && seconds > 0)
+                panGlide = { index, from, to, start: camera.value, end: exponent, startTime: performance.now(), seconds };
+            else { anchor = { index, exponent }; panGlide = null; }
+        };
         const currentPose = () => {
             const options = layoutOptions(), exponent = camera.value * (options.exponentFactor ?? 1);
             if (options.radial) return { exponent, worldX: 0 };
@@ -180,10 +242,11 @@
             const focusing = focusTransition.step(dt);
             previousTime = now;
             apply();
-            frame = moving || focusing ? requestAnimationFrame(animate) : null;
+            frame = moving || focusing || panGlide ? requestAnimationFrame(animate) : null;
             if (!frame) previousTime = null;
         };
         const aim = (value, focusIndex, focusWindow = 0.3) => {
+            freezePan();
             pinnedFocus = focusIndex ?? null;
             focusTransition.stop(currentPose());
             if (focusIndex != null) focusTransition.set(focusIndex, value * (layoutOptions().exponentFactor ?? 1), focusWindow);
@@ -199,10 +262,16 @@
             // Only direct scale input resumes automatic nearest-size selection.
             pinnedFocus = focusIndex ?? null;
             value = clamp(value, camera.min, camera.max);
-            if (reduceMotion.matches || focusIndex == null) { aim(value, focusIndex, focusWindow); return; }
+            if (reduceMotion.matches || focusIndex == null) {
+                aim(value, focusIndex, focusWindow);
+                if (focusIndex != null && layoutOptions().radial) { glidePan(focusIndex, value, 0); render(); }
+                return;
+            }
             const options = layoutOptions();
             if (options.radial) {
-                camera.glide(value, clamp(0.4 + 0.16 * Math.abs(value - camera.value), 0.4, 1.1));
+                const seconds = clamp(0.4 + 0.16 * Math.abs(value - camera.value), 0.4, 1.1);
+                glidePan(focusIndex, value, seconds);
+                camera.glide(value, seconds);
                 if (!frame) frame = requestAnimationFrame(animate);
                 return;
             }
@@ -229,6 +298,7 @@
         const input = createSpatialInput(ctx.stageFrame, {
             interaction,
             onStart: () => {
+                freezePan();
                 if (frame) cancelAnimationFrame(frame);
                 frame = null; previousTime = null;
                 focusTransition.stop(currentPose());
@@ -254,7 +324,7 @@
         ctx.stageFrame.addEventListener('click', click, true);
         ctx.stageFrame.tabIndex = 0;
         ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use the left and right arrow keys to select items.');
-        return { update: () => { ctx.updateComparison(); }, frameTo: hop,
+        return { update: () => { ctx.updateComparison(); }, frameTo: hop, radialPan: panAt,
             focusOptions: () => focusTransition.options(),
             dispose: () => {
                 disposed = true;
@@ -285,7 +355,10 @@
         };
         const radial = order === 1;
         const extentFactor = item => modelStage?.entry(item)?.presentation?.display_extent_factor ?? 1;
-        const navigationControl = navigation(ctx, order, zoom, render, () => ({ widthFactor, radial }), {
+        // An item's world position in the radial layout (units of its own length).
+        const radialWorld = index => placement?.[index] &&
+            { x: placement[index].u * placement[index].length, y: placement[index].v * placement[index].length };
+        const navigationControl = navigation(ctx, order, zoom, render, () => ({ widthFactor, radial, radialWorld }), {
             pick: (x, y) => modelStage?.pick(x, y),
             hover: (item, pointer) => modelStage?.setHover(item, pointer),
             beginRotate: (item, timestamp) => modelStage?.beginRotate(item, timestamp),
@@ -321,6 +394,27 @@
         window.addEventListener('scale-models-ready', attachModels);
         attachModels();
         if (order === 2) world().then(data => { land = data; if (!disposed) render(); });
+        // Load models about a decade before they are big enough to draw, nearest the
+        // current scale first, a couple at a time, so zooming reveals finished meshes
+        // instead of empty slots that fill in. Larger, still-offscreen items load too:
+        // zooming out brings them in from the edges.
+        function prefetchModels(entries, view) {
+            if (order === 2 || !modelStage?.registryReady || modelStage.unavailable) return;
+            const wanted = [];
+            for (const { item, size } of entries) {
+                const entry = modelStage.entry(item);
+                if (!entry) continue;
+                const drawn = size * (entry.presentation?.display_extent_factor ?? 1) * view.scale;
+                if (drawn < MIN_MODEL_PX / 8 || drawn > 12 * view.width * view.scale) continue;
+                wanted.push({ item, distance: Math.abs(Math.log10(drawn / (ScaleJourney.RADIAL_SIZE * view.scale))) });
+            }
+            wanted.sort((a, b) => a.distance - b.distance);
+            for (const { item } of wanted) {
+                if (modelStage.pending >= 3) break;
+                modelStage.prefetch(item);
+            }
+        }
+        ctx.stage._onResize = () => render();
         function render() {
             if (disposed) return;
             ctx.stage.replaceChildren(); modelStage?.begin(zoom.value, radial ? 500 - ScaleJourney.RADIAL_CENTER_Y : undefined);
@@ -355,7 +449,8 @@
                 placementReady = modelStage?.registryReady;
             }
             const entries = radial
-                ? ScaleJourney.radialLayout(ctx.items, zoom.value, order, { ...view, placement, overscan: 40 })
+                ? ScaleJourney.radialLayout(ctx.items, zoom.value, order,
+                    { ...view, placement, overscan: 40, pan: navigationControl.radialPan(zoom.value) })
                 : ScaleJourney.layout(ctx.items, zoom.value, order, {
                     ...view,
                     widthFactor,
@@ -420,6 +515,7 @@
                         rank: (item === ctx.item ? 1e9 : 0) + drawnPx });
                 }
             });
+            prefetchModels(entries, view);
             // Keep the selected item's label, then larger objects' labels; drop any that collide.
             const kept = [];
             for (const label of labels.sort((a, b) => b.rank - a.rank)) {

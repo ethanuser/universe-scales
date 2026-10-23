@@ -1,5 +1,30 @@
 # Agent Handoff Guide
 
+## 2026-10-23 explorer smoothness and click-to-center (Claude)
+
+- Prefetch: `spatial.js` `prefetchModels` loads models (3 at a time, nearest the current
+  scale first) from about a decade before they reach the 14 px draw threshold, including
+  larger offscreen items that zooming out brings in. `ModelStage.prefetch/ensure/warm`:
+  hidden instances get textures uploaded (`initTexture`) and shaders compiled
+  (`compileAsync`) before their first visible frame.
+- `renderer.debug.checkShaderErrors` is off (add `?shaderchecks` to debug). Its
+  synchronous `getProgramInfoLog` was most of the main-thread time when models appeared.
+- Pick outlines are lazy: `finish` stores a bounding circle per model and projects the
+  convex hull only when the pointer is inside it (was the top script cost while zooming).
+  The stage size comes from a ResizeObserver (`ScaleRenderers.stageSize`) instead of a
+  per-frame `getBoundingClientRect`.
+- Side panel: the thumbnail box reserves its 160 px height and fades the image in;
+  the same element is reused when the panel rebuilds for the same item (registry
+  arrival, units). Automatic selections during zoom rebuild the panel after 160 ms.
+- Click-to-center (radial): an explicit selection (click, arrows, search, `?item=`) pans
+  the view so the object sits at the center. `radialLayout` takes `pan` in world units;
+  `navigation` glides it as one zoom about the fixed point shared by the start and end
+  views (straight-line motion, monotonic navigation checks). The pan holds while zooming
+  out, decays when zooming in past the item, and manual zoom freezes it first.
+- GPU benchmark (headless Chrome on Metal, wheel zoom over ~13 decades and back):
+  empty model slots 114 -> 0 (from Rafflesia) and 260 -> 129 (from Earth); worst frame
+  134 -> 50 ms. Swiftshader has no parallel shader compile, so it still stalls.
+
 ## 2026-10-20 explorer streaming/performance continuation
 
 - Modeled spatial objects never fall back to photos while loading or below the
