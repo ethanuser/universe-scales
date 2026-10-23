@@ -1,0 +1,62 @@
+{
+  "id": "retry3d-mauna-kea",
+  "src": "content/visualizations/models/retry3d-mauna-kea.glb",
+  "matches": {
+    "length": [
+      "Mauna Kea"
+    ]
+  },
+  "source": "https://www.ncei.noaa.gov/products/etopo-global-relief-model",
+  "download_url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W165_surface.tif",
+  "source_sha256": "8265ec91d7db7644d227374afe91d23662203a4eb3fd580626b3f7d3d27dc85c",
+  "source_bytes": 22411557,
+  "author": "NOAA National Centers for Environmental Information; ETOPO 2022 compilation contributors, including GEBCO.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.ngdc.noaa.gov/metadata/published/NOAA/NESDIS/NGDC/MGG/DEM/iso/xml/etopo_2022.xml",
+  "license_files": [
+    "licenses/CC0-1.0.txt",
+    "sources/retry3d/etopo-rights.md"
+  ],
+  "reference": "content/visualizations/models/sources/retry3d-mauna-kea.md",
+  "geometry": "mesh",
+  "representation": "data-derived",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "note": "Direct NOAA ETOPO 2022 topography/bathymetry of a northeastern Hawaii aperture, including Mauna Kea, Kohala and the offshore flank. Original elevations and horizontal geographic scale are retained, with no vertical exaggeration, invented base, walls, underside or water surface. Colors encode elevation, not a satellite photograph. This is a regional terrain surface, not an isolated geological boundary for Mauna Kea; the southern crop excludes Mauna Loa's summit. The catalog measures approximate summit-to-ocean-floor height, not this much wider aperture. ETOPO cell averaging smooths the summit and does not reproduce the exact USGS summit height or establish a unique mountain base. Integration requires the documented vertical-axis presentation exception.",
+  "presentation": {
+    "reference_size": 10211.0,
+    "measure_axis": "y",
+    "pitch": 52.0,
+    "yaw": -12.0,
+    "layout_width_factor": 20.0,
+    "focus_scale_factor": 20.0,
+    "display_extent_factor": 20.0,
+    "roughness": 1,
+    "metalness": 0
+  },
+  "processing": {
+    "builder": "scripts/build_retry3d_models.py",
+    "pinned_input": "content/visualizations/models/sources/retry3d/mauna-kea/grid.npz",
+    "pinned_input_sha256": "f9a38a45c363bf9db9b1fbdeafe9c956cf264f31259d6984eaf9f5fb1d56b759",
+    "vertical_exaggeration": 1,
+    "horizontal_projection": "Local equidistant cylindrical, WGS84 semi-major radius 6378137 m, fixed central latitude",
+    "center_lonlat": [
+      -155.375,
+      20.25
+    ],
+    "nominal_water_level_m": 0.0,
+    "pending": "UNREGISTERED. Vertical quantity versus horizontal footprint requires lead review; do not normalize the bounding box to the item value."
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 553928,
+  "sha256": "ec510b5a709934b7472d1f300d9cf004ecec8b18861c530fe6f2f3b1168ce905",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 27306,
+  "animations": 0,
+  "skins": 0
+}

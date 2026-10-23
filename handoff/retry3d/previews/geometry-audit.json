@@ -1,0 +1,24 @@
+[
+  {
+    "id": "retry3d-baikal-depth",
+    "native_extent_m": [
+      36503.86328125,
+      1653.7852478027344,
+      27366.041015625
+    ],
+    "native_vertical_extent_per_value": 1.0071773738140892,
+    "rest_extent": 26.29342800619377,
+    "side_extent": 18.452498740411684
+  },
+  {
+    "id": "retry3d-mauna-kea",
+    "native_extent_m": [
+      160574.9375,
+      9866.515625,
+      154455.7890625
+    ],
+    "native_vertical_extent_per_value": 0.9662634046616394,
+    "rest_extent": 18.526995800037348,
+    "side_extent": 14.349371993930877
+  }
+]

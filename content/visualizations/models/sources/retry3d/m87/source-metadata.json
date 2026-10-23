@@ -1,0 +1,25 @@
+{
+  "acquired": "2026-10-23",
+  "source_page": {
+    "url": "https://hea-www.harvard.edu/XJET/source-d.cgi?M87",
+    "sha256": "3a00ca7fceb878024c8f324ac4b81f94302ffb06c88ae720e8953803f2d55c72",
+    "scale_kpc_per_arcsec": 0.077,
+    "distance_mpc": 16
+  },
+  "descriptor": {
+    "url": "https://hea-www.harvard.edu/XJET/data/m87_hst_f555w.txt",
+    "sha256": "3f9ba7c8bcfa1f8379b7f8dc54dc65f59a9f559105c65793ec7349803f46d94f",
+    "original_pi": "Sparks",
+    "contributor": "E. Perlman",
+    "reference": "Perlman et al. 1999, AJ 117, 2185",
+    "descriptor_date": "1995Feb04",
+    "fits_date_obs": "3/02/95",
+    "nominal_pixel_arcsec": 0.0455,
+    "exposure_s": 2400
+  },
+  "policy": {
+    "url": "https://hea-www.harvard.edu/XJET/image_policy.txt",
+    "sha256": "0fa262627be1bc5e314fbb928ffcf7a7e49fe2442941740fd1a819bb4b8558c5",
+    "grant": "Contributor must ensure public-domain image with owner permission; acknowledge original observer and contributor."
+  }
+}

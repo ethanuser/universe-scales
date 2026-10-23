@@ -1,0 +1,74 @@
+{
+  "method": "Actual vendored GLTFLoader; exact vertex bounds. Registered map must pass 0.6–1.3x; terrain candidates explicitly remain unregistered with overall extent failures reported. No WebGL/picking/LOD/mobile certification.",
+  "models": [
+    {
+      "id": "retry3d-baikal-depth",
+      "registered": false,
+      "bytes": 208252,
+      "sha256": "31ef3991cf62af3315e2e60be2857562c24e743760c0d4758e777b5e5595e260",
+      "points": 0,
+      "triangles": 10001,
+      "nativeExtent": [
+        36503.86328125,
+        1653.7852478027344,
+        27366.041015625
+      ],
+      "referenceSize": 1642,
+      "normalizedRestExtent": [
+        26.293428006193768,
+        18.452498740411684,
+        13.28599381206739
+      ],
+      "passesOverallExtentRule": false,
+      "nativeVerticalExtentPerValue": 1.0071773738140892,
+      "fitsDeclaredLayoutWidth": true,
+      "pass": true
+    },
+    {
+      "id": "retry3d-m87-hst-map",
+      "registered": true,
+      "bytes": 156184,
+      "sha256": "40ea64da1ed3229d33ec1c1f93685b0845325a036ae187fd93a3bb61b7a668a5",
+      "points": 9689,
+      "triangles": 0,
+      "nativeExtent": [
+        1595.4901123046875,
+        784.1923370361328,
+        0
+      ],
+      "referenceSize": 1533.006968927753,
+      "normalizedRestExtent": [
+        1.0407585514243538,
+        0.5115386641618652,
+        0
+      ],
+      "passesOverallExtentRule": true,
+      "nativeVerticalExtentPerValue": 0.5115386641618652,
+      "fitsDeclaredLayoutWidth": true,
+      "pass": true
+    },
+    {
+      "id": "retry3d-mauna-kea",
+      "registered": false,
+      "bytes": 553928,
+      "sha256": "ec510b5a709934b7472d1f300d9cf004ecec8b18861c530fe6f2f3b1168ce905",
+      "points": 0,
+      "triangles": 27306,
+      "nativeExtent": [
+        160574.9375,
+        9866.515625,
+        154455.7890625
+      ],
+      "referenceSize": 10211,
+      "normalizedRestExtent": [
+        18.526995800037348,
+        14.349371993930873,
+        10.976741557327799
+      ],
+      "passesOverallExtentRule": false,
+      "nativeVerticalExtentPerValue": 0.9662634046616394,
+      "fitsDeclaredLayoutWidth": true,
+      "pass": true
+    }
+  ]
+}

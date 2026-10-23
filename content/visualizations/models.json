@@ -14233,6 +14233,70 @@
       "triangle_count": 9468,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "retry3d-m87-hst-map",
+      "src": "content/visualizations/models/retry3d-m87-hst-map.glb",
+      "matches": {
+        "length": [
+          "M87 Jet"
+        ]
+      },
+      "source": "https://hea-www.harvard.edu/XJET/source-d.cgi?M87",
+      "download_url": "https://hea-www.harvard.edu/XJET/data/m87_hst_f555w.fits",
+      "source_sha256": "38f0bff327970971247d86804910a8fa96e1d7ab505e9f101358fc930e8a6f90",
+      "source_bytes": 2615040,
+      "author": "NASA/ESA Hubble Space Telescope, WFPC2; original PI W. Sparks; image contributed by E. Perlman; Perlman et al. (1999), AJ 117, 2185; XJET archive.",
+      "license": "Public-domain XJET image; archive requires owner permission and observer/contributor acknowledgement",
+      "license_url": "https://hea-www.harvard.edu/XJET/image_policy.txt",
+      "license_files": [
+        "sources/retry3d/m87/rights.md"
+      ],
+      "reference": "content/visualizations/models/sources/retry3d-m87-hst-map.md",
+      "geometry": "points",
+      "representation": "observed_sky_projection",
+      "volume_semantics": "not_a_volume_measurement",
+      "closed_volume_checked": false,
+      "note": "Measured February 1995 Hubble WFPC2 F555W emission pixels from the public XJET FITS image, drawn at their original WCS positions on a flat sky plane. This is a projected optical intensity map, not a recovered 3D jet, solid surface, particle trajectory or animation of flowing plasma. Rotation exposes the deliberately zero line-of-sight thickness. The physical scale retains XJET's historical 0.077 kpc per arcsecond (16 Mpc) convention, without stretching the pixel distribution to the catalog value. A fixed image aperture, native intensity threshold and connected-pixel display filter exclude the noisy outer field; they are not a measured jet boundary. Blue-to-white color and glow encode compressed monochromatic intensity, not natural RGB color or deprojected dimensions. The source WCS is not registered to accurate radio maps; no multi-band alignment is claimed.",
+      "presentation": {
+        "reference_size": 1533.006968927753,
+        "layout_width_factor": 1.3,
+        "focus_scale_factor": 1.1
+      },
+      "processing": {
+        "builder": "scripts/build_retry3d_m87.py",
+        "pinned_input": "content/visualizations/models/sources/retry3d/m87/m87_hst_f555w.fits.gz",
+        "point_count": 9689,
+        "depth_pc": 0,
+        "physical_scale_pc_per_arcsec": 77.0,
+        "selection": {
+          "aperture_zero_based_xy": [
+            150,
+            190,
+            620,
+            610
+          ],
+          "minimum_native_value_exclusive": 150,
+          "connectivity": 4,
+          "minimum_connected_pixels": 31
+        },
+        "color": "asinh(native value / 200), blue-white false color",
+        "smoothing": "None; one point per retained native pixel. Shared screen-space soft sprites only."
+      },
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 156184,
+      "sha256": "40ea64da1ed3229d33ec1c1f93685b0845325a036ae187fd93a3bb61b7a668a5",
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 0,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

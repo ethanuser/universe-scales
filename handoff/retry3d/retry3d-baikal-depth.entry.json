@@ -1,0 +1,62 @@
+{
+  "id": "retry3d-baikal-depth",
+  "src": "content/visualizations/models/retry3d-baikal-depth.glb",
+  "matches": {
+    "length": [
+      "Lake Baikal Depth"
+    ]
+  },
+  "source": "https://www.ncei.noaa.gov/products/etopo-global-relief-model",
+  "download_url": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N60E105_surface.tif",
+  "source_sha256": "fb76fee09f9b921c1423eb7f74a50824890fd09ed923f35c9b2938bb2fc6a87f",
+  "source_bytes": 34700391,
+  "author": "NOAA National Centers for Environmental Information; ETOPO 2022 compilation contributors, including GEBCO.",
+  "license": "CC0-1.0",
+  "license_url": "https://www.ngdc.noaa.gov/metadata/published/NOAA/NESDIS/NGDC/MGG/DEM/iso/xml/etopo_2022.xml",
+  "license_files": [
+    "licenses/CC0-1.0.txt",
+    "sources/retry3d/etopo-rights.md"
+  ],
+  "reference": "content/visualizations/models/sources/retry3d-baikal-depth.md",
+  "geometry": "mesh",
+  "representation": "data-derived",
+  "volume_semantics": "not_a_volume_measurement",
+  "closed_volume_checked": false,
+  "note": "Direct NOAA ETOPO 2022 lake-bed elevations near the deep central Baikal basin southeast of Olkhon. This public NOAA release incorporates GEBCO lake bathymetry, avoiding an unverified license assumption about the separate GFZ contour archive. Elevations are translated by a nominal 456 m lake-surface datum; native cell centers and heights are otherwise retained. Only original adjacent cells whose vertices lie at or below that datum are triangulated. Land, water planes, walls, undersides and an invented lake volume are absent. Colors encode depth, not natural underwater color. The regional grid is an approximate bathymetric product, not a fresh survey or a claim to reproduce exactly the catalog's 1,642 m maximum. The aperture is much wider than the measured depth; integration requires the documented vertical-axis presentation exception.",
+  "presentation": {
+    "reference_size": 1642.0,
+    "measure_axis": "y",
+    "pitch": 52.0,
+    "yaw": -18.0,
+    "layout_width_factor": 28.0,
+    "focus_scale_factor": 28.0,
+    "display_extent_factor": 28.0,
+    "roughness": 1,
+    "metalness": 0
+  },
+  "processing": {
+    "builder": "scripts/build_retry3d_models.py",
+    "pinned_input": "content/visualizations/models/sources/retry3d/baikal-depth/grid.npz",
+    "pinned_input_sha256": "49c69ac902d723c14bbeb180395a6946ad5a89ba9cd125a02b2dbd67696dea09",
+    "vertical_exaggeration": 1,
+    "horizontal_projection": "Local equidistant cylindrical, WGS84 semi-major radius 6378137 m, fixed central latitude",
+    "center_lonlat": [
+      107.375,
+      53.075
+    ],
+    "nominal_water_level_m": 456.0,
+    "pending": "UNREGISTERED. Vertical quantity versus horizontal footprint requires lead review; do not normalize the bounding box to the item value."
+  },
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 208252,
+  "sha256": "31ef3991cf62af3315e2e60be2857562c24e743760c0d4758e777b5e5595e260",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 10001,
+  "animations": 0,
+  "skins": 0
+}

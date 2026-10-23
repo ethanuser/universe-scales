@@ -1,0 +1,11 @@
+{
+  "source": "https://www.ngdc.noaa.gov/metadata/published/NOAA/NESDIS/NGDC/MGG/DEM/iso/xml/etopo_2022.xml",
+  "acquired": "2026-10-23",
+  "original_sha256": "08c1976b2587db27430cc64f60d147e25a38f4fc93f071ecb76a2167933c71d2",
+  "rights_extract": [
+    "Produced by the NOAA National Centers for Environmental Information. Not subject to copyright protection within the United States.",
+    "These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).",
+    "SPDX License: Creative Commons Zero v1.0 Universal (CC0-1.0)"
+  ],
+  "product_citation": "NOAA National Centers for Environmental Information (2022), ETOPO 2022 15 Arc-Second Global Relief Model, doi:10.25921/fd45-gt74"
+}

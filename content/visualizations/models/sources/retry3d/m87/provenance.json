@@ -1,0 +1,42 @@
+{
+  "source": "https://hea-www.harvard.edu/XJET/data/m87_hst_f555w.fits",
+  "acquired": "2026-10-23",
+  "original_sha256": "38f0bff327970971247d86804910a8fa96e1d7ab505e9f101358fc930e8a6f90",
+  "original_bytes": 2615040,
+  "compressed_sha256": "5a3ff2e7f9be8bd011d1669be0478d8103bd9df093f5b13b33cffb378de29ab3",
+  "documentation": "https://hea-www.harvard.edu/XJET/data/m87_hst_f555w.txt",
+  "rights": "https://hea-www.harvard.edu/XJET/image_policy.txt",
+  "physical_scale_pc_per_arcsec": 77.0,
+  "scale_basis": "XJET source/image documentation: 16 Mpc, 0.077 kpc/arcsec (historical H=71 convention).",
+  "image_shape": [
+    800,
+    800
+  ],
+  "header": {
+    "INSTRUME": "WFPC2",
+    "EXPTIME": 2400.0,
+    "DATE-OBS": "3/02/95",
+    "CRVAL1": 187.702420488952,
+    "CRVAL2": 12.3930350389814,
+    "CRPIX1": 420.0,
+    "CRPIX2": 424.5,
+    "CD1_1": -1.205208e-05,
+    "CD1_2": -3.519867e-06,
+    "CD2_1": -3.519867e-06,
+    "CD2_2": 1.205208e-05,
+    "CTYPE1": "RA---TAN",
+    "CTYPE2": "DEC--TAN"
+  },
+  "selection": {
+    "aperture_zero_based_xy": [
+      150,
+      190,
+      620,
+      610
+    ],
+    "minimum_native_value_exclusive": 150,
+    "connectivity": 4,
+    "minimum_connected_pixels": 31
+  },
+  "interpretation": "Original observed emission pixels on the WCS tangent plane. The third coordinate is zero. No deprojection or 3D jet boundary inferred."
+}

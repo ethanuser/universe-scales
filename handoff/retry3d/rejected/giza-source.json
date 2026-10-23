@@ -1,0 +1,26 @@
+{
+  "uid": "20fa1b7c608a43e1814c3744641732a4",
+  "name": "Giza Plateau - drone video",
+  "author": "gabriele.l",
+  "license": "by",
+  "source": "https://sketchfab.com/3d-models/giza-plateau-drone-video-20fa1b7c608a43e1814c3744641732a4",
+  "description": "Giza plateau. 3d reconstruction with Meshroom 2021.1.0 .",
+  "source_sha256": "a4713fc5dcb46720690d605747cfef639ea9b66d1c6ec42c6964cc3f88e5d56d",
+  "source_bytes": 9689751,
+  "texture_size": 1024,
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 3995856,
+  "sha256": "f139e96d0a155e19785976aa92356aa5dd2f794814101410c811cbbad963ad92",
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 3,
+  "triangle_count": 76979,
+  "animations": 0,
+  "skins": 0,
+  "decision": "REJECTED: coarse image-derived surface has source gaps; original description supplies no surveyed metric baseline; cropped trial not registered or bundled as a GLB."
+}
