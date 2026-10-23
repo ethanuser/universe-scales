@@ -1,0 +1,33 @@
+{
+  "source": "https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2022/data/15s/15s_surface_elev_gtif/ETOPO_2022_v1_15s_N30W165_surface.tif",
+  "product": "https://www.ncei.noaa.gov/products/etopo-global-relief-model",
+  "acquired": "2026-10-23",
+  "original_sha256": "8265ec91d7db7644d227374afe91d23662203a4eb3fd580626b3f7d3d27dc85c",
+  "original_bytes": 22411557,
+  "grid_sha256": "f9a38a45c363bf9db9b1fbdeafe9c956cf264f31259d6984eaf9f5fb1d56b759",
+  "native_pixel_scale_degrees": [
+    0.004166666666666667,
+    0.004166666666666667
+  ],
+  "pixel_registration": "cell centers",
+  "tile_northwest_corner": [
+    -165.0,
+    30.0
+  ],
+  "bounds_requested": [
+    -156.15,
+    19.55,
+    -154.6,
+    20.95
+  ],
+  "stride": 3,
+  "shape": [
+    112,
+    124
+  ],
+  "elevation_range_m": [
+    -5759.734375,
+    4106.78125
+  ],
+  "processing": "Select original pixel centers at a fixed stride; no resampling, interpolation, smoothing or height corrections. The complete original tile is optional external preparation cache, not a runtime dependency."
+}

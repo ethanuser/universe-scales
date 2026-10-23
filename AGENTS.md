@@ -927,3 +927,20 @@ still contains an email address (removing it needs a history rewrite).
   Browser and git sandbox limits were not retried per the lead; changes remain
   uncommitted, with production WebGL/explorer/mobile review for the lead.
 
+## 2026-10-23 retry3d handoff
+
+- Registered M87 Jet as a direct XJET HST/WFPC2 FITS sky-plane intensity map:
+  9,689 original pixels, zero inferred depth, 156 kB, 1.041× resting extent.
+  Source WCS/physical scale, public-domain grant, display cuts and date mismatch
+  are documented in `sources/retry3d-m87-hst-map.md`; no jet volume was invented.
+- `build_retry3d_m87.py` rebuilds/registers that map offline. The separate
+  `build_retry3d_models.py` prepares NOAA ETOPO 2022 Baikal/Mauna Kea surfaces
+  but deliberately does not register them: vertical ranges are faithful while
+  overall footprints exceed the size rule. Axis/framing proposals, all 25 target
+  searches and a rejected new Giza scan are in `handoff/retry3d/REPORT.md`.
+- `preview_retry3d_cpu.py` and `audit_retry3d_models.mjs` supply CPU review and
+  actual vendored-loader checks. All three GLBs validate without errors/warnings;
+  236 Node tests and 167 Python tests (one existing skip) pass. Browser review
+  and commit remain for the lead under the brief's known-sandbox instructions.
+  No runtime, dataset, exports or image files changed.
+
