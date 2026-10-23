@@ -1,5 +1,16 @@
 # Agent Handoff Guide
 
+## 2026-10-23 Codex round 6 merged (Claude)
+
+- upgrade3d: of 32 illustrated models reviewed, only Basketball had a clearly better open scan
+  (robin.sculac CC BY photoscan, replaces earth3d-basketball). The rest stay; see its REPORT.md.
+- retry3d: M87 Jet now has the XJET Hubble WFPC2 F555W image as a flat sky-plane point map.
+  Mauna Kea and Lake Baikal ETOPO 2022 (CC0) terrain GLBs are in the repo but **unregistered**:
+  at true horizontal scale they are 18x / 26x wider than the listed height/depth, which would
+  need a measure_axis framing decision from the owner. 22 other items still lack open data.
+- Merge helper now lives at ../universe-scales-codex/merge_codex.py (the scratchpad copy was
+  cleared); it re-registers every handoff entry, so unregister rejected candidates afterwards.
+
 ## 2026-10-23 explorer smoothness and click-to-center (Claude)
 
 - Prefetch: `spatial.js` `prefetchModels` loads models (3 at a time, nearest the current
