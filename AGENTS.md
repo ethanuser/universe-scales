@@ -908,3 +908,22 @@ still contains an email address (removing it needs a history rewrite).
   runtime JS/CSS changes. Browser/git sandbox restrictions were not retried;
   changes remain uncommitted for the lead. No shared-venv dependencies installed.
 
+## 2026-10-23 upgrade3d handoff
+
+- Reviewed 32 illustrated Length targets; only Basketball was replaced, using
+  robin.sculac's CC-BY 3DF Zephyr photoscan. It retains the photographed wear,
+  colors and proportions, uniformly calibrated to the representative catalog
+  diameter; the source's own specimen size is unknown. No new geometry authored.
+- Import: `scripts/prepare_upgrade3d_imports.mjs`; vendored-loader audit:
+  `scripts/audit_upgrade3d_models.mjs`; old/new CPU comparisons:
+  `scripts/preview_upgrade3d_cpu.py --old-model OLD.glb`. Source pins and full
+  per-item search/skip decisions: `handoff/upgrade3d/REPORT.md`.
+- Final scan is 434 kB / 16,472 triangles, with zero validator errors/warnings
+  and 1.000x CPU resting extent. Titanic already has a black upper hull.
+  Football Field's procedural override still precedes its stored scan; unchanged.
+- Node: 236 passing; Python: 161 run, one existing skip; all 202 GLBs / 212
+  matches and version hashes verify. Full validation has no errors and existing
+  warnings in nine unchanged assets. No dataset/images/runtime JS/CSS edits.
+  Browser and git sandbox limits were not retried per the lead; changes remain
+  uncommitted, with production WebGL/explorer/mobile review for the lead.
+
