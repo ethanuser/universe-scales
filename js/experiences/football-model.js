@@ -49,10 +49,12 @@ function addNumber(scene, label, x, side, material) {
             context.fillText(label, 128, 96);
             const numberMaterial = numberMaterials.get(label) || (() => {
                 const texture = new THREE.CanvasTexture(canvas);
+                texture.userData.modelCachePersistent = true;
                 texture.colorSpace = THREE.SRGBColorSpace;
                 const made = new THREE.MeshBasicMaterial({ map: texture, transparent: true,
                     side: THREE.DoubleSide, depthWrite: false, polygonOffset: true,
                     polygonOffsetFactor: -2, polygonOffsetUnits: -2 });
+                made.userData.modelCachePersistent = true;
                 numberMaterials.set(label, made);
                 return made;
             })();

@@ -14,6 +14,7 @@ export function softPointSprite() {
         }
     }
     sprite = new THREE.DataTexture(rgba, size, size, THREE.RGBAFormat);
+    sprite.userData.modelCachePersistent = true;
     sprite.magFilter = THREE.LinearFilter;
     sprite.minFilter = THREE.LinearFilter;
     sprite.needsUpdate = true;

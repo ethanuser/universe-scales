@@ -27,6 +27,10 @@
 //       Actual frame and JS timings; --gpu isolates visible models, --trace records Chromium GPU/paint work.
 //   node scripts/model_lab.cjs streaming OUT_DIR [--mobile]
 //       Delayed registry/mesh, zoom cutoffs, warm revisits and parsed-cache reuse after remount.
+//   node scripts/model_lab.cjs zoom-origin OUT_DIR [--mobile]
+//       Repeated wheel input returns a selected-item pan to the shared origin without jumps.
+//   node scripts/model_lab.cjs cache OUT_DIR
+//       Tiny-budget production renderer test: eviction, reloading, warm reuse and disposal.
 //   node scripts/model_lab.cjs labels ["Item" ...] [--zooms 0.35,0.6,1,1.5] [--views rest,side]
 //       Check rendered label collisions over zoom/rotation; exits nonzero on overlap or load errors.
 //
@@ -99,6 +103,115 @@ const describe = m => `${m.name.padEnd(34)} ${String(m.model || 'photo').padEnd(
         (m.warnings.length ? `  !! ${m.warnings.join('; ')}` : '') : m.model ? 'FAILED TO LOAD' : '');
 
 const commands = {
+    async 'zoom-origin'({ positional, options }) {
+        const [out = '/tmp/zoom-origin-model-lab'] = positional;
+        fs.mkdirSync(out, { recursive: true });
+        await withBrowser(options.mobile ? '393x852' : '1280x900', async (page, base, errors) => {
+            await page.goto(`${base}/?dimension=length&item=Earth%20Diameter`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.instances.get(app.experiences.item));
+            await page.waitForTimeout(1800);
+            const result = await page.evaluate(async () => {
+                const view = app.experiences, layout = ScaleJourney.radialLayout, observations = [];
+                ScaleJourney.radialLayout = (...args) => {
+                    const entries = layout(...args), pan = args[3].pan;
+                    globalThis.originLayout = entries;
+                    observations.push({ exponent: args[1], distance: Math.hypot(pan.x, pan.y) * entries[0].pixelsPerUnit });
+                    return entries;
+                };
+                const input = view.stageFrame.querySelector('.experience-camera-slider input');
+                view.renderer.render();
+                const start = Number(input.value);
+                const initial = observations.at(-1).distance;
+                const selected = originLayout[view.index];
+                const centered = Math.hypot(selected.x - 500, selected.center - 250) < 0.1;
+                const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+                for (let step = 0; step < 14; step++) {
+                    view.stageFrame.dispatchEvent(new WheelEvent('wheel', { deltaY: 320, bubbles: true, cancelable: true }));
+                    await wait(50);
+                }
+                await wait(900);
+                const endpoint = observations.at(-1);
+                const monotonic = observations.every((sample, index) => !index || sample.distance <= observations[index - 1].distance + .01);
+                const afterReturn = observations.length;
+                for (let step = 0; step < 6; step++) {
+                    view.stageFrame.dispatchEvent(new WheelEvent('wheel', { deltaY: 320, bubbles: true, cancelable: true }));
+                    await wait(25);
+                }
+                await wait(900);
+                return { centered, initialOffsetPixels: initial, inwardDecades: start - endpoint.exponent,
+                    monotonic, finalOffsetPixels: endpoint.distance,
+                    staysAtOrigin: observations.slice(afterReturn).every(sample => sample.distance < .01) };
+            });
+            await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, 'returned-origin.png') });
+            fs.writeFileSync(path.join(out, 'zoom-origin.json'), JSON.stringify({ ...result, errors }, null, 2));
+            console.log(JSON.stringify({ ...result, errors }, null, 2));
+            if (!result.centered || !result.monotonic || result.inwardDecades < 1 ||
+                result.finalOffsetPixels > .01 || !result.staysAtOrigin || errors.length) process.exitCode = 1;
+        }, Boolean(options.mobile));
+    },
+    async cache({ positional }) {
+        const [out = '/tmp/cache-model-lab'] = positional;
+        fs.mkdirSync(out, { recursive: true });
+        await withBrowser('1280x900', async (page, base, errors) => {
+            await page.goto(`${base}/?dimension=length&item=Earth%20Diameter`);
+            await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.instances.get(app.experiences.item));
+            const result = await page.evaluate(async () => {
+                const view = app.experiences, oldStage = view.renderer.modelStage;
+                view.setMode('log', false);
+                while (oldStage.pending) await new Promise(resolve => setTimeout(resolve, 20));
+                const host = document.createElement('div');
+                host.style.cssText = 'position:relative;width:1000px;height:500px;background:#f8fafc';
+                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.setAttribute('viewBox', '0 0 1000 500');
+                svg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%';
+                host.append(svg); document.body.prepend(host);
+                globalThis.cacheLabHost = host;
+                let ready;
+                const loaded = new Promise(resolve => { ready = resolve; });
+                const stage = new ScaleModels.ModelStage({ dimension: 'length', stageFrame: host, stage: svg, updateDetail() {} }, () => {}, ready);
+                await loaded;
+                stage.setCacheLimits({ instances: { maxEntries: 2, maxBytes: 64 * 1024 * 1024 },
+                    sources: { maxEntries: 3, maxBytes: 64 * 1024 * 1024 } });
+                const firstGeometry = instance => {
+                    let geometry;
+                    instance.traverse(node => { geometry ||= node.geometry; });
+                    return geometry;
+                };
+                const show = async name => {
+                    const item = view.items.find(item => item.name === name);
+                    if (!item) throw new Error(`Unknown cache-test item ${name}`);
+                    stage.begin(); stage.draw(item, 500, 405, 220); stage.finish();
+                    await stage.activeLeases.get(item).promise;
+                    stage.begin(); stage.draw(item, 500, 405, 220); stage.finish();
+                    return { item, instance: stage.instances.get(item), stats: stage.cacheStats() };
+                };
+                const names = ['Earth Diameter', 'Moon', 'Mars', 'Venus', 'Jupiter Diameter', 'Sun Diameter'];
+                // Use exact dataset labels even if the display name includes a qualifier.
+                names[4] = view.items.find(item => /Jupiter/i.test(item.name) && stage.entry(item)?.id === 'nasa-jupiter')?.name || names[4];
+                names[5] = view.items.find(item => stage.entry(item)?.id === 'nasa-sun')?.name || names[5];
+                const snapshots = [];
+                const first = await show(names[0]);
+                const geometry = firstGeometry(first.instance);
+                for (const name of names.slice(1)) snapshots.push({ name, ...(await show(name)).stats });
+                const evicted = !stage.instances.has(first.item);
+                const returned = await show(names[0]);
+                const reloaded = firstGeometry(returned.instance) !== geometry;
+                const warm = await show(names[0]);
+                const warmReuse = returned.instance === warm.instance;
+                const withinLimits = snapshots.every(snapshot => snapshot.instances.entries <= 2 && snapshot.sources.entries <= 3);
+                stage.begin(); stage.finish();
+                stage.dispose();
+                const disposed = stage.cacheStats();
+                return { evicted, reloaded, warmReuse, withinLimits, snapshots,
+                    releasedOnDispose: disposed.instances.entries === 0 && disposed.sources.pinned === 0, disposed };
+            });
+            await page.locator('body > div').first().screenshot({ path: path.join(out, 'cache.png') });
+            fs.writeFileSync(path.join(out, 'cache.json'), JSON.stringify({ ...result, errors }, null, 2));
+            console.log(JSON.stringify({ ...result, errors }, null, 2));
+            if (!result.evicted || !result.reloaded || !result.warmReuse || !result.withinLimits || !result.releasedOnDispose || errors.length)
+                process.exitCode = 1;
+        });
+    },
     async streaming({ positional, options }) {
         const [out = '/tmp/streaming-model-lab'] = positional;
         fs.mkdirSync(out, { recursive: true });
@@ -152,7 +265,7 @@ const commands = {
                     globalThis.streamingGeometry = null;
                     instance.traverse(node => { if (!streamingGeometry && node.geometry) streamingGeometry = node.geometry; });
                     const samples = [];
-                    for (let step = 0; step <= 28; step++) {
+                    for (let step = 0; step <= 40; step++) {
                         input.value = original + step * 0.05;
                         view.renderer.render();
                         const photos = [...view.stage.querySelectorAll('.experience-object')].filter(node => {
@@ -160,14 +273,24 @@ const commands = {
                             const item = view.items.find(item => item.name === name);
                             return stage.entry(item) && node.querySelector('image');
                         }).length;
-                        samples.push({ photos, visible: instance.visible });
+                        const box = view.stage.viewBox.baseVal, size = view.stage._size || view.stage.getBoundingClientRect();
+                        const pixels = instance.userData.drawSize * Math.min(size.width / box.width, size.height / box.height);
+                        samples.push({ photos, visible: instance.visible, pixels });
                         await new Promise(requestAnimationFrame);
                     }
                     input.value = original;
                     view.renderer.render();
+                    await stage.activeLeases.get(target).promise;
+                    view.renderer.render();
+                    const revisited = stage.instances.get(target);
+                    // A bounded cache may recreate an old instance. The newly
+                    // recent source must still survive the immediate mode switch.
+                    globalThis.streamingGeometry = null;
+                    revisited.traverse(node => { if (!streamingGeometry && node.geometry) streamingGeometry = node.geometry; });
                     return { noModelPhotos: samples.every(sample => sample.photos === 0),
                         hiddenWhenSmall: samples.some(sample => !sample.visible),
-                        warmRevisit: stage.instances.get(target) === instance && instance.visible };
+                        persistsBelowOldCutoff: samples.some(sample => sample.visible && sample.pixels < 14 && sample.pixels >= 4),
+                        revisitRendersModel: revisited.visible };
                 });
                 for (const [test, passed] of Object.entries(zoomChecks)) checks.push({ test, passed });
                 await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, 'warm-earth.png') });

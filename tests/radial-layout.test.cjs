@@ -9,6 +9,7 @@ const sandbox = { globalThis: {}, module: { exports: {} } };
 sandbox.globalThis = sandbox;
 vm.runInNewContext(source, sandbox);
 const { radialLayout, radialPlacement, radialFocus, RADIAL_SIZE } = sandbox.module.exports;
+const { radialReturnPan } = sandbox.module.exports;
 
 // A realistic spread: ~4 items per decade over 60 decades, with repeats and wide objects.
 const items = [];
@@ -61,6 +62,30 @@ test('prepared radial placement reuses dimensions without repeating registry loo
         widthFactor() { throw new Error('presentation must already be prepared'); },
         extentFactor() { throw new Error('presentation must already be prepared'); } });
     assert.deepEqual(actual, expected);
+});
+
+test('inward zoom returns the origin monotonically in screen space and reaches exactly zero', () => {
+    for (const exponent of [-35, -6, 7, 25]) {
+        const point = { x: 1.8 * 10 ** exponent, y: -0.7 * 10 ** exponent };
+        let lastDistance = Infinity;
+        for (let step = 0; step <= 120; step++) {
+            const current = exponent - step / 100;
+            const pan = radialReturnPan(point, current, exponent);
+            const distance = Math.hypot(pan.x, pan.y) * RADIAL_SIZE / 10 ** current;
+            assert.ok(distance <= lastDistance + 1e-8, `origin moves away at ${current}`);
+            lastDistance = distance;
+            if (step >= 100) assert.deepEqual({ ...pan }, { x: 0, y: 0 });
+        }
+        assert.deepEqual({ ...radialReturnPan(point, exponent + 5, exponent) }, point);
+    }
+});
+
+test('origin return is continuous at the selected scale and the end of its return', () => {
+    const point = { x: 15, y: -23 }, epsilon = 1e-8;
+    const start = radialReturnPan(point, 2 - epsilon, 2);
+    const end = radialReturnPan(point, 1 + epsilon, 2);
+    assert.ok(Math.hypot(start.x - point.x, start.y - point.y) < 1e-5);
+    assert.ok(Math.hypot(end.x, end.y) < 1e-10);
 });
 
 test('a pan to an item\'s world point centers that item and shifts everything equally', () => {

@@ -4,15 +4,38 @@ import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtil
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
 import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
-import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=fcc23d4391';
+import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=de09502a31';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import './neuron-animation.js?v=a744312505';
-import { prepareModelPoints } from './model-points.js?v=a7a090deac';
+import { prepareModelPoints } from './model-points.js?v=c77d6e1266';
 import { angularEntry, angularScene } from './angular-models.js?v=d1fdf1228b';
 import { orbitalAssets, orbitalEntry } from './angular-orbits.js?v=b50491e0cc';
 import { createAngularRig, angularSweepBounds } from './angular-rig.js?v=8f269aade6';
+import { ModelCache } from './model-cache.js?v=1f3b449d69';
+import { modelBytes, retainModelResources, releaseModelResources } from './model-resources.js?v=75ad13d002';
 
-const models = new Map();
+const MIB = 1024 * 1024;
+const models = new ModelCache({ maxEntries: 64, maxBytes: 192 * MIB,
+    measure: modelBytes, dispose: releaseModelResources });
+const sourceQueue = [];
+let sourceLoads = 0;
+function queueSource(key, create) {
+    const pump = () => {
+        while (sourceLoads < 4 && sourceQueue.length) {
+            const task = sourceQueue.shift();
+            if (!models.records.get(task.key)?.pins) { task.resolve(null); continue; }
+            sourceLoads++;
+            Promise.resolve().then(task.create).then(task.resolve, task.reject).finally(() => {
+                sourceLoads--; pump();
+            });
+        }
+    };
+    return new Promise((resolve, reject) => {
+        sourceQueue.push({ key, create, resolve, reject });
+        // acquire() installs the lease pin before a queued load can start.
+        Promise.resolve().then(pump);
+    });
+}
 const registry = fetch('content/visualizations/models.json', { cache: 'no-cache' })
     .then(r => r.ok ? r.json() : { models: [] }).catch(() => ({ models: [] }));
 const moleculeData = fetch('content/visualizations/molecules.json', { cache: 'no-cache' })
@@ -153,10 +176,10 @@ function flattenStaticScene(scene) {
     }
     return flattened.children.length ? flattened : scene;
 }
-async function load(entry) {
+function acquireModel(entry) {
     // Entries may share a GLB but differ in presentation (e.g. a recolored Sun).
     const key = entry.id || entry.src;
-    if (!models.has(key)) models.set(key, (entry.procedural === 'molecule'
+    return models.acquire(key, () => queueSource(key, () => (entry.procedural === 'molecule'
         ? moleculeData.then(data => data?.models?.[entry.molecule]
             ? { scene: moleculeScene(data.models[entry.molecule]) } : null)
         : entry.procedural ? Promise.resolve({ scene: entry.procedural === 'angular-machine'
@@ -165,79 +188,81 @@ async function load(entry) {
             : loader.loadAsync(entry.sha256 ? `${entry.src}?v=${entry.sha256.slice(0, 12)}` : entry.src)).then(gltf => {
         if (!gltf) return null;
         let scene = gltf.scene;
-        const removedNames = new Set(entry.presentation?.remove_nodes || []);
-        if (removedNames.size) {
-            const nodesToRemove = [];
-            scene.traverse(node => {
-                if (removedNames.has(node.name) || removedNames.has(node.userData?.name)) nodesToRemove.push(node);
-            });
-            for (const node of nodesToRemove) node.removeFromParent();
-        }
-        const preRotation = entry.presentation?.pre_rotation;
-        if (preRotation) scene.rotation.set(
-            THREE.MathUtils.degToRad(preRotation.x || 0),
-            THREE.MathUtils.degToRad(preRotation.y || 0),
-            THREE.MathUtils.degToRad(preRotation.z || 0)
-        );
-        if (entry.presentation?.flatten_static) scene = flattenStaticScene(scene);
-        prepareModelPoints(scene);
-        if (entry.presentation?.distance_bracket) addDistanceBracket(scene, entry.presentation.distance_bracket);
-        scene.updateMatrixWorld(true);
-        // Precise (per-vertex) bounds: box-of-rotated-box estimates inflate
-        // calibration for rotated nodes and would mis-size the model.
-        const bounds = new THREE.Box3().setFromObject(scene, true);
-        const center = bounds.getCenter(new THREE.Vector3());
-        const size = bounds.getSize(new THREE.Vector3());
-        const reference = entry.presentation?.measure_axis;
-        const referenceSize = entry.presentation?.reference_size ||
-            (reference && size[reference] > 0 ? size[reference] : Math.max(size.x, size.y, size.z));
-        const group = new THREE.Group();
-        scene.position.sub(center);
-        group.add(scene);
-        const measureFraction = entry.presentation?.measure_fraction || 1;
-        group.scale.setScalar(1 / (referenceSize * measureFraction));
-        const normalized = new THREE.Group();
-        normalized.add(group);
-        if (entry.presentation && ['tint', 'color_gain', 'roughness', 'metalness', 'opaque', 'double_sided', 'emissive', 'environment']
-            .some(key => key in entry.presentation)) {
-            normalized.traverse(child => {
-                // Glowing meshes carry a shader hook that Material.clone() would drop.
-                if (!child.isMesh || child.userData.additive) return;
-                const customize = original => {
-                    const material = original.clone();
-                    if (entry.presentation.tint) material.color.set(entry.presentation.tint);
-                    if (entry.presentation.color_gain) material.color.multiplyScalar(entry.presentation.color_gain);
-                    if (entry.presentation.roughness != null) material.roughness = entry.presentation.roughness;
-                    if (entry.presentation.metalness != null) material.metalness = entry.presentation.metalness;
-                    if (entry.presentation.opaque) {
-                        material.transparent = false;
-                        material.opacity = 1;
-                        material.depthWrite = true;
-                    }
-                    if (entry.presentation.double_sided) material.side = THREE.DoubleSide;
-                    // Metals need something to reflect; ModelStage attaches its room map.
-                    if (entry.presentation.environment) material.userData.environment = entry.presentation.environment;
-                    if (entry.presentation.emissive && material.emissive) {
-                        material.emissive.set(entry.presentation.emissive);
-                        material.emissiveIntensity = entry.presentation.emissive_intensity ?? 0.25;
-                    }
-                    return material;
-                };
-                child.material = Array.isArray(child.material)
-                    ? child.material.map(customize) : customize(child.material);
-            });
-        }
-        if (entry.presentation?.backing_color) {
-            const factor = entry.presentation.backing_scale ?? 0.35;
-            const backing = new THREE.Mesh(new THREE.SphereGeometry(1, 28, 20),
-                new THREE.MeshStandardMaterial({ color: entry.presentation.backing_color,
-                    roughness: 0.95, metalness: 0 }));
-            backing.scale.set(size.x, size.y, size.z).multiplyScalar(factor / referenceSize);
-            normalized.add(backing);
-        }
-        return normalized;
-    }).catch(() => null));
-    return models.get(key);
+        const original = retainModelResources(scene);
+        try {
+            const removedNames = new Set(entry.presentation?.remove_nodes || []);
+            if (removedNames.size) {
+                const nodesToRemove = [];
+                scene.traverse(node => {
+                    if (removedNames.has(node.name) || removedNames.has(node.userData?.name)) nodesToRemove.push(node);
+                });
+                for (const node of nodesToRemove) node.removeFromParent();
+            }
+            const preRotation = entry.presentation?.pre_rotation;
+            if (preRotation) scene.rotation.set(
+                THREE.MathUtils.degToRad(preRotation.x || 0),
+                THREE.MathUtils.degToRad(preRotation.y || 0),
+                THREE.MathUtils.degToRad(preRotation.z || 0)
+            );
+            if (entry.presentation?.flatten_static) scene = flattenStaticScene(scene);
+            prepareModelPoints(scene);
+            if (entry.presentation?.distance_bracket) addDistanceBracket(scene, entry.presentation.distance_bracket);
+            scene.updateMatrixWorld(true);
+            // Precise (per-vertex) bounds: box-of-rotated-box estimates inflate
+            // calibration for rotated nodes and would mis-size the model.
+            const bounds = new THREE.Box3().setFromObject(scene, true);
+            const center = bounds.getCenter(new THREE.Vector3());
+            const size = bounds.getSize(new THREE.Vector3());
+            const reference = entry.presentation?.measure_axis;
+            const referenceSize = entry.presentation?.reference_size ||
+                (reference && size[reference] > 0 ? size[reference] : Math.max(size.x, size.y, size.z));
+            const group = new THREE.Group();
+            scene.position.sub(center);
+            group.add(scene);
+            const measureFraction = entry.presentation?.measure_fraction || 1;
+            group.scale.setScalar(1 / (referenceSize * measureFraction));
+            const normalized = new THREE.Group();
+            normalized.add(group);
+            if (entry.presentation && ['tint', 'color_gain', 'roughness', 'metalness', 'opaque', 'double_sided', 'emissive', 'environment']
+                .some(key => key in entry.presentation)) {
+                normalized.traverse(child => {
+                    // Glowing meshes carry a shader hook that Material.clone() would drop.
+                    if (!child.isMesh || child.userData.additive) return;
+                    const customize = original => {
+                        const material = original.clone();
+                        if (entry.presentation.tint) material.color.set(entry.presentation.tint);
+                        if (entry.presentation.color_gain) material.color.multiplyScalar(entry.presentation.color_gain);
+                        if (entry.presentation.roughness != null) material.roughness = entry.presentation.roughness;
+                        if (entry.presentation.metalness != null) material.metalness = entry.presentation.metalness;
+                        if (entry.presentation.opaque) {
+                            material.transparent = false;
+                            material.opacity = 1;
+                            material.depthWrite = true;
+                        }
+                        if (entry.presentation.double_sided) material.side = THREE.DoubleSide;
+                        // Metals need something to reflect; ModelStage attaches its room map.
+                        if (entry.presentation.environment) material.userData.environment = entry.presentation.environment;
+                        if (entry.presentation.emissive && material.emissive) {
+                            material.emissive.set(entry.presentation.emissive);
+                            material.emissiveIntensity = entry.presentation.emissive_intensity ?? 0.25;
+                        }
+                        return material;
+                    };
+                    child.material = Array.isArray(child.material)
+                        ? child.material.map(customize) : customize(child.material);
+                });
+            }
+            if (entry.presentation?.backing_color) {
+                const factor = entry.presentation.backing_scale ?? 0.35;
+                const backing = new THREE.Mesh(new THREE.SphereGeometry(1, 28, 20),
+                    new THREE.MeshStandardMaterial({ color: entry.presentation.backing_color,
+                        roughness: 0.95, metalness: 0 }));
+                backing.scale.set(size.x, size.y, size.z).multiplyScalar(factor / referenceSize);
+                normalized.add(backing);
+            }
+            return retainModelResources(normalized);
+        } finally { releaseModelResources(original); }
+    }).catch(() => null)));
 }
 
 export class ModelStage {
@@ -246,18 +271,28 @@ export class ModelStage {
         this.registryReady = false;
         this.entryCache = new WeakMap();
         this.rotations = new Map(); this.hulls = new Map();
+        this.activeLeases = new Map(); this.prefetchLeases = new Map(); this.usedItems = new Set();
+        this.loadingSources = new Set();
+        this.sourceLeases = new WeakMap(); this.instanceMaterials = new WeakMap();
+        this.modelCosts = new WeakMap(); this.failedUntil = new WeakMap();
+        this.warmAbort = new AbortController();
+        this.coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+        this.cacheLimits = { maxEntries: this.coarsePointer ? 20 : 32, maxBytes: (this.coarsePointer ? 48 : 96) * MIB };
+        this.instanceCache = new ModelCache({ ...this.cacheLimits,
+            measure: instance => this.modelCosts.get(instance.userData.modelItem) || 0,
+            dispose: instance => this.disposeInstance(instance) });
+        if (this.coarsePointer) models.setLimits({ maxEntries: 40, maxBytes: 96 * MIB });
         this.waveStart = performance.now();
         try {
             this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
             // Checking compile logs forces every new shader to finish compiling synchronously,
-            // which was most of the stall when models appear. Without it, compileAsync (see
-            // warm) compiles in parallel. Add ?shaderchecks to the URL to debug shaders.
+            // which was most of the stall when models appear. Without it, warm (below)
+            // compiles in parallel. Add ?shaderchecks to the URL to debug shaders.
             this.renderer.debug.checkShaderErrors = /[?&]shaderchecks\b/.test(location.search);
             if (ctx.dimension === 'angular-velocity') {
                 this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
                 this.renderer.toneMappingExposure = 0.85;
             }
-            this.coarsePointer = window.matchMedia('(pointer: coarse)').matches;
             this.renderer.setPixelRatio(Math.min(devicePixelRatio, this.coarsePointer ? 1.5 : 2));
             this.renderer.domElement.className = 'experience-model-stage';
             this.renderer.domElement.setAttribute('aria-hidden', 'true');
@@ -430,6 +465,7 @@ export class ModelStage {
         // A camera/input frame already includes any models that just loaded.
         cancelAnimationFrame(this.loadFrame);
         this.loadFrame = null;
+        this.usedItems.clear();
         // Radial layouts pass the screen center: objects sit above and below it.
         this.eyeY = eyeY ?? 500 - (globalThis.ScaleJourney?.BASELINE ?? 405)
             + 130 * THREE.MathUtils.clamp((exponent + 1) / 7, 0, 1);
@@ -440,76 +476,125 @@ export class ModelStage {
     prefetch(item) {
         const entry = this.entry(item);
         if (!entry || this.unavailable || this.disposed) return false;
-        if (!this.instances.has(item)) this.ensure(item, entry);
+        this.ensure(item, entry, false);
         return !!this.instances.get(item);
     }
     // Models currently fetching or parsing; callers throttle prefetching with it.
     get pending() { return this.pendingLoads || 0; }
-    ensure(item, entry) {
+    estimatedCost(item) {
+        return this.modelCosts.get(item) ?? Math.max(MIB, (this.entry(item)?.bytes || 0) * 8);
+    }
+    cacheStats() {
+        return { instances: this.instanceCache.stats(), sources: models.stats(),
+            gpu: { ...this.renderer?.info.memory } };
+    }
+    setCacheLimits({ instances, sources } = {}) {
+        if (instances) {
+            Object.assign(this.cacheLimits, instances);
+            this.instanceCache.setLimits(this.cacheLimits);
+        }
+        if (sources) models.setLimits(sources);
+    }
+    ensure(item, entry, active = true) {
+        if (this.disposed || (this.failedUntil.get(item) || 0) > Date.now()) return;
+        const leases = active ? this.activeLeases : this.prefetchLeases;
+        if (leases.has(item)) { leases.get(item).touch(); return; }
+        const lease = this.instanceCache.acquire(item, () => this.loadInstance(item, entry));
+        leases.set(item, lease);
+        if (!active) {
+            const release = () => {
+                if (leases.get(item) === lease) leases.delete(item);
+                lease.release();
+            };
+            lease.promise.then(release, release);
+        }
+    }
+    async loadInstance(item, entry) {
         this.pendingLoads = (this.pendingLoads || 0) + 1;
         this.instances.set(item, null);
-        load(entry).then(model => {
-            if (this.disposed) return;
-            if (model) {
-                const instance = clone(model);
-                instance.userData.waveRoots = waveAnimation.animationRoots(instance);
-                instance.userData.pickPoints = sampledModelPoints(instance);
-                instance.userData.hoverOverlays = addHoverOverlay(instance);
-                if (entry.angular_motion) {
-                    try { instance.userData.angularRig = createAngularRig(instance, entry.angular_motion); }
-                    catch (error) {
-                        console.warn(`Cannot animate ${entry.id}: ${error.message}`);
-                        this.pendingLoads--;
-                        this.queueLoadRedraw();
-                        return;
-                    }
-                }
-                const pose = entry.presentation || {};
-                instance.rotation.order = 'XYZ';
-                instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
-                    THREE.MathUtils.degToRad(pose.yaw || 0), THREE.MathUtils.degToRad(pose.roll || 0));
-                if (instance.userData.angularRig)
-                    instance.userData.axialPose = instance.userData.angularRig.faceCamera(entry.angular_motion.view_side, entry.angular_motion.view_tilt);
-                instance.updateMatrixWorld(true);
-                // Precise bounds so rotated poses sit on the ground instead of floating.
-                const defaultBounds = instance.userData.angularRig
-                    ? angularSweepBounds(instance, instance.userData.angularRig)
-                    : new THREE.Box3().setFromObject(instance, true);
-                instance.userData.restExtent = defaultBounds.getSize(new THREE.Vector3());
-                // Radius (model units) of a sphere around the origin that contains the
-                // model in any orientation. Clip planes use it: per-frame boxes can be
-                // stale for skinned meshes, letting a turned model cross the near plane.
-                instance.userData.boundRadius = Math.max(...[0, 1].flatMap(i => [0, 1].flatMap(j => [0, 1].map(k =>
-                    new THREE.Vector3(i ? defaultBounds.max.x : defaultBounds.min.x, j ? defaultBounds.max.y : defaultBounds.min.y,
-                        k ? defaultBounds.max.z : defaultBounds.min.z).length()))));
-                instance.userData.anchorMinY = defaultBounds.min.y;
-                instance.userData.anchorMaxZ = defaultBounds.max.z;
-                instance.traverse(child => {
-                    for (const material of [child.material].flat())
-                        if (material?.userData.environment) {
-                            material.envMap = this.environment();
-                            material.envMapIntensity = material.userData.environment;
-                        }
-                });
-                instance.userData.modelItem = item;
-                instance.userData.modelEntryId = entry.id;
-                Object.assign(instance.userData, { screenLines: [], overlays: [], clouds: [] });
-                instance.traverse(child => {
-                    if (child.userData.screenLine) instance.userData.screenLines.push(child);
-                    if (child.userData.label || child.userData.outline) instance.userData.overlays.push(child);
-                    if (child.userData.pointSize) instance.userData.clouds.push(child);
-                });
-                this.instances.set(item, instance);
-                this.scene.add(instance);
-                this.warm(instance);
+        const source = acquireModel(entry);
+        this.loadingSources.add(source);
+        let instance;
+        try {
+            const model = await source.promise;
+            if (!model || this.disposed) {
+                if (!model) this.failedUntil.set(item, Date.now() + 30000);
+                source.release(); return null;
             }
+            instance = clone(model);
+            this.sourceLeases.set(instance, source);
+            this.modelCosts.set(item, modelBytes(model));
+            instance.userData.waveRoots = waveAnimation.animationRoots(instance);
+            instance.userData.pickPoints = sampledModelPoints(instance);
+            instance.userData.hoverOverlays = addHoverOverlay(instance);
+            if (entry.angular_motion) {
+                instance.userData.angularRig = createAngularRig(instance, entry.angular_motion);
+            }
+            const pose = entry.presentation || {};
+            instance.rotation.order = 'XYZ';
+            instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0),
+                THREE.MathUtils.degToRad(pose.yaw || 0), THREE.MathUtils.degToRad(pose.roll || 0));
+            if (instance.userData.angularRig)
+                instance.userData.axialPose = instance.userData.angularRig.faceCamera(entry.angular_motion.view_side, entry.angular_motion.view_tilt);
+            instance.updateMatrixWorld(true);
+            // Precise bounds so rotated poses sit on the ground instead of floating.
+            const defaultBounds = instance.userData.angularRig
+                ? angularSweepBounds(instance, instance.userData.angularRig)
+                : new THREE.Box3().setFromObject(instance, true);
+            instance.userData.restExtent = defaultBounds.getSize(new THREE.Vector3());
+            // Radius (model units) of a sphere around the origin that contains the
+            // model in any orientation. Clip planes use it: per-frame boxes can be
+            // stale for skinned meshes, letting a turned model cross the near plane.
+            instance.userData.boundRadius = Math.max(...[0, 1].flatMap(i => [0, 1].flatMap(j => [0, 1].map(k =>
+                new THREE.Vector3(i ? defaultBounds.max.x : defaultBounds.min.x, j ? defaultBounds.max.y : defaultBounds.min.y,
+                    k ? defaultBounds.max.z : defaultBounds.min.z).length()))));
+            instance.userData.anchorMinY = defaultBounds.min.y;
+            instance.userData.anchorMaxZ = defaultBounds.max.z;
+            // Environment maps belong to this renderer, not the cached source.
+            const localMaterials = new Map();
+            instance.traverse(child => {
+                if (!child.material) return;
+                const local = material => {
+                    if (!material?.userData.environment) return material;
+                    if (!localMaterials.has(material)) {
+                        const made = material.clone();
+                        made.envMap = this.environment();
+                        made.envMapIntensity = material.userData.environment;
+                        localMaterials.set(material, made);
+                    }
+                    return localMaterials.get(material);
+                };
+                child.material = Array.isArray(child.material) ? child.material.map(local) : local(child.material);
+            });
+            this.instanceMaterials.set(instance, [...localMaterials.values()]);
+            instance.userData.modelItem = item;
+            instance.userData.modelEntryId = entry.id;
+            Object.assign(instance.userData, { screenLines: [], overlays: [], clouds: [] });
+            instance.traverse(child => {
+                if (child.userData.screenLine) instance.userData.screenLines.push(child);
+                if (child.userData.label || child.userData.outline) instance.userData.overlays.push(child);
+                if (child.userData.pointSize) instance.userData.clouds.push(child);
+            });
+            instance.visible = false;
+            this.scene.add(instance);
+            await this.warm(instance);
+            if (!this.disposed) this.instances.set(item, instance);
+            return instance;
+        } catch (error) {
+            console.warn(`Cannot load ${entry.id}: ${error.message}`);
+            this.failedUntil.set(item, Date.now() + 30000);
+            if (instance) this.disposeInstance(instance);
+            else source.release();
+            return null;
+        } finally {
+            this.loadingSources.delete(source);
             this.pendingLoads--;
             this.queueLoadRedraw();
-        });
+        }
     }
     // Upload textures and compile shaders while the instance is still hidden; doing it on
     // the first visible frame stalls that frame and makes the model visibly pop in.
-    warm(instance) {
+    async warm(instance) {
         try {
             instance.traverse(child => {
                 for (const material of [child.material].flat()) {
@@ -519,15 +604,34 @@ export class ModelStage {
                 }
             });
             instance.visible = true;
-            const compiled = this.renderer.compileAsync?.(instance, this.camera, this.scene);
+            const materials = this.renderer.compile(instance, this.camera, this.scene);
             instance.visible = false;
-            compiled?.catch?.(() => {});
+            // The vendored compileAsync polls disposed material properties after a
+            // mode switch. Use the same readiness check with cancellable polling.
+            await new Promise(resolve => {
+                const signal = this.warmAbort.signal;
+                let timeout;
+                const started = performance.now();
+                const done = () => { clearTimeout(timeout); signal.removeEventListener('abort', done); resolve(); };
+                const poll = () => {
+                    if (signal.aborted || performance.now() - started > 5000) { done(); return; }
+                    for (const material of materials) {
+                        const program = this.renderer.properties.get(material).currentProgram;
+                        if (!program || program.isReady()) materials.delete(material);
+                    }
+                    if (materials.size) timeout = setTimeout(poll, 10);
+                    else done();
+                };
+                signal.addEventListener('abort', done, { once: true });
+                poll();
+            });
         } catch { instance.visible = false; }
     }
     draw(item, x, y, size, phase, centered = false) {
         const entry = this.entry(item);
         if (!entry || this.unavailable || this.disposed) return false;
-        if (!this.instances.has(item)) this.ensure(item, entry);
+        this.usedItems.add(item);
+        this.ensure(item, entry);
         const instance = this.instances.get(item);
         if (!instance) return false;
         if (phase != null) instance.userData.angularRig?.setPhase(phase);
@@ -677,6 +781,11 @@ export class ModelStage {
                 overlay.visible = item === this.hovered && instance.visible;
         resolveLabelCollisions(this.ctx.stage);
         this.renderer.render(this.scene, this.camera);
+        for (const [item, lease] of this.activeLeases) {
+            if (this.usedItems.has(item)) continue;
+            this.activeLeases.delete(item);
+            lease.release();
+        }
         if (visibleWave && animateWaves && this.animationTime == null && !this.waveFrame)
             this.waveFrame = requestAnimationFrame(() => {
                 this.waveFrame = null;
@@ -775,18 +884,34 @@ export class ModelStage {
             group.append(text);
         }
     }
+    disposeInstance(instance) {
+        const item = instance.userData.modelItem;
+        instance.removeFromParent();
+        if (this.instances.get(item) === instance) this.instances.delete(item);
+        this.hulls.delete(item);
+        this.rotations.delete(item);
+        for (const overlay of instance.userData.hoverOverlays || []) overlay.material.dispose();
+        for (const material of this.instanceMaterials.get(instance) || []) material.dispose();
+        instance.traverse(node => { if (node.isSkinnedMesh) node.skeleton?.dispose(); });
+        this.sourceLeases.get(instance)?.release();
+        this.sourceLeases.delete(instance);
+    }
     dispose() {
         this.disposed = true;
         cancelAnimationFrame(this.returnFrame);
         cancelAnimationFrame(this.waveFrame);
         cancelAnimationFrame(this.inputFrame);
         cancelAnimationFrame(this.loadFrame);
+        this.warmAbort.abort();
+        for (const lease of this.loadingSources) lease.release();
+        this.loadingSources.clear();
+        for (const lease of [...this.activeLeases.values(), ...this.prefetchLeases.values()]) lease.release();
+        this.activeLeases.clear(); this.prefetchLeases.clear();
+        this.instanceCache.setLimits({ maxEntries: 0, maxBytes: 0 });
         this.environmentMap?.dispose();
         this.renderer?.dispose();
         this.renderer?.forceContextLoss();
         this.renderer?.domElement.remove();
-        for (const instance of this.instances.values())
-            for (const overlay of instance?.userData.hoverOverlays || []) overlay.material.dispose();
         this.instances.clear();
         this.orbitItems?.clear();
         this.orbitEntries?.clear();

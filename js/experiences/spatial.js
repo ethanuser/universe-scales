@@ -5,7 +5,7 @@
     const line = (x1, y1, x2, y2) => svg('line', { x1, y1, x2, y2, stroke: 'currentColor', 'stroke-width': 2 });
     let worldPromise;
     const MIN_DRAWN_PX = 0.5;
-    const MIN_MODEL_PX = 14;
+    const MIN_MODEL_PX = 4;
     function createSpatialInput(element, { interaction = {}, onStart, onPan, onEnd }) {
         const previousTouchAction = element.style.touchAction;
         const previousUserSelect = element.style.userSelect;
@@ -162,9 +162,8 @@
         const focusTransition = new ScaleJourney.FocusTransition();
         // Radial view: a selected object is centered by panning to it. A selection glide is
         // one zoom about the fixed point shared by the start and end views, so every object
-        // moves along a straight line. Afterwards the pan holds while zooming out around the
-        // object and eases off when zooming in past it, where smaller objects gather around
-        // the world origin. Any manual zoom first freezes the current pan, so nothing jumps.
+        // moves along a straight line. Inward zoom then returns to the shared origin;
+        // only interrupting a glide freezes a new reference, not every wheel event.
         let anchor = null, panGlide = null;
         const panAt = exponent => {
             if (panGlide) {
@@ -184,17 +183,14 @@
                 }
             }
             if (!anchor) return { x: 0, y: 0 };
-            const delta = exponent - anchor.exponent;
-            if (delta > 2.5 || delta < -3) { anchor = null; return { x: 0, y: 0 }; }
             // A settled selection follows its item (the layout may still be refining);
             // a frozen manual pan keeps its world point.
             const point = anchor.index != null ? layoutOptions().radialWorld?.(anchor.index) : anchor;
             if (!point) return { x: 0, y: 0 };
-            const weight = delta <= 0 ? 1 : Math.exp(-2.5 * delta * delta);
-            return { x: point.x * weight, y: point.y * weight };
+            return ScaleJourney.radialReturnPan(point, exponent, anchor.exponent);
         };
         const freezePan = () => {
-            if (!layoutOptions().radial || (!panGlide && !anchor)) return;
+            if (!layoutOptions().radial || !panGlide) return;
             anchor = { ...panAt(camera.value), exponent: camera.value };
             panGlide = null;
         };
@@ -216,7 +212,7 @@
             zoom.set(camera.value);
             const options = layoutOptions();
             if (options.radial) {
-                // Radial layouts never pan: the selected item is the one at the camera's scale.
+                // Direct zoom selects the nearest size without changing its world origin.
                 const index = ScaleJourney.radialFocus(ctx.items, camera.value, order);
                 if (pinnedFocus == null && camera.glideTime == null && index !== ctx.index) ctx.focus(index, false);
                 render();
@@ -403,14 +399,22 @@
             const wanted = [];
             for (const { item, size } of entries) {
                 const entry = modelStage.entry(item);
-                if (!entry) continue;
+                if (!entry || modelStage.usedItems.has(item)) continue;
                 const drawn = size * (entry.presentation?.display_extent_factor ?? 1) * view.scale;
                 if (drawn < MIN_MODEL_PX / 8 || drawn > 12 * view.width * view.scale) continue;
                 wanted.push({ item, distance: Math.abs(Math.log10(drawn / (ScaleJourney.RADIAL_SIZE * view.scale))) });
             }
             wanted.sort((a, b) => a.distance - b.distance);
+            // Speculation must fit alongside visible models. Remember measured
+            // costs after eviction so an oversized neighbor cannot churn forever.
+            let slots = modelStage.cacheLimits.maxEntries - modelStage.usedItems.size;
+            let bytes = modelStage.cacheLimits.maxBytes;
+            for (const item of modelStage.usedItems) bytes -= modelStage.estimatedCost(item);
             for (const { item } of wanted) {
-                if (modelStage.pending >= 3) break;
+                if (modelStage.pending >= 3 || slots <= 0) break;
+                const cost = modelStage.estimatedCost(item);
+                if (cost > bytes) continue;
+                slots--; bytes -= cost;
                 modelStage.prefetch(item);
             }
         }

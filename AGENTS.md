@@ -1,5 +1,44 @@
 # Agent Handoff Guide
 
+## 2026-10-25 inward zoom and bounded model caches (Codex)
+
+- Radial inward zoom returns a selected-object pan to the shared world origin
+  over one decade, with monotonic screen-space offset and an exact zero endpoint.
+  `journey.js` `radialReturnPan` includes magnification in its decay; wheel events
+  no longer reset the anchor exponent. Only an interrupted selection glide freezes
+  a new reference. Outward zoom keeps the selected world point; click/arrow glides
+  still center objects. Models remain drawn down to 4 CSS px (previously 14),
+  then disappear without photo substitution. No new opacity fade was added.
+- `model-cache.js` is an async, reference-counted LRU. Renderer instances target
+  32 entries/96 MiB on desktop and 20/48 MiB for coarse pointers. The shared parsed
+  source cache targets 64/192 MiB, reduced to 40/96 MiB for coarse pointers. These
+  are decoded-buffer/texture estimates per cache, NOT hard combined CPU/GPU caps.
+  Visible models and pending leases are protected and can temporarily exceed
+  targets. Inactive least-recently-used entries are evicted first; prefetching
+  fits its nearest candidates into remaining estimated instance capacity.
+- `model-resources.js` reference-counts source resources and closable image data.
+  Original source snapshots release removed/flattened geometry and unused image
+  data after normalization. Shared soft-point/yard-number textures are persistent.
+  Environment materials are stage-local; stage eviction disposes overlays, these
+  materials and skin textures, then releases its source lease. A four-job global
+  source queue skips abandoned queued work; mode disposal releases pending pins.
+- Shader warm-up now uses cancellable polling of the pinned vendored renderer's
+  compile/program readiness API. Its old `compileAsync` timer could access a
+  disposed material after a mode change. Abort warm-up before destroying contexts.
+- New model-lab commands: `zoom-origin OUT [--mobile]` checks repeated-wheel return
+  to zero without drift; `cache OUT` uses 2-instance/3-source budgets to exercise
+  eviction, reacquisition, warm reuse and final pin release. `streaming` now
+  checks persistence between 4 and 14 px and permits instance recreation after
+  a long zoom journey. `ModelStage.cacheStats()`/`setCacheLimits()` aid diagnostics.
+- Browser checks: desktop/mobile origin return, cache eviction/reload/disposal,
+  mobile streaming, all 13 touch/fullscreen checks and navigation pass. Sourced
+  clock, record deck, Earth rotation and Moon-orbit motion remain correct.
+  Node: 250 tests pass. Python: 167 run, one existing skip. All 203 GLBs/213
+  exact-name matches verify. No dataset values, plaques or model geometry changed.
+- Whole-Length production audit loads all 212 modeled items (46 photo-only) with
+  no page/load errors. Existing size flags remain Weak Force Range, Proton Radius,
+  Electron, DNA Helix Width and Virus; this runtime pass does not redefine them.
+
 ## 2026-10-23 Codex round 6 merged (Claude)
 
 - upgrade3d: of 32 illustrated models reviewed, only Basketball had a clearly better open scan

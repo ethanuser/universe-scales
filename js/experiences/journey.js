@@ -244,6 +244,17 @@
                     bottom >= -overscan && top <= 500 + overscan };
         });
     }
+    // Return the selected world point to the shared origin on inward zoom.
+    // Decay in screen space: shrinking only world coordinates can still make
+    // their projected offset grow as the camera magnifies them.
+    function radialReturnPan(point, exponent, anchorExponent, span = 1) {
+        const delta = exponent - anchorExponent;
+        if (delta >= 0) return { x: point.x, y: point.y };
+        const progress = Math.min(1, -delta / span);
+        if (progress === 1) return { x: 0, y: 0 };
+        const weight = 10 ** delta * (1 - smoothstep(progress));
+        return { x: point.x * weight, y: point.y * weight };
+    }
     // The item at the camera's scale: drawn closest to RADIAL_SIZE * ratio.
     function radialFocus(items, exponent, order = 1, ratio = 0.85) {
         let best = 0, bestDistance = Infinity;
@@ -253,7 +264,7 @@
         });
         return best;
     }
-    root.ScaleJourney = { layout, frameExponent, radialLayout, radialFocus, radialPlacement, Camera, FocusTransition,
+    root.ScaleJourney = { layout, frameExponent, radialLayout, radialFocus, radialPlacement, radialReturnPan, Camera, FocusTransition,
         BASELINE, BASE_SIZE, RADIAL_SIZE, RADIAL_CENTER_Y, LABEL_EM, TRAVEL_PER_DECADE };
     if (typeof module !== 'undefined') module.exports = root.ScaleJourney;
 })(globalThis);

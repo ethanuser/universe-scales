@@ -6,6 +6,8 @@ const vm = require('node:vm');
 
 const source = fs.readFileSync(path.join(__dirname, '../js/experiences/models.js'), 'utf8')
     .replace(/^import .*;\n/gm, '').replace(/^export /gm, '');
+const cacheHelpers = ['model-cache.js', 'model-resources.js'].map(file =>
+    fs.readFileSync(path.join(__dirname, '../js/experiences', file), 'utf8').replace(/^export /gm, '')).join('\n');
 let now = 0;
 let nextFrame;
 const context = {
@@ -28,7 +30,7 @@ const context = {
     requestAnimationFrame: callback => { nextFrame = callback; return 1; },
     cancelAnimationFrame() {}
 };
-vm.runInNewContext(`${source}\nwindow.__sampledModelPoints = sampledModelPoints;`, context);
+vm.runInNewContext(`${cacheHelpers}\n${source}\nwindow.__sampledModelPoints = sampledModelPoints;\nwindow.__sources = { queueSource, models };`, context);
 
 test('released model coasts briefly before returning near its starting pose', () => {
     const stage = Object.create(context.window.ScaleModels.ModelStage.prototype);
@@ -257,4 +259,26 @@ test('simultaneous load completions request only one redraw and stop after dispo
     stage.disposed = true;
     nextFrame();
     assert.equal(redraws, 1);
+});
+
+test('source loading is capped across stages and skips abandoned queued work', async () => {
+    const { queueSource, models } = context.window.__sources;
+    const gates = [], leases = [];
+    let calls = 0;
+    for (let i = 0; i < 8; i++) {
+        const key = `queued-${i}`;
+        leases.push(models.acquire(key, () => queueSource(key, () => {
+            calls++;
+            return new Promise(resolve => gates.push(resolve));
+        })));
+    }
+    await Promise.resolve(); await Promise.resolve();
+    assert.equal(calls, 4);
+    for (const lease of leases.slice(4)) lease.release();
+    gates.forEach(resolve => resolve(null));
+    await Promise.all(leases.map(lease => lease.promise));
+    leases.forEach(lease => lease.release());
+    assert.equal(calls, 4, 'abandoned queued models must not start downloading');
+    assert.equal(models.stats().pending, 0);
+    assert.equal(models.stats().pinned, 0);
 });
