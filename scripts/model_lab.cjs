@@ -13,6 +13,8 @@
 //       extent ratio, for a quick visual pass over the whole scale.
 //   node scripts/model_lab.cjs explorer OUT_DIR "Item" [...] [--size 1280x800]
 //       The real explorer, after the camera spring settles on each item.
+//   node scripts/model_lab.cjs spatial-models OUT_DIR "Item" [...] --dimension volume [--unit liters] [--mobile]
+//       Production model loading, rotation, calibrated enclosed-volume and ruler checks.
 //   node scripts/model_lab.cjs coverage [--gap 1] [--json]
 //       Model provenance and largest logarithmic gaps; not a visual approval.
 //   node scripts/model_lab.cjs angular OUT_DIR ["Item" ...]
@@ -103,6 +105,77 @@ const describe = m => `${m.name.padEnd(34)} ${String(m.model || 'photo').padEnd(
         (m.warnings.length ? `  !! ${m.warnings.join('; ')}` : '') : m.model ? 'FAILED TO LOAD' : '');
 
 const commands = {
+    async 'spatial-models'({ positional, options }) {
+        const [out, ...names] = positional;
+        const dimension = options.dimension || 'volume';
+        if (!out || !names.length || !['length', 'volume'].includes(dimension))
+            throw new Error('Usage: spatial-models OUT "Item" [...] --dimension length|volume [--mobile]');
+        fs.mkdirSync(out, { recursive: true });
+        await withBrowser(options.mobile ? '393x852' : '1280x900', async (page, base, errors) => {
+            const results = [];
+            for (const name of names) {
+                const query = new URLSearchParams({ dimension, item: name });
+                if (options.unit) query.set('unit', options.unit);
+                await page.goto(`${base}/?${query}`);
+                await page.waitForFunction(name => {
+                    const view = globalThis.app?.experiences;
+                    return view?.item?.name === name && view.renderer?.modelStage?.instances.get(view.item)?.visible;
+                }, name, { timeout: 45000 });
+                await page.waitForTimeout(1800);
+                const result = await page.evaluate(async () => {
+                    const THREE = await import('/js/vendor/three/three.module.min.js');
+                    const view = app.experiences, stage = view.renderer.modelStage, item = view.item;
+                    const entry = stage.entry(item), instance = stage.instances.get(item);
+                    const measured = entry.volume_semantics === 'closed_mesh_volume_scaled_to_representative_quantity';
+                    let normalizedVolume = null;
+                    if (measured) {
+                        instance.updateMatrixWorld(true);
+                        const inverse = instance.matrixWorld.clone().invert();
+                        const overlays = new Set(instance.userData.hoverOverlays);
+                        let sum = 0;
+                        instance.traverse(node => {
+                            if (!node.isMesh || overlays.has(node)) return;
+                            const matrix = inverse.clone().multiply(node.matrixWorld);
+                            const p = node.geometry.attributes.position, ix = node.geometry.index;
+                            for (let i = 0, n = ix?.count || p.count; i < n; i += 3) {
+                                const [a, b, c] = [0, 1, 2].map(k => new THREE.Vector3()
+                                    .fromBufferAttribute(p, ix ? ix.getX(i + k) : i + k).applyMatrix4(matrix));
+                                sum += a.dot(b.cross(c)) / 6;
+                            }
+                        });
+                        normalizedVolume = Math.abs(sum);
+                    }
+                    const slider = view.stageFrame.querySelector('.experience-camera-slider input');
+                    const box = ScaleRenderers.stageSize(view.stage);
+                    const viewWidth = box.width < 600 ? 560 : 1000;
+                    const scale = Math.min(box.width / viewWidth, box.height / 500) || 1;
+                    const radial = view.dimension === 'length';
+                    const span = 10 ** Number(slider.value) * 112 / ((radial ? ScaleJourney.RADIAL_SIZE : ScaleJourney.BASE_SIZE) * scale);
+                    const quantity = span ** (radial ? 1 : 3);
+                    const expected = app.formatTooltipValueHTML(app.formatValueForCurrentUnit(quantity, 2, true),
+                        app.getCurrentUnitDefinition()?.symbol || 'm');
+                    const expectedNode = document.createElement('div');
+                    expectedNode.innerHTML = radial ? expected : `&#8731;(${expected})`;
+                    const ruler = view.stageFrame.querySelector('.experience-corner-ruler__label');
+                    return { name: item.name, id: entry.id, visible: instance.visible,
+                        normalizedVolume, volumeCorrect: !measured || Math.abs(normalizedVolume - 1) < 1e-5,
+                        rulerCorrect: ruler.textContent === expectedNode.textContent,
+                        ruler: ruler.textContent, src: entry.src };
+                });
+                await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, `${slug(name)}-rest.png`) });
+                await page.evaluate(() => {
+                    const view = app.experiences, stage = view.renderer.modelStage;
+                    stage.rotations.set(view.item, { yaw: Math.PI / 3, pitch: Math.PI / 6 });
+                    view.renderer.render();
+                });
+                await page.locator('.experience-stage-frame').screenshot({ path: path.join(out, `${slug(name)}-rotated.png`) });
+                results.push(result);
+            }
+            fs.writeFileSync(path.join(out, 'audit.json'), JSON.stringify({ results, errors }, null, 2));
+            console.log(JSON.stringify({ results, errors }, null, 2));
+            if (results.some(r => !r.visible || !r.volumeCorrect || !r.rulerCorrect) || errors.length) process.exitCode = 1;
+        }, Boolean(options.mobile));
+    },
     async 'zoom-origin'({ positional, options }) {
         const [out = '/tmp/zoom-origin-model-lab'] = positional;
         fs.mkdirSync(out, { recursive: true });

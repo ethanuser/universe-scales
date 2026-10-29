@@ -1,5 +1,37 @@
 # Agent Handoff Guide
 
+## 2026-10-28 source review and Volume calibration (Codex)
+
+- Added three Volume mappings using existing licensed binaries: Sand Atlas's
+  micro-CT Caicos ooid, IMU eLearning's educational red blood cell, and NASA's
+  Jupiter. No new mesh geometry, duplicated GLBs, dataset values or plaques.
+  The RBC remains explicitly an illustration, not a measured specimen. The
+  scanned grain is scaled to a representative volume, not its original volume.
+- `scripts/mesh_volume.mjs` checks a closed, oriented single shell and computes
+  enclosed volume using the vendored loader. Separate Volume entries normalize
+  the sand/RBC using `reference_size = cbrt(meshVolume)`; original Length entries
+  are unchanged. Topology checks do not certify absence of self-intersections.
+  `node scripts/register_volume_reuse.mjs --check` verifies the pinned source
+  hashes and calibration; write mode preserves unrelated registry formatting.
+- `model_lab.cjs spatial-models OUT "Item" ... --dimension volume [--mobile]`
+  checks visible production instances, normalized enclosed volume and the ruler,
+  and captures resting/rotated views. All three passed desktop/mobile checks
+  without page/load errors; screenshots were visually reviewed. Area/Volume
+  rulers now express square/cube roots of the correct selected-unit quantity
+  instead of labeling a linear length as an area/volume. Two missing Volume
+  photo/thumbnail aliases were restored with credits in `images/credits/volume.json`.
+- No new Length source passed this bounded review. Dust-mite candidates failed
+  anatomy/quality/calibration review; NCAR's Vivian hailstone has noncommercial
+  terms; Dinkinesh's numerical source/version and mesh rights remain unverified.
+  Rejected binaries are not bundled. Search decisions: `handoff/source3d-bio/`,
+  `source3d-hail/`, `source3d-space/`. Existing photos remain.
+- Checks: 256 Node tests pass; Python runs 167 with one existing skip; all 205
+  registry asset entries/216 exact-name matches verify (entries reuse binaries).
+  All 13 touch/fullscreen checks and version hashes pass. The full Length audit
+  still loads 212 models with 46 photo-only items and the same five existing
+  size flags (Weak Force Range, Proton Radius, Electron, DNA Helix Width, Virus).
+  The mobile Volume ruler also passes with liters selected. No push performed.
+
 ## 2026-10-25 inward zoom and bounded model caches (Codex)
 
 - Radial inward zoom returns a selected-object pan to the shared world origin

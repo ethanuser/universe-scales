@@ -366,6 +366,8 @@
         const ruler = dom('div', 'experience-corner-ruler');
         const rulerLine = dom('span');
         const rulerLabel = dom('span', 'experience-corner-ruler__label');
+        ruler.title = order === 3 ? 'Side length of a cube enclosing the shown volume.'
+            : order === 2 ? 'Side length of a square with the shown area.' : 'Length of the scale bar.';
         ruler.append(rulerLine, rulerLabel);
         zoom.element.classList.add('experience-camera-slider');
         zoom.output.hidden = true;
@@ -374,7 +376,7 @@
             ? 'All objects share one camera that only zooms. Each sits at a distance from the center proportional to its own size, so objects at the current scale ring the center and smaller ones gather toward it; the arrangement is for reading, not physical distance. The ruler uses the listed length; photo framing is approximate. Distances, radii and object diameters retain their dataset definitions. Models are hidden when too small to read or still loading, rather than replaced with photos.'
             : order === 2
             ? 'Outlined disks or squares have the listed area; photos identify the subject and do not define its outline. Earth uses an Equal Earth map whose entire footprint includes land and ocean. This is a continuous area journey, not a geographic map. Model/photo sources and geometry conventions are documented with the assets.'
-            : 'Downloaded spherical models are sized using diameter = (6V/pi)^(1/3). Non-spherical models and photos use an equivalent-volume span V^(1/3), not a measured physical outline or mesh volume. A bottle capacity is not the volume of its glass. Object spacing is editorial, not a real spatial distribution.';
+            : 'Spherical models use diameter = (6V/pi)^(1/3). Explicitly volume-calibrated closed meshes enclose the listed representative volume; see each model note. Other models and photos use an equivalent-volume span V^(1/3), not a measured outline or mesh volume. Container capacity is not the volume of its material. Spacing is editorial.';
         ctx.modelEntry = item => modelStage?.entry(item);
         const attachModels = () => {
             if (disposed || modelStage || !root.ScaleModels) return;
@@ -534,9 +536,11 @@
             const rulerWidth = 112;
             const rulerValue = power(zoom.value) * rulerWidth / ((radial ? ScaleJourney.RADIAL_SIZE : ScaleJourney.BASE_SIZE) * view.scale);
             rulerLine.style.width = `${rulerWidth}px`;
-            const nextRulerHTML = ctx.app.formatTooltipValueHTML(
-                ctx.app.formatValueForCurrentUnit(rulerValue, 2, true),
+            const formattedRuler = ctx.app.formatTooltipValueHTML(
+                ctx.app.formatValueForCurrentUnit(rulerValue ** order, 2, true),
                 ctx.app.getCurrentUnitDefinition()?.symbol || 'm');
+            const nextRulerHTML = order === 1 ? formattedRuler
+                : `${order === 3 ? '&#8731;' : '&radic;'}(${formattedRuler})`;
             if (nextRulerHTML !== rulerHTML) rulerLabel.innerHTML = rulerHTML = nextRulerHTML;
             navigationControl.update();
             const current = modelStage?.entry(ctx.item);

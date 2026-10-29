@@ -1,0 +1,24 @@
+{
+  "note": "Missing Volume image aliases repaired from existing credited or identified public-domain images on 2026-10-28. No new photographs or retouching.",
+  "images": [
+    {
+      "file": "images/volume_jupiter_volume.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Jupiter_OPAL_2024.png",
+      "title": "Jupiter OPAL 2024",
+      "author": "NASA/STScI (S.T.A.R.S)",
+      "license": "Public domain",
+      "reused_from": "images/length_sun_jupiter_distance.jpg",
+      "changes": "Unchanged copy of existing JPEG and 300 px thumbnail; original conversion credited in length.json."
+    },
+    {
+      "file": "images/volume_influenza_virion_volume.jpg",
+      "source": "https://phil.cdc.gov/Details.aspx?pid=8160",
+      "title": "Transmission electron micrograph of recreated 1918 influenza virions",
+      "author": "CDC / Cynthia S. Goldsmith; Terrence M. Tumpey",
+      "license": "Public domain (U.S. Government, CDC)",
+      "reference": "https://commons.wikimedia.org/wiki/File:EM_of_influenza_virus.jpg",
+      "reused_from": "images/area_influenza_virion_surface_area.jpg",
+      "changes": "Unchanged copy of existing downsampled JPEG and thumbnail. A two-dimensional micrograph, not reconstructed 3D geometry."
+    }
+  ]
+}

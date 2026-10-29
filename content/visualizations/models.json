@@ -200,7 +200,9 @@
         "area": [
           "Jupiter surface area"
         ],
-        "volume": [],
+        "volume": [
+          "Jupiter volume"
+        ],
         "angular-velocity": [
           "Jupiter rotation"
         ]
@@ -14314,6 +14316,155 @@
       "triangle_count": 0,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "id": "volume-sand-atlas-ooid",
+      "source": "https://sand-atlas.scigem.com/sands/caicos-0000001/",
+      "download_url": "https://data.scigem-eng.sydney.edu.au/sand-atlas/sands/caicos-0000001/meshes_10.zip",
+      "author": "Max Wiebicke and The Sand Atlas",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Grain of sand volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "A micro-CT-derived Caicos carbonate ooid (Sand Atlas particle 00080), uniformly rescaled to the representative volume listed here. The enclosed volume of the existing smoothed surface, not its longest dimension or bounding box, sets the scale. This is not the original scanned grain's measured volume, nor a quartz grain; sand has no universal shape. Original vertices, faces and materials are unchanged from the credited Length asset.",
+      "src": "content/visualizations/models/sand-atlas-caicos-ooid-80.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 108504,
+      "sha256": "fa38bd147e40a1b3fb36c296f9611701b691b1884c0f9516063e17cbf6643e13",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 5968,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "3db514079fe111cb41694991a0c0f7ae970c87770e719be331d01973eebedbff",
+      "source_bytes": 1898303,
+      "processing": {
+        "operations": [
+          "Extract particle_00080.stl from meshes_10.zip",
+          "Loop-subdivide the scanned surface once and average vertex normals",
+          "Convert indexed geometry to glTF 2.0",
+          "Uniformly normalize the enclosed source mesh volume to the representative Volume datum at render time"
+        ],
+        "source_model_name": "Caicos Ooids, particle 00080",
+        "volume_calibration": {
+          "script": "scripts/register_volume_reuse.mjs",
+          "source_model_id": "sand-atlas-caicos-ooid-80",
+          "source_glb_sha256": "fa38bd147e40a1b3fb36c296f9611701b691b1884c0f9516063e17cbf6643e13",
+          "volume": 3.771104445828425e-11,
+          "referenceSize": 0.00033534321239810403,
+          "triangles": 5968,
+          "weldedVertices": 2986,
+          "edges": 8952,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 5.725457331209327e-11,
+          "extent": [
+            0.000450038749477244,
+            0.0005725457331209327,
+            0.0003384109063517826
+          ],
+          "selfIntersectionChecked": false,
+          "method": "Signed tetrahedral sum after source node transforms; one connected, consistently oriented closed shell; seam copies welded only for topology. No geometry edits. Self-intersection is not certified by this topology check."
+        }
+      },
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "reference": "content/visualizations/models/sources/volume-reuse.md",
+      "representation": "data-derived",
+      "presentation": {
+        "reference_size": 0.00033534321239810403,
+        "layout_width_factor": 1.9,
+        "display_extent_factor": 1.9,
+        "focus_scale_factor": 1.9
+      }
+    },
+    {
+      "id": "volume-educational-rbc",
+      "presentation": {
+        "pre_rotation": {
+          "x": 50
+        },
+        "reference_size": 0.4531113575739751,
+        "layout_width_factor": 2.3,
+        "display_extent_factor": 2.3,
+        "focus_scale_factor": 2.3
+      },
+      "source": "https://sketchfab.com/3d-models/rbc-morphology-red-blood-cell-1a1bbd5e3cd746888232fefa46b3f7d1",
+      "author": "elearning.imu on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "matches": {
+        "volume": [
+          "Red blood cell volume"
+        ]
+      },
+      "geometry": "mesh",
+      "note": "IMU eLearning's existing biconcave red-blood-cell teaching model, not a microscopy reconstruction. The enclosed mesh volume is uniformly scaled to the listed representative 90 femtoliters. No geometry is redrawn; its shape is illustrative and individual cells vary. This uses mesh volume, not the cube of the cell diameter. The separate Length entry remains calibrated by diameter.",
+      "src": "content/visualizations/models/sketchfab-red-blood-cell.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 118904,
+      "sha256": "775b9af388386acab5eec230407e8f4b2771ef442bda21f0072a02b23f6eab2c",
+      "extensions_used": [
+        "KHR_materials_specular"
+      ],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 2112,
+      "animations": 0,
+      "skins": 0,
+      "sketchfab_uid": "1a1bbd5e3cd746888232fefa46b3f7d1",
+      "source_sha256": "682d63e0205be753561fdf45abccd8aff8a0fc85c90785a1fd3741cd95fa7d60",
+      "source_bytes": 538534,
+      "processing": {
+        "operations": [
+          "Embed glTF buffers and images into GLB",
+          "Resize textures to at most 512px",
+          "Uniformly normalize the enclosed source mesh volume to the representative Volume datum at render time"
+        ],
+        "source_model_name": "RBC Morphology - Red Blood Cell",
+        "source_author": "elearning.imu",
+        "volume_calibration": {
+          "script": "scripts/register_volume_reuse.mjs",
+          "source_model_id": "sketchfab-red-blood-cell",
+          "source_glb_sha256": "775b9af388386acab5eec230407e8f4b2771ef442bda21f0072a02b23f6eab2c",
+          "volume": 0.09302824858286658,
+          "referenceSize": 0.4531113575739751,
+          "triangles": 2112,
+          "weldedVertices": 1058,
+          "edges": 3168,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 9.364173514387388e-8,
+          "extent": [
+            0.9364173514387388,
+            0.2416084647462641,
+            0.9004590440383353
+          ],
+          "selfIntersectionChecked": false,
+          "method": "Signed tetrahedral sum after source node transforms; one connected, consistently oriented closed shell; seam copies welded only for topology. No geometry edits. Self-intersection is not certified by this topology check."
+        }
+      },
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "reference": "content/visualizations/models/sources/volume-reuse.md",
+      "representation": "illustration"
     }
   ],
   "coverage_gaps": [
