@@ -1496,6 +1496,55 @@ items:
   value_type: measured
   qualifiers:
     measurement: land area
+- id: obs:area:entity-pluto
+  name: Pluto surface area
+  value: 17744400000000.0
+  description: New Horizons revealed mountains, glaciers and the bright, heart-shaped Tombaugh Regio on Pluto's encounter hemisphere. This estimate represents the whole dwarf planet with a sphere at its JPL equivalent-volume radius; it is not limited to the best-imaged terrain.
+  description_format: markdown
+  summary_short: Spherical surface-area estimate for Pluto using JPL's equivalent-volume mean radius.
+  description_medium: New Horizons revealed mountains, glaciers and the bright, heart-shaped Tombaugh Regio on Pluto's encounter hemisphere. This estimate represents the whole dwarf planet with a sphere at its JPL equivalent-volume radius; it is not limited to the best-imaged terrain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Pluto surface area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: 4*pi*r^2
+      method: derived
+      original_value_text: '17744400000000.0'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    mean_radius_km: '1188.3'
+    measurement: spherical surface area
 - id: obs:area:entity-moon
   name: Moon surface area
   value: 37900000000000.0
@@ -1544,6 +1593,153 @@ items:
   qualifiers:
     derivation: 4*pi*r^2
     measurement: surface area
+- id: obs:area:entity-mercury
+  name: Mercury surface area
+  value: 74778400000000.0
+  description: Mercury's densely cratered surface records a long history of impacts. This estimate uses a sphere with the JPL equivalent-volume radius, rather than measuring every crater and basin in the mapped terrain.
+  description_format: markdown
+  summary_short: Spherical surface-area estimate for Mercury using JPL's equivalent-volume mean radius.
+  description_medium: Mercury's densely cratered surface records a long history of impacts. This estimate uses a sphere with the JPL equivalent-volume radius, rather than measuring every crater and basin in the mapped terrain.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Mercury surface area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: 4*pi*r^2
+      method: derived
+      original_value_text: '74778400000000.0'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    mean_radius_km: '2439.4'
+    measurement: spherical surface area
+- id: obs:area:entity-mars
+  name: Mars surface area
+  value: 144371000000000.0
+  description: Mars's spherical area estimate is about 144 million km^2, close to Earth's roughly 149 million km^2 of land. The estimate uses Mars's JPL equivalent-volume radius; it is not a terrain-by-terrain surface measurement.
+  description_format: markdown
+  summary_short: Mars's estimated spherical area is about 144 million km^2, close to Earth's roughly 149 million km^2 of land.
+  description_medium: Mars's spherical area estimate is about 144 million km^2, close to Earth's roughly 149 million km^2 of land. The estimate uses Mars's JPL equivalent-volume radius; it is not a terrain-by-terrain surface measurement.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Mars surface area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: 4*pi*r^2
+      method: derived
+      original_value_text: '144371000000000.0'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    mean_radius_km: '3389.5'
+    measurement: spherical surface area
+- id: obs:area:entity-venus
+  name: Venus surface area
+  value: 460234000000000.0
+  description: Venus is nearly Earth's size, but its surface is hidden beneath a thick cloud cover. This estimate uses the area of a sphere at Venus's JPL equivalent-volume radius, not the visible cloud boundary.
+  description_format: markdown
+  summary_short: Venus's cloud-covered globe has an estimated spherical area about 90% of Earth's.
+  description_medium: Venus is nearly Earth's size, but its surface is hidden beneath a thick cloud cover. This estimate uses the area of a sphere at Venus's JPL equivalent-volume radius, not the visible cloud boundary.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Venus surface area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: 4*pi*r^2
+      method: derived
+      original_value_text: '460234000000000.0'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    mean_radius_km: '6051.8'
+    measurement: spherical surface area
 - id: obs:area:entity-earth
   name: Earth surface area
   value: 510000000000000.0
@@ -1590,6 +1786,153 @@ items:
   value_type: measured
   qualifiers:
     measurement: surface area
+- id: obs:area:entity-neptune
+  name: Neptune surface area
+  value: 7618270000000000.0
+  description: Neptune's mean radius is slightly smaller than Uranus's. This area uses Neptune's equivalent-volume spherical radius and does not treat shifting cloud patterns as a physical edge.
+  description_format: markdown
+  summary_short: Neptune's equivalent-volume radius is smaller than Uranus's, despite Neptune's greater distance from the Sun.
+  description_medium: Neptune's mean radius is slightly smaller than Uranus's. This area uses Neptune's equivalent-volume spherical radius and does not treat shifting cloud patterns as a physical edge.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Neptune surface area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: 4*pi*r^2
+      method: derived
+      original_value_text: '7618270000000000.0'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    mean_radius_km: '24622'
+    measurement: equivalent-volume sphere surface area
+- id: obs:area:entity-uranus
+  name: Uranus surface area
+  value: 8083080000000000.0
+  description: Uranus has a larger mean radius than Neptune. Its area here is calculated for the sphere with Uranus's equivalent volume; the planet's faint rings are excluded.
+  description_format: markdown
+  summary_short: Uranus is slightly larger than Neptune by mean radius; this area uses its equivalent-volume sphere.
+  description_medium: Uranus has a larger mean radius than Neptune. Its area here is calculated for the sphere with Uranus's equivalent volume; the planet's faint rings are excluded.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Uranus surface area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: 4*pi*r^2
+      method: derived
+      original_value_text: '8083080000000000.0'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    mean_radius_km: '25362'
+    measurement: equivalent-volume sphere surface area
+- id: obs:area:entity-saturn
+  name: Saturn surface area
+  value: 4.26121e+16
+  description: Saturn's rings extend far beyond the planet but are not part of this area. Saturn is oblate, so this figure is the area of an equivalent-volume sphere, not the exact area of its flattened globe.
+  description_format: markdown
+  summary_short: The area of a sphere with Saturn's equivalent-volume radius; the real globe is oblate.
+  description_medium: Saturn's rings extend far beyond the planet but are not part of this area. Saturn is oblate, so this figure is the area of an equivalent-volume sphere, not the exact area of its flattened globe.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Saturn surface area
+    ingest_source: dataset/raw/curated/area.json
+    source_trace:
+      derivation_note: 4*pi*r^2
+      method: derived
+      original_value_text: '4.26121e+16'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-area-json
+    url: repo://dataset/raw/curated/area.json
+    title: dataset/raw/curated/area.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: 4*pi*r^2
+    mean_radius_km: '58232'
+    measurement: equivalent-volume sphere surface area
 - id: obs:area:entity-jupiter
   name: Jupiter surface area
   value: 6.14e+16

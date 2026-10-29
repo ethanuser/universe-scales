@@ -1,0 +1,68 @@
+[
+  {
+    "id": "lake-tahoe-surface",
+    "name": "Lake Tahoe surface",
+    "geojson": "content/visualizations/area-sources/lake-tahoe-surface.geojson",
+    "central_longitude": -120.0,
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_lakes.geojson",
+    "author": "Natural Earth contributors",
+    "license": "Public domain",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "note": "Natural Earth generalized lake outline; source-water extent and listed surface-area statistic may differ."
+  },
+  {
+    "id": "new-york-city",
+    "name": "New York City",
+    "geojson": "content/visualizations/area-sources/new-york-city.geojson",
+    "central_longitude": -73.94,
+    "source": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_county_500k.zip",
+    "author": "U.S. Census Bureau",
+    "license": "Public domain (U.S. Government work)",
+    "license_url": "https://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2022/TGRSHP2022_TechDoc_Ch1.pdf",
+    "note": "Union of five 1:500,000 Census county outlines clipped to Natural Earth 1:10m land and simplified at 0.0002 degrees. This mixed-scale coastline is generalized: its spherical cylindrical equal-area estimate (R=6378137 m) is 736.005 km2 versus 778.181 km2 in Census county land attributes. The listed 784 km2 is a rounded land-area statistic; neither outline nor calibration represents cadastral shorelines."
+  },
+  {
+    "id": "caspian-sea-surface",
+    "name": "Caspian Sea surface",
+    "geojson": "content/visualizations/area-sources/caspian-sea-surface.geojson",
+    "central_longitude": 51.0,
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_geography_marine_polys.geojson",
+    "author": "Natural Earth contributors",
+    "license": "Public domain",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "note": "Natural Earth generalized marine polygon; shoreline and water-level epoch may differ from the listed statistic."
+  },
+  {
+    "id": "texas",
+    "name": "Texas",
+    "geojson": "content/visualizations/area-sources/texas.geojson",
+    "central_longitude": -99.0,
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+    "author": "Natural Earth contributors",
+    "license": "Public domain",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "note": "Natural Earth generalized state outline; the listed value approximates total area, not land-only area."
+  },
+  {
+    "id": "greenland",
+    "name": "Greenland",
+    "geojson": "content/visualizations/area-sources/greenland.geojson",
+    "central_longitude": -42.0,
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+    "author": "Natural Earth contributors",
+    "license": "Public domain",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "note": "Natural Earth generalized dependency outline; coast/island detail follows its 1:10m cartographic convention."
+  },
+  {
+    "id": "australia",
+    "name": "Australia",
+    "geojson": "content/visualizations/area-sources/australia.geojson",
+    "central_longitude": 134.0,
+    "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+    "author": "Natural Earth contributors",
+    "license": "Public domain",
+    "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "note": "Natural Earth generalized country outline, including its mapped islands and external features."
+  }
+]

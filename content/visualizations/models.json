@@ -14465,6 +14465,693 @@
       "closed_volume_checked": true,
       "reference": "content/visualizations/models/sources/volume-reuse.md",
       "representation": "illustration"
+    },
+    {
+      "id": "volume-mercury",
+      "source": "https://science.nasa.gov/resource/mercury-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/Mercury_1_4878.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "NASA's textured globe retains its original topology, texture coordinates and appearance. It is an idealized scale model, not a resolved terrain reconstruction. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "matches": {
+        "volume": [
+          "Mercury volume"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-mercury.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 806.858379841478,
+        "display_extent_factor": 1.4,
+        "layout_width_factor": 1.4,
+        "focus_scale_factor": 1.4
+      },
+      "reference": "content/visualizations/models/sources/nasa-mercury.md",
+      "source_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+      "source_bytes": 3048920,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "0222fa976a5bb3ae3222eeddaaa7150656837a97c515f065eb855e0b1dd2ab94",
+        "textures": [
+          {
+            "name": "mercury_diff.jpg",
+            "original_size": [
+              2048,
+              1536
+            ],
+            "size": [
+              1024,
+              768
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -500.0000305175781,
+            -500.0000305175781,
+            -500.0000305175781
+          ],
+          "max": [
+            500.0000305175781,
+            500.0000305175781,
+            500.0000305175781
+          ]
+        },
+        "volume_calibration": {
+          "volume": 525281301.59353584,
+          "referenceSize": 806.858379841478,
+          "triangles": 3072,
+          "weldedVertices": 1538,
+          "edges": 4608,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 0.00010000000610351562,
+          "extent": [
+            1000.0000610351562,
+            1000.0000610351562,
+            1000.0000610351562
+          ],
+          "selfIntersectionChecked": false,
+          "script": "scripts/register_planet_volumes.mjs",
+          "source_model_id": "nasa-mercury",
+          "source_glb_sha256": "8fc027684b074e73f4beb378b22a0ca168f782b6e2afc16e53a6e746deb7e7cf"
+        }
+      },
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 241844,
+      "sha256": "8fc027684b074e73f4beb378b22a0ca168f782b6e2afc16e53a6e746deb7e7cf",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0,
+      "additional_sources": [
+        {
+          "label": "Radius and volume convention",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      ]
+    },
+    {
+      "id": "volume-venus",
+      "source": "https://science.nasa.gov/resource/venus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/v/Venus_1_12103.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "The appearance depicts the cloud-covered planet, not exposed surface terrain. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "matches": {
+        "volume": [
+          "Venus volume"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-venus.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 805.6682052874307,
+        "display_extent_factor": 1.4,
+        "layout_width_factor": 1.4,
+        "focus_scale_factor": 1.4
+      },
+      "reference": "content/visualizations/models/sources/nasa-venus.md",
+      "source_sha256": "6aa26809feeb74fee371c43e9904112a76ebb3df15696e6e75297c0fce063bf9",
+      "source_bytes": 298748,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "6aa26809feeb74fee371c43e9904112a76ebb3df15696e6e75297c0fce063bf9",
+        "textures": [
+          {
+            "name": "color_2016_04_26.jpg",
+            "original_size": [
+              1440,
+              720
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9959716796875,
+            -500,
+            -500.00054931640625
+          ],
+          "max": [
+            500.0039978027344,
+            500,
+            499.9994812011719
+          ]
+        },
+        "volume_calibration": {
+          "volume": 522960244.78592384,
+          "referenceSize": 805.6682052874307,
+          "triangles": 6048,
+          "weldedVertices": 3026,
+          "edges": 9072,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 0.00010000000305175781,
+          "extent": [
+            999.9999694824219,
+            1000,
+            1000.0000305175781
+          ],
+          "selfIntersectionChecked": false,
+          "script": "scripts/register_planet_volumes.mjs",
+          "source_model_id": "nasa-venus",
+          "source_glb_sha256": "b1329976fd34ce56dce8842d31e6d6e2ade3dda75d146eb6ced1eb9ec37ce5ea"
+        }
+      },
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 159180,
+      "sha256": "b1329976fd34ce56dce8842d31e6d6e2ade3dda75d146eb6ced1eb9ec37ce5ea",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6048,
+      "animations": 0,
+      "skins": 0,
+      "additional_sources": [
+        {
+          "label": "Radius and volume convention",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      ]
+    },
+    {
+      "id": "volume-mars",
+      "author": "NASA; sphere assembled by Universe Scales",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Mars",
+      "download_url": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Mars/Mars.jpg",
+      "source_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+      "source_bytes": 972896,
+      "matches": {
+        "volume": [
+          "Mars volume"
+        ]
+      },
+      "representation": "textured-sphere",
+      "presentation": {
+        "reference_size": 1.6110330120019023,
+        "yaw": 125,
+        "roughness": 1,
+        "metalness": 0,
+        "display_extent_factor": 1.4,
+        "layout_width_factor": 1.4,
+        "focus_scale_factor": 1.4
+      },
+      "note": "An idealized spherical Mars with the global Mars map distributed by NASA 3D Resources. The catalog mean diameter sets the sphere diameter. Surface colors come from the NASA map; no terrain relief or independent global elevation reconstruction is implied. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "processing": {
+        "operations": [
+          "Create latitude-longitude sphere of radius 1",
+          "Apply NASA global Mars image without invented surface markings",
+          "Embed JPEG texture at 2048 x 1024 maximum"
+        ],
+        "source_texture_sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+        "volume_calibration": {
+          "volume": 4.181319166492369,
+          "referenceSize": 1.6110330120019023,
+          "triangles": 9024,
+          "weldedVertices": 4514,
+          "edges": 13536,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 2e-7,
+          "extent": [
+            2,
+            2,
+            2
+          ],
+          "selfIntersectionChecked": false,
+          "script": "scripts/register_planet_volumes.mjs",
+          "source_model_id": "nasa-mars-length",
+          "source_glb_sha256": "6eff4a3d7b1c1ea49b5028cf2a64e0f22586d927be35a1e3e140b82a0c4c71c1"
+        }
+      },
+      "src": "content/visualizations/models/nasa-mars-length.glb",
+      "geometry": "mesh",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 551228,
+      "sha256": "6eff4a3d7b1c1ea49b5028cf2a64e0f22586d927be35a1e3e140b82a0c4c71c1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 9024,
+      "animations": 0,
+      "skins": 0,
+      "additional_sources": [
+        {
+          "label": "Radius and volume convention",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      ]
+    },
+    {
+      "id": "volume-saturn",
+      "matches": {
+        "volume": [
+          "Saturn volume"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "scientific-agency-illustration",
+      "note": "NASA VTAD’s original oblate textured Saturn globe. The catalog mean diameter is calibrated against the source’s equatorial-diameter scale, preserving polar flattening. Rings are shown at their true relative scale under the separate Saturn’s Rings item; including them here would exceed the explorer’s 1.3× body-diameter extent rule. The texture is an illustrative global mosaic, not current weather. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "source": "https://science.nasa.gov/resource/saturn-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "reference": "content/visualizations/models/sources/nasa-saturn-globe-length.md",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html"
+      ],
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 777.6856969870922,
+        "pitch": 8,
+        "roll": -12,
+        "layout_width_factor": 1.4,
+        "display_extent_factor": 1.4,
+        "focus_scale_factor": 1.4
+      },
+      "processing": {
+        "source_models": [
+          {
+            "id": "nasa-saturn-angular",
+            "sha256": "cbd2f83aa8cf70425453b9406dd7812dd8b30d0cb6e7fd186ba4d2c2dcbd1bd9"
+          }
+        ],
+        "source_equatorial_diameter_units": 1000,
+        "source_equatorial_diameter_km": 120536,
+        "operations": [
+          "Reuse NASA source geometry, UVs and already resized embedded textures",
+          "Extract globe; omit ring meshes and unused ring image"
+        ],
+        "volume_calibration": {
+          "volume": 470340454.7817766,
+          "referenceSize": 777.6856969870922,
+          "triangles": 3072,
+          "weldedVertices": 1538,
+          "edges": 4608,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 0.00009999999999999999,
+          "extent": [
+            1000,
+            902.0380249023438,
+            1000
+          ],
+          "selfIntersectionChecked": false,
+          "script": "scripts/register_planet_volumes.mjs",
+          "source_model_id": "nasa-saturn-globe-length",
+          "source_glb_sha256": "c9d20445ffe62d808f99f820c95cf3925ca3f165a33597b49b05305855adbdf1"
+        }
+      },
+      "src": "content/visualizations/models/nasa-saturn-globe-length.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 704112,
+      "sha256": "c9d20445ffe62d808f99f820c95cf3925ca3f165a33597b49b05305855adbdf1",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 3072,
+      "animations": 0,
+      "skins": 0,
+      "additional_sources": [
+        {
+          "label": "Radius and volume convention",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      ]
+    },
+    {
+      "id": "volume-uranus",
+      "source": "https://science.nasa.gov/resource/uranus-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/u/Uranus_1_51118.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "Cloud appearance is an idealized NASA visualization; the sphere is not a time-resolved weather map. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "matches": {
+        "volume": [
+          "Uranus volume"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-uranus.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 799.4633624788388,
+        "display_extent_factor": 1.4,
+        "layout_width_factor": 1.4,
+        "focus_scale_factor": 1.4
+      },
+      "reference": "content/visualizations/models/sources/nasa-uranus.md",
+      "source_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+      "source_bytes": 172652,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "9c56f96bbfa82d923479c3dd83a00c35238a36addcfbcc61916f1377fe586bd5",
+        "textures": [
+          {
+            "name": "Image_0",
+            "original_size": [
+              1024,
+              512
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9960021972656,
+            -488.53648230166556,
+            -500.00050454770746
+          ],
+          "max": [
+            500.0039978027344,
+            488.53648230126214,
+            499.9994669500867
+          ]
+        },
+        "volume_calibration": {
+          "volume": 510970346.9564196,
+          "referenceSize": 799.4633624788388,
+          "triangles": 6048,
+          "weldedVertices": 3026,
+          "edges": 9072,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 0.00009999999999999999,
+          "extent": [
+            1000,
+            977.0729646029276,
+            999.9999714977941
+          ],
+          "selfIntersectionChecked": false,
+          "script": "scripts/register_planet_volumes.mjs",
+          "source_model_id": "nasa-uranus",
+          "source_glb_sha256": "0d0b8cdb16495c6319cc377871e6d84d235c60be02a5c4ebe3e241a747c80ffa"
+        }
+      },
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 152404,
+      "sha256": "0d0b8cdb16495c6319cc377871e6d84d235c60be02a5c4ebe3e241a747c80ffa",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6048,
+      "animations": 0,
+      "skins": 0,
+      "additional_sources": [
+        {
+          "label": "Radius and volume convention",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      ]
+    },
+    {
+      "id": "volume-neptune",
+      "source": "https://science.nasa.gov/resource/neptune-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/n/Neptune_1_49528.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "The blue atmospheric texture is NASA's visualization, not a current or strictly natural-color weather map. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "matches": {
+        "volume": [
+          "Neptune volume"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-neptune.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 801.0546280993178,
+        "display_extent_factor": 1.4,
+        "layout_width_factor": 1.4,
+        "focus_scale_factor": 1.4
+      },
+      "reference": "content/visualizations/models/sources/nasa-neptune.md",
+      "source_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+      "source_bytes": 585104,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "2fc3af08d56ed429b9cc56b95d151102aa5807ea958e7cb8806a42e12a699ba8",
+        "textures": [
+          {
+            "name": "Image_0",
+            "original_size": [
+              1024,
+              512
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9960021972656,
+            -491.459486352006,
+            -500.0005045648383
+          ],
+          "max": [
+            500.0039978027344,
+            491.4594863516026,
+            499.99946696721753
+          ]
+        },
+        "volume_calibration": {
+          "volume": 514027556.50071716,
+          "referenceSize": 801.0546280993178,
+          "triangles": 6048,
+          "weldedVertices": 3026,
+          "edges": 9072,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 0.00009999999999999999,
+          "extent": [
+            1000,
+            982.9189727036087,
+            999.9999715320558
+          ],
+          "selfIntersectionChecked": false,
+          "script": "scripts/register_planet_volumes.mjs",
+          "source_model_id": "nasa-neptune",
+          "source_glb_sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5"
+        }
+      },
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 194076,
+      "sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6048,
+      "animations": 0,
+      "skins": 0,
+      "additional_sources": [
+        {
+          "label": "Radius and volume convention",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      ]
+    },
+    {
+      "id": "volume-pluto",
+      "source": "https://science.nasa.gov/resource/pluto-3d-model/",
+      "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/p/l/Pluto_1_2374.glb",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "note": "New Horizons coverage is uneven: sharp encounter-hemisphere detail and lower-resolution or filled regions elsewhere are part of the NASA map. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "matches": {
+        "volume": [
+          "Pluto volume"
+        ]
+      },
+      "representation": "scientific-agency-illustration",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license_files": [
+        "licenses/nasa-media-guidelines.html",
+        "licenses/nasa-3d-resources.README.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/nasa-pluto.glb",
+      "presentation": {
+        "roughness": 1,
+        "metalness": 0,
+        "reference_size": 805.7927363965973,
+        "display_extent_factor": 1.4,
+        "layout_width_factor": 1.4,
+        "focus_scale_factor": 1.4
+      },
+      "reference": "content/visualizations/models/sources/nasa-pluto.md",
+      "source_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+      "source_bytes": 7009348,
+      "processing": {
+        "operations": [
+          "Retain original NASA geometry, node transforms, UVs and materials",
+          "Resize embedded images; preserve alpha and lossless normal maps"
+        ],
+        "prepared_sha256": "9915e6874ff7e7cd64faf8ef016ea16de6c8058417c42909efa099a88f2dd25b",
+        "textures": [
+          {
+            "name": "pluto_equi.jpg",
+            "original_size": [
+              4096,
+              2048
+            ],
+            "size": [
+              1024,
+              512
+            ],
+            "mime_type": "image/jpeg"
+          }
+        ],
+        "calibration": "longest-extent",
+        "source_bounds": {
+          "min": [
+            -499.9980163574219,
+            -499.989013671875,
+            -500.0010070800781
+          ],
+          "max": [
+            500.00201416015625,
+            500.0110168457031,
+            499.9989929199219
+          ]
+        },
+        "volume_calibration": {
+          "volume": 523202782.1692468,
+          "referenceSize": 805.7927363965973,
+          "triangles": 20448,
+          "weldedVertices": 10226,
+          "edges": 30672,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 0.00010000000305175781,
+          "extent": [
+            1000.0000305175781,
+            1000.0000305175781,
+            1000
+          ],
+          "selfIntersectionChecked": false,
+          "script": "scripts/register_planet_volumes.mjs",
+          "source_model_id": "nasa-pluto",
+          "source_glb_sha256": "b66471a0e831862b61acdc2984cc0aa9fb624f5d9fbc41cc73e3b1cd60198493"
+        }
+      },
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "closed_volume_checked": true,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 554360,
+      "sha256": "b66471a0e831862b61acdc2984cc0aa9fb624f5d9fbc41cc73e3b1cd60198493",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 20448,
+      "animations": 0,
+      "skins": 0,
+      "additional_sources": [
+        {
+          "label": "Radius and volume convention",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      ]
     }
   ],
   "coverage_gaps": [

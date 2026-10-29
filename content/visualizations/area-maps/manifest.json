@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "equal-earth-earth",
+      "name": "Earth surface area",
+      "src": "content/visualizations/area-maps/earth.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/earth-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Earth globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-earth",
+      "source_glb_sha256": "67ece29db790180954e5b97d3eb11fd4f56f7ee9b98ff63c63f3a29819801f3d",
+      "sha256": "d321d8ada85c728d20b40e05517fd6b188be1a6ed5035733b24add15c05fd2f5",
+      "bytes": 835624,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-moon",
+      "name": "Moon surface area",
+      "src": "content/visualizations/area-maps/moon.png",
+      "projection": "Equal Earth",
+      "source": "https://solarsystem.nasa.gov/resources/2366/earths-moon-3d-model/",
+      "author": "NASA (individual model artist not identified in current asset metadata)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Moon globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-moon",
+      "source_glb_sha256": "3c1236e03b1a42e067a27cc0ae7c31889f99f121f2b7c690d80dc199f72b98e9",
+      "sha256": "0acedc01f2de2d40934e11f93d0e66757646aca412e6d365173de8b8d39ed7c5",
+      "bytes": 966273,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-jupiter",
+      "name": "Jupiter surface area",
+      "src": "content/visualizations/area-maps/jupiter.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/jupiter-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Jupiter globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. The source shows atmospheric appearance, not a solid surface or current weather. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-jupiter",
+      "source_glb_sha256": "821c75e6a2268ab139d6fd87c1d0f37b86ca4985957e23e900936535b4bf9e50",
+      "sha256": "d1adcec8b6d34d60a3db0fc8875aef2ded965d86def35cfd6c3de09b078dc083",
+      "bytes": 950187,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-sun",
+      "name": "Sun surface area",
+      "src": "content/visualizations/area-maps/sun.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/learn/heat/resource/sun-3d-model/",
+      "author": "NASA (individual model artist not identified in current asset metadata)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Sun globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. The solar texture illustrates the photosphere, not a solid surface or a current observation. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-sun",
+      "source_glb_sha256": "54c727278bbcd342adcd279b8bb56079772256c6fa6ca3c0ed7f3ad863d42b9c",
+      "sha256": "40aa9b876ed7b92e6b5f0eb9cba8c8b59aab5af0aa89d3912769e7a94319b588",
+      "bytes": 1087720,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-mercury",
+      "name": "Mercury surface area",
+      "src": "content/visualizations/area-maps/mercury.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/mercury-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Mercury globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-mercury",
+      "source_glb_sha256": "8fc027684b074e73f4beb378b22a0ca168f782b6e2afc16e53a6e746deb7e7cf",
+      "sha256": "01dfc1c80892f4b9bd96fb8ae8196603ff0314ca282f8505028c13de350afe90",
+      "bytes": 866195,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-venus",
+      "name": "Venus surface area",
+      "src": "content/visualizations/area-maps/venus.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/venus-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Venus globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. The source shows atmospheric appearance, not a solid surface or current weather. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-venus",
+      "source_glb_sha256": "b1329976fd34ce56dce8842d31e6d6e2ade3dda75d146eb6ced1eb9ec37ce5ea",
+      "sha256": "2c17bbbfba857d1f30f41c27e252323d7c2f8dc997bdede3a34593e18a0297e0",
+      "bytes": 323018,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-mars",
+      "name": "Mars surface area",
+      "src": "content/visualizations/area-maps/mars.png",
+      "projection": "Equal Earth",
+      "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Mars",
+      "author": "NASA; sphere assembled by Universe Scales",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Mars globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-mars-length",
+      "source_glb_sha256": "6eff4a3d7b1c1ea49b5028cf2a64e0f22586d927be35a1e3e140b82a0c4c71c1",
+      "sha256": "f3149a634728d7b84a38827c072f5d7e2a698a30fbed4c5885b72fdbb1661cbc",
+      "bytes": 988621,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-saturn",
+      "name": "Saturn surface area",
+      "src": "content/visualizations/area-maps/saturn.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/saturn-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media/data; credit the named science teams",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Saturn globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. The source shows atmospheric appearance, not a solid surface or current weather. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-saturn-globe-length",
+      "source_glb_sha256": "c9d20445ffe62d808f99f820c95cf3925ca3f165a33597b49b05305855adbdf1",
+      "sha256": "15157fb7a55a5e040a32cbd827454e9bc74df23a78d2608298e86f7456b5da6b",
+      "bytes": 695515,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-uranus",
+      "name": "Uranus surface area",
+      "src": "content/visualizations/area-maps/uranus.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/uranus-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Uranus globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. The source shows atmospheric appearance, not a solid surface or current weather. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-uranus",
+      "source_glb_sha256": "0d0b8cdb16495c6319cc377871e6d84d235c60be02a5c4ebe3e241a747c80ffa",
+      "sha256": "dcbd99bea497ab41a8eb36aee1ad9b32b2f59113e712457f662054a2bb58745f",
+      "bytes": 169271,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-neptune",
+      "name": "Neptune surface area",
+      "src": "content/visualizations/area-maps/neptune.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/neptune-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Neptune globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. The source shows atmospheric appearance, not a solid surface or current weather. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-neptune",
+      "source_glb_sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5",
+      "sha256": "72133c49c3b16a28d5b4db09e8dc335cb7f18bca0751c20eb256fb4df97a5bad",
+      "bytes": 667173,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    },
+    {
+      "id": "equal-earth-pluto",
+      "name": "Pluto surface area",
+      "src": "content/visualizations/area-maps/pluto.png",
+      "projection": "Equal Earth",
+      "source": "https://science.nasa.gov/resource/pluto-3d-model/",
+      "author": "NASA Visualization Technology Applications and Development (VTAD)",
+      "license": "U.S. public-domain NASA media; NASA usage guidelines apply (not CC0)",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "The whole Pluto globe is unfolded with the Equal Earth projection. Equal-sized map patches represent equal surface areas under the listed spherical convention; the full colored footprint equals the listed area, not its bounding rectangle. New Horizons coverage has uneven resolution; parts of the globe are only weakly resolved. Existing NASA source UVs and imagery are retained without invented terrain. North follows the source globe; longitude is illustrative, not a navigation grid.",
+      "source_model_id": "nasa-pluto",
+      "source_glb_sha256": "b66471a0e831862b61acdc2984cc0aa9fb624f5d9fbc41cc73e3b1cd60198493",
+      "sha256": "d3f1741733ba90385ee91431faf8bbffdc143220afbf992456ef5de41a16e4d7",
+      "bytes": 724959,
+      "width": 1.5270524433193589,
+      "height": 0.7432423464703443,
+      "raster": [
+        1024,
+        498
+      ],
+      "raster_area_ratio": 0.9999982728799942,
+      "additional_sources": [
+        {
+          "label": "Projection method",
+          "url": "https://doi.org/10.1080/13658816.2018.1504949"
+        }
+      ]
+    }
+  ]
+}

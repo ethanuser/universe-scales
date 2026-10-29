@@ -3,7 +3,6 @@
     const { svg, dom, Slider, number, button } = ScaleControls;
     const { log, power, clamp, countCluster } = ScaleMath;
     const line = (x1, y1, x2, y2) => svg('line', { x1, y1, x2, y2, stroke: 'currentColor', 'stroke-width': 2 });
-    let worldPromise;
     const MIN_DRAWN_PX = 0.5;
     const MIN_MODEL_PX = 4;
     function createSpatialInput(element, { interaction = {}, onStart, onPan, onEnd }) {
@@ -127,17 +126,6 @@
     }
     function readableText(ctx, scale) {
         ctx.stage.querySelectorAll('text').forEach(text => { text.style.fontSize = `${Math.max(16, 12 / scale)}px`; });
-    }
-    function world() {
-        return worldPromise ||= fetch('content/visualizations/land.geojson').then(r => r.json()).then(data => {
-            for (const feature of data.features) {
-                const polygons = feature.geometry.type === 'Polygon' ? [feature.geometry.coordinates] : feature.geometry.coordinates;
-                for (const polygon of polygons)
-                    if (d3.geoArea({ type: 'Polygon', coordinates: polygon }) > 2 * Math.PI)
-                        polygon.forEach(ring => ring.reverse());
-            }
-            return data;
-        }).catch(() => null);
     }
     const mix = (a, b, amount) => a.map((value, index) =>
         Math.round(value + (b[index] - value) * clamp(amount, 0, 1))
@@ -339,11 +327,12 @@
         zoom.input.max = ScaleJourney.frameExponent(ctx.items, ctx.items.length - 1, order);
         zoom.set(clamp(zoom.value, Number(zoom.input.min), Number(zoom.input.max)));
         zoom.input.setAttribute('aria-label', 'Scale camera');
-        let land, modelStage, disposed = false, rulerHTML, attributedModel = null;
+        let areaMaps, modelStage, disposed = false, rulerHTML, attributedModel = null;
         let placement, placementWidth, placementReady;
         const widthFactor = item => {
+            const map = areaMaps?.entry(item);
+            if (map) return map.width;
             if (order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)) return 2 / Math.sqrt(Math.PI);
-            if (order === 2 && item.name === 'Earth surface area') return 1.6;
             const model = modelStage?.entry(item);
             if (!model) return 1;
             return (model.presentation?.layout_width_factor ?? 1) *
@@ -375,11 +364,11 @@
         ctx.caption.textContent = order === 1
             ? 'All objects share one camera that only zooms. Each sits at a distance from the center proportional to its own size, so objects at the current scale ring the center and smaller ones gather toward it; the arrangement is for reading, not physical distance. The ruler uses the listed length; photo framing is approximate. Distances, radii and object diameters retain their dataset definitions. Models are hidden when too small to read or still loading, rather than replaced with photos.'
             : order === 2
-            ? 'Outlined disks or squares have the listed area; photos identify the subject and do not define its outline. Earth uses an Equal Earth map whose entire footprint includes land and ocean. This is a continuous area journey, not a geographic map. Model/photo sources and geometry conventions are documented with the assets.'
+            ? 'Equal Earth maps preserve relative area: each full colored footprint, not its rectangular frame, equals the listed area. Planet maps unfold the whole globe under the listed spherical convention. Geographic outlines retain their source shapes, uniformly calibrated to the catalog area. Other disks/squares show equivalent area; their photos only identify the subject. Source and boundary conventions appear in each map note.'
             : 'Spherical models use diameter = (6V/pi)^(1/3). Explicitly volume-calibrated closed meshes enclose the listed representative volume; see each model note. Other models and photos use an equivalent-volume span V^(1/3), not a measured outline or mesh volume. Container capacity is not the volume of its material. Spacing is editorial.';
-        ctx.modelEntry = item => modelStage?.entry(item);
+        ctx.modelEntry = item => order === 2 ? areaMaps?.entry(item) : modelStage?.entry(item);
         const attachModels = () => {
-            if (disposed || modelStage || !root.ScaleModels) return;
+            if (disposed || order === 2 || modelStage || !root.ScaleModels) return;
             modelStage = new ScaleModels.ModelStage(ctx, render, () => {
                 const factor = modelStage?.entry(ctx.item)?.presentation?.focus_scale_factor;
                 const exponent = ScaleJourney.frameExponent(ctx.items, ctx.index, order);
@@ -391,7 +380,16 @@
         };
         window.addEventListener('scale-models-ready', attachModels);
         attachModels();
-        if (order === 2) world().then(data => { land = data; if (!disposed) render(); });
+        if (order === 2) areaMaps = new ScaleAreaMaps.Catalog(() => {
+            if (!disposed) {
+                ctx.updateDetail();
+                const exponent = ScaleJourney.frameExponent(ctx.items, ctx.index, order);
+                const factor = areaMaps.entry(ctx.item)?.presentation.focus_scale_factor || 1;
+                if (Math.abs(zoom.value - exponent) < 0.05)
+                    navigationControl.frameTo(exponent + Math.log10(factor), ctx.index, 1);
+                render();
+            }
+        });
         // Load models about a decade before they are big enough to draw, nearest the
         // current scale first, a couple at a time, so zooming reveals finished meshes
         // instead of empty slots that fill in. Larger, still-offscreen items load too:
@@ -465,11 +463,12 @@
                 });
             const labels = [];
             entries.filter(entry => entry.visible).forEach(({item, x, y, size}) => {
-                const entry = modelStage?.entry(item);
+                const entry = ctx.modelEntry(item);
                 // A sphere's diameter differs from the cube root of its volume.
                 const visualSize = order === 3 && entry?.geometry === 'sphere' ? size * Math.cbrt(6 / Math.PI) : size;
                 const modelExtent = entry?.presentation?.display_extent_factor ?? 1;
-                const extent = order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)
+                const extent = areaMaps?.entry(item) ? size * Math.max(entry.width, entry.height)
+                    : order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)
                     ? size * 2/Math.sqrt(Math.PI) : visualSize * modelExtent;
                 // Sub-pixel objects would still fetch their GLB or photo; they load when they grow.
                 if (extent * view.scale < MIN_DRAWN_PX) return;
@@ -484,15 +483,7 @@
                     g.style.pointerEvents = 'none';
                 }
                 if (useModel) g.dataset.modelState = modelStage.draw(item, x, y, visualSize) ? 'ready' : 'loading';
-                else if (order === 2 && item.name === 'Earth surface area' && land) {
-                    const projection = d3.geoEqualEarth().scale(1).translate([0, 0]);
-                    const path = d3.geoPath(projection);
-                    projection.scale(size / Math.sqrt(path.area({ type: 'Sphere' })));
-                    const mapBottom = path.bounds({ type: 'Sphere' })[1][1];
-                    projection.translate([x, y - mapBottom]);
-                    g.append(svg('path', { d: path({ type: 'Sphere' }), fill: '#719ec0', stroke: 'currentColor' }));
-                    g.append(svg('path', { d: path(land), fill: '#64875c' }));
-                } else {
+                else if (!areaMaps?.draw(g, item, x, y, size)) {
                     const src = ctx.image(item);
                     if (order === 2) {
                         const circular = /cross-section|surface area|disk|boundary/i.test(item.name);
@@ -543,7 +534,7 @@
                 : `${order === 3 ? '&#8731;' : '&radic;'}(${formattedRuler})`;
             if (nextRulerHTML !== rulerHTML) rulerLabel.innerHTML = rulerHTML = nextRulerHTML;
             navigationControl.update();
-            const current = modelStage?.entry(ctx.item);
+            const current = ctx.modelEntry(ctx.item);
             if (current === attributedModel) return;
             attributedModel = current;
             ctx.attribution.replaceChildren();
@@ -557,7 +548,7 @@
                     ctx.attribution.append(document.createTextNode(' · '), basis);
                 }
             } else if (current) {
-                const source = dom('a', '', `3D model: ${current.author}`);
+                const source = dom('a', '', `${order === 2 ? 'Map' : '3D model'}: ${current.author}`);
                 source.href = current.source;
                 source.target = '_blank';
                 source.rel = 'noopener noreferrer';
@@ -569,9 +560,9 @@
                 if (current.sketchfab_uid) ctx.attribution.append(document.createTextNode(' · adapted for web'));
             }
         }
-        return { render, get modelStage() { return modelStage; }, focus: frame => {
+        return { render, get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; }, focus: frame => {
             if (frame) {
-                const presentation = modelStage?.entry(ctx.item)?.presentation || {};
+                const presentation = ctx.modelEntry(ctx.item)?.presentation || {};
                 const exponent = ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor}) +
                     Math.log10(presentation.focus_scale_factor || 1);
                 navigationControl.frameTo(exponent, ctx.index, presentation.focus_scale_factor ? 1 : 0.3);

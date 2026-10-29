@@ -1,0 +1,50 @@
+{
+  "checked": "2026-10-29",
+  "dimension": "volume",
+  "export_snapshot": "exports/json/dimensions/volume.json",
+  "registry_snapshot": "content/visualizations/models.json",
+  "counts": {
+    "export_items": 55,
+    "exact_registered_volume_matches": 24,
+    "unmatched_items_in_snapshot": 31,
+    "planet_items_integrated_and_matched": ["Mercury volume", "Venus volume", "Mars volume", "Saturn volume", "Uranus volume", "Neptune volume", "Pluto volume"]
+  },
+  "status_definitions": {
+    "no_qualified_model_identified": "No exact registered model or qualified source candidate was identified in this bounded repository audit. This is not a claim that none exists anywhere.",
+    "illustrative_only_unregistered": "A relevant licensed visual model exists externally, but it is not dimensionally defensible as the item's volume and must not be presented as mesh-volume calibrated.",
+    "unregistered_candidate_requires_review": "A relevant source model exists, but scene scope, rights dependencies, or isolated-body geometry remains unverified; do not register or import yet."
+  },
+  "items": [
+    {"name":"Proton volume","status":"no_qualified_model_identified","blocker":"Quantum charge-density extent is not a uniquely bounded solid body; use a labeled distribution visualization, not a solid mesh-volume claim."},
+    {"name":"Hydrogen atom volume","status":"no_qualified_model_identified","blocker":"The Bohr-radius-derived effective volume is a convention, not a hard atomic boundary; any shell must be labeled as a probability/scale illustration."},
+    {"name":"Water molecule volume","status":"no_qualified_model_identified","blocker":"Molecular volume depends on the chosen electron-density or van-der-Waals boundary; no licensed exact source geometry matching the current definition is registered."},
+    {"name":"SARS-CoV-2 virion volume","status":"no_qualified_model_identified","blocker":"A spherical envelope is an approximation; a model would need an explicit virion boundary and source rights, not an unqualified capsid mesh."},
+    {"name":"Influenza virion volume","status":"no_qualified_model_identified","blocker":"Virions vary in shape and size; no exact licensed model tied to the representative spherical-volume definition is identified."},
+    {"name":"Escherichia coli cell volume","status":"no_qualified_model_identified","blocker":"Cell volume varies with strain and growth conditions; require a measured specimen or clearly identified representative cell model."},
+    {"name":"Human cell volume","status":"no_qualified_model_identified","blocker":"There is no single typical human-cell geometry; organelle/whole-cell renderings need an explicit cell type, boundary and compatible license."},
+    {"name":"Grain of salt volume","status":"no_qualified_model_identified","blocker":"The record is a representative spherical approximation; an actual irregular grain would need measured dimensions and matching size provenance."},
+    {"name":"Raindrop volume","status":"no_qualified_model_identified","blocker":"The listed 5 mm spherical droplet is a simplifying convention; real falling-drop shape depends on size and airflow."},
+    {"name":"Sugar cube volume","status":"no_qualified_model_identified","blocker":"The item is a representative solid block; a candidate needs documented edge dimensions and an actual cube-like mesh."},
+    {"name":"Bathtub","status":"illustrative_only_unregistered","blocker":"This observation is capacity (about 150 L), not tub-material volume. CC BY bathtub props lack documented dimensions/capacity; if used, tag as capacity proxy and make no mesh-volume claim.","candidate_sources":[{"url":"https://sketchfab.com/3d-models/wooden-bathtub-game-ready-asset-137881949bb14f78a0ac1fb4d6f3d2f1","creator":"Aparicio Silva 3D","license":"CC BY (Sketchfab page); verify license at acquisition","limitation":"Authored game prop; no metric dimensions or water-capacity evidence."},{"url":"https://sketchfab.com/3d-models/photorealistic-bathtub-ba60ba7d0a4a4b6899021741f450395b","creator":"Igrium","license":"CC BY (Sketchfab page); verify license at acquisition","limitation":"Blender recreation without dimensions or capacity; exact upstream game-asset relationship is unclear."}]},
+    {"name":"Bathtub volume","status":"illustrative_only_unregistered","blocker":"This is water capacity, not the solid material volume of the tub. An external tub model can only be a capacity proxy; do not calibrate from enclosed mesh volume.","candidate_sources":[{"url":"https://sketchfab.com/3d-models/wooden-bathtub-game-ready-asset-137881949bb14f78a0ac1fb4d6f3d2f1","creator":"Aparicio Silva 3D","license":"CC BY (Sketchfab page); verify license at acquisition","limitation":"No documented scale, basin capacity, or water volume."}]},
+    {"name":"Room volume","status":"no_qualified_model_identified","blocker":"A representative interior needs dimensions and a clear wall/ceiling boundary; generic room assets are not calibrated to the selected example."},
+    {"name":"Swimming pool","status":"no_qualified_model_identified","blocker":"The 40 m^3 observation is water capacity; a pool shell/envelope is not the water volume unless fill level and basin geometry are explicit."},
+    {"name":"Apartment","status":"no_qualified_model_identified","blocker":"Representative interior volume needs a dimensioned apartment plan/model matching the record; an attractive room scene is not sufficient."},
+    {"name":"Classroom volume","status":"no_qualified_model_identified","blocker":"Needs room dimensions and an explicit interior-air boundary; generic classroom models may include furniture or omit architectural surfaces."},
+    {"name":"Apartment volume","status":"no_qualified_model_identified","blocker":"Representative interior-air volume requires a dimensionally controlled plan and a defined inside boundary."},
+    {"name":"House interior volume","status":"no_qualified_model_identified","blocker":"Representative interior volume requires an identified house plan and consistent treatment of floors, walls, attic and excluded spaces."},
+    {"name":"Olympic swimming pool","status":"no_qualified_model_identified","blocker":"Capacity depends on the selected competition dimensions and water depth; require a source model or plan matching the cited pool convention."},
+    {"name":"Oil tanker cargo volume","status":"no_qualified_model_identified","blocker":"Cargo capacity is not hull displacement or outer hull volume; a particular vessel and tank-capacity source are needed."},
+    {"name":"Great Pyramid of Giza volume","status":"unregistered_candidate_requires_review","blocker":"The selected value is an approximate geometric envelope (~2.6 million m^3). The CC BY PAPP Sketchfab file describes a watertight whole-plateau bas-relief containing multiple pyramids, Sphinx, causeway and terrain, not an isolated calibrated Khufu mesh. Verify source/dependency rights and isolate the pyramid before considering import.","candidate_sources":[{"url":"https://sketchfab.com/3d-models/giza-great-pyramid-khufu-papp-6ed9c8b0d7a14bce8ac8947b7550cbb9","creator":"consciousfractal","license":"CC BY as shown on Sketchfab page","limitation":"Scene is a procedural plateau model; the page cites a Petrie slope (~51.844 degrees) but does not establish an isolated export or absolute scale."},{"url":"https://sketchfab.com/3d-models/the-great-pyramid-of-giza-4a251113722f4d969b6cf2ca5f35c502","creator":"ianicolo","license":"CC BY as shown on Sketchfab page","limitation":"Photogrammetry from YouTube videos; prior review found poor metric/completeness evidence and approximately 360k triangles. Rejected for measurement."}]},
+    {"name":"Lake Tahoe volume","status":"no_qualified_model_identified","blocker":"Water volume requires bathymetry and a defined lake level; surrounding terrain topography alone is not the water body."},
+    {"name":"Mount Everest envelope volume","status":"no_qualified_model_identified","blocker":"An above-terrain envelope needs a defined base surface, summit and clipping boundary; ordinary elevation relief is not this volume."},
+    {"name":"Earth's oceans","status":"no_qualified_model_identified","blocker":"Ocean volume requires a bathymetric water-column calculation and a sea-level/datum convention; a globe or ocean-surface map is not volume geometry."},
+    {"name":"Betelgeuse volume","status":"no_qualified_model_identified","blocker":"The observation is radius-dependent and uncertain; any stellar sphere is an explicitly idealized volume proxy, not a resolved 3D stellar surface."},
+    {"name":"Oort Cloud volume","status":"no_qualified_model_identified","blocker":"The 50,000 AU spherical boundary is a theoretical convention, not a measured shell; a boundary diagram must be labeled as such."},
+    {"name":"Orion Nebula volume","status":"no_qualified_model_identified","blocker":"Projected emission maps do not uniquely determine depth; a 3D volume model needs distances and a defined nebular boundary."},
+    {"name":"Milky Way disk volume","status":"no_qualified_model_identified","blocker":"The disk volume depends on chosen radial and vertical extents; require a sourced 3D stellar-density field and a declared cutoff."},
+    {"name":"Local Group volume","status":"no_qualified_model_identified","blocker":"A spherical volume depends on a chosen Local Group radius/boundary; member positions alone do not define a filled volume."},
+    {"name":"Virgo Supercluster volume","status":"no_qualified_model_identified","blocker":"The supercluster boundary is definition-dependent; a spherical proxy should not be presented as a mapped matter volume."},
+    {"name":"Observable universe volume","status":"no_qualified_model_identified","blocker":"This is a derived spherical cosmological volume, not a solid surface model; a scale diagram would be illustrative rather than observed geometry."}
+  ]
+}

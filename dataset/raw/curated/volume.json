@@ -829,5 +829,47 @@
     "summary": "Representative cargo volume of a freight train car.",
     "value_base": 100.0,
     "value_type": "derived"
+  },
+  {
+    "canonical_name": "Mercury volume", "category": "astronomy", "dimension": "volume", "display_eligible": true,
+    "qualifiers": {"derivation": "(4/3)*pi*r^3", "measurement": "equivalent-volume sphere", "mean_radius_km": 2439.4},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html", "subject_key": "entity:mercury", "subject_type": "entity",
+    "summary": "Mercury's volume is about 5.6% of Earth's, using the JPL equivalent-volume radius.", "value_base": 6.08048e19, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Venus volume", "category": "astronomy", "dimension": "volume", "display_eligible": true,
+    "qualifiers": {"derivation": "(4/3)*pi*r^3", "measurement": "equivalent-volume sphere", "mean_radius_km": 6051.8},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html", "subject_key": "entity:venus", "subject_type": "entity",
+    "summary": "Venus's volume is about 86% of Earth's, based on its JPL equivalent-volume radius.", "value_base": 9.28415e20, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Mars volume", "category": "astronomy", "dimension": "volume", "display_eligible": true,
+    "qualifiers": {"derivation": "(4/3)*pi*r^3", "measurement": "equivalent-volume sphere", "mean_radius_km": 3389.50},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html", "subject_key": "entity:mars", "subject_type": "entity",
+    "summary": "Mars's volume is about 15% of Earth's, despite its immense volcanoes and canyon system.", "value_base": 1.63116e20, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Saturn volume", "category": "astronomy", "dimension": "volume", "display_eligible": true,
+    "qualifiers": {"derivation": "(4/3)*pi*r^3", "measurement": "oblate planetary body volume", "mean_radius_km": 58232},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html", "subject_key": "entity:saturn", "subject_type": "entity",
+    "summary": "Saturn's flattened globe excludes its rings, which orbit far beyond the planet's surface.", "value_base": 8.2713e23, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Uranus volume", "category": "astronomy", "dimension": "volume", "display_eligible": true,
+    "qualifiers": {"derivation": "(4/3)*pi*r^3", "measurement": "equivalent-volume sphere", "mean_radius_km": 25362},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html", "subject_key": "entity:uranus", "subject_type": "entity",
+    "summary": "Uranus's volume is about 63 times Earth's; its rings are not included.", "value_base": 6.83344e22, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Neptune volume", "category": "astronomy", "dimension": "volume", "display_eligible": true,
+    "qualifiers": {"derivation": "(4/3)*pi*r^3", "measurement": "equivalent-volume sphere", "mean_radius_km": 24622},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html", "subject_key": "entity:neptune", "subject_type": "entity",
+    "summary": "Neptune's volume is about 58 times Earth's, slightly less than Uranus's volume.", "value_base": 6.25257e22, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Pluto volume", "category": "astronomy", "dimension": "volume", "display_eligible": true,
+    "qualifiers": {"derivation": "(4/3)*pi*r^3", "measurement": "equivalent-volume sphere", "mean_radius_km": 1188.3},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html", "subject_key": "entity:pluto", "subject_type": "entity",
+    "summary": "Pluto's volume is about 0.65% of Earth's, excluding its companion Charon.", "value_base": 7.02857e18, "value_type": "derived"
   }
 ]

@@ -1,0 +1,100 @@
+{
+  "review_date": "2026-10-29",
+  "coverage": {
+    "authoritative_file": "/private/tmp/length-coverage-current.json",
+    "array": ".photoOnly",
+    "total": 258,
+    "modeled": 212,
+    "photo_only": 46,
+    "errors": [],
+    "status": "production coverage command completed successfully with escalated local-server permission"
+  },
+  "fresh_targeted_checks": [
+    {
+      "item": "Giant Pacific Octopus",
+      "finding": "Commercial standard-license results; previously reviewed CC0 scan is folded and does not encode fully spread arm span.",
+      "decision": "No acquisition; needs spread-specimen landmarks or a matching length definition.",
+      "sources": ["https://www.turbosquid.com/FullPreview/1983823"]
+    },
+    {
+      "item": "Wandering Albatross",
+      "finding": "Phenome10K result is cranial; Museums Victoria result is CC BY specimen photography, not a mesh.",
+      "decision": "No acquisition; needs complete bird geometry in a measured wingspan pose.",
+      "sources": ["https://www.phenome10k.org/diomedea-exulans", "https://collections.museumsvictoria.com.au/specimens/429112"]
+    },
+    {
+      "item": "Cat Flea",
+      "finding": "Previously checked CC BY Zenodo record is a workbook; fresh result set did not yield qualifying complete geometry.",
+      "decision": "No acquisition; needs an adult specimen CT/mesh, compatible rights, and calibration.",
+      "sources": ["https://zenodo.org/records/15614748"]
+    },
+    {
+      "item": "Bumblebee Bat",
+      "finding": "DigiMorph page lists STL and CT downloads as unavailable; head data do not represent whole-body length.",
+      "decision": "No acquisition; needs authorized full-body scan and body-axis calibration.",
+      "sources": ["https://digimorph.geo.utexas.edu/specimens/Craseonycteris_thonglongyai/whole/"]
+    },
+    {
+      "item": "Titanosaur Cast",
+      "finding": "Targeted search did not identify a compatible-licensed scan of the named complete cast; fossil parts and generic reconstructions are not the cast.",
+      "decision": "No acquisition; needs the actual cast's complete scan, reuse grant, and length reference.",
+      "sources": []
+    },
+    {
+      "item": "Great Pyramid of Giza",
+      "finding": "Fresh CC BY photogrammetry candidate derives from YouTube footage, has 360k triangles, and lacks reliable metric/completeness evidence; prior retry3d scan also failed review. Full footprint is about 1.57x listed height.",
+      "decision": "No acquisition; needs metric-controlled complete scan and owner-approved framing/quantity decision.",
+      "sources": ["https://sketchfab.com/3d-models/the-great-pyramid-of-giza-4a251113722f4d969b6cf2ca5f35c502"]
+    }
+  ],
+  "items": [
+    {"name":"One-Nanometer Transistor Gate","prior_audit":"No source-model candidate recorded in reviewed handoffs","blocker":"Need licensed measured gate geometry with scale and a matching gate-length definition."},
+    {"name":"Blu-ray Track Pitch","prior_audit":"handoff/earth3d4/REPORT.md; handoff/images3/REPORT.md","blocker":"AFM/SEM imagery is not a calibrated height array; need licensed numerical topography and track spacing."},
+    {"name":"DVD Track Pitch","prior_audit":"handoff/earth3d4/REPORT.md; handoff/images3/REPORT.md; handoff/images4/REPORT.md","blocker":"Reviewed open AFM figures did not include raw calibrated height arrays; need numerical topography."},
+    {"name":"Spider Silk Fiber","prior_audit":"handoff/earth3d4/REPORT.md","blocker":"Published images/statistics do not provide a licensed complete fiber surface and diameter calibration."},
+    {"name":"Dust Mite","prior_audit":"handoff/source3d-bio/REPORT.md; handoff/retry3d/REPORT.md; AGENTS.md","blocker":"Reviewed CC BY candidates are stylized or artifact-heavy; need complete species scan and body-length calibration."},
+    {"name":"Cat Flea","prior_audit":"handoff/retry3d/REPORT.md; fresh targeted check","blocker":"CC BY record is a workbook, not a whole-animal scan; need adult CT/mesh with scale and compatible terms."},
+    {"name":"Paedophryne Amauensis","prior_audit":"handoff/retry3d/REPORT.md","blocker":"Need correct-species complete surface with compatible rights and calibration."},
+    {"name":"Bumblebee Bat","prior_audit":"handoff/retry3d/REPORT.md; fresh targeted check","blocker":"DigiMorph downloads unavailable; need permitted full-body scan, not skull/head geometry."},
+    {"name":"Bee Hummingbird","prior_audit":"handoff/retry3d/REPORT.md","blocker":"Need species-identified whole-body geometry with physical length reference."},
+    {"name":"Titan Beetle","prior_audit":"handoff/earth3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Need a complete Titanus specimen, not another beetle, with scale and compatible grant."},
+    {"name":"Vivian Hailstone","prior_audit":"handoff/earth3d4/REPORT.md; handoff/source3d-hail/REPORT.md","blocker":"Real scan is documented but no compatible STL/PLY/numerical shape grid was obtained; UCAR terms are noncommercial."},
+    {"name":"Queen Alexandra's Birdwing","prior_audit":"handoff/earth3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Prior sources were photos; need species-identified 3D specimen with calibrated wingspan and license."},
+    {"name":"Meganeura","prior_audit":"handoff/earth3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Candidate rights/anatomical provenance unresolved; need rights-clear mesh tied to documented reconstruction."},
+    {"name":"Wandering Albatross","prior_audit":"handoff/retry3d/REPORT.md; fresh targeted check","blocker":"Species scan is cranial; need whole-body geometry in a measured spread-wing pose."},
+    {"name":"Giant Pacific Octopus","prior_audit":"handoff/earth3d/REPORT.md; handoff/retry3d/REPORT.md; fresh targeted check","blocker":"Folded CC0 scan cannot calibrate fully spread arm span; need matching specimen pose/landmarks."},
+    {"name":"Titanosaur Cast","prior_audit":"handoff/earth3d/REPORT.md; handoff/retry3d/REPORT.md; fresh targeted check","blocker":"Need scan of the named complete cast under compatible terms, not fossil parts or generic reconstructions."},
+    {"name":"Giant Siphonophore","prior_audit":"handoff/earth3d4/REPORT.md; handoff/images3/REPORT.md","blocker":"Praya/Apolemia scans have NC-SA terms; CC BY Nanomia is a different small colony, not the 45.7 m specimen."},
+    {"name":"Great Pyramid of Giza","prior_audit":"handoff/retry3d/REPORT.md; fresh targeted check","blocker":"Scans failed metric/completeness review; full base exceeds listed height. Need complete metric scan and framing decision."},
+    {"name":"Lituya Bay Megatsunami","prior_audit":"handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Need georeferenced historical run-up survey geometry, not modern terrain or arbitrary marker."},
+    {"name":"Dinkinesh","prior_audit":"handoff/space3d2/REPORT.md; handoff/retry3d/REPORT.md; handoff/source3d-space/REPORT.md","blocker":"Need authoritative revised numerical shape, version/frame/coverage provenance, and compatible mesh rights."},
+    {"name":"Mount Thor Cliff","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md","blocker":"Single-valued DEM cannot preserve the overhang; need licensed measured cliff-face geometry."},
+    {"name":"Lake Baikal Depth","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Prior bathymetry terms unresolved and footprint is not maximum depth; need licensed bathymetry and framing decision."},
+    {"name":"Mauna Kea","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Full true-scale footprint greatly exceeds base-to-summit height; needs explicit framing/measure-axis decision."},
+    {"name":"Kola Superdeep Borehole","prior_audit":"handoff/earth3d4/REPORT.md","blocker":"Bore depth is underground, not wellhead size; needs a valid depth representation, not a scaled cap or invented shaft."},
+    {"name":"Large Hadron Collider Ring","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Need compatible-licensed surveyed ring coordinates; calibrate circumference, not a circle or diameter."},
+    {"name":"Channel Tunnel","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Rail/ferry records are not the tunnel; need licensed surveyed alignment and profile."},
+    {"name":"Hunga Tonga Eruption Plume","prior_audit":"handoff/terrain3d2/REPORT.md; handoff/images4/REPORT.md","blocker":"Data-derived terrain candidate exists but is unregistered; needs owner integration/review and production calibration, not new source discovery."},
+    {"name":"Danyang-Kunshan Grand Bridge","prior_audit":"handoff/earth3d4/REPORT.md; handoff/images4/REPORT.md","blocker":"Current visual is schematic; route map candidates lack compatible verified rights. Need licensed route geometry and endpoints."},
+    {"name":"Mammoth Cave","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Groundwater contours are not cave passages; need licensed georeferenced passage survey network."},
+    {"name":"Longest Lightning Flash","prior_audit":"handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md; handoff/images4/REPORT.md","blocker":"Need verified certified-event coordinates/groups; current explanatory glyphs are conceptual."},
+    {"name":"Typhoon Tip","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Need compatible licensed georeferenced storm subset and boundary; cloud pixels do not establish wind-field diameter."},
+    {"name":"Earth's Inner Core","prior_audit":"No item-specific source-model audit found in reviewed reports","blocker":"Need reusable numerical product matching inner-core diameter; generic sphere would be authored geometry."},
+    {"name":"Contiguous US Longest Distance","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md","blocker":"Need authoritative endpoints and entirely-within-US geodesic definition before geometry."},
+    {"name":"Trans-Siberian Railway","prior_audit":"handoff/terrain3d/REPORT.md; handoff/terrain3d2/REPORT.md; handoff/retry3d/REPORT.md","blocker":"Generic rail vectors do not identify the through-route; need verified compatible coordinate export."},
+    {"name":"TON 618 Event Horizon","prior_audit":"handoff/deepsky3d/REPORT.md; handoff/images3/REPORT.md","blocker":"Spectroscopy constrains mass, not a measured 3D surface; authored Schwarzschild sphere is outside source-only scope."},
+    {"name":"Milky Way Central Bar","prior_audit":"handoff/deepsky3d/REPORT.md; handoff/source3d-space/REPORT.md","blocker":"Analytic density is not measured member geometry; need full-bar catalog/grid and documented selection."},
+    {"name":"Fermi Bubbles","prior_audit":"handoff/deepsky3d/REPORT.md","blocker":"Public FITS are angular intensity/templates without distances; extrusion would invent depth."},
+    {"name":"Magellanic Stream","prior_audit":"handoff/deepsky3d/REPORT.md; handoff/retry3d/REPORT.md","blocker":"HI velocity is not distance and stellar tracers are incomplete; need full spatial constraints."},
+    {"name":"IC 1101","prior_audit":"handoff/deepsky3d/REPORT.md","blocker":"Reported edge is based on 2D profiles, not volumetric geometry; need measured 3D distribution."},
+    {"name":"Andromeda Gas Halo","prior_audit":"handoff/deepsky3d/REPORT.md; handoff/images4/REPORT.md","blocker":"Sparse integrated sightlines do not establish a volume; existing NASA image is labeled illustration."},
+    {"name":"Porphyrion","prior_audit":"handoff/deepsky3d/REPORT.md","blocker":"Author-specific radio data unavailable in prior audit; general LoTSS service is CC BY-SA, outside allowed terms."},
+    {"name":"Distance to the Virgo Cluster","prior_audit":"handoff/deepsky3d/REPORT.md","blocker":"Observer-to-cluster distance is not cluster size; current catalog geometry cannot stand in for that distance."},
+    {"name":"Baryon Acoustic Oscillation Scale","prior_audit":"handoff/deepsky3d/REPORT.md; handoff/images3/REPORT.md","blocker":"A candidate BOSS slice entry exists but is not integrated in production; owner review needed, not new source search."},
+    {"name":"Putative Giant Arc","prior_audit":"handoff/deepsky3d/REPORT.md","blocker":"Public absorber catalogs exist, but cleaned membership and compatible terms for derived measurements remain unverified."},
+    {"name":"Hubble Radius","prior_audit":"handoff/deepsky3d/REPORT.md; handoff/images3/REPORT.md","blocker":"Derived cosmological distance, not measured surface; needs owner-approved representation change."},
+    {"name":"JADES-GS-z14-0","prior_audit":"handoff/deepsky3d/REPORT.md","blocker":"Imaging/spectroscopy do not provide genuine 3D galaxy geometry or a source model for observer distance."}
+  ],
+  "acquisitions": [],
+  "qualification_policy": "Do not equate a relevant image, public download, schematic, analytic model, or different species with a reusable calibrated 3D source. This ledger does not claim all sources have been exhausted."
+}

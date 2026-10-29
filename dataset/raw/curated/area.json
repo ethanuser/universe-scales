@@ -622,5 +622,68 @@
     "summary": "Land area of Greenland.",
     "value_base": 2166000000000.0,
     "value_type": "measured"
+  },
+  {
+    "canonical_name": "Mercury surface area",
+    "category": "astronomy", "dimension": "area", "display_eligible": true,
+    "qualifiers": {"derivation": "4*pi*r^2", "measurement": "spherical surface area", "mean_radius_km": 2439.4},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "subject_key": "entity:mercury", "subject_type": "entity",
+    "summary": "Spherical surface-area estimate for Mercury using JPL's equivalent-volume mean radius.",
+    "value_base": 7.47784e13, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Venus surface area",
+    "category": "astronomy", "dimension": "area", "display_eligible": true,
+    "qualifiers": {"derivation": "4*pi*r^2", "measurement": "spherical surface area", "mean_radius_km": 6051.8},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "subject_key": "entity:venus", "subject_type": "entity",
+    "summary": "Venus's cloud-covered globe has an estimated spherical area about 90% of Earth's.",
+    "value_base": 4.60234e14, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Mars surface area",
+    "category": "astronomy", "dimension": "area", "display_eligible": true,
+    "qualifiers": {"derivation": "4*pi*r^2", "measurement": "spherical surface area", "mean_radius_km": 3389.50},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "subject_key": "entity:mars", "subject_type": "entity",
+    "summary": "Mars's estimated spherical area is about 144 million km^2, close to Earth's roughly 149 million km^2 of land.",
+    "value_base": 1.44371e14, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Saturn surface area",
+    "category": "astronomy", "dimension": "area", "display_eligible": true,
+    "qualifiers": {"derivation": "4*pi*r^2", "measurement": "equivalent-volume sphere surface area", "mean_radius_km": 58232},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "subject_key": "entity:saturn", "subject_type": "entity",
+    "summary": "The area of a sphere with Saturn's equivalent-volume radius; the real globe is oblate.",
+    "value_base": 4.26121e16, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Uranus surface area",
+    "category": "astronomy", "dimension": "area", "display_eligible": true,
+    "qualifiers": {"derivation": "4*pi*r^2", "measurement": "equivalent-volume sphere surface area", "mean_radius_km": 25362},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "subject_key": "entity:uranus", "subject_type": "entity",
+    "summary": "Uranus is slightly larger than Neptune by mean radius; this area uses its equivalent-volume sphere.",
+    "value_base": 8.08308e15, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Neptune surface area",
+    "category": "astronomy", "dimension": "area", "display_eligible": true,
+    "qualifiers": {"derivation": "4*pi*r^2", "measurement": "equivalent-volume sphere surface area", "mean_radius_km": 24622},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "subject_key": "entity:neptune", "subject_type": "entity",
+    "summary": "Neptune's equivalent-volume radius is smaller than Uranus's, despite Neptune's greater distance from the Sun.",
+    "value_base": 7.61827e15, "value_type": "derived"
+  },
+  {
+    "canonical_name": "Pluto surface area",
+    "category": "astronomy", "dimension": "area", "display_eligible": true,
+    "qualifiers": {"derivation": "4*pi*r^2", "measurement": "spherical surface area", "mean_radius_km": 1188.3},
+    "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "subject_key": "entity:pluto", "subject_type": "entity",
+    "summary": "Spherical surface-area estimate for Pluto using JPL's equivalent-volume mean radius.",
+    "value_base": 1.77444e13, "value_type": "derived"
   }
 ]

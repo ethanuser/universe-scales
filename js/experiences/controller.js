@@ -507,7 +507,7 @@
                 )
             );
             const modelNote = model?.note ? dom('section', 'experience-model-note') : null;
-            if (modelNote) modelNote.append(dom('h3', '', 'What this 3D model shows'),
+            if (modelNote) modelNote.append(dom('h3', '', model.note_heading || 'What this 3D model shows'),
                 dom('p', '', model.note));
             this.detail.replaceChildren(title, value, ...(modelNote ? [modelNote] : []), prose);
             // The panel is rebuilt when the registry arrives or units change: reuse the

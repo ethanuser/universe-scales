@@ -49,7 +49,7 @@ units:
   conversion_factor: 2.369e+104
   description: Planck volume is the natural volume scale from the Planck length cubed.
 required_min_items: 24
-preferred_target_items: 50
+preferred_target_items: 60
 preferred_max_items: 80
 selection_bin_count: 24
 description_format: markdown
@@ -1774,6 +1774,55 @@ items:
   value_type: measured
   qualifiers:
     measurement: water volume
+- id: obs:volume:entity-pluto
+  name: Pluto volume
+  value: 7.02857e+18
+  description: Pluto's volume is about 0.65% of Earth's. This is Pluto alone, excluding its companion Charon, and is calculated from JPL's equivalent-volume mean radius.
+  description_format: markdown
+  summary_short: Pluto's volume is about 0.65% of Earth's, excluding its companion Charon.
+  description_medium: Pluto's volume is about 0.65% of Earth's. This is Pluto alone, excluding its companion Charon, and is calculated from JPL's equivalent-volume mean radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Pluto volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '7.02857e+18'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    mean_radius_km: '1188.3'
+    measurement: equivalent-volume sphere
 - id: obs:volume:entity-moon
   name: Moon volume
   value: 2.2e+19
@@ -1822,6 +1871,153 @@ items:
   qualifiers:
     derivation: (4/3)*pi*r^3
     measurement: volume
+- id: obs:volume:entity-mercury
+  name: Mercury volume
+  value: 6.08048e+19
+  description: Mercury's volume is about 5.6% of Earth's. The figure uses JPL's equivalent-volume mean radius, so the spherical calculation represents the planet's volume without implying a spherical interior structure.
+  description_format: markdown
+  summary_short: Mercury's volume is about 5.6% of Earth's, using the JPL equivalent-volume radius.
+  description_medium: Mercury's volume is about 5.6% of Earth's. The figure uses JPL's equivalent-volume mean radius, so the spherical calculation represents the planet's volume without implying a spherical interior structure.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Mercury volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '6.08048e+19'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    mean_radius_km: '2439.4'
+    measurement: equivalent-volume sphere
+- id: obs:volume:entity-mars
+  name: Mars volume
+  value: 1.63116e+20
+  description: Mars has about 15% of Earth's volume. Olympus Mons and Valles Marineris dominate local landscapes, but the planetary volume is based on JPL's equivalent-volume mean radius.
+  description_format: markdown
+  summary_short: Mars's volume is about 15% of Earth's, despite its immense volcanoes and canyon system.
+  description_medium: Mars has about 15% of Earth's volume. Olympus Mons and Valles Marineris dominate local landscapes, but the planetary volume is based on JPL's equivalent-volume mean radius.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Mars volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '1.63116e+20'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    mean_radius_km: '3389.5'
+    measurement: equivalent-volume sphere
+- id: obs:volume:entity-venus
+  name: Venus volume
+  value: 9.28415e+20
+  description: 'Venus has about 86% of Earth''s volume. Its cloud tops are not the boundary used here: the calculation uses JPL''s equivalent-volume mean radius for the planet.'
+  description_format: markdown
+  summary_short: Venus's volume is about 86% of Earth's, based on its JPL equivalent-volume radius.
+  description_medium: 'Venus has about 86% of Earth''s volume. Its cloud tops are not the boundary used here: the calculation uses JPL''s equivalent-volume mean radius for the planet.'
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Venus volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '9.28415e+20'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    mean_radius_km: '6051.8'
+    measurement: equivalent-volume sphere
 - id: obs:volume:entity-earth
   name: Earth volume
   value: 1.083e+21
@@ -1868,6 +2064,153 @@ items:
   value_type: measured
   qualifiers:
     measurement: planetary volume
+- id: obs:volume:entity-neptune
+  name: Neptune volume
+  value: 6.25257e+22
+  description: Neptune has about 58 times Earth's volume, slightly less than Uranus. The value uses JPL's equivalent-volume mean radius and does not require a sharply defined solid surface beneath the atmosphere.
+  description_format: markdown
+  summary_short: Neptune's volume is about 58 times Earth's, slightly less than Uranus's volume.
+  description_medium: Neptune has about 58 times Earth's volume, slightly less than Uranus. The value uses JPL's equivalent-volume mean radius and does not require a sharply defined solid surface beneath the atmosphere.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Neptune volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '6.25257e+22'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    mean_radius_km: '24622'
+    measurement: equivalent-volume sphere
+- id: obs:volume:entity-uranus
+  name: Uranus volume
+  value: 6.83344e+22
+  description: Uranus has about 63 times Earth's volume. The comparison uses JPL's equivalent-volume mean radius; the visible cloud patterns are not treated as a solid surface.
+  description_format: markdown
+  summary_short: Uranus's volume is about 63 times Earth's; its rings are not included.
+  description_medium: Uranus has about 63 times Earth's volume. The comparison uses JPL's equivalent-volume mean radius; the visible cloud patterns are not treated as a solid surface.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Uranus volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '6.83344e+22'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    mean_radius_km: '25362'
+    measurement: equivalent-volume sphere
+- id: obs:volume:entity-saturn
+  name: Saturn volume
+  value: 8.2713e+23
+  description: Saturn contains roughly 764 Earth volumes. Its rapid rotation makes the planet noticeably oblate, but this estimate uses JPL's equivalent-volume radius; the rings are not part of the planet's volume.
+  description_format: markdown
+  summary_short: Saturn's flattened globe excludes its rings, which orbit far beyond the planet's surface.
+  description_medium: Saturn contains roughly 764 Earth volumes. Its rapid rotation makes the planet noticeably oblate, but this estimate uses JPL's equivalent-volume radius; the rings are not part of the planet's volume.
+  description_long: null
+  hook: null
+  caveats: null
+  content_status: curated
+  review_status: accepted
+  display_status: display
+  quality_flags: []
+  facts:
+    canonical_name: Saturn volume
+    ingest_source: dataset/raw/curated/volume.json
+    source_trace:
+      derivation_note: (4/3)*pi*r^3
+      method: derived
+      original_value_text: '8.2713e+23'
+      source_url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source: https://ssd.jpl.nasa.gov/planets/phys_par.html
+  source_count: 2
+  sources:
+  - id: src:https-ssd-jpl-nasa-gov-planets-phys-par-html
+    url: https://ssd.jpl.nasa.gov/planets/phys_par.html
+    title: phys par.html
+    publisher: NASA
+    license_text: null
+    source_class: secondary_reference
+    source_type: web_page
+    role: external_source
+    note: null
+  - id: src:repo-dataset-raw-curated-volume-json
+    url: repo://dataset/raw/curated/volume.json
+    title: dataset/raw/curated/volume.json
+    publisher: universe-scales repo
+    license_text: MIT
+    source_class: legacy_manual
+    source_type: local_file
+    role: curation_manifest
+    note: null
+  wikidata_qid: null
+  value_type: derived
+  qualifiers:
+    derivation: (4/3)*pi*r^3
+    mean_radius_km: '58232'
+    measurement: oblate planetary body volume
 - id: obs:volume:entity-jupiter
   name: Jupiter volume
   value: 1.431e+24

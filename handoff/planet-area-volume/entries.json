@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "integrated; all seven use enclosed-mesh volume normalization in scripts/register_planet_volumes.mjs",
+  "volume_mappings": [
+    {"item": "Mercury volume", "asset_id": "nasa-mercury", "geometry": "mesh", "calibration": "reference_size = cbrt(enclosed mesh volume); source globe proportions retained"},
+    {"item": "Venus volume", "asset_id": "nasa-venus", "geometry": "mesh", "calibration": "reference_size = cbrt(enclosed mesh volume); source globe proportions retained"},
+    {"item": "Mars volume", "asset_id": "nasa-mars-length", "geometry": "mesh", "calibration": "reference_size = cbrt(enclosed mesh volume); source globe proportions retained"},
+    {"item": "Saturn volume", "asset_id": "nasa-saturn-globe-length", "geometry": "mesh", "calibration": {"method": "reference_size = cbrt(enclosed mesh volume)", "reference_size_source_units": 777.6856969870922, "mesh_volume_source_units3": 470340454.7817766, "topology": "closed, consistently oriented, one connected shell; no self-intersection test"}, "note": "Preserve the registered oblate globe and exclude rings. Do not label/calibrate as analytic sphere."},
+    {"item": "Uranus volume", "asset_id": "nasa-uranus", "geometry": "mesh", "calibration": "reference_size = cbrt(enclosed mesh volume); source globe proportions retained"},
+    {"item": "Neptune volume", "asset_id": "nasa-neptune", "geometry": "mesh", "calibration": "reference_size = cbrt(enclosed mesh volume); source globe proportions retained"},
+    {"item": "Pluto volume", "asset_id": "nasa-pluto", "geometry": "mesh", "calibration": "reference_size = cbrt(enclosed mesh volume); source globe proportions retained"}
+  ]
+}

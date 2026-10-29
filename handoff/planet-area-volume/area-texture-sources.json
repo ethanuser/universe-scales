@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "purpose": "Equal Earth area-view texture sources for the new body observations",
+  "source_registry": "content/visualizations/models.json",
+  "bodies": {
+    "Mercury": {"asset_id": "nasa-mercury", "source": "https://science.nasa.gov/resource/mercury-3d-model/"},
+    "Venus": {"asset_id": "nasa-venus", "source": "https://science.nasa.gov/resource/venus-3d-model/"},
+    "Mars": {"asset_id": "nasa-mars-length", "source": "https://github.com/nasa/NASA-3D-Resources/tree/master/Images%20and%20Textures/Mars"},
+    "Saturn": {"asset_id": "nasa-saturn-globe-length", "source": "https://science.nasa.gov/resource/saturn-3d-model/"},
+    "Uranus": {"asset_id": "nasa-uranus", "source": "https://science.nasa.gov/resource/uranus-3d-model/"},
+    "Neptune": {"asset_id": "nasa-neptune", "source": "https://science.nasa.gov/resource/neptune-3d-model/"},
+    "Pluto": {"asset_id": "nasa-pluto", "source": "https://science.nasa.gov/resource/pluto-3d-model/"}
+  }
+}

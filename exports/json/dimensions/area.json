@@ -2,20 +2,22 @@
   "base_unit": "square_meters",
   "coverage_report": {
     "bin_count": 24,
-    "candidate_count": 40,
-    "candidate_shortfall_to_preferred_target": 10,
+    "candidate_count": 47,
+    "candidate_shortfall_to_preferred_target": 3,
+    "duplicate_candidate_count": 0,
     "empty_bin_count": 7,
     "preferred_max_items": 80,
     "preferred_target_items": 50,
+    "raw_candidate_count": 47,
     "required_min_items": 24,
-    "selected_count": 40,
+    "selected_count": 47,
     "selected_primary_count": 17,
-    "selected_secondary_count": 23,
+    "selected_secondary_count": 30,
     "selected_shortfall_to_required_min": 0,
     "source_class_distribution": {
-      "secondary_reference": 40
+      "secondary_reference": 47
     },
-    "target_selected_count": 40
+    "target_selected_count": 47
   },
   "description_format": "markdown",
   "dimension": "area",
@@ -1779,6 +1781,65 @@
     {
       "caveats": null,
       "content_status": "curated",
+      "description": "New Horizons revealed mountains, glaciers and the bright, heart-shaped Tombaugh Regio on Pluto's encounter hemisphere. This estimate represents the whole dwarf planet with a sphere at its JPL equivalent-volume radius; it is not limited to the best-imaged terrain.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "New Horizons revealed mountains, glaciers and the bright, heart-shaped Tombaugh Regio on Pluto's encounter hemisphere. This estimate represents the whole dwarf planet with a sphere at its JPL equivalent-volume radius; it is not limited to the best-imaged terrain.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Pluto surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "17744400000000.0",
+          "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-pluto",
+      "name": "Pluto surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "mean_radius_km": "1188.3",
+        "measurement": "spherical surface area"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-ssd-jpl-nasa-gov-planets-phys-par-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "phys par.html",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Spherical surface-area estimate for Pluto using JPL's equivalent-volume mean radius.",
+      "value": 17744400000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
       "description": "The Moon's entire surface is only a bit larger than Africa's. That comparison makes the lunar world feel less like a distant dot and more like a place with continental-scale landscapes.",
       "description_format": "markdown",
       "description_long": null,
@@ -1837,6 +1898,183 @@
     {
       "caveats": null,
       "content_status": "curated",
+      "description": "Mercury's densely cratered surface records a long history of impacts. This estimate uses a sphere with the JPL equivalent-volume radius, rather than measuring every crater and basin in the mapped terrain.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mercury's densely cratered surface records a long history of impacts. This estimate uses a sphere with the JPL equivalent-volume radius, rather than measuring every crater and basin in the mapped terrain.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Mercury surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "74778400000000.0",
+          "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-mercury",
+      "name": "Mercury surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "mean_radius_km": "2439.4",
+        "measurement": "spherical surface area"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-ssd-jpl-nasa-gov-planets-phys-par-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "phys par.html",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Spherical surface-area estimate for Mercury using JPL's equivalent-volume mean radius.",
+      "value": 74778400000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Mars's spherical area estimate is about 144 million km^2, close to Earth's roughly 149 million km^2 of land. The estimate uses Mars's JPL equivalent-volume radius; it is not a terrain-by-terrain surface measurement.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Mars's spherical area estimate is about 144 million km^2, close to Earth's roughly 149 million km^2 of land. The estimate uses Mars's JPL equivalent-volume radius; it is not a terrain-by-terrain surface measurement.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Mars surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "144371000000000.0",
+          "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-mars",
+      "name": "Mars surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "mean_radius_km": "3389.5",
+        "measurement": "spherical surface area"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-ssd-jpl-nasa-gov-planets-phys-par-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "phys par.html",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Mars's estimated spherical area is about 144 million km^2, close to Earth's roughly 149 million km^2 of land.",
+      "value": 144371000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Venus is nearly Earth's size, but its surface is hidden beneath a thick cloud cover. This estimate uses the area of a sphere at Venus's JPL equivalent-volume radius, not the visible cloud boundary.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Venus is nearly Earth's size, but its surface is hidden beneath a thick cloud cover. This estimate uses the area of a sphere at Venus's JPL equivalent-volume radius, not the visible cloud boundary.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Venus surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "460234000000000.0",
+          "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-venus",
+      "name": "Venus surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "mean_radius_km": "6051.8",
+        "measurement": "spherical surface area"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-ssd-jpl-nasa-gov-planets-phys-par-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "phys par.html",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Venus's cloud-covered globe has an estimated spherical area about 90% of Earth's.",
+      "value": 460234000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
       "description": "Earth's surface sounds abstract until you remember that most of it is ocean. The total is planetary, but the land humans actually occupy is only a comparatively thin fraction of the whole shell.",
       "description_format": "markdown",
       "description_long": null,
@@ -1889,6 +2127,183 @@
       "value": 510000000000000.0,
       "value_type": "measured",
       "wikidata_qid": "Q2"
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Neptune's mean radius is slightly smaller than Uranus's. This area uses Neptune's equivalent-volume spherical radius and does not treat shifting cloud patterns as a physical edge.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Neptune's mean radius is slightly smaller than Uranus's. This area uses Neptune's equivalent-volume spherical radius and does not treat shifting cloud patterns as a physical edge.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Neptune surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "7618270000000000.0",
+          "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-neptune",
+      "name": "Neptune surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "mean_radius_km": "24622",
+        "measurement": "equivalent-volume sphere surface area"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-ssd-jpl-nasa-gov-planets-phys-par-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "phys par.html",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Neptune's equivalent-volume radius is smaller than Uranus's, despite Neptune's greater distance from the Sun.",
+      "value": 7618270000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Uranus has a larger mean radius than Neptune. Its area here is calculated for the sphere with Uranus's equivalent volume; the planet's faint rings are excluded.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Uranus has a larger mean radius than Neptune. Its area here is calculated for the sphere with Uranus's equivalent volume; the planet's faint rings are excluded.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Uranus surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "8083080000000000.0",
+          "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-uranus",
+      "name": "Uranus surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "mean_radius_km": "25362",
+        "measurement": "equivalent-volume sphere surface area"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-ssd-jpl-nasa-gov-planets-phys-par-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "phys par.html",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "Uranus is slightly larger than Neptune by mean radius; this area uses its equivalent-volume sphere.",
+      "value": 8083080000000000.0,
+      "value_type": "derived",
+      "wikidata_qid": null
+    },
+    {
+      "caveats": null,
+      "content_status": "curated",
+      "description": "Saturn's rings extend far beyond the planet but are not part of this area. Saturn is oblate, so this figure is the area of an equivalent-volume sphere, not the exact area of its flattened globe.",
+      "description_format": "markdown",
+      "description_long": null,
+      "description_medium": "Saturn's rings extend far beyond the planet but are not part of this area. Saturn is oblate, so this figure is the area of an equivalent-volume sphere, not the exact area of its flattened globe.",
+      "display_status": "display",
+      "facts": {
+        "canonical_name": "Saturn surface area",
+        "ingest_source": "dataset/raw/curated/area.json",
+        "source_trace": {
+          "derivation_note": "4*pi*r^2",
+          "method": "derived",
+          "original_value_text": "4.26121e+16",
+          "source_url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        }
+      },
+      "hook": null,
+      "id": "obs:area:entity-saturn",
+      "name": "Saturn surface area",
+      "qualifiers": {
+        "derivation": "4*pi*r^2",
+        "mean_radius_km": "58232",
+        "measurement": "equivalent-volume sphere surface area"
+      },
+      "quality_flags": [],
+      "review_status": "accepted",
+      "source": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "src:https-ssd-jpl-nasa-gov-planets-phys-par-html",
+          "license_text": null,
+          "note": null,
+          "publisher": "NASA",
+          "role": "external_source",
+          "source_class": "secondary_reference",
+          "source_type": "web_page",
+          "title": "phys par.html",
+          "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
+        },
+        {
+          "id": "src:repo-dataset-raw-curated-area-json",
+          "license_text": "MIT",
+          "note": null,
+          "publisher": "universe-scales repo",
+          "role": "curation_manifest",
+          "source_class": "legacy_manual",
+          "source_type": "local_file",
+          "title": "dataset/raw/curated/area.json",
+          "url": "repo://dataset/raw/curated/area.json"
+        }
+      ],
+      "summary_short": "The area of a sphere with Saturn's equivalent-volume radius; the real globe is oblate.",
+      "value": 4.26121e+16,
+      "value_type": "derived",
+      "wikidata_qid": null
     },
     {
       "caveats": null,

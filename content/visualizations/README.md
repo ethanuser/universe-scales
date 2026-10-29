@@ -7,15 +7,17 @@ what the current visualization means.
 
 ## Modes
 
-- Length: two neighboring items, sized by their listed lengths, with a shared
-  zoom slider and wheel zoom. Click either object to frame it. Full image frames
-  approximate measured spans; backgrounds are not automatically segmented.
-- Area: equivalent squares with side `sqrt(area)`. Inset photos identify objects
-  but do not establish area. Earth surface area uses an Equal Earth projection;
-  its entire projected footprint is normalized to the listed area.
-- Volume: equivalent cubes with edge `cbrt(volume)`, drawn from 3D vertices using
-  a shared orthographic projection. The rotation slider changes both views.
-  These are not measured meshes of the original objects.
+- Length: a continuous radial camera with calibrated 3D models and photo-only
+  fallbacks. Click an object to frame it, drag a model to rotate it, and use the
+  wheel/slider to zoom. Full image frames only approximate measured spans.
+- Area: Equal Earth maps for planetary surfaces and sourced geographic outlines.
+  The colored footprint, not its bounding rectangle, equals the listed area.
+  Other items retain equivalent disks/squares; inset photos do not establish area.
+  See [projection sources and rebuild steps](area-maps/README.md).
+- Volume: licensed models where available, with explicit per-entry calibration.
+  Closed meshes with a `volume_calibration` are normalized by enclosed volume;
+  other model/image spans are illustrative, not measured capacities. Missing
+  models retain equivalent-volume cubes. All comparisons share the same scale.
 - Counts: bounded dot clusters with explicit multiplicities, and partial-cluster
   areas proportional to the represented fraction. Legal Go positions show four
   distinct illustrative 19x19 boards with isolated stones that retain liberties;
@@ -133,8 +135,8 @@ access is requested. Do not turn device volume to maximum for these previews.
 
 Acquired 2026-09-04. Assets are stored locally so normal use does not fetch media
 from third-party servers. Browser libraries retain the site's existing CDN setup.
-The map uses the existing D3 dependency, and 3D cube projection needs no WebGL or
-additional framework.
+The maps use the existing D3 dependency and local projected PNGs; Area does not
+create a WebGL context. Length/Volume models use the vendored Three.js renderer.
 
 ## Code and Checks
 
@@ -155,7 +157,7 @@ Audio gain tests: `node --test tests/audio-math.test.cjs`. After clicking Play o
 to grant audio activation, evaluate `tests/browser-audio.js` in the browser to
 check every bundled recording, calibration, missing assets and cancellation.
 
-Future work: curated cutouts and measured image spans, actual meshes and outlines,
+Future work: more curated cutouts, measured image spans, sourced meshes and outlines,
 more field recordings, and optional camera-based distance estimation only with
 appropriate calibration and explicit user consent. Browser audio output selection
 does not expose speaker sensitivity or sound level at the listener. See

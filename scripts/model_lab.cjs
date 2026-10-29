@@ -15,6 +15,8 @@
 //       The real explorer, after the camera spring settles on each item.
 //   node scripts/model_lab.cjs spatial-models OUT_DIR "Item" [...] --dimension volume [--unit liters] [--mobile]
 //       Production model loading, rotation, calibrated enclosed-volume and ruler checks.
+//   node scripts/model_lab.cjs area-maps OUT_DIR ["Item" ...] [--mobile] [--unit "square kilometers"]
+//       Equal-area footprint, map loading, attribution and production screenshots.
 //   node scripts/model_lab.cjs coverage [--gap 1] [--json]
 //       Model provenance and largest logarithmic gaps; not a visual approval.
 //   node scripts/model_lab.cjs angular OUT_DIR ["Item" ...]
@@ -105,6 +107,66 @@ const describe = m => `${m.name.padEnd(34)} ${String(m.model || 'photo').padEnd(
         (m.warnings.length ? `  !! ${m.warnings.join('; ')}` : '') : m.model ? 'FAILED TO LOAD' : '');
 
 const commands = {
+    async 'area-maps'({ positional, options }) {
+        const [out = '/tmp/area-map-audit', ...requested] = positional;
+        const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/visualizations/area-maps.json')));
+        const names = requested.length ? requested : manifest.entries.map(entry => entry.name);
+        fs.mkdirSync(out, { recursive: true });
+        await withBrowser(options.mobile ? '393x852' : '1280x900', async (page, base, errors) => {
+            const results = [];
+            for (const name of names) {
+                const query = new URLSearchParams({dimension:'area',item:name});
+                if (options.unit) query.set('unit',options.unit);
+                await page.goto(`${base}/?${query}`);
+                await page.waitForFunction(name => {
+                    const view = globalThis.app?.experiences;
+                    return view?.items && view.item?.name === name && view.renderer?.areaMaps?.entry(view.item);
+                }, name, { timeout:45000 });
+                await page.waitForTimeout(1600);
+                const result = await page.evaluate(async requestedUnit => {
+                    const view=app.experiences, entry=view.renderer.areaMaps.entry(view.item);
+                    const group=view.stage.querySelector(`[data-area-map="${entry.id}"]`);
+                    let area=entry.raster_area_ratio;
+                    let imageLoaded=true;
+                    if (entry.src) {
+                        const img=new Image(); img.src=entry.src;
+                        try { await img.decode(); } catch { imageLoaded=false; }
+                    }
+                    if (entry.path) {
+                        const scale=300, pad=3, canvas=document.createElement('canvas');
+                        canvas.width=Math.ceil(entry.width*scale)+2*pad;
+                        canvas.height=Math.ceil(entry.height*scale)+2*pad;
+                        const ctx=canvas.getContext('2d');
+                        ctx.translate(canvas.width/2,canvas.height-pad);ctx.scale(scale,scale);
+                        ctx.fill(new Path2D(entry.path));
+                        const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+                        let alpha=0;for(let i=3;i<pixels.length;i+=4) alpha+=pixels[i]/255;
+                        area=alpha/scale**2;
+                    }
+                    const size=view.stage.getBoundingClientRect();
+                    const slider=view.stageFrame.querySelector('.experience-camera-slider input');
+                    const box=ScaleRenderers.stageSize(view.stage);
+                    const scale=Math.min(box.width/(box.width<600?560:1000),box.height/500)||1;
+                    const span=10**Number(slider.value)*112/(ScaleJourney.BASE_SIZE*scale);
+                    const unit=app.getCurrentUnitDefinition();
+                    const expected=document.createElement('div');
+                    expected.innerHTML=`&radic;(${app.formatTooltipValueHTML(app.formatValueForCurrentUnit(span**2,2,true),unit.symbol)})`;
+                    const ruler=view.stageFrame.querySelector('.experience-corner-ruler__label');
+                    return {name:view.item.name,id:entry.id,area,areaCorrect:Math.abs(area-1)<.006,
+                        visible:Boolean(group),imageLoaded,rulerCorrect:ruler.textContent===expected.textContent,
+                        selectedUnit:unit.name,unitCorrect:!requestedUnit||requestedUnit===unit.name,
+                        mapHeading:view.detail.querySelector('.experience-model-note h3')?.textContent,
+                        width:entry.width,height:entry.height,stageWidth:size.width,source:entry.source};
+                },options.unit || null);
+                await page.locator('.experience-stage-frame').screenshot({path:path.join(out,slug(name)+'.png')});
+                results.push(result);
+            }
+            fs.writeFileSync(path.join(out,'audit.json'),JSON.stringify({results,errors},null,2));
+            console.log(JSON.stringify({results,errors},null,2));
+            if(errors.length || results.some(r=>!r.areaCorrect||!r.visible||!r.imageLoaded||!r.rulerCorrect||!r.unitCorrect||
+                r.mapHeading!=='What this area view shows')) process.exitCode=1;
+        },Boolean(options.mobile));
+    },
     async 'spatial-models'({ positional, options }) {
         const [out, ...names] = positional;
         const dimension = options.dimension || 'volume';
@@ -119,7 +181,7 @@ const commands = {
                 await page.goto(`${base}/?${query}`);
                 await page.waitForFunction(name => {
                     const view = globalThis.app?.experiences;
-                    return view?.item?.name === name && view.renderer?.modelStage?.instances.get(view.item)?.visible;
+                    return view?.items && view.item?.name === name && view.renderer?.modelStage?.instances.get(view.item)?.visible;
                 }, name, { timeout: 45000 });
                 await page.waitForTimeout(1800);
                 const result = await page.evaluate(async () => {

@@ -1,0 +1,75 @@
+{
+  "note": "Area image credits. Planetary photos reuse the existing credited Length originals and thumbnails unchanged.",
+  "images": [
+    {
+      "file": "images/area_mercury_surface_area.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Mercury_in_true_color.jpg",
+      "title": "File:Mercury in true color.jpg",
+      "author": "NASA/Johns Hopkins University Applied Physics Laboratory/Arizona State University/Carnegie Institution of Washington",
+      "license": "Public domain",
+      "license_url": "",
+      "changes": "Unchanged copy of existing JPEG and thumbnail; original conversion credited in length.json.",
+      "reused_from": "images/length_mercury.jpg"
+    },
+    {
+      "file": "images/area_venus_surface_area.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Venus_from_Mariner_10.jpg",
+      "title": "File:Venus from Mariner 10.jpg",
+      "author": "NASA/JPL-Caltech",
+      "license": "Public domain",
+      "license_url": "",
+      "changes": "Unchanged copy of existing JPEG and thumbnail; original conversion credited in length.json.",
+      "reused_from": "images/length_venus.jpg"
+    },
+    {
+      "file": "images/area_mars_surface_area.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png",
+      "title": "File:Mars - August 30 2021 - Flickr - Kevin M. Gill.png",
+      "author": "Kevin Gill†www.flickr.com from Los Angeles, CA, United States",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "Unchanged copy of existing JPEG and thumbnail; original conversion credited in length.json.",
+      "reused_from": "images/length_mars.jpg"
+    },
+    {
+      "file": "images/area_saturn_surface_area.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Saturn_global_view_from_Cassini,_rings_open_Better_Colour.png",
+      "title": "File:Saturn global view from Cassini, rings open Better Colour.png",
+      "author": "NASA / JPL-Caltech / SSI / color composite by Gordan Ugarkovic",
+      "license": "Public domain",
+      "license_url": "",
+      "changes": "Unchanged copy of existing JPEG and thumbnail; original conversion credited in length.json.",
+      "reused_from": "images/length_saturn.jpg"
+    },
+    {
+      "file": "images/area_uranus_surface_area.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Uranus_Voyager2_color_calibrated.png",
+      "title": "File:Uranus Voyager2 color calibrated.png",
+      "author": "Ardenau4",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Unchanged copy of existing JPEG and thumbnail; original conversion credited in length.json.",
+      "reused_from": "images/length_uranus.jpg"
+    },
+    {
+      "file": "images/area_neptune_surface_area.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Neptune_Voyager2_color_calibrated.png",
+      "title": "File:Neptune Voyager2 color calibrated.png",
+      "author": "NASA / Voyager 2 / PDS / OPUS / Ardenau4",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "Unchanged copy of existing JPEG and thumbnail; original conversion credited in length.json.",
+      "reused_from": "images/length_neptune.jpg"
+    },
+    {
+      "file": "images/area_pluto_surface_area.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pluto_in_True_Color_-_High-Res.png",
+      "title": "File:Pluto in True Color - High-Res.png",
+      "author": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest Research Institute/Alex Parker",
+      "license": "Public domain",
+      "license_url": "",
+      "changes": "Unchanged copy of existing JPEG and thumbnail; original conversion credited in length.json.",
+      "reused_from": "images/length_pluto.jpg"
+    }
+  ]
+}

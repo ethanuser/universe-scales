@@ -1,5 +1,47 @@
 # Agent Handoff Guide
 
+## 2026-10-29 sourced Area and Volume expansion (Codex)
+
+- Added seven paired Area/Volume observations (Mercury, Venus, Mars, Saturn,
+  Uranus, Neptune, Pluto), derived from pinned JPL equivalent-volume mean radii.
+  Input radii/formulas remain in raw qualifiers and the 14 new plaques are separate
+  Markdown files. Existing values and plaques are unchanged. Scoped rebuilds only
+  changed Area/Volume outputs; Volume's target is 60 so Earth/Jupiter are retained.
+  Current display counts: Area 47, Volume 55.
+- Seven Volume entries reuse existing NASA GLBs, independently normalized by
+  enclosed mesh volume. No new/duplicated GLB or scratch mesh. Rebuild/check with
+  `node scripts/register_planet_volumes.mjs [--check]`. The original Length
+  calibrations are unchanged; Saturn retains its oblate body without rings.
+- `area-maps.js` and `content/visualizations/area-maps.json` provide 17 equal-area
+  views: 11 whole-globe textured Equal Earth maps and six source GIS outlines
+  (Tahoe, NYC, Caspian, Texas, Greenland, Australia). The actual colored footprint
+  is normalized to area, not the bounding rectangle. Regional projections rotate
+  the sphere to local latitude first to avoid severely flattening Greenland.
+  The maps have separate source/interpretation notes and no Area WebGL context.
+- `build_planet_area_maps.cjs` samples actual NASA GLB UVs, including cube atlases,
+  into 11 local PNGs (8.27 MB total). `prepare_area_gis.py` prepares 855 kB of
+  public-domain boundaries. Do not re-add rejected Manhattan/Rhode Island shapes:
+  source coastline/water omissions conflict with their quantities. NYC is a
+  generalized land outline, uniformly calibrated, not a cadastral shoreline.
+  GeoJSON/output/source hashes and reproduction: `handoff/area-gis/REPORT.md`;
+  projection conventions: `content/visualizations/area-maps/README.md`.
+- `register_area_maps.cjs [--check]` merges the sources. Planet photo aliases and
+  inherited credits are reproducible with `prepare_planet_area_volume_images.cjs`.
+  `model_lab.cjs area-maps OUT [names...] [--mobile] [--unit "square kilometers"]`
+  checks filled area, images, source note and selected-unit ruler, and screenshots
+  the production view. All 17 maps and seven new Volume mappings pass desktop/
+  mobile checks without load/page errors. Screenshots were visually reviewed.
+  A Luna visual critic scored both dimensions 9/10 execution and 8/10 accuracy;
+  mobile checks are Chromium emulation, not physical-phone guarantees.
+- 262 Node tests pass; Python runs 169 with one existing skip; two optional GIS
+  tests pass with Shapely/pyshp preparation dependencies staged outside the repo.
+  All 212 registry asset entries/223 exact matches, calibration/version checks,
+  scoped dataset verification, 13 touch/fullscreen checks and navigation pass.
+  Remaining Length/Volume sourcing decisions are in `handoff/length-source-completion/`
+  and `handoff/volume-source-completion/`; no new Length candidate qualified in
+  this bounded review. These ledgers do not claim internet-wide exhaustion.
+  No push performed.
+
 ## 2026-10-28 source review and Volume calibration (Codex)
 
 - Added three Volume mappings using existing licensed binaries: Sand Atlas's
