@@ -92,6 +92,12 @@
             const body = dataEditor.querySelector('.data-editor__body');
             const filter = dataEditor.querySelector('.data-editor__filter');
             body.append(editorContent);
+            // Global actions (share, import/export, undo, save) live in a footer bar.
+            const footer = document.createElement('div');
+            footer.className = 'data-editor__footer';
+            const actions = editorContent.querySelector('.editor-header');
+            if (actions) footer.append(actions);
+            panel.append(footer);
             const showTab = tab => {
                 panel.dataset.tab = tab;
                 dataEditor.querySelectorAll('[role="tab"]').forEach(button =>
@@ -106,7 +112,7 @@
                 if (editorContent.style.display === 'none') return;
                 setDrawer(false);
                 const title = dataEditor.querySelector('#data-editor-title');
-                title.textContent = `Edit data · ${document.getElementById('dimension-browser-current')?.textContent || ''}`;
+                title.textContent = `Edit ${document.getElementById('dimension-browser-current')?.textContent || ''} data`;
                 filter.value = '';
                 applyFilter();
                 showTab(panel.dataset.tab || 'dimension-metadata');
@@ -122,10 +128,12 @@
                     event.stopPropagation();
                     event.preventDefault();
                 }
-                // Item cards open and close from their header row.
+                // Item cards open and close from their header row; opening adds the model panel.
                 const cardHeader = event.target.closest('.item-editor-card-header');
                 if (cardHeader && !event.target.closest('button, input, select, textarea, a, label')) {
-                    cardHeader.closest('.item-editor-card')?.classList.toggle('is-open');
+                    const card = cardHeader.closest('.item-editor-card');
+                    card?.classList.toggle('is-open');
+                    if (card?.classList.contains('is-open')) modelPanel(card);
                 }
             }, true);
             const count = (selector, list) => {
@@ -144,6 +152,94 @@
                 });
             }
             filter.addEventListener('input', applyFilter);
+
+            // 3D model panel for an opened item: where the model comes from (author, license,
+            // source, note), download the GLB, upload a replacement, and adjust its size and
+            // rotation. Adjustments preview in the explorer and stay in this browser.
+            let registry = null;
+            const loadRegistry = () => registry ||= fetch('content/visualizations/models.json').then(r => r.json()).catch(() => ({ models: [] }));
+            const element = (tag, className, text) => Object.assign(document.createElement(tag), className ? { className } : {}, text != null ? { textContent: text } : {});
+            const link = (label, href) => Object.assign(element('a', '', label), { href, target: '_blank', rel: 'noopener noreferrer' });
+            async function modelPanel(card) {
+                card.querySelector('.item-model-panel')?.remove();
+                const title = card.querySelector('.item-editor-card-title-row')?.textContent || '';
+                const name = title.replace(/^\s*\d+\.\s*/, '').replace(/Delete Item\s*$/, '').trim();
+                const dimension = app()?.currentDimension;
+                if (!name || !dimension) return;
+                const data = await loadRegistry();
+                const view = experiences();
+                const item = view?.items?.find(other => other.name === name);
+                const sourced = data.models.find(model => model.matches?.[dimension]?.includes(name));
+                const live = item && view.modelEntry ? view.modelEntry(item) : null;
+                const entry = sourced || live;
+                const override = window.ModelOverrides?.get(dimension, name);
+                const base = entry?.presentation || {};
+                const current = { ...base, ...(override?.presentation || {}) };
+                const panel = element('section', 'item-model-panel');
+                panel.append(element('h5', 'item-model-panel__title', '3D model'));
+                const facts = element('dl', 'item-model-panel__facts');
+                const fact = (label, value) => { if (!value) return; facts.append(element('dt', '', label)); const dd = element('dd'); dd.append(value); facts.append(dd); };
+                if (override?.src) fact('Model', `Your upload: ${override.fileName}`);
+                else if (sourced) {
+                    fact('Model', `${sourced.id}`);
+                    fact('Author', sourced.author || '');
+                    if (sourced.license) fact('License', sourced.license_url ? link(sourced.license, sourced.license_url) : sourced.license);
+                    if (sourced.source) fact('Source', link(sourced.source.replace(/^https?:\/\//, '').slice(0, 60), sourced.source));
+                    if (sourced.basis_url && sourced.basis_url !== sourced.source) fact('Basis', link(sourced.basis_label || 'Model basis', sourced.basis_url));
+                } else if (live?.procedural) fact('Model', 'Built in the app from measurements (procedural)');
+                else fact('Model', 'None; the explorer shows the photo');
+                if (item?.source) fact('Item source', link(item.source.replace(/^https?:\/\//, '').slice(0, 60), item.source));
+                panel.append(facts);
+                const note = (override?.src ? '' : sourced?.note || live?.note || '');
+                if (note) panel.append(element('p', 'item-model-panel__note', note));
+                const actions = element('div', 'item-model-panel__actions');
+                if (sourced?.src && !override?.src) {
+                    const download = link('Download GLB', sourced.src);
+                    download.className = 'btn'; download.setAttribute('download', `${sourced.id}.glb`); download.removeAttribute('target');
+                    actions.append(download);
+                }
+                const upload = element('label', 'btn', override?.src ? 'Replace upload' : 'Upload GLB');
+                const input = Object.assign(element('input'), { type: 'file', accept: '.glb,model/gltf-binary', hidden: true });
+                input.addEventListener('change', async () => {
+                    const file = input.files?.[0];
+                    if (!file) return;
+                    await ModelOverrides.setFile(dimension, name, file);
+                    modelPanel(card);
+                });
+                upload.append(input);
+                actions.append(upload);
+                if (override) {
+                    const reset = element('button', 'btn btn-danger', 'Reset model');
+                    reset.type = 'button';
+                    reset.addEventListener('click', async () => { await ModelOverrides.clear(dimension, name); modelPanel(card); });
+                    actions.append(reset);
+                }
+                panel.append(actions);
+                if (entry || override?.src) {
+                    const sliders = element('div', 'item-model-panel__sliders');
+                    const slider = (label, field, min, max, step, toValue, fromValue, format) => {
+                        const row = element('label', 'item-model-panel__slider');
+                        const output = element('output');
+                        const range = Object.assign(element('input'), { type: 'range', min, max, step });
+                        range.value = fromValue(current[field]);
+                        output.textContent = format(toValue(Number(range.value)));
+                        range.addEventListener('input', () => {
+                            const value = toValue(Number(range.value));
+                            output.textContent = format(value);
+                            ModelOverrides.setPresentation(dimension, name, { [field]: value });
+                        });
+                        row.append(element('span', '', label), range, output);
+                        sliders.append(row);
+                    };
+                    slider('Size', 'display_scale', -2, 2, 0.05, v => Math.round(2 ** v * 100) / 100,
+                        v => Math.log2(v ?? 1), v => `${v.toFixed(2)}x`);
+                    for (const [label, field] of [['Turn', 'yaw'], ['Tilt', 'pitch'], ['Roll', 'roll']])
+                        slider(label, field, -180, 180, 1, v => v, v => v ?? 0, v => `${v}°`);
+                    panel.append(sliders);
+                    panel.append(element('p', 'item-model-panel__hint', 'Adjustments preview in the explorer and are saved in this browser only.'));
+                }
+                card.querySelector('.item-editor-form')?.append(panel);
+            }
         }
 
         // --- Chart: no browser back/forward from horizontal swipes ----------------------------
@@ -197,7 +293,7 @@
                 if (!view?.interactiveButton) return;
                 (view.active ? view.logButton : view.interactiveButton)?.click();
             },
-            p: () => experiences()?.active && experiences().togglePanel(),
+            p: () => experiences()?.active ? experiences().togglePanel() : chartPanelToggle?.(),
             f: () => experiences()?.toggleFullscreen(),
             c: () => { const view = experiences(); if (view?.active && !view.noFocus) view.focus(view.index); },
             '+': () => experiences()?.renderer?.zoomBy?.(-0.25),
@@ -229,12 +325,16 @@
         // --- Chart item picker --------------------------------------------------------------
         // The chart gets the same item picker as the explorer (dropdown list with thumbnails and
         // search, previous/next arrows). Choosing an item zooms the chart to it and its neighbors.
+        let chartPanelToggle = null;
         const chartSearch = (() => {
             const chevron = '<span class="dimension-browser-toggle__chevron" aria-hidden="true"></span>';
             const arrow = path => `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${path}" /></svg>`;
             const wrap = document.createElement('div');
             wrap.className = 'experience-toolbar chart-toolbar';
-            wrap.innerHTML = `<div class="experience-toolbar__main"><div class="experience-picker">
+            wrap.innerHTML = `<div class="experience-toolbar__main">
+                <button type="button" class="experience-panel-button" title="Show or hide the description panel (P)" aria-label="Description panel" aria-pressed="true">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" /><path d="M9 4v16" /></svg></button>
+                <div class="experience-picker">
                 <button type="button" class="experience-picker-toggle" aria-expanded="false" title="Search items (/)"><span>Choose an item</span>${chevron}</button>
                 <button type="button" class="experience-nav-button" data-step="-1" title="Previous item (←)">${arrow('M15 5 8 12l7 7')}</button>
                 <button type="button" class="experience-nav-button" data-step="1" title="Next item (→)">${arrow('M9 5l7 7-7 7')}</button>
@@ -319,6 +419,16 @@
                 app().focusChartItem(ordered[next]);
             };
             wrap.querySelectorAll('[data-step]').forEach(button => button.addEventListener('click', () => step(Number(button.dataset.step))));
+            // The chart's details panel shows or hides with the same preference as the explorer's.
+            const panelButton = wrap.querySelector('.experience-panel-button');
+            const setPanel = hidden => {
+                document.body.classList.toggle('chart-panel-hidden', hidden);
+                panelButton.setAttribute('aria-pressed', String(!hidden));
+                storage.set('scale-panel-hidden', String(hidden));
+            };
+            setPanel(storage.get('scale-panel-hidden') === 'true');
+            panelButton.addEventListener('click', () => setPanel(!document.body.classList.contains('chart-panel-hidden')));
+            chartPanelToggle = () => setPanel(!document.body.classList.contains('chart-panel-hidden'));
             document.addEventListener('pointerdown', event => { if (!panel.hidden && !wrap.contains(event.target)) close(); });
             document.addEventListener('chart-selection', event => { label.textContent = event.detail?.name || 'Choose an item'; });
             document.addEventListener('keydown', event => {

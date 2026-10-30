@@ -651,7 +651,6 @@
             const sources = dom('div', 'experience-detail-sources');
             const addSource = (label, href) => {
                 if (!/^https?:\/\//.test(href || '')) return;
-                if (sources.childNodes.length) sources.append(document.createTextNode(' · '));
                 const link = dom('a', '', label);
                 Object.assign(link, { href, target: '_blank', rel: 'noopener noreferrer' });
                 sources.append(link);

@@ -1,5 +1,20 @@
 # Agent Handoff Guide
 
+## 2026-10-30 model adjustments, full-width item picker (Claude)
+
+- `js/model-overrides.js` (`ModelOverrides`): per dimension+item size (`display_scale`) and
+  rotation (`yaw`/`pitch`/`roll`) overrides in localStorage, uploaded GLBs in IndexedDB served as
+  object URLs; fires `scale-model-override`. `ModelStage.applyOverride` merges them into the entry
+  (uploads replace src with an `upload:` id); draw multiplies size by `display_scale`; uploads
+  dispose the old instance. Browser-only: they never change the registry or exports.
+- Data editor item cards get a "3D model" panel when opened: model id, author, license, source,
+  basis and item source; Download GLB; Upload / Replace upload; Reset; Size/Turn/Tilt/Roll sliders
+  that preview live. Global editor actions moved to a footer bar; section headers are plain rows.
+- Item picker (explorer and chart) opens as a full-width sheet with a multi-column grid. The chart
+  toolbar has a panel toggle (P), sharing `scale-panel-hidden` with the explorer.
+- Owner dislikes the middle dot as a separator: link groups use flex gaps, titles use words
+  ("Edit Length data"). Only the unit-multiplication sign in symbols like N·m remains.
+
 ## 2026-10-30 data editor dialog, lock vs selection, input polish (Claude)
 
 - Data editor: `#editor-content` lives in `#data-editor-dialog` (app-shell moves it there) with

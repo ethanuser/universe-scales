@@ -686,7 +686,7 @@
                     basis.href = current.basis_url;
                     basis.target = '_blank';
                     basis.rel = 'noopener noreferrer';
-                    ctx.attribution.append(document.createTextNode(' · '), basis);
+                    ctx.attribution.append(basis);
                 }
             } else if (current) {
                 const source = dom('a', '', `${order === 2 ? 'Map' : '3D model'}: ${current.author}`);
@@ -697,8 +697,8 @@
                 license.href = current.license_url;
                 license.target = '_blank';
                 license.rel = 'noopener noreferrer';
-                ctx.attribution.append(source, document.createTextNode(' · '), license);
-                if (current.sketchfab_uid) ctx.attribution.append(document.createTextNode(' · adapted for web'));
+                ctx.attribution.append(source, license);
+                if (current.sketchfab_uid) ctx.attribution.append(dom('span', '', 'adapted for web'));
             }
         }
         return { render, zoomBy: amount => navigationControl.zoomBy(amount), frameOffset: () => frameZoom(ctx), get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; }, focus: frame => {
@@ -794,7 +794,7 @@
             }
             nav.observe(onScreen);
             ctx.stage.append(svg('text',{x:view.left+14,y:470,class:'counts-multiplier',style:`font-size:${13/view.scale}px`},`1 ${imagesShown?'tile':'dot'} = ${number(each)} counted units`));
-            ctx.live.textContent=`${/Legal Go positions/i.test(ctx.item.name)?'Four legal examples, not an enumeration':`${totalShown.toLocaleString()} replicas drawn${clipped?' · Larger totals truncated at 12,000':''}`}`;
+            ctx.live.textContent=`${/Legal Go positions/i.test(ctx.item.name)?'Four legal examples, not an enumeration':`${totalShown.toLocaleString()} replicas drawn${clipped?'; larger totals truncated at 12,000':''}`}`;
             ctx.caption.textContent='Each total is a square of image tiles whose side grows with the square root of the count, arranged so totals near the current scale ring the center and smaller ones gather toward it. The tiles identify what is counted, using illustrative photographs rather than measured outlines. A tile represents one object only when its multiplier is 1; otherwise it represents the explicit cluster size shown. All items share that multiplier. Totals below one cluster shrink in dot area; large totals are truncated at 12,000 tiles. Count alternatives (such as Go positions) are not physically coexisting objects. The four Go boards are valid illustrative positions, not a uniform random sample.';
             nav.update();
         }

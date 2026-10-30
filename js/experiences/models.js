@@ -283,6 +283,19 @@ export class ModelStage {
             dispose: instance => this.disposeInstance(instance) });
         if (this.coarsePointer) models.setLimits({ maxEntries: 40, maxBytes: 96 * MIB });
         this.waveStart = performance.now();
+        this.onOverride = event => {
+            this.entryCache = new WeakMap();
+            // A new or removed upload needs the instance rebuilt; size/rotation apply on redraw.
+            if (event.detail?.reload) for (const [item, instance] of [...this.instances])
+                if (instance && globalThis.ModelOverrides?.key(this.ctx.dimension, item.name) === event.detail.key) {
+                    this.activeLeases.get(item)?.release(); this.activeLeases.delete(item);
+                    this.prefetchLeases.get(item)?.release(); this.prefetchLeases.delete(item);
+                    this.instanceCache.records?.delete?.(item);
+                    this.disposeInstance(instance);
+                }
+            this.redraw();
+        };
+        window.addEventListener('scale-model-override', this.onOverride);
         try {
             this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
             // Checking compile logs forces every new shader to finish compiling synchronously,
@@ -337,10 +350,27 @@ export class ModelStage {
             ? orbitalEntry(item, this.entries) || angularEntry(item, this.entries)
             : (this.ctx.dimension === 'length' && proceduralLength[item.name]) ||
                 this.entries.find(e => e.matches?.[this.ctx.dimension]?.includes(item.name));
+        const adjusted = this.applyOverride(item, entry);
         // Layout asks for each item's presentation several times per frame.
         // Do not cache misses until the asynchronous registry has arrived.
-        if (this.registryReady) this.entryCache.set(item, entry);
-        return entry;
+        if (this.registryReady) this.entryCache.set(item, adjusted);
+        return adjusted;
+    }
+    // Data-editor adjustments (js/model-overrides.js): an uploaded GLB replaces the model, and
+    // size/rotation overrides merge into its presentation.
+    applyOverride(item, entry) {
+        const override = globalThis.ModelOverrides?.get(this.ctx.dimension, item.name);
+        if (!override) return entry;
+        let next = entry;
+        if (override.src) {
+            const base = entry?.presentation || {};
+            next = { ...(entry || { geometry: 'mesh' }), id: `upload:${override.key}:${override.version}`, src: override.src,
+                sha256: undefined, procedural: undefined, author: 'your upload', license: 'Local file', source: undefined,
+                note: `Your uploaded model (${override.fileName}), stored only in this browser. Its longest side is scaled to the listed size.`,
+                presentation: { yaw: base.yaw, pitch: base.pitch, roll: base.roll } };
+        }
+        if (override.presentation) next = { ...(next || {}), presentation: { ...(next?.presentation || {}), ...override.presentation } };
+        return next;
     }
     queueLoadRedraw() {
         if (this.loadFrame || this.disposed) return;
@@ -658,6 +688,8 @@ export class ModelStage {
         this.ensure(item, entry);
         const instance = this.instances.get(item);
         if (!instance) return false;
+        // Data-editor size adjustment (1 = calibrated size).
+        size *= entry.presentation?.display_scale ?? 1;
         if (phase != null) instance.userData.angularRig?.setPhase(phase);
         instance.visible = true;
         if (entry.angular_motion) {
@@ -923,6 +955,7 @@ export class ModelStage {
     }
     dispose() {
         this.disposed = true;
+        window.removeEventListener('scale-model-override', this.onOverride);
         cancelAnimationFrame(this.returnFrame);
         cancelAnimationFrame(this.waveFrame);
         cancelAnimationFrame(this.inputFrame);
