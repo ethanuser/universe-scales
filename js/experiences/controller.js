@@ -270,8 +270,11 @@
             const grouped = this.app.isLinearScale() || !globalThis.ScaleSearch?.groups ? this.pickerButtons
                 : ScaleSearch.groups(this.items, this.dimension).flatMap(group => {
                     const header = dom('div', 'experience-picker-group');
-                    header.append(dom('span', '', group.label));
-                    if (group.range) header.append(dom('small', '', group.range));
+                    const label = dom('span'), range = dom('small');
+                    ScaleSearch.writePowers(label, group.label);
+                    ScaleSearch.writePowers(range, group.range);
+                    header.append(label);
+                    if (group.range) header.append(range);
                     return [header, ...group.indices.map(index => this.pickerButtons[index])];
                 });
             options.replaceChildren(...grouped);

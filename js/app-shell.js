@@ -17,6 +17,8 @@
         const app = () => window.app;
         const experiences = () => window.app?.experiences;
         let returnFocus = null;
+        // Where the current wheel gesture began (see scroll latching below).
+        let wheelOrigin = null;
 
         // --- Drawer and dialogs -------------------------------------------------------
         const setDrawer = open => {
@@ -111,24 +113,38 @@
             navList.setAttribute('role', 'listbox');
             navList.setAttribute('aria-label', 'Items');
             const navFooter = element('div', 'data-editor__nav-footer');
+            const selectCount = element('span', 'data-editor__nav-count');
+            const selectAll = Object.assign(element('button', 'data-editor__link', 'Select all'), { type: 'button' });
+            const selectNone = Object.assign(element('button', 'data-editor__link', 'Clear'), { type: 'button' });
             const addItem = $('add-item-btn'), deleteAll = $('delete-all-items-btn');
             if (addItem) { addItem.textContent = 'Add item'; addItem.prepend(Object.assign(element('span', 'data-editor__plus'), { ariaHidden: 'true' })); }
             if (deleteAll) deleteAll.textContent = 'Delete all items';
             navTools.append(filter, addItem || '');
-            navFooter.append(deleteAll || '');
+            navFooter.append(selectCount, selectAll, selectNone, deleteAll || '');
             nav.append(navTools, navList, navFooter);
             itemsSection?.prepend(nav);
             dataEditor.querySelector('.data-editor__toolbar')?.remove();
             const empty = element('div', 'data-editor__empty');
             empty.append(element('h3', '', 'No item selected'), element('p', '', 'Choose an item from the list, or add a new one.'));
-            detail?.prepend(empty);
+            const bulk = element('section', 'data-editor__bulk');
+            detail?.prepend(bulk, empty);
 
+            // Text boxes grow to fit their text, so the page is the only thing that scrolls.
+            const fitText = area => {
+                if (!area.offsetParent) return;
+                area.style.height = 'auto';
+                area.style.height = `${area.scrollHeight + area.offsetHeight - area.clientHeight}px`;
+            };
+            const fitTexts = root => root?.querySelectorAll('textarea').forEach(fitText);
+            dataEditor.addEventListener('input', event => { if (event.target.matches('textarea')) fitText(event.target); });
+            window.addEventListener('resize', () => { if (!dataEditor.hidden) fitTexts(body); });
             const showTab = tab => {
                 panel.dataset.tab = tab;
                 dataEditor.querySelectorAll('[role="tab"]').forEach(button =>
                     button.setAttribute('aria-selected', String(button.dataset.tab === tab)));
                 $(`${tab}-section`)?.classList.remove('collapsed');
                 body.scrollTop = 0;
+                fitTexts(body);
             };
             dataEditor.querySelectorAll('[role="tab"]').forEach(button =>
                 button.addEventListener('click', () => showTab(button.dataset.tab)));
@@ -145,10 +161,15 @@
                 const title = dataEditor.querySelector('#data-editor-title');
                 title.textContent = `Edit ${document.getElementById('dimension-browser-current')?.textContent || ''} data`;
                 filter.value = '';
-                selectedKey = null;
+                selectedKey = lastIndex = null;
+                checked.clear();
                 showTab(panel.dataset.tab || 'items');
                 setDialog(dataEditor, true);
+                // Focus the page rather than the first tab, which would show a focus ring.
+                panel.tabIndex = -1;
+                panel.focus();
                 buildNav();
+                fitTexts(body);
             });
             dataEditor.onClose = () => {
                 if (editorContent.style.display !== 'none') window.app?.editor?.toggleEditor();
@@ -166,28 +187,71 @@
             }, true);
 
             // --- Item list ---
-            let selectedKey = null, wantNew = false, rows = new Map();
+            // A plain click opens one item. Checkboxes, Cmd/Ctrl-click and Shift-click (a range)
+            // pick several for the bulk pane; a band's checkbox picks its whole band.
+            let selectedKey = null, lastIndex = null, anchor = null, wantNew = false, rows = new Map();
+            const checked = new Set(), bands = [];
             const cardKey = card => card.dataset.isCustom === 'true' ? `custom:${card.dataset.customId}` : `item:${card.dataset.itemIndex}`;
             const cardName = card => card.querySelector('input[name="name"]')?.value.trim() || '';
             const cardValue = card => Number(card.querySelector('input[name="value"]')?.value);
-            const superscript = text => text.replace(/[-0-9]/g, c => '⁻⁰¹²³⁴⁵⁶⁷⁸⁹'['-0123456789'.indexOf(c)]);
             const formatValue = value => {
                 if (!Number.isFinite(value)) return '';
                 if (value === 0 || (Math.abs(value) >= 0.01 && Math.abs(value) < 1e5)) return String(Number(value.toPrecision(3)));
                 const exponent = Math.floor(Math.log10(Math.abs(value)));
-                return `${Number((value / 10 ** exponent).toPrecision(3))} × 10${superscript(String(exponent))}`;
+                return `${Number((value / 10 ** exponent).toPrecision(3))} × ${ScaleSearch.power(exponent)}`;
             };
             // Values are stored in the base unit (conversion factor 1).
             const unitSymbol = () => app()?.dimensionData?.units?.find(unit => Number(unit.conversion_factor) === 1)?.symbol || '';
             const fillRow = (row, card) => {
                 row.querySelector('.data-editor__nav-name').textContent = cardName(card) || 'Unnamed item';
                 const value = formatValue(cardValue(card));
-                row.querySelector('.data-editor__nav-value').textContent = value ? `${value} ${unitSymbol()}`.trim() : '';
+                ScaleSearch.writePowers(row.querySelector('.data-editor__nav-value'), value ? `${value} ${unitSymbol()}`.trim() : '');
+            };
+            const shownCards = () => [...rows.entries()].filter(([, row]) => !row.hidden).map(([card]) => card);
+            const checkedCards = () => [...rows.keys()].filter(card => checked.has(cardKey(card)));
+            const pick = (card, on) => { if (on) checked.add(cardKey(card)); else checked.delete(cardKey(card)); };
+            function toggleCheck(card, range) {
+                const list = shownCards();
+                const from = list.findIndex(other => cardKey(other) === anchor), to = list.indexOf(card);
+                if (range && from >= 0 && to >= 0) list.slice(Math.min(from, to), Math.max(from, to) + 1).forEach(other => pick(other, true));
+                else pick(card, !checked.has(cardKey(card)));
+                anchor = cardKey(card);
+                refreshChecks();
+            }
+            function refreshChecks() {
+                rows.forEach((row, card) => {
+                    const on = checked.has(cardKey(card));
+                    row.querySelector('.data-editor__check').checked = on;
+                    row.classList.toggle('is-checked', on);
+                });
+                for (const { box, cards } of bands) {
+                    const live = cards.filter(card => !rows.get(card)?.hidden);
+                    const on = live.filter(card => checked.has(cardKey(card))).length;
+                    box.checked = live.length > 0 && on === live.length;
+                    box.indeterminate = on > 0 && on < live.length;
+                }
+                const count = checked.size;
+                nav.classList.toggle('is-selecting', count > 0);
+                panel.classList.toggle('is-bulk', count > 0);
+                selectCount.textContent = count ? `${count} selected` : '';
+                selectAll.hidden = !rows.size;
+                selectNone.hidden = !count;
+                if (deleteAll) deleteAll.hidden = count > 0;
+                if (count) updateBulk();
+                else if (!rows.size) empty.hidden = false;
+            }
+            const clearChecks = () => { checked.clear(); anchor = null; refreshChecks(); };
+            selectAll.addEventListener('click', () => { shownCards().forEach(card => pick(card, true)); refreshChecks(); });
+            selectNone.addEventListener('click', clearChecks);
+            const makeCheck = label => {
+                const box = Object.assign(element('input', 'data-editor__check'), { type: 'checkbox' });
+                box.setAttribute('aria-label', label);
+                return box;
             };
             const makeRow = card => {
+                const wrap = element('div', 'data-editor__nav-row');
                 const row = element('button', 'data-editor__nav-item');
                 row.type = 'button';
-                row.setAttribute('role', 'option');
                 const thumb = element('img', 'data-editor__nav-thumb');
                 Object.assign(thumb, { alt: '', loading: 'lazy', decoding: 'async' });
                 const source = cardName(card) && card.querySelector('.image-preview')?.getAttribute('src');
@@ -196,46 +260,83 @@
                 const text = element('span', 'data-editor__nav-text');
                 text.append(element('span', 'data-editor__nav-name'), element('span', 'data-editor__nav-value'));
                 row.append(thumb, text);
-                fillRow(row, card);
-                row.addEventListener('click', () => select(card));
-                rows.set(card, row);
-                return row;
+                const box = makeCheck(`Select ${cardName(card) || 'unnamed item'}`);
+                box.addEventListener('click', event => toggleCheck(card, event.shiftKey));
+                row.addEventListener('click', event => {
+                    const open = [...rows.keys()].find(other => cardKey(other) === selectedKey);
+                    if (event.metaKey || event.ctrlKey || event.shiftKey) {
+                        // The open item joins the selection, as in a file browser.
+                        if (!checked.size && open) { pick(open, open !== card); anchor = selectedKey; }
+                        toggleCheck(card, event.shiftKey);
+                    } else {
+                        clearChecks();
+                        select(card);
+                    }
+                });
+                wrap.append(box, row);
+                rows.set(card, wrap);
+                fillRow(wrap, card);
+                return wrap;
             };
             function buildNav() {
                 if (!itemsList || dataEditor.hidden) return;
                 const cards = [...itemsList.querySelectorAll('.item-editor-card')];
                 rows = new Map();
+                bands.length = 0;
+                const keys = new Set(cards.map(cardKey));
+                for (const key of [...checked]) if (!keys.has(key)) checked.delete(key);
+                cards.forEach((card, index) => {
+                    const heading = card.querySelector('.item-editor-card-title-row h4');
+                    if (card.dataset.decorated) heading.dataset.number = index + 1;
+                    else heading.textContent = heading.textContent.replace(/^\s*\d+\./, `${index + 1}.`);
+                });
                 const linear = app()?.isLinearScale?.() || !window.ScaleSearch?.groups;
                 const groups = linear ? [{ label: '', indices: cards.map((card, index) => index) }]
                     : ScaleSearch.groups(cards, app()?.currentDimension, cardValue);
                 navList.replaceChildren(...groups.flatMap(group => {
                     const nodes = group.indices.map(index => makeRow(cards[index]));
                     if (!group.label) return nodes;
+                    const members = group.indices.map(index => cards[index]);
+                    const box = makeCheck(`Select all in ${group.label}`);
+                    box.addEventListener('click', () => {
+                        const on = box.checked;
+                        members.filter(card => !rows.get(card)?.hidden).forEach(card => pick(card, on));
+                        refreshChecks();
+                    });
+                    bands.push({ box, cards: members });
                     const header = element('div', 'data-editor__nav-group');
-                    header.append(element('span', '', group.label));
-                    if (group.range) header.append(element('small', '', group.range));
+                    const label = element('span'), range = element('small');
+                    ScaleSearch.writePowers(label, group.label);
+                    ScaleSearch.writePowers(range, group.range);
+                    header.append(box, label);
+                    if (group.range) header.append(range);
                     return [header, ...nodes];
                 }));
                 applyFilter();
-                // Keep the selection across re-renders; a new item is selected once added;
-                // otherwise start on the item the explorer shows.
+                // Keep the selection across re-renders; a new item is selected once added; after
+                // a delete the next item takes its place; otherwise start on the explorer's item.
                 const target = (wantNew && cards.find(card => !cardName(card))) ||
                     cards.find(card => cardKey(card) === selectedKey) ||
+                    (lastIndex != null ? cards[Math.min(lastIndex, cards.length - 1)] : null) ||
                     cards.find(card => cardName(card) === experiences()?.item?.name) || cards[0];
                 wantNew = false;
                 if (target) select(target, 'center');
                 else { previewFor = null; empty.hidden = false; }
+                refreshChecks();
+                fitTexts(body);
             }
-            addItem?.addEventListener('click', () => { wantNew = true; filter.value = ''; });
+            addItem?.addEventListener('click', () => { wantNew = true; filter.value = ''; clearChecks(); });
             function select(card, scroll = 'nearest') {
                 itemsList.querySelectorAll('.item-editor-card.is-selected').forEach(other => other.classList.remove('is-selected'));
                 card.classList.add('is-selected');
                 empty.hidden = true;
                 selectedKey = cardKey(card);
-                rows.forEach((row, other) => row.setAttribute('aria-selected', String(other === card)));
+                lastIndex = [...rows.keys()].indexOf(card);
+                rows.forEach((row, other) => row.querySelector('.data-editor__nav-item').setAttribute('aria-current', String(other === card)));
                 rows.get(card)?.scrollIntoView({ block: scroll });
                 if (detail) detail.scrollTop = 0;
                 decorate(card);
+                fitTexts(card);
                 modelPanel(card);
             }
             // Headings for the card's groups, and live list updates while typing.
@@ -265,6 +366,7 @@
             };
             const recount = () => { count('units', unitsList); count('items', itemsList); };
             if (unitsList) new MutationObserver(recount).observe(unitsList, { childList: true });
+            if (unitsList) new MutationObserver(() => fitTexts(unitsList)).observe(unitsList, { childList: true });
             if (itemsList) new MutationObserver(() => { recount(); buildNav(); }).observe(itemsList, { childList: true });
             function applyFilter() {
                 const query = window.ScaleSearch ? ScaleSearch.normalize(filter.value) : filter.value.toLowerCase();
@@ -278,19 +380,184 @@
                     if (!node.hidden) shown++;
                 }
                 closeGroup();
+                if (rows.size) refreshChecks();
             }
             filter.addEventListener('input', applyFilter);
             // Arrow keys move through the list while it or the filter has focus.
             nav.addEventListener('keydown', event => {
                 if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
-                const visible = [...rows.entries()].filter(([, row]) => !row.hidden);
+                const visible = shownCards();
                 if (!visible.length) return;
                 event.preventDefault();
-                const index = visible.findIndex(([card]) => cardKey(card) === selectedKey);
+                const index = visible.findIndex(card => cardKey(card) === selectedKey);
                 const next = visible[Math.max(0, Math.min(visible.length - 1, index + (event.key === 'ArrowDown' ? 1 : -1)))];
-                select(next[0]);
-                if (event.target !== filter) next[1].focus();
+                if (checked.size) clearChecks();
+                select(next);
+                if (event.target !== filter) rows.get(next)?.querySelector('.data-editor__nav-item').focus();
             });
+
+            // --- Sliders ---
+            // A slider paired with an exact-value field. Scrolling over the slider moves it, and
+            // the value glides to where the wheel asked for, so wheel notches are not steps.
+            const clampTo = (value, low, high) => Math.min(high, Math.max(low, value));
+            const wheelSlide = range => {
+                const low = Number(range.min), high = Number(range.max);
+                let target = null, frame = 0;
+                const glide = () => {
+                    if (!range.isConnected) { frame = 0; target = null; return; }
+                    const value = Number(range.value), next = value + (target - value) * 0.3;
+                    const done = Math.abs(target - next) < (high - low) / 2000;
+                    range.value = done ? target : next;
+                    range.dispatchEvent(new Event('input'));
+                    frame = done ? 0 : requestAnimationFrame(glide);
+                    if (done) target = null;
+                };
+                range.addEventListener('wheel', event => {
+                    // A scroll of the page that drifts across a slider keeps scrolling the page.
+                    if (wheelOrigin !== range) return;
+                    event.preventDefault();
+                    const vertical = Math.abs(event.deltaY) >= Math.abs(event.deltaX);
+                    const pixels = (vertical ? -event.deltaY : event.deltaX) * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? 400 : 1);
+                    target = clampTo((target ?? Number(range.value)) + pixels * (high - low) / 2500, low, high);
+                    if (!frame) frame = requestAnimationFrame(glide);
+                }, { passive: false });
+            };
+            function adjuster({ label, unit, min, max, value, digits = 0, toSlider = v => v, fromSlider = v => v, valid = () => true, onChange = () => {} }) {
+                const row = element('div', 'item-model-panel__slider');
+                const range = Object.assign(element('input'), { type: 'range', min, max, step: 'any' });
+                const field = Object.assign(element('input'), { type: 'number', step: 'any' });
+                const suffix = element('span', 'item-model-panel__field');
+                range.setAttribute('aria-label', label);
+                field.setAttribute('aria-label', `${label} value`);
+                let current = value;
+                const text = number => digits > 1 ? number.toFixed(digits) : String(Number(number.toFixed(digits)));
+                const show = next => {
+                    current = next;
+                    range.value = toSlider(next);
+                    field.value = text(next);
+                };
+                show(value);
+                range.addEventListener('input', () => {
+                    current = Number(fromSlider(Number(range.value)).toFixed(digits));
+                    field.value = text(current);
+                    onChange(current);
+                });
+                field.addEventListener('input', () => {
+                    const next = Number(field.value);
+                    if (field.value === '' || !Number.isFinite(next) || !valid(next)) return;
+                    current = next;
+                    range.value = toSlider(next);
+                    onChange(next);
+                });
+                field.addEventListener('blur', () => { field.value = text(current); });
+                wheelSlide(range);
+                suffix.append(field, unit);
+                row.append(element('span', '', label), range, suffix);
+                return { row, set: show, get value() { return current; } };
+            }
+            const sizeSlider = (value, onChange) => adjuster({ label: 'Size', unit: '×', min: -2, max: 2, value, digits: 2,
+                toSlider: Math.log2, fromSlider: v => 2 ** v, valid: v => v > 0, onChange });
+            const angleSlider = (label, value, onChange) => adjuster({ label, unit: '°', min: -180, max: 180, value, digits: 1, onChange });
+
+            // --- Bulk pane ---
+            // Value and source edits go into the cards, so they save with Save all changes like
+            // any other edit. Model adjustments are relative (each model keeps its own pose) and
+            // apply at once, like the sliders on a single item.
+            const bulkTitle = element('h4', 'data-editor__bulk-title');
+            const bulkDelete = Object.assign(element('button', 'btn btn-danger'), { type: 'button' });
+            const bulkNames = element('ul', 'data-editor__bulk-names');
+            const bulkStatus = element('p', 'data-editor__bulk-status');
+            bulkStatus.setAttribute('aria-live', 'polite');
+            const bulkHeader = element('div', 'data-editor__bulk-header');
+            bulkHeader.append(bulkTitle, bulkDelete);
+            const block = (title, ...children) => {
+                const box = element('div', 'data-editor__bulk-block');
+                box.append(element('h5', 'data-editor__block-title', title), ...children);
+                return box;
+            };
+            const applyRow = (labelText, attributes, apply) => {
+                const row = element('label', 'data-editor__bulk-row');
+                const input = Object.assign(element('input'), attributes);
+                const button = Object.assign(element('button', 'btn', 'Apply'), { type: 'button' });
+                button.addEventListener('click', event => { event.preventDefault(); apply(input); });
+                row.append(element('span', '', labelText), input, button);
+                return row;
+            };
+            const say = text => { bulkStatus.textContent = text; };
+            const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
+            const multiply = applyRow('Multiply values by', { type: 'number', step: 'any', placeholder: 'For example 0.001' }, input => {
+                const factor = Number(input.value);
+                if (!input.value || !Number.isFinite(factor) || factor <= 0) { say('Enter a number above zero.'); return; }
+                const cards = checkedCards();
+                for (const card of cards) {
+                    const field = card.querySelector('input[name="value"]');
+                    field.value = String(Number((Number(field.value) * factor).toPrecision(12)));
+                    fillRow(rows.get(card), card);
+                }
+                input.value = '';
+                say(`Updated ${plural(cards.length, 'value')}. Use Save all changes to keep them.`);
+            });
+            const setSource = applyRow('Set source URL', { type: 'url', placeholder: 'https://' }, input => {
+                const cards = checkedCards();
+                for (const card of cards) card.querySelector('input[name="source"]').value = input.value.trim();
+                input.value = '';
+                say(`Set the source on ${plural(cards.length, 'item')}. Use Save all changes to keep them.`);
+            });
+            const bulkSize = sizeSlider(1), bulkTurn = angleSlider('Turn', 0), bulkTilt = angleSlider('Tilt', 0), bulkRoll = angleSlider('Roll', 0);
+            const bulkApply = Object.assign(element('button', 'btn', 'Apply to models'), { type: 'button' });
+            const bulkReset = Object.assign(element('button', 'btn btn-danger', 'Reset models'), { type: 'button' });
+            const bulkButtons = element('div', 'item-model-panel__actions');
+            bulkButtons.append(bulkApply, bulkReset);
+            const wrapAngle = angle => ((angle + 540) % 360 + 360) % 360 - 180;
+            bulkApply.addEventListener('click', async () => {
+                const dimension = app()?.currentDimension;
+                const angles = [['yaw', bulkTurn.value], ['pitch', bulkTilt.value], ['roll', bulkRoll.value]].filter(([, add]) => add);
+                if (bulkSize.value === 1 && !angles.length) { say('Move a slider or enter a value first.'); return; }
+                let done = 0;
+                for (const card of checkedCards()) {
+                    const name = cardName(card);
+                    const entry = name ? await ScaleModels.baseEntry(dimension, name) : null;
+                    const override = name ? ModelOverrides.get(dimension, name) : null;
+                    if (!entry && !override?.src) continue;
+                    const pose = { ...(entry?.presentation || {}), ...(override?.presentation || {}) };
+                    const patch = Object.fromEntries(angles.map(([field, add]) => [field, wrapAngle((pose[field] || 0) + add)]));
+                    if (bulkSize.value !== 1) patch.display_scale = Number(((pose.display_scale ?? 1) * bulkSize.value).toFixed(3));
+                    ModelOverrides.setPresentation(dimension, name, patch);
+                    done++;
+                }
+                bulkSize.set(1); bulkTurn.set(0); bulkTilt.set(0); bulkRoll.set(0);
+                say(done ? `Adjusted ${plural(done, 'model')}. Saved in this browser.` : 'None of these items has a 3D model.');
+            });
+            bulkReset.addEventListener('click', async () => {
+                const dimension = app()?.currentDimension;
+                let done = 0;
+                for (const card of checkedCards()) {
+                    const name = cardName(card);
+                    if (name && ModelOverrides.get(dimension, name)) { await ModelOverrides.clear(dimension, name); done++; }
+                }
+                say(done ? `Reset ${plural(done, 'model')}.` : 'None of these models has been adjusted.');
+            });
+            bulkDelete.addEventListener('click', () => {
+                const cards = checkedCards();
+                if (!confirm(`Delete ${plural(cards.length, 'item')}? Undo all changes brings them back.`)) return;
+                checked.clear();
+                window.app.editor.deleteCards(cards);
+            });
+            const bulkBody = element('div', 'data-editor__bulk-body');
+            bulkBody.append(
+                block('Selected', bulkNames),
+                block('Value and source', multiply, setSource),
+                block('3D models', element('p', 'data-editor__bulk-hint', 'Adjust relative to each model: Size multiplies, and angles add to its current pose.'),
+                    bulkSize.row, bulkTurn.row, bulkTilt.row, bulkRoll.row, bulkButtons));
+            bulk.append(bulkHeader, bulkStatus, bulkBody);
+            function updateBulk() {
+                const cards = checkedCards(), limit = 40;
+                bulkTitle.textContent = `${plural(cards.length, 'item')} selected`;
+                bulkDelete.textContent = `Delete ${plural(cards.length, 'item')}`;
+                bulkNames.replaceChildren(...cards.slice(0, limit).map(card => element('li', '', cardName(card) || 'Unnamed item')));
+                if (cards.length > limit) bulkNames.append(element('li', 'is-more', `and ${cards.length - limit} more`));
+                say('');
+            }
 
             // --- 3D model panel ---
             // A live preview (drag to turn, scroll to zoom), size and rotation adjustments,
@@ -306,13 +573,13 @@
                 const host = card.querySelector('.item-editor-form');
                 if (!host) return;
                 const data = await loadRegistry();
-                if (!card.classList.contains('is-selected')) return;
-                card.querySelector('.item-model-panel')?.remove();
                 const view = experiences();
                 const item = view?.items?.find(other => other.name === name);
                 const sourced = name ? data.models.find(model => model.matches?.[dimension]?.includes(name)) : null;
                 const live = item && view.modelEntry ? view.modelEntry(item) : null;
-                const entry = sourced || live;
+                const entry = (name && await window.ScaleModels?.baseEntry(dimension, name)) || sourced || live;
+                if (!card.classList.contains('is-selected')) return;
+                card.querySelector('.item-model-panel')?.remove();
                 const override = name ? window.ModelOverrides?.get(dimension, name) : null;
                 const current = { ...(entry?.presentation || {}), ...(override?.presentation || {}) };
                 const section = element('section', 'item-model-panel');
@@ -330,25 +597,13 @@
                 previewBox.hidden = !name;
                 if (name && (entry || override?.src)) {
                     const sliders = element('div', 'item-model-panel__sliders');
-                    const slider = (label, field, min, max, step, toValue, fromValue, format) => {
-                        const row = element('label', 'item-model-panel__slider');
-                        const output = element('output');
-                        const range = Object.assign(element('input'), { type: 'range', min, max, step });
-                        range.value = fromValue(current[field]);
-                        output.textContent = format(toValue(Number(range.value)));
-                        range.addEventListener('input', () => {
-                            const value = toValue(Number(range.value));
-                            output.textContent = format(value);
-                            ModelOverrides.setPresentation(dimension, name, { [field]: value });
-                            if (!reset.isConnected) buttons.append(reset);
-                        });
-                        row.append(element('span', '', label), range, output);
-                        sliders.append(row);
+                    const change = field => value => {
+                        ModelOverrides.setPresentation(dimension, name, { [field]: value });
+                        if (!reset.isConnected) buttons.append(reset);
                     };
-                    slider('Size', 'display_scale', -2, 2, 0.05, v => Math.round(2 ** v * 100) / 100,
-                        v => Math.log2(v ?? 1), v => `${v.toFixed(2)}×`);
+                    sliders.append(sizeSlider(current.display_scale ?? 1, change('display_scale')).row);
                     for (const [label, field] of [['Turn', 'yaw'], ['Tilt', 'pitch'], ['Roll', 'roll']])
-                        slider(label, field, -180, 180, 1, v => v, v => v ?? 0, v => `${v}°`);
+                        sliders.append(angleSlider(label, current[field] ?? 0, change(field)).row);
                     section.append(sliders);
                 }
                 if (sourced?.src && !override?.src) {
@@ -425,6 +680,7 @@
                 }
                 latched = scrollableFrom(event.target);
                 latchedAt = now;
+                wheelOrigin = event.target;
             }, { capture: true, passive: false });
         }
 

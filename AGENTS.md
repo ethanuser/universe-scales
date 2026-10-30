@@ -1,5 +1,44 @@
 # Agent Handoff Guide
 
+## Owner TODO: scientific rigor and descriptions (open)
+
+The main remaining work, in the owner's words:
+
+- Make the site more scientifically grounded and accurate.
+- Redo most of the descriptions: they are not always the most interpretable and could be better
+  linked and sourced. Each description should be nearly as good as a Wikipedia article in rigor,
+  linking and sourcing, but much more concise, relevant to the dimension it is in and easy to
+  understand, with links for the technical jargon so readers can read up on it.
+- Redo many of the images.
+
+See also `DESCRIPTION_STYLE_GUIDE.md`.
+
+## Versioning
+
+The site uses `0.y.z` while it is under development (the old "1.3" is 0.1.3): `y` for a release
+with new features, `z` for fixes. Set it in `index.html` (About dialog) and `CITATION.cff`
+together. 0.2.0 is the app-shell redesign merged to main on 2026-10-30. Save 1.0.0 for when the
+TODO above is done.
+
+## 2026-10-30 editor bulk selection, sliders, frozen headers, 0.2.0 merge (Claude)
+
+- Item list: rows are `.data-editor__nav-row` (checkbox plus button). Plain click opens one item
+  and clears the selection; checkboxes, Cmd/Ctrl-click and Shift-click (range) fill `checked`, a
+  set of card keys; band headers have a checkbox too. Any selection swaps the detail for the bulk
+  pane (`.data-editor.is-bulk`): Multiply values and Set source URL write into the cards (saved by
+  Save all changes), model adjustments are relative and apply at once, Delete uses
+  `editor.deleteCards(cards)`, which removes cards directly so unsaved edits elsewhere survive.
+- `adjuster()` in app-shell: a `step="any"` range plus a number field. `wheelSlide` eases toward
+  the wheel target; it only acts if the wheel gesture began on that slider (`wheelOrigin`, set by
+  scroll latching), so a page scroll crossing a slider keeps scrolling the page.
+- Editor textareas auto-size (`fitText`). Section actions and the open item's header are sticky.
+- `ScaleSearch.power` makes `10⁵` strings and `ScaleSearch.writePowers` renders them with real
+  `<sup>`, since Unicode superscripts are uneven in Inter. `ScaleModels.baseEntry(dimension, name)`
+  is the one model lookup for the preview, the model panel and bulk adjustments.
+- app.css starts with `* { border-radius: 0 !important }`: any rounded control needs its own
+  `border-radius: ... !important`. `.data-editor input:not(...)` is also strong, so style special
+  inputs with higher specificity (checkboxes use `#data-editor-dialog input...`).
+
 ## 2026-10-30 full-page data editor, scale bands, options choices (Claude)
 
 - Data editor is a full page (`#data-editor-dialog`, default tab Items). app-shell builds a

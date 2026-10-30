@@ -1203,46 +1203,52 @@ class ItemEditor {
     }
 
     deleteItem(event) {
-        const card = event.target.closest('.item-editor-card');
-        const isCustom = card.dataset.isCustom === 'true';
-        const customId = card.dataset.customId;
+        this.deleteCards([event.target.closest('.item-editor-card')]);
+    }
 
+    // Deletes these items. Their cards are removed directly, rather than re-rendering the list,
+    // so unsaved edits in the other cards survive.
+    deleteCards(cards) {
         if (!this.app.customItems[this.app.currentDimension]) {
             this.app.customItems[this.app.currentDimension] = [];
         }
+        const customItems = this.app.customItems[this.app.currentDimension];
 
-        if (isCustom && customId) {
-            // Delete custom item completely
-            const customItems = this.app.customItems[this.app.currentDimension];
-            const index = customItems.findIndex(item => item.customId === customId);
-            if (index !== -1) {
-                customItems.splice(index, 1);
-            }
-        } else {
-            // For original items, mark as deleted
-            const originalIndex = parseInt(card.dataset.itemIndex);
+        cards.forEach(card => {
+            const isCustom = card.dataset.isCustom === 'true';
+            const customId = card.dataset.customId;
 
-            // Check if there's already an override or deletion marker
-            const existing = this.app.customItems[this.app.currentDimension].find(
-                item => item.originalIndex === originalIndex
-            );
-
-            if (existing) {
-                // Mark as deleted, preserve any override data
-                existing.isDeleted = true;
+            if (isCustom && customId) {
+                // Delete custom item completely
+                const index = customItems.findIndex(item => item.customId === customId);
+                if (index !== -1) {
+                    customItems.splice(index, 1);
+                }
             } else {
-                // Create a deletion marker
-                this.app.customItems[this.app.currentDimension].push({
-                    originalIndex: originalIndex,
-                    isCustom: false,
-                    isOverride: false,
-                    isDeleted: true
-                });
+                // For original items, mark as deleted
+                const originalIndex = parseInt(card.dataset.itemIndex);
+
+                // Check if there's already an override or deletion marker
+                const existing = customItems.find(item => item.originalIndex === originalIndex);
+
+                if (existing) {
+                    // Mark as deleted, preserve any override data
+                    existing.isDeleted = true;
+                } else {
+                    // Create a deletion marker
+                    customItems.push({
+                        originalIndex: originalIndex,
+                        isCustom: false,
+                        isOverride: false,
+                        isDeleted: true
+                    });
+                }
             }
-        }
+            card.remove();
+        });
 
         this.saveCustomItems();
-        this.renderEditorItems();
+        this.updateEditorHeader();
         this.app.plot.updatePlot();
     }
 

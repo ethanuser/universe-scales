@@ -8,5 +8,6 @@ authors:
 abstract: "An open dataset and interactive visualization framework for logarithmic scale intuition across physical, informational, social, and biological quantities."
 repository-code: "https://github.com/ethannguyenuser/universe-scales"
 url: "https://ethannguyenuser.github.io/universe-scales/"
-date-released: "2026-04-29"
+version: "0.2.0"
+date-released: "2026-10-30"
 license: "MIT"

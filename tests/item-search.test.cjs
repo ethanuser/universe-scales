@@ -47,3 +47,10 @@ test('other dimensions group by powers of a thousand', () => {
     const runs = groups([{ value: 2 }, { value: 900 }, { value: 4000 }, { value: 5e6 }], 'energy');
     assert.deepEqual(runs.map(run => [run.label, run.indices]), [['Ones to hundreds', [0, 1]], ['Thousands', [2]], ['Millions', [3]]]);
 });
+
+test('powers of ten render with superscript digits, and one for ten to the zero', () => {
+    const { power } = require('../js/item-search.js');
+    assert.equal(power(-35), '10⁻³⁵');
+    assert.equal(power(16), '10¹⁶');
+    assert.equal(power(0), '1');
+});

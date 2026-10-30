@@ -141,7 +141,6 @@ html, body { height: 100%; overflow: hidden; }
 .app-view-info .experience-caption { margin: 0; padding: 0; min-height: 0; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; }
 .app-view-info .experience-attribution { margin: 8px 0 0; padding: 0; font-size: 0.85rem; }
 .app-view-info .experience-attribution:empty { display: none; }
-.experience-panel-button[aria-pressed='false'] { color: var(--text-secondary); }
 
 .app-bar .view-switch { display: flex; margin: 0 !important; gap: 0; flex: none; }
 .app-bar .view-switch[hidden] { display: none; }
@@ -705,7 +704,6 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
     background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important;
 }
 .app-bar .experience-nav-button:disabled { opacity: 0.35; background: transparent !important; }
-.app-bar .experience-panel-button[aria-pressed='true'],
 .app-bar .experience-fullscreen-button[aria-pressed='true'] {
     color: var(--accent-color);
     background: color-mix(in srgb, var(--accent-color) 12%, transparent) !important;
@@ -1379,3 +1377,112 @@ body.chart-panel-hidden[data-experience='log'] .app-main > .plot-container { mar
     padding: 16px 18px !important; border: 1px solid var(--border-color) !important; border-radius: 0 !important; background: var(--bg-primary) !important;
 }
 .data-editor .unit-editor-card:hover { border-color: color-mix(in srgb, var(--text-primary) 30%, transparent) !important; }
+
+/* Corner radii need !important against the square-corners reset at the top of this file. */
+.app-choice { border-radius: 12px !important; }
+.app-choice button { border-radius: 9px !important; }
+.data-editor__nav-item { border-radius: 8px !important; }
+
+/* Exponents: real superscripts, sized to sit on the digits without moving the line. */
+.data-editor__nav-value sup, .data-editor__nav-group sup, .app-bar .experience-picker-group sup {
+    position: static; font-size: 0.72em; line-height: 0; vertical-align: 0.42em;
+}
+
+/* Frozen headers: section actions, and the open item's name and Delete. */
+.data-editor #units-section .section-header, .data-editor #dimension-metadata-section .section-header {
+    position: sticky !important; top: 0; z-index: 3; margin: 0 -24px 12px !important; padding: 12px 24px !important;
+    background: var(--bg-primary) !important; border-bottom: 1px solid var(--border-color) !important;
+}
+.data-editor:not([data-tab='items']) #editor-content { padding-top: 0 !important; }
+.data-editor #items-section > .section-content { padding-top: 0 !important; }
+.data-editor #items-list .item-editor-card-header {
+    position: sticky; top: 0; z-index: 3; margin-bottom: 18px !important; padding: 18px 0 12px !important;
+    background: var(--bg-primary); border-bottom: 1px solid var(--border-color) !important;
+}
+.data-editor #items-list .item-editor-card-title-row h4 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Text boxes grow with their text (app-shell sets the height). */
+.data-editor textarea {
+    box-sizing: border-box; min-height: 64px !important; max-height: none !important; overflow: hidden; resize: none !important;
+}
+
+/* Sliders with an exact-value field. */
+.data-editor .item-model-panel__slider, .data-editor__bulk-block .item-model-panel__slider {
+    display: grid; grid-template-columns: 44px 1fr 86px; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-primary);
+}
+.data-editor .item-model-panel__slider input[type='range'] {
+    -webkit-appearance: none; appearance: none; width: 100%; height: 20px; margin: 0; padding: 0 !important;
+    border: 0 !important; background: transparent !important; cursor: pointer;
+}
+.data-editor .item-model-panel__slider input[type='range']:focus { outline: none; }
+.data-editor .item-model-panel__slider input[type='range']:focus-visible::-webkit-slider-thumb { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+.data-editor .item-model-panel__slider input[type='range']:focus-visible::-moz-range-thumb { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+.item-model-panel__field { display: flex; align-items: center; gap: 4px; color: var(--text-secondary); }
+.data-editor .item-model-panel__field input[type='number'] {
+    width: 100%; min-width: 0; height: 28px; padding: 0 6px !important; text-align: right; font-size: 0.84rem;
+    font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield;
+}
+.item-model-panel__field input::-webkit-outer-spin-button, .item-model-panel__field input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* Selecting several items */
+.data-editor__nav-row { position: relative; }
+.data-editor__nav-row[hidden] { display: none !important; }
+.data-editor__nav-item[aria-current='true'] { background: color-mix(in srgb, var(--accent-color) 16%, transparent); }
+.data-editor__nav-item[aria-current='true'] .data-editor__nav-name { font-weight: 600; }
+.data-editor__nav-row.is-checked .data-editor__nav-item { background: color-mix(in srgb, var(--accent-color) 16%, transparent); }
+#data-editor-dialog input.data-editor__check {
+    -webkit-appearance: none; appearance: none; flex: none; width: 16px !important; height: 16px; margin: 0; padding: 0 !important; border-radius: 4px !important;
+    border: 1.5px solid var(--text-secondary) !important; background: var(--bg-primary) !important; cursor: pointer;
+}
+#data-editor-dialog input.data-editor__check:checked, #data-editor-dialog input.data-editor__check:indeterminate {
+    border-color: var(--accent-color) !important;
+    background: var(--accent-color) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 13px no-repeat !important;
+}
+#data-editor-dialog input.data-editor__check:indeterminate {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12h12' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+}
+/* Row checkboxes sit on the thumbnail, so showing them never shifts the list. */
+.data-editor__nav-row .data-editor__check { position: absolute; z-index: 1; left: 4px; top: 6px; opacity: 0; }
+.data-editor__nav-row:hover .data-editor__check, .data-editor__nav-row .data-editor__check:focus-visible,
+.data-editor__nav.is-selecting .data-editor__nav-row .data-editor__check { opacity: 1; }
+.data-editor__nav-group .data-editor__check { opacity: 0; }
+.data-editor__nav-group:hover .data-editor__check, .data-editor__nav-group .data-editor__check:checked,
+.data-editor__nav-group .data-editor__check:indeterminate, .data-editor__nav.is-selecting .data-editor__nav-group .data-editor__check { opacity: 1; }
+@media (hover: none) { .data-editor__nav .data-editor__check { opacity: 1; } }
+.data-editor__nav-footer { display: flex; align-items: center; gap: 12px; min-height: 48px; }
+.data-editor__nav-footer #delete-all-items-btn { margin-left: auto; }
+.data-editor__nav-count { font-size: 0.85rem; font-weight: 600; }
+.data-editor__nav-count:empty { display: none; }
+.data-editor__link {
+    margin: 0; padding: 4px 6px; border: 0; border-radius: 6px !important; background: transparent; color: var(--accent-color);
+    font: inherit; font-size: 0.85rem; cursor: pointer;
+}
+.data-editor__link:hover { background: var(--hover-bg); }
+.data-editor__link[hidden], #delete-all-items-btn[hidden] { display: none !important; }
+
+/* Bulk pane: replaces the open item while several are selected. */
+.data-editor__bulk { display: none; max-width: 860px; margin: 0 auto; }
+.data-editor.is-bulk .data-editor__bulk { display: block; }
+.data-editor.is-bulk #items-list, .data-editor.is-bulk .data-editor__empty { display: none !important; }
+.data-editor__bulk-header {
+    position: sticky; top: 0; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    margin-bottom: 18px; padding: 18px 0 12px; background: var(--bg-primary); border-bottom: 1px solid var(--border-color);
+}
+.data-editor__bulk-title { margin: 0; font-size: 1.45rem; font-weight: 650; }
+.data-editor__bulk-status { margin: 0 0 12px; color: var(--accent-color); font-size: 0.88rem; }
+.data-editor__bulk-status:empty { display: none; }
+.data-editor__bulk-body { display: grid; gap: 16px; }
+.data-editor__bulk-block { padding: 18px 20px; border: 1px solid var(--border-color); }
+.data-editor__bulk-block .item-model-panel__slider + .item-model-panel__slider { margin-top: 6px; }
+.data-editor__bulk-block .item-model-panel__actions { margin: 14px 0 0; }
+.data-editor__bulk-hint { margin: 0 0 12px; color: var(--text-secondary); font-size: 0.85rem; }
+.data-editor__bulk-names { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.data-editor__bulk-names li { padding: 3px 10px; border-radius: 999px !important; background: var(--bg-secondary); font-size: 0.84rem; }
+.data-editor__bulk-names li.is-more { background: transparent; color: var(--text-secondary); }
+.data-editor__bulk-row { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 12px; color: var(--text-primary) !important; font-size: 0.88rem !important; }
+.data-editor__bulk-row + .data-editor__bulk-row { margin-top: 10px; }
+.data-editor:focus { outline: none; }
+@media (max-width: 640px) { .data-editor__bulk-row { grid-template-columns: 1fr auto; } .data-editor__bulk-row > span { grid-column: 1 / -1; } }
+/* Band headers stick in a flat list, so each covers the last: one line, one height. */
+.data-editor__nav-group { align-items: center; height: 36px; padding-top: 0; padding-bottom: 0; overflow: hidden; white-space: nowrap; }
+.data-editor__nav-group small { overflow: hidden; text-overflow: ellipsis; }

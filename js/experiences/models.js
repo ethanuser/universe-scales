@@ -282,6 +282,14 @@ function overrideEntry(dimension, name, entry) {
     return next;
 }
 
+// The model an item uses before local adjustments, resolved as the explorer does.
+async function baseEntry(dimension, name) {
+    const entries = (await registry).models || [];
+    return (dimension === 'length' && proceduralLength[name]) ||
+        entries.find(entry => entry.matches?.[dimension]?.includes(name)) ||
+        (dimension === 'angular-velocity' ? angularEntry({ name }, entries) : null) || null;
+}
+
 // One item's model on its own canvas, for the data editor. It resolves the model the same way
 // the explorer does (registry match, procedural model, local override) and applies the same
 // pose and size adjustments. Drag turns the view, the wheel zooms, double-click resets.
@@ -346,12 +354,8 @@ export class ModelPreview {
         Object.assign(this, { dimension, name });
         this.view = { yaw: 0, pitch: 0, zoom: 1 };
         this.setStatus('Loading model');
-        const data = await registry;
+        this.baseEntry = await baseEntry(dimension, name);
         if (token !== this.token) return null;
-        const entries = data.models || [];
-        this.baseEntry = (dimension === 'length' && proceduralLength[name]) ||
-            entries.find(entry => entry.matches?.[dimension]?.includes(name)) ||
-            (dimension === 'angular-velocity' ? angularEntry({ name }, entries) : null) || null;
         this.entry = overrideEntry(dimension, name, this.baseEntry);
         if (!this.entry) { this.setStatus('No 3D model for this item. The explorer shows its photo.'); this.render(); return null; }
         const lease = acquireModel(this.entry);
@@ -1154,5 +1158,5 @@ export class ModelStage {
         this.orbitEntries?.clear();
     }
 }
-window.ScaleModels = { ModelStage, ModelPreview, convexHull, insideHull };
+window.ScaleModels = { ModelStage, ModelPreview, baseEntry, convexHull, insideHull };
 window.dispatchEvent(new Event('scale-models-ready'));

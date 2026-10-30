@@ -110,6 +110,17 @@
         });
         return runs;
     }
-    root.ScaleSearch = { rank, score, normalize, band, groups };
+    // Writes text into an element with real <sup> elements for the exponents above, because
+    // Unicode superscript digits are uneven in most fonts.
+    const PLAIN = Object.fromEntries(Object.entries(SUPERSCRIPT).map(([digit, mark]) => [mark, digit === '-' ? '−' : digit]));
+    function writePowers(element, text) {
+        element.replaceChildren(...String(text).split(/([⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+)/).map((part, index) => {
+            if (index % 2 === 0) return document.createTextNode(part);
+            const sup = document.createElement('sup');
+            sup.textContent = [...part].map(mark => PLAIN[mark]).join('');
+            return sup;
+        }));
+    }
+    root.ScaleSearch = { rank, score, normalize, band, groups, power, writePowers };
     if (typeof module !== 'undefined') module.exports = root.ScaleSearch;
 })(globalThis);
