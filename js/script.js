@@ -526,17 +526,14 @@ class UniversalScales {
             });
         }
 
-        this.darkModeToggle.addEventListener('click', () => {
-            this.toggleDarkMode();
+        // Options are segmented choices: a click on a segment picks that value.
+        const onChoice = (group, pick) => group.addEventListener('click', event => {
+            const option = event.target.closest('button[data-value]');
+            if (option && !option.disabled) pick(option.dataset.value);
         });
-
-        this.musicToggle.addEventListener('click', () => {
-            this.toggleMusic();
-        });
-
-        this.notationToggle.addEventListener('click', () => {
-            this.toggleNotation();
-        });
+        onChoice(this.darkModeToggle, value => this.setTheme(value));
+        onChoice(this.musicToggle, value => { if ((value === 'on') === this.backgroundMusic.paused) this.toggleMusic(); });
+        onChoice(this.notationToggle, value => this.setNotation(value));
 
         if (this.resourcesToggle) {
             this.resourcesToggle.addEventListener('click', () => {
@@ -583,9 +580,12 @@ class UniversalScales {
     }
 
     initDarkMode() {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        this.updateDarkModeButton(savedTheme);
+        this.systemDark = window.matchMedia?.('(prefers-color-scheme: dark)');
+        this.systemDark?.addEventListener?.('change', () => {
+            if (this.themeChoice === 'system') this.setTheme('system', false);
+        });
+        const saved = localStorage.getItem('theme');
+        this.setTheme(['light', 'dark', 'system'].includes(saved) ? saved : 'light', false);
     }
 
     recordImageFailure(url) {
@@ -605,53 +605,49 @@ class UniversalScales {
         this.updateNotationButton();
     }
 
-    updateNotationButton() {
-        if (this.usesLinearDisplayValues()) {
-            this.notationToggle.textContent = '123';
-            this.notationToggle.disabled = true;
-            this.notationToggle.classList.add('notation-toggle--disabled');
-            this.notationToggle.title = 'This view uses regular numeric labels.';
-            return;
-        }
+    // Marks the chosen segment of an options choice group.
+    markChoice(group, value) {
+        group?.querySelectorAll('button[data-value]').forEach(option => {
+            option.setAttribute('aria-checked', String(option.dataset.value === value));
+        });
+    }
 
-        this.notationToggle.disabled = false;
-        this.notationToggle.classList.remove('notation-toggle--disabled');
-        this.notationToggle.title = 'Toggle number notation';
-        if (this.notationMode === 'mathematical') {
-            // For mathematical notation, use HTML with superscript
-            this.notationToggle.innerHTML = '1×10<sup>10</sup>';
-        } else {
-            // For other modes, use plain text
-            this.notationToggle.textContent = CONFIG.NOTATION_BUTTON_TEXTS[this.notationMode];
+    updateNotationButton() {
+        const linear = this.usesLinearDisplayValues();
+        this.notationToggle.querySelectorAll('button').forEach(option => { option.disabled = linear; });
+        this.notationToggle.classList.toggle('is-disabled', linear);
+        const note = document.getElementById('notation-note');
+        if (note) note.hidden = !linear;
+        this.markChoice(this.notationToggle, linear ? null : this.notationMode);
+    }
+
+    // Theme choice: 'light', 'dark' or 'system' (follows the operating system).
+    setTheme(choice, save = true) {
+        this.themeChoice = choice;
+        const theme = choice === 'system' ? (this.systemDark?.matches ? 'dark' : 'light') : choice;
+        const changed = document.documentElement.getAttribute('data-theme') !== theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        if (save) localStorage.setItem('theme', choice);
+        this.updateDarkModeButton(theme);
+        if (changed && this.plot) {
+            this.plot.updatePlotColors();
+            this.overview?.update();
         }
     }
 
     toggleDarkMode() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-
-        this.updateDarkModeButton(newTheme);
-
-        // Update plot colors
-        this.plot.updatePlotColors();
-        this.overview?.update();
+        this.setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     }
 
     updateDarkModeButton(theme) {
-        // Shows the theme it switches to; the favicon and logo follow the site theme.
-        this.darkModeToggle.innerHTML = theme === 'dark'
-            ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg><span>Light</span>'
-            : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg><span>Dark</span>';
+        // The favicon and logo follow the site theme.
+        this.markChoice(this.darkModeToggle, this.themeChoice || theme);
         const favicon = document.getElementById('favicon');
         if (favicon) favicon.href = theme === 'dark' ? 'favicon-dark.svg' : 'favicon-light.svg';
     }
 
     updateMusicButton(playing) {
-        this.musicToggle.innerHTML = playing ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4ZM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg><span>On</span>' : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4ZM17 9l5 6M22 9l-5 6" /></svg><span>Off</span>';
-        this.musicToggle.setAttribute('aria-pressed', String(playing));
+        this.markChoice(this.musicToggle, playing ? 'on' : 'off');
     }
 
     toggleMusic() {
@@ -683,12 +679,15 @@ class UniversalScales {
     }
 
     toggleNotation() {
-        if (this.usesLinearDisplayValues()) {
+        const modes = ['scientific', 'mathematical', 'human', 'si'];
+        this.setNotation(modes[(modes.indexOf(this.notationMode) + 1) % modes.length]);
+    }
+
+    setNotation(mode) {
+        if (this.usesLinearDisplayValues() || mode === this.notationMode) {
             return;
         }
-        const modes = ['scientific', 'mathematical', 'human', 'si'];
-        const currentIndex = modes.indexOf(this.notationMode);
-        this.notationMode = modes[(currentIndex + 1) % modes.length];
+        this.notationMode = mode;
         this.formatter.setNotationMode(this.notationMode);
 
         // Update button text to show current mode

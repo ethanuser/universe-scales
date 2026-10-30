@@ -434,7 +434,19 @@
             zoomButtons.append(control);
         }
         zoom.element.append(zoomButtons);
-        return { update: () => { ctx.updateComparison(); }, frameTo: hop, radialPan: panAt, zoomBy: move,
+        // Opens the view with the camera at a scale and nothing selected or locked. The
+        // controller has already described the item there (not as a selection); the
+        // explorer's own nearest-object choice resumes with the first zoom or pan.
+        const overview = value => {
+            pinnedFocus = pinnedExponent = null;
+            lockActive = false;
+            anchor = panGlide = null;
+            focusTransition.stop(currentPose());
+            camera.snap(clamp(value, camera.min, camera.max));
+            zoom.set(camera.value);
+            render();
+        };
+        return { update: () => { ctx.updateComparison(); }, frameTo: hop, radialPan: panAt, zoomBy: move, overview,
             // The renderer reports which objects it actually drew on screen, and how far each
             // is (in decades) from the camera's ring size; apply() chooses among them.
             observe: list => { observed = list; },
@@ -701,7 +713,10 @@
                 if (current.sketchfab_uid) ctx.attribution.append(dom('span', '', 'adapted for web'));
             }
         }
-        return { render, zoomBy: amount => navigationControl.zoomBy(amount), frameOffset: () => frameZoom(ctx), get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; }, focus: frame => {
+        return { render, zoomBy: amount => navigationControl.zoomBy(amount), frameOffset: () => frameZoom(ctx), get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; },
+            // The item sits on the ring (shown at RADIAL_SIZE) among its neighbors.
+            overview: index => navigationControl.overview(ScaleJourney.frameExponent(ctx.items, index, order)),
+            focus: frame => {
             if (frame) {
                 const presentation = ctx.modelEntry(ctx.item)?.presentation || {};
                 const exponent = ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor}) - frameZoom(ctx) +
@@ -798,6 +813,6 @@
             ctx.caption.textContent='Each total is a square of image tiles whose side grows with the square root of the count, arranged so totals near the current scale ring the center and smaller ones gather toward it. The tiles identify what is counted, using illustrative photographs rather than measured outlines. A tile represents one object only when its multiplier is 1; otherwise it represents the explicit cluster size shown. All items share that multiplier. Totals below one cluster shrink in dot area; large totals are truncated at 12,000 tiles. Count alternatives (such as Go positions) are not physically coexisting objects. The four Go boards are valid illustrative positions, not a uniform random sample.';
             nav.update();
         }
-        return {render,zoomBy:amount=>nav.zoomBy(amount*2),focus:frame=>{if(frame)nav.frameTo(2*(ScaleJourney.frameExponent(ctx.items,ctx.index,2)-frameZoom(ctx)),ctx.index);},dispose:()=>{disposed=true;ctx.host.classList.remove('experience--spatial');nav.dispose();}};
+        return {render,zoomBy:amount=>nav.zoomBy(amount*2),overview:index=>nav.overview(2*ScaleJourney.frameExponent(ctx.items,index,2)),focus:frame=>{if(frame)nav.frameTo(2*(ScaleJourney.frameExponent(ctx.items,ctx.index,2)-frameZoom(ctx)),ctx.index);},dispose:()=>{disposed=true;ctx.host.classList.remove('experience--spatial');nav.dispose();}};
     };
 })(globalThis);

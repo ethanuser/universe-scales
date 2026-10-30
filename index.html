@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="importmap">{"imports":{"three":"./js/vendor/three/three.module.min.js"}}</script>
-    <script type="module" src="js/experiences/models.js?v=fcf8b2b009"></script>
+    <script type="module" src="js/experiences/models.js?v=8be60a86d5"></script>
     <title>Universe Scales</title>
     <link id="favicon" rel="icon" type="image/svg+xml" href="favicon-light.svg">
     <link rel="alternate icon" type="image/png" href="favicon.png">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/experiences.css?v=c351d1190a">
     <link rel="stylesheet" href="css/audio-experience.css?v=5ff32778dc">
     <link rel="stylesheet" href="css/perception-experience.css?v=df53354866">
-    <link rel="stylesheet" href="css/app.css?v=67a4dfe5eb">
+    <link rel="stylesheet" href="css/app.css?v=7fcafc4987">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -191,20 +191,30 @@
             </div>
             <section class="app-drawer__section">
                 <h3>Display</h3>
-                <div class="app-setting">
-                    <span class="app-setting__label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><text x="1" y="19" font-size="13" font-weight="600" fill="currentColor">10</text><text x="16" y="11" font-size="9" font-weight="600" fill="currentColor">n</text></svg>Number notation</span>
-                    <button id="notation-toggle" class="notation-toggle" aria-label="Change number notation"
-                        title="Change number notation (N)">1e10</button>
+                <div class="app-setting app-setting--stacked">
+                    <span class="app-setting__label" id="notation-label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><text x="1" y="19" font-size="13" font-weight="600" fill="currentColor">10</text><text x="16" y="11" font-size="9" font-weight="600" fill="currentColor">n</text></svg>Number notation</span>
+                    <div id="notation-toggle" class="app-choice app-choice--wide" role="radiogroup" aria-labelledby="notation-label">
+                        <button type="button" role="radio" data-value="scientific" title="Scientific: a number and its power of ten (N)"><b>1e10</b><small>Scientific</small></button>
+                        <button type="button" role="radio" data-value="mathematical" title="Powers of ten written out (N)"><b>1×10<sup>10</sup></b><small>Powers</small></button>
+                        <button type="button" role="radio" data-value="human" title="Words: thousand, million, billion (N)"><b>10B</b><small>Words</small></button>
+                        <button type="button" role="radio" data-value="si" title="Metric prefixes on the unit (N)"><b>10 Gm</b><small>Prefixes</small></button>
+                    </div>
+                    <p class="app-setting__note" id="notation-note" hidden>This dimension uses an ordinary linear scale, so numbers are shown as written.</p>
                 </div>
                 <div class="app-setting">
-                    <span class="app-setting__label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>Theme</span>
-                    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch light or dark theme"
-                        title="Switch theme (T)"></button>
+                    <span class="app-setting__label" id="theme-label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>Theme</span>
+                    <div id="dark-mode-toggle" class="app-choice" role="radiogroup" aria-labelledby="theme-label">
+                        <button type="button" role="radio" data-value="light" title="Light theme (T)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg><span>Light</span></button>
+                        <button type="button" role="radio" data-value="dark" title="Dark theme (T)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg><span>Dark</span></button>
+                        <button type="button" role="radio" data-value="system" title="Follow the system setting"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" /><path d="M8 20h8M12 16v4" /></svg><span>Auto</span></button>
+                    </div>
                 </div>
                 <div class="app-setting">
-                    <span class="app-setting__label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18V6l10-2v12" /><circle cx="6.5" cy="18" r="2.5" /><circle cx="16.5" cy="16" r="2.5" /></svg>Background music</span>
-                    <button id="music-toggle" class="music-toggle" aria-label="Play or pause background music"
-                        title="Play or pause music (M)"></button>
+                    <span class="app-setting__label" id="music-label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18V6l10-2v12" /><circle cx="6.5" cy="18" r="2.5" /><circle cx="16.5" cy="16" r="2.5" /></svg>Background music</span>
+                    <div id="music-toggle" class="app-choice" role="radiogroup" aria-labelledby="music-label">
+                        <button type="button" role="radio" data-value="off" title="Music off (M)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4ZM17 9l5 6M22 9l-5 6" /></svg><span>Off</span></button>
+                        <button type="button" role="radio" data-value="on" title="Music on (M)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4ZM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg><span>On</span></button>
+                    </div>
                 </div>
             </section>
             <section class="app-drawer__section">
@@ -220,7 +230,7 @@
                     <div class="editor-header">
                         <h3>Dimension Editor</h3>
                         <div class="editor-actions">
-                            <button id="share-plot-btn" class="btn btn-secondary">Share Plot</button>
+                            <button id="share-plot-btn" class="btn btn-secondary">Share plot</button>
                             <button id="import-yaml-btn" class="btn btn-secondary">Import YAML</button>
                             <button id="export-yaml-btn" class="btn btn-secondary">Export YAML</button>
                         </div>
@@ -234,8 +244,7 @@
                             </div>
                             <div class="section-header-right">
                                 <div class="dimension-section-actions" onclick="event.stopPropagation()">
-                                    <button id="clear-dimension-info-btn" class="btn btn-danger">Clear
-                                        Information</button>
+                                    <button id="clear-dimension-info-btn" class="btn btn-danger">Clear information</button>
                                 </div>
                                 <span class="section-toggle-icon"></span>
                             </div>
@@ -265,8 +274,8 @@
                             </div>
                             <div class="section-header-right">
                                 <div class="units-section-actions" onclick="event.stopPropagation()">
-                                    <button id="add-unit-btn" class="btn btn-primary">+ Add Unit</button>
-                                    <button id="delete-all-units-btn" class="btn btn-danger">Delete All Units</button>
+                                    <button id="add-unit-btn" class="btn btn-primary">Add unit</button>
+                                    <button id="delete-all-units-btn" class="btn btn-danger">Delete all units</button>
                                 </div>
                                 <span class="section-toggle-icon"></span>
                             </div>
@@ -355,7 +364,7 @@
         </div>
 
         <div id="data-editor-dialog" class="app-dialog" role="dialog" aria-modal="true" aria-labelledby="data-editor-title" hidden>
-            <div class="app-dialog__panel data-editor" data-tab="dimension-metadata">
+            <div class="app-dialog__panel data-editor" data-tab="items">
                 <div class="app-drawer__header data-editor__header">
                     <h2 id="data-editor-title">Edit data</h2>
                     <div class="data-editor__tabs" role="tablist" aria-label="Data to edit">
@@ -367,9 +376,7 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" /></svg>
                     </button>
                 </div>
-                <div class="data-editor__toolbar">
-                    <input class="data-editor__filter" type="search" placeholder="Filter items by name" aria-label="Filter items by name" autocomplete="off" spellcheck="false">
-                </div>
+                <input class="data-editor__filter" type="search" placeholder="Filter items" aria-label="Filter items by name" autocomplete="off" spellcheck="false">
                 <div class="data-editor__body"></div>
             </div>
         </div>
@@ -423,27 +430,27 @@
     </div>
 
     <script src="js/dimension-icons.js?v=2ebb823c56" defer></script>
-    <script src="js/item-search.js?v=feecec2856" defer></script>
+    <script src="js/item-search.js?v=088433449e" defer></script>
     <script src="js/model-overrides.js?v=860fc02b1d" defer></script>
     <script src="js/constants.js?v=f64d0fe1ce" defer></script>
     <script src="js/formatting.js?v=f3379dc71b" defer></script>
-    <script src="js/editor.js?v=617fc5b26a" defer></script>
+    <script src="js/editor.js?v=985524f8cf" defer></script>
     <script src="js/plot.js?v=dc6df64895" defer></script>
     <script src="js/plot-overview.js?v=71fd992042" defer></script>
     <script src="js/experiences/math.js?v=54aaf7588e" defer></script>
     <script src="js/experiences/controls.js?v=c3382a2eca" defer></script>
     <script src="js/experiences/area-maps.js?v=adb40b5c76" defer></script>
-    <script src="js/experiences/spatial.js?v=a62ee4a9d6" defer></script>
+    <script src="js/experiences/spatial.js?v=5459a387a1" defer></script>
     <script src="js/experiences/motion-math.js?v=ea5a56c662" defer></script>
     <script src="js/experiences/motion.js?v=0d2d8b85b1" defer></script>
     <script src="js/experiences/perception.js?v=c8c3b660af" defer></script>
     <script src="js/experiences/journey.js?v=52ba6f161d" defer></script>
     <script src="js/experiences/audio-math.js?v=f55f282587" defer></script>
-    <script src="js/experiences/audio.js?v=aba4f2bb85" defer></script>
-    <script src="js/experiences/controller.js?v=a29350cca2" defer></script>
-    <script src="js/script.js?v=eecc7ca11d" defer></script>
+    <script src="js/experiences/audio.js?v=8743d57c45" defer></script>
+    <script src="js/experiences/controller.js?v=13a16ad4ea" defer></script>
+    <script src="js/script.js?v=0b04ed6740" defer></script>
     <script src="js/mobile.js?v=9b915523c0" defer></script>
-    <script src="js/app-shell.js?v=f4087300dd" defer></script>
+    <script src="js/app-shell.js?v=62be0a2b8c" defer></script>
 </body>
 
 </html>

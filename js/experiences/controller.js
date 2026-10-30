@@ -126,7 +126,11 @@
                 : new URLSearchParams(location.search).get('item');
             this.linkedItem ??= linked;
             const linkedIndex = linked ? this.items.findIndex(item => item.name === linked) : -1;
-            this.index = linkedIndex >= 0 ? linkedIndex : this.items.length
+            // Without a link the explorer opens at human scale with nothing selected.
+            const human = this.items.findIndex(item => /^human (height|skin area|body volume)$/i.test(item.name));
+            this.openLinked = linkedIndex >= 0;
+            this.explicitSelection = false;
+            this.index = linkedIndex >= 0 ? linkedIndex : human >= 0 ? human : this.items.length
                 ? this.items.indexOf(nearest(this.items, initialExponent))
                 : 0;
             this.switcher.replaceChildren();
@@ -261,6 +265,16 @@
                 options.append(option);
                 return option;
             });
+            // Without a query the list is grouped into scale bands (headers span the grid);
+            // a search shows ranked results without headers.
+            const grouped = this.app.isLinearScale() || !globalThis.ScaleSearch?.groups ? this.pickerButtons
+                : ScaleSearch.groups(this.items, this.dimension).flatMap(group => {
+                    const header = dom('div', 'experience-picker-group');
+                    header.append(dom('span', '', group.label));
+                    if (group.range) header.append(dom('small', '', group.range));
+                    return [header, ...group.indices.map(index => this.pickerButtons[index])];
+                });
+            options.replaceChildren(...grouped);
             this.pickerEmpty = dom('p', 'experience-picker-empty', 'No items match that search.');
             this.pickerEmpty.hidden = true;
             this.pickerPanel.append(search, options, this.pickerEmpty);
@@ -272,7 +286,8 @@
                 this.pickerToggle.setAttribute('aria-expanded', 'false');
                 search.value = '';
                 this.pickerButtons.forEach(option => { option.hidden = false; option.classList.remove('is-highlighted'); });
-                options.append(...this.pickerButtons);
+                options.classList.remove('is-searching');
+                options.append(...grouped);
                 this.pickerEmpty.hidden = true;
             };
             const openPicker = () => {
@@ -280,6 +295,7 @@
                 this.pickerToggle.classList.add('is-open');
                 this.pickerToggle.setAttribute('aria-expanded', 'true');
                 search.focus();
+                options.querySelector('.is-active')?.scrollIntoView({ block: 'center' });
             };
             this.pickerToggle.addEventListener('click', () => this.pickerPanel.hidden ? openPicker() : closePicker());
             // Ranked, forgiving search (names, initials, synonyms, then descriptions); the
@@ -298,7 +314,8 @@
                     .map((item, index) => ({ item, index })).filter(({ item }) => item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()));
                 const shown = new Set(ranked.map(result => result.index));
                 this.pickerButtons.forEach((option, index) => { option.hidden = !shown.has(index); });
-                const order = query ? ranked.map(result => this.pickerButtons[result.index]) : this.pickerButtons;
+                const order = query ? ranked.map(result => this.pickerButtons[result.index]) : grouped;
+                options.classList.toggle('is-searching', Boolean(query));
                 options.append(...order);
                 this.pickerEmpty.hidden = ranked.length !== 0;
                 highlight(query ? 0 : -1);
@@ -430,7 +447,12 @@
             };
             this.clock.reset();
             this.renderer = ScaleRenderers[this.config[1]](this);
-            this.focus(this.index);
+            // A linked item opens selected; otherwise radial explorers open unlocked around it.
+            if (this.renderer.overview && !this.openLinked && !this.explicitSelection) {
+                this.focus(this.index, false);
+                this.renderer.overview(this.index);
+            } else this.focus(this.index);
+            this.openLinked = false;
         }
         panelHidden() {
             try { return localStorage.getItem('scale-panel-hidden') === 'true'; } catch { return false; }

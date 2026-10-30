@@ -88,7 +88,7 @@ class ItemEditor {
             saveButton = document.createElement('button');
             saveButton.id = 'editor-save-all-btn';
             saveButton.className = 'btn btn-primary';
-            saveButton.textContent = 'Save All Changes';
+            saveButton.textContent = 'Save all changes';
             saveButton.onclick = () => this.saveAllItems();
 
             // Add to editor-actions div
@@ -108,7 +108,7 @@ class ItemEditor {
             undoButton = document.createElement('button');
             undoButton.id = 'editor-undo-all-btn';
             undoButton.className = 'btn btn-secondary';
-            undoButton.textContent = 'Undo All Changes';
+            undoButton.textContent = 'Undo all changes';
             undoButton.onclick = () => this.undoAllChanges();
 
             // Add to editor-actions div (before save button)
@@ -425,7 +425,7 @@ class ItemEditor {
                     <div class="unit-drag-handle" title="Drag to reorder">
                         <span class="drag-handle-icon">☰</span>
                     </div>
-                    <button class="btn btn-small btn-danger" onclick="window.app.editor.deleteUnit(${index})">Delete Unit</button>
+                    <button class="btn btn-small btn-danger" onclick="window.app.editor.deleteUnit(${index})">Delete unit</button>
                 </div>
             </div>
             <div class="unit-editor-form">
@@ -897,7 +897,7 @@ class ItemEditor {
         header.innerHTML = `
             <div class="item-editor-card-title-row">
                 <h4>${itemNumber}. ${item.name || 'Unnamed Item'}</h4>
-                <button class="btn btn-small btn-danger" onclick="window.app.editor.deleteItem(event)">Delete Item</button>
+                <button class="btn btn-small btn-danger" onclick="window.app.editor.deleteItem(event)">Delete item</button>
             </div>
         `;
 

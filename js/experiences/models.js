@@ -265,6 +265,198 @@ function acquireModel(entry) {
     }).catch(() => null)));
 }
 
+// Data-editor adjustments (js/model-overrides.js): an uploaded GLB replaces the model, and
+// size/rotation overrides merge into its presentation.
+function overrideEntry(dimension, name, entry) {
+    const override = globalThis.ModelOverrides?.get(dimension, name);
+    if (!override) return entry;
+    let next = entry;
+    if (override.src) {
+        const base = entry?.presentation || {};
+        next = { ...(entry || { geometry: 'mesh' }), id: `upload:${override.key}:${override.version}`, src: override.src,
+            sha256: undefined, procedural: undefined, author: 'your upload', license: 'Local file', source: undefined,
+            note: `Your uploaded model (${override.fileName}), stored only in this browser. Its longest side is scaled to the listed size.`,
+            presentation: { yaw: base.yaw, pitch: base.pitch, roll: base.roll } };
+    }
+    if (override.presentation) next = { ...(next || {}), presentation: { ...(next?.presentation || {}), ...override.presentation } };
+    return next;
+}
+
+// One item's model on its own canvas, for the data editor. It resolves the model the same way
+// the explorer does (registry match, procedural model, local override) and applies the same
+// pose and size adjustments. Drag turns the view, the wheel zooms, double-click resets.
+export class ModelPreview {
+    constructor(container) {
+        this.container = container;
+        this.token = 0;
+        this.view = { yaw: 0, pitch: 0, zoom: 1 };
+        this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        this.renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+        this.renderer.domElement.className = 'model-preview__canvas';
+        this.status = document.createElement('p');
+        this.status.className = 'model-preview__status';
+        container.append(this.renderer.domElement, this.status);
+        this.scene = new THREE.Scene();
+        this.scene.add(new THREE.HemisphereLight(0xffffff, 0x667788, 2));
+        const light = new THREE.DirectionalLight(0xffffff, 2.5);
+        light.position.set(-500, 800, 1500);
+        this.scene.add(light);
+        this.camera = new THREE.PerspectiveCamera(30, 1, 0.01, 100);
+        this.pivot = new THREE.Group();
+        this.scene.add(this.pivot);
+        const canvas = this.renderer.domElement;
+        let drag = null;
+        canvas.addEventListener('pointerdown', event => {
+            drag = { x: event.clientX, y: event.clientY };
+            canvas.setPointerCapture(event.pointerId);
+        });
+        canvas.addEventListener('pointermove', event => {
+            if (!drag) return;
+            this.view.yaw += (event.clientX - drag.x) * 0.01;
+            this.view.pitch = THREE.MathUtils.clamp(this.view.pitch + (event.clientY - drag.y) * 0.008, -1.5, 1.5);
+            drag = { x: event.clientX, y: event.clientY };
+            this.render();
+        });
+        const end = () => { drag = null; };
+        canvas.addEventListener('pointerup', end);
+        canvas.addEventListener('pointercancel', end);
+        canvas.addEventListener('wheel', event => {
+            event.preventDefault();
+            this.view.zoom = THREE.MathUtils.clamp(this.view.zoom * Math.exp(-event.deltaY * 0.0015), 0.25, 8);
+            this.render();
+        }, { passive: false });
+        canvas.addEventListener('dblclick', () => { this.view = { yaw: 0, pitch: 0, zoom: 1 }; this.render(); });
+        this.resize = new ResizeObserver(() => this.render());
+        this.resize.observe(container);
+        this.onOverride = event => {
+            if (!this.name || event.detail?.key !== globalThis.ModelOverrides?.key(this.dimension, this.name)) return;
+            if (event.detail.reload) this.show(this.dimension, this.name);
+            else { this.entry = overrideEntry(this.dimension, this.name, this.baseEntry); this.render(); }
+        };
+        window.addEventListener('scale-model-override', this.onOverride);
+    }
+    setStatus(text) {
+        this.status.textContent = text || '';
+        this.status.hidden = !text;
+    }
+    // Shows an item's model; resolves to its entry (null when the item has no model).
+    async show(dimension, name) {
+        const token = ++this.token;
+        this.clear();
+        Object.assign(this, { dimension, name });
+        this.view = { yaw: 0, pitch: 0, zoom: 1 };
+        this.setStatus('Loading model');
+        const data = await registry;
+        if (token !== this.token) return null;
+        const entries = data.models || [];
+        this.baseEntry = (dimension === 'length' && proceduralLength[name]) ||
+            entries.find(entry => entry.matches?.[dimension]?.includes(name)) ||
+            (dimension === 'angular-velocity' ? angularEntry({ name }, entries) : null) || null;
+        this.entry = overrideEntry(dimension, name, this.baseEntry);
+        if (!this.entry) { this.setStatus('No 3D model for this item. The explorer shows its photo.'); this.render(); return null; }
+        const lease = acquireModel(this.entry);
+        this.lease = lease;
+        const model = await lease.promise.catch(() => null);
+        if (token !== this.token) return this.entry;
+        if (!model) { this.setStatus('The model could not be loaded.'); this.render(); return this.entry; }
+        const instance = clone(model);
+        // Materials that reflect a room get this renderer's environment map.
+        this.materials = [];
+        instance.traverse(child => {
+            if (!child.material) return;
+            const local = material => {
+                if (!material?.userData.environment) return material;
+                const made = material.clone();
+                this.environmentMap ||= (() => {
+                    const generator = new THREE.PMREMGenerator(this.renderer), room = new RoomEnvironment();
+                    const map = generator.fromScene(room, 0.04).texture;
+                    room.dispose(); generator.dispose();
+                    return map;
+                })();
+                made.envMap = this.environmentMap;
+                made.envMapIntensity = material.userData.environment;
+                this.materials.push(made);
+                return made;
+            };
+            child.material = Array.isArray(child.material) ? child.material.map(local) : local(child.material);
+        });
+        instance.userData.screenLines = [];
+        instance.userData.clouds = [];
+        instance.traverse(child => {
+            if (child.userData.screenLine) instance.userData.screenLines.push(child);
+            if (child.userData.pointSize) instance.userData.clouds.push(child);
+        });
+        // Fit by a sphere that holds the model in any orientation, so turning it never
+        // changes the framing; the size adjustment then shows as a change in size.
+        instance.updateMatrixWorld(true);
+        const bounds = new THREE.Box3().setFromObject(instance, true);
+        this.radius = Math.max(0.05, bounds.getBoundingSphere(new THREE.Sphere()).radius);
+        this.instance = instance;
+        this.pivot.add(instance);
+        this.setStatus('');
+        this.render();
+        return this.entry;
+    }
+    render() {
+        const width = Math.max(1, this.container.clientWidth), height = Math.max(1, this.container.clientHeight);
+        if (this.width !== width || this.height !== height) {
+            this.renderer.setSize(width, height, false);
+            Object.assign(this, { width, height });
+        }
+        const instance = this.instance;
+        if (instance) {
+            const pose = this.entry?.presentation || {};
+            instance.rotation.order = 'XYZ';
+            instance.rotation.set(THREE.MathUtils.degToRad(pose.pitch || 0), THREE.MathUtils.degToRad(pose.yaw || 0),
+                THREE.MathUtils.degToRad(pose.roll || 0));
+            instance.scale.setScalar(pose.display_scale ?? 1);
+            this.pivot.rotation.set(this.view.pitch, this.view.yaw, 0);
+            const fov = THREE.MathUtils.degToRad(this.camera.fov);
+            const fit = this.radius / Math.sin(fov / 2) / Math.min(1, width / height);
+            const distance = fit * 0.95 / this.view.zoom;
+            this.camera.aspect = width / height;
+            this.camera.near = distance / 100;
+            this.camera.far = distance * 100;
+            this.camera.position.set(0, 0, distance);
+            this.camera.updateProjectionMatrix();
+            this.pivot.updateMatrixWorld(true);
+            // Screen-width lines and point sprites, sized as in the explorer.
+            const perPixel = 2 * distance * Math.tan(fov / 2) / height;
+            for (const line of instance.userData.screenLines) {
+                const thickness = (line.userData.screenLine.width ?? SCREEN_LINE_PX) * perPixel / line.parent.matrixWorld.getMaxScaleOnAxis();
+                const { axis, length } = line.userData.screenLine;
+                line.scale.set(axis === 'x' ? length : thickness, axis === 'y' ? length : thickness, axis === 'z' ? length : thickness);
+            }
+            for (const cloud of instance.userData.clouds) {
+                const { max, perPixel: density } = cloud.userData.pointSize;
+                cloud.material.size = THREE.MathUtils.clamp(density * instance.scale.x / perPixel, 0.35, max);
+            }
+        }
+        this.renderer.render(this.scene, this.camera);
+    }
+    clear() {
+        this.instance?.removeFromParent();
+        this.instance?.traverse(node => { if (node.isSkinnedMesh) node.skeleton?.dispose(); });
+        this.instance = null;
+        for (const material of this.materials || []) material.dispose();
+        this.materials = [];
+        this.lease?.release();
+        this.lease = null;
+    }
+    dispose() {
+        this.token++;
+        this.clear();
+        this.name = null;
+        window.removeEventListener('scale-model-override', this.onOverride);
+        this.resize.disconnect();
+        this.environmentMap?.dispose();
+        this.renderer.dispose();
+        this.renderer.forceContextLoss();
+        this.renderer.domElement.remove();
+        this.status.remove();
+    }
+}
+
 export class ModelStage {
     constructor(ctx, redraw, onRegistryReady) {
         this.ctx = ctx; this.redraw = redraw; this.instances = new Map(); this.entries = [];
@@ -356,21 +548,8 @@ export class ModelStage {
         if (this.registryReady) this.entryCache.set(item, adjusted);
         return adjusted;
     }
-    // Data-editor adjustments (js/model-overrides.js): an uploaded GLB replaces the model, and
-    // size/rotation overrides merge into its presentation.
     applyOverride(item, entry) {
-        const override = globalThis.ModelOverrides?.get(this.ctx.dimension, item.name);
-        if (!override) return entry;
-        let next = entry;
-        if (override.src) {
-            const base = entry?.presentation || {};
-            next = { ...(entry || { geometry: 'mesh' }), id: `upload:${override.key}:${override.version}`, src: override.src,
-                sha256: undefined, procedural: undefined, author: 'your upload', license: 'Local file', source: undefined,
-                note: `Your uploaded model (${override.fileName}), stored only in this browser. Its longest side is scaled to the listed size.`,
-                presentation: { yaw: base.yaw, pitch: base.pitch, roll: base.roll } };
-        }
-        if (override.presentation) next = { ...(next || {}), presentation: { ...(next?.presentation || {}), ...override.presentation } };
-        return next;
+        return overrideEntry(this.ctx.dimension, item.name, entry);
     }
     queueLoadRedraw() {
         if (this.loadFrame || this.disposed) return;
@@ -975,5 +1154,5 @@ export class ModelStage {
         this.orbitEntries?.clear();
     }
 }
-window.ScaleModels = { ModelStage, convexHull, insideHull };
+window.ScaleModels = { ModelStage, ModelPreview, convexHull, insideHull };
 window.dispatchEvent(new Event('scale-models-ready'));

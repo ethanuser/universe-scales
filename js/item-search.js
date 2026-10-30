@@ -70,6 +70,46 @@
         const named = results.filter(result => result.score > 30);
         return (named.length ? named : results).sort((a, b) => b.score - a.score || a.index - b.index);
     }
-    root.ScaleSearch = { rank, score, normalize };
+    // Scale bands for grouping item lists. Length, area and volume share named bands over the
+    // equivalent length (sqrt of an area, cube root of a volume); other dimensions group by
+    // powers of a thousand (thousands, millions, ...).
+    const LENGTH_BANDS = [
+        [-Infinity, 'Subnuclear'], [-15, 'Nuclear and subatomic'], [-10, 'Atoms and molecules'],
+        [-7, 'Microscopic'], [-4, 'Small things'], [-1, 'Human scale'], [2, 'Buildings and landscapes'],
+        [5, 'Planetary'], [8, 'Stars and solar systems'], [13, 'Interstellar'], [17, 'Galactic'], [22, 'Cosmic']
+    ];
+    const LENGTH_ORDER = { length: 1, area: 2, volume: 3 };
+    const MAGNITUDES = { '-12': 'Trillionths', '-9': 'Billionths', '-6': 'Millionths', '-3': 'Thousandths',
+        0: 'Ones to hundreds', 3: 'Thousands', 6: 'Millions', 9: 'Billions', 12: 'Trillions' };
+    const SUPERSCRIPT = { '-': '⁻', 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹' };
+    const power = exponent => exponent === 0 ? '1' : `10${String(exponent).replace(/[-0-9]/g, c => SUPERSCRIPT[c])}`;
+    function band(value, dimension) {
+        if (!(value > 0) || !Number.isFinite(value)) return { key: 'other', label: 'No value yet', range: '' };
+        const order = LENGTH_ORDER[dimension];
+        if (order) {
+            const exponent = Math.log10(value) / order;
+            let index = 0;
+            while (index + 1 < LENGTH_BANDS.length && exponent >= LENGTH_BANDS[index + 1][0] - 1e-9) index++;
+            const low = LENGTH_BANDS[index][0], high = LENGTH_BANDS[index + 1]?.[0];
+            const range = low === -Infinity ? `under ${power(high)} m` : high == null ? `over ${power(low)} m` : `${power(low)} to ${power(high)} m`;
+            return { key: `length:${index}`, label: LENGTH_BANDS[index][1], range: order === 1 ? range : `${range} across` };
+        }
+        const exponent = Math.floor(Math.log10(value) / 3 + 1e-9) * 3;
+        const range = `${power(exponent)} to ${power(exponent + 3)}`;
+        return MAGNITUDES[exponent] ? { key: `e${exponent}`, label: MAGNITUDES[exponent], range }
+            : { key: `e${exponent}`, label: range, range: '' };
+    }
+    // Items in their given order, split into consecutive runs that share a band.
+    function groups(items, dimension, value = item => item.value) {
+        const runs = [];
+        items.forEach((item, index) => {
+            const found = band(value(item), dimension);
+            const last = runs.at(-1);
+            if (last && last.key === found.key) last.indices.push(index);
+            else runs.push({ ...found, indices: [index] });
+        });
+        return runs;
+    }
+    root.ScaleSearch = { rank, score, normalize, band, groups };
     if (typeof module !== 'undefined') module.exports = root.ScaleSearch;
 })(globalThis);

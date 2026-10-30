@@ -56,7 +56,7 @@
                 this.app.enableAudioHandler = null;
             }
             this.app.musicToggle?.classList.remove('playing');
-            if (this.app.musicToggle) this.app.musicToggle.textContent = '\uD83C\uDFB5';
+            this.app.updateMusicButton?.(false);
         }
         contextForPlayback() {
             this.context ||= new (window.AudioContext || window.webkitAudioContext)();

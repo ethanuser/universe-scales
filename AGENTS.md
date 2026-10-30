@@ -1,5 +1,29 @@
 # Agent Handoff Guide
 
+## 2026-10-30 full-page data editor, scale bands, options choices (Claude)
+
+- Data editor is a full page (`#data-editor-dialog`, default tab Items). app-shell builds a
+  sidebar (`.data-editor__nav`: filter, Add item, rows grouped by scale band, Delete all items)
+  and shows only the selected `.item-editor-card` (`.is-selected`) in the detail pane. All cards
+  stay in `#items-list` because editor.js saves by reading every card; the sidebar is rebuilt from
+  them by a MutationObserver (keeps the selection by card key; selects a newly added item; starts
+  on the explorer's current item). Detail = Details and Image blocks plus the 3D model panel.
+  One scroll region per pane (no nested `#editor-content` scroll).
+- `ScaleModels.ModelPreview` (models.js): one item's model on its own canvas, resolved like the
+  explorer (registry match, `proceduralLength`, `angularEntry`, `overrideEntry` for uploads and
+  size/rotation) and refreshed on `scale-model-override`. Drag turns, wheel zooms, double-click
+  resets. app-shell keeps one instance and disposes it when the editor closes.
+- `ScaleSearch.band(value, dimension)` / `groups(items, dimension, value)`: length/area/volume use
+  named bands over the equivalent length (Subnuclear ... Human scale ... Cosmic); other dimensions
+  use powers of a thousand (Thousandths, Thousands, Millions, then 10^n ranges). Used for headers
+  in both item pickers (hidden while searching) and the editor sidebar; skipped on linear scales.
+- Options: number notation, theme (Light / Dark / Auto, which follows the system) and music are
+  segmented choices (`.app-choice`, `aria-checked`), so every option and the current one are
+  visible. `app.setTheme`, `app.setNotation`; shortcuts T/N/M still cycle.
+- The explorer opens unlocked at human scale (Human Height / Human skin area / Human body volume)
+  via the renderer's `overview(index)`: camera at the item's ring size, nothing selected, nearest
+  object choice resumes on the first zoom or pan. A `?item=` link still opens selected.
+
 ## 2026-10-30 model adjustments, full-width item picker (Claude)
 
 - `js/model-overrides.js` (`ModelOverrides`): per dimension+item size (`display_scale`) and

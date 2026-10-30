@@ -84,20 +84,45 @@
         });
 
         // --- Data editor ------------------------------------------------------------------
-        // editor.js builds the editor inside #editor-content; it lives in a large dialog with
-        // Dimension / Units / Items tabs instead of expanding inside the Options drawer.
+        // editor.js builds the editor inside #editor-content. It opens as a full page with
+        // Dimension / Units / Items tabs. Items use a list and detail layout: the sidebar lists
+        // every item, grouped by scale, and the selected item's card fills the page (its
+        // details and image on the left, its 3D model with a live preview on the right).
+        // Every card stays in the DOM, because editor.js saves by reading all of them.
         const editorContent = $('editor-content'), editorToggle = $('editor-toggle');
         if (dataEditor && editorContent && editorToggle) {
+            const element = (tag, className, text) => Object.assign(document.createElement(tag), className ? { className } : {}, text != null ? { textContent: text } : {});
+            const link = (label, href) => Object.assign(element('a', '', label), { href, target: '_blank', rel: 'noopener noreferrer' });
             const panel = dataEditor.querySelector('.data-editor');
             const body = dataEditor.querySelector('.data-editor__body');
             const filter = dataEditor.querySelector('.data-editor__filter');
             body.append(editorContent);
             // Global actions (share, import/export, undo, save) live in a footer bar.
-            const footer = document.createElement('div');
-            footer.className = 'data-editor__footer';
+            const footer = element('div', 'data-editor__footer');
             const actions = editorContent.querySelector('.editor-header');
             if (actions) footer.append(actions);
             panel.append(footer);
+            const itemsSection = $('items-section'), itemsList = $('items-list'), unitsList = $('units-list');
+            const detail = itemsSection?.querySelector('.section-content');
+            // Sidebar: filter and Add, the item list, and Delete all at the bottom.
+            const nav = element('aside', 'data-editor__nav');
+            const navTools = element('div', 'data-editor__nav-tools');
+            const navList = element('div', 'data-editor__nav-list');
+            navList.setAttribute('role', 'listbox');
+            navList.setAttribute('aria-label', 'Items');
+            const navFooter = element('div', 'data-editor__nav-footer');
+            const addItem = $('add-item-btn'), deleteAll = $('delete-all-items-btn');
+            if (addItem) { addItem.textContent = 'Add item'; addItem.prepend(Object.assign(element('span', 'data-editor__plus'), { ariaHidden: 'true' })); }
+            if (deleteAll) deleteAll.textContent = 'Delete all items';
+            navTools.append(filter, addItem || '');
+            navFooter.append(deleteAll || '');
+            nav.append(navTools, navList, navFooter);
+            itemsSection?.prepend(nav);
+            dataEditor.querySelector('.data-editor__toolbar')?.remove();
+            const empty = element('div', 'data-editor__empty');
+            empty.append(element('h3', '', 'No item selected'), element('p', '', 'Choose an item from the list, or add a new one.'));
+            detail?.prepend(empty);
+
             const showTab = tab => {
                 panel.dataset.tab = tab;
                 dataEditor.querySelectorAll('[role="tab"]').forEach(button =>
@@ -107,19 +132,29 @@
             };
             dataEditor.querySelectorAll('[role="tab"]').forEach(button =>
                 button.addEventListener('click', () => showTab(button.dataset.tab)));
-            // editor.js's own toggle listener runs first and renders; this one opens the dialog.
+            // editor.js's own toggle listener runs first and renders; this one opens the page.
             editorToggle.addEventListener('click', () => {
                 if (editorContent.style.display === 'none') return;
                 setDrawer(false);
+                // Undo and Save sit apart from the sharing actions, at the right of the footer.
+                if (actions && !actions.querySelector('.data-editor__commit')) {
+                    const commit = element('div', 'data-editor__commit');
+                    commit.append(...[$('editor-undo-all-btn'), $('editor-save-all-btn')].filter(Boolean));
+                    actions.append(commit);
+                }
                 const title = dataEditor.querySelector('#data-editor-title');
                 title.textContent = `Edit ${document.getElementById('dimension-browser-current')?.textContent || ''} data`;
                 filter.value = '';
-                applyFilter();
-                showTab(panel.dataset.tab || 'dimension-metadata');
+                selectedKey = null;
+                showTab(panel.dataset.tab || 'items');
                 setDialog(dataEditor, true);
+                buildNav();
             });
             dataEditor.onClose = () => {
                 if (editorContent.style.display !== 'none') window.app?.editor?.toggleEditor();
+                preview?.dispose();
+                preview = null;
+                previewFor = null;
             };
             // Section headers keep their action buttons but no longer collapse the section.
             dataEditor.addEventListener('click', event => {
@@ -128,94 +163,172 @@
                     event.stopPropagation();
                     event.preventDefault();
                 }
-                // Item cards open and close from their header row; opening adds the model panel.
-                const cardHeader = event.target.closest('.item-editor-card-header');
-                if (cardHeader && !event.target.closest('button, input, select, textarea, a, label')) {
-                    const card = cardHeader.closest('.item-editor-card');
-                    card?.classList.toggle('is-open');
-                    if (card?.classList.contains('is-open')) modelPanel(card);
-                }
             }, true);
+
+            // --- Item list ---
+            let selectedKey = null, wantNew = false, rows = new Map();
+            const cardKey = card => card.dataset.isCustom === 'true' ? `custom:${card.dataset.customId}` : `item:${card.dataset.itemIndex}`;
+            const cardName = card => card.querySelector('input[name="name"]')?.value.trim() || '';
+            const cardValue = card => Number(card.querySelector('input[name="value"]')?.value);
+            const superscript = text => text.replace(/[-0-9]/g, c => '⁻⁰¹²³⁴⁵⁶⁷⁸⁹'['-0123456789'.indexOf(c)]);
+            const formatValue = value => {
+                if (!Number.isFinite(value)) return '';
+                if (value === 0 || (Math.abs(value) >= 0.01 && Math.abs(value) < 1e5)) return String(Number(value.toPrecision(3)));
+                const exponent = Math.floor(Math.log10(Math.abs(value)));
+                return `${Number((value / 10 ** exponent).toPrecision(3))} × 10${superscript(String(exponent))}`;
+            };
+            // Values are stored in the base unit (conversion factor 1).
+            const unitSymbol = () => app()?.dimensionData?.units?.find(unit => Number(unit.conversion_factor) === 1)?.symbol || '';
+            const fillRow = (row, card) => {
+                row.querySelector('.data-editor__nav-name').textContent = cardName(card) || 'Unnamed item';
+                const value = formatValue(cardValue(card));
+                row.querySelector('.data-editor__nav-value').textContent = value ? `${value} ${unitSymbol()}`.trim() : '';
+            };
+            const makeRow = card => {
+                const row = element('button', 'data-editor__nav-item');
+                row.type = 'button';
+                row.setAttribute('role', 'option');
+                const thumb = element('img', 'data-editor__nav-thumb');
+                Object.assign(thumb, { alt: '', loading: 'lazy', decoding: 'async' });
+                const source = cardName(card) && card.querySelector('.image-preview')?.getAttribute('src');
+                if (source) { thumb.src = source; thumb.onerror = () => thumb.classList.add('is-missing'); }
+                else thumb.classList.add('is-missing');
+                const text = element('span', 'data-editor__nav-text');
+                text.append(element('span', 'data-editor__nav-name'), element('span', 'data-editor__nav-value'));
+                row.append(thumb, text);
+                fillRow(row, card);
+                row.addEventListener('click', () => select(card));
+                rows.set(card, row);
+                return row;
+            };
+            function buildNav() {
+                if (!itemsList || dataEditor.hidden) return;
+                const cards = [...itemsList.querySelectorAll('.item-editor-card')];
+                rows = new Map();
+                const linear = app()?.isLinearScale?.() || !window.ScaleSearch?.groups;
+                const groups = linear ? [{ label: '', indices: cards.map((card, index) => index) }]
+                    : ScaleSearch.groups(cards, app()?.currentDimension, cardValue);
+                navList.replaceChildren(...groups.flatMap(group => {
+                    const nodes = group.indices.map(index => makeRow(cards[index]));
+                    if (!group.label) return nodes;
+                    const header = element('div', 'data-editor__nav-group');
+                    header.append(element('span', '', group.label));
+                    if (group.range) header.append(element('small', '', group.range));
+                    return [header, ...nodes];
+                }));
+                applyFilter();
+                // Keep the selection across re-renders; a new item is selected once added;
+                // otherwise start on the item the explorer shows.
+                const target = (wantNew && cards.find(card => !cardName(card))) ||
+                    cards.find(card => cardKey(card) === selectedKey) ||
+                    cards.find(card => cardName(card) === experiences()?.item?.name) || cards[0];
+                wantNew = false;
+                if (target) select(target, 'center');
+                else { previewFor = null; empty.hidden = false; }
+            }
+            addItem?.addEventListener('click', () => { wantNew = true; filter.value = ''; });
+            function select(card, scroll = 'nearest') {
+                itemsList.querySelectorAll('.item-editor-card.is-selected').forEach(other => other.classList.remove('is-selected'));
+                card.classList.add('is-selected');
+                empty.hidden = true;
+                selectedKey = cardKey(card);
+                rows.forEach((row, other) => row.setAttribute('aria-selected', String(other === card)));
+                rows.get(card)?.scrollIntoView({ block: scroll });
+                if (detail) detail.scrollTop = 0;
+                decorate(card);
+                modelPanel(card);
+            }
+            // Headings for the card's groups, and live list updates while typing.
+            function decorate(card) {
+                if (card.dataset.decorated) return;
+                card.dataset.decorated = 'true';
+                card.querySelector('.item-editor-form-left')?.prepend(element('h5', 'data-editor__block-title', 'Details'));
+                card.querySelector('.item-editor-form-right')?.prepend(element('h5', 'data-editor__block-title', 'Image'));
+                const heading = card.querySelector('.item-editor-card-title-row h4');
+                const number = heading?.textContent.match(/^\s*(\d+)\./)?.[1];
+                const rename = () => {
+                    if (heading) heading.textContent = cardName(card) || 'Unnamed item';
+                    const row = rows.get(card);
+                    if (row) fillRow(row, card);
+                };
+                if (heading && number) heading.dataset.number = number;
+                // The value is in the dimension's base unit; say which.
+                const valueLabel = card.querySelector('input[name="value"]')?.closest('.item-editor-form-group')?.querySelector('label');
+                if (valueLabel && unitSymbol()) valueLabel.textContent = `Value (${unitSymbol()}) *`;
+                rename();
+                card.querySelector('input[name="name"]')?.addEventListener('input', rename);
+                card.querySelector('input[name="value"]')?.addEventListener('input', rename);
+            }
             const count = (selector, list) => {
                 const node = dataEditor.querySelector(`[data-count="${selector}"]`);
                 if (node && list) node.textContent = String(list.querySelectorAll(`.${selector === 'units' ? 'unit' : 'item'}-editor-card`).length);
             };
-            const unitsList = $('units-list'), itemsList = $('items-list');
-            const recount = () => { count('units', unitsList); count('items', itemsList); applyFilter(); };
-            for (const list of [unitsList, itemsList]) if (list) new MutationObserver(recount).observe(list, { childList: true });
+            const recount = () => { count('units', unitsList); count('items', itemsList); };
+            if (unitsList) new MutationObserver(recount).observe(unitsList, { childList: true });
+            if (itemsList) new MutationObserver(() => { recount(); buildNav(); }).observe(itemsList, { childList: true });
             function applyFilter() {
                 const query = window.ScaleSearch ? ScaleSearch.normalize(filter.value) : filter.value.toLowerCase();
-                itemsList?.querySelectorAll('.item-editor-card').forEach(card => {
-                    const name = card.querySelector('.item-editor-card-title-row')?.textContent || '';
+                let header = null, shown = 0;
+                const closeGroup = () => { if (header) header.hidden = shown === 0; };
+                for (const node of navList.children) {
+                    if (node.classList.contains('data-editor__nav-group')) { closeGroup(); header = node; shown = 0; continue; }
+                    const name = node.querySelector('.data-editor__nav-name')?.textContent || '';
                     const text = window.ScaleSearch ? ScaleSearch.normalize(name) : name.toLowerCase();
-                    card.hidden = Boolean(query) && !text.includes(query);
-                });
+                    node.hidden = Boolean(query) && !text.includes(query);
+                    if (!node.hidden) shown++;
+                }
+                closeGroup();
             }
             filter.addEventListener('input', applyFilter);
+            // Arrow keys move through the list while it or the filter has focus.
+            nav.addEventListener('keydown', event => {
+                if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+                const visible = [...rows.entries()].filter(([, row]) => !row.hidden);
+                if (!visible.length) return;
+                event.preventDefault();
+                const index = visible.findIndex(([card]) => cardKey(card) === selectedKey);
+                const next = visible[Math.max(0, Math.min(visible.length - 1, index + (event.key === 'ArrowDown' ? 1 : -1)))];
+                select(next[0]);
+                if (event.target !== filter) next[1].focus();
+            });
 
-            // 3D model panel for an opened item: where the model comes from (author, license,
-            // source, note), download the GLB, upload a replacement, and adjust its size and
-            // rotation. Adjustments preview in the explorer and stay in this browser.
-            let registry = null;
+            // --- 3D model panel ---
+            // A live preview (drag to turn, scroll to zoom), size and rotation adjustments,
+            // upload or download, and where the model comes from. Adjustments also preview in
+            // the explorer and stay in this browser.
+            let registry = null, preview = null, previewFor = null;
+            const previewBox = element('div', 'model-preview');
+            previewBox.title = 'Drag to turn, scroll to zoom, double-click to reset the view';
             const loadRegistry = () => registry ||= fetch('content/visualizations/models.json').then(r => r.json()).catch(() => ({ models: [] }));
-            const element = (tag, className, text) => Object.assign(document.createElement(tag), className ? { className } : {}, text != null ? { textContent: text } : {});
-            const link = (label, href) => Object.assign(element('a', '', label), { href, target: '_blank', rel: 'noopener noreferrer' });
             async function modelPanel(card) {
-                card.querySelector('.item-model-panel')?.remove();
-                const title = card.querySelector('.item-editor-card-title-row')?.textContent || '';
-                const name = title.replace(/^\s*\d+\.\s*/, '').replace(/Delete Item\s*$/, '').trim();
+                const name = cardName(card);
                 const dimension = app()?.currentDimension;
-                if (!name || !dimension) return;
+                const host = card.querySelector('.item-editor-form');
+                if (!host) return;
                 const data = await loadRegistry();
+                if (!card.classList.contains('is-selected')) return;
+                card.querySelector('.item-model-panel')?.remove();
                 const view = experiences();
                 const item = view?.items?.find(other => other.name === name);
-                const sourced = data.models.find(model => model.matches?.[dimension]?.includes(name));
+                const sourced = name ? data.models.find(model => model.matches?.[dimension]?.includes(name)) : null;
                 const live = item && view.modelEntry ? view.modelEntry(item) : null;
                 const entry = sourced || live;
-                const override = window.ModelOverrides?.get(dimension, name);
-                const base = entry?.presentation || {};
-                const current = { ...base, ...(override?.presentation || {}) };
-                const panel = element('section', 'item-model-panel');
-                panel.append(element('h5', 'item-model-panel__title', '3D model'));
-                const facts = element('dl', 'item-model-panel__facts');
-                const fact = (label, value) => { if (!value) return; facts.append(element('dt', '', label)); const dd = element('dd'); dd.append(value); facts.append(dd); };
-                if (override?.src) fact('Model', `Your upload: ${override.fileName}`);
-                else if (sourced) {
-                    fact('Model', `${sourced.id}`);
-                    fact('Author', sourced.author || '');
-                    if (sourced.license) fact('License', sourced.license_url ? link(sourced.license, sourced.license_url) : sourced.license);
-                    if (sourced.source) fact('Source', link(sourced.source.replace(/^https?:\/\//, '').slice(0, 60), sourced.source));
-                    if (sourced.basis_url && sourced.basis_url !== sourced.source) fact('Basis', link(sourced.basis_label || 'Model basis', sourced.basis_url));
-                } else if (live?.procedural) fact('Model', 'Built in the app from measurements (procedural)');
-                else fact('Model', 'None; the explorer shows the photo');
-                if (item?.source) fact('Item source', link(item.source.replace(/^https?:\/\//, '').slice(0, 60), item.source));
-                panel.append(facts);
-                const note = (override?.src ? '' : sourced?.note || live?.note || '');
-                if (note) panel.append(element('p', 'item-model-panel__note', note));
-                const actions = element('div', 'item-model-panel__actions');
-                if (sourced?.src && !override?.src) {
-                    const download = link('Download GLB', sourced.src);
-                    download.className = 'btn'; download.setAttribute('download', `${sourced.id}.glb`); download.removeAttribute('target');
-                    actions.append(download);
+                const override = name ? window.ModelOverrides?.get(dimension, name) : null;
+                const current = { ...(entry?.presentation || {}), ...(override?.presentation || {}) };
+                const section = element('section', 'item-model-panel');
+                const buttons = element('div', 'item-model-panel__actions');
+                const reset = element('button', 'btn btn-danger', 'Reset model');
+                reset.type = 'button';
+                reset.addEventListener('click', async () => { await ModelOverrides.clear(dimension, name); modelPanel(card); });
+                section.append(element('h5', 'data-editor__block-title', '3D model'), previewBox);
+                if (window.ScaleModels?.ModelPreview && name) {
+                    preview ||= new ScaleModels.ModelPreview(previewBox);
+                    const key = `${dimension}::${name}`;
+                    if (previewFor !== key) { previewFor = key; preview.show(dimension, name); }
+                    else requestAnimationFrame(() => preview?.render());
                 }
-                const upload = element('label', 'btn', override?.src ? 'Replace upload' : 'Upload GLB');
-                const input = Object.assign(element('input'), { type: 'file', accept: '.glb,model/gltf-binary', hidden: true });
-                input.addEventListener('change', async () => {
-                    const file = input.files?.[0];
-                    if (!file) return;
-                    await ModelOverrides.setFile(dimension, name, file);
-                    modelPanel(card);
-                });
-                upload.append(input);
-                actions.append(upload);
-                if (override) {
-                    const reset = element('button', 'btn btn-danger', 'Reset model');
-                    reset.type = 'button';
-                    reset.addEventListener('click', async () => { await ModelOverrides.clear(dimension, name); modelPanel(card); });
-                    actions.append(reset);
-                }
-                panel.append(actions);
-                if (entry || override?.src) {
+                previewBox.hidden = !name;
+                if (name && (entry || override?.src)) {
                     const sliders = element('div', 'item-model-panel__sliders');
                     const slider = (label, field, min, max, step, toValue, fromValue, format) => {
                         const row = element('label', 'item-model-panel__slider');
@@ -227,18 +340,56 @@
                             const value = toValue(Number(range.value));
                             output.textContent = format(value);
                             ModelOverrides.setPresentation(dimension, name, { [field]: value });
+                            if (!reset.isConnected) buttons.append(reset);
                         });
                         row.append(element('span', '', label), range, output);
                         sliders.append(row);
                     };
                     slider('Size', 'display_scale', -2, 2, 0.05, v => Math.round(2 ** v * 100) / 100,
-                        v => Math.log2(v ?? 1), v => `${v.toFixed(2)}x`);
+                        v => Math.log2(v ?? 1), v => `${v.toFixed(2)}×`);
                     for (const [label, field] of [['Turn', 'yaw'], ['Tilt', 'pitch'], ['Roll', 'roll']])
                         slider(label, field, -180, 180, 1, v => v, v => v ?? 0, v => `${v}°`);
-                    panel.append(sliders);
-                    panel.append(element('p', 'item-model-panel__hint', 'Adjustments preview in the explorer and are saved in this browser only.'));
+                    section.append(sliders);
                 }
-                card.querySelector('.item-editor-form')?.append(panel);
+                if (sourced?.src && !override?.src) {
+                    const download = link('Download GLB', sourced.src);
+                    download.className = 'btn';
+                    download.setAttribute('download', `${sourced.id}.glb`);
+                    download.removeAttribute('target');
+                    buttons.append(download);
+                }
+                if (name) {
+                    const upload = element('label', 'btn', override?.src ? 'Replace upload' : 'Upload GLB');
+                    const input = Object.assign(element('input'), { type: 'file', accept: '.glb,model/gltf-binary', hidden: true });
+                    input.addEventListener('change', async () => {
+                        const file = input.files?.[0];
+                        if (!file) return;
+                        await ModelOverrides.setFile(dimension, name, file);
+                        modelPanel(card);
+                    });
+                    upload.append(input);
+                    buttons.append(upload);
+                }
+                if (override) buttons.append(reset);
+                section.append(buttons);
+                const facts = element('dl', 'item-model-panel__facts');
+                const fact = (label, value) => { if (!value) return; facts.append(element('dt', '', label)); const dd = element('dd'); dd.append(value); facts.append(dd); };
+                if (!name) fact('Model', 'Name the item to attach a model');
+                else if (override?.src) fact('Model', `Your upload: ${override.fileName}`);
+                else if (sourced) {
+                    fact('Model', sourced.id);
+                    fact('Author', sourced.author || '');
+                    if (sourced.license) fact('License', sourced.license_url ? link(sourced.license, sourced.license_url) : sourced.license);
+                    if (sourced.source) fact('Source', link(sourced.source.replace(/^https?:\/\//, '').slice(0, 60), sourced.source));
+                    if (sourced.basis_url && sourced.basis_url !== sourced.source) fact('Basis', link(sourced.basis_label || 'Model basis', sourced.basis_url));
+                } else if (live?.procedural) fact('Model', 'Built in the app from measurements');
+                else fact('Model', 'None. The explorer shows the photo.');
+                if (item?.source) fact('Item source', link(item.source.replace(/^https?:\/\//, '').slice(0, 60), item.source));
+                section.append(facts);
+                const note = override?.src ? '' : sourced?.note || live?.note || '';
+                if (note) section.append(element('p', 'item-model-panel__note', note));
+                if (name && (entry || override)) section.append(element('p', 'item-model-panel__hint', 'Adjustments also show in the explorer, and are saved in this browser only.'));
+                host.append(section);
             }
         }
 
@@ -285,9 +436,9 @@
             d: () => press('dimension-browser-toggle'),
             u: () => press('unit-browser-toggle'),
             o: () => setDrawer(drawer.hidden),
-            t: () => press('dark-mode-toggle'),
-            n: () => press('notation-toggle'),
-            m: () => press('music-toggle'),
+            t: () => window.app?.toggleDarkMode(),
+            n: () => window.app?.toggleNotation(),
+            m: () => window.app?.toggleMusic(),
             l: () => {
                 const view = experiences();
                 if (!view?.interactiveButton) return;
@@ -346,7 +497,7 @@
             const toggle = wrap.querySelector('.experience-picker-toggle'), label = toggle.querySelector('span');
             const panel = wrap.querySelector('.experience-picker-panel'), input = panel.querySelector('input');
             const list = panel.querySelector('.experience-picker-options'), empty = panel.querySelector('.experience-picker-empty');
-            let options = [], highlighted = -1;
+            let options = [], grouped = [], highlighted = -1;
             const items = () => app()?.chartItemsInOrder?.() || [];
             const current = () => app()?.chartCurrent;
             const choose = item => { close(); app().focusChartItem(item); };
@@ -367,7 +518,16 @@
                     option.item = item;
                     return option;
                 });
-                list.replaceChildren(...options);
+                // Scale bands as headers (see ScaleSearch.groups); searches show ranked results.
+                grouped = app().isLinearScale?.() ? options : ScaleSearch.groups(options.map(option => option.item), app().currentDimension)
+                    .flatMap(group => {
+                        const header = document.createElement('div');
+                        header.className = 'experience-picker-group';
+                        header.append(Object.assign(document.createElement('span'), { textContent: group.label }));
+                        if (group.range) header.append(Object.assign(document.createElement('small'), { textContent: group.range }));
+                        return [header, ...group.indices.map(index => options[index])];
+                    });
+                list.replaceChildren(...grouped);
             };
             const visible = () => options.filter(option => !option.hidden);
             const highlight = index => {
@@ -381,7 +541,8 @@
                 const ranked = query ? ScaleSearch.rank(options.map(option => option.item), query) : null;
                 const shown = ranked ? new Set(ranked.map(result => result.index)) : null;
                 options.forEach((option, index) => { option.hidden = Boolean(shown) && !shown.has(index); });
-                list.append(...(ranked ? ranked.map(result => options[result.index]) : options));
+                list.classList.toggle('is-searching', Boolean(ranked));
+                list.append(...(ranked ? ranked.map(result => options[result.index]) : grouped));
                 empty.hidden = !ranked || ranked.length > 0;
                 highlight(query ? 0 : -1);
             };
