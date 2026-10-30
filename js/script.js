@@ -1297,7 +1297,33 @@ class UniversalScales {
         return best;
     }
 
+    // Chart view on wider screens: item details live in a left panel (the tooltip element,
+    // docked) instead of a floating tooltip. Hover previews an item; a click pins it.
+    chartPanelMode() {
+        return document.body.dataset.experience === 'log' && window.innerWidth > 700 &&
+            !window.matchMedia('(hover: none)').matches;
+    }
+
+    showChartPanelPlaceholder() {
+        if (!this.chartPanelMode()) return;
+        this.tooltipItem = null;
+        this.tooltipPinned = false;
+        this.tooltip.classList.add('tooltip--panel', 'visible', 'tooltip--empty');
+        this.tooltip.querySelector('.tooltip-title').textContent = 'Item details';
+        this.tooltip.querySelector('.tooltip-value').textContent = '';
+        this.tooltip.querySelector('.tooltip-description').textContent =
+            'Point at an item in the chart to see it here, or click one to keep it.';
+        const image = this.tooltip.querySelector('.tooltip-image');
+        image.src = ''; image.style.display = 'none';
+        this.tooltip.querySelector('.tooltip-source').style.display = 'none';
+    }
+
     showTooltip(event, item, pinned = false) {
+        const panelMode = this.chartPanelMode();
+        // A pinned item stays in the panel until another item is clicked.
+        if (panelMode && this.tooltipPinned && !pinned && this.tooltipItem && this.tooltipItem !== item) return;
+        this.tooltip.classList.toggle('tooltip--panel', panelMode);
+        this.tooltip.classList.remove('tooltip--empty');
         this.cancelTooltipHide();
         this.hideUnitConversions();
         this.tooltipItem = item;
@@ -1309,7 +1335,7 @@ class UniversalScales {
             || window.matchMedia('(hover: none)').matches;
 
         // Set pinned state - on mobile, tooltips are always "pinned" (interactive)
-        this.tooltipPinned = pinned || isTouchPrimary;
+        this.tooltipPinned = pinned || isTouchPrimary || (panelMode && this.tooltipPinned && this.tooltipItem === item);
 
         this.tooltip.querySelector('.tooltip-title').textContent = item.name;
 
@@ -1341,7 +1367,7 @@ class UniversalScales {
         this.experiences?.addTooltip(item, descriptionElement);
         const sourceLink = this.tooltip.querySelector('.tooltip-source');
         // isTouchPrimary is already defined above
-        const showSourceText = isTouchPrimary || pinned; // Show source on mobile or when pinned on desktop
+        const showSourceText = isTouchPrimary || pinned || panelMode; // Show source on mobile, when pinned, or in the panel
         if (item.source) {
             sourceLink.href = item.source;
             sourceLink.textContent = showSourceText ? 'Source' : '';
@@ -1354,6 +1380,12 @@ class UniversalScales {
 
         // Position tooltip (will be repositioned after image loads if image exists)
         const positionTooltip = () => {
+            if (panelMode) {
+                // Docked: CSS places the panel; clear any floating-tooltip geometry.
+                Object.assign(this.tooltip.style, { left: '', top: '', transform: '', maxWidth: '', position: '',
+                    display: '', visibility: '', zIndex: '', pointerEvents: 'auto' });
+                return;
+            }
             if (isTouchPrimary) {
                 // Pin tooltip to viewport top center on mobile via CSS class
                 this.tooltip.classList.add('mobile-pinned');
@@ -1516,7 +1548,13 @@ class UniversalScales {
         this.tooltip.classList.add('visible');
     }
 
-    hideTooltip() {
+    hideTooltip(force = false) {
+        // The chart's docked panel keeps showing the last item; only unpin it.
+        if (!force && this.chartPanelMode() && this.tooltip.classList.contains('tooltip--panel')) {
+            this.tooltipPinned = false;
+            return;
+        }
+        this.tooltip.classList.remove('tooltip--panel', 'tooltip--empty');
         this.cancelTooltipHide();
         this.hideUnitConversions();
         this.tooltipItem = null;

@@ -637,3 +637,36 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
     .zoom-controls.zoom-controls-floating { height: 37px; grid-template-rows: 1fr !important; }
 }
 .zoom-controls.zoom-controls-floating .zoom-btn { min-height: 0 !important; min-width: 0 !important; max-height: none; }
+
+/* Chart view: item details in a docked left panel instead of a floating tooltip. */
+@media (min-width: 701px) {
+    body[data-experience='log'] .app-main > .plot-container { margin-left: var(--app-panel-width) !important; }
+    body[data-experience='log'] #tooltip.tooltip--panel {
+        position: fixed !important;
+        z-index: var(--z-zoom-controls);
+        left: 0 !important;
+        top: var(--app-bar-height) !important;
+        bottom: 0;
+        width: var(--app-panel-width);
+        max-width: none !important;
+        box-sizing: border-box;
+        padding: 18px 20px;
+        overflow-y: auto;
+        border: 0;
+        border-right: 1px solid var(--border-color);
+        background: var(--bg-primary);
+        box-shadow: none;
+        opacity: 1;
+        transform: none !important;
+        transition: none;
+        pointer-events: auto !important;
+        display: block !important;
+    }
+    body[data-experience='log'] #tooltip.tooltip--panel .tooltip-image { max-height: 200px; object-fit: contain; }
+    body[data-experience='log'] #tooltip.tooltip--panel .tooltip-title { font-size: 1.25rem; }
+    body[data-experience='log'] #tooltip.tooltip--panel .tooltip-value { color: var(--dimension-color); font-weight: 600; }
+    body[data-experience='log'] #tooltip.tooltip--empty .tooltip-description { color: var(--text-secondary); }
+    body:not([data-experience='log']) #tooltip.tooltip--panel { display: none !important; }
+}
+/* Item and grid lines span the full chart height, meeting the pinned axes. */
+.app-main > .plot-container { padding: 0 !important; }

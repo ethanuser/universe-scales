@@ -57,7 +57,7 @@
             'pan-right': ['Pan right', '<path d="M9 5l7 7-7 7"/>'],
             'zoom-out': ['Zoom out (Ctrl + scroll)', '<path d="M6 12h12"/>'],
             'zoom-in': ['Zoom in (Ctrl + scroll)', '<path d="M6 12h12M12 6v12"/>'],
-            reset: ['Reset zoom', '<path d="M4 9V4h5M20 15v5h-5"/><path d="M4.5 9a8 8 0 0 1 14.7-1M19.5 15a8 8 0 0 1-14.7 1"/>']
+            reset: ['Reset view', '<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/>']
         };
         document.querySelectorAll('.zoom-btn[data-action]').forEach(button => {
             const [label, path] = chartIcons[button.dataset.action] || [];
@@ -126,7 +126,8 @@
         // First visit only: a short strip over the explorer naming the three gestures and
         // where to find the rest. Any interaction with the explorer dismisses it for good.
         const showHint = () => {
-            const frame = document.querySelector('#dimension-experience .experience-stage-frame');
+            // Only the size explorers use these gestures.
+            const frame = document.querySelector('#dimension-experience.experience--spatial .experience-stage-frame');
             if (storage.get('scale-hint-seen') || !frame || frame.querySelector('.app-hint')) return;
             const hint = document.createElement('div');
             hint.className = 'app-hint';

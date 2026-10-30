@@ -388,17 +388,14 @@ class PlotRenderer {
         
         // Vertical grid lines - use the same tick values as axes for consistency
         const tickValues = this.generateAxisTicks();
-        const yDomain = this.yScale.domain();
-        const yTop = this.yScale(yDomain[1]);
-        const yBottom = this.yScale(0);
         this.gridGroup.selectAll('.grid-line-x')
             .data(tickValues)
             .enter().append('line')
             .attr('class', 'grid-line')
             .attr('x1', d => this.xScale(d))
             .attr('x2', d => this.xScale(d))
-            .attr('y1', yTop) // Top horizontal axis
-            .attr('y2', yBottom) // Bottom horizontal axis
+            .attr('y1', -this.margin.top) // Top horizontal axis
+            .attr('y2', this.height + this.margin.bottom) // Bottom horizontal axis
             .style('pointer-events', 'none'); // Don't block zoom events
         
         // Horizontal grid lines (simplified)
@@ -460,9 +457,6 @@ class PlotRenderer {
         // Draw vertical lines first (behind everything else)
         const verticalLinesGroup = this.mainGroup.append('g')
             .attr('class', 'vertical-lines-group');
-        const yDomain = this.yScale.domain();
-        const yTop = this.yScale(yDomain[1]);
-        const yBottom = this.yScale(0);
         
         verticalLinesGroup.selectAll('.vertical-line')
             .data(positionedItems)
@@ -470,8 +464,8 @@ class PlotRenderer {
             .attr('class', 'vertical-line')
             .attr('x1', d => this.xScale(d.convertedValue))
             .attr('x2', d => this.xScale(d.convertedValue))
-            .attr('y1', yTop) // Align with top horizontal axis
-            .attr('y2', yBottom) // Align with bottom horizontal axis
+            .attr('y1', -this.margin.top) // Align with top horizontal axis
+            .attr('y2', this.height + this.margin.bottom) // Align with bottom horizontal axis
             .attr('stroke', CONFIG.POINT_FILL_COLOR)
             .attr('stroke-width', CONFIG.VERTICAL_LINE_STROKE_WIDTH)
             .attr('stroke-opacity', CONFIG.VERTICAL_LINE_OPACITY)
@@ -845,6 +839,9 @@ class PlotRenderer {
             this.app.updateStickyAxis();
         }
         this.app.overview?.update();
+        // A new dimension or unit: show the panel's prompt unless its item is still charted.
+        if (this.app.chartPanelMode?.() && !positionedItems?.some?.(item => item.name === this.app.tooltipItem?.name))
+            this.app.showChartPanelPlaceholder();
     }
     
     updatePlotAfterZoom() {
@@ -890,9 +887,6 @@ class PlotRenderer {
         this.updateGrid();
         
         // Update vertical lines and item positions using existing layout data
-        const yDomain = this.yScale.domain();
-        const yTop = this.yScale(yDomain[1]);
-        const yBottom = this.yScale(0);
         
         // Update item positions based on new scale
         // Use yScale to convert yPosition (which is in domain units) to screen coordinates
@@ -910,8 +904,8 @@ class PlotRenderer {
         this.mainGroup.selectAll('.vertical-line')
             .attr('x1', d => this.xScale(d.convertedValue))
             .attr('x2', d => this.xScale(d.convertedValue))
-            .attr('y1', yTop)
-            .attr('y2', yBottom)
+            .attr('y1', -this.margin.top)
+            .attr('y2', this.height + this.margin.bottom)
             .attr('stroke-opacity', CONFIG.VERTICAL_LINE_OPACITY);
         
         // Update label positions - labels should follow their points

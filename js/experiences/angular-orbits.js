@@ -8,7 +8,7 @@ const bodies = {
     'Mercury orbit around the Sun': ['nasa-mercury', 'nasa-sun', 'Sun'],
     'Moon orbit': ['nasa-moon', 'nasa-earth', 'Earth'],
     'Moon orbit around Earth': ['nasa-moon', 'nasa-earth', 'Earth'],
-    'ISS orbit': ['nasa-iss-length', 'nasa-earth', 'Earth']
+    'ISS orbit': ['sketchfab-iss-calebcram', 'nasa-earth', 'Earth']
 };
 
 export function orbitalAssets(item, entries) {

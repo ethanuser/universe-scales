@@ -18292,8 +18292,8 @@
       }
     },
     {
-      "id": "nasa-iss-length",
-      "sha256": "7007133694aa0bf5250972d023040e82b81eb2ba6944f72749ca02c4ef217ea6",
+      "id": "sketchfab-iss-calebcram",
+      "sha256": "bd3e22cc7680d14890133edd18c823b88ae80b58c299e67fa47e9c6baba2b652",
       "issues": {
         "numErrors": 0,
         "numWarnings": 0,
@@ -18304,30 +18304,38 @@
       },
       "info": {
         "version": "2.0",
-        "generator": "glTF-Transform v4.5.0",
-        "extensionsUsed": [
-          "KHR_materials_specular"
-        ],
+        "generator": "Sketchfab-12.66.0",
         "resources": [
           {
             "pointer": "/buffers/0",
             "mimeType": "application/gltf-buffer",
             "storage": "glb",
-            "byteLength": 822496
+            "byteLength": 432068
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 1024,
+              "format": "rgb",
+              "bits": 8
+            }
           }
         ],
-        "animationCount": 4,
-        "materialCount": 18,
+        "animationCount": 0,
+        "materialCount": 1,
         "hasMorphTargets": false,
         "hasSkins": false,
-        "hasTextures": false,
+        "hasTextures": true,
         "hasDefaultScene": true,
-        "drawCallCount": 29,
-        "totalVertexCount": 24441,
-        "totalTriangleCount": 39289,
-        "maxUVs": 0,
+        "drawCallCount": 1,
+        "totalVertexCount": 7307,
+        "totalTriangleCount": 4308,
+        "maxUVs": 1,
         "maxInfluences": 0,
-        "maxAttributes": 2
+        "maxAttributes": 3
       }
     },
     {

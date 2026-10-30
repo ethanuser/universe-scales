@@ -1,5 +1,20 @@
 # Agent Handoff Guide
 
+## 2026-10-29 chart details panel, zoom limit, ISS (Claude)
+
+- Chart view (desktop): no floating tooltips. `#tooltip` docks as a left panel (`tooltip--panel`,
+  `chartPanelMode()`); hover previews, click pins until another item is clicked; leaving an item
+  keeps it shown; `showChartPanelPlaceholder()` prompts when nothing is selected. Touch keeps the
+  old pinned tooltip.
+- Chart lines (item and grid) span the full SVG height and meet the pinned axes; the plot
+  container has no padding.
+- Locked selection: zoom-in is capped 1 decade past the framing (`lockLimit` in `navigation`) and
+  no longer releases; zoom-out still releases after 0.5 decades.
+- ISS: `sketchfab-iss-calebcram` (CC BY, textured, 4.3k tris) replaced the grey NASA model; the
+  angular "ISS orbit" view uses it too (`angular-orbits.js`).
+- Icons: full screen back to corner brackets; the chart's reset is a "home" icon. The first-visit
+  gesture hint shows only in the size explorers.
+
 ## 2026-10-29 chart v3, no re-lock, icons (Claude)
 
 - Chart axes: `setupStickyTopAxis` now draws two pinned axes (`#sticky-top-axis`,

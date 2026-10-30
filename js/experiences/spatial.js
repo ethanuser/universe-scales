@@ -256,7 +256,7 @@
                     // An explicit selection holds while its object stays near the size it was
                     // framed at; zooming further away deselects it.
                     const delta = pinnedExponent == null ? 0 : (camera.value - pinnedExponent) * (options.exponentFactor ?? 1);
-                    if (pinnedFocus != null && (delta > 0.5 || delta < -1.5)) {
+                    if (pinnedFocus != null && delta > 0.5) {
                         // Freeze the current view first so releasing the lock never jumps.
                         anchor = { ...panAt(camera.value), exponent: camera.value, manual: true };
                         pinnedFocus = pinnedExponent = null;
@@ -295,8 +295,13 @@
             frame = moving || focusing || panGlide ? requestAnimationFrame(animate) : null;
             if (!frame) previousTime = null;
         };
+        // While a selection is locked, zooming in stops LOCK_ZOOM_IN decades past its framing.
+        const LOCK_ZOOM_IN = 1;
+        const lockLimit = value => pinnedFocus != null && pinnedExponent != null && layoutOptions().radial
+            ? Math.max(value, pinnedExponent - LOCK_ZOOM_IN / (layoutOptions().exponentFactor ?? 1)) : value;
         const aim = (value, focusIndex, focusWindow = 0.3) => {
             freezePan();
+            if (focusIndex == null) value = lockLimit(value);
             // Radial views keep an explicit selection through small manual zooms (see apply).
             if (focusIndex != null || !layoutOptions().radial) {
                 pinnedFocus = focusIndex ?? null;
@@ -386,7 +391,7 @@
                 if (frame) cancelAnimationFrame(frame);
                 frame = null; previousTime = null;
                 const f = layoutOptions().exponentFactor ?? 1;
-                camera.snap(clamp(camera.value - Math.log10(ratio) / f, camera.min, camera.max));
+                camera.snap(lockLimit(clamp(camera.value - Math.log10(ratio) / f, camera.min, camera.max)));
                 apply();
             },
             onEnd: () => {}
