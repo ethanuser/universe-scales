@@ -96,5 +96,17 @@
     {"name":"JADES-GS-z14-0","prior_audit":"handoff/deepsky3d/REPORT.md","blocker":"Imaging/spectroscopy do not provide genuine 3D galaxy geometry or a source model for observer distance."}
   ],
   "acquisitions": [],
-  "qualification_policy": "Do not equate a relevant image, public download, schematic, analytic model, or different species with a reusable calibrated 3D source. This ledger does not claim all sources have been exhausted."
+  "qualification_policy": "Do not equate a relevant image, public download, schematic, analytic model, or different species with a reusable calibrated 3D source. This ledger does not claim all sources have been exhausted.",
+  "review_continuations": [
+    {
+      "job": "length3d3",
+      "report": "handoff/length3d3/REPORT.md",
+      "ledger": "handoff/length3d3/ledger.json",
+      "items": 46,
+      "new_targeted_search_items": 40,
+      "prior_only_items": 6,
+      "numeric_deposits_inspected": 2,
+      "models_registered": 0
+    }
+  ]
 }

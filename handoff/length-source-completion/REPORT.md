@@ -1,5 +1,10 @@
 # Current Length photo-only source ledger
 
+**Later length3d3 continuation:** [report](../length3d3/REPORT.md) and
+[46-item ledger](../length3d3/ledger.json). That separate pass records new
+repository searches and numerical scope inspection of two CC BY deposits;
+no additional model qualified. The historical reconciliation below is retained.
+
 **Checked:** 2026-10-29 against `/private/tmp/length-coverage-current.json`,
 Main's saved production coverage output. Its `.photoOnly` array has **46 names**;
 the JSON ledger has the exact same 46-name set and order, with no missing or

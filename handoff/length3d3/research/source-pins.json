@@ -1,0 +1,71 @@
+{
+  "checked_date": "2026-10-29",
+  "policy": "Scope inspection only; no source data bundled, no model created or registered.",
+  "silk": {
+    "record": "https://zenodo.org/records/14283026",
+    "metadata_url": "https://zenodo.org/api/records/14283026",
+    "license_id": "cc-by-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "title": "Exploring the Unique Properties and Superior Schwann Cell Guiding Abilities of Spider Egg Sac Silk",
+    "files": [
+      {
+        "name": "AFM_MA_01.spm",
+        "url": "https://zenodo.org/api/records/14283026/files/AFM_MA_01.spm/content",
+        "bytes": 3641526,
+        "sha256": "1cc1eaf64eb235fde4dfcb235ad186fb8a19bed7b4ec24fa70ca1456e84c05cb",
+        "publisher_checksum": "md5:364805b0bcd1291840e61ab8cf5b7917"
+      },
+      {
+        "name": "AFM_MA_02.spm",
+        "url": "https://zenodo.org/api/records/14283026/files/AFM_MA_02.spm/content",
+        "bytes": 910879,
+        "sha256": "65d54f6d22184a3210ff2be676bd0959438e2248253b97ead17455042db057d6",
+        "publisher_checksum": "md5:ea5d9a0f7185f7fd93f5334a902cc8ec"
+      },
+      {
+        "name": "AFM_MA_03.spm",
+        "url": "https://zenodo.org/api/records/14283026/files/AFM_MA_03.spm/content",
+        "bytes": 3641900,
+        "sha256": "e3903a95f2025742910f777eb90c5d08116d52f1fbabf48acf4e2f90b8039fc7",
+        "publisher_checksum": "md5:132a200d1b5e7b1293882ebb696a8ad7"
+      },
+      {
+        "name": "AFM_TU_01.spm",
+        "url": "https://zenodo.org/api/records/14283026/files/AFM_TU_01.spm/content",
+        "bytes": 3641989,
+        "sha256": "d9107d501be3953ac503fcf81ff172b81529844fdc109ee7ca50b5d30022a371",
+        "publisher_checksum": "md5:20fdb66a52e6c8431567ab34a63fada0"
+      },
+      {
+        "name": "AFM_TU_02.spm",
+        "url": "https://zenodo.org/api/records/14283026/files/AFM_TU_02.spm/content",
+        "bytes": 910815,
+        "sha256": "3a40993ebfb2980b21676e5d0c69087d5d5405acaa890db93f8409ebe3d52264",
+        "publisher_checksum": "md5:b39868756e89cb8c618ba561dff43256"
+      },
+      {
+        "name": "AFM_TU_03.spm",
+        "url": "https://zenodo.org/api/records/14283026/files/AFM_TU_03.spm/content",
+        "bytes": 3641928,
+        "sha256": "8a58b86095fbe558d40aed7267fe060e279391deef995fee5d9e00d33d6e70e8",
+        "publisher_checksum": "md5:e768e0d20449b83b119e39c1bc298064"
+      }
+    ]
+  },
+  "miras": {
+    "record": "https://zenodo.org/records/7472598",
+    "metadata_url": "https://zenodo.org/api/records/7472598",
+    "license_id": "cc-by-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "title": "A three-dimensional map of the Milky Way using 66,000 Mira variable stars",
+    "files": [
+      {
+        "name": "Iwanek2023_Table1_GalMirasDist.txt",
+        "url": "https://zenodo.org/api/records/7472598/files/Iwanek2023_Table1_GalMirasDist.txt/content",
+        "bytes": 22043244,
+        "sha256": "293eab845998412e67cecdd5a4f6da4bf95683615c9a15650abc2bda79b57a29",
+        "publisher_checksum": "md5:d8a7063a5df7bd94f4a48289ac23e20a"
+      }
+    ]
+  }
+}
