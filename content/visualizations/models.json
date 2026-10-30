@@ -14451,7 +14451,7 @@
           "edges": 3168,
           "components": 1,
           "boundaryEdges": 0,
-          "tolerance": 9.364173514387388e-8,
+          "tolerance": 9.364173514387388e-08,
           "extent": [
             0.9364173514387388,
             0.2416084647462641,
@@ -14714,7 +14714,7 @@
           "edges": 13536,
           "components": 1,
           "boundaryEdges": 0,
-          "tolerance": 2e-7,
+          "tolerance": 2e-07,
           "extent": [
             2,
             2,
@@ -14764,7 +14764,7 @@
       },
       "geometry": "mesh",
       "representation": "scientific-agency-illustration",
-      "note": "NASA VTAD’s original oblate textured Saturn globe. The catalog mean diameter is calibrated against the source’s equatorial-diameter scale, preserving polar flattening. Rings are shown at their true relative scale under the separate Saturn’s Rings item; including them here would exceed the explorer’s 1.3× body-diameter extent rule. The texture is an illustrative global mosaic, not current weather. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
+      "note": "NASA VTAD\u2019s original oblate textured Saturn globe. The catalog mean diameter is calibrated against the source\u2019s equatorial-diameter scale, preserving polar flattening. Rings are shown at their true relative scale under the separate Saturn\u2019s Rings item; including them here would exceed the explorer\u2019s 1.3\u00d7 body-diameter extent rule. The texture is an illustrative global mosaic, not current weather. For this Volume view, the enclosed source mesh is uniformly scaled to the volume derived from JPL's equivalent-volume mean radius. No new geometry is created. Rings, satellites and any atmosphere beyond the reference globe are excluded.",
       "source": "https://science.nasa.gov/resource/saturn-3d-model/",
       "author": "NASA Visualization Technology Applications and Development (VTAD)",
       "reference": "content/visualizations/models/sources/nasa-saturn-globe-length.md",
@@ -14806,7 +14806,7 @@
           "edges": 4608,
           "components": 1,
           "boundaryEdges": 0,
-          "tolerance": 0.00009999999999999999,
+          "tolerance": 9.999999999999999e-05,
           "extent": [
             1000,
             902.0380249023438,
@@ -14910,7 +14910,7 @@
           "edges": 9072,
           "components": 1,
           "boundaryEdges": 0,
-          "tolerance": 0.00009999999999999999,
+          "tolerance": 9.999999999999999e-05,
           "extent": [
             1000,
             977.0729646029276,
@@ -15015,7 +15015,7 @@
           "edges": 9072,
           "components": 1,
           "boundaryEdges": 0,
-          "tolerance": 0.00009999999999999999,
+          "tolerance": 9.999999999999999e-05,
           "extent": [
             1000,
             982.9189727036087,
@@ -15152,6 +15152,285 @@
           "url": "https://ssd.jpl.nasa.gov/planets/phys_par.html"
         }
       ]
+    },
+    {
+      "id": "measured-great-pyramid",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://www.ronaldbirdsall.com/gizeh/petrie/c7.html",
+      "basis_url": "https://www.ronaldbirdsall.com/gizeh/petrie/c7.html",
+      "basis_label": "Petrie (1883), The Pyramids and Temples of Gizeh, ch. 7",
+      "link_label": "Model basis",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Great Pyramid of Giza"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measured_reconstruction",
+      "presentation": {
+        "reference_size": 146.6,
+        "measure_axis": "y",
+        "layout_width_factor": 2.2,
+        "yaw": 30,
+        "color_gain": 0.85
+      },
+      "note": "The Great Pyramid as built, from survey measurements: a square base 230.33 m on a side (Petrie's mean of the four casing-base sides) and an original height of 146.6 m, giving the measured face slope of about 51.8 degrees. Faces show the smooth Tura-limestone casing that has since been stripped; the capstone, the slight concavity of the faces (under 1 m) and the present-day stepped core are not modeled.",
+      "processing": {
+        "script": "scripts/build_measured_models.py",
+        "model": "great-pyramid"
+      },
+      "src": "content/visualizations/models/measured-great-pyramid.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 2828,
+      "sha256": "89e571391fe0b91722b546b16732abd36f5aae81ba263abfcb6c20eda7213b13",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 6,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "measured-inner-core",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://doi.org/10.1016/0031-9201(81)90046-7",
+      "basis_url": "https://doi.org/10.1016/0031-9201(81)90046-7",
+      "basis_label": "PREM: Dziewonski & Anderson (1981)",
+      "link_label": "Model basis",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Earth's Inner Core"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measured_reconstruction",
+      "presentation": {
+        "reference_size": 2443.0,
+        "measure_axis": "y",
+        "yaw": -45,
+        "pitch": 12
+      },
+      "note": "Earth's solid inner core at the radius of the Preliminary Reference Earth Model, 1,221.5 km (2,443 km across), cut open by a quarter to show the innermost inner core, a central region about 650 km in radius where seismic waves travel with a different directional dependence. Colors are illustrative of an iron-nickel solid near 5,000-6,000 K; the innermost-core boundary is a seismological estimate, not a sharp surface.",
+      "processing": {
+        "script": "scripts/build_measured_models.py",
+        "model": "inner-core"
+      },
+      "src": "content/visualizations/models/measured-inner-core.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 253324,
+      "sha256": "3cf4b61076195da0bb64b107365f8698de803381dccaf92f912e1d57c8080dd4",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 6,
+      "triangle_count": 10752,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "measured-kola-borehole",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole",
+      "basis_url": "https://en.wikipedia.org/wiki/Kola_Superdeep_Borehole",
+      "basis_label": "Kozlovsky (ed., 1984), The Superdeep Well of the Kola Peninsula",
+      "link_label": "Model basis",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Kola Superdeep Borehole"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "measured_reconstruction",
+      "presentation": {
+        "reference_size": 12262.0,
+        "measure_axis": "y",
+        "layout_width_factor": 0.4,
+        "yaw": 25
+      },
+      "note": "A slice of the rock column drilled by borehole SG-3, to its final depth of 12,262 m (1989). The upper 6,842 m are Proterozoic volcanic and sedimentary rocks of the Pechenga complex; below lie Archean gneisses, granites and amphibolites. The bottom-hole temperature was about 180 C. The hole itself is about 0.2 m wide and is drawn 40 m wide to be visible; the slab's width is arbitrary context.",
+      "processing": {
+        "script": "scripts/build_measured_models.py",
+        "model": "kola-borehole"
+      },
+      "src": "content/visualizations/models/measured-kola-borehole.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 7332,
+      "sha256": "8af6c3aad4b783006df317d501ec277560cc642cd2b6a9d22ce528c3f410cdb8",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 4,
+      "triangle_count": 48,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "measured-dvd-tracks",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://ecma-international.org/publications-and-standards/standards/ecma-267/",
+      "basis_url": "https://ecma-international.org/publications-and-standards/standards/ecma-267/",
+      "basis_label": "ECMA-267 (DVD read-only disk)",
+      "link_label": "Model basis",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "DVD Track Pitch"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "specification_diagram",
+      "presentation": {
+        "reference_size": 0.74,
+        "measure_axis": "x",
+        "display_extent_factor": 4.6,
+        "layout_width_factor": 4.4,
+        "pitch": 62,
+        "yaw": -20
+      },
+      "note": "Three tracks of a DVD data layer seen from above, at the standard 0.74 um track pitch. Pit and land lengths are whole multiples of the 0.133 um channel bit within the EFMPlus run-length limits (3T-11T and 14T), so the shortest pit is 0.40 um; the sequence is a deterministic random example, not real data. Pit width (~0.32 um) and depth (~105 nm, a quarter wavelength of 650 nm light in polycarbonate) are typical values; pits are drawn as boxes.",
+      "processing": {
+        "script": "scripts/build_measured_models.py",
+        "model": "dvd-tracks"
+      },
+      "src": "content/visualizations/models/measured-dvd-tracks.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 8520,
+      "sha256": "d03da915319d897b13da6f43ff183b71534390b88634618543f9cb5c9c1c370c",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 84,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "measured-bluray-tracks",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://en.wikipedia.org/wiki/Blu-ray",
+      "basis_url": "https://en.wikipedia.org/wiki/Blu-ray",
+      "basis_label": "Blu-ray Disc Association BD-ROM white paper",
+      "link_label": "Model basis",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "Blu-ray Track Pitch"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "specification_diagram",
+      "presentation": {
+        "reference_size": 0.32,
+        "measure_axis": "x",
+        "display_extent_factor": 4.7,
+        "layout_width_factor": 4.4,
+        "pitch": 62,
+        "yaw": -20
+      },
+      "note": "Three tracks of a Blu-ray data layer seen from above, at the standard 0.32 um track pitch. Pit and land lengths are whole multiples of the 74.5 nm channel bit (25 GB layer) within the 1-7PP run-length limits (2T-8T), so the shortest pit is 0.149 um; the sequence is a deterministic random example, not real data. Pit width (~0.14 um) and depth (~65 nm) are typical values; pits are drawn as boxes.",
+      "processing": {
+        "script": "scripts/build_measured_models.py",
+        "model": "bluray-tracks"
+      },
+      "src": "content/visualizations/models/measured-bluray-tracks.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 9464,
+      "sha256": "4e296efde7f3134353bd5b91e0b189595008725ca5000f523a29ab4923fd5ca3",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 2,
+      "triangle_count": 96,
+      "animations": 0,
+      "skins": 0
+    },
+    {
+      "id": "measured-ton618-horizon",
+      "author": "Universe Scales",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://en.wikipedia.org/wiki/TON_618",
+      "basis_url": "https://en.wikipedia.org/wiki/TON_618",
+      "basis_label": "Ge et al. (2019): TON 618 mass 4.07e10 solar masses",
+      "link_label": "Model basis",
+      "license_files": [
+        "licenses/CC0-1.0.txt"
+      ],
+      "matches": {
+        "length": [
+          "TON 618 Event Horizon"
+        ]
+      },
+      "geometry": "mesh",
+      "representation": "derived_quantity",
+      "presentation": {
+        "reference_size": 2.0,
+        "measure_axis": "y"
+      },
+      "note": "The event horizon of the quasar TON 618's black hole for a mass of 4.07e10 suns: a Schwarzschild radius r = 2GM/c^2 of 1.2e14 m, so 2.4e14 m (1,600 au) across. Drawn to the same scale in front of it are Neptune's orbit (30 au) and the heliopause where Voyager 1 crossed it (121.6 au). The horizon is not a surface one could see; the mass estimate is uncertain by a factor of a few.",
+      "processing": {
+        "script": "scripts/build_measured_models.py",
+        "model": "ton618-horizon"
+      },
+      "src": "content/visualizations/models/measured-ton618-horizon.glb",
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "closed_volume_checked": false,
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 333280,
+      "sha256": "9abfc0fcc61b194ddedfdf73396418d15572f05efca7dbc5164a758ff5c0ecef",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 3,
+      "triangle_count": 17408,
+      "animations": 0,
+      "skins": 0
     }
   ],
   "coverage_gaps": [

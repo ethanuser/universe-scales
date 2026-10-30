@@ -23708,6 +23708,673 @@
         "maxInfluences": 0,
         "maxAttributes": 2
       }
+    },
+    {
+      "id": "volume-sand-atlas-ooid",
+      "sha256": "fa38bd147e40a1b3fb36c296f9611701b691b1884c0f9516063e17cbf6643e13",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales Sand Atlas STL importer",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 107472
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 2986,
+        "totalTriangleCount": 5968,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "volume-educational-rbc",
+      "sha256": "775b9af388386acab5eec230407e8f4b2771ef442bda21f0072a02b23f6eab2c",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Sketchfab-16.72.0",
+        "extensionsUsed": [
+          "KHR_materials_specular"
+        ],
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 116100
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 512,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 1058,
+        "totalTriangleCount": 2112,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "volume-mercury",
+      "sha256": "8fc027684b074e73f4beb378b22a0ca168f782b6e2afc16e53a6e746deb7e7cf",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 240492
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 2034,
+        "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "volume-venus",
+      "sha256": "b1329976fd34ce56dce8842d31e6d6e2ade3dda75d146eb6ced1eb9ec37ce5ea",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 157804
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 3062,
+        "totalTriangleCount": 6048,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "volume-mars",
+      "sha256": "6eff4a3d7b1c1ea49b5028cf2a64e0f22586d927be35a1e3e140b82a0c4c71c1",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1440x720.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales NASA Mars map globe",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 549876
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1440,
+              "height": 720,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 4753,
+        "totalTriangleCount": 9024,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "volume-saturn",
+      "sha256": "c9d20445ffe62d808f99f820c95cf3925ca3f165a33597b49b05305855adbdf1",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 1,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "IMAGE_NPOT_DIMENSIONS",
+            "message": "Image has non-power-of-two dimensions: 1024x768.",
+            "severity": 2,
+            "pointer": "/images/0"
+          }
+        ],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales reuse of NASA VTAD Saturn",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 702720
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 768,
+              "format": "rgba",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 1649,
+        "totalTriangleCount": 3072,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "volume-uranus",
+      "sha256": "0d0b8cdb16495c6319cc377871e6d84d235c60be02a5c4ebe3e241a747c80ffa",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 150980
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 3256,
+        "totalTriangleCount": 6048,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "volume-neptune",
+      "sha256": "f50490aa0f092595cd2be1eed0194073d446483a99f72d5e49764abfce8c67a5",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 192652
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 3256,
+        "totalTriangleCount": 6048,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "volume-pluto",
+      "sha256": "b66471a0e831862b61acdc2984cc0aa9fb624f5d9fbc41cc73e3b1cd60198493",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Khronos Blender glTF 2.0 I/O",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 552956
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/jpeg",
+            "storage": "buffer-view",
+            "image": {
+              "width": 1024,
+              "height": 512,
+              "format": "rgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 10583,
+        "totalTriangleCount": 20448,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "measured-great-pyramid",
+      "sha256": "89e571391fe0b91722b546b16732abd36f5aae81ba263abfcb6c20eda7213b13",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales measured-model builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 1292
+          },
+          {
+            "pointer": "/images/0",
+            "mimeType": "image/png",
+            "storage": "buffer-view",
+            "image": {
+              "width": 8,
+              "height": 2048,
+              "format": "rgb",
+              "primaries": "srgb",
+              "transfer": "srgb",
+              "bits": 8
+            }
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 1,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 1,
+        "totalVertexCount": 18,
+        "totalTriangleCount": 6,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+      }
+    },
+    {
+      "id": "measured-inner-core",
+      "sha256": "3cf4b61076195da0bb64b107365f8698de803381dccaf92f912e1d57c8080dd4",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales measured-model builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 248688
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 3,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 6,
+        "totalVertexCount": 7674,
+        "totalTriangleCount": 10752,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "measured-kola-borehole",
+      "sha256": "8af6c3aad4b783006df317d501ec277560cc642cd2b6a9d22ce528c3f410cdb8",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales measured-model builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 3744
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 4,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 4,
+        "totalVertexCount": 144,
+        "totalTriangleCount": 48,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "measured-dvd-tracks",
+      "sha256": "d03da915319d897b13da6f43ff183b71534390b88634618543f9cb5c9c1c370c",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales measured-model builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 6552
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 252,
+        "totalTriangleCount": 84,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "measured-bluray-tracks",
+      "sha256": "4e296efde7f3134353bd5b91e0b189595008725ca5000f523a29ab4923fd5ca3",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales measured-model builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 7488
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 2,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 2,
+        "totalVertexCount": 288,
+        "totalTriangleCount": 96,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
+    },
+    {
+      "id": "measured-ton618-horizon",
+      "sha256": "9abfc0fcc61b194ddedfdf73396418d15572f05efca7dbc5164a758ff5c0ecef",
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      },
+      "info": {
+        "version": "2.0",
+        "generator": "Universe Scales measured-model builder",
+        "resources": [
+          {
+            "pointer": "/buffers/0",
+            "mimeType": "application/gltf-buffer",
+            "storage": "glb",
+            "byteLength": 330360
+          }
+        ],
+        "animationCount": 0,
+        "materialCount": 3,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": false,
+        "hasDefaultScene": true,
+        "drawCallCount": 3,
+        "totalVertexCount": 9413,
+        "totalTriangleCount": 17408,
+        "maxUVs": 0,
+        "maxInfluences": 0,
+        "maxAttributes": 2
+      }
     }
   ]
 }
