@@ -1,0 +1,82 @@
+{
+  "method": "Vendored production GLTFLoader with placeholder image decoding, exact per-vertex bounds and registry rest pose. Closed exterior volume checked only for the sugar scan. Equivalent-span proxies checked by longest source span, never treated as enclosed-volume measurements. CPU geometry only; no WebGL, perspective, explorer or mobile review.",
+  "models": [
+    {
+      "id": "volume3d-classic-bathtub",
+      "names": [
+        "Bathtub",
+        "Bathtub volume"
+      ],
+      "bytes": 1182256,
+      "triangles": 57391,
+      "rawExtent": [
+        1.748028039932251,
+        0.7787716738534338,
+        0.7764830589294324
+      ],
+      "normalizedLongestSpan": 1,
+      "restingExtent": 0.974294070615149,
+      "normalizedEnclosedVolume": null,
+      "semantics": "cubic_linear_equivalent_approximation",
+      "flatShadedMeshes": 0,
+      "pass": true
+    },
+    {
+      "id": "volume3d-nih-coronavirus",
+      "names": [
+        "SARS-CoV-2 virion volume"
+      ],
+      "bytes": 682504,
+      "triangles": 50522,
+      "rawExtent": [
+        104.62845611572266,
+        90.29337310791016,
+        107.39584732055664
+      ],
+      "normalizedLongestSpan": 1,
+      "restingExtent": 0.9742318602266451,
+      "normalizedEnclosedVolume": null,
+      "semantics": "cubic_linear_equivalent_approximation",
+      "flatShadedMeshes": 1,
+      "pass": true
+    },
+    {
+      "id": "volume3d-nih-influenza",
+      "names": [
+        "Influenza virion volume"
+      ],
+      "bytes": 1035680,
+      "triangles": 70841,
+      "rawExtent": [
+        1.7428080439567566,
+        1.9759460091590881,
+        1.7253859639167786
+      ],
+      "normalizedLongestSpan": 1,
+      "restingExtent": 1,
+      "normalizedEnclosedVolume": null,
+      "semantics": "cubic_linear_equivalent_approximation",
+      "flatShadedMeshes": 1,
+      "pass": true
+    },
+    {
+      "id": "volume3d-sugar-scan",
+      "names": [
+        "Sugar cube volume"
+      ],
+      "bytes": 982808,
+      "triangles": 53660,
+      "rawExtent": [
+        17.693063511713763,
+        17.3885655480466,
+        20.21099763880104
+      ],
+      "normalizedLongestSpan": 1.287723447716433,
+      "restingExtent": 1.1272957997001403,
+      "normalizedEnclosedVolume": 0.9999999999999918,
+      "semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "flatShadedMeshes": 0,
+      "pass": true
+    }
+  ]
+}

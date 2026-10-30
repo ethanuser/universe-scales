@@ -1,0 +1,56 @@
+[
+  {
+    "id": "volume3d-sugar-scan",
+    "names": [
+      "Sugar cube volume"
+    ],
+    "calibration": "closed",
+    "source": "https://sketchfab.com/3d-models/sugar-cube-3d-scan-no-texture-0227084e92ed4dc79e48e0bf271edd32",
+    "author": "arkify on Sketchfab",
+    "license": "CC-BY-4.0",
+    "sketchfab_uid": "0227084e92ed4dc79e48e0bf271edd32",
+    "source_sha256": "6c667f3e9456db1ca0fd8eca13d73f65e954884e7ef63f3d5815b812eb4767d7",
+    "source_bytes": 1239892,
+    "staged_sha256": "021dca72c7715c9b20b342eefe98a776201ed815ebd4ff0e5060b0f16218c87b",
+    "processed_sha256": "67bcb698de521258d857bff621d3fd5d149974fad58761d5481770002364ce78"
+  },
+  {
+    "id": "volume3d-classic-bathtub",
+    "names": [
+      "Bathtub",
+      "Bathtub volume"
+    ],
+    "calibration": "capacity",
+    "source": "https://sketchfab.com/3d-models/classic-bathtub-7427e2c0c32c44b89deb058f6583742a",
+    "author": "renderartestudio on Sketchfab",
+    "license": "CC-BY-4.0",
+    "sketchfab_uid": "7427e2c0c32c44b89deb058f6583742a",
+    "source_sha256": "4954b2052f65de381cad0dd4d470c34e77b3508d1bdf9c11a551d64d40885a26",
+    "source_bytes": 1022996,
+    "staged_sha256": "a9a5f7e4ba458cd7ac310bf0d80336cf1533c3522a271531e0edd99f2015cf30",
+    "processed_sha256": "81596b1064dbfe45eae5d3fa71ccb2351d62c831e3716aa12f00f2dab24f0046"
+  },
+  {
+    "id": "volume3d-nih-influenza",
+    "names": [
+      "Influenza virion volume"
+    ],
+    "calibration": "span",
+    "source": "https://3d.nih.gov/entries/3DPX-013373",
+    "download_url": "https://3d.nih.gov/api/submissions/17244/runs/2e7bbb59-6917-4533-b94e-a14afe44f578/output-files/385370",
+    "author": "Kristen Browne / NIAID, via NIH 3D",
+    "license": "CC-BY (version unspecified in NIH source metadata)",
+    "source_sha256": "2fb62fa7544538e6d304901b0e690abfc8beffc9babf5b1772c67641eb2c54e8",
+    "source_bytes": 5997144,
+    "processed_sha256": "401dedde4f5b2337e756edd88d451c9695c39045fbe1ca18cf3ecf417204d719"
+  },
+  {
+    "id": "volume3d-nih-coronavirus",
+    "names": [
+      "SARS-CoV-2 virion volume"
+    ],
+    "calibration": "span",
+    "reuse": "coronavirus-sars-cov-2",
+    "processed_sha256": "00a3ea0417a8425d284383085cebd8e36af5135e46811551f2b8f46d48d2e5c2"
+  }
+]

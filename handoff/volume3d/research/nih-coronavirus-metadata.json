@@ -1,0 +1,43 @@
+{
+  "source": "https://3d.nih.gov/api/entries/3DPX-013323",
+  "checked": "2026-10-29",
+  "entryId": 13323,
+  "threedpxId": "3DPX-013323",
+  "submissionId": 17182,
+  "metadata": {
+    "title": "SARS CoV-2 Virion (NIAID)",
+    "license": "CC-BY",
+    "description": "<p><strong>General:</strong></p>\r\n\r\n<p>This SARS-CoV2 Virion model was created based on the latest available data in the Protein Data Bank (PDB) and Imaging studies conducted by NIAID labs.&nbsp; The orange spikes represent the open, active form.&nbsp; The beige spikes represent the close, inactive state.&nbsp; This model will continue to be updated as we discover more about the virus.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Model Creation Details:</strong></p>\r\n\r\n<p><span><span>The viral prep used to infect cultured cells (Vero) came from one of the first U.S. patients. Vero cells were infected with SARS-COV-2 for 48 hours, then chemically fixed and embedded in resin for transmission electron microscopy. 150 nanometer resin sections were imaged in a T-12 electron microscope and several tilt-series were acquired for 3D reconstruction. Virus particles were segmented from the 3D volumes and analyzed for size, shape, and spike distribution. Multiple transmission electron micrographs indicate virus particles can vary in shape, from flatter discs to somewhat spherical envelopes. </span></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span><span>The 3D segmentation model of a single viral particle was imported into Maxon C4D, and scaled in a single axis to a representative shape. The C4D Spherify Deformer reduced the visual appearance of \u201cribs\u201d from the manual segmentation process, and a Shrink Warp Deformer and icosahedron sphere where used to optimize the mesh with evenly distributed polygons. A noise-generated Displacement Deformer added a bumpy, rounded texture to the viral envelope surface. </span></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span><span>Two spike protein models were imported representing open (PDB 6VSB, <a href=\"http://doi.org/10.2210/pdb6VSB/pdb\" target=\"_blank\">Wrapp et al., 2020</a>) and closed states (PDB 6VXX, <a href=\"http://doi.org/10.2210/pdb6VXX/pdb\" target=\"_blank\">Walls et al., 2020</a>) of a receptor-binding domain. These were scaled to match the representative spike size from the segmentation model, and the representative spike then removed. A C4D Cloner with Random and Push Apart Effectors where used to randomly distribute, rotate, and slightly scale the spike models in a 1:2 ratio on a smooth hidden inner envelope surface without Displacement. </span></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span><span>The model was then exported as FBX to Z-Brush for final optimization and coloring-coding.</span></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span><span>Contributors:</span></span></p>\r\n\r\n<ul>\r\n\t<li><span><span>Electron Microscopy Unit, Research Technologies Branch, Rocky Mountain Labs, NIAID</span></span></li>\r\n\t<li><span><span>Visual &amp; Medical Arts Unit, Research Technologies Branch, Rocky Mountain Labs, NIAID</span></span></li>\r\n\t<li><span><span>Biovisualization Program, </span></span>Bioinformatics and Computational Biosciences Branch<span><span>,&nbsp;</span></span>Office of Cyber Infrastructure and Computational Biology&nbsp;(OCICB), NIAID</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>UPDATE: A second model (SARSCOV2_THICK.xxx) has been added.&nbsp; The membrane was extruded slightly where it meets stems to provide more support for 3D printing.</p>\r\n",
+    "cadSoftware": "Cinema4D"
+  },
+  "outputFiles": [
+    {
+      "fileId": 386420,
+      "name": "SARSCOV2_Thick_NIH3D.glb",
+      "fileSize": 11274372,
+      "fileFormat": "GLB",
+      "runId": "20e70d77-195b-4032-bb74-2a8c59184a43"
+    },
+    {
+      "fileId": 386434,
+      "name": "SARSCOV2_Thick_NIH3D-mr.glb",
+      "fileSize": 53660728,
+      "fileFormat": "GLB",
+      "runId": "20e70d77-195b-4032-bb74-2a8c59184a43"
+    },
+    {
+      "fileId": 387309,
+      "name": "SARSCoV2Printing_NIH3D-mr.glb",
+      "fileSize": 59120136,
+      "fileFormat": "GLB",
+      "runId": "d8042e2e-9b2a-4e4a-a957-eb5db4b59205"
+    },
+    {
+      "fileId": 387333,
+      "name": "SARSCoV2Printing_NIH3D.glb",
+      "fileSize": 22847432,
+      "fileFormat": "GLB",
+      "runId": "d8042e2e-9b2a-4e4a-a957-eb5db4b59205"
+    }
+  ]
+}

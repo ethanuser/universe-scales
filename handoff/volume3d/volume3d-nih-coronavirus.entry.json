@@ -1,0 +1,72 @@
+{
+  "id": "volume3d-nih-coronavirus",
+  "source": "https://3d.nih.gov/entries/3DPX-013323",
+  "author": "Kristen Browne / NIAID, via NIH 3D Print Exchange",
+  "license": "CC-BY (version unspecified in NIH source metadata)",
+  "license_url": "https://3d.nih.gov/entries/3DPX-013323",
+  "source_sha256": "f1bff39b83418a83f5fc48bfbbcb693cd10b4d8aab3fe8e9e93af4550f9cef7b",
+  "source_bytes": 11274372,
+  "bytes": 682504,
+  "sha256": "00a3ea0417a8425d284383085cebd8e36af5135e46811551f2b8f46d48d2e5c2",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "mesh_count": 1,
+  "triangle_count": 50522,
+  "draw_calls": 1,
+  "matches": {
+    "volume": [
+      "SARS-CoV-2 virion volume"
+    ]
+  },
+  "geometry": "mesh",
+  "presentation": {
+    "reference_size": 107.39584732055664,
+    "layout_width_factor": 1.1,
+    "display_extent_factor": 1.1,
+    "focus_scale_factor": 1.1
+  },
+  "note": "NIAID's existing SARS-CoV-2 teaching model from NIH 3D, reused without any geometry or material changes. The source combines imaging-informed modeling with authored surface and spike placement; it is not an unmodified single-particle reconstruction. The complete model, including spikes, has its longest source span displayed at the cube root of the listed representative volume (an equivalent-volume span). This is not an enclosed mesh-volume measurement or a calibrated lipid-envelope volume. The separate Length entry retains its original envelope-diameter calibration.",
+  "processing": {
+    "operations": [
+      "Download SARSCOV2_Thick_NIH3D.glb from NIH 3D (submission 17182, run 20e70d77-195b-4032-bb74-2a8c59184a43, output-file 386420)",
+      "gltf-transform weld (merge duplicate vertices)",
+      "gltf-transform simplify --ratio 0.09 --error 0.01 (566,399 -> 50,522 triangles, vertex colors preserved through decimation)",
+      "gltf-transform prune + dedup",
+      "Measured envelope vs. full extent with a custom script (measure_corona.py) that classifies vertices by COLOR_0 (teal/blue = envelope, pale = spikes, orange = HE/membrane proteins) and compares mean envelope radius to overall bounding-box extent"
+    ],
+    "source_model_name": "SARS CoV-2 Virion (NIAID)",
+    "source_author": "kbrowne (NIAID)",
+    "nih_threedpx_id": "3DPX-013323",
+    "nih_submission_id": 17182,
+    "nih_output_file_id": 386420,
+    "download_url": "https://3d.nih.gov/api/submissions/17182/runs/20e70d77-195b-4032-bb74-2a8c59184a43/output-files/386420",
+    "script": "scripts/register_volume3d.mjs",
+    "volume_calibration": {
+      "script": "scripts/register_volume3d.mjs",
+      "source_glb_sha256": "00a3ea0417a8425d284383085cebd8e36af5135e46811551f2b8f46d48d2e5c2",
+      "source_model_id": "coronavirus-sars-cov-2",
+      "extent": [
+        104.62845611572266,
+        90.29337310791016,
+        107.39584732055664
+      ],
+      "referenceSize": 107.39584732055664,
+      "closedVolumeMeasured": false,
+      "method": "Longest native source span normalized to 1, so displayed span is V^(1/3). Equivalent-span illustration only; no enclosed, material or capacity volume measured."
+    }
+  },
+  "src": "content/visualizations/models/coronavirus-sars-cov-2.glb",
+  "license_files": [
+    "sources/volume3d-nih-coronavirus.md"
+  ],
+  "volume_semantics": "cubic_linear_equivalent_approximation",
+  "closed_volume_checked": false,
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "animations": 0,
+  "skins": 0,
+  "reference": "content/visualizations/models/sources/volume3d-nih-coronavirus.md",
+  "representation": "illustration"
+}

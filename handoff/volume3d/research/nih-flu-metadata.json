@@ -1,0 +1,22 @@
+{
+  "source": "https://3d.nih.gov/api/entries/3DPX-013373",
+  "checked": "2026-10-29",
+  "entryId": 13373,
+  "threedpxId": "3DPX-013373",
+  "submissionId": 17244,
+  "metadata": {
+    "title": "Influenza Virion (PathogenAR)",
+    "license": "CC-BY",
+    "description": "<p>This model was created for&nbsp;<a href=\"https://niaid.github.io/PathogenAR/flu_vaccine.html\">PathogenAR</a>, an augmented reality program being developed by the Biovisualization Program in the Bioinformatics and Computational Biosciences Branch in the Office of Cyber Infrastructure and Computational Biology at NIAID.</p>\r\n\r\n<p><span><span><span>Influenza comes in multiple types, with the main ones being Flu A and Flu B.&nbsp; In this cutaway view of an Influenza virion, two surface proteins are highlighted: Hemagglutinin (Red), and Neuraminidase (Yellow).&nbsp; These proteins determine the subtype of Flu A, e.g., H1N1.&nbsp; Other components include M1, M2, nucleoproteins, RNA, RNA Polymerase and various cytosolic proteins.</span></span></span></p>\r\n\r\n<p><strong>Included Files:</strong></p>\r\n\r\n<p>The \"App Version\" of the model is included as a .fbx file which is UV mapped and contains each component as a separate model.&nbsp; It is intended for use in Unity or other 3D applications.</p>\r\n\r\n<p>The other formats present are also not 3D printable as there will be floating pieces.&nbsp; They may nonetheless be used in other applications, but the components will not be separated as in the .fbx</p>\r\n\r\n<p>&nbsp;</p>\r\n",
+    "cadSoftware": "Zbrush"
+  },
+  "outputFiles": [
+    {
+      "fileId": 385370,
+      "name": "Influenza_0_NIH3D.glb",
+      "fileSize": 5997144,
+      "fileFormat": "GLB",
+      "runId": "2e7bbb59-6917-4533-b94e-a14afe44f578"
+    }
+  ]
+}

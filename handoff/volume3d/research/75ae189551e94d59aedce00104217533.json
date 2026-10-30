@@ -1,0 +1,21 @@
+{
+  "uid": "75ae189551e94d59aedce00104217533",
+  "name": "Bacterium",
+  "description": "A (somewhat) low-poly model of a bacterium. Very generic, but good for display / educational purposes. Modeled with Blender using the new hair geometry nodes (3.5+).",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "faceCount": 8570,
+  "vertexCount": 4553,
+  "archives": null,
+  "viewerUrl": "https://sketchfab.com/3d-models/bacterium-75ae189551e94d59aedce00104217533",
+  "createdAt": "2023-04-26T17:27:51.704817",
+  "publishedAt": "2023-04-26T17:33:39.744325",
+  "author": "andrewfrueh"
+}

@@ -1,0 +1,21 @@
+{
+  "uid": "2b63df13c7384f809c4a7ee10fd92605",
+  "name": "E_ Coli Cell",
+  "description": "Escherichia coli, abreviada como E. coli, es una bacteria que normalmente se encuentra en el intestino humano y de otros animales. La mayor\u00eda de las cepas son inofensivas, pero algunas pueden causar enfermedades. E. coli es utilizada en investigaci\u00f3n y biotecnolog\u00eda.",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "faceCount": 26998,
+  "vertexCount": 18124,
+  "archives": null,
+  "viewerUrl": "https://sketchfab.com/3d-models/e--coli-cell-2b63df13c7384f809c4a7ee10fd92605",
+  "createdAt": "2023-12-16T22:04:10.226888",
+  "publishedAt": "2023-12-16T22:41:27.292063",
+  "author": "bedonio"
+}

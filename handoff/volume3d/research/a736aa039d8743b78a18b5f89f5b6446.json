@@ -1,0 +1,21 @@
+{
+  "uid": "a736aa039d8743b78a18b5f89f5b6446",
+  "name": "Human Skin Epithelial Cell",
+  "description": "This is epihelial cell made in blender.",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "faceCount": 61440,
+  "vertexCount": 30724,
+  "archives": null,
+  "viewerUrl": "https://sketchfab.com/3d-models/human-skin-epithelial-cell-a736aa039d8743b78a18b5f89f5b6446",
+  "createdAt": "2023-07-23T03:44:57.570264",
+  "publishedAt": "2023-07-23T03:50:38.928392",
+  "author": "Brain_Diagno"
+}

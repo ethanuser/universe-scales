@@ -15431,6 +15431,202 @@
       "triangle_count": 17408,
       "animations": 0,
       "skins": 0
+    },
+    {
+      "source": "https://sketchfab.com/3d-models/classic-bathtub-7427e2c0c32c44b89deb058f6583742a",
+      "author": "renderartestudio on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/volume3d-classic-bathtub.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1182256,
+      "sha256": "81596b1064dbfe45eae5d3fa71ccb2351d62c831e3716aa12f00f2dab24f0046",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 5,
+      "triangle_count": 57391,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "4954b2052f65de381cad0dd4d470c34e77b3508d1bdf9c11a551d64d40885a26",
+      "source_bytes": 1022996,
+      "sketchfab_uid": "7427e2c0c32c44b89deb058f6583742a",
+      "id": "volume3d-classic-bathtub",
+      "matches": {
+        "volume": [
+          "Bathtub",
+          "Bathtub volume"
+        ]
+      },
+      "reference": "content/visualizations/models/sources/volume3d-classic-bathtub.md",
+      "note": "renderartestudio's ceramic clawfoot bathtub illustrates the listed representative 150 L water capacity. This is an exterior tub prop, not a mesh of water or a measured 150 L basin. Its longest source span is displayed at the cube root of the listed volume (an equivalent-volume span); neither tub-material volume nor basin capacity was measured from this open mesh. No fill level, real-world tub dimensions or enclosed-volume calibration is asserted.",
+      "representation": "illustration",
+      "closed_volume_checked": false,
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "presentation": {
+        "reference_size": 1.748028039932251,
+        "layout_width_factor": 1.1,
+        "display_extent_factor": 1.1,
+        "focus_scale_factor": 1.1,
+        "yaw": -18,
+        "pitch": 22
+      },
+      "processing": {
+        "script": "scripts/prepare_volume3d_imports.mjs",
+        "operations": [
+          "Embed source buffers/textures, resize source textures to at most 1024 px",
+          "Deduplicate, weld and prune; preserve source geometry and materials"
+        ],
+        "volume_calibration": {
+          "script": "scripts/register_volume3d.mjs",
+          "source_glb_sha256": "81596b1064dbfe45eae5d3fa71ccb2351d62c831e3716aa12f00f2dab24f0046",
+          "extent": [
+            1.748028039932251,
+            0.7787716738534338,
+            0.7764830589294324
+          ],
+          "referenceSize": 1.748028039932251,
+          "closedVolumeMeasured": false,
+          "method": "Longest native source span normalized to 1, so displayed span is V^(1/3). Equivalent-span illustration only; no enclosed, material or capacity volume measured."
+        }
+      }
+    },
+    {
+      "source": "https://3d.nih.gov/entries/3DPX-013373",
+      "author": "Kristen Browne / NIAID, via NIH 3D",
+      "license": "CC-BY (version unspecified in NIH source metadata)",
+      "license_url": "https://3d.nih.gov/entries/3DPX-013373",
+      "license_files": [
+        "sources/volume3d-nih-influenza.md"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/volume3d-nih-influenza.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 1035680,
+      "sha256": "401dedde4f5b2337e756edd88d451c9695c39045fbe1ca18cf3ecf417204d719",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 70841,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "2fb62fa7544538e6d304901b0e690abfc8beffc9babf5b1772c67641eb2c54e8",
+      "source_bytes": 5997144,
+      "download_url": "https://3d.nih.gov/api/submissions/17244/runs/2e7bbb59-6917-4533-b94e-a14afe44f578/output-files/385370",
+      "id": "volume3d-nih-influenza",
+      "matches": {
+        "volume": [
+          "Influenza virion volume"
+        ]
+      },
+      "reference": "content/visualizations/models/sources/volume3d-nih-influenza.md",
+      "note": "NIAID's PathogenAR influenza teaching model, retaining its existing cutaway and source colors for hemagglutinin, neuraminidase and internal components. This is a scientific illustration, not a measured virion reconstruction. The complete model's longest source span is displayed at the cube root of the listed representative volume (an equivalent-volume span). The cutaway does not enclose that volume; spike extent, membrane boundary and strain-dependent particle volume are not measured here.",
+      "representation": "illustration",
+      "closed_volume_checked": false,
+      "volume_semantics": "cubic_linear_equivalent_approximation",
+      "presentation": {
+        "reference_size": 1.9759460091590881,
+        "layout_width_factor": 1.1,
+        "display_extent_factor": 1.1,
+        "focus_scale_factor": 1.1
+      },
+      "processing": {
+        "script": "scripts/prepare_volume3d_imports.mjs",
+        "operations": [
+          "Make implicit default material explicit; retain original vertex colors",
+          "Deduplicate, weld, simplify with target ratio 0.24 and relative error 0.01, prune"
+        ],
+        "volume_calibration": {
+          "script": "scripts/register_volume3d.mjs",
+          "source_glb_sha256": "401dedde4f5b2337e756edd88d451c9695c39045fbe1ca18cf3ecf417204d719",
+          "extent": [
+            1.7428080439567566,
+            1.9759460091590881,
+            1.7253859639167786
+          ],
+          "referenceSize": 1.9759460091590881,
+          "closedVolumeMeasured": false,
+          "method": "Longest native source span normalized to 1, so displayed span is V^(1/3). Equivalent-span illustration only; no enclosed, material or capacity volume measured."
+        }
+      }
+    },
+    {
+      "source": "https://sketchfab.com/3d-models/sugar-cube-3d-scan-no-texture-0227084e92ed4dc79e48e0bf271edd32",
+      "author": "arkify on Sketchfab",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_files": [
+        "licenses/CC-BY-4.0.txt"
+      ],
+      "geometry": "mesh",
+      "src": "content/visualizations/models/volume3d-sugar-scan.glb",
+      "format": "glb",
+      "gltf_version": "2.0",
+      "bytes": 982808,
+      "sha256": "67bcb698de521258d857bff621d3fd5d149974fad58761d5481770002364ce78",
+      "extensions_used": [],
+      "extensions_required": [],
+      "decompression_required": [],
+      "external_resources": [],
+      "mesh_count": 1,
+      "triangle_count": 53660,
+      "animations": 0,
+      "skins": 0,
+      "source_sha256": "6c667f3e9456db1ca0fd8eca13d73f65e954884e7ef63f3d5815b812eb4767d7",
+      "source_bytes": 1239892,
+      "sketchfab_uid": "0227084e92ed4dc79e48e0bf271edd32",
+      "id": "volume3d-sugar-scan",
+      "matches": {
+        "volume": [
+          "Sugar cube volume"
+        ]
+      },
+      "reference": "content/visualizations/models/sources/volume3d-sugar-scan.md",
+      "note": "Arkify's sugar-cube scan, uniformly scaled to the listed representative bulk volume. Scale comes from the enclosed exterior mesh volume, including the cube's pores rather than only solid sucrose. Four tiny reversed internal shells were excluded; the existing outer surface was simplified, without filling or inventing geometry. The source specimen was larger than this representative cube, and its original proportions are retained. This is not a measurement of that specimen's original volume.",
+      "representation": "scan",
+      "closed_volume_checked": true,
+      "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+      "presentation": {
+        "reference_size": 15.695138326976915,
+        "layout_width_factor": 1.3,
+        "display_extent_factor": 1.3,
+        "focus_scale_factor": 1.3
+      },
+      "processing": {
+        "script": "scripts/prepare_volume3d_imports.mjs",
+        "operations": [
+          "Retain the scanned exterior shell (107320 triangles); exclude four internal reverse-wound pore shells (122, 52, 52, 8 triangles)",
+          "Deduplicate, weld, simplify to 53660 triangles with relative error 0.001, prune; retain source color and proportions"
+        ],
+        "volume_calibration": {
+          "script": "scripts/register_volume3d.mjs",
+          "source_glb_sha256": "67bcb698de521258d857bff621d3fd5d149974fad58761d5481770002364ce78",
+          "volume": 3866.2990517839316,
+          "referenceSize": 15.695138326976915,
+          "triangles": 53660,
+          "weldedVertices": 26832,
+          "edges": 80490,
+          "components": 1,
+          "boundaryEdges": 0,
+          "tolerance": 2.0210997638801038e-06,
+          "extent": [
+            17.693063511713763,
+            17.3885655480466,
+            20.21099763880104
+          ],
+          "selfIntersectionChecked": false,
+          "method": "Enclosed exterior bulk-envelope volume by signed tetrahedral sum; one consistently oriented closed shell. Self-intersection is not certified."
+        }
+      }
     }
   ],
   "coverage_gaps": [

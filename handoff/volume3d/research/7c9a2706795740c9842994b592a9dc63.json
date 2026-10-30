@@ -1,0 +1,21 @@
+{
+  "uid": "7c9a2706795740c9842994b592a9dc63",
+  "name": "Bathtub",
+  "description": "a model made by blender",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "faceCount": 6828,
+  "vertexCount": 6728,
+  "archives": null,
+  "viewerUrl": "https://sketchfab.com/3d-models/bathtub-7c9a2706795740c9842994b592a9dc63",
+  "createdAt": "2016-10-15T14:27:11.859202",
+  "publishedAt": "2016-10-15T14:38:27.162355",
+  "author": "snougo"
+}

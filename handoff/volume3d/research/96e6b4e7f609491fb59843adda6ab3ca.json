@@ -1,0 +1,21 @@
+{
+  "uid": "96e6b4e7f609491fb59843adda6ab3ca",
+  "name": "Influenza Virus",
+  "description": "A model of the influenza virus, based on information from the David J. Sencer CDC Museum. Modeled by James Dang, graduate student at Georgia State University, using tutorials by [DrawBioMed](https://www.drawbiomed.com/)",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "faceCount": 12080,
+  "vertexCount": 6046,
+  "archives": null,
+  "viewerUrl": "https://sketchfab.com/3d-models/influenza-virus-96e6b4e7f609491fb59843adda6ab3ca",
+  "createdAt": "2024-02-27T16:26:11.826762",
+  "publishedAt": "2024-02-27T16:30:30.789111",
+  "author": "studentinnovation"
+}

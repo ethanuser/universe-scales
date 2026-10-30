@@ -1,0 +1,71 @@
+{
+  "validator": "Khronos glTF Validator",
+  "version": "2.0.0-dev.3.10",
+  "source": "https://github.com/KhronosGroup/glTF-Validator",
+  "asset_entry_count": 216,
+  "total_errors": 0,
+  "unchanged_assets_with_warnings": [
+    {
+      "id": "nasa-earth",
+      "warnings": 1
+    },
+    {
+      "id": "wine-bottle",
+      "warnings": 3
+    },
+    {
+      "id": "ceiling-fan",
+      "warnings": 2
+    },
+    {
+      "id": "sketchfab-giraffe",
+      "warnings": 876
+    },
+    {
+      "id": "sketchfab-blue-whale",
+      "warnings": 979
+    },
+    {
+      "id": "bucket",
+      "warnings": 3
+    },
+    {
+      "id": "nasa-earth-moon-distance",
+      "warnings": 1
+    },
+    {
+      "id": "nasa-sun-earth-au",
+      "warnings": 1
+    },
+    {
+      "id": "great-wall-network-globe",
+      "warnings": 1
+    }
+  ],
+  "this_job": [
+    {
+      "id": "volume3d-sugar-scan",
+      "sha256": "67bcb698de521258d857bff621d3fd5d149974fad58761d5481770002364ce78",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "volume3d-classic-bathtub",
+      "sha256": "81596b1064dbfe45eae5d3fa71ccb2351d62c831e3716aa12f00f2dab24f0046",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "volume3d-nih-influenza",
+      "sha256": "401dedde4f5b2337e756edd88d451c9695c39045fbe1ca18cf3ecf417204d719",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "volume3d-nih-coronavirus",
+      "sha256": "00a3ea0417a8425d284383085cebd8e36af5135e46811551f2b8f46d48d2e5c2",
+      "errors": 0,
+      "warnings": 0
+    }
+  ]
+}

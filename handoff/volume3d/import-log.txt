@@ -1,0 +1,6 @@
+{"id":"volume3d-sugar-scan","checkedInteriorVertices":204,"removedSignedVolumeFraction":-0.00007209940995768923,"method":"Odd ray-intersection parity for every removed source vertex; reverse winding and small volume verified. Not a general self-intersection certificate."}
+{"id":"volume3d-sugar-scan","sourceShellTriangles":[107320,122,52,52,8],"retained":"Exterior envelope; four internal reversed shells excluded"}
+volume3d-sugar-scan: 982808 bytes
+volume3d-nih-influenza: 1035680 bytes
+prune: Removed types... Accessor (1)
+volume3d-classic-bathtub: 1182256 bytes
