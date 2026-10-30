@@ -1,10 +1,12 @@
-/* App shell: a full-window application layout. A slim top bar holds navigation; the
-   active explorer fills the rest of the window; secondary controls, data tools and
-   credits live in the Options drawer and the About dialog. Loaded after the other
-   stylesheets, so it overrides their page-style (centered column, footer) layout. */
+/* App shell: a full-window application layout. One top bar holds navigation (dimension,
+   item search, view, unit, help, options); the description panel sits on the left and the
+   explorer fills the rest. Settings, data tools and credits live in the Options drawer and
+   dialogs. Loaded after the other stylesheets, so it overrides their page-style layout. */
 
 :root {
     --app-bar-height: 56px;
+    --app-control-height: 38px;
+    --app-panel-width: 340px;
     --z-app-bar: 2400;
     --z-app-overlay: 2600;
     --z-app-drawer: 2700;
@@ -18,8 +20,14 @@ input[type='range']::-webkit-slider-runnable-track { border-radius: 0 !important
 input[type='range']::-moz-range-thumb,
 input[type='range']::-moz-range-track { border-radius: 0 !important; }
 
-html, body { height: 100%; }
-body { overflow: hidden; }
+/* Slim, quiet scrollbars instead of the platform default. */
+* { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--text-secondary) 45%, transparent) transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--text-secondary) 40%, transparent); }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--text-secondary) 70%, transparent); }
+
+html, body { height: 100%; overflow: hidden; }
 
 .app {
     display: flex;
@@ -29,6 +37,49 @@ body { overflow: hidden; }
     background: var(--bg-primary);
 }
 
+/* Shared control look */
+.app-icon-button,
+.app-bar .experience-nav-button,
+.app-bar .experience-info__button,
+.app-bar .experience-fullscreen-button,
+.app-bar .experience-panel-button,
+.experience-zoom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-sizing: border-box;
+    flex: none;
+    min-width: var(--app-control-height);
+    width: auto;
+    height: var(--app-control-height);
+    padding: 0 9px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+.app-icon-button:hover, .app-icon-button:focus-visible, .app-icon-button[aria-expanded='true'],
+.app-bar .experience-nav-button:hover, .app-bar .experience-nav-button:focus-visible,
+.app-bar .experience-info__button:hover, .app-bar .experience-info__button:focus-visible,
+.app-bar .experience-fullscreen-button:hover, .app-bar .experience-fullscreen-button:focus-visible,
+.app-bar .experience-panel-button:hover, .app-bar .experience-panel-button:focus-visible {
+    border-color: var(--accent-color);
+    outline: none;
+}
+.app-icon-button--quiet { border-color: transparent; background: transparent; min-width: 32px; padding: 0 4px; }
+.app-icon-button svg, .experience-panel-button svg, .experience-zoom-button svg,
+.app-bar .experience-info__button svg, .view-switch svg, .app-setting svg, .app-link-button svg {
+    width: 20px; height: 20px; flex: none;
+}
+.app-icon-button :is(path, circle, rect), .experience-panel-button :is(path, rect), .experience-zoom-button path,
+.app-bar .experience-info__button path, .view-switch :is(path, circle), .app-setting :is(path, circle),
+.app-link-button :is(path, circle, rect), .app-hint path {
+    fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: square; stroke-linejoin: miter;
+}
+
 /* Top bar */
 .app-bar {
     position: relative;
@@ -36,9 +87,9 @@ body { overflow: hidden; }
     flex: none;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
     min-height: var(--app-bar-height);
-    padding: 6px 16px;
+    padding: 8px 12px;
     border-bottom: 1px solid var(--border-color);
     background: var(--bg-primary);
 }
@@ -47,58 +98,88 @@ body { overflow: hidden; }
     align-items: center;
     gap: 9px;
     flex: none;
+    padding-right: 4px;
     color: var(--text-primary);
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 650;
     letter-spacing: 0.01em;
     text-decoration: none;
     white-space: nowrap;
 }
-.app-brand img { display: block; }
-.app-bar .controls.app-bar__controls {
-    flex: none;
-    gap: 8px;
-    margin: 0;
-    flex-wrap: nowrap;
+.app-logo { width: 24px; height: 24px; flex: none; }
+.app-logo path { fill: none; stroke: currentColor; stroke-width: 46; stroke-linecap: round; stroke-linejoin: round; }
+.app-bar .controls.app-bar__controls { flex: none; gap: 0; margin: 0; flex-wrap: nowrap; }
+.app-bar .dimension-picker { display: flex; align-items: center; gap: 2px; margin: 0; }
+.app-bar .dimension-browser-toggle,
+.app-bar .unit-browser-toggle {
+    min-height: var(--app-control-height);
+    height: var(--app-control-height);
+    padding: 0 10px;
+    font-size: 0.92rem;
 }
-.app-bar .dimension-picker { display: flex; align-items: center; gap: 8px; margin: 0; }
-.app-bar .dimension-picker label { font-size: 0.85rem; color: var(--text-secondary); }
-.app-bar .dimension-browser-toggle { min-height: 38px; padding: 6px 12px; min-width: 180px; }
-.app-bar .view-switch { margin: 0 !important; gap: 0; flex: none; }
-.app-bar .view-switch button { min-height: 38px; padding: 6px 14px; margin: 0; }
+.app-bar .dimension-browser-toggle { min-width: 150px; font-weight: 600; }
+
+/* The explorer's item toolbar, mounted into the bar */
+.app-bar__item { display: flex; flex: 1 1 auto; min-width: 0; }
+.app-bar__item:empty { flex: 1 1 auto; }
+.app-bar .experience-toolbar { flex: 1 1 auto; min-width: 0; gap: 6px; padding: 0; border: 0; }
+.app-bar .experience-toolbar__main { flex: 1 1 auto; min-width: 0; gap: 6px; }
+.app-bar .experience-picker { display: flex; align-items: center; gap: 6px; flex: 0 1 460px; min-width: 0; max-width: 460px; margin-right: auto; }
+.app-bar .experience-picker-toggle {
+    flex: 1 1 auto; min-width: 0; height: var(--app-control-height); min-height: 0; padding: 0 10px; font-size: 0.92rem;
+}
+.app-bar .experience-picker-toggle span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.app-bar .experience-info { margin-left: 0; }
+.app-bar .experience-info__button { font: inherit; }
+.app-bar .experience-info__panel { z-index: var(--z-app-overlay); }
+.app-bar .experience-picker-panel { z-index: var(--z-app-overlay); }
+.app-bar .experience-toolbar__actions { display: flex !important; gap: 6px; flex: none; }
+.app-bar .experience-toolbar__actions .experience-button { height: var(--app-control-height); min-height: 0; padding: 0 12px; }
+.app-bar .experience-center-button { display: inline-flex; align-items: center; justify-content: center; width: var(--app-control-height); padding: 0 !important; }
+.app-bar .experience-center-button svg { width: 20px; height: 20px; }
+.app-bar .experience-center-button :is(path, circle) { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.app-view-info .experience-caption { margin: 0; padding: 0; min-height: 0; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; }
+.app-view-info .experience-attribution { margin: 8px 0 0; padding: 0; font-size: 0.85rem; }
+.app-view-info .experience-attribution:empty { display: none; }
+.experience-panel-button[aria-pressed='false'] { color: var(--text-secondary); }
+
+.app-bar .view-switch { display: flex; margin: 0 !important; gap: 0; flex: none; }
+.app-bar .view-switch[hidden] { display: none; }
+.app-bar .view-switch button {
+    display: inline-flex; align-items: center; gap: 6px;
+    height: var(--app-control-height); min-height: 0; margin: 0; padding: 0 11px; font-size: 0.88rem;
+}
 .app-bar .view-switch button + button { margin-left: -1px; }
-.app-bar__end {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: auto;
-    min-width: 0;
-}
-.app-bar .unit-selector-container { margin: 0; gap: 6px; flex-wrap: nowrap; }
-.app-bar .unit-selector-container label { font-size: 0.85rem; }
-.app-bar .unit-browser-toggle { min-height: 38px; padding: 6px 10px; }
+.app-bar__end { display: flex; align-items: center; gap: 6px; flex: none; }
+.app-bar .unit-selector-container { margin: 0; gap: 0; flex-wrap: nowrap; }
 .app-bar .unit-browser-panel { left: auto; right: 0; }
 
-.app-icon-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-width: 40px;
-    min-height: 38px;
-    padding: 6px 10px;
+/* Dimension and unit descriptions, next to the selector that sets them */
+.app-popover-anchor { position: relative; }
+.app-popover {
+    position: absolute;
+    z-index: var(--z-app-overlay);
+    top: calc(100% + 8px);
+    left: 0;
+    width: min(460px, calc(100vw - 24px));
+    max-height: min(70dvh, 560px);
+    overflow-y: auto;
+    padding: 16px 18px;
     border: 1px solid var(--border-color);
     background: var(--bg-primary);
-    color: var(--text-primary);
-    font: inherit;
-    font-size: 0.9rem;
-    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    text-align: left;
 }
-.app-icon-button:hover,
-.app-icon-button:focus-visible,
-.app-icon-button[aria-expanded='true'] { border-color: var(--accent-color); outline: none; }
-.app-icon-button svg { width: 20px; height: 20px; flex: none; }
-.app-icon-button path { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: square; }
+.app-popover[hidden] { display: none; }
+.app-popover .dimension-description,
+.app-popover .unit-description {
+    margin: 0; padding: 0; max-width: none; color: var(--text-primary);
+    font-size: 0.9rem; font-style: normal; line-height: 1.55; text-align: left;
+}
+.app-popover__heading {
+    margin: 14px 0 6px; color: var(--text-secondary);
+    font-size: 0.72rem; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase;
+}
 
 /* The dimension browser opens as a sheet below the bar instead of pushing the page. */
 .app .dimension-browser-panel {
@@ -117,8 +198,7 @@ body { overflow: hidden; }
     box-shadow: var(--shadow-lg);
 }
 
-/* Main area: the explorer fills it; other views (logarithmic plot, non-spatial
-   explorers with settings below the stage) scroll inside it. */
+/* Main area. The spatial explorers fit exactly (no page scroll); other views scroll here. */
 .app-main {
     position: relative;
     flex: 1 1 auto;
@@ -127,6 +207,7 @@ body { overflow: hidden; }
     max-width: none;
     padding: 0;
 }
+.app-main:has(> .experience.experience--spatial:not([hidden])) { overflow: hidden; }
 .app-main > .experience {
     margin: 0;
     border: 0;
@@ -134,11 +215,23 @@ body { overflow: hidden; }
     display: flex;
     flex-direction: column;
 }
-.app-main > .experience > .experience-toolbar { flex: none; padding: 8px 14px; }
 .app-main > .experience > .experience-body { flex: 1 1 auto; min-height: 0; }
 .app-main > .experience.experience--spatial { height: 100%; }
 .app-main > .experience.experience--spatial > .experience-body { height: auto !important; }
+.app-main > .plot-container { margin: 12px; }
+
+/* Description panel on the left (as in outline/inspector panels of most tools). */
 @media (min-width: 701px) {
+    .app-main > .experience > .experience-body {
+        grid-template-columns: var(--app-panel-width) minmax(0, 1fr);
+    }
+    .app-main > .experience .experience-detail {
+        border-left: 0;
+        border-right: 1px solid var(--border-color);
+        padding: 18px 20px;
+    }
+    .app-main > .experience.is-panel-hidden > .experience-body { grid-template-columns: minmax(0, 1fr); }
+    .app-main > .experience.is-panel-hidden .experience-detail { display: none; }
     .app-main > .experience.experience--spatial .experience-visual,
     .app-main > .experience.experience--spatial .experience-stage-frame,
     .app-main > .experience.experience--spatial .experience-detail {
@@ -149,23 +242,57 @@ body { overflow: hidden; }
     }
     .app-main > .experience .experience-detail { max-height: none; }
 }
-/* Phones: the stage takes the space above a short, scrollable description. */
-@media (max-width: 700px) {
-    .app-main > .experience.experience--spatial > .experience-body {
-        display: flex;
-        flex-direction: column;
-    }
-    .app-main > .experience.experience--spatial .experience-visual { flex: 1 1 auto; min-height: 0; }
-    .app-main > .experience.experience--spatial .experience-stage-frame { flex: 1 1 auto; min-height: 0; height: 100%; }
-    .app-main > .experience.experience--spatial .experience-detail {
-        flex: none;
-        height: auto;
-        max-height: 30dvh;
-        border-left: 0;
-        border-top: 1px solid var(--border-color);
-    }
+.experience-detail-empty { color: var(--text-secondary); }
+.experience-detail-empty h2 { color: var(--text-primary); }
+
+/* Zoom: slider with + and - buttons */
+.experience-camera-slider { display: flex !important; align-items: center; gap: 8px; }
+.experience-camera-slider > * { min-width: 0; }
+.experience-camera-slider input { flex: 1 1 auto; }
+.experience-zoom-buttons { display: flex; flex: none; }
+.experience-zoom-button {
+    height: 30px; min-width: 30px; padding: 0;
+    color: var(--journey-ink, var(--text-primary));
+    border-color: color-mix(in srgb, var(--journey-ink, currentColor) 35%, transparent);
+    background: color-mix(in srgb, var(--journey-ink, currentColor) 8%, transparent);
 }
-.app-main > .plot-container { margin: 16px; }
+.experience-zoom-button + .experience-zoom-button { margin-left: -1px; }
+.experience-zoom-button:hover, .experience-zoom-button:focus-visible { border-color: var(--journey-ink, var(--accent-color)); outline: none; }
+
+/* One-time controls hint over the explorer */
+.app-hint {
+    position: absolute;
+    z-index: 6;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: calc(100% - 24px);
+    padding: 7px 8px 7px 14px;
+    border: 1px solid var(--border-color);
+    background: color-mix(in srgb, var(--bg-primary) 92%, transparent);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+    pointer-events: auto;
+}
+.app-hint b { font-weight: 650; }
+.app-hint button { display: inline-grid; place-items: center; width: 26px; height: 26px; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
+.app-hint svg { width: 16px; height: 16px; }
+kbd {
+    display: inline-block;
+    min-width: 1.6em;
+    padding: 0 5px;
+    border: 1px solid var(--border-color);
+    border-bottom-width: 2px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font: 600 0.78rem/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+    text-align: center;
+}
 
 /* Options drawer */
 .app-backdrop {
@@ -181,7 +308,7 @@ body { overflow: hidden; }
     top: 0;
     right: 0;
     bottom: 0;
-    width: min(440px, 100vw);
+    width: min(500px, 100vw);
     overflow-y: auto;
     border-left: 1px solid var(--border-color);
     background: var(--bg-primary);
@@ -195,58 +322,54 @@ body { overflow: hidden; }
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 12px 16px 12px 20px;
+    padding: 10px 12px 10px 20px;
     border-bottom: 1px solid var(--border-color);
     background: var(--bg-primary);
 }
-.app-drawer__header h2 { font-size: 1.1rem; font-weight: 600; }
-.app-drawer__section { padding: 18px 20px; border-bottom: 1px solid var(--border-color); }
+.app-drawer__header h2 { font-size: 1.05rem; font-weight: 650; }
+.app-drawer__section { padding: 16px 20px; border-bottom: 1px solid var(--border-color); }
 .app-drawer__section h3 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     color: var(--text-secondary);
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.72rem;
+    font-weight: 650;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
-.app-setting {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 44px;
-}
+.app-setting { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; }
 .app-setting + .app-setting { border-top: 1px solid var(--border-color); }
+.app-setting__label { display: inline-flex; align-items: center; gap: 12px; color: var(--text-primary); }
+.app-setting__label svg { color: var(--text-secondary); }
 .app-drawer .notation-toggle,
 .app-drawer .dark-mode-toggle,
 .app-drawer .music-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     width: auto;
-    min-width: 64px;
+    min-width: 92px;
     height: 34px;
     margin: 0;
     padding: 0 12px;
     border: 1px solid var(--border-color);
     background: var(--bg-primary);
     color: var(--text-primary);
-    font-size: 0.9rem;
+    font: inherit;
+    font-size: 0.88rem;
     box-shadow: none;
+    transform: none;
 }
-.app-drawer .dimension-description,
-.app-drawer .unit-description {
-    margin: 0 0 12px;
-    padding: 0;
-    max-width: none;
-    color: var(--text-primary);
-    font-size: 0.9rem;
-    font-style: normal;
-    line-height: 1.55;
-    text-align: left;
-}
+.app-drawer .notation-toggle:hover, .app-drawer .dark-mode-toggle:hover, .app-drawer .music-toggle:hover { border-color: var(--accent-color); }
+.app-drawer .music-toggle[aria-pressed='true'] { border-color: var(--accent-color); color: var(--accent-color); }
 .app-drawer .editor-panel,
-.app-drawer .resources-panel { margin: 0 0 10px; }
-.app-drawer__links { display: grid; gap: 8px; }
+.app-drawer .resources-panel { margin: 0 0 6px; border-radius: 0; box-shadow: none; }
+.app-drawer .editor-toggle { padding: 10px 12px; font-size: 0.92rem; min-height: 0; }
+.app-drawer__links { display: grid; gap: 6px; }
 .app-link-button {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     width: 100%;
     padding: 10px 12px;
     border: 1px solid var(--border-color);
@@ -258,9 +381,10 @@ body { overflow: hidden; }
     text-decoration: none;
     cursor: pointer;
 }
+.app-link-button svg { color: var(--text-secondary); }
 .app-link-button:hover, .app-link-button:focus-visible { border-color: var(--accent-color); outline: none; }
 
-/* About dialog */
+/* Dialogs */
 .app-dialog {
     position: fixed;
     inset: 0;
@@ -278,28 +402,62 @@ body { overflow: hidden; }
     background: var(--bg-primary);
     box-shadow: var(--shadow-lg);
 }
+.app-dialog__panel--wide { width: min(880px, 100%); }
 .app-dialog__body { padding: 20px; font-size: 0.95rem; line-height: 1.6; }
 .app-dialog__body > p { margin-bottom: 16px; }
 .app-credits { display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; margin-bottom: 16px; }
 .app-credits dt { color: var(--text-secondary); font-size: 0.85rem; }
 .app-credits dd { margin: 0; }
 .app-dialog .limitations-note { margin: 0; padding: 12px 0 0; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem; }
+.app-help { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 28px; }
+.app-help h3 { margin: 0 0 8px; color: var(--text-secondary); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
+.app-keys { display: grid; grid-template-columns: max-content 1fr; gap: 7px 12px; align-items: baseline; margin: 0; }
+.app-keys dt { white-space: nowrap; font-size: 0.85rem; color: var(--text-secondary); }
+.app-keys dd { margin: 0; font-size: 0.9rem; }
 
-@media (max-width: 1100px) {
-    .app-bar .dimension-picker label,
-    .app-bar .unit-selector-container label,
-    .app-icon-button__label { display: none; }
-    .app-bar .dimension-browser-toggle { min-width: 140px; }
+/* Narrower windows: drop text labels, keep symbols. */
+@media (max-width: 1280px) {
+    .app-brand span, .view-switch span { display: none; }
 }
-@media (max-width: 760px) {
-    :root { --app-bar-height: 104px; }
-    .app-bar { flex-wrap: wrap; gap: 8px; padding: 6px 10px; }
-    .app-brand span { display: none; }
+@media (max-width: 1000px) {
+    :root { --app-panel-width: 280px; }
+    .app-bar .dimension-browser-toggle { min-width: 0; }
+}
+/* Phones: two rows (dimension/unit/menus, then item search and view) above the stage,
+   with a short description below it. */
+@media (max-width: 700px) {
+    :root { --app-bar-height: 102px; --app-control-height: 40px; }
+    .app-bar { flex-wrap: wrap; gap: 6px; padding: 6px 8px; }
+    .app-brand { padding-right: 0; }
     .app-bar .controls.app-bar__controls { flex: 1 1 0; min-width: 0; }
     .app-bar .dimension-picker { flex: 1 1 auto; min-width: 0; }
-    .app-bar .dimension-browser-toggle { min-width: 0; width: 100%; }
-    .app-bar__end { margin-left: 0; }
-    .app-bar .view-switch { order: 5; flex: 1 1 100%; }
-    .app-bar .view-switch button { flex: 1 1 0; }
-    .app-bar .unit-browser-toggle { max-width: 34vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .app-bar .dimension-browser-toggle { flex: 1 1 auto; min-width: 0; width: auto; }
+    .app-bar__end { gap: 4px; flex: 0 1 auto; min-width: 0; }
+    .app-bar .unit-selector-container, .app-bar .unit-picker { min-width: 0; }
+    .app-bar .unit-browser-toggle { width: auto; min-width: 0; max-width: 30vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .app-bar .controls.app-bar__controls { min-width: 120px; }
+    /* Second row: item search and navigation, then the view switch. */
+    .app-bar__item { order: 5; flex: 1 1 calc(100% - 96px); min-width: 0; }
+    .app-bar .view-switch { order: 6; }
+    .app-bar .view-switch button { padding: 0 9px; }
+    .app-bar .experience-toolbar { flex-direction: row; align-items: center; }
+    .app-bar .experience-toolbar__main { flex: 1 1 auto; width: auto; min-width: 0; }
+    .app-bar .experience-toolbar__actions { flex: none; width: auto !important; }
+    .app-bar .experience-toolbar__actions .experience-button { flex: none; }
+    .app-bar .experience-picker { flex: 1 1 auto; max-width: none; }
+    .app-bar .experience-panel-button { display: none; }
+    .app-hint { gap: 10px; font-size: 0.78rem; }
+    .app-popover { position: fixed; top: var(--app-bar-height); left: 8px; right: 8px; width: auto; }
+    .app-hint span:nth-child(4) { display: none; }
+    .app-main > .experience.experience--spatial > .experience-body { display: flex; flex-direction: column; }
+    .app-main > .experience.experience--spatial .experience-visual { flex: 1 1 auto; min-height: 0; }
+    .app-main > .experience.experience--spatial .experience-stage-frame { flex: 1 1 auto; min-height: 0; height: 100%; }
+    .app-main > .experience.experience--spatial .experience-detail {
+        order: 2;
+        flex: none;
+        height: auto;
+        max-height: 30dvh;
+        border-left: 0;
+        border-top: 1px solid var(--border-color);
+    }
 }

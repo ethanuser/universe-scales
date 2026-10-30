@@ -139,6 +139,15 @@
                     this.app.isLinearScale() ? 'Scale plot' : 'Logarithmic',
                     () => this.setMode('log')
                 );
+                // Symbols with short labels; the full names stay in the tooltip and for screen readers.
+                const icon = (control, path, label) => {
+                    const name = control.textContent;
+                    control.title = `${name} (L)`;
+                    control.setAttribute('aria-label', name);
+                    control.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${path}</svg><span>${label}</span>`;
+                };
+                icon(this.interactiveButton, '<circle cx="12" cy="12" r="2" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="10" />', 'Explore');
+                icon(this.logButton, '<path d="M4 4v16h16" /><path d="M7 16l4-5 3 3 5-7" />', 'Chart');
             }
             this.setMode(
                 this.config && this.items.length && this.preference() !== 'log'
@@ -179,6 +188,7 @@
             this.logButton?.setAttribute('aria-pressed', String(!this.active));
             if (this.active) this.mount();
             else {
+                // toolbarCleanup also empties the top-bar item slot.
                 this.toolbarCleanup?.();
                 this.toolbarCleanup = null;
                 this.renderer = null;
@@ -298,7 +308,28 @@
             this.settings = dom('div', 'experience-settings');
             this.attribution = dom('div', 'experience-attribution');
             infoPanel.append(this.caption, this.attribution);
-            toolbarMain.append(info, this.fullscreenButton);
+            infoButton.textContent = '';
+            infoButton.title = 'How this visualization works';
+            infoButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.6v.6M12 17v.5" /></svg>';
+            this.panelButton = dom('button', 'experience-panel-button');
+            this.panelButton.type = 'button';
+            this.panelButton.title = 'Show or hide the description panel (P)';
+            this.panelButton.setAttribute('aria-label', 'Description panel');
+            this.panelButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" /><path d="M9 4v16" /></svg>';
+            this.panelButton.addEventListener('click', () => this.togglePanel());
+            toolbarMain.prepend(this.panelButton);
+            // In the app shell, "how this view works" and model credits join the dimension
+            // and unit descriptions in the top bar's info popover, instead of a second "i".
+            const viewInfo = document.getElementById('view-info');
+            if (viewInfo) {
+                viewInfo.replaceChildren(this.caption, this.attribution);
+                document.getElementById('view-info-heading').hidden = false;
+                toolbarMain.append(this.fullscreenButton);
+            } else toolbarMain.append(info, this.fullscreenButton);
+            this.reset.title = 'Center on the selected item (C)';
+            this.reset.setAttribute('aria-label', 'Center on the selected item');
+            this.reset.classList.add('experience-center-button');
+            this.reset.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="6" /><path d="M12 2v5M12 17v5M2 12h5M17 12h5" /></svg>';
             this.stageFrame = dom('div', 'experience-stage-frame');
             this.stageFrame.append(this.stage);
             visual.append(
@@ -309,8 +340,12 @@
             );
             this.detail = dom('article', 'experience-detail');
             this.detail.setAttribute('aria-label', 'Selected item description');
-            body.append(visual, this.detail);
-            this.host.append(toolbar, body);
+            body.append(this.detail, visual);
+            // In the app shell the item toolbar lives in the top bar.
+            const slot = document.getElementById('app-item-slot');
+            if (slot) { slot.replaceChildren(toolbar); this.host.append(body); }
+            else this.host.append(toolbar, body);
+            this.host.classList.toggle('is-panel-hidden', this.panelHidden());
             const outside = (event) => {
                 if (!picker.contains(event.target)) closePicker();
                 if (!info.contains(event.target)) {
@@ -338,7 +373,12 @@
             };
             document.addEventListener('pointerdown', outside);
             document.addEventListener('keydown', keydown);
+            this.openItemSearch = openPicker;
             this.toolbarCleanup = () => {
+                document.getElementById('app-item-slot')?.replaceChildren();
+                document.getElementById('view-info')?.replaceChildren();
+                const heading = document.getElementById('view-info-heading');
+                if (heading) heading.hidden = true;
                 document.removeEventListener('pointerdown', outside);
                 document.removeEventListener('keydown', keydown);
                 this.fullscreenButton = null;
@@ -347,12 +387,27 @@
             this.renderer = ScaleRenderers[this.config[1]](this);
             this.focus(this.index);
         }
+        panelHidden() {
+            try { return localStorage.getItem('scale-panel-hidden') === 'true'; } catch { return false; }
+        }
+        togglePanel(force) {
+            const hidden = force ?? !this.host.classList.contains('is-panel-hidden');
+            this.host.classList.toggle('is-panel-hidden', hidden);
+            this.panelButton?.setAttribute('aria-pressed', String(!hidden));
+            try { localStorage.setItem('scale-panel-hidden', String(hidden)); } catch {}
+            requestAnimationFrame(() => this.renderer?.render(this.clock.time));
+        }
+        // The app shell goes full screen as a whole, so the top bar (item search and
+        // navigation) stays available; without the shell only the explorer does.
+        fullscreenTarget() {
+            return document.querySelector?.('.app') || this.host;
+        }
         toggleFullscreen() {
             if (this.fullscreenState) this.exitFullscreen();
             else this.enterFullscreen();
         }
         handleFullscreenChange() {
-            if (document.fullscreenElement === this.host) {
+            if (document.fullscreenElement === this.fullscreenTarget()) {
                 if (this.fullscreenState) {
                     this.fullscreenState.native = true;
                     this.updateFullscreenButton(true);
@@ -364,6 +419,7 @@
         enterFullscreen() {
             if (this.fullscreenState || !this.active || !this.host) return;
             const request = ++this.fullscreenRequest;
+            const target = this.fullscreenTarget();
             this.fullscreenState = {
                 fallback: false,
                 native: false,
@@ -378,24 +434,25 @@
             const fallback = () => {
                 if (request !== this.fullscreenRequest || !this.fullscreenState) return;
                 this.fullscreenState.fallback = true;
-                this.host.classList.add('experience-fullscreen-fallback');
+                // The app shell already fills the window; only a bare explorer needs the overlay.
+                if (target === this.host) this.host.classList.add('experience-fullscreen-fallback');
                 document.body.classList.add('experience-fullscreen-active');
                 this.updateFullscreenButton(true);
                 this.renderer?.render(this.clock.time);
             };
-            if (typeof this.host.requestFullscreen !== 'function') {
+            if (typeof target.requestFullscreen !== 'function') {
                 fallback();
                 return;
             }
             try {
-                Promise.resolve(this.host.requestFullscreen()).then(() => {
+                Promise.resolve(target.requestFullscreen()).then(() => {
                     if (request !== this.fullscreenRequest) {
-                        if (document.fullscreenElement === this.host && typeof document.exitFullscreen === 'function') {
+                        if (document.fullscreenElement === target && typeof document.exitFullscreen === 'function') {
                             try { Promise.resolve(document.exitFullscreen()).catch(() => {}); } catch {}
                         }
                         return;
                     }
-                    if (document.fullscreenElement === this.host) {
+                    if (document.fullscreenElement === target) {
                         this.fullscreenState.native = true;
                         this.updateFullscreenButton(true);
                         this.renderer?.render(this.clock.time);
@@ -407,7 +464,7 @@
         }
         exitFullscreen() {
             if (!this.fullscreenState) return;
-            const native = this.fullscreenState.native || document.fullscreenElement === this.host;
+            const native = this.fullscreenState.native || document.fullscreenElement === this.fullscreenTarget();
             if (native && typeof document.exitFullscreen === 'function') {
                 try {
                     Promise.resolve(document.exitFullscreen()).catch(() => {});
@@ -466,6 +523,14 @@
             this.explicitSelection = Boolean(frame);
             this.noFocus = false;
             this.index = clamp(index, 0, this.items.length - 1);
+            // Explicit selections are shareable: keep ?item= in the address bar current.
+            if (frame && this.active && this.item) {
+                try {
+                    const url = new URL(location.href);
+                    url.searchParams.set('item', this.item.name);
+                    history.replaceState(history.state, '', url);
+                } catch {}
+            }
             this.select.value = this.index;
             if (this.pickerCurrent) this.pickerCurrent.textContent = this.item.name;
             this.pickerToggle?.setAttribute('aria-label', `Choose item, currently ${this.item.name}`);

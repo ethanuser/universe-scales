@@ -611,7 +611,17 @@ class UniversalScales {
     }
 
     updateDarkModeButton(theme) {
-        this.darkModeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        // Shows the theme it switches to; the favicon and logo follow the site theme.
+        this.darkModeToggle.innerHTML = theme === 'dark'
+            ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg><span>Light</span>'
+            : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg><span>Dark</span>';
+        const favicon = document.getElementById('favicon');
+        if (favicon) favicon.href = theme === 'dark' ? 'favicon-dark.svg' : 'favicon-light.svg';
+    }
+
+    updateMusicButton(playing) {
+        this.musicToggle.innerHTML = playing ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4ZM16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg><span>On</span>' : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h4l5-4v14l-5-4H4ZM17 9l5 6M22 9l-5 6" /></svg><span>Off</span>';
+        this.musicToggle.setAttribute('aria-pressed', String(playing));
     }
 
     toggleMusic() {
@@ -630,13 +640,13 @@ class UniversalScales {
                 // Some browsers require user interaction before playing audio
             });
             this.musicToggle.classList.add('playing');
-            this.musicToggle.textContent = '🔊';
+            this.updateMusicButton(true);
             // Save music state to localStorage
             localStorage.setItem('musicEnabled', 'true');
         } else {
             this.backgroundMusic.pause();
             this.musicToggle.classList.remove('playing');
-            this.musicToggle.textContent = '🎵';
+            this.updateMusicButton(false);
             // Save music state to localStorage
             localStorage.setItem('musicEnabled', 'false');
         }
@@ -910,7 +920,7 @@ class UniversalScales {
         if (musicWasEnabled) {
             // Music should be on - set button state to "on"
             this.musicToggle.classList.add('playing');
-            this.musicToggle.textContent = '🔊';
+            this.updateMusicButton(true);
 
             // Try to play immediately - this will likely fail due to browser restrictions
             this.backgroundMusic.play().catch(e => {
@@ -923,7 +933,7 @@ class UniversalScales {
         } else {
             // Music was explicitly turned off - set button state to "off"
             this.musicToggle.classList.remove('playing');
-            this.musicToggle.textContent = '🎵';
+            this.updateMusicButton(false);
             // Don't try to autoplay
         }
     }
@@ -940,7 +950,7 @@ class UniversalScales {
                 this.backgroundMusic.play().then(() => {
                     // Button state should already be correct, but ensure it is
                     this.musicToggle.classList.add('playing');
-                    this.musicToggle.textContent = '🔊';
+                    this.updateMusicButton(true);
                 }).catch(e => {
                     console.log('Play failed:', e);
                 });

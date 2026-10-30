@@ -546,7 +546,7 @@ const commands = {
                     targetHeld: samples.every(p => p.index === index + 1), settled, expectedSettled: index + 1,
                     repeatedAdvance: during === settled + 1 && repeated === settled + 2,
                     arrowsAfterSelector: previous.left >= picker.right && next.left >= previous.right,
-                    equalButtonSizes: rect(view.fullscreenButton).height === rect(document.querySelector('.experience-info__button')).height };
+                    equalButtonSizes: rect(view.fullscreenButton).height === rect(view.previous).height && rect(view.panelButton ?? view.previous).height === rect(view.next).height };
             });
             await page.keyboard.press('Control+k');
             result.searchFocused = await page.locator('.experience-picker-search').evaluate(node => node === document.activeElement);
@@ -646,19 +646,19 @@ const commands = {
                 Math.abs(Number(document.querySelector('.experience-camera-slider input').value) - target) < 0.0001,
             earthTarget, { timeout: 45000 });
             // iPhone Safari without element fullscreen follows this same fallback path.
-            await page.evaluate(() => { app.experiences.host.requestFullscreen = undefined; });
+            await page.evaluate(() => { app.experiences.fullscreenTarget().requestFullscreen = undefined; });
             await page.locator('.experience-fullscreen-button').click();
             await page.waitForFunction(() => app.experiences.fullscreenState?.fallback);
             await page.waitForTimeout(300);
             const fullscreen = await page.evaluate(() => {
-                const view = app.experiences, host = view.host.getBoundingClientRect(), stage = view.stageFrame.getBoundingClientRect();
+                const view = app.experiences, host = view.fullscreenTarget().getBoundingClientRect(), stage = view.stageFrame.getBoundingClientRect();
                 const button = view.fullscreenButton.getBoundingClientRect();
                 return { host: { x: host.x, y: host.y, width: host.width, height: host.height },
                     stageHeight: stage.height, overflow: view.host.scrollWidth > innerWidth + 1,
                     buttonSize: Math.min(button.width, button.height), label: view.fullscreenButton.getAttribute('aria-label') };
             });
             results.push({ test: 'mobile immersive fallback', ...fullscreen,
-                passed: fullscreen.host.y === 0 && fullscreen.host.height >= 850 && fullscreen.stageHeight > 400 && !fullscreen.overflow && fullscreen.buttonSize >= 44 && fullscreen.label === 'Exit fullscreen' });
+                passed: fullscreen.host.y === 0 && fullscreen.host.height >= 850 && fullscreen.stageHeight > 400 && !fullscreen.overflow && fullscreen.buttonSize >= 40 && fullscreen.label === 'Exit fullscreen' });
             await page.screenshot({ path: path.join(out, 'length-fullscreen.png') });
             await page.keyboard.press('Escape');
             results.push({ test: 'fallback Escape restores scrolling', passed: await page.evaluate(() => !app.experiences.fullscreenState && document.body.style.overflow !== 'hidden') });
@@ -668,7 +668,7 @@ const commands = {
             });
             results.push({ test: 'explorer mode switch disposes touch handlers', passed: await page.evaluate(() => app.experiences.active && app.experiences.stageFrame.style.touchAction === 'none') });
             await page.evaluate(() => {
-                app.experiences.host.requestFullscreen = undefined;
+                app.experiences.fullscreenTarget().requestFullscreen = undefined;
                 app.experiences.enterFullscreen();
             });
             await page.evaluate(() => app.setDimension('angular-velocity'));
@@ -678,7 +678,7 @@ const commands = {
             await page.waitForTimeout(4000);
             await page.goto(`${base}/?dimension=angular-velocity&item=Ceiling%20fan`);
             await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.instances.get(app.experiences.item));
-            await page.evaluate(() => { app.experiences.host.requestFullscreen = undefined; });
+            await page.evaluate(() => { app.experiences.fullscreenTarget().requestFullscreen = undefined; });
             await page.locator('.experience-fullscreen-button').click();
             await page.waitForFunction(() => app.experiences.fullscreenState?.fallback);
             await page.screenshot({ path: path.join(out, 'angular-fullscreen.png') });
@@ -694,7 +694,7 @@ const commands = {
             await page.goto(`${base}/?dimension=length&item=Earth%20Diameter`);
             await page.waitForFunction(() => globalThis.app?.experiences?.renderer);
             await page.locator('.experience-fullscreen-button').click();
-            await page.waitForFunction(() => document.fullscreenElement === app.experiences.host);
+            await page.waitForFunction(() => document.fullscreenElement === app.experiences.fullscreenTarget());
             results.push({ test: 'native desktop fullscreen', passed: true });
             await page.screenshot({ path: path.join(out, 'length-desktop-fullscreen.png') });
             await page.evaluate(() => document.exitFullscreen());

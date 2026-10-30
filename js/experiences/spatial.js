@@ -324,7 +324,20 @@
         ctx.stageFrame.addEventListener('click', click, true);
         ctx.stageFrame.tabIndex = 0;
         ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use the left and right arrow keys to select items.');
-        return { update: () => { ctx.updateComparison(); }, frameTo: hop, radialPan: panAt,
+        // Zoom buttons beside the camera slider, and the hook keyboard shortcuts use.
+        // Positive amounts zoom out (toward larger scales).
+        const zoomButtons = dom('div', 'experience-zoom-buttons');
+        for (const [label, amount, path] of [['Zoom in (+)', -0.25, 'M6 12h12M12 6v12'], ['Zoom out (\u2212)', 0.25, 'M6 12h12']]) {
+            const control = dom('button', 'experience-zoom-button');
+            control.type = 'button';
+            control.title = label;
+            control.setAttribute('aria-label', label.replace(/ \(.*\)$/, ''));
+            control.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${path}" /></svg>`;
+            control.addEventListener('click', () => move(amount));
+            zoomButtons.append(control);
+        }
+        zoom.element.append(zoomButtons);
+        return { update: () => { ctx.updateComparison(); }, frameTo: hop, radialPan: panAt, zoomBy: move,
             // The renderer reports which objects it actually drew on screen, and how far each
             // is (in decades) from the camera's ring size; apply() chooses among them.
             observe: list => { observed = list; },
@@ -591,7 +604,7 @@
                 if (current.sketchfab_uid) ctx.attribution.append(document.createTextNode(' · adapted for web'));
             }
         }
-        return { render, get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; }, focus: frame => {
+        return { render, zoomBy: amount => navigationControl.zoomBy(amount), get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; }, focus: frame => {
             if (frame) {
                 const presentation = ctx.modelEntry(ctx.item)?.presentation || {};
                 const exponent = ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor}) +
@@ -688,6 +701,6 @@
             ctx.caption.textContent='Each total is a square of image tiles whose side grows with the square root of the count, arranged so totals near the current scale ring the center and smaller ones gather toward it. The tiles identify what is counted, using illustrative photographs rather than measured outlines. A tile represents one object only when its multiplier is 1; otherwise it represents the explicit cluster size shown. All items share that multiplier. Totals below one cluster shrink in dot area; large totals are truncated at 12,000 tiles. Count alternatives (such as Go positions) are not physically coexisting objects. The four Go boards are valid illustrative positions, not a uniform random sample.';
             nav.update();
         }
-        return {render,focus:frame=>{if(frame)nav.frameTo(2*ScaleJourney.frameExponent(ctx.items,ctx.index,2),ctx.index);},dispose:()=>{disposed=true;ctx.host.classList.remove('experience--spatial');nav.dispose();}};
+        return {render,zoomBy:amount=>nav.zoomBy(amount*2),focus:frame=>{if(frame)nav.frameTo(2*ScaleJourney.frameExponent(ctx.items,ctx.index,2),ctx.index);},dispose:()=>{disposed=true;ctx.host.classList.remove('experience--spatial');nav.dispose();}};
     };
 })(globalThis);

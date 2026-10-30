@@ -293,7 +293,10 @@ export class ModelStage {
                 this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
                 this.renderer.toneMappingExposure = 0.85;
             }
-            this.renderer.setPixelRatio(Math.min(devicePixelRatio, this.coarsePointer ? 1.5 : 2));
+            this.maxPixelRatio = Math.min(devicePixelRatio, this.coarsePointer ? 1.5 : 2);
+            this.pixelRatio = this.maxPixelRatio;
+            this.frameIntervals = [];
+            this.renderer.setPixelRatio(this.pixelRatio);
             this.renderer.domElement.className = 'experience-model-stage';
             this.renderer.domElement.setAttribute('aria-hidden', 'true');
             ctx.stageFrame.insertBefore(this.renderer.domElement, ctx.stage);
@@ -592,6 +595,27 @@ export class ModelStage {
             this.queueLoadRedraw();
         }
     }
+    // Dynamic resolution: while frames arrive back to back (zooming, rotating), watch
+    // their spacing. Below ~40 fps drop the pixel ratio a step (never under 1); once
+    // frames keep up again, restore it. Idle redraws are ignored.
+    adaptResolution() {
+        const now = performance.now();
+        const gap = now - (this.lastFrameAt ?? -Infinity);
+        this.lastFrameAt = now;
+        if (gap > 250) return;
+        this.frameIntervals.push(gap);
+        if (this.frameIntervals.length < 12) return;
+        const sorted = [...this.frameIntervals].sort((a, b) => a - b);
+        const median = sorted[sorted.length >> 1];
+        this.frameIntervals = [];
+        let next = this.pixelRatio;
+        if (median > 25 && next > 1) next = Math.max(1, next - 0.25);
+        else if (median < 18 && next < this.maxPixelRatio) next = Math.min(this.maxPixelRatio, next + 0.25);
+        if (next === this.pixelRatio) return;
+        this.pixelRatio = next;
+        this.renderer.setPixelRatio(next);
+        this.renderer.setSize(this.viewportWidth, this.viewportHeight, false);
+    }
     // Upload textures and compile shaders while the instance is still hidden; doing it on
     // the first visible frame stalls that frame and makes the model visibly pop in.
     async warm(instance) {
@@ -780,6 +804,7 @@ export class ModelStage {
             for (const overlay of instance?.userData.hoverOverlays || [])
                 overlay.visible = item === this.hovered && instance.visible;
         resolveLabelCollisions(this.ctx.stage);
+        this.adaptResolution();
         this.renderer.render(this.scene, this.camera);
         for (const [item, lease] of this.activeLeases) {
             if (this.usedItems.has(item)) continue;

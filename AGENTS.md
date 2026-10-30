@@ -1,5 +1,28 @@
 # Agent Handoff Guide
 
+## 2026-10-29 app shell v2: one toolbar, left panel, shortcuts, performance (Claude)
+
+- One top bar: logo (inline SVG, follows theme) | dimension picker + (i) popover | item toolbar
+  (panel toggle, item search, prev/next, full screen, center) | Explore/Chart | unit | help | options.
+  The controller mounts its toolbar into `#app-item-slot` when present (else into the host, as
+  before). The (i) popover (`#dimension-info`) holds the dimension and unit descriptions plus
+  "This view" (caption and model attribution, moved from the old toolbar info button).
+- Description panel is on the left (`--app-panel-width`), toggled with P / the panel button
+  (`ctx.togglePanel`, saved as `scale-panel-hidden`). Phones keep it below the stage.
+- Full screen targets the whole `.app` (`ctx.fullscreenTarget()`), so the bar stays usable; the
+  no-API fallback only overlays when there is no app shell. model_lab checks follow the target.
+- Shortcuts (js/app-shell.js, help dialog lists them): arrows, / or Ctrl/Cmd+K search, D dimension,
+  U unit, L explorer/chart, C center, P panel, F full screen, + and - zoom (`renderer.zoomBy`),
+  T theme, N notation, M music, O options, ? help, Esc closes. Ignored while typing.
+- Zoom +/- buttons beside the camera slider; one-time controls hint (`scale-hint-seen`).
+  Explicit selections update `?item=` with replaceState. Spatial explorers never scroll the page;
+  scrollbars are thin. Favicon swaps favicon-light.svg / favicon-dark.svg with the site theme.
+- Performance: `ModelStage.adaptResolution` lowers the pixel ratio in 0.25 steps (to 1) when
+  back-to-back frames run slower than ~40 fps and restores it when they keep up.
+- Storage: `scripts/optimize_images.py` capped item photos at 2400 px / q85 (only files over
+  2400 px or 1 MB); images/ went from 732 MB to 284 MB. Thumbnails are unchanged. Git history
+  still holds the old originals (.git ~1 GB); the deployed site no longer does.
+
 ## 2026-10-29 measured models and Codex round 7 (Claude)
 
 - `scripts/build_measured_models.py` + `register_measured_models.py` (CC0, by Claude): Great

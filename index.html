@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="importmap">{"imports":{"three":"./js/vendor/three/three.module.min.js"}}</script>
-    <script type="module" src="js/experiences/models.js?v=6f7d212fbd"></script>
+    <script type="module" src="js/experiences/models.js?v=52efb79c3e"></script>
     <title>Universe Scales</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link id="favicon" rel="icon" type="image/svg+xml" href="favicon-light.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css/styles.css?v=67aa0bc6d2">
     <link rel="stylesheet" href="css/mobile.css?v=32b300cc8e">
     <link rel="stylesheet" href="css/experiences.css?v=c351d1190a">
     <link rel="stylesheet" href="css/audio-experience.css?v=5ff32778dc">
     <link rel="stylesheet" href="css/perception-experience.css?v=df53354866">
-    <link rel="stylesheet" href="css/app.css?v=65643374d6">
+    <link rel="stylesheet" href="css/app.css?v=424ade7394">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -39,8 +40,8 @@
 <body>
     <div class="app">
         <header class="app-bar">
-            <a class="app-brand" href="./" aria-label="Universe Scales home">
-                <img src="favicon.png" alt="" width="22" height="22">
+            <a class="app-brand" href="./" aria-label="Universe Scales home" title="Universe Scales">
+                <svg class="app-logo" viewBox="0 0 850 820" aria-hidden="true" focusable="false"><path d="M322 445V95M218 190 322 86l104 104M322 445l410 7M634 352l100 100-100 100M322 445 155 715M118 580l32 133 135-30" /></svg>
                 <span>Universe Scales</span>
             </a>
             <div class="controls app-bar__controls">
@@ -76,18 +77,33 @@
                 </div>
 
                 <div class="control-group dimension-picker">
-                    <label for="dimension-browser-toggle">Dimension</label>
+                    <label class="sr-only" for="dimension-browser-toggle">Dimension</label>
                     <button id="dimension-browser-toggle" class="dimension-browser-toggle" type="button"
-                        aria-expanded="false" aria-controls="dimension-browser-panel">
+                        aria-expanded="false" aria-controls="dimension-browser-panel" title="Choose a dimension (D)">
                         <span id="dimension-browser-current">Length</span>
                         <span class="dimension-browser-toggle__chevron" aria-hidden="true">▾</span>
                     </button>
+                    <div class="app-popover-anchor">
+                        <button id="dimension-info-toggle" class="app-icon-button app-icon-button--quiet" type="button"
+                            aria-expanded="false" aria-controls="dimension-info" title="About this dimension and unit">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7.5v.5" /></svg>
+                            <span class="sr-only">About this dimension</span>
+                        </button>
+                        <div id="dimension-info" class="app-popover" role="dialog" aria-label="About this dimension" hidden>
+                            <div id="dimension-description" class="dimension-description"></div>
+                            <h3 class="app-popover__heading">Unit</h3>
+                            <div id="unit-description" class="unit-description"></div>
+                            <h3 class="app-popover__heading" id="view-info-heading" hidden>This view</h3>
+                            <div id="view-info" class="app-view-info"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div id="app-item-slot" class="app-bar__item"></div>
             <div id="view-switch" class="view-switch" role="group" aria-label="Visualization mode" hidden></div>
             <div class="app-bar__end">
                 <div class="unit-selector-container">
-                <label for="unit-browser-toggle">Unit:</label>
+                <label class="sr-only" for="unit-browser-toggle">Unit</label>
                 <div class="unit-picker">
                     <button id="unit-browser-toggle" class="unit-browser-toggle" type="button" aria-expanded="false"
                         aria-controls="unit-browser-panel">
@@ -102,10 +118,14 @@
                     <!-- Units will be populated dynamically -->
                 </select>
             </div>
+                <button id="help-toggle" class="app-icon-button" type="button" title="Help and keyboard shortcuts (?)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.6v.6M12 17v.5" /></svg>
+                    <span class="sr-only">Help</span>
+                </button>
                 <button id="options-toggle" class="app-icon-button" type="button" aria-expanded="false"
-                    aria-controls="options-drawer" title="Options">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
-                    <span class="app-icon-button__label">Options</span>
+                    aria-controls="options-drawer" title="Options (O)">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h9M17 7h3M4 17h3M11 17h9" /><circle cx="15" cy="7" r="2" /><circle cx="9" cy="17" r="2" /></svg>
+                    <span class="sr-only">Options</span>
                 </button>
             </div>
         </header>
@@ -164,28 +184,24 @@
             <section class="app-drawer__section">
                 <h3>Display</h3>
                 <div class="app-setting">
-                    <span>Number notation</span>
-                    <button id="notation-toggle" class="notation-toggle" aria-label="Toggle number notation"
-                        title="Toggle number notation">1e10</button>
+                    <span class="app-setting__label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><text x="1" y="19" font-size="13" font-weight="600" fill="currentColor">10</text><text x="16" y="11" font-size="9" font-weight="600" fill="currentColor">n</text></svg>Number notation</span>
+                    <button id="notation-toggle" class="notation-toggle" aria-label="Change number notation"
+                        title="Change number notation (N)">1e10</button>
                 </div>
                 <div class="app-setting">
-                    <span>Dark theme</span>
-                    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode"
-                        title="Toggle dark mode">🌙</button>
+                    <span class="app-setting__label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>Theme</span>
+                    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Switch light or dark theme"
+                        title="Switch theme (T)"></button>
                 </div>
                 <div class="app-setting">
-                    <span>Background music</span>
+                    <span class="app-setting__label"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18V6l10-2v12" /><circle cx="6.5" cy="18" r="2.5" /><circle cx="16.5" cy="16" r="2.5" /></svg>Background music</span>
                     <button id="music-toggle" class="music-toggle" aria-label="Play or pause background music"
-                        title="Play or pause music">🎵</button>
+                        title="Play or pause music (M)"></button>
                 </div>
-            </section>
-            <section class="app-drawer__section">
-                <h3>About this dimension</h3>
-                <div id="dimension-description" class="dimension-description"></div>
-                <div id="unit-description" class="unit-description"></div>
             </section>
             <section class="app-drawer__section">
                 <h3>Data</h3>
+
                 <!-- Visual Editor Panel -->
             <div id="editor-panel" class="editor-panel">
                 <button id="editor-toggle" class="editor-toggle" aria-label="Toggle editor" title="Toggle editor">
@@ -288,12 +304,13 @@
             </div>
             </section>
             <section class="app-drawer__section">
-                <h3>About</h3>
+                <h3>Help</h3>
                 <div class="app-drawer__links">
-                    <button id="about-open" class="app-link-button" type="button">Credits and acknowledgements</button>
-                    <a class="app-link-button" href="https://forms.gle/AsKVCmmxzE2drWbC8" target="_blank" rel="noopener noreferrer">Send feedback</a>
-                    <a class="app-link-button" href="https://github.com/ethanuser/universe-scales" target="_blank" rel="noopener noreferrer">Source code</a>
-                    <a class="app-link-button" href="https://buymeacoffee.com/ethannguyen" target="_blank" rel="noopener noreferrer">Support the project</a>
+                    <button class="app-link-button" type="button" data-open-help><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="11" /><path d="M6 10h1M9 10h1M12 10h1M15 10h1M18 10h0M7 14h10" /></svg>Keyboard shortcuts and controls</button>
+                    <button id="about-open" class="app-link-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7.5v.5" /></svg>Credits and acknowledgements</button>
+                    <a class="app-link-button" href="https://forms.gle/AsKVCmmxzE2drWbC8" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H8l-4 4Z" /></svg>Send feedback</a>
+                    <a class="app-link-button" href="https://github.com/ethanuser/universe-scales" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" /></svg>Source code</a>
+                    <a class="app-link-button" href="https://buymeacoffee.com/ethannguyen" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5ZM16 10h2a2 2 0 0 1 0 4h-2M8 3v3M11 3v3" /></svg>Support the project</a>
                 </div>
             </section>
         </aside>
@@ -332,6 +349,52 @@
             </div>
         </div>
 
+        <div id="help-dialog" class="app-dialog" role="dialog" aria-modal="true" aria-labelledby="help-title" hidden>
+            <div class="app-dialog__panel app-dialog__panel--wide">
+                <div class="app-drawer__header">
+                    <h2 id="help-title">Controls and keyboard shortcuts</h2>
+                    <button class="app-icon-button" type="button" data-close-dialog aria-label="Close" title="Close (Esc)">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" /></svg>
+                    </button>
+                </div>
+                <div class="app-dialog__body app-help">
+                    <section>
+                        <h3>Explore</h3>
+                        <dl class="app-keys">
+                            <dt><kbd>Scroll</kbd> or <kbd>+</kbd> <kbd>&minus;</kbd></dt><dd>Zoom through scale</dd>
+                            <dt><kbd>Drag</kbd> empty space</dt><dd>Zoom (drag left or right)</dd>
+                            <dt><kbd>Drag</kbd> an object</dt><dd>Rotate it; it springs back</dd>
+                            <dt><kbd>Click</kbd> an object</dt><dd>Select it and center the view on it</dd>
+                            <dt><kbd>&larr;</kbd> <kbd>&rarr;</kbd></dt><dd>Previous or next item</dd>
+                            <dt><kbd>C</kbd></dt><dd>Center and frame the selected item</dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <h3>Find and switch</h3>
+                        <dl class="app-keys">
+                            <dt><kbd>/</kbd> or <kbd>Ctrl</kbd> <kbd>K</kbd></dt><dd>Search items</dd>
+                            <dt><kbd>D</kbd></dt><dd>Choose a dimension</dd>
+                            <dt><kbd>U</kbd></dt><dd>Choose a unit</dd>
+                            <dt><kbd>L</kbd></dt><dd>Switch explorer and logarithmic chart</dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <h3>View</h3>
+                        <dl class="app-keys">
+                            <dt><kbd>P</kbd></dt><dd>Show or hide the description panel</dd>
+                            <dt><kbd>F</kbd></dt><dd>Full screen</dd>
+                            <dt><kbd>T</kbd></dt><dd>Light or dark theme</dd>
+                            <dt><kbd>N</kbd></dt><dd>Number notation</dd>
+                            <dt><kbd>M</kbd></dt><dd>Music on or off</dd>
+                            <dt><kbd>O</kbd></dt><dd>Options</dd>
+                            <dt><kbd>?</kbd></dt><dd>This help</dd>
+                            <dt><kbd>Esc</kbd></dt><dd>Close menus and dialogs</dd>
+                        </dl>
+                    </section>
+                </div>
+            </div>
+        </div>
+
         <!-- Background Music -->
         <audio id="background-music" loop preload="none">
             <source src="Frozen Star.mp3" type="audio/mpeg">
@@ -346,17 +409,17 @@
     <script src="js/experiences/math.js?v=54aaf7588e" defer></script>
     <script src="js/experiences/controls.js?v=c3382a2eca" defer></script>
     <script src="js/experiences/area-maps.js?v=adb40b5c76" defer></script>
-    <script src="js/experiences/spatial.js?v=39b4d72d9b" defer></script>
+    <script src="js/experiences/spatial.js?v=b55e239d61" defer></script>
     <script src="js/experiences/motion-math.js?v=ea5a56c662" defer></script>
     <script src="js/experiences/motion.js?v=0d2d8b85b1" defer></script>
     <script src="js/experiences/perception.js?v=c8c3b660af" defer></script>
     <script src="js/experiences/journey.js?v=52ba6f161d" defer></script>
     <script src="js/experiences/audio-math.js?v=f55f282587" defer></script>
     <script src="js/experiences/audio.js?v=aba4f2bb85" defer></script>
-    <script src="js/experiences/controller.js?v=fc8f4a4516" defer></script>
-    <script src="js/script.js?v=21aefc7372" defer></script>
+    <script src="js/experiences/controller.js?v=058ea8be35" defer></script>
+    <script src="js/script.js?v=1377ff485d" defer></script>
     <script src="js/mobile.js?v=9b915523c0" defer></script>
-    <script src="js/app-shell.js?v=2716e573a7" defer></script>
+    <script src="js/app-shell.js?v=78d563ec69" defer></script>
 </body>
 
 </html>
