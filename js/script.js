@@ -118,6 +118,7 @@ class UniversalScales {
 
         // Set up zoom after plot is initialized
         this.setupZoom();
+        this.overview = window.PlotOverview ? new PlotOverview(this) : null;
         this.setupZoomControls();
         this.setupStickyTopAxis();
 
@@ -2483,6 +2484,9 @@ class UniversalScales {
             .scaleExtent([CONFIG.ZOOM_SCALE_MIN, CONFIG.ZOOM_SCALE_MAX]) // Will be constrained further in handleZoom
             .translateExtent(this.getZoomTranslateExtent()) // Allow panning horizontally with padding
             .filter((event) => {
+                // A plain wheel scrolls through the item rows; Ctrl/Cmd + wheel (and trackpad
+                // pinch, which arrives as a Ctrl wheel) zooms the value axis.
+                if (event.type === 'wheel') return event.ctrlKey || event.metaKey;
                 // On mobile, block wheel events and multi-touch gestures (pinch zoom)
                 if (isMobile && (event.type === 'touchstart' || isTouchPointer)) {
                     return false;
@@ -2545,7 +2549,7 @@ class UniversalScales {
                         const deltaY = currentPosition.y - this.dragStartY;
                         if (Math.abs(deltaY) > CONFIG.VERTICAL_SCROLL_THRESHOLD) {
                             const scrollAmount = deltaY - (this.lastScrollDeltaY || 0);
-                            window.scrollBy(0, -scrollAmount);
+                            (document.querySelector('.app-main') || window).scrollBy(0, -scrollAmount);
                             this.lastScrollDeltaY = deltaY;
                         }
                     }
@@ -2566,6 +2570,14 @@ class UniversalScales {
                 this.touchStartOnItem = null;
                 this.touchStartPosition = null;
             });
+
+        // Horizontal trackpad swipes and Shift + wheel pan the value axis.
+        this.svg.on('wheel.pan', (event) => {
+            const dx = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.shiftKey ? event.deltaY : 0;
+            if (!dx || event.ctrlKey || event.metaKey) return;
+            event.preventDefault();
+            this.mainGroup.call(this.zoomBehavior.translateBy, -dx / (d3.zoomTransform(this.mainGroup.node()).k || 1), 0);
+        });
 
         // Apply zoom to the main group - it will receive events
         // Items on top will still receive their own pointer events
@@ -3221,8 +3233,10 @@ class UniversalScales {
             // Get the bottom axis position within the plot container
             // The bottom axis is at the bottom of the plot area (yScale(0))
             // We need to check if the sticky axis would overlap with the bottom axis
-            const plotContainerTop = plotRect.top;
-            const plotContainerBottom = plotRect.bottom;
+            // In the app shell the chart scrolls inside the main area, below the top bar.
+            const scrollerTop = document.querySelector('.app-main')?.getBoundingClientRect().top ?? 0;
+            const plotContainerTop = plotRect.top - scrollerTop;
+            const plotContainerBottom = plotRect.bottom - scrollerTop;
             const plotContainerHeight = plotRect.height;
 
             // The bottom axis is at the bottom of the plot container
@@ -3267,6 +3281,8 @@ class UniversalScales {
 
         // Also use scroll listener as backup to ensure responsiveness
         window.addEventListener('scroll', checkVisibility, { passive: true });
+        document.querySelector('.app-main')?.addEventListener('scroll', checkVisibility, { passive: true });
+        this.checkStickyAxis = checkVisibility;
 
         // Check initial state immediately and after a short delay to ensure DOM is ready
         checkVisibility();

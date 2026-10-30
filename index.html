@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/experiences.css?v=c351d1190a">
     <link rel="stylesheet" href="css/audio-experience.css?v=5ff32778dc">
     <link rel="stylesheet" href="css/perception-experience.css?v=df53354866">
-    <link rel="stylesheet" href="css/app.css?v=424ade7394">
+    <link rel="stylesheet" href="css/app.css?v=2c3bcffd6b">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -362,9 +362,11 @@
                         <h3>Explore</h3>
                         <dl class="app-keys">
                             <dt><kbd>Scroll</kbd> or <kbd>+</kbd> <kbd>&minus;</kbd></dt><dd>Zoom through scale</dd>
-                            <dt><kbd>Drag</kbd> empty space</dt><dd>Zoom (drag left or right)</dd>
+                            <dt><kbd>Drag</kbd> empty space</dt><dd>Pan the view</dd>
+                            <dt><kbd>Shift</kbd> + <kbd>Drag</kbd></dt><dd>Pan, even over an object</dd>
+                            <dt><kbd>Pinch</kbd> or <kbd>Ctrl</kbd> + <kbd>Scroll</kbd></dt><dd>Zoom (touch screens and trackpads)</dd>
                             <dt><kbd>Drag</kbd> an object</dt><dd>Rotate it; it springs back</dd>
-                            <dt><kbd>Click</kbd> an object</dt><dd>Select it and center the view on it</dd>
+                            <dt><kbd>Click</kbd> an object</dt><dd>Select it; zooming then stays centered on it</dd>
                             <dt><kbd>&larr;</kbd> <kbd>&rarr;</kbd></dt><dd>Previous or next item</dd>
                             <dt><kbd>C</kbd></dt><dd>Center and frame the selected item</dd>
                         </dl>
@@ -405,21 +407,22 @@
     <script src="js/constants.js?v=f64d0fe1ce" defer></script>
     <script src="js/formatting.js?v=f3379dc71b" defer></script>
     <script src="js/editor.js?v=617fc5b26a" defer></script>
-    <script src="js/plot.js?v=14f88f7a36" defer></script>
+    <script src="js/plot.js?v=5dc24e4701" defer></script>
+    <script src="js/plot-overview.js?v=241f72724c" defer></script>
     <script src="js/experiences/math.js?v=54aaf7588e" defer></script>
     <script src="js/experiences/controls.js?v=c3382a2eca" defer></script>
     <script src="js/experiences/area-maps.js?v=adb40b5c76" defer></script>
-    <script src="js/experiences/spatial.js?v=b55e239d61" defer></script>
+    <script src="js/experiences/spatial.js?v=701e4bcf6a" defer></script>
     <script src="js/experiences/motion-math.js?v=ea5a56c662" defer></script>
     <script src="js/experiences/motion.js?v=0d2d8b85b1" defer></script>
     <script src="js/experiences/perception.js?v=c8c3b660af" defer></script>
     <script src="js/experiences/journey.js?v=52ba6f161d" defer></script>
     <script src="js/experiences/audio-math.js?v=f55f282587" defer></script>
     <script src="js/experiences/audio.js?v=aba4f2bb85" defer></script>
-    <script src="js/experiences/controller.js?v=058ea8be35" defer></script>
-    <script src="js/script.js?v=1377ff485d" defer></script>
+    <script src="js/experiences/controller.js?v=e1feadd341" defer></script>
+    <script src="js/script.js?v=bd51f32167" defer></script>
     <script src="js/mobile.js?v=9b915523c0" defer></script>
-    <script src="js/app-shell.js?v=78d563ec69" defer></script>
+    <script src="js/app-shell.js?v=9248f8be5c" defer></script>
 </body>
 
 </html>

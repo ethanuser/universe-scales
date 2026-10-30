@@ -1,5 +1,22 @@
 # Agent Handoff Guide
 
+## 2026-10-29 pan, pinch, selection lock, chart rework (Claude)
+
+- Radial explorers: drag on empty space pans (frozen world-point anchor, `manual: true`, returns
+  toward the origin over 2 decades of zoom-in); Shift-drag or middle-drag pans over objects; two
+  touch points pinch-zoom (`createSpatialInput` `onPinch`); Ctrl+wheel (trackpad pinch) zooms
+  faster. Linear layouts keep drag-to-zoom.
+- A selected object stays centered while zooming into it (`panAt` returns its world point while
+  `pinnedFocus` matches); the lock releases after 0.5 decades out or 3 decades in, freezing the
+  current view first. Framing: `frameZoom(ctx)` puts the object at ~55% of the stage's smaller
+  side (renderer `frameOffset()`; model_lab navigation/mobile use it).
+- Explorer zoom bar is an opaque strip. Help dialog and first-visit hint describe pan/pinch.
+- Logarithmic chart in the shell: plain wheel scrolls rows inside `.app-main` (d3 zoom only takes
+  Ctrl/Cmd wheel and pinch); horizontal swipe / Shift+wheel pans the value axis; the sticky top
+  axis pins under the bar and listens to `.app-main` scroll; `js/plot-overview.js` draws an
+  overview rail (all items + current rows/value window; click or drag to jump). Chart buttons are
+  one compact row.
+
 ## 2026-10-29 app shell v2: one toolbar, left panel, shortcuts, performance (Claude)
 
 - One top bar: logo (inline SVG, follows theme) | dimension picker + (i) popover | item toolbar

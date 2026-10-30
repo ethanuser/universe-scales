@@ -461,3 +461,64 @@ kbd {
         border-top: 1px solid var(--border-color);
     }
 }
+
+/* Logarithmic chart in the app shell: the rows scroll inside the main area; the value axis
+   stays pinned under the top bar; an overview rail on the right shows where you are. */
+.app-main > .plot-container { margin: 0 88px 0 12px; }
+.top-axis-floating { top: var(--app-bar-height) !important; border-radius: 0 !important; }
+.plot-overview {
+    position: fixed;
+    z-index: var(--z-zoom-controls);
+    top: calc(var(--app-bar-height) + 12px);
+    right: 12px;
+    bottom: 64px;
+    width: 64px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    cursor: pointer;
+    touch-action: none;
+}
+.plot-overview[hidden] { display: none; }
+.plot-overview canvas { display: block; width: 100%; height: 100%; opacity: 0.85; }
+.plot-overview__frame {
+    position: absolute;
+    border: 1.5px solid var(--text-primary);
+    background: color-mix(in srgb, var(--accent-color) 14%, transparent);
+    pointer-events: none;
+}
+/* Compact chart controls: one row of square buttons. */
+.zoom-controls.zoom-controls-floating {
+    grid-template-columns: repeat(5, 36px) !important;
+    grid-template-rows: 36px !important;
+    grid-template-areas: "left right minus plus reset" !important;
+    gap: 0 !important;
+    width: auto !important;
+    right: 12px;
+    bottom: 12px;
+    padding: 0 !important;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    box-shadow: var(--shadow);
+}
+.zoom-controls.zoom-controls-floating .zoom-btn {
+    width: 36px; height: 36px; min-width: 0; padding: 0; border: 0; border-radius: 0;
+    background: var(--bg-primary); color: var(--text-primary); font-size: 1rem; box-shadow: none;
+}
+.zoom-controls.zoom-controls-floating .zoom-btn + .zoom-btn { border-left: 1px solid var(--border-color); }
+.zoom-controls.zoom-controls-floating .zoom-btn:hover { background: var(--hover-bg); }
+@media (max-width: 700px) {
+    .app-main > .plot-container { margin: 0 8px; }
+    .plot-overview { display: none; }
+}
+
+/* Explorer zoom bar: an opaque strip so it reads on any background. */
+.experience-camera-slider {
+    padding: 4px 4px 4px 12px !important;
+    border: 1px solid var(--border-color) !important;
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow);
+    --journey-ink: var(--text-primary);
+}
+.experience-zoom-button { background: var(--bg-primary); color: var(--text-primary); border-color: var(--border-color); }
+.experience-stage-frame[tabindex] { cursor: grab; }

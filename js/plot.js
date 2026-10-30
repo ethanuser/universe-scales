@@ -725,6 +725,7 @@ class PlotRenderer {
         
         // Position items with collision avoidance
         const positionedItems = this.positionItems(allItems);
+        this.lastPositioned = positionedItems;
         
         // Calculate horizontal offsets after scale domain is set
         this.calculateHorizontalOffsets(positionedItems);
@@ -843,6 +844,7 @@ class PlotRenderer {
         if (this.app.updateStickyAxis) {
             this.app.updateStickyAxis();
         }
+        this.app.overview?.update();
     }
     
     updatePlotAfterZoom() {
@@ -922,6 +924,7 @@ class PlotRenderer {
         if (this.app.updateStickyAxis) {
             this.app.updateStickyAxis();
         }
+        this.app.overview?.update();
     }
     
     updatePlotColors() {

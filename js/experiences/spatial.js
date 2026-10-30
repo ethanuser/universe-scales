@@ -5,11 +5,22 @@
     const line = (x1, y1, x2, y2) => svg('line', { x1, y1, x2, y2, stroke: 'currentColor', 'stroke-width': 2 });
     const MIN_DRAWN_PX = 0.5;
     const MIN_MODEL_PX = 4;
-    const IN_VIEW_PX = 14;      // an object this large on screen counts as "in view"
-    function createSpatialInput(element, { interaction = {}, onStart, onPan, onEnd }) {
+    const IN_VIEW_PX = 14;
+    // A selected object is framed to about 55% of the stage's smaller side (in decades above
+    // the ring size), so it and its in-model labels read clearly on any window shape.
+    function frameZoom(ctx) {
+        const box = stageSize(ctx.stage);
+        const viewWidth = box.width < 600 ? 560 : 1000;
+        const scale = Math.min(box.width / viewWidth, box.height / 500) || 1;
+        const wanted = 0.55 * Math.min(box.width, box.height) / (ScaleJourney.RADIAL_SIZE * scale);
+        return Math.log10(clamp(wanted || 1.8, 1.2, 4));
+    }      // an object this large on screen counts as "in view"
+    function createSpatialInput(element, { interaction = {}, onStart, onPan, onPinch, onEnd }) {
         const previousTouchAction = element.style.touchAction;
         const previousUserSelect = element.style.userSelect;
-        let active = null, dragged = 0;
+        // pinch: two touch points; their spread ratio zooms (onPinch) until either lifts.
+        let active = null, dragged = 0, pinch = null;
+        const spread = () => Math.hypot(pinch.points[0].x - pinch.points[1].x, pinch.points[0].y - pinch.points[1].y);
         const controls = 'button,input,select,textarea,option,a,[contenteditable="true"],[role="button"],.experience-camera-slider';
         element.style.touchAction = 'none';
         element.style.userSelect = 'none';
@@ -23,14 +34,26 @@
             element.classList.toggle('is-model-hovered', Boolean(item));
         };
         const pointerdown = event => {
-            if (active || event.button !== 0 || isControl(event.target)) return;
+            if (active && !pinch && onPinch && event.pointerType === 'touch' && active.pointerType === 'touch') {
+                if (active.rotating) interaction.releaseRotate?.(active.rotating, event.timeStamp);
+                active.rotating = null;
+                try { element.setPointerCapture(event.pointerId); } catch {}
+                pinch = { points: [{ id: active.id, x: active.x, y: active.y }, { id: event.pointerId, x: event.clientX, y: event.clientY }] };
+                pinch.distance = spread();
+                dragged = Math.max(dragged, 10);
+                event.preventDefault();
+                return;
+            }
+            if (active || (event.button !== 0 && event.button !== 1) || isControl(event.target)) return;
             onStart?.(event);
             let captured = false;
             try {
                 element.setPointerCapture(event.pointerId);
                 captured = true;
             } catch { /* Pointer may already have become inactive. */ }
-            const rotating = interaction.pick?.(event.clientX, event.clientY) || null;
+            // Shift-drag or a middle-button drag always pans, even over an object.
+            const panOnly = event.shiftKey || event.button === 1;
+            const rotating = panOnly ? null : interaction.pick?.(event.clientX, event.clientY) || null;
             if (rotating) interaction.beginRotate?.(rotating, event.timeStamp);
             interaction.hover?.(null, null);
             active = {
@@ -44,6 +67,16 @@
             element.classList.add('is-dragging');
         };
         const pointermove = event => {
+            if (pinch) {
+                const point = pinch.points.find(p => p.id === event.pointerId);
+                if (!point) return;
+                point.x = event.clientX; point.y = event.clientY;
+                const distance = spread();
+                if (distance > 0 && pinch.distance > 0) onPinch(distance / pinch.distance);
+                pinch.distance = distance;
+                event.preventDefault();
+                return;
+            }
             if (!active) { hover(event); return; }
             if (event.pointerId !== active.id) return;
             const dx = event.clientX - active.x;
@@ -64,6 +97,15 @@
             event.preventDefault();
         };
         const finish = (event, canceled = false) => {
+            if (pinch) {
+                if (!pinch.points.some(p => p.id === event.pointerId)) return;
+                // Lifting either finger ends the gesture; nothing pans or flings afterwards.
+                for (const point of pinch.points)
+                    if (element.hasPointerCapture?.(point.id)) try { element.releasePointerCapture(point.id); } catch {}
+                pinch = null; active = null;
+                element.classList.remove('is-dragging');
+                return;
+            }
             if (!active || (event.pointerId != null && event.pointerId !== active.id)) return;
             const gesture = active;
             active = null;
@@ -175,8 +217,10 @@
             // a frozen manual pan keeps its world point.
             const point = anchor.index != null ? layoutOptions().radialWorld?.(anchor.index) : anchor;
             if (!point) return { x: 0, y: 0 };
+            // A selected object stays centered while zooming into it.
+            if (anchor.index != null && anchor.index === pinnedFocus) return { x: point.x, y: point.y };
             const f = layoutOptions().exponentFactor ?? 1;
-            return ScaleJourney.radialReturnPan(point, exponent * f, anchor.exponent * f);
+            return ScaleJourney.radialReturnPan(point, exponent * f, anchor.exponent * f, anchor.manual ? 2 : 1);
         };
         const freezePan = () => {
             if (!layoutOptions().radial || !panGlide) return;
@@ -205,7 +249,11 @@
                     // An explicit selection holds while its object stays near the size it was
                     // framed at; zooming further away deselects it.
                     const delta = pinnedExponent == null ? 0 : (camera.value - pinnedExponent) * (options.exponentFactor ?? 1);
-                    if (pinnedFocus != null && (delta > 0.5 || delta < -0.4)) pinnedFocus = pinnedExponent = null;
+                    if (pinnedFocus != null && (delta > 0.5 || delta < -3)) {
+                        // Freeze the current view first so releasing the lock never jumps.
+                        anchor = { ...panAt(camera.value), exponent: camera.value, manual: true };
+                        pinnedFocus = pinnedExponent = null;
+                    }
                     if (pinnedFocus == null) {
                         // Otherwise describe the on-screen object nearest the camera's scale,
                         // or nothing when no object is in view.
@@ -291,7 +339,8 @@
         const wheel = e => {
             e.preventDefault();
             const pixels = (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? 400 : 1);
-            move(-clamp(pixels * 0.00045, -0.16, 0.16));
+            // Trackpad pinches arrive as Ctrl + wheel with small deltas; scale them up.
+            move(-clamp(pixels * (e.ctrlKey ? 0.006 : 0.00045), -0.16, 0.16));
         };
         zoom.input.addEventListener('input', sliderInput, true);
         ctx.stageFrame.addEventListener('wheel', wheel, { passive: false });
@@ -304,16 +353,36 @@
                 focusTransition.stop(currentPose());
                 camera.snap(camera.value);
             },
-            onPan: dx => {
-                if (!layoutOptions().radial) pinnedFocus = null;
+            onPan: (dx, dy) => {
                 if (frame) cancelAnimationFrame(frame);
                 frame = null; previousTime = null;
-                camera.snap(camera.value - dx * 0.0012);
+                if (!layoutOptions().radial) {
+                    // Linear layouts keep drag-to-zoom.
+                    pinnedFocus = null;
+                    camera.snap(camera.value - dx * 0.0012);
+                    apply();
+                    return;
+                }
+                // Radial layouts pan: drag moves the view; the selection stays selected but
+                // the view is no longer locked onto it.
+                const box = ScaleRenderers.stageSize(ctx.stage);
+                const viewWidth = box.width < 600 ? 560 : 1000;
+                const scale = Math.min(box.width / viewWidth, box.height / 500) || 1;
+                const f = layoutOptions().exponentFactor ?? 1;
+                const unitsPerPixel = 10 ** (camera.value * f) / ScaleJourney.RADIAL_SIZE / scale;
+                const current = panAt(camera.value);
+                anchor = { x: current.x - dx * unitsPerPixel, y: current.y + dy * unitsPerPixel, exponent: camera.value, manual: true };
+                panGlide = null;
                 apply();
             },
-            onEnd: velocity => {
-                if (velocity) move(clamp(velocity * 0.16, -0.6, 0.6));
-            }
+            onPinch: ratio => {
+                if (frame) cancelAnimationFrame(frame);
+                frame = null; previousTime = null;
+                const f = layoutOptions().exponentFactor ?? 1;
+                camera.snap(clamp(camera.value - Math.log10(ratio) / f, camera.min, camera.max));
+                apply();
+            },
+            onEnd: () => {}
         });
         const click = e => {
             if (input.isControlTarget(e.target)) { input.consumeDraggedClick(); return; }
@@ -323,7 +392,7 @@
         };
         ctx.stageFrame.addEventListener('click', click, true);
         ctx.stageFrame.tabIndex = 0;
-        ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use the left and right arrow keys to select items.');
+        ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Scroll or pinch to zoom, drag to pan, drag a 3D object to rotate, or use the left and right arrow keys to select items.');
         // Zoom buttons beside the camera slider, and the hook keyboard shortcuts use.
         // Positive amounts zoom out (toward larger scales).
         const zoomButtons = dom('div', 'experience-zoom-buttons');
@@ -409,7 +478,7 @@
             if (disposed || order === 2 || modelStage || !root.ScaleModels) return;
             modelStage = new ScaleModels.ModelStage(ctx, render, () => {
                 const factor = modelStage?.entry(ctx.item)?.presentation?.focus_scale_factor;
-                const exponent = ScaleJourney.frameExponent(ctx.items, ctx.index, order);
+                const exponent = ScaleJourney.frameExponent(ctx.items, ctx.index, order) - frameZoom(ctx);
                 if (factor && Math.abs(zoom.value - exponent) < 0.05)
                     navigationControl.frameTo(exponent + Math.log10(factor), ctx.index, 1);
             });
@@ -421,7 +490,7 @@
         if (order === 2) areaMaps = new ScaleAreaMaps.Catalog(() => {
             if (!disposed) {
                 ctx.updateDetail();
-                const exponent = ScaleJourney.frameExponent(ctx.items, ctx.index, order);
+                const exponent = ScaleJourney.frameExponent(ctx.items, ctx.index, order) - frameZoom(ctx);
                 const factor = areaMaps.entry(ctx.item)?.presentation.focus_scale_factor || 1;
                 if (Math.abs(zoom.value - exponent) < 0.05)
                     navigationControl.frameTo(exponent + Math.log10(factor), ctx.index, 1);
@@ -604,10 +673,10 @@
                 if (current.sketchfab_uid) ctx.attribution.append(document.createTextNode(' · adapted for web'));
             }
         }
-        return { render, zoomBy: amount => navigationControl.zoomBy(amount), get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; }, focus: frame => {
+        return { render, zoomBy: amount => navigationControl.zoomBy(amount), frameOffset: () => frameZoom(ctx), get modelStage() { return modelStage; }, get areaMaps() { return areaMaps; }, focus: frame => {
             if (frame) {
                 const presentation = ctx.modelEntry(ctx.item)?.presentation || {};
-                const exponent = ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor}) +
+                const exponent = ScaleJourney.frameExponent(ctx.items,ctx.index,order,{widthFactor}) - frameZoom(ctx) +
                     Math.log10(presentation.focus_scale_factor || 1);
                 navigationControl.frameTo(exponent, ctx.index, presentation.focus_scale_factor ? 1 : 0.3);
             }
@@ -701,6 +770,6 @@
             ctx.caption.textContent='Each total is a square of image tiles whose side grows with the square root of the count, arranged so totals near the current scale ring the center and smaller ones gather toward it. The tiles identify what is counted, using illustrative photographs rather than measured outlines. A tile represents one object only when its multiplier is 1; otherwise it represents the explicit cluster size shown. All items share that multiplier. Totals below one cluster shrink in dot area; large totals are truncated at 12,000 tiles. Count alternatives (such as Go positions) are not physically coexisting objects. The four Go boards are valid illustrative positions, not a uniform random sample.';
             nav.update();
         }
-        return {render,zoomBy:amount=>nav.zoomBy(amount*2),focus:frame=>{if(frame)nav.frameTo(2*ScaleJourney.frameExponent(ctx.items,ctx.index,2),ctx.index);},dispose:()=>{disposed=true;ctx.host.classList.remove('experience--spatial');nav.dispose();}};
+        return {render,zoomBy:amount=>nav.zoomBy(amount*2),focus:frame=>{if(frame)nav.frameTo(2*(ScaleJourney.frameExponent(ctx.items,ctx.index,2)-frameZoom(ctx)),ctx.index);},dispose:()=>{disposed=true;ctx.host.classList.remove('experience--spatial');nav.dispose();}};
     };
 })(globalThis);

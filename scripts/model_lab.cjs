@@ -401,7 +401,7 @@ const commands = {
                     globalThis.streamingGeometry = null;
                     instance.traverse(node => { if (!streamingGeometry && node.geometry) streamingGeometry = node.geometry; });
                     const samples = [];
-                    for (let step = 0; step <= 40; step++) {
+                    for (let step = 0; step <= 60; step++) {
                         input.value = original + step * 0.05;
                         view.renderer.render();
                         const photos = [...view.stage.querySelectorAll('.experience-object')].filter(node => {
@@ -536,7 +536,7 @@ const commands = {
                     });
                     closeSizeHops.push({ key, monotonic, durationMs: lastMovement-start,
                         framed: Math.abs(Number(view.stageFrame.querySelector('.experience-camera-slider input').value) -
-                            ScaleJourney.frameExponent(view.items, target, 1) -
+                            ScaleJourney.frameExponent(view.items, target, 1) + (view.renderer.frameOffset?.() ?? 0) -
                             Math.log10(view.modelEntry(view.items[target])?.presentation?.focus_scale_factor || 1)) < .001,
                         selected: view.index === target });
                 }
@@ -620,12 +620,20 @@ const commands = {
                 throw new Error('No empty pan target');
             });
             const slider = '.experience-camera-slider input';
-            const beforePan = Number(await page.locator(slider).inputValue());
+            // A one-finger drag on empty space pans the scene (labels move with it) and
+            // leaves the zoom unchanged.
+            const labelX = () => page.evaluate(() => {
+                const label = [...app.experiences.stage.querySelectorAll('.journey-object-label')]
+                    .find(node => node.textContent === app.experiences.item.name);
+                return label ? Number(label.getAttribute('x')) : NaN;
+            });
+            const beforePan = Number(await page.locator(slider).inputValue()), beforeX = await labelX();
             await touch('touchStart', empty);
             await touch('touchMove', { x: empty.x + 45, y: empty.y + 4 });
-            const duringPan = Number(await page.locator(slider).inputValue());
+            const duringPan = Number(await page.locator(slider).inputValue()), duringX = await labelX();
             await touch('touchEnd', empty);
-            results.push({ test: 'immediate touch pan', before: beforePan, during: duringPan, passed: duringPan < beforePan - 0.02 });
+            results.push({ test: 'immediate touch pan', before: beforePan, during: duringPan, beforeX, duringX,
+                passed: Math.abs(duringPan - beforePan) < 1e-9 && duringX > beforeX + 5 });
             const range = await page.locator(slider).boundingBox();
             await touch('touchStart', { x: range.x + range.width * 0.55, y: range.y + range.height / 2 });
             await touch('touchMove', { x: range.x + range.width * 0.59, y: range.y + range.height / 2 });
@@ -638,7 +646,7 @@ const commands = {
                 const pose = mobileStage.entry(view.items[index])?.presentation || {};
                 const target = ScaleJourney.frameExponent(view.items, index, 1, {
                     widthFactor: item => mobileStage.entry(item)?.presentation?.layout_width_factor ?? 1
-                }) + Math.log10(pose.focus_scale_factor || 1);
+                }) - (view.renderer.frameOffset?.() ?? 0) + Math.log10(pose.focus_scale_factor || 1);
                 view.focus(index);
                 return target;
             });

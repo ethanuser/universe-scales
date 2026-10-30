@@ -117,8 +117,8 @@
             hint.setAttribute('role', 'note');
             const touch = matchMedia('(pointer: coarse)').matches;
             hint.innerHTML = (touch
-                ? '<span><b>Drag</b> space to zoom</span><span><b>Drag</b> an object to rotate</span><span><b>Tap</b> to select</span>'
-                : '<span><b>Scroll</b> to zoom</span><span><b>Drag</b> an object to rotate</span><span><b>Click</b> to select</span><span><kbd>?</kbd> shortcuts</span>') +
+                ? '<span><b>Pinch</b> to zoom</span><span><b>Drag</b> to pan</span><span><b>Tap</b> to select</span>'
+                : '<span><b>Scroll</b> to zoom</span><span><b>Drag</b> to pan</span><span><b>Click</b> to select</span><span><kbd>?</kbd> shortcuts</span>') +
                 '<button type="button" aria-label="Dismiss" title="Dismiss"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg></button>';
             const dismiss = () => {
                 storage.set('scale-hint-seen', '1');

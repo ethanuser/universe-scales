@@ -180,6 +180,7 @@
                 : 'log';
             document.body.dataset.experienceDimension = this.active ? this.dimension : '';
             this.app.plotContainer.hidden = this.active;
+            requestAnimationFrame(() => { this.app.overview?.update(); this.app.checkStickyAxis?.(); });
             this.host.hidden = !this.active;
             this.interactiveButton?.setAttribute(
                 'aria-pressed',
