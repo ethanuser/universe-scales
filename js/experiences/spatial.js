@@ -44,7 +44,7 @@
                 event.preventDefault();
                 return;
             }
-            if (active || (event.button !== 0 && event.button !== 1) || isControl(event.target)) return;
+            if (active || event.button > 2 || isControl(event.target)) return;
             onStart?.(event);
             let captured = false;
             try {
@@ -52,7 +52,7 @@
                 captured = true;
             } catch { /* Pointer may already have become inactive. */ }
             // Shift-drag or a middle-button drag always pans, even over an object.
-            const panOnly = event.shiftKey || event.button === 1;
+            const panOnly = event.shiftKey || event.button === 1 || event.button === 2;
             const rotating = panOnly ? null : interaction.pick?.(event.clientX, event.clientY) || null;
             if (rotating) interaction.beginRotate?.(rotating, event.timeStamp);
             interaction.hover?.(null, null);
@@ -124,7 +124,8 @@
         const lostpointercapture = event => finish(event, true);
         const pointerleave = () => { if (!active) hover(null); };
         const dragstart = event => event.preventDefault();
-        const listeners = { pointerdown, pointermove, pointerup, pointercancel, lostpointercapture, pointerleave, dragstart };
+        const contextmenu = event => event.preventDefault();  // right-drag pans
+        const listeners = { pointerdown, pointermove, pointerup, pointercancel, lostpointercapture, pointerleave, dragstart, contextmenu };
         for (const [name, listener] of Object.entries(listeners)) element.addEventListener(name, listener);
         return {
             isControlTarget: isControl,

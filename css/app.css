@@ -809,3 +809,34 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
     }
     .experience-zoom-button { width: 40px; height: 40px; min-width: 40px; }
 }
+
+/* Medium widths (tablets, narrow windows): the top bar uses two rows, the second for item
+   search and navigation plus the view switch, and the explorer always fills the height. */
+@media (max-width: 1000px) {
+    :root { --app-bar-height: 102px; }
+    .app-bar { flex-wrap: wrap; row-gap: 6px; }
+    .app-bar .controls.app-bar__controls { flex: 0 1 auto; min-width: 120px; }
+    .app-bar__end { margin-left: auto; }
+    .app-bar__item { order: 5; flex: 1 1 calc(100% - 140px); min-width: 0; }
+    .app-bar .view-switch { order: 6; }
+    .app-bar .experience-toolbar { flex-direction: row; align-items: center; }
+    .app-bar .experience-toolbar__main { flex: 1 1 auto; width: auto; min-width: 0; }
+    .app-bar .experience-toolbar__actions { flex: none; width: auto !important; }
+    .app-bar .experience-picker { flex: 1 1 auto; max-width: 520px; }
+    .chart-search { flex: 1 1 auto; max-width: 520px; }
+}
+@media (min-width: 701px) {
+    .app-main > .experience.experience--spatial .experience-stage-frame { flex: 1 1 auto !important; }
+}
+
+/* Tooltips follow the theme. */
+.app-tooltip { background: #ffffff; color: #1f2024; border: 1px solid var(--border-color); }
+[data-theme='dark'] .app-tooltip { background: #2a2b30; color: #f2f2f3; border-color: #3a3b40; }
+
+/* Rounded buttons throughout (panels, menus and dialogs stay square). */
+.app-link-button, .app-drawer .notation-toggle, .app-drawer .dark-mode-toggle, .app-drawer .music-toggle,
+.app-drawer .editor-toggle, .dimension-chip, .experience-picker-option, .chart-search__option,
+.experience-button, .experience-picker-search, #dimension-browser-search, .unit-browser-toggle,
+.app-drawer .btn, .app-dialog .btn, .zoom-controls.zoom-controls-floating .zoom-btn {
+    border-radius: 8px !important;
+}

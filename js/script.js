@@ -57,7 +57,7 @@ class UniversalScales {
         this.notationToggle = document.getElementById('notation-toggle');
         this.darkModeToggle = document.getElementById('dark-mode-toggle');
         this.musicToggle = document.getElementById('music-toggle');
-        this.backgroundMusic = document.getElementById('background-music');
+        this.backgroundMusic = (document.getElementById('background-music') || this.createBackgroundMusic());
         this.tooltip = document.getElementById('tooltip');
         this.tooltip?.addEventListener('pointerenter', () => this.cancelTooltipHide());
         this.tooltip?.addEventListener('pointerleave', () => {
@@ -936,6 +936,16 @@ class UniversalScales {
             1
         );
         return (delta / scale) > CONFIG.ZOOM_DETECTION_THRESHOLD;
+    }
+
+    // The music player is created in script rather than as an <audio> element in the page, so
+    // browser extensions that badge media elements (e.g. playback-speed controls) leave the UI alone.
+    createBackgroundMusic() {
+        const audio = new Audio();
+        audio.loop = true;
+        audio.preload = 'none';
+        audio.src = 'Frozen Star.mp3';
+        return audio;
     }
 
     initMusic() {
