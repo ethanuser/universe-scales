@@ -232,6 +232,10 @@ class UniversalScales {
             const title = document.createElement('h3');
             title.className = 'dimension-browser__group-title';
             title.textContent = groupLabel;
+            if (window.DimensionIcons) {
+                group.style.setProperty('--group-color-light', DimensionIcons.color(groupLabel, false));
+                group.style.setProperty('--group-color-dark', DimensionIcons.color(groupLabel, true));
+            }
             group.appendChild(title);
 
             const chips = document.createElement('div');
@@ -242,7 +246,8 @@ class UniversalScales {
                 button.className = 'dimension-chip';
                 button.dataset.dimension = entry.slug;
                 button.dataset.searchText = String(entry.name || '').toLowerCase();
-                button.textContent = entry.name;
+                button.innerHTML = window.DimensionIcons?.icon(entry.slug) || '';
+                button.append(Object.assign(document.createElement('span'), { textContent: entry.name }));
                 button.addEventListener('click', async () => {
                     await this.setDimension(entry.slug);
                 });
@@ -376,6 +381,14 @@ class UniversalScales {
         if (!this.dimensionBrowserCurrent) return;
         const currentEntry = this.dimensionCatalogBySlug.get(this.currentDimension);
         this.dimensionBrowserCurrent.textContent = currentEntry?.name || this.currentDimension;
+        // The dimension's symbol and group color identify it across the interface.
+        const icon = document.getElementById('dimension-browser-icon');
+        if (icon && window.DimensionIcons) icon.innerHTML = DimensionIcons.icon(this.currentDimension);
+        if (window.DimensionIcons) {
+            const root = document.documentElement.style, group = currentEntry?.frontend_group_label;
+            root.setProperty('--dimension-color-light', DimensionIcons.color(group, false));
+            root.setProperty('--dimension-color-dark', DimensionIcons.color(group, true));
+        }
     }
 
     updateDimensionBrowserSelection() {
@@ -609,6 +622,7 @@ class UniversalScales {
 
         // Update plot colors
         this.plot.updatePlotColors();
+        this.overview?.update();
     }
 
     updateDarkModeButton(theme) {

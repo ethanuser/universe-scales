@@ -511,14 +511,62 @@ kbd {
     .plot-overview { display: none; }
 }
 
-/* Explorer zoom bar: an opaque strip so it reads on any background. */
-.experience-camera-slider {
-    padding: 4px 4px 4px 12px !important;
-    border: 1px solid var(--border-color) !important;
-    background: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
-    box-shadow: var(--shadow);
-    --journey-ink: var(--text-primary);
+/* Explorer zoom control: no enclosing box; the track, knob and buttons are opaque so they
+   read on any background (light sky, dark space). */
+.experience-camera-slider { --journey-ink: var(--text-primary); }
+.experience-camera-slider input::-webkit-slider-runnable-track {
+    height: 6px; border: 1px solid var(--border-color) !important; background: var(--bg-primary) !important;
 }
-.experience-zoom-button { background: var(--bg-primary); color: var(--text-primary); border-color: var(--border-color); }
+.experience-camera-slider input::-moz-range-track {
+    height: 6px; border: 1px solid var(--border-color) !important; background: var(--bg-primary) !important;
+}
+.experience-camera-slider input::-webkit-slider-thumb {
+    border: 2px solid var(--text-primary) !important; background: var(--bg-primary) !important;
+}
+.experience-camera-slider input::-moz-range-thumb {
+    border: 2px solid var(--text-primary) !important; background: var(--bg-primary) !important;
+}
+.experience-camera-slider input:active::-webkit-slider-thumb { background: var(--accent-color) !important; border-color: var(--accent-color) !important; }
+.experience-camera-slider input:active::-moz-range-thumb { background: var(--accent-color) !important; border-color: var(--accent-color) !important; }
+.experience-zoom-button { background: var(--bg-primary); color: var(--text-primary); border-color: var(--border-color); box-shadow: var(--shadow); }
 .experience-stage-frame[tabindex] { cursor: grab; }
+
+/* The chart's overview rail replaces the page scrollbar; nothing scrolls sideways. */
+.app-main { overflow-x: hidden; }
+body[data-experience='log'] .app-main { scrollbar-width: none; }
+body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
+.zoom-controls.zoom-controls-floating .zoom-btn svg { width: 20px; height: 20px; }
+.zoom-controls.zoom-controls-floating .zoom-btn path { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: square; }
+
+/* Dimension symbols and group colors */
+:root { --dimension-color-light: #2563eb; --dimension-color-dark: #7aa6ff; --dimension-color: var(--dimension-color-light); }
+[data-theme='dark'] { --dimension-color: var(--dimension-color-dark); }
+.dimension-icon { width: 20px; height: 20px; flex: none; }
+.dimension-icon :is(path, circle, rect) { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.dimension-browser-toggle { display: inline-flex; align-items: center; gap: 8px; }
+.dimension-browser-toggle__icon { display: inline-flex; color: var(--dimension-color); }
+.dimension-browser-toggle__icon:empty { display: none; }
+.dimension-browser__group { --group-color: var(--group-color-light, var(--accent-color)); }
+[data-theme='dark'] .dimension-browser__group { --group-color: var(--group-color-dark, var(--accent-color)); }
+.dimension-browser__group-title { display: flex; align-items: center; gap: 8px; }
+.dimension-browser__group-title::before { content: ''; width: 10px; height: 10px; background: var(--group-color); flex: none; }
+.dimension-chip { gap: 10px; }
+.dimension-chip .dimension-icon { color: var(--group-color); }
+.dimension-chip:hover { border-color: var(--group-color); }
+.dimension-chip.is-active {
+    border-color: var(--group-color);
+    background: color-mix(in srgb, var(--group-color) 14%, var(--bg-primary));
+    color: var(--text-primary);
+}
+.dimension-chip.is-active .dimension-icon { color: var(--group-color); }
+/* The current dimension's color marks the selected item's value and model note. */
+.experience-detail .experience-value { color: var(--dimension-color); font-weight: 600; }
+.experience-detail .experience-model-note { border-left-color: var(--dimension-color) !important; }
+
+/* Item search: a photo thumbnail beside every item */
+.experience-picker-option { display: flex !important; align-items: center; gap: 10px; text-align: left; }
+.experience-picker-thumb { width: 32px; height: 32px; flex: none; object-fit: cover; background: var(--bg-secondary); }
+.experience-picker-thumb.is-missing { visibility: hidden; }
+.app-bar .dimension-browser-toggle { justify-content: flex-start; }
+.app-bar .dimension-browser-toggle .dimension-browser-toggle__chevron { margin-left: auto; }
+.app-main > .plot-container { width: auto; max-width: none; box-sizing: border-box; }

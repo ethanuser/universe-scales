@@ -24,6 +24,8 @@
             this.switcher = document.getElementById('view-switch');
             this.fullscreenState = null;
             this.fullscreenRequest = 0;
+            // App shell: the shared top-bar button (wired in app-shell.js) works in every view.
+            this.fullscreenButton = globalThis.document?.getElementById?.('fullscreen-toggle') || null;
             this.onFullscreenChange = () => this.handleFullscreenChange();
             this.assets = {};
             this.images = new Map();
@@ -110,7 +112,8 @@
             }
         }
         onDimension() {
-            this.exitFullscreen();
+            // The app shell stays full screen across dimensions and views.
+            if (this.fullscreenTarget() === this.host) this.exitFullscreen();
             this.renderer?.dispose?.();
             this.pause();
             this.audio.stop();
@@ -158,7 +161,7 @@
         }
         setMode(mode, save = true) {
             const wasActive = this.active;
-            this.exitFullscreen();
+            if (this.fullscreenTarget() === this.host) this.exitFullscreen();
             this.renderer?.dispose?.();
             this.pause();
             this.audio.stop();
@@ -234,8 +237,18 @@
             search.setAttribute('aria-label', 'Search items');
             const options = dom('div', 'experience-picker-options');
             this.pickerButtons = this.items.map((item, index) => {
-                const option = dom('button', 'experience-picker-option', item.name);
+                const option = dom('button', 'experience-picker-option');
                 option.type = 'button';
+                // Each item's photo thumbnail is its symbol in the list (loaded lazily).
+                const path = this.app.getImagePath?.(item.name);
+                const thumb = dom('img', 'experience-picker-thumb');
+                Object.assign(thumb, { alt: '', loading: 'lazy', decoding: 'async' });
+                if (path && !path.startsWith('data:')) {
+                    thumb.src = `${path.replace(/^images\//, 'images/thumbs/')}.jpg`;
+                    thumb.onerror = () => thumb.classList.add('is-missing');
+                } else if (path) thumb.src = path;
+                else thumb.classList.add('is-missing');
+                option.append(thumb, dom('span', '', item.name));
                 option.dataset.search = item.name.toLocaleLowerCase();
                 option.addEventListener('click', () => {
                     this.focus(index);
@@ -325,7 +338,12 @@
             if (viewInfo) {
                 viewInfo.replaceChildren(this.caption, this.attribution);
                 document.getElementById('view-info-heading').hidden = false;
-                toolbarMain.append(this.fullscreenButton);
+                // One full-screen button in the top bar serves the explorer and the chart.
+                const shared = document.getElementById('fullscreen-toggle');
+                if (shared) {
+                    this.fullscreenButton = shared;
+                    this.updateFullscreenButton(Boolean(this.fullscreenState));
+                } else toolbarMain.append(this.fullscreenButton);
             } else toolbarMain.append(info, this.fullscreenButton);
             this.reset.title = 'Center on the selected item (C)';
             this.reset.setAttribute('aria-label', 'Center on the selected item');
@@ -382,7 +400,7 @@
                 if (heading) heading.hidden = true;
                 document.removeEventListener('pointerdown', outside);
                 document.removeEventListener('keydown', keydown);
-                this.fullscreenButton = null;
+                if (this.fullscreenButton?.id !== 'fullscreen-toggle') this.fullscreenButton = null;
             };
             this.clock.reset();
             this.renderer = ScaleRenderers[this.config[1]](this);
@@ -418,7 +436,8 @@
             }
         }
         enterFullscreen() {
-            if (this.fullscreenState || !this.active || !this.host) return;
+            const shell = this.fullscreenTarget() !== this.host;
+            if (this.fullscreenState || (!this.active && !shell) || !this.host) return;
             const request = ++this.fullscreenRequest;
             const target = this.fullscreenTarget();
             this.fullscreenState = {

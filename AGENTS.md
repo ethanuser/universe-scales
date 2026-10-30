@@ -1,5 +1,18 @@
 # Agent Handoff Guide
 
+## 2026-10-29 dimension icons, colors, shared full screen (Claude)
+
+- `js/dimension-icons.js`: a stroke icon for every available dimension (`DimensionIcons.icon(slug)`,
+  fallback for new slugs; add one when adding a dimension) and a light/dark color per dimension
+  group. Used in the dimension browser chips, group titles and the picker toggle; the current
+  group color (`--dimension-color`) marks the panel's value and model-note border.
+- Item search lists each item's photo thumbnail (lazy `images/thumbs/...jpg`) as its symbol.
+- Full screen: one `#fullscreen-toggle` in the top bar (F) works in Explore and Chart and stays on
+  across view and dimension switches (controller only exits when there is no app shell).
+- Chart: `.app-main` scrollbar hidden in chart mode (the overview rail replaces it), no horizontal
+  overflow, chart buttons use the toolbar's stroke icons. Explorer zoom: opaque track, knob and
+  +/- buttons without an enclosing box.
+
 ## 2026-10-29 pan, pinch, selection lock, chart rework (Claude)
 
 - Radial explorers: drag on empty space pans (frozen world-point anchor, `manual: true`, returns

@@ -49,6 +49,22 @@
         };
 
         optionsToggle.addEventListener('click', () => setDrawer(drawer.hidden));
+        $('fullscreen-toggle')?.addEventListener('click', () => experiences()?.toggleFullscreen());
+
+        // Chart controls: the same stroke symbols as the rest of the toolbar.
+        const chartIcons = {
+            'pan-left': ['Pan left', '<path d="M15 5 8 12l7 7"/>'],
+            'pan-right': ['Pan right', '<path d="M9 5l7 7-7 7"/>'],
+            'zoom-out': ['Zoom out (Ctrl + scroll)', '<path d="M6 12h12"/>'],
+            'zoom-in': ['Zoom in (Ctrl + scroll)', '<path d="M6 12h12M12 6v12"/>'],
+            reset: ['Reset zoom', '<path d="M4 9V4h5M20 15v5h-5"/><path d="M4.5 9a8 8 0 0 1 14.7-1M19.5 15a8 8 0 0 1-14.7 1"/>']
+        };
+        document.querySelectorAll('.zoom-btn[data-action]').forEach(button => {
+            const [label, path] = chartIcons[button.dataset.action] || [];
+            if (!label) return;
+            button.title = label;
+            button.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${path}</svg>`;
+        });
         $('options-close')?.addEventListener('click', () => setDrawer(false));
         backdrop.addEventListener('click', () => setDrawer(false));
         $('about-open')?.addEventListener('click', () => { setDrawer(false); setDialog(about, true); });
@@ -83,7 +99,7 @@
                 (view.active ? view.logButton : view.interactiveButton)?.click();
             },
             p: () => experiences()?.active && experiences().togglePanel(),
-            f: () => experiences()?.active && experiences().toggleFullscreen(),
+            f: () => experiences()?.toggleFullscreen(),
             c: () => { const view = experiences(); if (view?.active && !view.noFocus) view.focus(view.index); },
             '+': () => experiences()?.renderer?.zoomBy?.(-0.25),
             '=': () => experiences()?.renderer?.zoomBy?.(-0.25),

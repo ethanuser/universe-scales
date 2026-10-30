@@ -680,7 +680,11 @@ const commands = {
                 app.experiences.enterFullscreen();
             });
             await page.evaluate(() => app.setDimension('angular-velocity'));
-            results.push({ test: 'dimension switch exits fullscreen', passed: await page.evaluate(() => !app.experiences.fullscreenState && !document.body.classList.contains('experience-fullscreen-active') && document.body.style.overflow !== 'hidden') });
+            // The app shell stays full screen across dimension and view switches; the shared
+            // top-bar button then exits it and restores scrolling.
+            const kept = await page.evaluate(() => Boolean(app.experiences.fullscreenState));
+            await page.evaluate(() => app.experiences.toggleFullscreen());
+            results.push({ test: 'dimension switch keeps app fullscreen', passed: kept && await page.evaluate(() => !app.experiences.fullscreenState && !document.body.classList.contains('experience-fullscreen-active') && document.body.style.overflow !== 'hidden') });
             // Let prefetched models finish decoding: navigating away aborts their texture
             // loads, which GLTFLoader logs as errors that are not the app's fault.
             await page.waitForTimeout(4000);
