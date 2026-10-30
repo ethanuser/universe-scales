@@ -147,7 +147,7 @@ const commands = {
                     const slider=view.stageFrame.querySelector('.experience-camera-slider input');
                     const box=ScaleRenderers.stageSize(view.stage);
                     const scale=Math.min(box.width/(box.width<600?560:1000),box.height/500)||1;
-                    const span=10**Number(slider.value)*112/(ScaleJourney.BASE_SIZE*scale);
+                    const span=10**Number(slider.value)*112/(ScaleJourney.RADIAL_SIZE*scale);
                     const unit=app.getCurrentUnitDefinition();
                     const expected=document.createElement('div');
                     expected.innerHTML=`&radic;(${app.formatTooltipValueHTML(app.formatValueForCurrentUnit(span**2,2,true),unit.symbol)})`;
@@ -211,13 +211,14 @@ const commands = {
                     const box = ScaleRenderers.stageSize(view.stage);
                     const viewWidth = box.width < 600 ? 560 : 1000;
                     const scale = Math.min(box.width / viewWidth, box.height / 500) || 1;
-                    const radial = view.dimension === 'length';
-                    const span = 10 ** Number(slider.value) * 112 / ((radial ? ScaleJourney.RADIAL_SIZE : ScaleJourney.BASE_SIZE) * scale);
-                    const quantity = span ** (radial ? 1 : 3);
+                    // Every spatial dimension uses the radial layout's scale.
+                    const linear = view.dimension === 'length';
+                    const span = 10 ** Number(slider.value) * 112 / (ScaleJourney.RADIAL_SIZE * scale);
+                    const quantity = span ** (linear ? 1 : 3);
                     const expected = app.formatTooltipValueHTML(app.formatValueForCurrentUnit(quantity, 2, true),
                         app.getCurrentUnitDefinition()?.symbol || 'm');
                     const expectedNode = document.createElement('div');
-                    expectedNode.innerHTML = radial ? expected : `&#8731;(${expected})`;
+                    expectedNode.innerHTML = linear ? expected : `&#8731;(${expected})`;
                     const ruler = view.stageFrame.querySelector('.experience-corner-ruler__label');
                     return { name: item.name, id: entry.id, visible: instance.visible,
                         normalizedVolume, volumeCorrect: !measured || Math.abs(normalizedVolume - 1) < 1e-5,

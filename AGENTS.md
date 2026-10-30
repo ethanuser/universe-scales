@@ -1,5 +1,22 @@
 # Agent Handoff Guide
 
+## 2026-10-29 measured models and Codex round 7 (Claude)
+
+- `scripts/build_measured_models.py` + `register_measured_models.py` (CC0, by Claude): Great
+  Pyramid (Petrie base 230.33 m, height 146.6 m, ~210 courses as texture), Earth's Inner Core
+  (PREM 1221.5 km, cut open to the ~650 km innermost inner core), Kola borehole (SG-3 column,
+  Proterozoic/Archean contact at 6,842 m), DVD and Blu-ray track pitch (ECMA-267 / BD-ROM pitch,
+  channel bit and run-length limits; pit sequences are deterministic examples) and TON 618
+  (Schwarzschild horizon for 4.07e10 suns with Neptune's orbit and the heliopause to scale).
+  Citations live in each `sources/measured-*.md`. Re-run the register script after edits.
+- Codex round 7 (public data only): volume3d added sugar-cube scan (enclosed-volume calibrated),
+  NIAID influenza and SARS-CoV-2 virions and a clawfoot bathtub to Volume (29/55 covered).
+  `node scripts/register_volume3d.mjs` re-adds the coronavirus entry, which reuses an existing GLB
+  (the merge helper only re-registers entries with their own GLB). length3d3 found no new
+  qualifying Length source; see `handoff/length-source-completion/ledger.json`.
+- model_lab `spatial-models` and `area-maps` ruler checks now use `RADIAL_SIZE` (all spatial
+  dimensions are radial).
+
 ## 2026-10-29 app shell, radial Area/Volume/Counts, selection model (Claude)
 
 - **App shell** (`index.html`, `css/app.css`, `js/app-shell.js`): the site is a full-window app.
