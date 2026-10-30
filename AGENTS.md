@@ -1,5 +1,21 @@
 # Agent Handoff Guide
 
+## 2026-10-29 chart v3, no re-lock, icons (Claude)
+
+- Chart axes: `setupStickyTopAxis` now draws two pinned axes (`#sticky-top-axis`,
+  `#sticky-bottom-axis`, class `chart-axis`) from the chart's own scale and ticks on every plot
+  update/resize; the SVG's own axes are hidden (`#plot-svg .axis`). No swap-in transition.
+- Chart right column (`--chart-rail` 64px): overview rail flush right, the five chart controls
+  docked under it as a 2x3 block (`--chart-control` 32px). Rail, controls and axes are appended
+  to `.app`, so they show in full screen. The plot container reserves the column and axis bands.
+- Chart tooltips: `chooseTooltipPosition` tries below-right, above-left, above-right, below-left of
+  the cursor and keeps the one covering the least area of other item groups, inside the chart.
+- Explorer: a selection releases after 0.5 decades out or 1.5 in; a frozen view (drag or
+  released selection) now also eases back to the shared center when zooming out (over 1.5
+  decades), so returning to an item's scale never re-centers on it.
+- Full-screen icons: diagonal arrows with solid triangular heads. Dimension group titles are
+  colored text (no swatch).
+
 ## 2026-10-29 dimension icons, colors, shared full screen (Claude)
 
 - `js/dimension-icons.js`: a stroke icon for every available dimension (`DimensionIcons.icon(slug)`,

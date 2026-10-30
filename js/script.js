@@ -1261,6 +1261,42 @@ class UniversalScales {
         }
     }
 
+    chooseTooltipPosition(event, width, height) {
+        const gap = CONFIG.TOOLTIP_OFFSET_X;
+        const css = name => parseFloat(getComputedStyle(document.documentElement).getPropertyValue(name)) || 0;
+        const area = {
+            left: 4,
+            right: window.innerWidth - (document.querySelector('.plot-overview:not([hidden])') ? css('--chart-rail') : 0) - 4,
+            top: (document.querySelector('.app-bar')?.getBoundingClientRect().bottom || 0) + css('--chart-axis') + 4,
+            bottom: window.innerHeight - css('--chart-axis') - 4
+        };
+        const hovered = event.target?.closest?.('.item-group');
+        const others = [...document.querySelectorAll('#plot-svg .item-group')]
+            .filter(node => node !== hovered)
+            .map(node => node.getBoundingClientRect())
+            .filter(rect => rect.bottom > area.top && rect.top < area.bottom);
+        const x = event.clientX, y = event.clientY;
+        const candidates = [
+            [x + gap, y + gap], [x - width - gap, y - height - gap],
+            [x + gap, y - height - gap], [x - width - gap, y + gap]
+        ];
+        let best = null;
+        for (const [rawLeft, rawTop] of candidates) {
+            const left = Math.max(area.left, Math.min(area.right - width, rawLeft));
+            const top = Math.max(area.top, Math.min(area.bottom - height, rawTop));
+            // Never cover the cursor itself; count the other items the box would hide.
+            const coversCursor = x >= left && x <= left + width && y >= top && y <= top + height;
+            const overlap = others.reduce((sum, rect) => {
+                const w = Math.min(left + width, rect.right) - Math.max(left, rect.left);
+                const h = Math.min(top + height, rect.bottom) - Math.max(top, rect.top);
+                return sum + (w > 0 && h > 0 ? w * h : 0);
+            }, 0) + (coversCursor ? 1e9 : 0);
+            if (!best || overlap < best.overlap) best = { left, top, overlap };
+            if (overlap === 0) break;
+        }
+        return best;
+    }
+
     showTooltip(event, item, pinned = false) {
         this.cancelTooltipHide();
         this.hideUnitConversions();
@@ -1356,51 +1392,12 @@ class UniversalScales {
                 const naturalTooltipWidth = this.tooltip.offsetWidth;
                 const naturalTooltipHeight = this.tooltip.offsetHeight;
 
-                // Check if tooltip would be cut off on the right when positioned to the right of cursor
-                const spaceOnRight = window.innerWidth - clientX - CONFIG.TOOLTIP_OFFSET_X;
-                const wouldBeCutOff = spaceOnRight < naturalTooltipWidth;
-
-                // If it would be cut off, move to left of cursor (don't squish)
-                // Otherwise, position to the right and potentially reduce width if needed
-                let desiredLeftVp;
-                let finalTooltipWidth = naturalTooltipWidth;
-                let finalTooltipHeight = naturalTooltipHeight;
-
-                if (wouldBeCutOff) {
-                    // Position to the left of cursor
-                    desiredLeftVp = clientX - naturalTooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
-                    // Keep full width - don't squish
-                    this.tooltip.style.maxWidth = `${CONFIG.TOOLTIP_MAX_WIDTH}px`;
-                } else {
-                    // Position to the right of cursor
-                    desiredLeftVp = clientX + CONFIG.TOOLTIP_OFFSET_X;
-                    // Dynamically cap tooltip width to available space
-                    const maxAllowed = Math.max(CONFIG.TOOLTIP_MIN_WIDTH, spaceOnRight);
-                    const newMaxWidth = Math.min(CONFIG.TOOLTIP_MAX_WIDTH, maxAllowed);
-                    this.tooltip.style.maxWidth = `${newMaxWidth}px`;
-                    // Only remeasure if width actually changed
-                    if (newMaxWidth < CONFIG.TOOLTIP_MAX_WIDTH) {
-                        finalTooltipWidth = this.tooltip.offsetWidth;
-                        finalTooltipHeight = this.tooltip.offsetHeight;
-                    }
-                    // Ensure it doesn't go off the right edge
-                    if (desiredLeftVp + finalTooltipWidth > window.innerWidth - CONFIG.TOOLTIP_OFFSET_X) {
-                        desiredLeftVp = window.innerWidth - finalTooltipWidth - CONFIG.TOOLTIP_OFFSET_X;
-                    }
-                }
-
-                // Clamp horizontal position to ensure it doesn't go off the left edge
-                const minLeftVp = CONFIG.TOOLTIP_OFFSET_X;
-                desiredLeftVp = Math.max(minLeftVp, desiredLeftVp);
-
-                // Default vertical position: below cursor
-                let desiredTopVp = clientY + CONFIG.TOOLTIP_OFFSET_Y;
-
-                // Clamp vertical position to keep tooltip within viewport
-                const minTopVp = CONFIG.TOOLTIP_MIN_TOP;
-                const maxTopVp = window.innerHeight - CONFIG.TOOLTIP_VIEWPORT_BOTTOM_MARGIN - finalTooltipHeight;
-                desiredTopVp = Math.max(minTopVp, Math.min(maxTopVp, desiredTopVp));
-
+                // Place the tooltip where it covers the fewest other chart items. The items rise
+                // from lower left to upper right, so below-right of the cursor is usually empty,
+                // then above-left; positions stay inside the chart, between the pinned axes and
+                // left of the overview rail.
+                const { left: desiredLeftVp, top: desiredTopVp } =
+                    this.chooseTooltipPosition(event, naturalTooltipWidth, naturalTooltipHeight);
                 // Apply all styles at once to minimize layout recalculations
                 this.tooltip.style.left = `${desiredLeftVp}px`;
                 this.tooltip.style.top = `${desiredTopVp}px`;
@@ -2645,8 +2642,10 @@ class UniversalScales {
         controls.style.gridTemplateAreas = '"left right plus" "reset reset minus"';
 
         // Move controls to body so they can float independently of plot container
-        if (controls.parentNode !== document.body) {
-            document.body.appendChild(controls);
+        // Inside .app (not body) so they stay visible when the app is full screen.
+        const host = document.querySelector('.app') || document.body;
+        if (controls.parentNode !== host) {
+            host.appendChild(controls);
         }
         controls.classList.add('zoom-controls-floating');
 
@@ -3009,305 +3008,57 @@ class UniversalScales {
     }
 
     setupStickyTopAxis() {
-        const plotContainer = document.getElementById('plot-container');
-        if (!plotContainer) return;
-
-        // Create container for sticky top axis (exactly like zoom controls)
-        let stickyAxisContainer = document.getElementById('sticky-top-axis');
-        if (!stickyAxisContainer) {
-            stickyAxisContainer = document.createElement('div');
-            stickyAxisContainer.id = 'sticky-top-axis';
-            stickyAxisContainer.className = 'top-axis-floating';
-            document.body.appendChild(stickyAxisContainer);
-        }
-
-        // Store reference
-        this.stickyAxisContainer = stickyAxisContainer;
-        this.stickyAxisSvg = null;
-
-        // Function to update sticky axis container position and size to match plot container
-        const updateStickyAxisContainerPosition = () => {
-            if (!plotContainer || !stickyAxisContainer) return;
-
-            const plotRect = plotContainer.getBoundingClientRect();
-            // Match the plot container's width and horizontal position exactly
-            stickyAxisContainer.style.width = `${plotRect.width}px`;
-            stickyAxisContainer.style.left = `${plotRect.left}px`;
-            stickyAxisContainer.style.right = 'auto'; // Override CSS right: 0
+        // The chart's value axes are pinned to the top and bottom of the chart view and drawn
+        // straight from the chart's scale and ticks. The SVG's own axes are hidden (app.css), so
+        // these are the only axes: nothing swaps in or out while scrolling. They live inside
+        // .app so they also show in full screen.
+        const host = document.querySelector('.app') || document.body;
+        const make = (id, edge) => {
+            let element = document.getElementById(id);
+            if (!element) {
+                element = document.createElement('div');
+                element.id = id;
+                element.className = `chart-axis chart-axis--${edge}`;
+                element.setAttribute('aria-hidden', 'true');
+                host.appendChild(element);
+            }
+            return element;
         };
-
-        // Function to update the sticky axis content
-        const updateStickyAxis = () => {
-            if (!this.xAxisTop || !this.svg || !this.plotContainer) return;
-
-            // Update container position first
-            updateStickyAxisContainerPosition();
-
-            // Get the current top axis element
-            const topAxisNode = this.xAxisTop.node();
-            if (!topAxisNode) return;
-
-            // Get dimensions - use the exact SVG width from the plot for perfect alignment
-            // The SVG width is the source of truth for the coordinate system
-            const svgWidth = +this.svg.attr('width') || 0;
-            // Get the actual rendered container width to calculate scaling ratio
-            const plotContainerRect = this.plotContainer.getBoundingClientRect();
-            const containerWidth = plotContainerRect.width;
-            // Use SVG width for viewBox to match the plot's coordinate system exactly
-            // This ensures tick marks align perfectly at all positions
-            const viewBoxWidth = svgWidth;
-            // Height for axis - need space for text above (with superscripts) and minimal space below
-            const svgHeight = 25; // Height for axis (enough for text above, minimal space below)
-            const marginLeft = this.margin.left;
-            const marginRight = this.margin.right;
-
-            // Create clip path ID for this sticky axis
-            const clipId = 'sticky-axis-clip';
-
-            // Create or update the sticky SVG
-            // Use the same viewBox dimensions as the plot SVG for perfect alignment
-            if (!this.stickyAxisSvg) {
-                this.stickyAxisSvg = d3.select(stickyAxisContainer)
-                    .append('svg')
-                    .attr('width', '100%')
-                    .attr('height', svgHeight)
-                    .attr('viewBox', `0 0 ${viewBoxWidth} ${svgHeight}`)
-                    .attr('preserveAspectRatio', 'none') // Don't preserve aspect ratio - match width exactly
-                    .style('display', 'block')
-                    .style('overflow', 'hidden'); // Clip content to container width
-
-                // Create clip path to prevent labels from extending beyond container
-                // The clip path needs to account for the axis group's transform (marginLeft)
-                // Since the group is at translate(marginLeft, svgHeight), the clip path in group coordinates
-                // should extend from -marginLeft to (svgWidth - marginLeft) to match the axis domain
-                const defs = this.stickyAxisSvg.append('defs');
-                defs.append('clipPath')
-                    .attr('id', clipId)
-                    .append('rect')
-                    .attr('x', -marginLeft) // Start from left edge accounting for margin
-                    .attr('y', -100) // Allow text above to show
-                    .attr('width', svgWidth) // Full width (axis extends from -marginLeft to svgWidth-marginLeft)
-                    .attr('height', svgHeight + 100); // Extra height for text above
-            } else {
-                // Update viewBox to match current container width exactly
-                this.stickyAxisSvg
-                    .attr('viewBox', `0 0 ${viewBoxWidth} ${svgHeight}`)
-                    .attr('height', svgHeight);
-
-                // Update clip path
-                const clipRect = this.stickyAxisSvg.select(`#${clipId} rect`);
-                if (!clipRect.empty()) {
-                    clipRect
-                        .attr('x', -marginLeft) // Update x position for margin
-                        .attr('width', viewBoxWidth); // Update width to match viewBox
-                }
-            }
-
-            // Get or create the sticky axis group
-            let group = this.stickyAxisSvg.select('.sticky-axis-group');
-            if (group.empty()) {
-                group = this.stickyAxisSvg.append('g')
-                    .attr('class', 'sticky-axis-group')
-                    .attr('clip-path', `url(#${clipId})`); // Apply clip path to prevent overflow
-            } else {
-                // Ensure clip path is applied
-                group.attr('clip-path', `url(#${clipId})`);
-            }
-
-            // Clear existing content
-            group.selectAll('*').remove();
-
-            // Get font size from original axis to match exactly - use the CSS rule value
-            // The CSS defines .axis { font-size: 12px; }, so we should use that exact value
-            const originalAxisText = this.xAxisTop.select('text');
-            let originalFontSize = '12px';
-            if (!originalAxisText.empty()) {
-                const computedStyle = window.getComputedStyle(originalAxisText.node());
-                originalFontSize = computedStyle.fontSize || '12px';
-                // Ensure we're using the exact pixel value, not a computed one that might be different
-                // Parse the font size to ensure consistency
-                const fontSizeMatch = originalFontSize.match(/^([\d.]+)px$/);
-                if (fontSizeMatch) {
-                    originalFontSize = `${parseFloat(fontSizeMatch[1])}px`;
-                }
-            }
-
-            // Deep clone all children from the original axis (including text, paths, etc.)
-            const cloneNode = (sourceNode) => {
-                const cloned = sourceNode.cloneNode(true);
-                // Also clone computed styles for text elements
-                if (sourceNode.nodeType === 1 && sourceNode.tagName === 'text') {
-                    const computedStyle = window.getComputedStyle(sourceNode);
-                    // Preserve ALL attributes exactly as they are in the original
-                    // This includes x, y, dx, dy, text-anchor, and any other positioning attributes
-                    const textAnchor = sourceNode.getAttribute('text-anchor');
-                    const x = sourceNode.getAttribute('x');
-                    const y = sourceNode.getAttribute('y');
-                    const dx = sourceNode.getAttribute('dx');
-                    const dy = sourceNode.getAttribute('dy');
-                    const transform = sourceNode.getAttribute('transform');
-
-                    // Copy all attributes from source to cloned node first
-                    Array.from(sourceNode.attributes).forEach(attr => {
-                        // Skip transform, dx, dy as they can interfere with positioning
-                        if (attr.name !== 'transform' && attr.name !== 'dx' && attr.name !== 'dy') {
-                            cloned.setAttribute(attr.name, attr.value);
-                        }
-                    });
-
-                    // Override with computed styles for fill and font properties
-                    cloned.setAttribute('fill', computedStyle.fill || 'var(--text-secondary)');
-                    cloned.setAttribute('font-size', originalFontSize); // Use exact font size
-                    cloned.setAttribute('font-family', computedStyle.fontFamily || 'inherit');
-
-                    // CRITICAL: For axisTop, text MUST be centered on tick marks
-                    // D3 axisTop sets text-anchor to 'middle' and x to the tick position
-                    // We must preserve x exactly and ensure text-anchor is 'middle'
-                    cloned.setAttribute('text-anchor', 'middle'); // Force middle alignment for centering
-
-                    // Preserve x, y exactly as they are (x should be the tick position)
-                    // x coordinate is the center point when text-anchor is 'middle'
-                    if (x !== null && x !== undefined) cloned.setAttribute('x', x);
-                    if (y !== null && y !== undefined) cloned.setAttribute('y', y);
-
-                    // Remove dx, dy, and transform to ensure no offset from centering
-                    cloned.removeAttribute('dx');
-                    cloned.removeAttribute('dy');
-                    cloned.removeAttribute('transform');
-                }
-                // Clone stroke styles for lines/paths to match plot axis styling
-                if (sourceNode.nodeType === 1 && (sourceNode.tagName === 'path' || sourceNode.tagName === 'line')) {
-                    const computedStyle = window.getComputedStyle(sourceNode);
-                    cloned.setAttribute('stroke', computedStyle.stroke || 'var(--border-color)');
-                    cloned.setAttribute('stroke-width', computedStyle.strokeWidth || sourceNode.getAttribute('stroke-width') || '1');
-                }
-                return cloned;
-            };
-
-            // Clone all children from the original axis
-            Array.from(topAxisNode.childNodes).forEach(child => {
-                if (child.nodeType === 1) { // Element node
-                    const cloned = cloneNode(child);
-                    group.node().appendChild(cloned);
-
-                    // For text elements, ensure text-anchor is explicitly set to 'middle' after cloning
-                    // This ensures centering even if the original had a different value
-                    if (child.tagName === 'text') {
-                        cloned.setAttribute('text-anchor', 'middle');
-                        // Also ensure no dx/dy/transform that could shift the text
-                        cloned.removeAttribute('dx');
-                        cloned.removeAttribute('dy');
-                        cloned.removeAttribute('transform');
-                    }
-                }
-            });
-
-            // Position the axis group to match the plot axis horizontally
-            // Vertically, position so the axis line (at y=0 in the cloned group) is at axisLineY
-            // This puts the axis line near the bottom with minimal space below, and space above for text
-            group.attr('transform', `translate(${marginLeft},${svgHeight})`);
-
-            // Update the domain line to match the plot axis exactly
-            // The plot axis domain goes from -marginLeft to (viewBoxWidth - marginLeft)
-            // This matches what we set in plot.js, but using viewBoxWidth for exact alignment
-            const axisLeft = -marginLeft;
-            const axisRight = viewBoxWidth - marginLeft;
-            const domainLine = group.select('.domain');
-            if (!domainLine.empty()) {
-                domainLine.attr('d', `M${axisLeft},0H${axisRight}`);
-            }
-
-            // Apply axis styling to match plot axes
-            // Use computed styles from the original axis to get actual color values
-            const originalDomainLine = this.xAxisTop.select('.domain');
-            if (!originalDomainLine.empty()) {
-                const originalStroke = window.getComputedStyle(originalDomainLine.node()).stroke;
-                group.selectAll('path.domain, line').style('stroke', originalStroke);
-            }
-            const originalAxisTextForFill = this.xAxisTop.select('text');
-            if (!originalAxisTextForFill.empty()) {
-                const originalFill = window.getComputedStyle(originalAxisTextForFill.node()).fill;
-                group.selectAll('text').style('fill', originalFill);
+        const top = make('sticky-top-axis', 'top'), bottom = make('sticky-bottom-axis', 'bottom');
+        this.stickyAxisContainer = top;
+        const height = 28;
+        const draw = (container, edge) => {
+            const plot = this.plot;
+            if (!plot?.xScale || !this.svg) return;
+            const width = +this.svg.attr('width') || 0;
+            const rect = this.plotContainer.getBoundingClientRect();
+            container.style.left = `${rect.left}px`;
+            container.style.width = `${width}px`;
+            const svg = d3.select(container).selectAll('svg').data([0]).join('svg')
+                .attr('width', width).attr('height', height).style('display', 'block');
+            const group = svg.selectAll('g.chart-axis__ticks').data([0]).join('g')
+                .attr('class', 'axis chart-axis__ticks')
+                .attr('transform', `translate(${plot.margin.left},${edge === 'top' ? height - 1 : 1})`);
+            const axis = (edge === 'top' ? d3.axisTop : d3.axisBottom)(plot.xScale)
+                .tickValues(plot.generateAxisTicks())
+                .tickFormat(d => this.formatAxisValue(d, 0));
+            group.call(axis);
+            group.select('.domain').attr('d', `M${-plot.margin.left},0H${width - plot.margin.left}`);
+            if (this.notationMode === 'mathematical' && !this.usesLinearDisplayValues()) {
+                this.processMathematicalLabels(group);
             }
         };
-
-        // Store update function
-        this.updateStickyAxis = updateStickyAxis;
-
-        // Function to check visibility and update sticky axis
-        const checkVisibility = () => {
-            if (this.experiences?.active) {
-                stickyAxisContainer.classList.remove('is-visible');
-                return;
-            }
-            const plotRect = plotContainer.getBoundingClientRect();
-            const stickyRect = stickyAxisContainer.getBoundingClientRect();
-            const stickyAxisHeight = stickyRect.height || 30; // Height of sticky axis
-
-            // Get the bottom axis position within the plot container
-            // The bottom axis is at the bottom of the plot area (yScale(0))
-            // We need to check if the sticky axis would overlap with the bottom axis
-            // In the app shell the chart scrolls inside the main area, below the top bar.
-            const scrollerTop = document.querySelector('.app-main')?.getBoundingClientRect().top ?? 0;
-            const plotContainerTop = plotRect.top - scrollerTop;
-            const plotContainerBottom = plotRect.bottom - scrollerTop;
-            const plotContainerHeight = plotRect.height;
-
-            // The bottom axis is at the bottom of the plot container
-            // Calculate where the bottom axis would be in viewport coordinates
-            // The bottom axis is typically near the bottom of the plot container
-            // We'll hide the sticky axis when it would overlap with the bottom axis area
-            const bottomAxisApproxY = plotContainerBottom - 20; // Approximate bottom axis position (margin.bottom)
-
-            // Show sticky axis when:
-            // 1. Plot container top is scrolled above viewport (top axis not visible)
-            // 2. Sticky axis bottom (viewport top + sticky height) is above the bottom axis
-            const stickyAxisBottom = stickyAxisHeight; // Sticky axis bottom is at viewport top + height
-            const shouldShow = plotContainerTop < 0 && stickyAxisBottom < bottomAxisApproxY;
-
-            if (shouldShow) {
-                // Plot container top is above viewport and sticky axis won't overlap with bottom axis
-                if (!stickyAxisContainer.classList.contains('is-visible')) {
-                    stickyAxisContainer.classList.add('is-visible');
-                    updateStickyAxis();
-                }
-            } else {
-                // Either plot container top is visible (top axis visible) or sticky would overlap bottom axis
-                stickyAxisContainer.classList.remove('is-visible');
-            }
+        const update = () => {
+            const show = !this.experiences?.active && !this.plotContainer?.hidden;
+            top.hidden = bottom.hidden = !show;
+            if (!show) return;
+            draw(top, 'top');
+            draw(bottom, 'bottom');
         };
-
-        // Use IntersectionObserver to show/hide sticky axis
-        // Show when plot container's top axis is scrolled out of view (when top of plot container is above viewport)
-        // Hide when the plot container's top is visible (meaning the top axis within the plot is visible)
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    checkVisibility();
-                });
-            }, {
-                root: null,
-                threshold: [0], // Trigger when top edge crosses viewport
-                rootMargin: '0px'
-            });
-            observer.observe(plotContainer);
-        }
-
-        // Also use scroll listener as backup to ensure responsiveness
-        window.addEventListener('scroll', checkVisibility, { passive: true });
-        document.querySelector('.app-main')?.addEventListener('scroll', checkVisibility, { passive: true });
-        this.checkStickyAxis = checkVisibility;
-
-        // Check initial state immediately and after a short delay to ensure DOM is ready
-        checkVisibility();
-        setTimeout(checkVisibility, 100);
-
-        // Update position on window resize
-        window.addEventListener('resize', () => {
-            if (stickyAxisContainer.classList.contains('is-visible')) {
-                updateStickyAxis();
-            }
-        }, { passive: true });
+        this.updateStickyAxis = update;
+        this.checkStickyAxis = update;
+        window.addEventListener('resize', update, { passive: true });
+        update();
     }
 }
 

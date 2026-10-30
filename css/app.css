@@ -570,3 +570,70 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
 .app-bar .dimension-browser-toggle { justify-content: flex-start; }
 .app-bar .dimension-browser-toggle .dimension-browser-toggle__chevron { margin-left: auto; }
 .app-main > .plot-container { width: auto; max-width: none; box-sizing: border-box; }
+
+/* Chart layout (v3): the plot fills the main area up to a right column; that column is the
+   overview rail with the chart controls docked under it, flush to the window edge. Two pinned
+   axes, drawn from the chart's own scale, sit at the top and bottom of the view; the SVG's own
+   axes are hidden so there is only ever one axis at each edge. */
+:root { --chart-rail: 64px; --chart-axis: 28px; --chart-control: 32px; }
+.app-main > .plot-container { margin: 0 var(--chart-rail) 0 0 !important; padding: var(--chart-axis) 0; }
+#plot-svg .axis { visibility: hidden; }
+.chart-axis {
+    position: fixed;
+    z-index: var(--z-zoom-controls);
+    height: var(--chart-axis);
+    overflow: hidden;
+    background: var(--bg-primary);
+    pointer-events: none;
+}
+.chart-axis[hidden] { display: none; }
+.chart-axis--top { top: var(--app-bar-height); border-bottom: 1px solid var(--border-color); }
+.chart-axis--bottom { bottom: 0; border-top: 1px solid var(--border-color); }
+.chart-axis text { fill: var(--text-secondary); font-size: 12px; }
+.chart-axis .domain, .chart-axis line { stroke: var(--border-color); }
+.plot-overview {
+    top: var(--app-bar-height);
+    right: 0;
+    bottom: calc(3 * var(--chart-control));
+    width: var(--chart-rail);
+    border: 0;
+    border-left: 1px solid var(--border-color);
+}
+.zoom-controls.zoom-controls-floating {
+    right: 0;
+    bottom: 0;
+    width: var(--chart-rail) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, var(--chart-control)) !important;
+    grid-template-areas: "left right" "minus plus" "reset reset" !important;
+    border: 0;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    box-shadow: none;
+}
+.zoom-controls.zoom-controls-floating .zoom-btn { width: 100%; height: var(--chart-control); border-left: 0 !important; }
+.zoom-controls.zoom-controls-floating .zoom-btn[data-action='pan-right'],
+.zoom-controls.zoom-controls-floating .zoom-btn[data-action='zoom-in'] { border-left: 1px solid var(--border-color) !important; }
+.zoom-controls.zoom-controls-floating .zoom-btn[data-action='zoom-out'],
+.zoom-controls.zoom-controls-floating .zoom-btn[data-action='zoom-in'],
+.zoom-controls.zoom-controls-floating .zoom-btn[data-action='reset'] { border-top: 1px solid var(--border-color); }
+.zoom-controls.zoom-controls-floating .zoom-btn svg { width: 18px; height: 18px; }
+@media (max-width: 700px) {
+    .app-main > .plot-container { margin: 0 !important; }
+    .zoom-controls.zoom-controls-floating { width: auto !important; grid-template-columns: repeat(5, 36px) !important;
+        grid-template-rows: 36px !important; grid-template-areas: "left right minus plus reset" !important; }
+}
+
+/* Dimension groups: colored names instead of swatches. */
+.dimension-browser__group-title::before { content: none; display: none; }
+.dimension-browser__group-title { color: var(--group-color); }
+.zoom-controls.zoom-controls-floating {
+    box-sizing: border-box;
+    height: calc(3 * var(--chart-control) + 1px);
+    grid-template-rows: repeat(3, 1fr) !important;
+}
+.zoom-controls.zoom-controls-floating .zoom-btn { box-sizing: border-box; height: 100%; }
+@media (max-width: 700px) {
+    .zoom-controls.zoom-controls-floating { height: 37px; grid-template-rows: 1fr !important; }
+}
+.zoom-controls.zoom-controls-floating .zoom-btn { min-height: 0 !important; min-width: 0 !important; max-height: none; }

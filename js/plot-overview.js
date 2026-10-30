@@ -15,7 +15,7 @@ class PlotOverview {
         this.frame = document.createElement('div');
         this.frame.className = 'plot-overview__frame';
         this.rail.append(this.canvas, this.frame);
-        document.body.append(this.rail);
+        (document.querySelector('.app') || document.body).append(this.rail);
         this.scroller = document.querySelector('.app-main');
         this.scroller?.addEventListener('scroll', () => this.updateFrame(), { passive: true });
         window.addEventListener('resize', () => this.update());
@@ -35,9 +35,9 @@ class PlotOverview {
     }
     // Vertical bounds of the item rows inside the scroller's content.
     rows() {
-        const plot = this.app.plot, container = this.app.plotContainer;
-        if (!plot?.svg || !this.scroller || !container) return null;
-        const top = container.getBoundingClientRect().top - this.scroller.getBoundingClientRect().top + this.scroller.scrollTop;
+        const plot = this.app.plot, svg = plot?.svg?.node();
+        if (!svg || !this.scroller) return null;
+        const top = svg.getBoundingClientRect().top - this.scroller.getBoundingClientRect().top + this.scroller.scrollTop;
         return { top: top + plot.margin.top, height: plot.height };
     }
     scrollToFraction(fraction) {

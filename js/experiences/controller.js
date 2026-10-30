@@ -303,7 +303,7 @@
             this.fullscreenButton.title = 'Enter fullscreen';
             this.fullscreenButton.setAttribute('aria-label', 'Enter fullscreen');
             this.fullscreenButton.setAttribute('aria-pressed', 'false');
-            this.fullscreenButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>';
+            this.fullscreenButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 10l5-5M10 14l-5 5" /><polygon points="21,3 21,10 14,3" fill="currentColor" stroke="none" /><polygon points="3,21 3,14 10,21" fill="currentColor" stroke="none" /></svg>';
             this.fullscreenButton.addEventListener('click', () => this.toggleFullscreen());
             this.reset = button(toolbarActions, 'Frame item', () =>
                 this.focus(this.index)
@@ -513,8 +513,8 @@
             this.fullscreenButton.setAttribute('aria-label', label);
             this.fullscreenButton.setAttribute('aria-pressed', String(active));
             this.fullscreenButton.innerHTML = active
-                ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5" /></svg>'
-                : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>';
+                ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 3l-5 5M3 21l5-5" /><polygon points="13,11 13,5 19,11" fill="currentColor" stroke="none" /><polygon points="11,13 11,19 5,13" fill="currentColor" stroke="none" /></svg>'
+                : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 10l5-5M10 14l-5 5" /><polygon points="21,3 21,10 14,3" fill="currentColor" stroke="none" /><polygon points="3,21 3,14 10,21" fill="currentColor" stroke="none" /></svg>';
         }
         createNavigationButton(direction, label, path) {
             const control = dom('button', `experience-nav-button experience-nav-button--${direction}`);

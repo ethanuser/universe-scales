@@ -220,6 +220,13 @@
             // A selected object stays centered while zooming into it.
             if (anchor.index != null && anchor.index === pinnedFocus) return { x: point.x, y: point.y };
             const f = layoutOptions().exponentFactor ?? 1;
+            // A frozen view (after a drag, or a released selection) eases back to the shared
+            // center as you keep zooming in either direction, so it never snaps back onto the
+            // item it was centered on.
+            if (anchor.manual && exponent > anchor.exponent) {
+                const u = clamp((exponent - anchor.exponent) * f / 1.5, 0, 1), weight = 1 - u * u * (3 - 2 * u);
+                return { x: point.x * weight, y: point.y * weight };
+            }
             return ScaleJourney.radialReturnPan(point, exponent * f, anchor.exponent * f, anchor.manual ? 2 : 1);
         };
         const freezePan = () => {
@@ -249,7 +256,7 @@
                     // An explicit selection holds while its object stays near the size it was
                     // framed at; zooming further away deselects it.
                     const delta = pinnedExponent == null ? 0 : (camera.value - pinnedExponent) * (options.exponentFactor ?? 1);
-                    if (pinnedFocus != null && (delta > 0.5 || delta < -3)) {
+                    if (pinnedFocus != null && (delta > 0.5 || delta < -1.5)) {
                         // Freeze the current view first so releasing the lock never jumps.
                         anchor = { ...panAt(camera.value), exponent: camera.value, manual: true };
                         pinnedFocus = pinnedExponent = null;
