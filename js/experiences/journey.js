@@ -170,7 +170,7 @@
     const RADIAL_SIZE = 150;               // px drawn for an object as large as the camera length
     const RADIAL_CENTER_Y = 250;
     const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
-    const LABEL_EM = 0.07;                 // label font size, in units of the drawn extent
+    const LABEL_EM = 0.1;                  // label font size, in units of the drawn extent
     const radialCache = new Map();
     // Half-extents of an object and its label below it, in units of its size.
     function radialBox(item, factor, extent) {

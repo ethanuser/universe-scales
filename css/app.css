@@ -1,0 +1,305 @@
+/* App shell: a full-window application layout. A slim top bar holds navigation; the
+   active explorer fills the rest of the window; secondary controls, data tools and
+   credits live in the Options drawer and the About dialog. Loaded after the other
+   stylesheets, so it overrides their page-style (centered column, footer) layout. */
+
+:root {
+    --app-bar-height: 56px;
+    --z-app-bar: 2400;
+    --z-app-overlay: 2600;
+    --z-app-drawer: 2700;
+    --z-app-dialog: 2800;
+}
+
+/* Square corners throughout the interface. Content shapes drawn in SVG are unaffected. */
+*, *::before, *::after { border-radius: 0 !important; }
+input[type='range']::-webkit-slider-thumb,
+input[type='range']::-webkit-slider-runnable-track { border-radius: 0 !important; }
+input[type='range']::-moz-range-thumb,
+input[type='range']::-moz-range-track { border-radius: 0 !important; }
+
+html, body { height: 100%; }
+body { overflow: hidden; }
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--bg-primary);
+}
+
+/* Top bar */
+.app-bar {
+    position: relative;
+    z-index: var(--z-app-bar);
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: var(--app-bar-height);
+    padding: 6px 16px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-primary);
+}
+.app-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex: none;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.app-brand img { display: block; }
+.app-bar .controls.app-bar__controls {
+    flex: none;
+    gap: 8px;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+.app-bar .dimension-picker { display: flex; align-items: center; gap: 8px; margin: 0; }
+.app-bar .dimension-picker label { font-size: 0.85rem; color: var(--text-secondary); }
+.app-bar .dimension-browser-toggle { min-height: 38px; padding: 6px 12px; min-width: 180px; }
+.app-bar .view-switch { margin: 0 !important; gap: 0; flex: none; }
+.app-bar .view-switch button { min-height: 38px; padding: 6px 14px; margin: 0; }
+.app-bar .view-switch button + button { margin-left: -1px; }
+.app-bar__end {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    min-width: 0;
+}
+.app-bar .unit-selector-container { margin: 0; gap: 6px; flex-wrap: nowrap; }
+.app-bar .unit-selector-container label { font-size: 0.85rem; }
+.app-bar .unit-browser-toggle { min-height: 38px; padding: 6px 10px; }
+.app-bar .unit-browser-panel { left: auto; right: 0; }
+
+.app-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 40px;
+    min-height: 38px;
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.app-icon-button:hover,
+.app-icon-button:focus-visible,
+.app-icon-button[aria-expanded='true'] { border-color: var(--accent-color); outline: none; }
+.app-icon-button svg { width: 20px; height: 20px; flex: none; }
+.app-icon-button path { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: square; }
+
+/* The dimension browser opens as a sheet below the bar instead of pushing the page. */
+.app .dimension-browser-panel {
+    position: fixed;
+    z-index: var(--z-app-overlay);
+    top: var(--app-bar-height);
+    left: 0;
+    right: 0;
+    width: auto;
+    max-height: calc(100dvh - var(--app-bar-height));
+    margin: 0;
+    padding: 16px 20px 24px;
+    overflow: auto;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Main area: the explorer fills it; other views (logarithmic plot, non-spatial
+   explorers with settings below the stage) scroll inside it. */
+.app-main {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    max-width: none;
+    padding: 0;
+}
+.app-main > .experience {
+    margin: 0;
+    border: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.app-main > .experience > .experience-toolbar { flex: none; padding: 8px 14px; }
+.app-main > .experience > .experience-body { flex: 1 1 auto; min-height: 0; }
+.app-main > .experience.experience--spatial { height: 100%; }
+.app-main > .experience.experience--spatial > .experience-body { height: auto !important; }
+@media (min-width: 701px) {
+    .app-main > .experience.experience--spatial .experience-visual,
+    .app-main > .experience.experience--spatial .experience-stage-frame,
+    .app-main > .experience.experience--spatial .experience-detail {
+        box-sizing: border-box;
+        height: 100%;
+        min-height: 0;
+        max-height: none;
+    }
+    .app-main > .experience .experience-detail { max-height: none; }
+}
+/* Phones: the stage takes the space above a short, scrollable description. */
+@media (max-width: 700px) {
+    .app-main > .experience.experience--spatial > .experience-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .app-main > .experience.experience--spatial .experience-visual { flex: 1 1 auto; min-height: 0; }
+    .app-main > .experience.experience--spatial .experience-stage-frame { flex: 1 1 auto; min-height: 0; height: 100%; }
+    .app-main > .experience.experience--spatial .experience-detail {
+        flex: none;
+        height: auto;
+        max-height: 30dvh;
+        border-left: 0;
+        border-top: 1px solid var(--border-color);
+    }
+}
+.app-main > .plot-container { margin: 16px; }
+
+/* Options drawer */
+.app-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-app-drawer);
+    background: rgba(0, 0, 0, 0.32);
+}
+.app-backdrop[hidden], .app-drawer[hidden], .app-dialog[hidden] { display: none !important; }
+.app-drawer {
+    position: fixed;
+    z-index: calc(var(--z-app-drawer) + 1);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(440px, 100vw);
+    overflow-y: auto;
+    border-left: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+}
+.app-drawer__header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px 12px 20px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-primary);
+}
+.app-drawer__header h2 { font-size: 1.1rem; font-weight: 600; }
+.app-drawer__section { padding: 18px 20px; border-bottom: 1px solid var(--border-color); }
+.app-drawer__section h3 {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.app-setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 44px;
+}
+.app-setting + .app-setting { border-top: 1px solid var(--border-color); }
+.app-drawer .notation-toggle,
+.app-drawer .dark-mode-toggle,
+.app-drawer .music-toggle {
+    width: auto;
+    min-width: 64px;
+    height: 34px;
+    margin: 0;
+    padding: 0 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    box-shadow: none;
+}
+.app-drawer .dimension-description,
+.app-drawer .unit-description {
+    margin: 0 0 12px;
+    padding: 0;
+    max-width: none;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-style: normal;
+    line-height: 1.55;
+    text-align: left;
+}
+.app-drawer .editor-panel,
+.app-drawer .resources-panel { margin: 0 0 10px; }
+.app-drawer__links { display: grid; gap: 8px; }
+.app-link-button {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.92rem;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+.app-link-button:hover, .app-link-button:focus-visible { border-color: var(--accent-color); outline: none; }
+
+/* About dialog */
+.app-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-app-dialog);
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.45);
+}
+.app-dialog__panel {
+    width: min(600px, 100%);
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-lg);
+}
+.app-dialog__body { padding: 20px; font-size: 0.95rem; line-height: 1.6; }
+.app-dialog__body > p { margin-bottom: 16px; }
+.app-credits { display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; margin-bottom: 16px; }
+.app-credits dt { color: var(--text-secondary); font-size: 0.85rem; }
+.app-credits dd { margin: 0; }
+.app-dialog .limitations-note { margin: 0; padding: 12px 0 0; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem; }
+
+@media (max-width: 1100px) {
+    .app-bar .dimension-picker label,
+    .app-bar .unit-selector-container label,
+    .app-icon-button__label { display: none; }
+    .app-bar .dimension-browser-toggle { min-width: 140px; }
+}
+@media (max-width: 760px) {
+    :root { --app-bar-height: 104px; }
+    .app-bar { flex-wrap: wrap; gap: 8px; padding: 6px 10px; }
+    .app-brand span { display: none; }
+    .app-bar .controls.app-bar__controls { flex: 1 1 0; min-width: 0; }
+    .app-bar .dimension-picker { flex: 1 1 auto; min-width: 0; }
+    .app-bar .dimension-browser-toggle { min-width: 0; width: 100%; }
+    .app-bar__end { margin-left: 0; }
+    .app-bar .view-switch { order: 5; flex: 1 1 100%; }
+    .app-bar .view-switch button { flex: 1 1 0; }
+    .app-bar .unit-browser-toggle { max-width: 34vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}

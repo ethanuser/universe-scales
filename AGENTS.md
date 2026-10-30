@@ -1,5 +1,28 @@
 # Agent Handoff Guide
 
+## 2026-10-29 app shell, radial Area/Volume/Counts, selection model (Claude)
+
+- **App shell** (`index.html`, `css/app.css`, `js/app-shell.js`): the site is a full-window app.
+  Top bar: brand, dimension picker, view switch, unit picker, Options. The explorer fills the
+  rest. The Options drawer holds notation/theme/music toggles, the dimension and unit
+  descriptions, Edit Plot and Explore More; the About dialog holds credits and the scale note.
+  There is no footer. All original element ids are unchanged, so script.js/editor.js wiring is
+  untouched. `app.css` loads last and sets `border-radius: 0` everywhere (owner preference:
+  no rounded corners in UI; SVG content shapes are unaffected).
+- **Radial everywhere**: Area, Volume and Counts use the radial layout (`radial = true` in
+  `R.spatial`; `R.counts` uses `radialPlacement/radialLayout` with `exponentFactor: 0.5`).
+  Area maps feed `widthFactor`/`extentFactor` from their projected width/height.
+- **Selection model** (`navigation` in spatial.js, `controller.js`): `ctx.focus(i, true)` is
+  an explicit selection (bold label, `ctx.explicitSelection`). It holds through small manual
+  zooms and is released beyond +0.5 / -0.4 decades from where it was framed. Otherwise the
+  panel follows the on-screen object nearest the ring size (renderers report it via
+  `navigationControl.observe`), never bolded; with nothing in view `ctx.clearFocus()` shows a
+  "No objects at this scale" panel.
+- Labels: `LABEL_EM` is 0.1 (placement and drawn labels agree), font clamped 9..40 px, fading
+  only between 12 and 28 px of drawn object size.
+- model_lab `mobile` waits 4 s before its final navigation: aborting in-flight prefetched
+  texture decodes logged GLTFLoader errors that were not app errors.
+
 ## 2026-10-29 sourced Area and Volume expansion (Codex)
 
 - Added seven paired Area/Volume observations (Mercury, Venus, Mars, Saturn,

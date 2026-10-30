@@ -5,6 +5,7 @@
     const line = (x1, y1, x2, y2) => svg('line', { x1, y1, x2, y2, stroke: 'currentColor', 'stroke-width': 2 });
     const MIN_DRAWN_PX = 0.5;
     const MIN_MODEL_PX = 4;
+    const IN_VIEW_PX = 14;      // an object this large on screen counts as "in view"
     function createSpatialInput(element, { interaction = {}, onStart, onPan, onEnd }) {
         const previousTouchAction = element.style.touchAction;
         const previousUserSelect = element.style.userSelect;
@@ -124,9 +125,6 @@
         ctx.stage.setAttribute('viewBox', `${left} 0 ${width} 500`);
         return { left, width, scale: Math.min(box.width / width, box.height / 500) || 1 };
     }
-    function readableText(ctx, scale) {
-        ctx.stage.querySelectorAll('text').forEach(text => { text.style.fontSize = `${Math.max(16, 12 / scale)}px`; });
-    }
     const mix = (a, b, amount) => a.map((value, index) =>
         Math.round(value + (b[index] - value) * clamp(amount, 0, 1))
     );
@@ -146,7 +144,7 @@
         ctx.updateComparison = () => {};
         const camera = new ScaleJourney.Camera(zoom.value, Number(zoom.input.min), Number(zoom.input.max));
         const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-        let frame, previousTime, disposed = false, pinnedFocus = null;
+        let frame, previousTime, disposed = false, pinnedFocus = null, pinnedExponent = null, observed = [];
         const focusTransition = new ScaleJourney.FocusTransition();
         // Radial view: a selected object is centered by panning to it. A selection glide is
         // one zoom about the fixed point shared by the start and end views, so every object
@@ -162,7 +160,9 @@
                     anchor = { index: panGlide.index, exponent: end };
                     panGlide = null;
                 } else if (zooming) {
-                    const q = 10 ** (start - end), grow = 10 ** (exponent - start);
+                    // Counts zoom their camera at twice the layout's rate (exponentFactor).
+                    const f = layoutOptions().exponentFactor ?? 1;
+                    const q = 10 ** ((start - end) * f), grow = 10 ** ((exponent - start) * f);
                     const fixed = axis => (from[axis] - to[axis] * q) / (1 - q);
                     return { x: fixed('x') - (fixed('x') - from.x) * grow, y: fixed('y') - (fixed('y') - from.y) * grow };
                 } else {
@@ -175,7 +175,8 @@
             // a frozen manual pan keeps its world point.
             const point = anchor.index != null ? layoutOptions().radialWorld?.(anchor.index) : anchor;
             if (!point) return { x: 0, y: 0 };
-            return ScaleJourney.radialReturnPan(point, exponent, anchor.exponent);
+            const f = layoutOptions().exponentFactor ?? 1;
+            return ScaleJourney.radialReturnPan(point, exponent * f, anchor.exponent * f);
         };
         const freezePan = () => {
             if (!layoutOptions().radial || !panGlide) return;
@@ -200,9 +201,19 @@
             zoom.set(camera.value);
             const options = layoutOptions();
             if (options.radial) {
-                // Direct zoom selects the nearest size without changing its world origin.
-                const index = ScaleJourney.radialFocus(ctx.items, camera.value, order);
-                if (pinnedFocus == null && camera.glideTime == null && index !== ctx.index) ctx.focus(index, false);
+                if (camera.glideTime == null) {
+                    // An explicit selection holds while its object stays near the size it was
+                    // framed at; zooming further away deselects it.
+                    const delta = pinnedExponent == null ? 0 : (camera.value - pinnedExponent) * (options.exponentFactor ?? 1);
+                    if (pinnedFocus != null && (delta > 0.5 || delta < -0.4)) pinnedFocus = pinnedExponent = null;
+                    if (pinnedFocus == null) {
+                        // Otherwise describe the on-screen object nearest the camera's scale,
+                        // or nothing when no object is in view.
+                        const best = observed.reduce((a, b) => (!a || b.distance < a.distance ? b : a), null);
+                        if (!best || best.distance > 1) ctx.clearFocus();
+                        else if (best.index !== ctx.index || ctx.noFocus || ctx.explicitSelection) ctx.focus(best.index, false);
+                    }
+                }
                 render();
                 return;
             }
@@ -231,7 +242,11 @@
         };
         const aim = (value, focusIndex, focusWindow = 0.3) => {
             freezePan();
-            pinnedFocus = focusIndex ?? null;
+            // Radial views keep an explicit selection through small manual zooms (see apply).
+            if (focusIndex != null || !layoutOptions().radial) {
+                pinnedFocus = focusIndex ?? null;
+                pinnedExponent = focusIndex == null ? null : value;
+            }
             focusTransition.stop(currentPose());
             if (focusIndex != null) focusTransition.set(focusIndex, value * (layoutOptions().exponentFactor ?? 1), focusWindow);
             camera.aim(value);
@@ -246,6 +261,7 @@
             // Only direct scale input resumes automatic nearest-size selection.
             pinnedFocus = focusIndex ?? null;
             value = clamp(value, camera.min, camera.max);
+            pinnedExponent = focusIndex == null ? null : value;
             if (reduceMotion.matches || focusIndex == null) {
                 aim(value, focusIndex, focusWindow);
                 if (focusIndex != null && layoutOptions().radial) { glidePan(focusIndex, value, 0); render(); }
@@ -289,7 +305,7 @@
                 camera.snap(camera.value);
             },
             onPan: dx => {
-                pinnedFocus = null;
+                if (!layoutOptions().radial) pinnedFocus = null;
                 if (frame) cancelAnimationFrame(frame);
                 frame = null; previousTime = null;
                 camera.snap(camera.value - dx * 0.0012);
@@ -309,6 +325,9 @@
         ctx.stageFrame.tabIndex = 0;
         ctx.stageFrame.setAttribute('aria-label', 'Scale journey. Drag empty space to zoom, drag a 3D object to rotate, or use the left and right arrow keys to select items.');
         return { update: () => { ctx.updateComparison(); }, frameTo: hop, radialPan: panAt,
+            // The renderer reports which objects it actually drew on screen, and how far each
+            // is (in decades) from the camera's ring size; apply() chooses among them.
+            observe: list => { observed = list; },
             focusOptions: () => focusTransition.options(),
             dispose: () => {
                 disposed = true;
@@ -338,8 +357,14 @@
             return (model.presentation?.layout_width_factor ?? 1) *
                 (order === 3 && model.geometry === 'sphere' ? Math.cbrt(6 / Math.PI) : 1);
         };
-        const radial = order === 1;
-        const extentFactor = item => modelStage?.entry(item)?.presentation?.display_extent_factor ?? 1;
+        // Every spatial dimension uses the radial (Scale of the Universe) arrangement.
+        const radial = true;
+        const extentFactor = item => {
+            const map = areaMaps?.entry(item);
+            if (map) return map.height;
+            if (order === 2 && /cross-section|surface area|disk|boundary/i.test(item.name)) return 2 / Math.sqrt(Math.PI);
+            return modelStage?.entry(item)?.presentation?.display_extent_factor ?? 1;
+        };
         // An item's world position in the radial layout (units of its own length).
         const radialWorld = index => placement?.[index] &&
             { x: placement[index].u * placement[index].length, y: placement[index].v * placement[index].length };
@@ -447,10 +472,11 @@
             ruler.style.color = ctx.stage.style.color;
             // Keep nearby offscreen objects mounted so the SVG viewport, rather than
             // JavaScript culling, controls the exact moment they cross an edge.
-            if (radial && (!placement || placementWidth !== view.width || placementReady !== modelStage?.registryReady)) {
+            const ready = order === 2 ? areaMaps?.entries.size : modelStage?.registryReady;
+            if (radial && (!placement || placementWidth !== view.width || placementReady !== ready)) {
                 placement = ScaleJourney.radialPlacement(ctx.items, order, { ...view, widthFactor, extentFactor });
                 placementWidth = view.width;
-                placementReady = modelStage?.registryReady;
+                placementReady = ready;
             }
             const entries = radial
                 ? ScaleJourney.radialLayout(ctx.items, zoom.value, order,
@@ -461,8 +487,9 @@
                     ...navigationControl.focusOptions(),
                     overscan: view.width * 0.75
                 });
-            const labels = [];
-            entries.filter(entry => entry.visible).forEach(({item, x, y, size}) => {
+            const labels = [], onScreen = [];
+            const ringPx = ScaleJourney.RADIAL_SIZE * 0.85 * view.scale;
+            entries.filter(entry => entry.visible).forEach(({item, index, x, y, size, center}) => {
                 const entry = ctx.modelEntry(item);
                 // A sphere's diameter differs from the cube root of its volume.
                 const visualSize = order === 3 && entry?.geometry === 'sphere' ? size * Math.cbrt(6 / Math.PI) : size;
@@ -477,6 +504,9 @@
                 const useModel = order !== 2 && entry && !modelStage?.unavailable;
                 if (order !== 2 && !modelStage?.registryReady && !modelStage?.unavailable) return;
                 if (radial && useModel && extent * view.scale < MIN_MODEL_PX) return;
+                if (x >= view.left && x <= view.left + view.width && center >= 0 && center <= 500 &&
+                    extent * view.scale >= IN_VIEW_PX)
+                    onScreen.push({ index, distance: Math.abs(Math.log10(extent * view.scale / ringPx)) });
                 const g = ctx.object(ctx.stage, item, x, y, extent, extent, { image: false });
                 if (useModel) {
                     g.dataset.modelIndex = ctx.items.indexOf(item);
@@ -495,23 +525,24 @@
                     if (src) g.append(svg('image', { href:src, x:x-size/2,y:y-size,width:size,height:size,
                         preserveAspectRatio:'xMidYMax meet' }));
                 }
-                // Radial view: labels grow with their object but never drop below a readable
-                // 11 px, and fade in as the object grows from 28 to 56 px on screen.
+                // Radial view: labels scale with their object (a tenth of its drawn size) between
+                // 9 and 40 px, and only fade out once the object is nearly too small to draw.
                 const drawnPx = extent * view.scale;
                 const fontSize = radial
-                    ? Math.min(Math.max(ScaleJourney.LABEL_EM * extent, 11 / view.scale), 26 / view.scale)
+                    ? Math.min(Math.max(ScaleJourney.LABEL_EM * extent, 9 / view.scale), 40 / view.scale)
                     : 19 * extent / ScaleJourney.BASE_SIZE;
-                // Names fade as their objects shrink: gone below 7 px text, full above 12 px.
-                const labelOpacity = radial ? clamp((drawnPx - 28) / 28, 0, 1) : clamp((fontSize * view.scale - 7) / 5, 0, 1);
+                const labelOpacity = radial ? clamp((drawnPx - 12) / 16, 0, 1) : clamp((fontSize * view.scale - 7) / 5, 0, 1);
+                const selected = item === ctx.item && ctx.explicitSelection;
                 if (labelOpacity > 0) {
                     const name = entry?.display_label || item.name;
                     const labelY = radial ? y + fontSize * 1.25 : y + fontSize * 1.8;
-                    const text = svg('text',{x,y:labelY,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px${radial && item === ctx.item ? ';font-weight:700' : ''}`,opacity:labelOpacity},name);
-                    text.dataset.labelPriority = item === ctx.item ? '200' : '100';
+                    const text = svg('text',{x,y:labelY,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px${selected ? ';font-weight:700' : ''}`,opacity:labelOpacity},name);
+                    text.dataset.labelPriority = selected ? '200' : '100';
                     labels.push({ text, x, y: labelY, fontSize, width: 0.56 * fontSize * name.length,
-                        rank: (item === ctx.item ? 1e9 : 0) + drawnPx });
+                        rank: (selected ? 1e9 : 0) + drawnPx });
                 }
             });
+            navigationControl.observe(onScreen);
             prefetchModels(entries, view);
             // Keep the selected item's label, then larger objects' labels; drop any that collide.
             const kept = [];
@@ -581,23 +612,40 @@
     }
     R.counts = ctx => {
         const zoom=ctx.zoomControl(1,'Count window');
-        let examples=0,disposed=false;
-        const nav=navigation(ctx,1,zoom,render,()=>({order:2,exponentFactor:.5}));
+        let examples=0,disposed=false,placement,placementWidth;
+        // Counts use the same radial arrangement as the spatial explorers: each total is a
+        // square of tiles whose side grows with the square root of the count.
+        const radialWorld = index => placement?.[index] &&
+            { x: placement[index].u * placement[index].length, y: placement[index].v * placement[index].length };
+        const nav=navigation(ctx,1,zoom,render,()=>({order:2,exponentFactor:.5,radial:true,radialWorld}));
         const variants=button(ctx.settings,'Different Go examples',()=>{examples++;render();});
+        // Same full-height stage and overlay camera slider as the spatial explorers.
+        ctx.host.classList.add('experience--spatial');
+        zoom.element.classList.add('experience-camera-slider');
+        zoom.output.hidden=true;
+        ctx.stageFrame.append(zoom.element);
+        ctx.stage._onResize=()=>render();
         function render(){
             if(disposed)return;
             ctx.stage.replaceChildren();
             const view=viewport(ctx);
             const each=power(Math.max(0,Math.ceil(zoom.value-3.5)));
-            const rows=ScaleJourney.layout(ctx.items,zoom.value/2,2);
+            if(!placement||placementWidth!==view.width){
+                placement=ScaleJourney.radialPlacement(ctx.items,2,{...view});
+                placementWidth=view.width;
+            }
+            const rows=ScaleJourney.radialLayout(ctx.items,zoom.value/2,2,{...view,placement,overscan:40,pan:nav.radialPan(zoom.value)});
             const defs=svg('defs'); ctx.stage.append(defs);
             let totalShown=0, imagesShown=false, clipped=false;
+            const onScreen=[], labels=[], ringPx=ScaleJourney.RADIAL_SIZE*0.85*view.scale;
             variants.hidden=!/Legal Go positions/i.test(ctx.item.name);
-            for(const {item,x,y,size} of rows.filter(p=>p.visible&&p.size>1&&p.size<=5000)){
+            for(const {item,index,x,y,size,center} of rows.filter(p=>p.visible&&p.size*view.scale>=1&&p.size<=5000)){
+                if(x>=view.left&&x<=view.left+view.width&&center>=0&&center<=500&&size*view.scale>=IN_VIEW_PX)
+                    onScreen.push({index,distance:Math.abs(Math.log10(size*view.scale/ringPx))});
                 const g=ctx.object(ctx.stage,item,x,y,size,size,{image:false});
                 const go=/Legal Go positions/i.test(item.name);
                 if(go) {
-                    const w=Math.min(210,size)/2;
+                    const w=Math.min(800,size)/2;
                     for(let i=0;i<4;i++)board(g,x-w+(i%2)*w,y-2*w+Math.floor(i/2)*w,w-4,examples*7+i+1);
                 }else{
                     const represented=item.value/each, visible=Math.min(12000,Math.floor(represented));
@@ -606,7 +654,7 @@
                     const columns=Math.max(1,Math.ceil(Math.sqrt(visible)));
                     const extent=Math.min(800,size), cell=extent/columns;
                     const src=ctx.image(item);
-                    const id=`count-tile-${ctx.items.indexOf(item)}`;
+                    const id=`count-tile-${index}`;
                     const pattern=svg('pattern',{id,patternUnits:'userSpaceOnUse',x:x-extent/2,y:y-extent,width:cell,height:cell});
                     if(src) {
                         pattern.append(svg('image',{href:src,x:cell*.07,y:cell*.07,width:cell*.86,height:cell*.86,preserveAspectRatio:'xMidYMid meet'}));
@@ -619,14 +667,27 @@
                     if(remainder)g.append(svg('rect',{x:x-extent/2,y:y-extent+fullRows*cell,width:remainder*cell,height:cell,fill:`url(#${id})`,'data-replicas':remainder}));
                     if(represented<1)g.append(svg('circle',{cx:x,cy:y-size/2,r:size/2,fill:'var(--accent-color)'}));
                 }
-                if(item===ctx.item)ctx.label(item,500,405);
+                const drawnPx=size*view.scale, opacity=clamp((drawnPx-12)/16,0,1);
+                if(opacity>0){
+                    const fontSize=Math.min(Math.max(ScaleJourney.LABEL_EM*size,9/view.scale),40/view.scale);
+                    const selected=item===ctx.item&&ctx.explicitSelection;
+                    const text=svg('text',{x,y:y+fontSize*1.25,'text-anchor':'middle',class:'journey-object-label',
+                        style:`font-size:${fontSize}px${selected?';font-weight:700':''}`,opacity},item.name);
+                    labels.push({text,x,y:y+fontSize*1.25,fontSize,width:.56*fontSize*item.name.length,rank:(selected?1e9:0)+drawnPx});
+                }
             }
-            ctx.stage.append(svg('text',{x:view.left+20,y:485},`1 ${imagesShown?'tile':'dot'} = ${number(each)} counted units`));
-            readableText(ctx, view.scale);
-            ctx.live.textContent=`${ctx.index+1} / ${ctx.items.length} · ${/Legal Go positions/i.test(ctx.item.name)?'Four legal examples, not an enumeration':`${totalShown.toLocaleString()} replicas drawn${clipped?' · Larger neighbors truncated at 12,000':''}`}`;
-            ctx.caption.textContent='The image tiles identify what is being counted, using illustrative photographs rather than measured outlines. A tile represents one object only when its multiplier is 1; otherwise it represents the explicit cluster size shown. All items share that multiplier. Totals below one cluster shrink in dot area; large neighboring totals are truncated at 12,000 tiles. Zoom closer to enlarge the tiles, or out to change the cluster multiplier. Count alternatives (such as Go positions) are not physically coexisting objects. The four Go boards are valid illustrative positions, not a uniform random sample.';
+            const kept=[];
+            for(const label of labels.sort((a,b)=>b.rank-a.rank)){
+                const box={left:label.x-label.width/2,right:label.x+label.width/2,top:label.y-label.fontSize,bottom:label.y+.25*label.fontSize};
+                if(kept.some(o=>box.left<o.right&&box.right>o.left&&box.top<o.bottom&&box.bottom>o.top))continue;
+                kept.push(box); ctx.stage.append(label.text);
+            }
+            nav.observe(onScreen);
+            ctx.stage.append(svg('text',{x:view.left+14,y:470,class:'counts-multiplier',style:`font-size:${13/view.scale}px`},`1 ${imagesShown?'tile':'dot'} = ${number(each)} counted units`));
+            ctx.live.textContent=`${/Legal Go positions/i.test(ctx.item.name)?'Four legal examples, not an enumeration':`${totalShown.toLocaleString()} replicas drawn${clipped?' · Larger totals truncated at 12,000':''}`}`;
+            ctx.caption.textContent='Each total is a square of image tiles whose side grows with the square root of the count, arranged so totals near the current scale ring the center and smaller ones gather toward it. The tiles identify what is counted, using illustrative photographs rather than measured outlines. A tile represents one object only when its multiplier is 1; otherwise it represents the explicit cluster size shown. All items share that multiplier. Totals below one cluster shrink in dot area; large totals are truncated at 12,000 tiles. Count alternatives (such as Go positions) are not physically coexisting objects. The four Go boards are valid illustrative positions, not a uniform random sample.';
             nav.update();
         }
-        return {render,focus:frame=>{if(frame)nav.frameTo(2*ScaleJourney.frameExponent(ctx.items,ctx.index,2));},dispose:()=>{disposed=true;nav.dispose();}};
+        return {render,focus:frame=>{if(frame)nav.frameTo(2*ScaleJourney.frameExponent(ctx.items,ctx.index,2),ctx.index);},dispose:()=>{disposed=true;ctx.host.classList.remove('experience--spatial');nav.dispose();}};
     };
 })(globalThis);

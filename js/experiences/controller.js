@@ -461,6 +461,10 @@
             return true;
         }
         focus(index, frame = true) {
+            // frame = true is an explicit choice (click, arrows, search, link); false is the
+            // explorer following the camera, which never marks an item as selected.
+            this.explicitSelection = Boolean(frame);
+            this.noFocus = false;
             this.index = clamp(index, 0, this.items.length - 1);
             this.select.value = this.index;
             if (this.pickerCurrent) this.pickerCurrent.textContent = this.item.name;
@@ -481,8 +485,27 @@
             this.renderer?.focus?.(frame);
             this.renderer?.render(0);
         }
+        // Nothing is in view at the camera's scale (for example the empty decades between
+        // the Planck length and quarks): show no object description until something is.
+        clearFocus() {
+            if (this.noFocus) return;
+            this.noFocus = true;
+            this.explicitSelection = false;
+            if (this.pickerCurrent) this.pickerCurrent.textContent = 'Search items';
+            this.pickerToggle?.setAttribute('aria-label', 'Choose item, none in view');
+            clearTimeout(this.detailTimer);
+            this.detailTimer = setTimeout(() => { if (this.active && this.noFocus) this.showEmptyDetail(); }, 160);
+        }
+        showEmptyDetail() {
+            this.detailImage = null;
+            const empty = dom('div', 'experience-detail-empty');
+            empty.append(dom('h2', '', 'No objects at this scale'),
+                dom('p', '', 'Zoom in or out to find the next object, or search for one by name.'));
+            this.detail.replaceChildren(empty);
+        }
         updateDetail() {
             clearTimeout(this.detailTimer);
+            if (this.noFocus) { this.showEmptyDetail(); return; }
             const item = this.item;
             const model = this.modelEntry?.(item);
             const title = dom('h2', '', model?.display_label || item.name);

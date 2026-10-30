@@ -672,6 +672,9 @@ const commands = {
             });
             await page.evaluate(() => app.setDimension('angular-velocity'));
             results.push({ test: 'dimension switch exits fullscreen', passed: await page.evaluate(() => !app.experiences.fullscreenState && !document.body.classList.contains('experience-fullscreen-active') && document.body.style.overflow !== 'hidden') });
+            // Let prefetched models finish decoding: navigating away aborts their texture
+            // loads, which GLTFLoader logs as errors that are not the app's fault.
+            await page.waitForTimeout(4000);
             await page.goto(`${base}/?dimension=angular-velocity&item=Ceiling%20fan`);
             await page.waitForFunction(() => globalThis.app?.experiences?.renderer?.modelStage?.instances.get(app.experiences.item));
             await page.evaluate(() => { app.experiences.host.requestFullscreen = undefined; });
