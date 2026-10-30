@@ -119,6 +119,18 @@ class UniversalScales {
         // Set up zoom after plot is initialized
         this.setupZoom();
         this.overview = window.PlotOverview ? new PlotOverview(this) : null;
+        // Re-fit the chart whenever its container changes width (details panel, rail, full
+        // screen, window), not only on window resize; otherwise the SVG keeps a stale width.
+        if (window.ResizeObserver && this.plotContainer) {
+            let lastWidth = 0, frame = 0;
+            new ResizeObserver(([entry]) => {
+                const width = Math.round(entry.contentRect.width);
+                if (!width || width === lastWidth || this.experiences?.active) return;
+                lastWidth = width;
+                cancelAnimationFrame(frame);
+                frame = requestAnimationFrame(() => { this.resizePlot(); this.updateStickyAxis?.(); this.overview?.update(); });
+            }).observe(this.plotContainer);
+        }
         this.setupZoomControls();
         this.setupStickyTopAxis();
 
@@ -1299,6 +1311,23 @@ class UniversalScales {
 
     // Chart view on wider screens: item details live in a left panel (the tooltip element,
     // docked) instead of a floating tooltip. Hover previews an item; a click pins it.
+    // Chart search result: scroll its row to the middle of the view, pin it in the details
+    // panel and briefly highlight it.
+    focusChartItem(item) {
+        const node = [...document.querySelectorAll('#plot-svg .item-group')]
+            .find(group => d3.select(group).datum()?.name === item.name);
+        const scroller = document.querySelector('.app-main');
+        if (node && scroller) {
+            const rect = node.getBoundingClientRect(), view = scroller.getBoundingClientRect();
+            scroller.scrollBy({ top: rect.top + rect.height / 2 - (view.top + view.height / 2), behavior: 'smooth' });
+            node.classList.remove('is-found');
+            void node.getBoundingClientRect();
+            node.classList.add('is-found');
+        }
+        const point = node?.getBoundingClientRect();
+        this.showTooltip({ clientX: point?.left ?? 0, clientY: point?.top ?? 0, pointerType: 'mouse', target: node }, item, true);
+    }
+
     chartPanelMode() {
         return document.body.dataset.experience === 'log' && window.innerWidth > 700 &&
             !window.matchMedia('(hover: none)').matches;

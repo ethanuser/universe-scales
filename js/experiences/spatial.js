@@ -217,9 +217,15 @@
             // a frozen manual pan keeps its world point.
             const point = anchor.index != null ? layoutOptions().radialWorld?.(anchor.index) : anchor;
             if (!point) return { x: 0, y: 0 };
-            // A selected object stays centered while zooming into it.
-            if (anchor.index != null && anchor.index === pinnedFocus) return { x: point.x, y: point.y };
             const f = layoutOptions().exponentFactor ?? 1;
+            // A selected object stays centered while zooming into it. Zooming out from it eases
+            // the view back to the shared center over half a decade, by which point the lock
+            // releases, so coming back toward its size never re-centers on it.
+            if (anchor.index != null && anchor.index === pinnedFocus) {
+                const out = pinnedExponent == null ? 0 : (exponent - pinnedExponent) * f;
+                const u = clamp(out / 0.5, 0, 1), weight = 1 - u * u * (3 - 2 * u);
+                return { x: point.x * weight, y: point.y * weight };
+            }
             // A frozen view (after a drag, or a released selection) eases back to the shared
             // center as you keep zooming in either direction, so it never snaps back onto the
             // item it was centered on.
@@ -257,8 +263,8 @@
                     // framed at; zooming further away deselects it.
                     const delta = pinnedExponent == null ? 0 : (camera.value - pinnedExponent) * (options.exponentFactor ?? 1);
                     if (pinnedFocus != null && delta > 0.5) {
-                        // Freeze the current view first so releasing the lock never jumps.
-                        anchor = { ...panAt(camera.value), exponent: camera.value, manual: true };
+                        // The view has already eased back to the center (see panAt).
+                        anchor = null;
                         pinnedFocus = pinnedExponent = null;
                     }
                     if (pinnedFocus == null) {

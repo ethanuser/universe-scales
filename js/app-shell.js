@@ -114,6 +114,11 @@
                 if (!drawer.hidden || !info.hidden) { closeTransient(); event.stopPropagation(); }
                 return;
             }
+            if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k' && document.body.dataset.experience === 'log') {
+                event.preventDefault();
+                shortcuts['/']();
+                return;
+            }
             if (event.ctrlKey || event.metaKey || event.altKey || typing(event.target)) return;
             if (!help.hidden || !about.hidden) return;
             const action = shortcuts[event.key.length === 1 ? event.key.toLowerCase() : ''] ?? shortcuts[event.key];
@@ -121,6 +126,119 @@
             event.preventDefault();
             action();
         }, true);
+
+        // --- Chart search -----------------------------------------------------------------
+        // The chart has no item toolbar, so the top bar's item slot gets a search box that finds
+        // an item (same matching as the explorer), scrolls the chart to it and pins it.
+        const chartSearch = (() => {
+            const wrap = document.createElement('div');
+            wrap.className = 'chart-search';
+            wrap.innerHTML = '<svg class="chart-search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 20 20"/></svg>' +
+                '<input type="search" placeholder="Search by name, initials or keyword" aria-label="Search chart items" autocomplete="off" spellcheck="false">' +
+                '<div class="chart-search__results" role="listbox" hidden></div>';
+            const input = wrap.querySelector('input'), list = wrap.querySelector('.chart-search__results');
+            let results = [], active = 0;
+            const close = () => { list.hidden = true; };
+            const choose = index => {
+                const result = results[index];
+                if (!result) return;
+                app().focusChartItem(result.item);
+                input.value = result.item.name;
+                close();
+                input.blur();
+            };
+            const render = () => {
+                const items = app()?.getAllItems?.() || [];
+                results = input.value.trim() ? ScaleSearch.rank(items, input.value).slice(0, 12) : [];
+                active = 0;
+                list.replaceChildren(...results.map((result, index) => {
+                    const option = document.createElement('button');
+                    option.type = 'button';
+                    option.className = 'chart-search__option' + (index === active ? ' is-highlighted' : '');
+                    const thumb = document.createElement('img');
+                    const path = app().getImagePath?.(result.item.name);
+                    Object.assign(thumb, { alt: '', loading: 'lazy' });
+                    if (path && !path.startsWith('data:')) thumb.src = `${path.replace(/^images\//, 'images/thumbs/')}.jpg`;
+                    thumb.onerror = () => thumb.classList.add('is-missing');
+                    option.append(thumb, Object.assign(document.createElement('span'), { textContent: result.item.name }));
+                    option.addEventListener('pointerdown', event => event.preventDefault());
+                    option.addEventListener('click', () => choose(index));
+                    return option;
+                }));
+                list.hidden = !results.length;
+            };
+            input.addEventListener('input', render);
+            input.addEventListener('focus', () => { if (input.value) { input.select(); render(); } });
+            input.addEventListener('blur', () => setTimeout(close, 120));
+            input.addEventListener('keydown', event => {
+                if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    if (!results.length) return;
+                    active = (active + (event.key === 'ArrowDown' ? 1 : -1) + results.length) % results.length;
+                    [...list.children].forEach((option, i) => option.classList.toggle('is-highlighted', i === active));
+                    list.children[active]?.scrollIntoView({ block: 'nearest' });
+                } else if (event.key === 'Enter') { event.preventDefault(); choose(active); }
+                else if (event.key === 'Escape') { close(); input.blur(); }
+            });
+            return { element: wrap, focus: () => input.focus() };
+        })();
+        const slot = $('app-item-slot');
+        const syncChartSearch = () => {
+            const chart = document.body.dataset.experience === 'log';
+            if (chart && slot && !slot.contains(chartSearch.element) && !slot.children.length) slot.append(chartSearch.element);
+            else if (!chart && chartSearch.element.isConnected) chartSearch.element.remove();
+        };
+        new MutationObserver(syncChartSearch).observe(document.body, { attributes: true, attributeFilter: ['data-experience'] });
+        if (slot) new MutationObserver(syncChartSearch).observe(slot, { childList: true });
+        syncChartSearch();
+        shortcuts['/'] = () => document.body.dataset.experience === 'log' ? chartSearch.focus() : experiences()?.openItemSearch?.();
+
+        // --- Tooltips ---------------------------------------------------------------------
+        // Styled tooltips replace the browser's: a short label, with the keyboard shortcut (the
+        // trailing "(X)" in a title) shown as a key cap. After one shows, neighbors show at once.
+        const tip = document.createElement('div');
+        tip.className = 'app-tooltip';
+        tip.setAttribute('role', 'tooltip');
+        tip.hidden = true;
+        (document.querySelector('.app') || document.body).append(tip);
+        let tipTarget = null, tipTimer = 0, warmUntil = 0;
+        const hideTip = () => {
+            clearTimeout(tipTimer);
+            if (!tip.hidden) warmUntil = performance.now() + 600;
+            tip.hidden = true;
+            tipTarget = null;
+        };
+        const showTip = target => {
+            const text = target.dataset.tip;
+            if (!text || !target.isConnected) return;
+            const match = text.match(/^(.*?)\s*\(([^()]{1,24})\)$/);
+            tip.replaceChildren(document.createTextNode(match ? match[1] : text));
+            if (match) tip.append(Object.assign(document.createElement('kbd'), { textContent: match[2] }));
+            tip.hidden = false;
+            const rect = target.getBoundingClientRect(), box = tip.getBoundingClientRect();
+            let top = rect.bottom + 8;
+            if (top + box.height > innerHeight - 4) top = rect.top - box.height - 8;
+            const left = Math.max(4, Math.min(innerWidth - box.width - 4, rect.left + rect.width / 2 - box.width / 2));
+            tip.style.left = `${left}px`;
+            tip.style.top = `${top}px`;
+        };
+        document.addEventListener('pointerover', event => {
+            if (event.pointerType === 'touch') return;
+            const target = event.target.closest?.('[title], [data-tip]');
+            if (!target || target === tipTarget || target.closest('svg') && !target.matches('svg')) return;
+            if (target.hasAttribute('title')) {
+                target.dataset.tip = target.getAttribute('title');
+                if (!target.hasAttribute('aria-label')) target.setAttribute('aria-label', target.dataset.tip);
+                target.removeAttribute('title');
+            }
+            hideTip();
+            tipTarget = target;
+            tipTimer = setTimeout(() => showTip(target), performance.now() < warmUntil ? 0 : 450);
+        });
+        document.addEventListener('pointerout', event => {
+            if (tipTarget && !tipTarget.contains(event.relatedTarget)) hideTip();
+        });
+        for (const type of ['pointerdown', 'keydown', 'wheel']) document.addEventListener(type, hideTip, { capture: true, passive: true });
 
         // --- One-time controls hint ----------------------------------------------------
         // First visit only: a short strip over the explorer naming the three gestures and

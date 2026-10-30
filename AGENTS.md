@@ -1,5 +1,23 @@
 # Agent Handoff Guide
 
+## 2026-10-29 search, re-lock fix, desktop-style controls (Claude)
+
+- `js/item-search.js` (`ScaleSearch.rank`): normalized name matching (word starts, prefix,
+  initials prefix such as "lhc"/"iss", plural stemming incl. -ies), a curated synonym list, then
+  word-start matches in summary/hook/description. Explorer picker reorders by rank; arrow keys move
+  the highlight, Enter selects. Chart mode gets a search box in the top-bar item slot
+  (`app-shell.js`) that scrolls to the row and pins it (`app.focusChartItem`); / and Ctrl/Cmd+K
+  focus it. Tests: `tests/item-search.test.cjs`.
+- Chart: a ResizeObserver on the plot container refits the SVG whenever its width changes
+  (details panel, rail, full screen), fixing clipped large items and the first-click resize.
+- Re-lock fix (root cause): a locked selection's pan now eases to the shared center as you zoom
+  out (over 0.5 decades, `panAt`), and the lock releases there with no anchor left, so returning
+  toward the item's size never re-centers it.
+- Controls styled like the Claude desktop app (owner's exception to square corners for buttons):
+  borderless icon buttons with rounded hover highlight, rounded segmented view switch, round zoom
+  buttons, soft-filled selector triggers; panels/menus/dialogs stay square. Native title tooltips
+  are replaced by `.app-tooltip` (shortcut shown as a key cap). Phones keep 40px touch targets.
+
 ## 2026-10-29 chart details panel, zoom limit, ISS (Claude)
 
 - Chart view (desktop): no floating tooltips. `#tooltip` docks as a left panel (`tooltip--panel`,

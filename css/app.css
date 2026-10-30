@@ -670,3 +670,142 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
 }
 /* Item and grid lines span the full chart height, meeting the pinned axes. */
 .app-main > .plot-container { padding: 0 !important; }
+
+/* Claude-desktop-like controls (owner's exception to square corners for buttons): icon
+   buttons have no outline and show a soft rounded highlight on hover or when active; the view
+   switch is a rounded segmented control; the explorer's zoom buttons are round. Panels, menus
+   and dialogs stay square. */
+.app-icon-button,
+.app-bar .experience-nav-button,
+.app-bar .experience-panel-button,
+.app-bar .experience-fullscreen-button,
+.app-bar .experience-center-button,
+.app-bar .experience-info__button {
+    border-color: transparent !important;
+    background: transparent !important;
+    border-radius: 8px !important;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 !important;
+    color: var(--text-secondary);
+    transition: background-color 0.12s ease, color 0.12s ease;
+}
+.app-icon-button:hover, .app-icon-button:focus-visible, .app-icon-button[aria-expanded='true'],
+.app-bar .experience-nav-button:hover, .app-bar .experience-nav-button:focus-visible,
+.app-bar .experience-panel-button:hover, .app-bar .experience-panel-button:focus-visible,
+.app-bar .experience-fullscreen-button:hover, .app-bar .experience-fullscreen-button:focus-visible,
+.app-bar .experience-center-button:hover, .app-bar .experience-center-button:focus-visible,
+.app-bar .experience-info__button:hover, .app-bar .experience-info__button:focus-visible {
+    background: var(--hover-bg) !important;
+    color: var(--text-primary);
+    outline: none;
+}
+.app-icon-button:active, .app-bar .experience-nav-button:active, .app-bar .experience-center-button:active {
+    background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important;
+}
+.app-bar .experience-nav-button:disabled { opacity: 0.35; background: transparent !important; }
+.app-bar .experience-panel-button[aria-pressed='true'],
+.app-bar .experience-fullscreen-button[aria-pressed='true'] {
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color) 12%, transparent) !important;
+}
+.app-bar .dimension-browser-toggle, .app-bar .unit-browser-toggle, .app-bar .experience-picker-toggle {
+    border-radius: 8px !important;
+    background: var(--bg-secondary);
+    border-color: transparent;
+}
+.app-bar .dimension-browser-toggle:hover, .app-bar .unit-browser-toggle:hover, .app-bar .experience-picker-toggle:hover,
+.app-bar .dimension-browser-toggle[aria-expanded='true'], .app-bar .unit-browser-toggle[aria-expanded='true'],
+.app-bar .experience-picker-toggle[aria-expanded='true'] { background: var(--hover-bg); border-color: transparent; }
+.app-bar .view-switch {
+    padding: 3px;
+    gap: 2px;
+    border-radius: 10px !important;
+    background: var(--bg-secondary);
+}
+.app-bar .view-switch button {
+    height: 32px !important;
+    border: 0 !important;
+    border-radius: 7px !important;
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+}
+.app-bar .view-switch button:hover { color: var(--text-primary) !important; background: var(--hover-bg) !important; }
+.app-bar .view-switch button[aria-pressed='true'] {
+    background: var(--bg-primary) !important;
+    color: var(--accent-color) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+.experience-zoom-buttons { gap: 6px; }
+.experience-zoom-button {
+    width: 32px; height: 32px; min-width: 32px; padding: 0;
+    border-radius: 50% !important;
+    border-color: var(--border-color) !important;
+}
+.experience-zoom-button + .experience-zoom-button { margin-left: 0; }
+.experience-zoom-button:hover { background: var(--hover-bg) !important; }
+
+/* Styled tooltips */
+.app-tooltip {
+    position: fixed;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 280px;
+    padding: 5px 9px;
+    border-radius: 6px !important;
+    background: #1f2024;
+    color: #f2f2f3;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+[data-theme='dark'] .app-tooltip { background: #f2f2f3; color: #1f2024; }
+.app-tooltip[hidden] { display: none; }
+.app-tooltip kbd {
+    min-width: 0; padding: 0 5px; border: 0; border-radius: 4px !important;
+    background: color-mix(in srgb, currentColor 18%, transparent); color: inherit; font-size: 0.72rem;
+}
+
+/* Search: highlighted result, chart search box, found-row flash */
+.experience-picker-option.is-highlighted, .chart-search__option.is-highlighted {
+    background: color-mix(in srgb, var(--accent-color) 12%, var(--bg-primary));
+    border-color: var(--accent-color);
+}
+.chart-search { position: relative; display: flex; align-items: center; flex: 0 1 460px; min-width: 0; margin-right: auto; }
+.chart-search__icon { position: absolute; left: 10px; width: 18px; height: 18px; pointer-events: none; color: var(--text-secondary); }
+.chart-search__icon :is(path, circle) { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.chart-search input {
+    width: 100%; height: 36px; padding: 0 10px 0 34px;
+    border: 1px solid transparent; border-radius: 8px !important;
+    background: var(--bg-secondary); color: var(--text-primary); font: inherit; font-size: 0.92rem;
+}
+.chart-search input:focus { outline: none; border-color: var(--accent-color); background: var(--bg-primary); }
+.chart-search__results {
+    position: absolute; z-index: var(--z-app-overlay); top: calc(100% + 6px); left: 0; right: 0;
+    max-height: min(60dvh, 480px); overflow-y: auto; padding: 4px;
+    border: 1px solid var(--border-color); background: var(--bg-primary); box-shadow: var(--shadow-lg);
+}
+.chart-search__results[hidden] { display: none; }
+.chart-search__option {
+    display: flex; align-items: center; gap: 10px; width: 100%; padding: 6px 8px;
+    border: 1px solid transparent; background: transparent; color: var(--text-primary);
+    font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer;
+}
+.chart-search__option:hover { background: var(--hover-bg); }
+.chart-search__option img { width: 28px; height: 28px; object-fit: cover; flex: none; background: var(--bg-secondary); }
+.chart-search__option img.is-missing { visibility: hidden; }
+#plot-svg .item-group.is-found circle { animation: found-pulse 1.4s ease-out 2; }
+@keyframes found-pulse { 0% { stroke: var(--accent-color); stroke-width: 10; } 100% { stroke-width: 1; } }
+@media (max-width: 700px) {
+    /* Touch targets: at least 40px on phones. */
+    .app-icon-button, .app-bar .experience-nav-button, .app-bar .experience-panel-button,
+    .app-bar .experience-fullscreen-button, .app-bar .experience-center-button, .app-bar .experience-info__button {
+        width: 40px; min-width: 40px; height: 40px;
+    }
+    .experience-zoom-button { width: 40px; height: 40px; min-width: 40px; }
+}

@@ -237,7 +237,7 @@
             this.pickerPanel.id = 'experience-picker-panel';
             this.pickerPanel.hidden = true;
             const search = dom('input', 'experience-picker-search');
-            Object.assign(search, { type: 'search', placeholder: 'Search items', autocomplete: 'off', spellcheck: false });
+            Object.assign(search, { type: 'search', placeholder: 'Search by name, initials or keyword', autocomplete: 'off', spellcheck: false });
             search.setAttribute('aria-label', 'Search items');
             const options = dom('div', 'experience-picker-options');
             this.pickerButtons = this.items.map((item, index) => {
@@ -271,7 +271,8 @@
                 this.pickerToggle.classList.remove('is-open');
                 this.pickerToggle.setAttribute('aria-expanded', 'false');
                 search.value = '';
-                this.pickerButtons.forEach(option => option.hidden = false);
+                this.pickerButtons.forEach(option => { option.hidden = false; option.classList.remove('is-highlighted'); });
+                options.append(...this.pickerButtons);
                 this.pickerEmpty.hidden = true;
             };
             const openPicker = () => {
@@ -281,14 +282,35 @@
                 search.focus();
             };
             this.pickerToggle.addEventListener('click', () => this.pickerPanel.hidden ? openPicker() : closePicker());
+            // Ranked, forgiving search (names, initials, synonyms, then descriptions); the
+            // list reorders best match first. Arrow keys move the highlight; Enter selects.
+            let highlighted = -1;
+            const visibleOptions = () => [...options.children].filter(option => option.matches('.experience-picker-option') && !option.hidden);
+            const highlight = index => {
+                const list = visibleOptions();
+                highlighted = list.length ? (index + list.length) % list.length : -1;
+                list.forEach((option, i) => option.classList.toggle('is-highlighted', i === highlighted));
+                list[highlighted]?.scrollIntoView({ block: 'nearest' });
+            };
             search.addEventListener('input', () => {
-                const query = search.value.trim().toLocaleLowerCase();
-                let matches = 0;
-                this.pickerButtons.forEach(option => {
-                    option.hidden = Boolean(query) && !option.dataset.search.includes(query);
-                    if (!option.hidden) matches++;
-                });
-                this.pickerEmpty.hidden = matches !== 0;
+                const query = search.value.trim();
+                const ranked = globalThis.ScaleSearch ? ScaleSearch.rank(this.items, query) : this.items
+                    .map((item, index) => ({ item, index })).filter(({ item }) => item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()));
+                const shown = new Set(ranked.map(result => result.index));
+                this.pickerButtons.forEach((option, index) => { option.hidden = !shown.has(index); });
+                const order = query ? ranked.map(result => this.pickerButtons[result.index]) : this.pickerButtons;
+                options.append(...order);
+                this.pickerEmpty.hidden = ranked.length !== 0;
+                highlight(query ? 0 : -1);
+            });
+            search.addEventListener('keydown', event => {
+                if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    highlight(highlighted + (event.key === 'ArrowDown' ? 1 : -1));
+                } else if (event.key === 'Enter') {
+                    event.preventDefault();
+                    (visibleOptions()[Math.max(0, highlighted)])?.click();
+                }
             });
             const info = dom('div', 'experience-info');
             const infoButton = dom('button', 'experience-info__button', 'i');
