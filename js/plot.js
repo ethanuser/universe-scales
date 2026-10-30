@@ -223,7 +223,23 @@ class PlotRenderer {
         if (this.isLinearScale()) {
             return this.generateLinearTicks();
         }
-        return this.generatePowerOfTenTicks();
+        return this.thinTicksByLabelWidth(this.generatePowerOfTenTicks());
+    }
+
+    // Keep power-of-ten labels from overlapping: when neighbors are closer than the widest
+    // label needs, keep only exponents that are multiples of a step, so the kept ticks stay the
+    // same while panning.
+    thinTicksByLabelWidth(ticks) {
+        if (ticks.length < 3 || !this.xScale) return ticks;
+        const spacing = Math.abs(this.xScale(ticks[1]) - this.xScale(ticks[0]));
+        const longest = Math.max(...ticks.map(tick => String(this.app.formatAxisValue(tick, 0)).replace(/<[^>]+>/g, '').length));
+        const needed = longest * 7.5 + 18;
+        if (!(spacing > 0) || spacing >= needed) return ticks;
+        const exponents = ticks.map(tick => Math.round(Math.log10(tick)));
+        const stride = Math.max(1, Math.round(exponents[1] - exponents[0]));
+        const step = stride * Math.ceil(needed / spacing);
+        const kept = ticks.filter((tick, i) => ((exponents[i] % step) + step) % step === 0);
+        return kept.length >= 2 ? kept : ticks;
     }
 
     generateLinearTicks() {

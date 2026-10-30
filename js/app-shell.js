@@ -127,60 +127,106 @@
             action();
         }, true);
 
-        // --- Chart search -----------------------------------------------------------------
-        // The chart has no item toolbar, so the top bar's item slot gets a search box that finds
-        // an item (same matching as the explorer), scrolls the chart to it and pins it.
+        // --- Chart item picker --------------------------------------------------------------
+        // The chart gets the same item picker as the explorer (dropdown list with thumbnails and
+        // search, previous/next arrows). Choosing an item zooms the chart to it and its neighbors.
         const chartSearch = (() => {
+            const chevron = '<span class="dimension-browser-toggle__chevron" aria-hidden="true"></span>';
+            const arrow = path => `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${path}" /></svg>`;
             const wrap = document.createElement('div');
-            wrap.className = 'chart-search';
-            wrap.innerHTML = '<svg class="chart-search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 20 20"/></svg>' +
-                '<input type="search" placeholder="Search by name, initials or keyword" aria-label="Search chart items" autocomplete="off" spellcheck="false">' +
-                '<div class="chart-search__results" role="listbox" hidden></div>';
-            const input = wrap.querySelector('input'), list = wrap.querySelector('.chart-search__results');
-            let results = [], active = 0;
-            const close = () => { list.hidden = true; };
-            const choose = index => {
-                const result = results[index];
-                if (!result) return;
-                app().focusChartItem(result.item);
-                input.value = result.item.name;
-                close();
-                input.blur();
-            };
-            const render = () => {
-                const items = app()?.getAllItems?.() || [];
-                results = input.value.trim() ? ScaleSearch.rank(items, input.value).slice(0, 12) : [];
-                active = 0;
-                list.replaceChildren(...results.map((result, index) => {
+            wrap.className = 'experience-toolbar chart-toolbar';
+            wrap.innerHTML = `<div class="experience-toolbar__main"><div class="experience-picker">
+                <button type="button" class="experience-picker-toggle" aria-expanded="false" title="Search items (/)"><span>Choose an item</span>${chevron}</button>
+                <button type="button" class="experience-nav-button" data-step="-1" title="Previous item (←)">${arrow('M15 5 8 12l7 7')}</button>
+                <button type="button" class="experience-nav-button" data-step="1" title="Next item (→)">${arrow('M9 5l7 7-7 7')}</button>
+                <div class="experience-picker-panel" hidden>
+                    <input class="experience-picker-search" type="search" placeholder="Search by name, initials or keyword" aria-label="Search items" autocomplete="off" spellcheck="false">
+                    <div class="experience-picker-options"></div>
+                    <p class="experience-picker-empty" hidden>No items match that search.</p>
+                </div></div></div>`;
+            const toggle = wrap.querySelector('.experience-picker-toggle'), label = toggle.querySelector('span');
+            const panel = wrap.querySelector('.experience-picker-panel'), input = panel.querySelector('input');
+            const list = panel.querySelector('.experience-picker-options'), empty = panel.querySelector('.experience-picker-empty');
+            let options = [], highlighted = -1;
+            const items = () => app()?.chartItemsInOrder?.() || [];
+            const current = () => app()?.chartCurrent;
+            const choose = item => { close(); app().focusChartItem(item); };
+            const build = () => {
+                options = items().map(item => {
                     const option = document.createElement('button');
                     option.type = 'button';
-                    option.className = 'chart-search__option' + (index === active ? ' is-highlighted' : '');
+                    option.className = 'experience-picker-option';
                     const thumb = document.createElement('img');
-                    const path = app().getImagePath?.(result.item.name);
-                    Object.assign(thumb, { alt: '', loading: 'lazy' });
+                    thumb.className = 'experience-picker-thumb';
+                    Object.assign(thumb, { alt: '', loading: 'lazy', decoding: 'async' });
+                    const path = app().getImagePath?.(item.name);
                     if (path && !path.startsWith('data:')) thumb.src = `${path.replace(/^images\//, 'images/thumbs/')}.jpg`;
                     thumb.onerror = () => thumb.classList.add('is-missing');
-                    option.append(thumb, Object.assign(document.createElement('span'), { textContent: result.item.name }));
-                    option.addEventListener('pointerdown', event => event.preventDefault());
-                    option.addEventListener('click', () => choose(index));
+                    option.append(thumb, Object.assign(document.createElement('span'), { textContent: item.name }));
+                    option.classList.toggle('is-active', item.name === current()?.name);
+                    option.addEventListener('click', () => choose(item));
+                    option.item = item;
                     return option;
-                }));
-                list.hidden = !results.length;
+                });
+                list.replaceChildren(...options);
             };
-            input.addEventListener('input', render);
-            input.addEventListener('focus', () => { if (input.value) { input.select(); render(); } });
-            input.addEventListener('blur', () => setTimeout(close, 120));
+            const visible = () => options.filter(option => !option.hidden);
+            const highlight = index => {
+                const shown = visible();
+                highlighted = shown.length ? (index + shown.length) % shown.length : -1;
+                shown.forEach((option, i) => option.classList.toggle('is-highlighted', i === highlighted));
+                shown[highlighted]?.scrollIntoView({ block: 'nearest' });
+            };
+            const filter = () => {
+                const query = input.value.trim();
+                const ranked = query ? ScaleSearch.rank(options.map(option => option.item), query) : null;
+                const shown = ranked ? new Set(ranked.map(result => result.index)) : null;
+                options.forEach((option, index) => { option.hidden = Boolean(shown) && !shown.has(index); });
+                list.append(...(ranked ? ranked.map(result => options[result.index]) : options));
+                empty.hidden = !ranked || ranked.length > 0;
+                highlight(query ? 0 : -1);
+            };
+            const open = () => {
+                build();
+                input.value = '';
+                filter();
+                panel.hidden = false;
+                toggle.classList.add('is-open');
+                toggle.setAttribute('aria-expanded', 'true');
+                input.focus();
+                options.find(option => option.classList.contains('is-active'))?.scrollIntoView({ block: 'center' });
+            };
+            const close = () => {
+                panel.hidden = true;
+                toggle.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            };
+            toggle.addEventListener('click', () => panel.hidden ? open() : close());
+            input.addEventListener('input', filter);
             input.addEventListener('keydown', event => {
                 if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
                     event.preventDefault();
-                    if (!results.length) return;
-                    active = (active + (event.key === 'ArrowDown' ? 1 : -1) + results.length) % results.length;
-                    [...list.children].forEach((option, i) => option.classList.toggle('is-highlighted', i === active));
-                    list.children[active]?.scrollIntoView({ block: 'nearest' });
-                } else if (event.key === 'Enter') { event.preventDefault(); choose(active); }
-                else if (event.key === 'Escape') { close(); input.blur(); }
+                    highlight(highlighted + (event.key === 'ArrowDown' ? 1 : -1));
+                } else if (event.key === 'Enter') {
+                    event.preventDefault();
+                    visible()[Math.max(0, highlighted)]?.click();
+                } else if (event.key === 'Escape') { close(); toggle.focus(); }
             });
-            return { element: wrap, focus: () => input.focus() };
+            const step = delta => {
+                const ordered = items();
+                if (!ordered.length) return;
+                const index = ordered.findIndex(item => item.name === current()?.name);
+                const next = index < 0 ? (delta > 0 ? 0 : ordered.length - 1) : Math.max(0, Math.min(ordered.length - 1, index + delta));
+                app().focusChartItem(ordered[next]);
+            };
+            wrap.querySelectorAll('[data-step]').forEach(button => button.addEventListener('click', () => step(Number(button.dataset.step))));
+            document.addEventListener('pointerdown', event => { if (!panel.hidden && !wrap.contains(event.target)) close(); });
+            document.addEventListener('chart-selection', event => { label.textContent = event.detail?.name || 'Choose an item'; });
+            document.addEventListener('keydown', event => {
+                if (document.body.dataset.experience !== 'log' || typing(event.target) || event.altKey || event.ctrlKey || event.metaKey) return;
+                if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); step(event.key === 'ArrowRight' ? 1 : -1); }
+            });
+            return { element: wrap, focus: open };
         })();
         const slot = $('app-item-slot');
         const syncChartSearch = () => {
@@ -214,6 +260,8 @@
             const match = text.match(/^(.*?)\s*\(([^()]{1,24})\)$/);
             tip.replaceChildren(document.createTextNode(match ? match[1] : text));
             if (match) tip.append(Object.assign(document.createElement('kbd'), { textContent: match[2] }));
+            // Measure at the left edge so the box keeps its natural width, then place it.
+            Object.assign(tip.style, { left: '0px', top: '0px' });
             tip.hidden = false;
             const rect = target.getBoundingClientRect(), box = tip.getBoundingClientRect();
             let top = rect.bottom + 8;

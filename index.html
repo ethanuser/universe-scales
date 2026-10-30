@@ -9,12 +9,15 @@
     <title>Universe Scales</title>
     <link id="favicon" rel="icon" type="image/svg+xml" href="favicon-light.svg">
     <link rel="alternate icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/styles.css?v=67aa0bc6d2">
     <link rel="stylesheet" href="css/mobile.css?v=32b300cc8e">
     <link rel="stylesheet" href="css/experiences.css?v=c351d1190a">
     <link rel="stylesheet" href="css/audio-experience.css?v=5ff32778dc">
     <link rel="stylesheet" href="css/perception-experience.css?v=df53354866">
-    <link rel="stylesheet" href="css/app.css?v=81e65bc3e6">
+    <link rel="stylesheet" href="css/app.css?v=25b994e914">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -210,7 +213,7 @@
                 <!-- Visual Editor Panel -->
             <div id="editor-panel" class="editor-panel">
                 <button id="editor-toggle" class="editor-toggle" aria-label="Toggle editor" title="Toggle editor">
-                    <span class="editor-toggle-text">Edit Plot</span>
+                    <svg class="app-row-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20h4L19 9l-4-4L4 16Z" /><path d="M13.5 6.5l4 4" /></svg><span class="editor-toggle-text">Edit this dimension's data</span>
                     <span class="editor-toggle-icon"></span>
                 </button>
                 <div id="editor-content" class="editor-content" style="display: none;">
@@ -300,7 +303,7 @@
                 <div id="resources-panel" class="editor-panel resources-panel" style="display: none;">
                 <button id="resources-toggle" class="editor-toggle" aria-label="Toggle resources"
                     title="Toggle resources">
-                    <span class="editor-toggle-text">Explore More</span>
+                    <svg class="app-row-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1" /><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" /></svg><span class="editor-toggle-text">Related links</span>
                     <span class="editor-toggle-icon"></span>
                 </button>
                 <div id="resources-content" class="editor-content resources-content" style="display: none;">
@@ -345,11 +348,6 @@
                         <dt>Source code</dt>
                         <dd><a href="https://github.com/ethanuser/universe-scales" target="_blank" rel="noopener noreferrer">github.com/ethanuser/universe-scales</a></dd>
                     </dl>
-                    <div id="limitations-note" class="limitations-note" style="display: none;">
-                        <p><strong>Note on scale:</strong> These visualizations use logarithmic scales to bridge vast
-                            differences. Physical dimensions are often complex; for example, "size" can refer to radius,
-                            diameter, or wavelength. This tool provides general comparisons for intuition.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -403,12 +401,12 @@
         </div>
     </div>
 
-    <script src="js/dimension-icons.js?v=733a0dfd41" defer></script>
-    <script src="js/item-search.js?v=4a50f4ec14" defer></script>
+    <script src="js/dimension-icons.js?v=2ebb823c56" defer></script>
+    <script src="js/item-search.js?v=feecec2856" defer></script>
     <script src="js/constants.js?v=f64d0fe1ce" defer></script>
     <script src="js/formatting.js?v=f3379dc71b" defer></script>
     <script src="js/editor.js?v=617fc5b26a" defer></script>
-    <script src="js/plot.js?v=45630509bf" defer></script>
+    <script src="js/plot.js?v=dc6df64895" defer></script>
     <script src="js/plot-overview.js?v=71fd992042" defer></script>
     <script src="js/experiences/math.js?v=54aaf7588e" defer></script>
     <script src="js/experiences/controls.js?v=c3382a2eca" defer></script>
@@ -421,9 +419,9 @@
     <script src="js/experiences/audio-math.js?v=f55f282587" defer></script>
     <script src="js/experiences/audio.js?v=aba4f2bb85" defer></script>
     <script src="js/experiences/controller.js?v=3302a7aadd" defer></script>
-    <script src="js/script.js?v=3689d7d853" defer></script>
+    <script src="js/script.js?v=60d4f14ea4" defer></script>
     <script src="js/mobile.js?v=9b915523c0" defer></script>
-    <script src="js/app-shell.js?v=0ffec60b93" defer></script>
+    <script src="js/app-shell.js?v=b0126db738" defer></script>
 </body>
 
 </html>

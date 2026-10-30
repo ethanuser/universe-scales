@@ -771,34 +771,11 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
     background: color-mix(in srgb, currentColor 18%, transparent); color: inherit; font-size: 0.72rem;
 }
 
-/* Search: highlighted result, chart search box, found-row flash */
-.experience-picker-option.is-highlighted, .chart-search__option.is-highlighted {
+/* Search: highlighted result and found-row flash */
+.experience-picker-option.is-highlighted {
     background: color-mix(in srgb, var(--accent-color) 12%, var(--bg-primary));
     border-color: var(--accent-color);
 }
-.chart-search { position: relative; display: flex; align-items: center; flex: 0 1 460px; min-width: 0; margin-right: auto; }
-.chart-search__icon { position: absolute; left: 10px; width: 18px; height: 18px; pointer-events: none; color: var(--text-secondary); }
-.chart-search__icon :is(path, circle) { fill: none; stroke: currentColor; stroke-width: 1.8; }
-.chart-search input {
-    width: 100%; height: 36px; padding: 0 10px 0 34px;
-    border: 1px solid transparent; border-radius: 8px !important;
-    background: var(--bg-secondary); color: var(--text-primary); font: inherit; font-size: 0.92rem;
-}
-.chart-search input:focus { outline: none; border-color: var(--accent-color); background: var(--bg-primary); }
-.chart-search__results {
-    position: absolute; z-index: var(--z-app-overlay); top: calc(100% + 6px); left: 0; right: 0;
-    max-height: min(60dvh, 480px); overflow-y: auto; padding: 4px;
-    border: 1px solid var(--border-color); background: var(--bg-primary); box-shadow: var(--shadow-lg);
-}
-.chart-search__results[hidden] { display: none; }
-.chart-search__option {
-    display: flex; align-items: center; gap: 10px; width: 100%; padding: 6px 8px;
-    border: 1px solid transparent; background: transparent; color: var(--text-primary);
-    font: inherit; font-size: 0.9rem; text-align: left; cursor: pointer;
-}
-.chart-search__option:hover { background: var(--hover-bg); }
-.chart-search__option img { width: 28px; height: 28px; object-fit: cover; flex: none; background: var(--bg-secondary); }
-.chart-search__option img.is-missing { visibility: hidden; }
 #plot-svg .item-group.is-found circle { animation: found-pulse 1.4s ease-out 2; }
 @keyframes found-pulse { 0% { stroke: var(--accent-color); stroke-width: 10; } 100% { stroke-width: 1; } }
 @media (max-width: 700px) {
@@ -823,7 +800,6 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
     .app-bar .experience-toolbar__main { flex: 1 1 auto; width: auto; min-width: 0; }
     .app-bar .experience-toolbar__actions { flex: none; width: auto !important; }
     .app-bar .experience-picker { flex: 1 1 auto; max-width: 520px; }
-    .chart-search { flex: 1 1 auto; max-width: 520px; }
 }
 @media (min-width: 701px) {
     .app-main > .experience.experience--spatial .experience-stage-frame { flex: 1 1 auto !important; }
@@ -835,8 +811,138 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
 
 /* Rounded buttons throughout (panels, menus and dialogs stay square). */
 .app-link-button, .app-drawer .notation-toggle, .app-drawer .dark-mode-toggle, .app-drawer .music-toggle,
-.app-drawer .editor-toggle, .dimension-chip, .experience-picker-option, .chart-search__option,
+.app-drawer .editor-toggle, .dimension-chip, .experience-picker-option,
 .experience-button, .experience-picker-search, #dimension-browser-search, .unit-browser-toggle,
 .app-drawer .btn, .app-dialog .btn, .zoom-controls.zoom-controls-floating .zoom-btn {
     border-radius: 8px !important;
 }
+
+/* Search results hide properly (the flex rule above must not override [hidden]). */
+.experience-picker-option[hidden] { display: none !important; }
+
+/* Links in dialogs and panels: accent color, no visited purple. */
+.app-dialog a, .app-drawer a:not(.app-link-button), .experience-detail a, #tooltip a { color: var(--accent-color); text-decoration: none; }
+.app-dialog a:hover, .app-drawer a:not(.app-link-button):hover, .experience-detail a:hover, #tooltip a:hover { text-decoration: underline; }
+
+/* Tooltips keep their natural width near window edges. */
+.app-tooltip { white-space: nowrap; max-width: none; }
+
+/* Shortcuts dialog: two roomy columns; keys in a fixed column, descriptions on one line. */
+.app-dialog__panel--wide { width: min(960px, 100%); }
+.app-help { grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 20px 40px; }
+.app-keys { grid-template-columns: 190px 1fr; gap: 9px 14px; }
+.app-keys dt { white-space: normal; }
+
+/* One chevron everywhere (dimension, item and unit pickers, Edit Plot / Explore More and their
+   sections): a thin stroked "v" drawn by mask, pointing down when closed or collapsible and up
+   (dropdowns) or down (sections) when open; collapsed sections point right. */
+.dimension-browser-toggle__chevron, .unit-browser-toggle__chevron, .editor-toggle-icon, .section-toggle-icon {
+    display: inline-block;
+    flex: none;
+    width: 16px !important;
+    height: 16px !important;
+    border: 0 !important;
+    font-size: 0 !important;
+    line-height: 0;
+    background: currentColor;
+    color: var(--text-secondary);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+    transition: transform 0.15s ease;
+}
+.dimension-browser-toggle.is-open .dimension-browser-toggle__chevron,
+.experience-picker-toggle.is-open .dimension-browser-toggle__chevron,
+.unit-browser-toggle.is-open .unit-browser-toggle__chevron { transform: rotate(180deg); }
+.editor-toggle:not(.expanded) .editor-toggle-icon,
+.collapsible-section.collapsed .section-toggle-icon { transform: rotate(-90deg); }
+.editor-toggle.expanded .editor-toggle-icon { transform: none; }
+
+/* One typeface: Inter for all interface and chart text, with even-width digits for values. */
+:root { --app-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+body, button, input, select, textarea, .app-tooltip, kbd { font-family: var(--app-font); }
+svg text, .axis text, .chart-axis text, .journey-object-label, .tick text { font-family: var(--app-font) !important; }
+.experience-value, .tooltip-value, .chart-axis text, .axis text, .experience-corner-ruler__label { font-variant-numeric: tabular-nums; }
+body { letter-spacing: -0.005em; }
+kbd { font-weight: 600; letter-spacing: 0; }
+h1, h2, h3, .app-brand { letter-spacing: -0.01em; }
+
+/* Dimension browser: no boxes; colored group headings with a hairline, borderless entries that
+   highlight on hover. Less chrome, same structure. */
+.app .dimension-browser-panel { padding: 18px 28px 28px; }
+.dimension-browser { gap: 8px 36px; }
+.dimension-browser__column { gap: 22px; }
+.dimension-browser__group { background: transparent !important; border: 0 !important; padding: 0 !important; }
+.dimension-browser__group-title {
+    margin-bottom: 6px !important;
+    padding-bottom: 6px;
+    border-bottom: 1px solid color-mix(in srgb, var(--group-color) 35%, transparent);
+    font-size: 0.72rem !important;
+}
+.dimension-browser__chips { gap: 2px 8px !important; }
+.dimension-chip {
+    min-height: 36px !important;
+    padding: 6px 10px !important;
+    border-color: transparent !important;
+    background: transparent !important;
+    font-size: 0.9rem !important;
+}
+.dimension-chip:hover { background: var(--hover-bg) !important; }
+.dimension-chip.is-active { background: color-mix(in srgb, var(--group-color) 16%, transparent) !important; font-weight: 600; }
+.dimension-browser-toolbar { justify-content: flex-start; margin-bottom: 18px; }
+.dimension-browser-search { width: min(100%, 420px); border-radius: 8px !important; background: var(--bg-secondary); border-color: transparent; }
+.dimension-browser-search:focus { outline: none; border-color: var(--accent-color); background: var(--bg-primary); }
+
+/* Data editor (in the Options drawer): the drawer widens while it is open; flat sections with
+   dividers instead of nested boxes; one solid primary action (Save), quiet secondary buttons,
+   destructive actions as red text; soft cards and app-style inputs. */
+.app-drawer:has(.editor-toggle.expanded) { width: min(680px, 100vw); }
+.app-drawer .editor-panel, .app-drawer .resources-panel { border: 0 !important; background: transparent; box-shadow: none; }
+.app-drawer .editor-toggle {
+    display: flex; align-items: center; gap: 12px; width: 100%;
+    padding: 10px 12px !important; border: 1px solid var(--border-color) !important;
+    background: var(--bg-primary); color: var(--text-primary); font-weight: 500;
+}
+.app-drawer .editor-toggle:hover { background: var(--hover-bg); }
+.app-drawer .editor-toggle .editor-toggle-text { flex: 1; text-align: left; font-size: 0.92rem; }
+.app-row-icon { width: 20px; height: 20px; flex: none; color: var(--text-secondary); }
+.app-row-icon path { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.app-drawer .editor-content { padding: 8px 0 0 !important; border: 0 !important; background: transparent !important; }
+.app-drawer .editor-header {
+    position: static; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    padding: 4px 0 14px !important; border: 0 !important; background: transparent !important;
+}
+.app-drawer .editor-header h3 { display: none; }
+.app-drawer .editor-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.app-drawer .editor-section { margin: 0 !important; padding: 0 !important; border: 0 !important; border-top: 1px solid var(--border-color) !important; background: transparent !important; box-shadow: none !important; }
+.app-drawer .section-header { padding: 12px 2px !important; background: transparent !important; border: 0 !important; }
+.app-drawer .section-header h4 { font-size: 0.95rem; font-weight: 600; }
+.app-drawer .section-content { padding: 0 0 14px !important; }
+.app-drawer .dimension-editor-card, .app-drawer .unit-editor-card, .app-drawer .item-editor-card {
+    margin: 0 0 8px !important; padding: 12px 14px !important;
+    border: 1px solid transparent !important; border-radius: 10px !important;
+    background: var(--bg-secondary) !important; box-shadow: none !important;
+}
+.app-drawer .unit-editor-card:hover, .app-drawer .item-editor-card:hover { border-color: var(--border-color) !important; }
+.app-drawer label, .app-drawer .editor-form-group label { font-size: 0.78rem; font-weight: 500; color: var(--text-secondary); }
+.app-drawer input[type='text'], .app-drawer input[type='number'], .app-drawer input:not([type]), .app-drawer textarea, .app-drawer select {
+    width: 100%; padding: 8px 10px; border: 1px solid var(--border-color) !important; border-radius: 8px !important;
+    background: var(--bg-primary) !important; color: var(--text-primary); font: inherit; font-size: 0.9rem; box-shadow: none !important;
+}
+.app-drawer input:focus, .app-drawer textarea:focus, .app-drawer select:focus { outline: none; border-color: var(--accent-color) !important; }
+.app-drawer .btn {
+    display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px !important;
+    border: 0 !important; border-radius: 8px !important; box-shadow: none !important;
+    background: var(--hover-bg) !important; color: var(--text-primary) !important; font: inherit; font-size: 0.85rem; font-weight: 500;
+}
+.app-drawer .btn:hover { background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important; }
+.app-drawer .btn-primary { background: var(--accent-color) !important; color: #fff !important; }
+.app-drawer .btn-primary:hover { background: color-mix(in srgb, var(--accent-color) 85%, black) !important; }
+.app-drawer .btn-danger { background: transparent !important; color: #d33b3b !important; }
+[data-theme='dark'] .app-drawer .btn-danger { color: #ff8a8a !important; }
+.app-drawer .btn-danger:hover { background: color-mix(in srgb, #d33b3b 12%, transparent) !important; }
+.app-drawer .btn-small { height: 28px; padding: 0 10px !important; font-size: 0.8rem; }
+.app-drawer .related-resources a { display: block; padding: 6px 2px; }
+.app-drawer .section-content, .app-drawer .units-list, .app-drawer .items-list { margin-left: 0 !important; margin-right: 0 !important; }
+/* Only Save is a solid primary button; "Add" actions in section headers stay quiet. */
+.app-drawer .section-header .btn-primary { background: var(--hover-bg) !important; color: var(--text-primary) !important; }
+.app-drawer .section-header .btn-primary:hover { background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important; }

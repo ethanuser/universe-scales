@@ -42,7 +42,7 @@
         information: '<rect x="3" y="5" width="18" height="14"/><path d="M7 9v6M11 9h3v6h-3ZM18 9v6"/>',
         'information-rate': '<path d="M2 9a15 15 0 0 1 20 0M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0"/><path d="M12 20v.5"/>',
         flops: '<rect x="6" y="6" width="12" height="12"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
-        scoville: '<path d="M8.5 8.5c4.5-1.6 9.6.6 10.6 5S16.6 21 11 21.4c-2.3.2-4.1-.7-4.6-2.1 3.4.4 6.6-.9 7.3-3.6.8-3.1-1.3-5.6-5.2-7.2Z"/><path d="M8.5 8.5C7.4 6.3 8.2 4 10.6 3.2"/><path d="M6.4 9.4c.6-1.4 2.4-2 3.9-1.3"/>',
+        scoville: '<path d="M10 9c4-2 9 0 9 4 0 5-7 8-15 8 6-3 8-6 6-12Z"/><path d="M10 9c1-1.6 3.4-2.2 5.2-1.2"/><path d="M14.5 7.6c0-2 1-3.6 3-4.4"/>',
         'odor-concentration': '<path d="M7 21c0-3 3-4 3-7.5S7 9 7 5.5M12 21c0-3 3-4 3-7.5S12 9 12 5.5M17 21c0-3 3-4 3-7.5S17 9 17 5.5"/>',
         'sound-frequency': '<path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>',
         'visual-angle': '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',

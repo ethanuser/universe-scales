@@ -1,5 +1,26 @@
 # Agent Handoff Guide
 
+## 2026-10-30 UI cohesion pass (Claude)
+
+- Typeface: Inter (Google Fonts) for all UI and SVG text (`--app-font`), tabular digits for values.
+- One chevron (CSS mask) for every dropdown/collapsible: dimension, item and unit pickers, the data
+  editor and its sections. Collapsed sections point right.
+- Chart mode has the explorer's item picker in the top bar (dropdown with thumbnails + search,
+  previous/next, arrow keys). Choosing an item calls `app.focusChartItem`, which zooms the value
+  axis to the item and ~3 neighbors each side (`zoomChartToLogRange`; it sets
+  `isResettingView` during the animation so handleZoom's range clamp does not cancel it),
+  centers the row and pins the panel. `chart-selection` events keep the picker label current.
+- Axis ticks: `thinTicksByLabelWidth` keeps exponent multiples so labels never overlap; pinned
+  axes hide labels that would be clipped at the edges.
+- Search: `[hidden]` results really hide; description-only matches appear only when nothing
+  matches by name. Tooltips measure at the left edge (no squish) and stay on one line.
+- Data editor restyled in the drawer (drawer widens to 680px while open): flat sections, one solid
+  Save, quiet secondary buttons, red-text destructive actions, soft cards. Rows renamed
+  "Edit this dimension's data" and "Related links" with icons.
+- Dimension browser decluttered (no group boxes, borderless entries, colored headings with a
+  hairline). Shortcuts dialog uses two roomy columns. About dialog: no scale-note box; links use
+  the accent color. Chili icon redrawn.
+
 ## 2026-10-29 search, re-lock fix, desktop-style controls (Claude)
 
 - `js/item-search.js` (`ScaleSearch.rank`): normalized name matching (word starts, prefix,

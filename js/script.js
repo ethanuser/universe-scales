@@ -1321,9 +1321,36 @@ class UniversalScales {
 
     // Chart view on wider screens: item details live in a left panel (the tooltip element,
     // docked) instead of a floating tooltip. Hover previews an item; a click pins it.
-    // Chart search result: scroll its row to the middle of the view, pin it in the details
-    // panel and briefly highlight it.
-    focusChartItem(item) {
+    // Chart navigation: zoom the value axis to fit the item and about three neighbors on each
+    // side (with room for its label on the left), scroll its row to the middle, pin it in the
+    // details panel and briefly highlight it.
+    chartItemsInOrder() {
+        return [...this.getAllItems()].sort((a, b) => a.convertedValue - b.convertedValue);
+    }
+
+    zoomChartToLogRange(low, high) {
+        if (!this.zoomBehavior || !this.mainGroup || !this.originalXDomain || this.isLinearScale()) return;
+        const [min, max] = this.originalXDomain.map(Math.log10);
+        const k = (max - min) / Math.max(1e-6, high - low);
+        const visible = (max - min) / k;
+        const x = -((low - min) / visible) * this.width;
+        // The range limit in handleZoom would "correct" the animation's intermediate frames and
+        // cancel it, so it is suspended for this programmatic zoom.
+        this.isResettingView = true;
+        this.mainGroup.transition().duration(450)
+            .call(this.zoomBehavior.transform, d3.zoomIdentity.translate(x, 0).scale(k))
+            .on('end interrupt', () => { this.isResettingView = false; });
+    }
+
+    focusChartItem(item, { zoom = true } = {}) {
+        const ordered = this.chartItemsInOrder();
+        const index = ordered.findIndex(other => other.name === item.name);
+        if (zoom && index >= 0 && !this.isLinearScale()) {
+            const near = ordered.slice(Math.max(0, index - 3), index + 4).map(other => Math.log10(other.convertedValue));
+            let low = Math.min(...near) - 1.2, high = Math.max(...near) + 0.4;
+            if (high - low < 3) { const mid = (low + high) / 2; low = mid - 1.5; high = mid + 1.5; }
+            this.zoomChartToLogRange(low, high);
+        }
         const node = [...document.querySelectorAll('#plot-svg .item-group')]
             .find(group => d3.select(group).datum()?.name === item.name);
         const scroller = document.querySelector('.app-main');
@@ -1363,6 +1390,10 @@ class UniversalScales {
         if (panelMode && this.tooltipPinned && !pinned && this.tooltipItem && this.tooltipItem !== item) return;
         this.tooltip.classList.toggle('tooltip--panel', panelMode);
         this.tooltip.classList.remove('tooltip--empty');
+        if (panelMode && pinned) {
+            this.chartCurrent = item;
+            document.dispatchEvent(new CustomEvent('chart-selection', { detail: item }));
+        }
         this.cancelTooltipHide();
         this.hideUnitConversions();
         this.tooltipItem = item;
@@ -3121,6 +3152,11 @@ class UniversalScales {
                 .tickFormat(d => this.formatAxisValue(d, 0));
             group.call(axis);
             group.select('.domain').attr('d', `M${-plot.margin.left},0H${width - plot.margin.left}`);
+            // Hide labels that would be cut off at either edge of the chart.
+            group.selectAll('.tick text').attr('opacity', function () {
+                const box = this.getBBox(), x = this.parentNode.transform.baseVal.consolidate()?.matrix.e ?? 0;
+                return x - box.width / 2 < -plot.margin.left + 2 || x + box.width / 2 > width - plot.margin.left - 2 ? 0 : 1;
+            });
             if (this.notationMode === 'mathematical' && !this.usesLinearDisplayValues()) {
                 this.processMathematicalLabels(group);
             }

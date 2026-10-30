@@ -62,11 +62,13 @@
         const tokens = q.split(' ').map(singular);
         return tokens.every(token => f.text.includes(` ${token}`)) ? 30 : 0;
     }
-    // Matches for a query, best first; ties keep the original order.
+    // Matches for a query, best first; ties keep the original order. Description-only matches
+    // (score 30) appear only when nothing matches by name, so each letter typed narrows the list.
     function rank(items, query, describe) {
-        return items.map((item, index) => ({ item, index, score: score(item, query, describe) }))
-            .filter(result => result.score > 0)
-            .sort((a, b) => b.score - a.score || a.index - b.index);
+        const results = items.map((item, index) => ({ item, index, score: score(item, query, describe) }))
+            .filter(result => result.score > 0);
+        const named = results.filter(result => result.score > 30);
+        return (named.length ? named : results).sort((a, b) => b.score - a.score || a.index - b.index);
     }
     root.ScaleSearch = { rank, score, normalize };
     if (typeof module !== 'undefined') module.exports = root.ScaleSearch;
