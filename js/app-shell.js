@@ -11,7 +11,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         const $ = id => document.getElementById(id);
         const drawer = $('options-drawer'), backdrop = $('options-backdrop'), optionsToggle = $('options-toggle');
-        const about = $('about-dialog'), help = $('help-dialog');
+        const about = $('about-dialog'), help = $('help-dialog'), dataEditor = $('data-editor-dialog');
         const infoToggle = $('dimension-info-toggle'), info = $('dimension-info');
         if (!drawer || !optionsToggle) return;
         const app = () => window.app;
@@ -34,6 +34,7 @@
                 dialog.querySelector('button')?.focus();
             } else {
                 dialog.hidden = true;
+                dialog.onClose?.();
                 returnFocus?.focus?.({ preventScroll: true });
             }
         };
@@ -72,7 +73,7 @@
         $('help-toggle')?.addEventListener('click', () => setDialog(help, true));
         document.querySelectorAll('[data-open-help]').forEach(button =>
             button.addEventListener('click', () => { setDrawer(false); setDialog(help, true); }));
-        for (const dialog of [about, help]) {
+        for (const dialog of [about, help, dataEditor].filter(Boolean)) {
             dialog.addEventListener('click', event => {
                 if (event.target === dialog || event.target.closest('[data-close-dialog]')) setDialog(dialog, false);
             });
@@ -81,6 +82,104 @@
         document.addEventListener('pointerdown', event => {
             if (!info.hidden && !info.contains(event.target) && !infoToggle.contains(event.target)) setInfo(false);
         });
+
+        // --- Data editor ------------------------------------------------------------------
+        // editor.js builds the editor inside #editor-content; it lives in a large dialog with
+        // Dimension / Units / Items tabs instead of expanding inside the Options drawer.
+        const editorContent = $('editor-content'), editorToggle = $('editor-toggle');
+        if (dataEditor && editorContent && editorToggle) {
+            const panel = dataEditor.querySelector('.data-editor');
+            const body = dataEditor.querySelector('.data-editor__body');
+            const filter = dataEditor.querySelector('.data-editor__filter');
+            body.append(editorContent);
+            const showTab = tab => {
+                panel.dataset.tab = tab;
+                dataEditor.querySelectorAll('[role="tab"]').forEach(button =>
+                    button.setAttribute('aria-selected', String(button.dataset.tab === tab)));
+                $(`${tab}-section`)?.classList.remove('collapsed');
+                body.scrollTop = 0;
+            };
+            dataEditor.querySelectorAll('[role="tab"]').forEach(button =>
+                button.addEventListener('click', () => showTab(button.dataset.tab)));
+            // editor.js's own toggle listener runs first and renders; this one opens the dialog.
+            editorToggle.addEventListener('click', () => {
+                if (editorContent.style.display === 'none') return;
+                setDrawer(false);
+                const title = dataEditor.querySelector('#data-editor-title');
+                title.textContent = `Edit data · ${document.getElementById('dimension-browser-current')?.textContent || ''}`;
+                filter.value = '';
+                applyFilter();
+                showTab(panel.dataset.tab || 'dimension-metadata');
+                setDialog(dataEditor, true);
+            });
+            dataEditor.onClose = () => {
+                if (editorContent.style.display !== 'none') window.app?.editor?.toggleEditor();
+            };
+            // Section headers keep their action buttons but no longer collapse the section.
+            dataEditor.addEventListener('click', event => {
+                const header = event.target.closest('.section-header');
+                if (header && !event.target.closest('button, input, select, textarea, a')) {
+                    event.stopPropagation();
+                    event.preventDefault();
+                }
+                // Item cards open and close from their header row.
+                const cardHeader = event.target.closest('.item-editor-card-header');
+                if (cardHeader && !event.target.closest('button, input, select, textarea, a, label')) {
+                    cardHeader.closest('.item-editor-card')?.classList.toggle('is-open');
+                }
+            }, true);
+            const count = (selector, list) => {
+                const node = dataEditor.querySelector(`[data-count="${selector}"]`);
+                if (node && list) node.textContent = String(list.querySelectorAll(`.${selector === 'units' ? 'unit' : 'item'}-editor-card`).length);
+            };
+            const unitsList = $('units-list'), itemsList = $('items-list');
+            const recount = () => { count('units', unitsList); count('items', itemsList); applyFilter(); };
+            for (const list of [unitsList, itemsList]) if (list) new MutationObserver(recount).observe(list, { childList: true });
+            function applyFilter() {
+                const query = window.ScaleSearch ? ScaleSearch.normalize(filter.value) : filter.value.toLowerCase();
+                itemsList?.querySelectorAll('.item-editor-card').forEach(card => {
+                    const name = card.querySelector('.item-editor-card-title-row')?.textContent || '';
+                    const text = window.ScaleSearch ? ScaleSearch.normalize(name) : name.toLowerCase();
+                    card.hidden = Boolean(query) && !text.includes(query);
+                });
+            }
+            filter.addEventListener('input', applyFilter);
+        }
+
+        // --- Chart: no browser back/forward from horizontal swipes ----------------------------
+        document.addEventListener('wheel', event => {
+            if (document.body.dataset.experience === 'log' && Math.abs(event.deltaX) > Math.abs(event.deltaY) &&
+                event.target.closest?.('.app-main')) event.preventDefault();
+        }, { passive: false });
+
+        // --- Scroll latching -----------------------------------------------------------------
+        // A scroll gesture stays with the pane where it started: passing over an inner scrollable
+        // field (a long description box) does not take over until the gesture pauses.
+        {
+            let latched = null, latchedAt = 0;
+            const scrollableFrom = node => {
+                for (; node && node !== document.documentElement; node = node.parentElement) {
+                    const style = getComputedStyle(node);
+                    if (/(auto|scroll)/.test(style.overflowY) && node.scrollHeight > node.clientHeight + 1) return node;
+                }
+                return null;
+            };
+            document.addEventListener('wheel', event => {
+                if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+                const now = performance.now();
+                if (latched?.isConnected && now - latchedAt < 400) {
+                    latchedAt = now;
+                    const inner = scrollableFrom(event.target);
+                    if (inner && inner !== latched && latched.contains(inner)) {
+                        event.preventDefault();
+                        latched.scrollTop += event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? latched.clientHeight : 1);
+                    }
+                    return;
+                }
+                latched = scrollableFrom(event.target);
+                latchedAt = now;
+            }, { capture: true, passive: false });
+        }
 
         // --- Keyboard shortcuts -------------------------------------------------------
         const press = id => $(id)?.click();
@@ -108,7 +207,7 @@
         };
         document.addEventListener('keydown', event => {
             if (event.key === 'Escape') {
-                for (const dialog of [help, about]) if (!dialog.hidden) {
+                for (const dialog of [help, about, dataEditor].filter(Boolean)) if (!dialog.hidden) {
                     setDialog(dialog, false); event.stopPropagation(); return;
                 }
                 if (!drawer.hidden || !info.hidden) { closeTransient(); event.stopPropagation(); }

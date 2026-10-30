@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/experiences.css?v=c351d1190a">
     <link rel="stylesheet" href="css/audio-experience.css?v=5ff32778dc">
     <link rel="stylesheet" href="css/perception-experience.css?v=df53354866">
-    <link rel="stylesheet" href="css/app.css?v=25b994e914">
+    <link rel="stylesheet" href="css/app.css?v=9bdf4d9b7d">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -352,6 +352,25 @@
             </div>
         </div>
 
+        <div id="data-editor-dialog" class="app-dialog" role="dialog" aria-modal="true" aria-labelledby="data-editor-title" hidden>
+            <div class="app-dialog__panel data-editor" data-tab="dimension-metadata">
+                <div class="app-drawer__header data-editor__header">
+                    <h2 id="data-editor-title">Edit data</h2>
+                    <div class="data-editor__tabs" role="tablist" aria-label="Data to edit">
+                        <button type="button" role="tab" data-tab="dimension-metadata">Dimension</button>
+                        <button type="button" role="tab" data-tab="units">Units <span class="data-editor__count" data-count="units"></span></button>
+                        <button type="button" role="tab" data-tab="items">Items <span class="data-editor__count" data-count="items"></span></button>
+                    </div>
+                    <button class="app-icon-button" type="button" data-close-dialog aria-label="Close" title="Close (Esc)">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" /></svg>
+                    </button>
+                </div>
+                <div class="data-editor__toolbar">
+                    <input class="data-editor__filter" type="search" placeholder="Filter items by name" aria-label="Filter items by name" autocomplete="off" spellcheck="false">
+                </div>
+                <div class="data-editor__body"></div>
+            </div>
+        </div>
         <div id="help-dialog" class="app-dialog" role="dialog" aria-modal="true" aria-labelledby="help-title" hidden>
             <div class="app-dialog__panel app-dialog__panel--wide">
                 <div class="app-drawer__header">
@@ -411,7 +430,7 @@
     <script src="js/experiences/math.js?v=54aaf7588e" defer></script>
     <script src="js/experiences/controls.js?v=c3382a2eca" defer></script>
     <script src="js/experiences/area-maps.js?v=adb40b5c76" defer></script>
-    <script src="js/experiences/spatial.js?v=2058146515" defer></script>
+    <script src="js/experiences/spatial.js?v=e0d6da7043" defer></script>
     <script src="js/experiences/motion-math.js?v=ea5a56c662" defer></script>
     <script src="js/experiences/motion.js?v=0d2d8b85b1" defer></script>
     <script src="js/experiences/perception.js?v=c8c3b660af" defer></script>
@@ -419,9 +438,9 @@
     <script src="js/experiences/audio-math.js?v=f55f282587" defer></script>
     <script src="js/experiences/audio.js?v=aba4f2bb85" defer></script>
     <script src="js/experiences/controller.js?v=3302a7aadd" defer></script>
-    <script src="js/script.js?v=60d4f14ea4" defer></script>
+    <script src="js/script.js?v=eecc7ca11d" defer></script>
     <script src="js/mobile.js?v=9b915523c0" defer></script>
-    <script src="js/app-shell.js?v=b0126db738" defer></script>
+    <script src="js/app-shell.js?v=7bf5b87824" defer></script>
 </body>
 
 </html>

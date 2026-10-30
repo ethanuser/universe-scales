@@ -1,5 +1,23 @@
 # Agent Handoff Guide
 
+## 2026-10-30 data editor dialog, lock vs selection, input polish (Claude)
+
+- Data editor: `#editor-content` lives in `#data-editor-dialog` (app-shell moves it there) with
+  Dimension / Units / Items tabs (counts from the lists), an items filter, item cards collapsed to
+  one row until opened, section headers that no longer collapse. Closing the dialog calls
+  `editor.toggleEditor()` so editor.js state stays consistent. The drawer row only opens it.
+- Scroll latching (app-shell): a wheel gesture stays with the pane it started in for 400 ms;
+  inner scrollable fields under the pointer do not take over.
+- Explorer: `lockActive` separates the view lock (centering + 1-decade zoom-in limit) from the
+  selection. Panning ends the lock but keeps the item selected; zooming 0.5 decades out still
+  deselects.
+- Chart: horizontal wheel/swipes are prevented in chart mode and `overscroll-behavior-x: none`
+  stops browser back/forward; found items pulse once.
+- Solid carets for all dropdowns; one masked clear (x) for every search input; unit picker is a
+  menu (name, muted symbol, check on current); item list scrollbar sits in its own gutter.
+- `setDimension` clears the controller's debounced detail timer (stale item + new dimension made
+  404 image requests).
+
 ## 2026-10-30 UI cohesion pass (Claude)
 
 - Typeface: Inter (Google Fonts) for all UI and SVG text (`--app-font`), tabular digits for values.

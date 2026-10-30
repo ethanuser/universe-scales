@@ -188,6 +188,9 @@
         const camera = new ScaleJourney.Camera(zoom.value, Number(zoom.input.min), Number(zoom.input.max));
         const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
         let frame, previousTime, disposed = false, pinnedFocus = null, pinnedExponent = null, observed = [];
+        // lockActive: the selected item also holds the view (centered, zoom-in limit). Panning
+        // ends the lock but keeps the item selected.
+        let lockActive = false;
         const focusTransition = new ScaleJourney.FocusTransition();
         // Radial view: a selected object is centered by panning to it. A selection glide is
         // one zoom about the fixed point shared by the start and end views, so every object
@@ -222,7 +225,7 @@
             // A selected object stays centered while zooming into it. Zooming out from it eases
             // the view back to the shared center over half a decade, by which point the lock
             // releases, so coming back toward its size never re-centers on it.
-            if (anchor.index != null && anchor.index === pinnedFocus) {
+            if (anchor.index != null && anchor.index === pinnedFocus && lockActive) {
                 const out = pinnedExponent == null ? 0 : (exponent - pinnedExponent) * f;
                 const u = clamp(out / 0.5, 0, 1), weight = 1 - u * u * (3 - 2 * u);
                 return { x: point.x * weight, y: point.y * weight };
@@ -264,9 +267,11 @@
                     // framed at; zooming further away deselects it.
                     const delta = pinnedExponent == null ? 0 : (camera.value - pinnedExponent) * (options.exponentFactor ?? 1);
                     if (pinnedFocus != null && delta > 0.5) {
-                        // The view has already eased back to the center (see panAt).
-                        anchor = null;
+                        // A locked view has already eased back to the center (see panAt); a
+                        // panned view keeps its frozen point.
+                        if (lockActive) anchor = null;
                         pinnedFocus = pinnedExponent = null;
+                        lockActive = false;
                     }
                     if (pinnedFocus == null) {
                         // Otherwise describe the on-screen object nearest the camera's scale,
@@ -304,7 +309,7 @@
         };
         // While a selection is locked, zooming in stops LOCK_ZOOM_IN decades past its framing.
         const LOCK_ZOOM_IN = 1;
-        const lockLimit = value => pinnedFocus != null && pinnedExponent != null && layoutOptions().radial
+        const lockLimit = value => lockActive && pinnedFocus != null && pinnedExponent != null && layoutOptions().radial
             ? Math.max(value, pinnedExponent - LOCK_ZOOM_IN / (layoutOptions().exponentFactor ?? 1)) : value;
         const aim = (value, focusIndex, focusWindow = 0.3) => {
             freezePan();
@@ -313,6 +318,7 @@
             if (focusIndex != null || !layoutOptions().radial) {
                 pinnedFocus = focusIndex ?? null;
                 pinnedExponent = focusIndex == null ? null : value;
+                lockActive = focusIndex != null;
             }
             focusTransition.stop(currentPose());
             if (focusIndex != null) focusTransition.set(focusIndex, value * (layoutOptions().exponentFactor ?? 1), focusWindow);
@@ -329,6 +335,7 @@
             pinnedFocus = focusIndex ?? null;
             value = clamp(value, camera.min, camera.max);
             pinnedExponent = focusIndex == null ? null : value;
+            lockActive = focusIndex != null;
             if (reduceMotion.matches || focusIndex == null) {
                 aim(value, focusIndex, focusWindow);
                 if (focusIndex != null && layoutOptions().radial) { glidePan(focusIndex, value, 0); render(); }
@@ -391,6 +398,8 @@
                 const unitsPerPixel = 10 ** (camera.value * f) / ScaleJourney.RADIAL_SIZE / scale;
                 const current = panAt(camera.value);
                 anchor = { x: current.x - dx * unitsPerPixel, y: current.y + dy * unitsPerPixel, exponent: camera.value, manual: true };
+                // Panning away ends the lock on a selected item: no zoom limit, no recentering.
+                lockActive = false;
                 panGlide = null;
                 apply();
             },

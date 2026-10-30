@@ -946,3 +946,120 @@ h1, h2, h3, .app-brand { letter-spacing: -0.01em; }
 /* Only Save is a solid primary button; "Add" actions in section headers stay quiet. */
 .app-drawer .section-header .btn-primary { background: var(--hover-bg) !important; color: var(--text-primary) !important; }
 .app-drawer .section-header .btn-primary:hover { background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important; }
+
+/* ---- Data editor dialog ---- */
+.data-editor { width: min(1040px, 100%) !important; height: min(88dvh, 920px); display: flex; flex-direction: column; overflow: hidden !important; }
+.data-editor__header { gap: 16px; }
+.data-editor__header h2 { flex: none; }
+.data-editor__tabs { display: flex; gap: 2px; padding: 3px; margin-right: auto; border-radius: 10px !important; background: var(--bg-secondary); }
+.data-editor__tabs button {
+    display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 14px;
+    border: 0; border-radius: 7px !important; background: transparent; color: var(--text-secondary);
+    font: inherit; font-size: 0.88rem; font-weight: 500; cursor: pointer;
+}
+.data-editor__tabs button:hover { color: var(--text-primary); background: var(--hover-bg); }
+.data-editor__tabs button[aria-selected='true'] { background: var(--bg-primary); color: var(--text-primary); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18); }
+.data-editor__count { color: var(--text-secondary); font-variant-numeric: tabular-nums; font-size: 0.8rem; }
+.data-editor__toolbar { display: none; padding: 10px 20px 0; }
+.data-editor[data-tab='items'] .data-editor__toolbar { display: block; }
+.data-editor__filter {
+    width: min(360px, 100%); height: 34px; padding: 0 10px; border: 1px solid transparent; border-radius: 8px !important;
+    background: var(--bg-secondary); color: var(--text-primary); font: inherit; font-size: 0.9rem;
+}
+.data-editor__filter:focus { outline: none; border-color: var(--accent-color); background: var(--bg-primary); }
+.data-editor__body { flex: 1; min-height: 0; overflow-y: auto; padding: 0 20px 20px; }
+/* Show only the active tab's section; sections never collapse here. */
+.data-editor .editor-section { display: none !important; border: 0 !important; margin: 0 !important; padding: 0 !important; background: transparent !important; }
+.data-editor[data-tab='dimension-metadata'] #dimension-metadata-section,
+.data-editor[data-tab='units'] #units-section,
+.data-editor[data-tab='items'] #items-section { display: block !important; }
+.data-editor .collapsible-section .section-content { display: block !important; padding: 0 !important; margin: 0 !important; max-height: none !important; }
+.data-editor .section-header { padding: 12px 0 !important; border: 0 !important; background: transparent !important; cursor: default; }
+.data-editor .section-header-left h4 { display: none; }
+.data-editor .section-toggle-icon { display: none !important; }
+.data-editor .editor-header {
+    display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px;
+    position: sticky; top: 0; z-index: 2; margin: 0 -20px 4px; padding: 10px 20px !important;
+    border: 0 !important; border-bottom: 1px solid var(--border-color) !important; background: var(--bg-primary) !important;
+}
+.data-editor .editor-header h3 { display: none; }
+.data-editor .editor-actions { display: contents; }
+/* Cards, fields and buttons share the drawer editor styles (scoped to the dialog). */
+.data-editor .dimension-editor-card, .data-editor .unit-editor-card, .data-editor .item-editor-card {
+    margin: 0 0 8px !important; padding: 12px 14px !important; border: 1px solid transparent !important;
+    border-radius: 10px !important; background: var(--bg-secondary) !important; box-shadow: none !important;
+}
+.data-editor .unit-editor-card:hover, .data-editor .item-editor-card:hover { border-color: var(--border-color) !important; }
+.data-editor label { font-size: 0.78rem; font-weight: 500; color: var(--text-secondary); }
+.data-editor input:not([type='file']):not(.data-editor__filter), .data-editor textarea, .data-editor select {
+    width: 100%; padding: 8px 10px; border: 1px solid var(--border-color) !important; border-radius: 8px !important;
+    background: var(--bg-primary) !important; color: var(--text-primary); font: inherit; font-size: 0.9rem; box-shadow: none !important;
+}
+.data-editor input:focus, .data-editor textarea:focus { outline: none; border-color: var(--accent-color) !important; }
+.data-editor .btn {
+    display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px !important;
+    border: 0 !important; border-radius: 8px !important; box-shadow: none !important;
+    background: var(--hover-bg) !important; color: var(--text-primary) !important; font: inherit; font-size: 0.85rem; font-weight: 500;
+}
+.data-editor .btn:hover { background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important; }
+.data-editor #editor-save-all-btn { background: var(--accent-color) !important; color: #fff !important; }
+.data-editor .btn-danger { background: transparent !important; color: #d33b3b !important; }
+[data-theme='dark'] .data-editor .btn-danger { color: #ff8a8a !important; }
+.data-editor .btn-danger:hover { background: color-mix(in srgb, #d33b3b 12%, transparent) !important; }
+/* Items: one compact row each (name, actions) until opened. */
+.data-editor .item-editor-card { padding: 4px 6px 4px 14px !important; }
+.data-editor .item-editor-card-header { cursor: pointer; padding: 6px 0; margin: 0 !important; border: 0 !important; }
+.data-editor .item-editor-card-header h4 { font-size: 0.95rem; font-weight: 500; }
+.data-editor .item-editor-card:not(.is-open) .item-editor-form { display: none !important; }
+.data-editor .item-editor-card.is-open { padding: 4px 14px 14px !important; border-color: var(--border-color) !important; }
+.data-editor .item-editor-card-title-row::before {
+    content: ''; display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px; background: var(--text-secondary);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l7 6-7 6z' fill='black' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l7 6-7 6z' fill='black' stroke='black' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+    transition: transform 0.15s ease;
+}
+.data-editor .item-editor-card.is-open .item-editor-card-title-row::before { transform: rotate(90deg); }
+.data-editor .item-editor-card[hidden] { display: none !important; }
+.data-editor .image-preview, .data-editor .image-preview-container img { max-width: 160px !important; max-height: 120px !important; object-fit: contain; }
+/* The drawer row opens the dialog: its chevron points right. */
+.app-drawer .editor-toggle .editor-toggle-icon { transform: rotate(-90deg) !important; }
+
+/* ---- Small fixes ---- */
+/* Solid, rounded carets for every dropdown and collapsible. */
+.dimension-browser-toggle__chevron, .unit-browser-toggle__chevron, .editor-toggle-icon, .section-toggle-icon {
+    width: 14px !important; height: 14px !important;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9h12l-6 7z' fill='black' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9h12l-6 7z' fill='black' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+/* One clear (x) button for every search box, matching the toolbar icons. */
+input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none; appearance: none; width: 16px; height: 16px; margin-left: 6px; cursor: pointer;
+    background: var(--text-secondary);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 6l12 12M18 6 6 18' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+input[type='search']::-webkit-search-cancel-button:hover { background: var(--text-primary); }
+/* The item list's scrollbar sits at the panel edge, in its own gutter. */
+.experience-picker-options { scrollbar-gutter: stable; margin-right: -8px; padding-right: 4px; }
+/* A found chart item pulses once. */
+#plot-svg .item-group.is-found circle { animation-iteration-count: 1 !important; }
+/* Horizontal swipes never navigate the browser back or forward. */
+html, body, .app-main, .plot-container, .app-drawer, .data-editor__body { overscroll-behavior-x: none; }
+/* Unit picker: a standard menu. Name on the left, symbol right-aligned and muted, a check on the
+   current unit, soft hover highlight. */
+.app-bar .unit-browser-panel { padding: 6px !important; min-width: 280px; border-radius: 0; box-shadow: var(--shadow-lg); }
+.app-bar .unit-browser-list { display: flex !important; flex-direction: column; gap: 1px; }
+.app-bar .unit-chip {
+    display: flex !important; align-items: center; justify-content: space-between; gap: 16px; width: 100%;
+    min-height: 34px; padding: 6px 10px 6px 32px !important; border: 0 !important; border-radius: 8px !important;
+    background: transparent !important; color: var(--text-primary); font: inherit; font-size: 0.9rem; text-align: left; position: relative;
+}
+.app-bar .unit-chip:hover { background: var(--hover-bg) !important; }
+.app-bar .unit-chip__symbol { color: var(--text-secondary); font-size: 0.85rem; }
+.app-bar .unit-chip.is-active { font-weight: 600; }
+.app-bar .unit-chip.is-active::before {
+    content: ''; position: absolute; left: 10px; top: 50%; width: 14px; height: 14px; margin-top: -7px; background: var(--accent-color);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.data-editor .item-editor-card-title-row { display: flex; align-items: center; justify-content: flex-start; gap: 8px; }
+.data-editor .item-editor-card-title-row h4, .data-editor .item-editor-card-header h4 { flex: 1; text-align: left; margin: 0; }
+.data-editor .unit-editor-card-title-row h5 { text-align: left; }

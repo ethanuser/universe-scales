@@ -444,6 +444,9 @@ class UniversalScales {
 
     async setDimension(slug) {
         this.experiences?.pause();
+        // A debounced side-panel update for the old dimension's item must not run after the
+        // dimension (and so image paths) change but before the new items arrive.
+        clearTimeout(this.experiences?.detailTimer);
         this.hideTooltip();
         this.currentDimension = slug;
         if (this.dimensionSelect) {
