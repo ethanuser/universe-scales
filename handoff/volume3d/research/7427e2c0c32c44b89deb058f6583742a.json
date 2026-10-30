@@ -1,0 +1,21 @@
+{
+  "uid": "7427e2c0c32c44b89deb058f6583742a",
+  "name": "Classic Bathtub",
+  "description": "classic gold-plated ceramic bathtub.",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "faceCount": 57391,
+  "vertexCount": 29184,
+  "archives": null,
+  "viewerUrl": "https://sketchfab.com/3d-models/classic-bathtub-7427e2c0c32c44b89deb058f6583742a",
+  "createdAt": "2019-09-12T00:55:43.292298",
+  "publishedAt": "2019-09-12T01:02:06.292410",
+  "author": "renderartestudio"
+}

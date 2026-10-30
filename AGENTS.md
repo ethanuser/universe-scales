@@ -1,5 +1,22 @@
 # Agent Handoff Guide
 
+## 2026-10-29 volume3d source imports
+
+- Four independent Volume entries add five exact matches: Arkify's sugar-cube
+  scan, NIAID influenza/SARS-CoV-2, and renderartestudio's tub for both bathtub
+  labels. Coverage is 29/55; all 31 prior gaps are dispositioned in
+  `handoff/volume3d/ledger.json`. Existing entries and Length calibration remain
+  unchanged; SARS-CoV-2 reuses its existing binary.
+- Only sugar is enclosed-volume calibrated: its scanned exterior is a closed
+  bulk envelope. Four tiny reversed internal pore shells are excluded, with
+  per-vertex containment checks. Virus cutaways/spikes and tub capacity use the
+  brief's explicit equivalent-span fallback, not a mesh-volume measurement.
+- Rebuild: `prepare_volume3d_imports.mjs STAGED_DIR MODULE_ROOT`; register/check:
+  `register_volume3d.mjs [--check]`; loader audit: `audit_volume3d.mjs`.
+  Three new binaries total 3.20 MB; each is below 1.2 MB. Source records,
+  acquisition pins, final entries, CPU previews and limits: `handoff/volume3d/REPORT.md`.
+  Browser/mobile review and commit remain for the lead per this round's brief.
+
 ## 2026-10-29 sourced Area and Volume expansion (Codex)
 
 - Added seven paired Area/Volume observations (Mercury, Venus, Mars, Saturn,

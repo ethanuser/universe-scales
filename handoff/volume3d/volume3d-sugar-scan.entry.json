@@ -1,0 +1,69 @@
+{
+  "source": "https://sketchfab.com/3d-models/sugar-cube-3d-scan-no-texture-0227084e92ed4dc79e48e0bf271edd32",
+  "author": "arkify on Sketchfab",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_files": [
+    "licenses/CC-BY-4.0.txt"
+  ],
+  "geometry": "mesh",
+  "src": "content/visualizations/models/volume3d-sugar-scan.glb",
+  "format": "glb",
+  "gltf_version": "2.0",
+  "bytes": 982808,
+  "sha256": "67bcb698de521258d857bff621d3fd5d149974fad58761d5481770002364ce78",
+  "extensions_used": [],
+  "extensions_required": [],
+  "decompression_required": [],
+  "external_resources": [],
+  "mesh_count": 1,
+  "triangle_count": 53660,
+  "animations": 0,
+  "skins": 0,
+  "source_sha256": "6c667f3e9456db1ca0fd8eca13d73f65e954884e7ef63f3d5815b812eb4767d7",
+  "source_bytes": 1239892,
+  "sketchfab_uid": "0227084e92ed4dc79e48e0bf271edd32",
+  "id": "volume3d-sugar-scan",
+  "matches": {
+    "volume": [
+      "Sugar cube volume"
+    ]
+  },
+  "reference": "content/visualizations/models/sources/volume3d-sugar-scan.md",
+  "note": "Arkify's sugar-cube scan, uniformly scaled to the listed representative bulk volume. Scale comes from the enclosed exterior mesh volume, including the cube's pores rather than only solid sucrose. Four tiny reversed internal shells were excluded; the existing outer surface was simplified, without filling or inventing geometry. The source specimen was larger than this representative cube, and its original proportions are retained. This is not a measurement of that specimen's original volume.",
+  "representation": "scan",
+  "closed_volume_checked": true,
+  "volume_semantics": "closed_mesh_volume_scaled_to_representative_quantity",
+  "presentation": {
+    "reference_size": 15.695138326976915,
+    "layout_width_factor": 1.3,
+    "display_extent_factor": 1.3,
+    "focus_scale_factor": 1.3
+  },
+  "processing": {
+    "script": "scripts/prepare_volume3d_imports.mjs",
+    "operations": [
+      "Retain the scanned exterior shell (107320 triangles); exclude four internal reverse-wound pore shells (122, 52, 52, 8 triangles)",
+      "Deduplicate, weld, simplify to 53660 triangles with relative error 0.001, prune; retain source color and proportions"
+    ],
+    "volume_calibration": {
+      "script": "scripts/register_volume3d.mjs",
+      "source_glb_sha256": "67bcb698de521258d857bff621d3fd5d149974fad58761d5481770002364ce78",
+      "volume": 3866.2990517839316,
+      "referenceSize": 15.695138326976915,
+      "triangles": 53660,
+      "weldedVertices": 26832,
+      "edges": 80490,
+      "components": 1,
+      "boundaryEdges": 0,
+      "tolerance": 0.0000020210997638801038,
+      "extent": [
+        17.693063511713763,
+        17.3885655480466,
+        20.21099763880104
+      ],
+      "selfIntersectionChecked": false,
+      "method": "Enclosed exterior bulk-envelope volume by signed tetrahedral sum; one consistently oriented closed shell. Self-intersection is not certified."
+    }
+  }
+}

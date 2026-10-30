@@ -1,0 +1,21 @@
+{
+  "uid": "0227084e92ed4dc79e48e0bf271edd32",
+  "name": "Sugar Cube 3D Scan (No Texture)",
+  "description": "An example of our 3D scanning capabilities for small objects.\n\nThis 0.6 x 0.8\" sugar cube was 3D scanned and processed at a 0.2mm resolution. The model has no texture.",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "isDownloadable": true,
+  "faceCount": 107554,
+  "vertexCount": 53787,
+  "archives": null,
+  "viewerUrl": "https://sketchfab.com/3d-models/sugar-cube-3d-scan-no-texture-0227084e92ed4dc79e48e0bf271edd32",
+  "createdAt": "2022-11-11T22:55:31.894638",
+  "publishedAt": "2022-11-11T23:03:05.576093",
+  "author": "arkify"
+}

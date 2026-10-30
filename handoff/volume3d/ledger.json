@@ -1,0 +1,365 @@
+{
+  "checked": "2026-10-29",
+  "scope": "All 31 unmatched names in the previous handoff; bounded exact-object reuse and selected new primary-source searches, not internet-wide exhaustion. Search results are candidate leads, not licenses verified for import. Imported Sketchfab assets have separate detail-API license snapshots.",
+  "previous_ledger": "../volume-source-completion/ledger.json",
+  "counts": {
+    "display_items": 55,
+    "previous_matched": 24,
+    "new_matches": 5,
+    "final_matched": 29,
+    "remaining_unmatched": 26,
+    "new_registry_entries": 4,
+    "new_binaries": 3,
+    "reused_binaries": 1
+  },
+  "items": [
+    {
+      "name": "Proton volume",
+      "status": "prior_boundary_blocker_retained",
+      "queries": [],
+      "sources": [],
+      "decision": "Charge radius is not a hard solid boundary. Existing Length probability/particle diagrams and newly synthesized shells are ineligible; no new search of the same dead end.",
+      "prior_blocker": "Quantum charge-density extent is not a uniquely bounded solid body; use a labeled distribution visualization, not a solid mesh-volume claim."
+    },
+    {
+      "name": "Hydrogen atom volume",
+      "status": "prior_boundary_blocker_retained",
+      "queries": [],
+      "sources": [],
+      "decision": "Bohr-radius volume is a convention. Existing procedural Length orbitals are not qualifying imported geometry; no stand-in sphere added.",
+      "prior_blocker": "The Bohr-radius-derived effective volume is a convention, not a hard atomic boundary; any shell must be labeled as a probability/scale illustration."
+    },
+    {
+      "name": "Water molecule volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [
+        "https://sketchfab.com/3d-models/h2o-molecule-e181944932084b5dbb4d5b625a5e9b10"
+      ],
+      "decision": "Existing archived H2O GLB is a ball illustration with several overlapping/disjoint atom shells. The strict helper rejects multiple shells; no matching electron-density or van-der-Waals volume boundary is established. Unlike a whole-object illustration, atom balls would imply an unsupported molecular boundary.",
+      "prior_blocker": "Molecular volume depends on the chosen electron-density or van-der-Waals boundary; no licensed exact source geometry matching the current definition is registered."
+    },
+    {
+      "name": "SARS-CoV-2 virion volume",
+      "status": "registered",
+      "model_id": "volume3d-nih-coronavirus",
+      "entry": "volume3d-nih-coronavirus.entry.json",
+      "calibration": "explicit equivalent-volume-span illustration; not enclosed-volume calibrated",
+      "prior_blocker_resolution": "The current brief explicitly permits existing public models with an equivalent-volume-span fallback. Notes disclose which volume is not measured; sugar scan instead has a closed exterior shell audit.",
+      "sources": [
+        "https://3d.nih.gov/entries/3DPX-013323"
+      ]
+    },
+    {
+      "name": "Influenza virion volume",
+      "status": "registered",
+      "model_id": "volume3d-nih-influenza",
+      "entry": "volume3d-nih-influenza.entry.json",
+      "calibration": "explicit equivalent-volume-span illustration; not enclosed-volume calibrated",
+      "prior_blocker_resolution": "The current brief explicitly permits existing public models with an equivalent-volume-span fallback. Notes disclose which volume is not measured; sugar scan instead has a closed exterior shell audit.",
+      "sources": [
+        "https://3d.nih.gov/entries/3DPX-013373"
+      ],
+      "queries": [
+        "influenza",
+        "NIH influenza virion",
+        "University of Glasgow Visualising Viruses"
+      ],
+      "reviewed_alternatives": [
+        {
+          "source": "https://researchdata.gla.ac.uk/1220/",
+          "license": "CC BY 4.0 confirmed by university collection page",
+          "decision": "ZIP central directories inspected by HTTP range requests; full influenza files are 3ds Max scenes, while the print STL is about 345 MB uncompressed. No model member acquired. NIH supplies a much smaller colored cutaway directly as GLB."
+        },
+        {
+          "source": "https://sketchfab.com/3d-models/influenza-virus-96e6b4e7f609491fb59843adda6ab3ca",
+          "license": "by verified via detail API",
+          "decision": "Staged outside the repo and CPU-previewed; generic gray educational surface reads less clearly than the selected NIH colored scientific cutaway. Not bundled."
+        }
+      ]
+    },
+    {
+      "name": "Escherichia coli cell volume",
+      "status": "candidate_rejected",
+      "queries": [
+        "escherichia coli"
+      ],
+      "sources": [
+        "https://api.sketchfab.com/v3/models/75ae189551e94d59aedce00104217533",
+        "https://api.sketchfab.com/v3/models/2b63df13c7384f809c4a7ee10fd92605"
+      ],
+      "decision": "Existing Length bacterium source explicitly says very generic, and the stored asset has shortened flagella and fails strict topology on a degenerate triangle. New bedonio candidate is labeled E. coli but has no specimen, geometry-creation or upstream provenance beyond a generic organism description. Several search results are duplicate student uploads; no new model selected.",
+      "prior_blocker": "Cell volume varies with strain and growth conditions; require a measured specimen or clearly identified representative cell model."
+    },
+    {
+      "name": "Human cell volume",
+      "status": "candidate_rejected",
+      "queries": [
+        "human cell"
+      ],
+      "sources": [
+        "https://api.sketchfab.com/v3/models/a736aa039d8743b78a18b5f89f5b6446"
+      ],
+      "decision": "Brain_Diagno identifies an epithelial cell made in Blender, without a measured specimen or boundary convention. Existing named cell-type Length assets are authored project geometry, not qualifying external reuse. No one cell type established for the generic 4 pL record.",
+      "prior_blocker": "There is no single typical human-cell geometry; organelle/whole-cell renderings need an explicit cell type, boundary and compatible license."
+    },
+    {
+      "name": "Grain of salt volume",
+      "status": "search_no_qualified_candidate",
+      "queries": [
+        "grain salt"
+      ],
+      "sources": [],
+      "decision": "First-page downloadable CC BY/CC0 results are unrelated mineral collections, food props and kitchen scenes. No single salt-grain scan with defensible source identity found; no reuse of the carbonate sand grain for salt.",
+      "prior_blocker": "The record is a representative spherical approximation; an actual irregular grain would need measured dimensions and matching size provenance."
+    },
+    {
+      "name": "Raindrop volume",
+      "status": "candidate_rejected",
+      "queries": [
+        "raindrop"
+      ],
+      "sources": [
+        "https://sketchfab.com/3d-models/raindrop-89d43bb71fff49029793ca7abcb60a53"
+      ],
+      "decision": "Search results are stylized drops, rain-ring effects and impressions. A pointed teardrop prop would conflict with a free-falling 5 mm spherical approximation; no physical measured drop mesh selected.",
+      "prior_blocker": "The listed 5 mm spherical droplet is a simplifying convention; real falling-drop shape depends on size and airflow."
+    },
+    {
+      "name": "Sugar cube volume",
+      "status": "registered",
+      "model_id": "volume3d-sugar-scan",
+      "entry": "volume3d-sugar-scan.entry.json",
+      "calibration": "closed exterior bulk-envelope mesh volume",
+      "prior_blocker_resolution": "The current brief explicitly permits existing public models with an equivalent-volume-span fallback. Notes disclose which volume is not measured; sugar scan instead has a closed exterior shell audit.",
+      "sources": [
+        "https://sketchfab.com/3d-models/sugar-cube-3d-scan-no-texture-0227084e92ed4dc79e48e0bf271edd32"
+      ],
+      "queries": [
+        "sugar cube"
+      ]
+    },
+    {
+      "name": "Bathtub",
+      "status": "registered",
+      "model_id": "volume3d-classic-bathtub",
+      "entry": "volume3d-classic-bathtub.entry.json",
+      "calibration": "explicit equivalent-volume-span illustration; not enclosed-volume calibrated",
+      "prior_blocker_resolution": "The current brief explicitly permits existing public models with an equivalent-volume-span fallback. Notes disclose which volume is not measured; sugar scan instead has a closed exterior shell audit.",
+      "sources": [
+        "https://sketchfab.com/3d-models/classic-bathtub-7427e2c0c32c44b89deb058f6583742a"
+      ],
+      "queries": [
+        "bathtub",
+        "bathtub scan"
+      ]
+    },
+    {
+      "name": "Bathtub volume",
+      "status": "registered",
+      "model_id": "volume3d-classic-bathtub",
+      "entry": "volume3d-classic-bathtub.entry.json",
+      "calibration": "explicit equivalent-volume-span illustration; not enclosed-volume calibrated",
+      "prior_blocker_resolution": "The current brief explicitly permits existing public models with an equivalent-volume-span fallback. Notes disclose which volume is not measured; sugar scan instead has a closed exterior shell audit.",
+      "sources": [
+        "https://sketchfab.com/3d-models/classic-bathtub-7427e2c0c32c44b89deb058f6583742a"
+      ],
+      "queries": [
+        "bathtub",
+        "bathtub scan"
+      ]
+    },
+    {
+      "name": "Room volume",
+      "status": "candidate_rejected",
+      "queries": [
+        "room scan"
+      ],
+      "sources": [
+        "https://sketchfab.com/3d-models/room-scan-ryan-house-d8cc206e44824d30892056b9726d1963"
+      ],
+      "decision": "First-page scan leads concern furnished room scenes and scan fragments, without an isolated inside boundary, identified 30 m3 air volume, or small-view exterior readability. No room surface is asserted to be air volume.",
+      "prior_blocker": "A representative interior needs dimensions and a clear wall/ceiling boundary; generic room assets are not calibrated to the selected example."
+    },
+    {
+      "name": "Swimming pool",
+      "status": "candidate_rejected",
+      "queries": [
+        "swimming pool"
+      ],
+      "sources": [
+        "https://sketchfab.com/3d-models/swimming-pool-f69f7b35f6134688befdbbe495756f81"
+      ],
+      "decision": "Generic pool scenes identify neither a measured 40 m3 water fill nor a controlled basin boundary. Deck and landscaping would dominate the selected span; no water geometry fabricated.",
+      "prior_blocker": "The 40 m^3 observation is water capacity; a pool shell/envelope is not the water volume unless fill level and basin geometry are explicit."
+    },
+    {
+      "name": "Apartment",
+      "status": "candidate_rejected",
+      "queries": [
+        "apartment"
+      ],
+      "sources": [
+        "https://sketchfab.com/3d-models/studio-apartment-vray-baked-textures-included-cae2d96ede1d4112b1fd391099a43f77"
+      ],
+      "decision": "Furnished scene leads do not establish a 120 m3 inside-air boundary or attribution for all bundled props. No apartment scene imported as a measured solid.",
+      "prior_blocker": "Representative interior volume needs a dimensioned apartment plan/model matching the record; an attractive room scene is not sufficient."
+    },
+    {
+      "name": "Classroom volume",
+      "status": "candidate_rejected",
+      "queries": [
+        "classroom"
+      ],
+      "sources": [
+        "https://sketchfab.com/3d-models/classroom-d4553cc2008242849214e4cbf8ad8551"
+      ],
+      "decision": "Whole furnished classroom scenes/props lack an isolated 150 m3 interior-air boundary; no external mesh or component provenance passed a detailed import review.",
+      "prior_blocker": "Needs room dimensions and an explicit interior-air boundary; generic classroom models may include furniture or omit architectural surfaces."
+    },
+    {
+      "name": "Apartment volume",
+      "status": "candidate_rejected",
+      "queries": [
+        "apartment"
+      ],
+      "sources": [],
+      "decision": "Same apartment scene review as Apartment; no calibrated 200 m3 interior-air body or controlled cutaway source selected.",
+      "prior_blocker": "Representative interior-air volume requires a dimensionally controlled plan and a defined inside boundary."
+    },
+    {
+      "name": "House interior volume",
+      "status": "prior_boundary_blocker_retained",
+      "queries": [
+        "room scan",
+        "apartment"
+      ],
+      "sources": [],
+      "decision": "Interior scans/props reviewed above do not establish the selected whole-house air boundary, excluded walls/floors or attic treatment. No envelope box created.",
+      "prior_blocker": "Representative interior volume requires an identified house plan and consistent treatment of floors, walls, attic and excluded spaces."
+    },
+    {
+      "name": "Olympic swimming pool",
+      "status": "search_no_qualified_candidate",
+      "queries": [
+        "olympic pool"
+      ],
+      "sources": [],
+      "decision": "First-page open results are an Olympic stadium, swimming animation and unrelated money-bin scene, not an identified dimensioned competition-pool water body.",
+      "prior_blocker": "Capacity depends on the selected competition dimensions and water depth; require a source model or plan matching the cited pool convention."
+    },
+    {
+      "name": "Oil tanker cargo volume",
+      "status": "candidate_rejected",
+      "queries": [
+        "oil tanker"
+      ],
+      "sources": [
+        "https://sketchfab.com/3d-models/oil-tanker-63339c2e2f274672a9bdcf924864ae62"
+      ],
+      "decision": "Search leads include exterior ships and road tankers. No exact vessel cargo-tank capacity or internal tank boundary is documented. Existing Ever Given is a container ship/project-authored illustration, not the same object and not cargo-tank geometry.",
+      "prior_blocker": "Cargo capacity is not hull displacement or outer hull volume; a particular vessel and tank-capacity source are needed."
+    },
+    {
+      "name": "Great Pyramid of Giza volume",
+      "status": "prior_rejections_retained",
+      "queries": [
+        "great pyramid scan"
+      ],
+      "sources": [],
+      "decision": "Prior PAPP whole-scene/rights and YouTube photogrammetry decisions were not repeated. New bounded query produced no relevant open scan. No procedural pyramid or whole-plateau volume imported.",
+      "prior_blocker": "The selected value is an approximate geometric envelope (~2.6 million m^3). The CC BY PAPP Sketchfab file describes a watertight whole-plateau bas-relief containing multiple pyramids, Sphinx, causeway and terrain, not an isolated calibrated Khufu mesh. Verify source/dependency rights and isolate the pyramid before considering import."
+    },
+    {
+      "name": "Lake Tahoe volume",
+      "status": "data_source_found_unregistered",
+      "queries": [
+        "Lake Tahoe bathymetry"
+      ],
+      "sources": [
+        "https://pubs.usgs.gov/dds/dds-55/pacmaps/lt_data.htm",
+        "https://pubs.usgs.gov/publication/ofr98509"
+      ],
+      "decision": "Primary USGS data-download documentation identifies a 10 m bathymetry grid, 3416 by 1992 samples and elevations 1400.017 to 1898.999 m. Its 34.16 km bounding span is about 6.4 times cbrt(151 km3), so a water body retaining physical proportions would exceed the 1.3 display-extent rule. Lake-level/datum, shallow coverage and numerical download review are still needed. No grid acquired or water mesh invented. The single Sketchfab lake lead is not assumed to encode water-column volume.",
+      "prior_blocker": "Water volume requires bathymetry and a defined lake level; surrounding terrain topography alone is not the water body."
+    },
+    {
+      "name": "Mount Everest envelope volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [
+        "https://github.com/tilezen/joerd"
+      ],
+      "decision": "Existing Mapzen Length terrain block has an arbitrary rectangular clipping boundary and sea-level base, not the dataset above-surrounding-terrain envelope. Reusing its closed block would falsely count the wrong solid. No new boundary invented.",
+      "prior_blocker": "An above-terrain envelope needs a defined base surface, summit and clipping boundary; ordinary elevation relief is not this volume."
+    },
+    {
+      "name": "Earth's oceans",
+      "status": "data_source_found_unregistered",
+      "queries": [],
+      "sources": [
+        "https://www.ncei.noaa.gov/products/etopo-global-relief-model"
+      ],
+      "decision": "NOAA confirms public ETOPO topography/bathymetry. Existing Earth globe depicts the full planet rather than the water column. A physically proportioned global water shell spans roughly a planet diameter while cbrt(ocean volume) is much smaller; no closed water-column extraction, sea-level convention or <=1.3 extent solution completed. No globe incorrectly volume-calibrated as ocean water.",
+      "prior_blocker": "Ocean volume requires a bathymetric water-column calculation and a sea-level/datum convention; a globe or ocean-surface map is not volume geometry."
+    },
+    {
+      "name": "Betelgeuse volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [
+        "https://science.nasa.gov/learn/heat/resource/sun-3d-model/"
+      ],
+      "decision": "The existing nasa-sun-as-betelgeuse Length entry explicitly reuses a recolored Sun, a different object. It is not an exact-object sourced stellar surface under this brief. No new sphere or Sun reuse registered.",
+      "prior_blocker": "The observation is radius-dependent and uncertain; any stellar sphere is an explicitly idealized volume proxy, not a resolved 3D stellar surface."
+    },
+    {
+      "name": "Oort Cloud volume",
+      "status": "prior_boundary_blocker_retained",
+      "queries": [],
+      "sources": [],
+      "decision": "Existing procedural theoretical cloud has synthetic sample positions and an assumed outer boundary. It fails the hard rule; no exact public 3D population boundary acquired.",
+      "prior_blocker": "The 50,000 AU spherical boundary is a theoretical convention, not a measured shell; a boundary diagram must be labeled as such."
+    },
+    {
+      "name": "Orion Nebula volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [],
+      "decision": "Existing Length Orion geometry includes image-based authored depth. It is not an observed 3D density boundary or imported source mesh; no Volume reuse under the hard rule.",
+      "prior_blocker": "Projected emission maps do not uniquely determine depth; a 3D volume model needs distances and a defined nebular boundary."
+    },
+    {
+      "name": "Milky Way disk volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [],
+      "decision": "Existing NASA concept image/Length procedural galaxy does not establish a measured density cutoff and 3D disk boundary for the selected volume. No conversion of a 2D image to invented depth.",
+      "prior_blocker": "The disk volume depends on chosen radial and vertical extents; require a sourced 3D stellar-density field and a declared cutoff."
+    },
+    {
+      "name": "Local Group volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [],
+      "decision": "Existing public member coordinates do not define the selected enclosing spherical boundary; its enlarged project-authored galaxy glyphs cannot supply an enclosed group volume.",
+      "prior_blocker": "A spherical volume depends on a chosen Local Group radius/boundary; member positions alone do not define a filled volume."
+    },
+    {
+      "name": "Virgo Supercluster volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [],
+      "decision": "Existing 2MRS member positions are a galaxy catalog, not an observed surface of the selected spherical volume convention. No arbitrary hull/shell generated.",
+      "prior_blocker": "The supercluster boundary is definition-dependent; a spherical proxy should not be presented as a mapped matter volume."
+    },
+    {
+      "name": "Observable universe volume",
+      "status": "reuse_rejected",
+      "queries": [],
+      "sources": [],
+      "decision": "Existing WMAP Length visualization includes an authored spherical cutaway/horizon guide. Observed angular CMB temperatures do not supply a directly measured solid boundary; no reuse under this round hard rule.",
+      "prior_blocker": "This is a derived spherical cosmological volume, not a solid surface model; a scale diagram would be illustrative rather than observed geometry."
+    }
+  ]
+}
