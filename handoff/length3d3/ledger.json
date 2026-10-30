@@ -1,0 +1,537 @@
+{
+  "review_date": "2026-10-29",
+  "job": "length3d3",
+  "branch": "codex/length3d3",
+  "coverage_file": "coverage.json",
+  "scope": "Bounded new-repository/source pass. Search-result leads are distinguished from opened sources and downloaded numeric datasets. Not internet-wide exhaustion.",
+  "registered": [],
+  "dataset_changes": [],
+  "items": [
+    {
+      "name": "One-Nanometer Transistor Gate",
+      "queries": [
+        "\"one nanometer\" transistor gate microscopy data download Berkeley"
+      ],
+      "evidence": "opened_source",
+      "decision": "DOE page supplies a schematic and TEM cross-section image, not a reusable calibrated 3D device/gate dataset.",
+      "sources": [
+        "https://www.energy.gov/science/bes/articles/smallest-transistor-ever"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Blu-ray Track Pitch",
+      "queries": [
+        "\"Blu-ray\" \"AFM\" \"dataset\" raw",
+        "site:nnci.net \"CD\" \"DVD\" \"Blu-ray\" download AFM"
+      ],
+      "evidence": "opened_source",
+      "decision": "NNCI lesson points to scan images, but the current landing page supplies PDF teaching material; no compatible licensed, vertically calibrated numerical scan obtained.",
+      "sources": [
+        "https://nnci.net/node/5375",
+        "https://nnci.net/sites/default/files/2020-02/CD-DVD_Diffraction%20grating_optional_with%20Scion_SG_0.pdf"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "DVD Track Pitch",
+      "queries": [
+        "\"DVD\" \"AFM\" \"gwy\" data",
+        "site:nnci.net \"CD\" \"DVD\" \"Blu-ray\" download AFM"
+      ],
+      "evidence": "opened_source",
+      "decision": "AFMWorkshop cookbook teaches acquisition and NNCI supplies lesson PDFs; neither inspected route yielded a verified reusable numeric height field for the item.",
+      "sources": [
+        "https://afmworkshop.com/images/CookBook/AFMEducator_Cookbook_AFMWorkshop.pdf",
+        "https://nnci.net/node/5375"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Spider Silk Fiber",
+      "queries": [
+        "\"spider silk\" \"AFM\" \"Zenodo\""
+      ],
+      "evidence": "downloaded_numeric_scope",
+      "decision": "New CC BY numerical AFM deposit inspected: resin-embedded polished fiber cross-sections and their subregions, not intact strand exterior. No extrusion or invented strand depth.",
+      "sources": [
+        "https://zenodo.org/records/14283026",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11836930/"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Dust Mite",
+      "queries": [
+        "\"dust mite\" site:printables.com/model",
+        "site:thingiverse.com \"dust mite\" -site:pinterest.com",
+        "\"dust mite\" \"museum\" \"3D\" \"download\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new qualifying complete specimen mesh identified in these maker/museum searches; commercial illustrations and unrelated art do not resolve the previous anatomy/calibration failures.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Cat Flea",
+      "queries": [
+        "\"flea\" site:thingiverse.com/thing 3d",
+        "\"Ctenocephalides felis\" \"3D\" \"Figshare\"",
+        "\"cat flea\" \"3D\" \"museum\" mesh -site:sketchfab.com"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New search results describe SEM photographs, artwork or non-geometric data; no complete reusable adult specimen surface acquired. Prior NC scan not restaged.",
+      "sources": [
+        "https://www.amtreasures.net/availabletreasures"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Paedophryne Amauensis",
+      "queries": [
+        "\"Paedophryne amauensis\" \"Zenodo\" OR \"Figshare\" OR \"Dryad\"",
+        "\"Paedophryne amauensis\" \"oVert\" CT"
+      ],
+      "evidence": "search_results_only",
+      "decision": "Alternate-deposit search returned prior oVert literature and unrelated anatomy studies, without a new directly downloadable rights-verified whole-body surface. MorphoSource challenge not retried.",
+      "sources": [
+        "https://www.floridamuseum.ufl.edu/science/frogs-have-lost-teeth-more-than-20-times/"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Bumblebee Bat",
+      "queries": [
+        "\"Craseonycteris thonglongyai\" \"3D\" dataset museum"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New result trail concerns skull/ear or nasal anatomy, not an acquired full-body mesh. Prior DigiMorph unavailable downloads not retried.",
+      "sources": [
+        "https://onlinelibrary.wiley.com/doi/10.1002/ar.70231"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Bee Hummingbird",
+      "queries": [
+        "\"Mellisuga helenae\" 3d model scan",
+        "\"Mellisuga helenae\" \"Europeana\" OR \"Naturalis\" \"3D\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new exact-species reusable whole-body model identified. Robotic ornithopters and CT of ruby-throated hummingbirds are different objects/species.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12784651/"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Titan Beetle",
+      "queries": [
+        "\"Titanus giganteus\" \"scan\" museum mesh -site:sketchfab.com -site:dimensions.com",
+        "site:myminifactory.com \"titan beetle\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "New trails concern antennal SEM, dimensions or maker indexes; no complete species-identified reusable specimen mesh found. Prior unavailable Sketchfab asset not retried.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Vivian Hailstone",
+      "queries": [
+        "\"Vivian hailstone\" \"Zenodo\" OR \"Figshare\" OR \"STL\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new compatible-licensed numerical shape release identified. Prior NCAR/UCAR terms and failed candidates retained; no unrelated hailstone substituted.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Queen Alexandra's Birdwing",
+      "queries": [
+        "\"Ornithoptera alexandrae\" \"3D\" \"Printables\" OR \"Zenodo\" OR \"scan\"",
+        "\"birdwing\" \"3D\" site:europeana.eu OR site:3d.si.edu OR site:zenodo.org"
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new complete female species-identified mesh with permitted rights and wingspan calibration identified; prior Adobe asset not acquired.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Meganeura",
+      "queries": [
+        "\"Meganeura\" \"stl\" download",
+        "site:thingiverse.com \"Meganeura\"",
+        "site:printables.com \"Meganeura\""
+      ],
+      "evidence": "opened_source",
+      "decision": "LambOfCAD's articulated printable exists, but its source listing uses a custom commercial license rather than CC BY/CC0. No model downloaded.",
+      "sources": [
+        "https://www.cgtrader.com/3d-print-models/science/biology/meganeura-giant-prehistoric-dragonfly"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Wandering Albatross",
+      "queries": [
+        "\"Diomedea exulans\" \"3d\" \"mesh\" download -site:phenome10k.org",
+        "site:myminifactory.com \"albatross\" scan",
+        "\"albatross\" \"3d scan\" \"museum\" wings"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New results were commercial other-species prints, isolated wing studies or avian cranial data; no qualifying complete spread-wing wandering albatross obtained.",
+      "sources": [
+        "https://onlinelibrary.wiley.com/doi/10.1111/joa.12726"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Giant Pacific Octopus",
+      "queries": [
+        "\"Enteroctopus dofleini\" \"3d\" \"scan\" -site:sketchfab.com"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New scanning literature includes disarticulated octopus parts or paralarvae; no source establishes a complete adult spread-arm calibration. Prior folded scan not restaged.",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11621519/"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Titanosaur Cast",
+      "queries": [
+        "\"Titanosaur\" \"scan\" \"CC\" model",
+        "\"Patagotitan\" \"3d scan\" museum download -site:sketchfab.com"
+      ],
+      "evidence": "opened_source",
+      "decision": "AMNH describes cast preparation but exposes no verified permitted full-cast mesh; newer anatomical studies target isolated bones. eLife lead returned a client challenge, not an acquired asset.",
+      "sources": [
+        "https://www.amnh.org/exhibitions/permanent/orientation-center/the-titanosaur",
+        "https://elifesciences.org/articles/92498"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Giant Siphonophore",
+      "queries": [
+        "\"Giant siphonophore\" \"3D\" \"Zenodo\" OR \"Europeana\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new compatible full-colony source identified. Prior MBARI NC-SA assets and wrong-species Nanomia candidate not restaged.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Great Pyramid of Giza",
+      "queries": [
+        "\"Giza\" pyramid \"scan\" \"CC0\" OR \"Zenodo\"",
+        "site:openheritage3d.org \"pyramid\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "Open Heritage search returned other pyramids, not a qualifying new Giza source. Previous metric/completeness and original-height versus footprint blockers remain; no scan restaged.",
+      "sources": [
+        "https://openheritage3d.org/data"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Lituya Bay Megatsunami",
+      "queries": [
+        "\"Lituya Bay\" \"1958\" \"runup\" shapefile data"
+      ],
+      "evidence": "opened_source",
+      "decision": "New Zenodo release supplies simulation video/code and solid-body STL terrain; this is not a measured 1958 run-up boundary or wave surface. No archive acquired.",
+      "sources": [
+        "https://zenodo.org/records/3831448",
+        "https://nhess.copernicus.org/articles/20/2255/2020/"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Dinkinesh",
+      "queries": [
+        "\"Dinkinesh\" shape model \"Zenodo\" OR \"Figshare\" OR \"obj\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new authoritative numerical shape release with clear version/frame/rights identified by this alternate-deposit query. Existing NAIF/PDS attempts not repeated.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Mount Thor Cliff",
+      "queries": [
+        "\"Mount Thor\" cliff \"point cloud\" OR \"photogrammetry\"",
+        "\"Mount Thor\" \"laser\" scan data"
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new measured cliff-face surface identified; ordinary single-valued terrain cannot resolve the known overhang. Existing rejected DEM not re-registered.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Lake Baikal Depth",
+      "queries": [
+        "\"Baikal\" bathymetry \"Zenodo\" license"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New deposit trail includes sediment/radiocarbon data rather than a qualifying depth-focused scene. Existing ETOPO candidate and footprint/framing decision retained.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Mauna Kea",
+      "queries": [
+        "\"Mauna Kea\" \"3D scan\" \"download\" -site:sketchfab.com"
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new scan resolving the existing height-versus-footprint conflict identified. Existing true-scale ETOPO candidate remains unregistered; no terrain rebuild.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Kola Superdeep Borehole",
+      "queries": [
+        "\"Kola\" borehole \"3d\" model \"CC\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "New trail concerns tomography of extracted rock samples, not the underground bore path/depth. Neither a rock sample nor wellhead can be scaled to bore depth.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Large Hadron Collider Ring",
+      "queries": [
+        "\"Large Hadron Collider\" \"survey\" \"GitHub\" coordinates"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New GitHub search surfaced general accelerator resources, without a verified complete surveyed coordinate release. No lattice-derived path or circle created.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Channel Tunnel",
+      "queries": [
+        "\"Channel Tunnel\" \"alignment\" \"Figshare\" OR \"Zenodo\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new compatible surveyed bored-tunnel alignment/profile identified. Prior surface rail-link archaeology and guessed routes not reused.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Hunga Tonga Eruption Plume",
+      "queries": [
+        "\"Hunga Tonga\" \"stereo\" \"Zenodo\" plume height"
+      ],
+      "evidence": "prior_source_returned",
+      "decision": "Search returned the already documented stereo-retrieval family. Existing candidate needs owner integration/representation review; this pass did not acquire or re-register it.",
+      "sources": [
+        "https://datadryad.org/dataset/doi%3A10.5061%2Fdryad.0k6djhb2b"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Danyang-Kunshan Grand Bridge",
+      "queries": [
+        "\"Danyang Kunshan\" bridge GIS data download -site:researchgate.net"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New archived tour-KMZ lead describes composite tracks at an artificial viewing elevation; original geometry rights and surveyed bridge endpoints not verified. No route acquired.",
+      "sources": [
+        "https://dooley.dk/GoogleEarthPosts-by-TomKjeldsen-2015-04-28-GEC.pdf"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Mammoth Cave",
+      "queries": [
+        "\"Mammoth Cave\" \"survey\" \"Zenodo\" OR \"Dryad\"",
+        "\"Mammoth Cave\" lidar \"3D\" download model"
+      ],
+      "evidence": "opened_source",
+      "decision": "New ionajo/maca project explicitly maps the entrance and above-ground landscape, not the cave's accumulated passages. Other scan leads are fragments, not a full length-calibrated network.",
+      "sources": [
+        "https://github.com/ionajo/maca",
+        "https://sketchfab.com/3d-models/mammoth-cave-original-nd70Yvu9EP5yEA4pb7iSCbMb25q"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Longest Lightning Flash",
+      "queries": [
+        "\"megaflash\" \"2017\" \"Zenodo\" OR \"GitHub\"",
+        "\"megaflash\" \"829\" \"dataset\" download"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New repository search returned the certification literature, without a verified downloadable certified event/group-coordinate set. Prior empty NOAA prefix not retried.",
+      "sources": [
+        "https://doi.org/10.1175/BAMS-D-25-0037.1"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Typhoon Tip",
+      "queries": [
+        "\"Typhoon Tip\" \"1979\" \"NetCDF\" data"
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new qualified georeferenced wind-field geometry identified; no inference of wind diameter from cloud imagery.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Earth's Inner Core",
+      "queries": [
+        "\"Earth\" \"inner core\" NASA 3d model download",
+        "\"Earth inner core\" \"STL\" \"creative commons\""
+      ],
+      "evidence": "opened_source",
+      "decision": "NASA result is an interior graphic with JPEG/TIFF downloads, not a downloadable source mesh; another ready cutaway result is explicitly NC. No sphere authored or whole Earth scaled as the core.",
+      "sources": [
+        "https://science.nasa.gov/photojournal/earth-interior-graphic/"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Contiguous US Longest Distance",
+      "queries": [],
+      "evidence": "prior_only",
+      "decision": "Carried forward: endpoint pair and entirely-within-US definition remain unresolved in terrain3d2. No new source search or guessed geodesic; preserve photo.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Trans-Siberian Railway",
+      "queries": [
+        "\"Trans Siberian\" railway \"geojson\" license"
+      ],
+      "evidence": "opened_source",
+      "decision": "New atlas distinguishes CC BY waypoint-era geometry from ODbL OSM traces. Waypoint joins are not a measured rail alignment; other network data explicitly uses ODbL and may choose a different route.",
+      "sources": [
+        "https://worldtrainmap.com/dataset/",
+        "https://www.npmjs.com/package/%40railroute-ts/cis"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "TON 618 Event Horizon",
+      "queries": [],
+      "evidence": "prior_only",
+      "decision": "Carried forward from deepsky3d: mass-derived horizon size does not supply observed surface geometry. No new source search or authored black-hole primitive.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Milky Way Central Bar",
+      "queries": [
+        "\"Milky Way\" \"long bar\" \"density\" \"Zenodo\" data",
+        "\"A Three-dimensional Map of the Milky Way Using 66,000 Mira\" data catalog"
+      ],
+      "evidence": "downloaded_numeric_scope",
+      "decision": "New CC BY catalog acquired and plotted: real distance-estimated stars, but no isolated full long-bar membership; fixed-window plots retain disk/bulge stars and survey gaps. No fitted density sampled or 10-kpc boundary asserted.",
+      "sources": [
+        "https://zenodo.org/records/7472598",
+        "https://ogle.astrouw.edu.pl/cont/4_main/str/3dgal_miras/"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Fermi Bubbles",
+      "queries": [
+        "\"Fermi bubbles\" \"3D\" \"Zenodo\" data"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New spatio-spectral work still describes angular gamma-ray maps/models; no qualified measured spatial lobe volume acquired. No sky-template extrusion.",
+      "sources": [
+        "https://www.mso.anu.edu.au/~krumholz/publications/2025/tank25a.pdf"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Magellanic Stream",
+      "queries": [
+        "\"Magellanic Stream\" \"distances\" \"Zenodo\" dataset"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New search did not supply complete measured distances for the gaseous stream. Cloud-star distance maps and sparse stellar tracers are not the full gas geometry.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "IC 1101",
+      "queries": [
+        "\"IC 1101\" \"FITS\" data download"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New results concern imaging/surface-brightness profiles and central spectroscopy; no reusable full volumetric stellar distribution acquired.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Andromeda Gas Halo",
+      "queries": [
+        "\"Andromeda\" \"gas halo\" \"Figshare\" OR \"Zenodo\""
+      ],
+      "evidence": "search_results_only",
+      "decision": "No new full measured spatial halo product identified in alternate-deposit search. Prior integrated-sightline limitation retained.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Porphyrion",
+      "queries": [
+        "\"Porphyrion\" radio data \"Zenodo\" OR \"Figshare\" OR \"GitHub\"",
+        "\"Porphyrion\" \"data availability\" Oei"
+      ],
+      "evidence": "search_results_only",
+      "decision": "Alternate-deposit search did not yield a new compatible data release; paper search returns the already known on-request particular data and Code Ocean route. No challenge retry or author contact.",
+      "sources": [
+        "https://www.astronomie.nl/upload/files/2024/Oei-et-al-2024.pdf"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Distance to the Virgo Cluster",
+      "queries": [],
+      "evidence": "prior_only",
+      "decision": "Carried forward from deepsky3d: observer-to-cluster distance is not cluster size; existing catalog cannot simply be rescaled. No new source search.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Baryon Acoustic Oscillation Scale",
+      "queries": [],
+      "evidence": "prior_only",
+      "decision": "Carried forward: BOSS candidate already exists in deepsky3d and was deliberately unregistered. Owner review of its interpretation, not a missing public source; no re-registration.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Putative Giant Arc",
+      "queries": [
+        "\"Giant Arc\" \"Lopez\" \"data availability\" absorber"
+      ],
+      "evidence": "search_results_only",
+      "decision": "New critique/simulation literature does not supply the exact cleaned observed membership or resolve derived-catalog terms. No exploratory group promoted as the claimed arc.",
+      "sources": [
+        "https://academic.oup.com/mnrasl/article/541/1/L22/8071226"
+      ],
+      "status": "keep_photo"
+    },
+    {
+      "name": "Hubble Radius",
+      "queries": [],
+      "evidence": "prior_only",
+      "decision": "Carried forward from deepsky3d: a derived distance scale has no measured surface. No new source search, sphere or scale diagram.",
+      "sources": [],
+      "status": "keep_photo"
+    },
+    {
+      "name": "JADES-GS-z14-0",
+      "queries": [],
+      "evidence": "prior_only",
+      "decision": "Carried forward from deepsky3d: imaging/redshift do not provide an observed 3D source for the observer-distance marker. No new source search or extruded galaxy.",
+      "sources": [],
+      "status": "keep_photo"
+    }
+  ]
+}

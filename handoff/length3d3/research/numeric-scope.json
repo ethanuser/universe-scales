@@ -1,0 +1,106 @@
+{
+  "method": "Numerical-source inspection, not a model or WebGL preview.",
+  "afm": [
+    {
+      "name": "AFM_MA_01.spm",
+      "shape": [
+        512,
+        512
+      ],
+      "scan_m": [
+        1.2e-05,
+        1.2e-05
+      ],
+      "height_range_m": [
+        0.0,
+        8.2072217e-08
+      ]
+    },
+    {
+      "name": "AFM_MA_02.spm",
+      "shape": [
+        256,
+        256
+      ],
+      "scan_m": [
+        3e-07,
+        3e-07
+      ],
+      "height_range_m": [
+        0.0,
+        5.0862271e-09
+      ]
+    },
+    {
+      "name": "AFM_MA_03.spm",
+      "shape": [
+        512,
+        512
+      ],
+      "scan_m": [
+        1e-06,
+        1e-06
+      ],
+      "height_range_m": [
+        0.0,
+        3.891034e-08
+      ]
+    },
+    {
+      "name": "AFM_TU_01.spm",
+      "shape": [
+        512,
+        512
+      ],
+      "scan_m": [
+        1e-06,
+        1e-06
+      ],
+      "height_range_m": [
+        0.0,
+        2.0237278e-07
+      ]
+    },
+    {
+      "name": "AFM_TU_02.spm",
+      "shape": [
+        256,
+        256
+      ],
+      "scan_m": [
+        3e-07,
+        3e-07
+      ],
+      "height_range_m": [
+        0.0,
+        9.9172702e-09
+      ]
+    },
+    {
+      "name": "AFM_TU_03.spm",
+      "shape": [
+        512,
+        512
+      ],
+      "scan_m": [
+        1.5e-05,
+        1.5e-05
+      ],
+      "height_range_m": [
+        0.0,
+        8.7548891e-08
+      ]
+    }
+  ],
+  "miras": {
+    "rows": 65981,
+    "diagnostic_window_rows": 52816,
+    "extent_kpc": [
+      11.994442131894203,
+      11.999480791507349,
+      6.577355010218048
+    ],
+    "gc_distance_kpc": 7.66,
+    "selection": "d>0, e_d>0, e_d/d<0.2; |x|<6, |y|<6, |z|<4 kpc. Display window, not bar membership."
+  }
+}
