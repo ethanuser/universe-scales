@@ -6,8 +6,6 @@
     const MIN_DRAWN_PX = 0.5;
     const MIN_MODEL_PX = 4;
     const IN_VIEW_PX = 14;
-    // A name fades out between these on-screen font sizes: below about 4 px it cannot be read.
-    const fadeBySize = pixels => clamp((pixels - 3) / 3, 0, 1);
     // A selected object is framed to about 55% of the stage's smaller side (in decades above
     // the ring size), so it and its in-model labels read clearly on any window shape.
     function frameZoom(ctx) {
@@ -226,7 +224,7 @@
         let frame, previousTime, disposed = false, pinnedFocus = null, pinnedExponent = null, observed = [];
         // lockActive: the selected item also holds the view (centered, zoom-in limit). Panning
         // ends the lock but keeps the item selected.
-        let lockActive = false;
+        let lockActive = false, zoomIn = null, zoomOut = null;
         const focusTransition = new ScaleJourney.FocusTransition();
         // Radial view: a selected object is centered by panning to it. A selection glide is
         // one zoom about the fixed point shared by the start and end views, so every object
@@ -296,6 +294,11 @@
         };
         const apply = () => {
             zoom.set(camera.value);
+            // The zoom buttons show when they can do nothing more.
+            if (zoomIn) {
+                zoomIn.disabled = camera.target <= lockLimit(camera.min) + 1e-3;
+                zoomOut.disabled = camera.target >= camera.max - 1e-3;
+            }
             const options = layoutOptions();
             if (options.radial) {
                 if (camera.glideTime == null) {
@@ -345,11 +348,22 @@
         };
         // While a selection is locked, zooming in stops LOCK_ZOOM_IN decades past its framing.
         const LOCK_ZOOM_IN = 1;
+        // The slider nudges when zooming hits a limit, so a stopped zoom does not look broken.
+        let bumpedAt = 0;
+        const bump = () => {
+            if (performance.now() - bumpedAt < 500) return;
+            bumpedAt = performance.now();
+            AppFeedback.replay(zoom.element, 'is-at-limit');
+        };
         const lockLimit = value => lockActive && pinnedFocus != null && pinnedExponent != null && layoutOptions().radial
             ? Math.max(value, pinnedExponent - LOCK_ZOOM_IN / (layoutOptions().exponentFactor ?? 1)) : value;
         const aim = (value, focusIndex, focusWindow = 0.3) => {
             freezePan();
-            if (focusIndex == null) value = lockLimit(value);
+            if (focusIndex == null) {
+                const limited = lockLimit(value);
+                if (limited !== value) bump();
+                value = limited;
+            }
             // Radial views keep an explicit selection through small manual zooms (see apply).
             if (focusIndex != null || !layoutOptions().radial) {
                 pinnedFocus = focusIndex ?? null;
@@ -393,7 +407,10 @@
             camera.glide(value, seconds);
             if (!frame) frame = requestAnimationFrame(animate);
         };
-        const move = amount => aim(camera.target + amount);
+        const move = amount => {
+            if (camera.target + amount < camera.min || camera.target + amount > camera.max) bump();
+            aim(camera.target + amount);
+        };
         const sliderInput = e => {
             e.stopImmediatePropagation();
             aim(Number(zoom.input.value));
@@ -452,7 +469,11 @@
             if (input.isControlTarget(e.target)) { input.consumeDraggedClick(); return; }
             if (input.consumeDraggedClick()) { e.preventDefault(); e.stopPropagation(); return; }
             const picked = interaction.pick?.(e.clientX, e.clientY);
-            if (picked) { e.preventDefault(); e.stopPropagation(); ctx.focus(ctx.items.indexOf(picked)); }
+            if (picked) {
+                e.preventDefault(); e.stopPropagation();
+                AppFeedback.ripple(ctx.stageFrame, e.clientX, e.clientY);
+                ctx.focus(ctx.items.indexOf(picked));
+            }
         };
         ctx.stageFrame.addEventListener('click', click, true);
         ctx.stageFrame.tabIndex = 0;
@@ -469,6 +490,7 @@
             control.addEventListener('click', () => move(amount));
             zoomButtons.append(control);
         }
+        [zoomIn, zoomOut] = zoomButtons.children;
         zoom.element.append(zoomButtons);
         // Opens the view with the camera at a scale and nothing selected or locked. The
         // controller has already described the item there (not as a selection); the
@@ -685,10 +707,10 @@
                         preserveAspectRatio:'xMidYMax meet' }));
                 }
                 // Radial view: a name is a fixed fraction of its object's drawn size at every
-                // zoom. It fades out as it becomes too small to read.
+                // zoom, so it shrinks away with the object instead of fading.
                 const drawnPx = extent * view.scale;
                 const fontSize = radial ? ScaleJourney.LABEL_EM * extent : 19 * extent / ScaleJourney.BASE_SIZE;
-                const labelOpacity = radial ? fadeBySize(fontSize * view.scale) : clamp((fontSize * view.scale - 7) / 5, 0, 1);
+                const labelOpacity = radial ? 1 : clamp((fontSize * view.scale - 7) / 5, 0, 1);
                 const selected = item === ctx.item && ctx.explicitSelection;
                 if (labelOpacity > 0) {
                     const name = entry?.display_label || item.name;
@@ -820,7 +842,7 @@
                     if(remainder)g.append(svg('rect',{x:x-extent/2,y:y-extent+fullRows*cell,width:remainder*cell,height:cell,fill:`url(#${id})`,'data-replicas':remainder}));
                     if(represented<1)g.append(svg('circle',{cx:x,cy:y-size/2,r:size/2,fill:'var(--accent-color)'}));
                 }
-                const drawnPx=size*view.scale, fontSize=ScaleJourney.LABEL_EM*size, opacity=fadeBySize(fontSize*view.scale);
+                const drawnPx=size*view.scale, fontSize=ScaleJourney.LABEL_EM*size, opacity=1;
                 if(opacity>0){
                     const selected=item===ctx.item&&ctx.explicitSelection;
                     const text=svg('text',{x,y:y+fontSize*1.25,'text-anchor':'middle',class:'journey-object-label',

@@ -297,16 +297,11 @@ class UniversalScales {
     renderStatusLegend() {
         const legend = document.getElementById('dimension-browser-legend');
         if (!legend || !window.ScaleStatus) return;
-        legend.replaceChildren();
         const explorer = Object.assign(document.createElement('span'), { className: 'status-legend__entry' });
         explorer.innerHTML = `<span class="dimension-chip__explorer">${this.explorerMark}</span>`;
         explorer.append('Interactive explorer');
-        legend.append(explorer);
-        ScaleStatus.DIMENSION_LEVELS.forEach((level, index) => {
-            const entry = Object.assign(document.createElement('span'), { className: 'status-legend__entry' });
-            entry.append(ScaleStatus.meter(index, ScaleStatus.DIMENSION_LEVELS), level.label);
-            legend.append(entry);
-        });
+        ScaleStatus.fillLegend(legend, ScaleStatus.DIMENSION_LEVELS);
+        legend.prepend(explorer);
     }
 
     getDimensionBrowserColumnCount() {
@@ -487,7 +482,12 @@ class UniversalScales {
         this.updateDimensionBrowserSelection();
         this.updateDimensionToggleLabel();
         this.setDimensionBrowserOpen(false);
-        await this.loadDimension(slug);
+        AppFeedback.progress(true);
+        try {
+            await this.loadDimension(slug);
+        } finally {
+            AppFeedback.progress(false);
+        }
         this.updateURL();
     }
 
@@ -658,13 +658,18 @@ class UniversalScales {
         this.themeChoice = choice;
         const theme = choice === 'system' ? (this.systemDark?.matches ? 'dark' : 'light') : choice;
         const changed = document.documentElement.getAttribute('data-theme') !== theme;
-        document.documentElement.setAttribute('data-theme', theme);
+        const apply = () => {
+            document.documentElement.setAttribute('data-theme', theme);
+            this.updateDarkModeButton(theme);
+            if (changed && this.plot) {
+                this.plot.updatePlotColors();
+                this.overview?.update();
+            }
+        };
         if (save) localStorage.setItem('theme', choice);
-        this.updateDarkModeButton(theme);
-        if (changed && this.plot) {
-            this.plot.updatePlotColors();
-            this.overview?.update();
-        }
+        // A deliberate change fades; the theme chosen on load applies at once.
+        if (save && changed) AppFeedback.crossfade(apply, 'root');
+        else apply();
     }
 
     toggleDarkMode() {
@@ -2604,9 +2609,8 @@ class UniversalScales {
     }
 
     showError(message) {
-        // Simple error display - could be enhanced
         console.error(message);
-        alert(message);
+        AppFeedback.toast(message, 'error');
     }
 
     isMobileDevice() {

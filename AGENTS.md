@@ -20,6 +20,23 @@ with new features, `z` for fixes. Set it in `index.html` (About dialog) and `CIT
 together. 0.2.0 is the app-shell redesign merged to main on 2026-10-30. Save 1.0.0 for when the
 TODO above is done.
 
+## 2026-10-30 interaction feedback (Claude, branch `design-polish`)
+
+- `js/feedback.js` (`AppFeedback`): `toast`, `progress` (line under the top bar, used by
+  `setDimension`), `confirm` (result on the button itself), `busy`, `segmented` (sliding highlight;
+  used by the view switch, editor tabs and `.app-choice`), `ripple` (where an object was picked),
+  `replay` (restart a one-shot CSS animation), `crossfade` (View Transitions; `main` fades the
+  content under a live top bar, `root` fades the page for a theme change). Use these instead of
+  `alert()`; editor.js no longer calls it. Every animation needs a reason: it reports a change.
+- Editor: Save is disabled until something changes; `editor-saved`, `editor-invalid` and
+  `editor-reset` are document events from editor.js. Fields have error and warning states
+  (`checkFields`). Closing with unsaved edits warns that they were discarded.
+- Explorer: names and annotation text stay fully visible at any size and shrink with the object
+  (annotations stop below `MIN_ANNOTATED_PX`, where they are under a pixel). Marker rings still
+  fade. The zoom buttons disable at their limits and the slider nudges when a zoom is refused.
+- `--danger`, `--success` and `--warning` are for meaning only. In dark mode floating surfaces use
+  the lighter `--bg-elevated`. Six type sizes: `--text-xs` to `--text-2xl` (24px at most).
+
 ## 2026-10-30 design tokens, completeness levels, proportional labels (Claude, branch `design-polish`)
 
 - Design system: the tokens at the top of `css/app.css` (`--space-*`, `--radius-*`, `--text-*`,
@@ -38,7 +55,7 @@ TODO above is done.
 - Dimension browser: explorers have a colored icon and a target mark (`ScaleExplorers`, the
   controller registry); a frozen search bar and legend sit above the list.
 - Explorer names are exactly `LABEL_EM` of the object's size at every zoom, with no pixel clamps,
-  and fade between 3 and 6 px on screen. `labelFader` in spatial.js fades colliding names over
+  and `labelFader` in spatial.js fades colliding names over
   0.22 s; `resolveLabelCollisions` does the same for model annotations and never hides names.
   Annotations are `LABEL_PER_PIXEL` of the drawn model.
 - Chart: with the docked panel, hovering an item pins it, like a click, and updates the selector.

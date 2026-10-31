@@ -165,6 +165,7 @@
                 filter.value = '';
                 selectedKey = lastIndex = null;
                 checked.clear();
+                setDirty(false);
                 showTab(panel.dataset.tab || 'items');
                 setDialog(dataEditor, true);
                 // Focus the page rather than the first tab, which would show a focus ring.
@@ -174,11 +175,38 @@
                 fitTexts(body);
             });
             dataEditor.onClose = () => {
+                if (dirty) AppFeedback.toast('Unsaved edits were discarded.', 'warning');
                 if (editorContent.style.display !== 'none') window.app?.editor?.toggleEditor();
                 preview?.dispose();
                 preview = null;
                 previewFor = null;
             };
+            // Save is only live when there is something to save.
+            let dirty = false;
+            const setDirty = value => {
+                dirty = value;
+                const save = $('editor-save-all-btn');
+                if (save) save.disabled = !value;
+            };
+            dataEditor.addEventListener('input', event => {
+                if (!event.target.closest('.data-editor__nav, .data-editor__bulk, .item-model-panel')) setDirty(true);
+            });
+            document.addEventListener('editor-saved', () => {
+                setDirty(false);
+                AppFeedback.confirm($('editor-save-all-btn'), 'Saved');
+                itemsList?.querySelectorAll('.field-note').forEach(note => note.remove());
+            });
+            document.addEventListener('editor-reset', () => {
+                setDirty(false);
+                AppFeedback.toast('All changes undone.', 'success');
+            });
+            document.addEventListener('editor-invalid', ({ detail }) => {
+                clearChecks();
+                filter.value = '';
+                applyFilter();
+                detail.cards.forEach(card => { decorate(card); checkFields(card); });
+                select(detail.cards[0]);
+            });
             // Section headers keep their action buttons but no longer collapse the section.
             dataEditor.addEventListener('click', event => {
                 const header = event.target.closest('.section-header');
@@ -330,9 +358,11 @@
                     cards.find(card => cardKey(card) === selectedKey) ||
                     (lastIndex != null ? cards[Math.min(lastIndex, cards.length - 1)] : null) ||
                     cards.find(card => cardName(card) === experiences()?.item?.name) || cards[0];
+                const added = wantNew && target;
                 wantNew = false;
                 if (target) select(target, 'center');
                 else { previewFor = null; empty.hidden = false; }
+                if (added) target.querySelector('input[name="name"]')?.focus();
                 refreshChecks();
                 fitTexts(body);
             }
@@ -349,6 +379,31 @@
                 decorate(card);
                 fitTexts(card);
                 modelPanel(card);
+            }
+            // Field states: an error blocks saving, a warning explains a consequence.
+            const setField = (field, state, message) => {
+                const group = field?.closest('.item-editor-form-group');
+                if (!group) return;
+                field.classList.toggle('is-invalid', state === 'error');
+                field.classList.toggle('is-warning', state === 'warning');
+                field.setAttribute('aria-invalid', String(state === 'error'));
+                let note = group.querySelector('.field-note');
+                if (!message) { note?.remove(); return; }
+                note ||= group.appendChild(element('p', 'field-note'));
+                note.classList.toggle('field-note--error', state === 'error');
+                note.textContent = message;
+            };
+            function checkFields(card) {
+                const name = card.querySelector('input[name="name"]'), value = card.querySelector('input[name="value"]');
+                const source = card.querySelector('input[name="source"]');
+                setField(name, name.value.trim() ? null : 'error', name.value.trim() ? '' : 'Every item needs a name.');
+                const number = Number(value.value);
+                if (value.value.trim() === '' || !Number.isFinite(number)) setField(value, 'error', 'Enter a number.');
+                else if (number <= 0 && !app()?.isLinearScale?.()) setField(value, 'warning', 'Zero and negative values cannot appear on a log scale.');
+                else setField(value, null);
+                const url = source.value.trim();
+                if (url && !/^https?:\/\//.test(url)) setField(source, 'warning', 'Sources normally start with https://.');
+                else setField(source, null);
             }
             // Headings for the card's groups, and live list updates while typing.
             function decorate(card) {
@@ -372,7 +427,7 @@
                 if (valueLabel && unitSymbol()) valueLabel.textContent = `Value (${unitSymbol()}) *`;
                 rename();
                 for (const field of ['input[name="name"]', 'input[name="value"]', 'input[name="source"]', 'textarea[name="description"]'])
-                    card.querySelector(field)?.addEventListener('input', rename);
+                    card.querySelector(field)?.addEventListener('input', () => { rename(); checkFields(card); });
             }
             const count = (selector, list) => {
                 const node = dataEditor.querySelector(`[data-count="${selector}"]`);
@@ -493,11 +548,18 @@
                 row.append(element('span', '', labelText), input, button);
                 return row;
             };
-            const say = text => { bulkStatus.textContent = text; };
+            const say = (text, kind = 'success') => {
+                bulkStatus.textContent = text;
+                bulkStatus.classList.toggle('is-error', kind === 'error');
+            };
             const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
             const multiply = applyRow('Multiply values by', { type: 'number', step: 'any', placeholder: 'For example 0.001' }, input => {
                 const factor = Number(input.value);
-                if (!input.value || !Number.isFinite(factor) || factor <= 0) { say('Enter a number above zero.'); return; }
+                if (!input.value || !Number.isFinite(factor) || factor <= 0) {
+                    AppFeedback.replay(input, 'is-shaking');
+                    say('Enter a number above zero.', 'error');
+                    return;
+                }
                 const cards = checkedCards();
                 for (const card of cards) {
                     const field = card.querySelector('input[name="value"]');
@@ -505,12 +567,14 @@
                     fillRow(rows.get(card), card);
                 }
                 input.value = '';
+                setDirty(true);
                 say(`Updated ${plural(cards.length, 'value')}. Use Save all changes to keep them.`);
             });
             const setSource = applyRow('Set source URL', { type: 'url', placeholder: 'https://' }, input => {
                 const cards = checkedCards();
                 for (const card of cards) card.querySelector('input[name="source"]').value = input.value.trim();
                 input.value = '';
+                setDirty(true);
                 say(`Set the source on ${plural(cards.length, 'item')}. Use Save all changes to keep them.`);
             });
             const bulkSize = sizeSlider(1), bulkTurn = angleSlider('Turn', 0), bulkTilt = angleSlider('Tilt', 0), bulkRoll = angleSlider('Roll', 0);
@@ -596,7 +660,11 @@
                 const buttons = element('div', 'item-model-panel__actions');
                 const reset = element('button', 'btn btn-danger', 'Reset model');
                 reset.type = 'button';
-                reset.addEventListener('click', async () => { await ModelOverrides.clear(dimension, name); modelPanel(card); });
+                reset.addEventListener('click', async () => {
+                    await ModelOverrides.clear(dimension, name);
+                    AppFeedback.toast('Model reset to its original.', 'success');
+                    modelPanel(card);
+                });
                 section.append(element('h5', 'data-editor__block-title', '3D model'), previewBox);
                 if (window.ScaleModels?.ModelPreview && name) {
                     preview ||= new ScaleModels.ModelPreview(previewBox);
@@ -629,7 +697,14 @@
                     input.addEventListener('change', async () => {
                         const file = input.files?.[0];
                         if (!file) return;
-                        await ModelOverrides.setFile(dimension, name, file);
+                        AppFeedback.busy(upload, true);
+                        try {
+                            await ModelOverrides.setFile(dimension, name, file);
+                            AppFeedback.toast(`${file.name} uploaded. It is saved in this browser.`, 'success');
+                        } catch {
+                            AppFeedback.toast('That file could not be stored.', 'error');
+                        }
+                        AppFeedback.busy(upload, false);
                         modelPanel(card);
                     });
                     upload.append(input);
@@ -693,6 +768,11 @@
                 wheelOrigin = event.target;
             }, { capture: true, passive: false });
         }
+
+        // Segmented controls: the highlight slides to the new choice.
+        AppFeedback.segmented($('view-switch'), 'aria-pressed');
+        AppFeedback.segmented(dataEditor?.querySelector('.data-editor__tabs'), 'aria-selected');
+        document.querySelectorAll('.app-choice').forEach(group => AppFeedback.segmented(group, 'aria-checked'));
 
         // --- Resizable panels -------------------------------------------------------------
         // Drag a panel's edge to set its width; double-click restores the default. The width is a
@@ -763,8 +843,16 @@
             u: () => press('unit-browser-toggle'),
             o: () => setDrawer(drawer.hidden),
             t: () => window.app?.toggleDarkMode(),
-            n: () => window.app?.toggleNotation(),
-            m: () => window.app?.toggleMusic(),
+            // These two change something that may be out of sight, so they say what happened.
+            n: () => {
+                window.app?.toggleNotation();
+                const label = document.querySelector('#notation-toggle [aria-checked="true"] small')?.textContent;
+                if (label) AppFeedback.toast(`Number notation: ${label}`);
+            },
+            m: () => {
+                window.app?.toggleMusic();
+                AppFeedback.toast(window.app?.backgroundMusic?.paused ? 'Music off' : 'Music on');
+            },
             l: () => {
                 const view = experiences();
                 if (!view?.interactiveButton) return;
@@ -819,12 +907,14 @@
                 <button type="button" class="experience-nav-button" data-step="1" title="Next item (→)">${arrow('M9 5l7 7-7 7')}</button>
                 <div class="experience-picker-panel" hidden>
                     <input class="experience-picker-search" type="search" placeholder="Search by name, initials or keyword" aria-label="Search items" autocomplete="off" spellcheck="false">
+                    <div class="status-legend"></div>
                     <div class="experience-picker-options"></div>
                     <p class="experience-picker-empty" hidden>No items match that search.</p>
                 </div></div></div>`;
             const toggle = wrap.querySelector('.experience-picker-toggle'), label = toggle.querySelector('span');
             const panel = wrap.querySelector('.experience-picker-panel'), input = panel.querySelector('input');
             const list = panel.querySelector('.experience-picker-options'), empty = panel.querySelector('.experience-picker-empty');
+            ScaleStatus.fillLegend(panel.querySelector('.status-legend'));
             let options = [], grouped = [], highlighted = -1;
             const items = () => app()?.chartItemsInOrder?.() || [];
             const current = () => app()?.chartCurrent;

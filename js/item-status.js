@@ -46,6 +46,16 @@
         for (let bar = 0; bar < levels.length; bar++) span.append(root.document.createElement('i'));
         return span;
     }
-    root.ScaleStatus = { ITEM_LEVELS, DIMENSION_LEVELS, FULL_DESCRIPTION, itemLevel, dimensionLevel, summarize, forItem, meter };
+    // The key for a list: one meter and name per level.
+    function fillLegend(legend, levels = ITEM_LEVELS) {
+        legend.replaceChildren(...levels.map((level, index) => {
+            const entry = root.document.createElement('span');
+            entry.className = 'status-legend__entry';
+            entry.append(meter(index, levels), level.label);
+            return entry;
+        }));
+        return legend;
+    }
+    root.ScaleStatus = { ITEM_LEVELS, DIMENSION_LEVELS, FULL_DESCRIPTION, itemLevel, dimensionLevel, summarize, forItem, meter, fillLegend };
     if (typeof module !== 'undefined') module.exports = root.ScaleStatus;
 })(globalThis);

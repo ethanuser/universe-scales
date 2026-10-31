@@ -176,7 +176,7 @@ class ItemEditor {
         this.app.plot.updatePlot();
 
         if (showConfirmation) {
-            alert('All items have been deleted!');
+            AppFeedback.toast('All items have been deleted!', 'success');
         }
     }
 
@@ -208,6 +208,7 @@ class ItemEditor {
 
         // Update the plot
         this.app.plot.updatePlot();
+        document.dispatchEvent(new CustomEvent('editor-reset'));
     }
 
     toggleEditor() {
@@ -689,7 +690,7 @@ class ItemEditor {
         this.app.updateUnitSelector();
 
         if (showConfirmation) {
-            alert('All units have been deleted!');
+            AppFeedback.toast('All units have been deleted!', 'success');
         }
     }
 
@@ -1086,6 +1087,7 @@ class ItemEditor {
         const allCards = this.itemsList.querySelectorAll('.item-editor-card');
         const itemsToSave = [];
         const errors = [];
+        const invalidCards = [];
 
         allCards.forEach((card, index) => {
             const form = card.querySelector('.item-editor-form');
@@ -1102,6 +1104,7 @@ class ItemEditor {
             // Validate
             if (!itemData.name || isNaN(itemData.value)) {
                 errors.push(`Item ${index + 1}: Name and Value are required`);
+                invalidCards.push(card);
                 return;
             }
 
@@ -1119,7 +1122,8 @@ class ItemEditor {
         });
 
         if (errors.length > 0) {
-            alert('Validation errors:\n' + errors.join('\n'));
+            AppFeedback.toast(`${errors.length} item${errors.length === 1 ? ' needs' : 's need'} a name and a value.`, 'error');
+            document.dispatchEvent(new CustomEvent('editor-invalid', { detail: { cards: invalidCards } }));
             return;
         }
 
@@ -1200,6 +1204,7 @@ class ItemEditor {
         this.app.updateUnitDescription();
 
         this.app.plot.updatePlot();
+        document.dispatchEvent(new CustomEvent('editor-saved'));
     }
 
     deleteItem(event) {
@@ -1250,6 +1255,7 @@ class ItemEditor {
         this.saveCustomItems();
         this.updateEditorHeader();
         this.app.plot.updatePlot();
+        AppFeedback.toast(`Deleted ${cards.length} item${cards.length === 1 ? '' : 's'}. Undo all changes brings ${cards.length === 1 ? 'it' : 'them'} back.`);
     }
 
     compressImage(file, maxWidth = 800, maxHeight = 800, quality = 0.7) {
@@ -1298,7 +1304,7 @@ class ItemEditor {
         if (!file) return;
 
         if (!file.type.startsWith('image/')) {
-            alert('Please select an image file');
+            AppFeedback.toast('Please select an image file', 'error');
             return;
         }
 
@@ -1373,7 +1379,7 @@ class ItemEditor {
             }
         } catch (error) {
             console.error('Error processing image:', error);
-            alert('Error processing image. Please try a different image file.');
+            AppFeedback.toast('Error processing image. Please try a different image file.', 'error');
         }
     }
 
@@ -1513,20 +1519,19 @@ class ItemEditor {
 
             // Step 4: Copy to clipboard
             navigator.clipboard.writeText(shareUrl).then(() => {
-                let msg = 'Shareable link copied to clipboard!';
+                AppFeedback.confirm(this.sharePlotBtn, 'Link copied');
                 if (this._hadStrippedImages) {
-                    msg += '\n\nNote: Uploaded images were excluded from the link to keep it short.';
+                    AppFeedback.toast('Uploaded images were left out to keep the link short.', 'info');
                 }
-                alert(msg);
             }).catch(err => {
                 console.error('Clipboard error:', err);
                 // Fallback: show in a modal or just console
-                alert('Could not copy to clipboard. Link available in console.');
+                AppFeedback.toast('Could not copy to clipboard. Link available in console.', 'error');
                 console.log('Share Link:', shareUrl);
             });
         } catch (e) {
             console.error('Sharing failed:', e);
-            alert('Sharing failed. The data might be too large.');
+            AppFeedback.toast('Sharing failed. The data might be too large.', 'error');
         }
     }
 
@@ -1627,11 +1632,11 @@ class ItemEditor {
                         textarea.value = event.target.result;
                     };
                     reader.onerror = () => {
-                        alert('Error reading file. Please try again.');
+                        AppFeedback.toast('Error reading file. Please try again.', 'error');
                     };
                     reader.readAsText(file);
                 } else {
-                    alert('Please drop a YAML file (.yaml or .yml)');
+                    AppFeedback.toast('Please drop a YAML file (.yaml or .yml)', 'error');
                 }
             }
         };
@@ -1677,7 +1682,7 @@ class ItemEditor {
             const importedData = jsyaml.load(yamlText);
 
             if (!importedData.items || !Array.isArray(importedData.items)) {
-                alert('Invalid YAML format: items array is required');
+                AppFeedback.toast('Invalid YAML format: items array is required', 'error');
                 return;
             }
 
@@ -1697,9 +1702,9 @@ class ItemEditor {
             this.closeYamlModal();
             this.renderEditorItems();
             this.app.plot.updatePlot();
-            alert('YAML imported successfully!');
+            AppFeedback.toast('YAML imported successfully!', 'success');
         } catch (error) {
-            alert('Error parsing YAML: ' + error.message);
+            AppFeedback.toast('Error parsing YAML: ' + error.message, 'error');
         }
     }
 
@@ -1740,11 +1745,11 @@ class ItemEditor {
             localStorage.setItem('dimensionUnitOverrides', JSON.stringify(overridesToSave));
         } catch (error) {
             if (error.name === 'QuotaExceededError') {
-                alert('Storage quota exceeded! The image data is too large. Please remove some images or use smaller images. Images are automatically compressed to 800x800px, but you may have too many images stored.');
+                AppFeedback.toast('Storage quota exceeded! The image data is too large. Please remove some images or use smaller images. Images are automatically compressed to 800x800px, but you may have too many images stored.', 'error');
                 console.error('localStorage quota exceeded. Current data size:', new Blob([JSON.stringify(this.app.customItems)]).size / (1024 * 1024), 'MB');
             } else {
                 console.error('Error saving custom items:', error);
-                alert('Error saving changes. Please try again.');
+                AppFeedback.toast('Error saving changes. Please try again.', 'error');
             }
         }
     }

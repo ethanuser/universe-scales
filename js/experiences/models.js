@@ -17,6 +17,8 @@ import { modelBytes, retainModelResources, releaseModelResources } from './model
 const MIB = 1024 * 1024;
 // In-model annotations are this fraction of the model's drawn size, so they scale with it.
 const LABEL_PER_PIXEL = 0.036;
+// Below this drawn size a model's annotations are under a pixel tall, so they are not built.
+const MIN_ANNOTATED_PX = 16;
 const models = new ModelCache({ maxEntries: 64, maxBytes: 192 * MIB,
     measure: modelBytes, dispose: releaseModelResources });
 const sourceQueue = [];
@@ -346,9 +348,10 @@ export class ModelPreview {
         };
         window.addEventListener('scale-model-override', this.onOverride);
     }
-    setStatus(text) {
+    setStatus(text, loading = false) {
         this.status.textContent = text || '';
         this.status.hidden = !text;
+        this.status.classList.toggle('is-loading', loading);
     }
     // Shows an item's model; resolves to its entry (null when the item has no model).
     async show(dimension, name) {
@@ -356,7 +359,7 @@ export class ModelPreview {
         this.clear();
         Object.assign(this, { dimension, name });
         this.view = { yaw: 0, pitch: 0, zoom: 1 };
-        this.setStatus('Loading model');
+        this.setStatus('Loading model', true);
         this.baseEntry = await baseEntry(dimension, name);
         if (token !== this.token) return null;
         this.entry = overrideEntry(dimension, name, this.baseEntry);
@@ -1043,12 +1046,12 @@ export class ModelStage {
     // stays upright and lines stay thin while the model rotates underneath.
     overlay(instance, w, h, scale, cx, view) {
         if (!instance.userData.overlays.length) return;
-        // Annotations fade out well before their model does, so zooming away
-        // leaves clean objects (many share the radial view): fully visible above
+        // Annotation text shrinks with its model and stays visible. Marker rings keep a
+        // fixed minimum size, so they fade out as the model gets small: fully visible above
         // 320 px, gone below 180 px.
         const drawnPixels = instance.userData.drawSize * scale;
+        if (drawnPixels < MIN_ANNOTATED_PX) return;
         const opacity = THREE.MathUtils.clamp((drawnPixels - 180) / 140, 0, 1);
-        if (!opacity && !instance.userData.overlays.some(node => node.userData.labelRole === 'dimension')) return;
         const toScreen = point => {
             const ndc = point.project(this.camera);
             return { x: cx + (ndc.x * w / 2) / scale, y: view.y + view.height / 2 - (ndc.y * h / 2) / scale };
@@ -1063,8 +1066,6 @@ export class ModelStage {
         for (const node of instance.userData.overlays) {
             const dimension = node.userData.labelRole === 'dimension';
             const fontPixels = drawnPixels * LABEL_PER_PIXEL;
-            const labelOpacity = dimension ? THREE.MathUtils.clamp((fontPixels - 2) / 3, 0, 1) : opacity;
-            if (!labelOpacity) continue;
             const center = node.getWorldPosition(new THREE.Vector3());
             const at = toScreen(center.clone());
             let radius = 0;
@@ -1072,7 +1073,7 @@ export class ModelStage {
                 const top = toScreen(center.add(new THREE.Vector3(0, node.matrixWorld.getMaxScaleOnAxis(), 0)));
                 radius = Math.abs(at.y - top.y);
             }
-            if (node.userData.outline) {
+            if (node.userData.outline && opacity) {
                 radius = Math.max(radius + (node.userData.markerPadding ?? 1.5) / scale,
                     (node.userData.markerRadius ?? 3.5) / scale);
                 svgNode('circle', { cx: at.x, cy: at.y, r: radius, class: 'journey-model-outline', opacity });
@@ -1097,7 +1098,7 @@ export class ModelStage {
                 const offset = node.userData.labelOffset || { x: 0, y: 0 };
                 const label = svgNode('text', { x: at.x + offset.x / scale,
                     y: at.y - radius + (offset.y - (radius ? 6 : 0)) / scale,
-                    class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle', opacity: labelOpacity });
+                    class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle' });
                 label.style.fontSize = `${fontPixels / scale}px`;
                 if (dimension) label.dataset.labelPriority = '80';
                 label.textContent = node.userData.label;
@@ -1108,7 +1109,7 @@ export class ModelStage {
                     const unit = fontPixels / scale / 12;
                     const x = at.x, y = at.y - radius - (radius ? 6 : 0) / scale - 12 * unit;
                     group.append(svgNode('path', { d: `M${x - 5.5 * unit} ${y}H${x + 5.5 * unit}M${x + 2.5 * unit} ${y - 3 * unit}L${x + 5.5 * unit} ${y}L${x + 2.5 * unit} ${y + 3 * unit}`,
-                        class: `journey-model-vector ${node.userData.labelClass || ''}`, opacity }));
+                        class: `journey-model-vector ${node.userData.labelClass || ''}` }));
                 }
             }
         }
@@ -1121,7 +1122,7 @@ export class ModelStage {
                 group.append(svgNode('line', { x1: label.x, y1: label.y, x2: label.labelX,
                     y2: label.labelY + 3, class: 'journey-model-leader', opacity: opacity * 0.55 }));
             const text = svgNode('text', { x: label.labelX, y: label.labelY,
-                class: 'journey-model-label', 'text-anchor': 'middle', opacity });
+                class: 'journey-model-label', 'text-anchor': 'middle' });
             text.textContent = label.text;
             group.append(text);
         }

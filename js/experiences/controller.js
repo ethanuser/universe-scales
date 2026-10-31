@@ -140,12 +140,12 @@
                 this.interactiveButton = button(
                     this.switcher,
                     this.config[0],
-                    () => this.setMode('interactive')
+                    () => AppFeedback.crossfade(() => this.setMode('interactive'))
                 );
                 this.logButton = button(
                     this.switcher,
                     this.app.isLinearScale() ? 'Scale plot' : 'Logarithmic',
-                    () => this.setMode('log')
+                    () => AppFeedback.crossfade(() => this.setMode('log'))
                 );
                 // Symbols with short labels; the full names stay in the tooltip and for screen readers.
                 const icon = (control, path, label) => {
@@ -281,7 +281,8 @@
             options.replaceChildren(...grouped);
             this.pickerEmpty = dom('p', 'experience-picker-empty', 'No items match that search.');
             this.pickerEmpty.hidden = true;
-            this.pickerPanel.append(search, options, this.pickerEmpty);
+            const legend = ScaleStatus.fillLegend(dom('div', 'status-legend'));
+            this.pickerPanel.append(search, legend, options, this.pickerEmpty);
             picker.append(this.pickerToggle, this.previous, this.next, this.select, this.pickerPanel);
             toolbarMain.append(picker);
             const closePicker = () => {
@@ -679,6 +680,11 @@
             const level = ScaleStatus.forItem(item, this.dimension);
             status.append(ScaleStatus.meter(level), dom('span', '', ScaleStatus.ITEM_LEVELS[level].label));
             this.detail.replaceChildren(title, value, status, ...(modelNote ? [modelNote] : []), prose);
+            // A new item rises in, so the change registers; refreshes of the same item stay still.
+            if (this.enteredItem !== item) {
+                this.enteredItem = item;
+                AppFeedback.replay(this.detail, 'is-entering');
+            }
             // The panel is rebuilt when the registry arrives or units change: reuse the
             // same image element so it does not reload and push the text down again.
             if (this.detailImage?.item !== item) this.detailImage = this.detailThumbnail(item);

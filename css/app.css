@@ -18,11 +18,11 @@
     --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-6: 24px; --space-8: 32px;
     --radius-sm: 6px; --radius-md: 8px; --radius-lg: 12px;
     --text-xs: 0.75rem; --text-sm: 0.8125rem; --text-md: 0.875rem; --text-base: 1rem;
-    --text-lg: 1.125rem; --text-xl: 1.25rem; --text-2xl: 1.5rem;
-    --leading-tight: 1.25; --leading-body: 1.55;
+    --text-lg: 1.125rem; --text-2xl: 1.5rem;
+    --leading-tight: 1.15; --leading-body: 1.55;
     --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
-    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.1);
-    --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.16);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+    --shadow-lg: 0 8px 24px rgba(15, 23, 42, 0.1);
     --motion-fast: 120ms; --motion: 200ms; --ease: cubic-bezier(0.2, 0, 0, 1);
 
     /* One neutral ramp and one accent, all at WCAG AA against these backgrounds. */
@@ -30,15 +30,21 @@
     --text-primary: #1c1f24; --text-secondary: #5c6470;
     --border-color: #e2e4e9; --hover-bg: #eceef2;
     --accent-color: #2563eb; --accent-solid: #2563eb;
+    /* Meaning, not decoration: these only appear on results and warnings. */
+    --danger: #c9302c; --success: #15803d; --warning: #a16207;
+    /* Floating surfaces: shadows lift them in light mode, a lighter surface in dark mode. */
+    --bg-elevated: #ffffff;
 }
 [data-theme='dark'] {
     --bg-primary: #17181b; --bg-secondary: #212328;
     --text-primary: #f1f2f4; --text-secondary: #a8aeb8;
     --border-color: #363941; --hover-bg: #2c2e34;
-    --accent-color: #7fa9ff; --accent-solid: #2f6fed;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.36);
-    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.48);
+    --accent-color: #7ba3f5; --accent-solid: #2f6fed;
+    --danger: #f28b82; --success: #6fcf97; --warning: #e0b050;
+    --bg-elevated: #24262c;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.28);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.36);
 }
 
 /* Slider tracks and thumbs stay square; everything else follows the radius scale above. */
@@ -689,7 +695,7 @@ body[data-experience='log'] .app-main::-webkit-scrollbar { display: none; }
         display: block !important;
     }
     body[data-experience='log'] #tooltip.tooltip--panel .tooltip-image { max-height: 200px; object-fit: contain; }
-    body[data-experience='log'] #tooltip.tooltip--panel .tooltip-title { font-size: var(--text-xl); }
+    body[data-experience='log'] #tooltip.tooltip--panel .tooltip-title { font-size: var(--text-lg); }
     body[data-experience='log'] #tooltip.tooltip--panel .tooltip-value { color: var(--dimension-color); font-weight: 600; }
     body[data-experience='log'] #tooltip.tooltip--empty .tooltip-description { color: var(--text-secondary); }
     body:not([data-experience='log']) #tooltip.tooltip--panel { display: none !important; }
@@ -961,9 +967,8 @@ h1, h2, h3, .app-brand { letter-spacing: -0.01em; }
 .app-drawer .btn:hover { background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important; }
 .app-drawer .btn-primary { background: var(--accent-solid) !important; color: #fff !important; }
 .app-drawer .btn-primary:hover { background: color-mix(in srgb, var(--accent-solid) 85%, black) !important; }
-.app-drawer .btn-danger { background: transparent !important; color: #d33b3b !important; }
-[data-theme='dark'] .app-drawer .btn-danger { color: #ff8a8a !important; }
-.app-drawer .btn-danger:hover { background: color-mix(in srgb, #d33b3b 12%, transparent) !important; }
+.app-drawer .btn-danger { background: transparent !important; color: var(--danger) !important; }
+.app-drawer .btn-danger:hover { background: color-mix(in srgb, var(--danger) 12%, transparent) !important; }
 .app-drawer .btn-small { height: 28px; padding: 0 12px !important; font-size: var(--text-sm); }
 .app-drawer .related-resources a { display: block; padding: 8px 2px; }
 .app-drawer .section-content, .app-drawer .units-list, .app-drawer .items-list { margin-left: 0 !important; margin-right: 0 !important; }
@@ -1027,9 +1032,8 @@ h1, h2, h3, .app-brand { letter-spacing: -0.01em; }
 }
 .data-editor .btn:hover { background: color-mix(in srgb, var(--text-primary) 14%, transparent) !important; }
 .data-editor #editor-save-all-btn { background: var(--accent-solid) !important; color: #fff !important; }
-.data-editor .btn-danger { background: transparent !important; color: #d33b3b !important; }
-[data-theme='dark'] .data-editor .btn-danger { color: #ff8a8a !important; }
-.data-editor .btn-danger:hover { background: color-mix(in srgb, #d33b3b 12%, transparent) !important; }
+.data-editor .btn-danger { background: transparent !important; color: var(--danger) !important; }
+.data-editor .btn-danger:hover { background: color-mix(in srgb, var(--danger) 12%, transparent) !important; }
 /* Items: one compact row each (name, actions) until opened. */
 .data-editor .item-editor-card { padding: 4px 8px 4px 16px !important; }
 .data-editor .item-editor-card-header { cursor: pointer; padding: 8px 0; margin: 0 !important; border: 0 !important; }
@@ -1515,7 +1519,7 @@ body.chart-panel-hidden[data-experience='log'] .app-main > .plot-container { mar
 /* ---- Design pass: components on top of the tokens ---- */
 /* Hierarchy: one strong title, one value, quiet metadata, readable body text. */
 body { font-size: var(--text-base); line-height: var(--leading-body); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
-.experience-detail h2, .tooltip--panel .tooltip-title { font-size: var(--text-2xl) !important; font-weight: 650; line-height: var(--leading-tight); letter-spacing: -0.015em; }
+.experience-detail h2, .tooltip--panel .tooltip-title { font-size: var(--text-2xl) !important; font-weight: 650; line-height: var(--leading-tight); letter-spacing: -0.02em; }
 .experience-detail .experience-value, .tooltip--panel .tooltip-value { font-size: var(--text-lg); }
 .experience-detail, #tooltip.tooltip--panel { font-size: var(--text-base); line-height: var(--leading-body); }
 .experience-detail p, .experience-detail li, #tooltip.tooltip--panel p, #tooltip.tooltip--panel li { max-width: 65ch; }
@@ -1638,3 +1642,118 @@ body:not([data-experience='log']):not(:has(.experience-detail)) .app-resizer--pa
     .app-bar__item { flex: 1 1 calc(100% - 140px); }
     .app-bar .experience-toolbar__main { width: 100%; }
 }
+
+/* ---- Feedback: every action answers ---- */
+/* Pressed, disabled and busy read the same on every control. */
+.btn:active:not(:disabled), .app-icon-button:active, .app-link-button:active, .experience-zoom-button:active:not(:disabled),
+.app-bar .experience-nav-button:active:not(:disabled), .app-bar .experience-center-button:active,
+.app-bar .experience-panel-button:active, .dimension-chip:active, .experience-picker-option:active,
+.data-editor__nav-item:active, .app-choice button:active:not(:disabled), .view-switch button:active { transform: scale(0.97); }
+.btn, .app-icon-button, .app-link-button, .experience-zoom-button, .dimension-chip, .experience-picker-option, .data-editor__nav-item,
+.app-choice button, .view-switch button { transition-property: background-color, color, border-color, box-shadow, opacity, transform; transition-duration: var(--motion-fast); transition-timing-function: var(--ease); }
+button:disabled, .btn:disabled { opacity: 0.45; cursor: not-allowed !important; }
+.data-editor__footer #editor-save-all-btn:disabled { opacity: 0.45; }
+
+/* Buttons: horizontal padding twice the vertical; one solid primary, ghosts for the rest. */
+.data-editor .btn, .data-editor__footer .btn { padding: 0 var(--space-4) !important; }
+.data-editor__footer .btn:not(#editor-save-all-btn) { background: transparent !important; }
+.data-editor__footer .btn:not(#editor-save-all-btn):hover { background: var(--hover-bg) !important; }
+.btn svg, .app-toast svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.btn.is-confirmed { background: var(--success) !important; color: var(--bg-primary) !important; opacity: 1 !important; }
+.btn.is-confirmed svg { animation: app-pop var(--motion) var(--ease); }
+.btn.is-busy { position: relative; color: transparent !important; pointer-events: none; }
+.btn.is-busy::after, .model-preview__status.is-loading::before {
+    content: ''; width: 16px; height: 16px; border: 2px solid var(--border-color); border-top-color: var(--accent-color);
+    border-radius: 50%; animation: app-spin 700ms linear infinite;
+}
+.btn.is-busy::after { position: absolute; inset: 0; margin: auto; }
+.model-preview__status.is-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-2); }
+
+/* Field states */
+.data-editor input.is-invalid { border-color: var(--danger) !important; }
+.data-editor input.is-warning { border-color: var(--warning) !important; }
+.field-note { margin: var(--space-1) 0 0; color: var(--warning); font-size: var(--text-sm); animation: app-rise var(--motion) var(--ease); }
+.field-note--error { color: var(--danger); }
+.is-shaking { animation: app-shake 280ms var(--ease); }
+.data-editor__bulk-status { color: var(--success); animation: app-rise var(--motion) var(--ease); }
+.data-editor__bulk-status.is-error { color: var(--danger); }
+
+/* Toasts */
+.app-toasts { position: fixed; z-index: calc(var(--z-app-dialog) + 2); left: 50%; bottom: var(--space-6); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); transform: translateX(-50%); pointer-events: none; max-width: min(520px, calc(100vw - 32px)); }
+.app-dialog:not([hidden]) .app-toasts { bottom: 72px; }
+.app-toast {
+    display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-4); border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg); background: var(--bg-elevated); box-shadow: var(--shadow-lg); color: var(--text-primary);
+    font-size: var(--text-md); pointer-events: auto; cursor: default; animation: app-toast-in var(--motion) var(--ease);
+}
+.app-toast.is-leaving { opacity: 0; transform: translateY(4px); transition: opacity 160ms var(--ease), transform 160ms var(--ease); }
+.app-toast--success svg { color: var(--success); }
+.app-toast--error svg { color: var(--danger); }
+.app-toast--warning svg { color: var(--warning); }
+.app-toast--info svg { color: var(--accent-color); }
+
+/* Loading line under the top bar */
+.app-progress { position: fixed; z-index: calc(var(--z-app-bar) + 1); top: var(--app-bar-height); left: 0; right: 0; height: 2px; overflow: hidden; opacity: 0; transition: opacity var(--motion) var(--ease); pointer-events: none; }
+.app-progress.is-active { opacity: 1; }
+.app-progress::after { content: ''; position: absolute; inset: 0 auto 0 0; width: 40%; background: var(--accent-color); animation: app-progress 1s var(--ease) infinite; }
+.experience-detail-image-button.is-loading { background: linear-gradient(100deg, var(--bg-secondary) 30%, var(--hover-bg) 50%, var(--bg-secondary) 70%) 0 0 / 200% 100%; animation: app-shimmer 1.2s linear infinite; }
+
+/* Segmented controls: one highlight slides to the chosen segment. */
+.has-thumb { position: relative; isolation: isolate; }
+.has-thumb > button { position: relative; z-index: 1; background: transparent !important; box-shadow: none !important; }
+.has-thumb > button:hover { color: var(--text-primary) !important; }
+.segment-thumb {
+    position: absolute; z-index: 0; top: 0; left: 0; border-radius: var(--radius-md); background: var(--bg-primary); box-shadow: var(--shadow-sm);
+    transition: transform var(--motion) var(--ease), width var(--motion) var(--ease);
+}
+[data-theme='dark'] .segment-thumb { background: color-mix(in srgb, var(--text-primary) 14%, var(--bg-elevated)); }
+.segment-thumb[hidden] { display: none; }
+.segment-thumb.is-instant { transition: none; }
+.app-bar .view-switch button[aria-pressed='true'] { color: var(--accent-color) !important; }
+
+/* Things rise in, so a change registers. */
+@keyframes app-pop { from { transform: scale(0.6); } 60% { transform: scale(1.12); } }
+@keyframes app-spin { to { transform: rotate(360deg); } }
+@keyframes app-shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+@keyframes app-toast-in { from { opacity: 0; transform: translateY(8px) scale(0.98); } }
+@keyframes app-progress { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
+@keyframes app-shimmer { to { background-position: -200% 0; } }
+@keyframes app-ripple { from { opacity: 0.6; transform: translate(-50%, -50%) scale(0.2); } to { opacity: 0; transform: translate(-50%, -50%) scale(1); } }
+@keyframes app-bars { from { transform: scaleY(0.2); } }
+@keyframes app-nudge { 30% { transform: translateX(-3px); } 70% { transform: translateX(3px); } }
+.experience-detail.is-entering > * { animation: app-rise var(--motion) var(--ease) both; }
+.experience-detail.is-entering > :nth-child(2) { animation-delay: 30ms; }
+.experience-detail.is-entering > :nth-child(3) { animation-delay: 60ms; }
+.experience-detail.is-entering > :nth-child(n+4) { animation-delay: 90ms; }
+.item-status .status-meter i, .tooltip-status .status-meter i { transform-origin: bottom; animation: app-bars 280ms var(--ease) both; }
+.status-meter i:nth-child(2) { animation-delay: 40ms; }
+.status-meter i:nth-child(3) { animation-delay: 80ms; }
+.status-meter i:nth-child(4) { animation-delay: 120ms; }
+#data-editor-dialog input.data-editor__check:checked { animation: app-pop 180ms var(--ease); }
+.app-bar .experience-picker-panel, .app .dimension-browser-panel { animation: app-sheet var(--motion) var(--ease); }
+@keyframes app-sheet { from { opacity: 0; transform: translateY(-6px); } }
+.dimension-browser-toggle__chevron, .unit-browser-toggle__chevron { transition: transform var(--motion) var(--ease); }
+.app-ripple { position: absolute; z-index: 3; width: 96px; height: 96px; border: 2px solid var(--accent-color); border-radius: 50%; pointer-events: none; animation: app-ripple 420ms var(--ease) forwards; }
+.experience-camera-slider.is-at-limit { animation: app-nudge 240ms var(--ease); }
+
+/* Crossfades between views: the top bar stays live, only the content underneath fades. */
+.app-main { view-transition-name: app-main; }
+html.fade-main::view-transition-old(root), html.fade-main::view-transition-new(root) { animation: none; }
+::view-transition-old(app-main), ::view-transition-new(app-main) { animation-duration: var(--motion); }
+html:not(.fade-main)::view-transition-group(app-main) { animation: none; }
+html.fade-root::view-transition-old(root), html.fade-root::view-transition-new(root) { animation-duration: 240ms; }
+
+/* The description panel slides open and closed. */
+@media (min-width: 701px) {
+    .app-main > .experience > .experience-body { transition: grid-template-columns var(--motion) var(--ease); }
+    .app-main > .experience.is-panel-hidden > .experience-body { grid-template-columns: 0px minmax(0, 1fr); }
+    /* The panel keeps its width and slides under the stage, so its text does not rewrap. */
+    .app-main > .experience .experience-detail { min-width: var(--app-panel-width); overflow-x: hidden; }
+    .app-main > .experience .experience-visual { position: relative; z-index: 1; }
+    .app-main > .experience.is-panel-hidden .experience-detail { display: block; visibility: hidden; transition: visibility 0s var(--motion); }
+}
+
+/* Dark mode: floating surfaces are lighter than the page. */
+.app-drawer, .app-dialog__panel:not(.data-editor), .app-popover, .app-tooltip, .app-bar .unit-browser-panel,
+.app-bar .experience-picker-panel, .app .dimension-browser-panel, .app-hint { background: var(--bg-elevated); }
+[data-theme='dark'] .dimension-browser-toolbar { background: var(--bg-elevated); }
