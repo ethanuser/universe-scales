@@ -16,6 +16,7 @@
         angle: ['Viewing angle', 'angle'],
         'visual-angle': ['Viewing angle', 'angle']
     };
+    root.ScaleExplorers = registry;
     class DimensionExperiences {
         constructor(app) {
             this.app = app;
@@ -256,7 +257,7 @@
                     thumb.onerror = () => thumb.classList.add('is-missing');
                 } else if (path) thumb.src = path;
                 else thumb.classList.add('is-missing');
-                option.append(thumb, dom('span', '', item.name));
+                option.append(thumb, dom('span', 'experience-picker-name', item.name));
                 option.dataset.search = item.name.toLocaleLowerCase();
                 option.addEventListener('click', () => {
                     this.focus(index);
@@ -265,8 +266,8 @@
                 options.append(option);
                 return option;
             });
-            // Without a query the list is grouped into scale bands (headers span the grid);
-            // a search shows ranked results without headers.
+            // The list is grouped into scale bands (headers span the grid). A search keeps the
+            // bands that still have matches; on a linear scale it lists results best first.
             const grouped = this.app.isLinearScale() || !globalThis.ScaleSearch?.groups ? this.pickerButtons
                 : ScaleSearch.groups(this.items, this.dimension).flatMap(group => {
                     const header = dom('div', 'experience-picker-group');
@@ -289,8 +290,8 @@
                 this.pickerToggle.setAttribute('aria-expanded', 'false');
                 search.value = '';
                 this.pickerButtons.forEach(option => { option.hidden = false; option.classList.remove('is-highlighted'); });
-                options.classList.remove('is-searching');
                 options.append(...grouped);
+                globalThis.ScaleSearch?.syncHeaders(options, 'experience-picker-group');
                 this.pickerEmpty.hidden = true;
             };
             const openPicker = () => {
@@ -298,6 +299,11 @@
                 this.pickerToggle.classList.add('is-open');
                 this.pickerToggle.setAttribute('aria-expanded', 'true');
                 search.focus();
+                // Levels are set here because a model's arrival can raise them.
+                this.pickerButtons.forEach((option, index) => {
+                    option.querySelector('.status-meter')?.remove();
+                    option.append(ScaleStatus.meter(ScaleStatus.forItem(this.items[index], this.dimension)));
+                });
                 options.querySelector('.is-active')?.scrollIntoView({ block: 'center' });
             };
             this.pickerToggle.addEventListener('click', () => this.pickerPanel.hidden ? openPicker() : closePicker());
@@ -317,11 +323,12 @@
                     .map((item, index) => ({ item, index })).filter(({ item }) => item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase()));
                 const shown = new Set(ranked.map(result => result.index));
                 this.pickerButtons.forEach((option, index) => { option.hidden = !shown.has(index); });
-                const order = query ? ranked.map(result => this.pickerButtons[result.index]) : grouped;
-                options.classList.toggle('is-searching', Boolean(query));
-                options.append(...order);
+                const bands = grouped !== this.pickerButtons;
+                options.append(...(query && !bands ? ranked.map(result => this.pickerButtons[result.index]) : grouped));
+                if (bands) ScaleSearch.syncHeaders(options, 'experience-picker-group');
                 this.pickerEmpty.hidden = ranked.length !== 0;
-                highlight(query ? 0 : -1);
+                // The best match stays highlighted, wherever its band falls, so Enter picks it.
+                highlight(query && ranked.length ? visibleOptions().indexOf(this.pickerButtons[ranked[0].index]) : -1);
             });
             search.addEventListener('keydown', event => {
                 if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
@@ -668,7 +675,10 @@
             const modelNote = model?.note ? dom('section', 'experience-model-note') : null;
             if (modelNote) modelNote.append(dom('h3', '', model.note_heading || 'What this 3D model shows'),
                 dom('p', '', model.note));
-            this.detail.replaceChildren(title, value, ...(modelNote ? [modelNote] : []), prose);
+            const status = dom('div', 'item-status');
+            const level = ScaleStatus.forItem(item, this.dimension);
+            status.append(ScaleStatus.meter(level), dom('span', '', ScaleStatus.ITEM_LEVELS[level].label));
+            this.detail.replaceChildren(title, value, status, ...(modelNote ? [modelNote] : []), prose);
             // The panel is rebuilt when the registry arrives or units change: reuse the
             // same image element so it does not reload and push the text down again.
             if (this.detailImage?.item !== item) this.detailImage = this.detailThumbnail(item);

@@ -117,7 +117,7 @@ body {
 select {
     padding: 0.5rem 1rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-size: 0.9rem;
@@ -138,7 +138,7 @@ select:focus {
 .notation-toggle {
     background: none;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     width: 70px;
     /* Fixed width to prevent layout shift */
     height: 40px;
@@ -195,7 +195,7 @@ select:focus {
     min-width: 220px;
     padding: 0.65rem 0.9rem;
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     background: var(--bg-primary);
     color: var(--text-primary);
     font-size: 1rem;
@@ -253,7 +253,7 @@ select:focus {
     padding: 0.72rem 0.95rem;
     padding-right: 2.3rem;
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     background: var(--bg-primary);
     color: var(--text-primary);
     font-size: 0.95rem;
@@ -275,7 +275,7 @@ select:focus {
     width: 26px;
     height: 26px;
     cursor: pointer;
-    border-radius: 999px;
+    border-radius: var(--radius-lg);
     background:
         linear-gradient(45deg, transparent 44%, #3b5f99 44%, #3b5f99 56%, transparent 56%),
         linear-gradient(-45deg, transparent 44%, #3b5f99 44%, #3b5f99 56%, transparent 56%),
@@ -294,7 +294,7 @@ select:focus {
     margin: 0 auto 0.9rem;
     padding: 0.8rem 1rem;
     border: 1px dashed var(--border-color);
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     background: var(--bg-secondary);
     color: var(--text-secondary);
     text-align: center;
@@ -321,7 +321,7 @@ select:focus {
 .dimension-browser__group {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     padding: 0.9rem 1rem 1rem;
     display: block;
     gap: 0.75rem;
@@ -370,7 +370,7 @@ select:focus {
     border: 1px solid var(--border-color);
     background: var(--bg-primary);
     color: var(--text-primary);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     padding: 0.45rem 0.8rem;
     font-size: 0.88rem;
     line-height: 1.15;
@@ -521,7 +521,7 @@ select:focus {
     text-decoration: none;
     border: 1px solid var(--border-color);
     padding: 2px 8px;
-    border-radius: 12px;
+    border-radius: var(--radius-lg);
     transition: all 0.2s ease;
 }
 
@@ -536,7 +536,7 @@ select:focus {
     padding: 0.75rem 1rem;
     background-color: var(--bg-secondary);
     border-left: 4px solid var(--accent-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.85rem;
     color: var(--text-secondary);
     text-align: left;
@@ -569,7 +569,7 @@ select:focus {
     margin: 1.5rem 0 0.5rem 0;
     /* Reduced bottom margin to decrease space before footer */
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     background-color: var(--bg-secondary);
     overflow: hidden;
 }
@@ -580,7 +580,7 @@ select:focus {
     background-color: var(--bg-primary);
     border: none;
     border-bottom: 1px solid var(--border-color);
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -634,7 +634,7 @@ select:focus {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-primary);
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
 .editor-content::-webkit-scrollbar {
@@ -647,7 +647,7 @@ select:focus {
 
 .editor-content::-webkit-scrollbar-thumb {
     background: var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 .editor-content::-webkit-scrollbar-thumb:hover {
@@ -720,7 +720,7 @@ select:focus {
     /* Remove all margins - no negative margins */
     margin-bottom: 0.35rem;
     /* Only bottom margin for spacing */
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     transition: background-color 0.2s ease;
     user-select: none;
     min-height: auto;
@@ -818,7 +818,7 @@ select:focus {
     overflow-x: hidden;
     border: 1px solid var(--border-color);
     /* Gray border around scrolling area */
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     padding: 0.75rem;
     /* Add some padding inside the border - increased for more space */
     padding-right: 0rem;
@@ -852,7 +852,7 @@ select:focus {
 #units-section .section-content::-webkit-scrollbar-thumb,
 #items-section .section-content::-webkit-scrollbar-thumb {
     background: var(--border-color);
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     /* Slightly larger radius for thicker scrollbar */
     opacity: 0.5;
     /* Make it more subtle */
@@ -918,7 +918,7 @@ select:focus {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.9rem;
     font-family: inherit;
     background-color: var(--bg-primary);
@@ -941,7 +941,7 @@ select:focus {
 /* Dimension Editor Card - matches unit/item card styling */
 .dimension-editor-card {
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     padding: 1rem;
     background-color: var(--bg-secondary);
     /* Grey background for card container */
@@ -965,7 +965,7 @@ select:focus {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.9rem;
     background-color: var(--bg-primary);
     /* White background for input fields */
@@ -1028,7 +1028,7 @@ select:focus {
 
 .unit-editor-card {
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     padding: 1rem;
     background-color: var(--bg-secondary);
     /* Grey background for card container */
@@ -1132,7 +1132,7 @@ select:focus {
 .unit-editor-form .editor-form-group textarea {
     padding: 0.5rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.9rem;
     background-color: var(--bg-primary);
     /* White background for input fields */
@@ -1157,7 +1157,7 @@ select:focus {
 .btn {
     padding: 0.5rem 1rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     font-size: 0.9rem;
     transition: all 0.2s ease;
@@ -1192,7 +1192,7 @@ select:focus {
 
 .item-editor-card {
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     padding: 1rem;
     background-color: var(--bg-secondary);
     /* Grey background for card container */
@@ -1286,7 +1286,7 @@ select:focus {
 .item-editor-form-group textarea {
     padding: 0.5rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.9rem;
     background-color: var(--bg-primary);
     /* White background for input fields */
@@ -1334,7 +1334,7 @@ select:focus {
     color: var(--text-primary);
     border: 1px solid var(--border-color);
     border-width: 1px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-family: inherit;
     line-height: 1.5;
     box-sizing: border-box;
@@ -1374,7 +1374,7 @@ select:focus {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     background-color: var(--bg-primary);
     /* White background for images */
     overflow: hidden;
@@ -1418,7 +1418,7 @@ select:focus {
     background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     font-size: 12px;
     font-weight: 500;
     pointer-events: none;
@@ -1469,7 +1469,7 @@ select:focus {
     margin: 5% auto;
     padding: 2rem;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     width: 90%;
     max-width: 600px;
     max-height: 80vh;
@@ -1487,7 +1487,7 @@ select:focus {
     padding: 1rem;
     margin-bottom: 1rem;
     border: 2px dashed var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     color: var(--text-secondary);
     font-size: 0.9rem;
     background-color: var(--bg-secondary);
@@ -1534,7 +1534,7 @@ select:focus {
     min-height: 300px;
     padding: 0.75rem;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-family: 'Courier New', monospace;
     font-size: 0.85rem;
     background-color: var(--bg-secondary);
@@ -1581,7 +1581,7 @@ select:focus {
     width: 100%;
     min-height: 200px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     background-color: var(--bg-secondary);
     overflow: hidden;
     /* Allow labels to extend beyond container when points go off-screen */
@@ -1618,7 +1618,7 @@ select:focus {
     gap: 0.5rem;
     z-index: var(--z-zoom-controls-floating);
     box-shadow: var(--shadow-lg);
-    border-radius: 18px;
+    border-radius: var(--radius-lg);
     padding: 0.25rem;
     opacity: 0;
     pointer-events: none;
@@ -1641,7 +1641,7 @@ select:focus {
     transition: opacity 0.25s ease;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 1px solid var(--border-color);
@@ -1673,7 +1673,7 @@ select:focus {
 .zoom-btn {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 14px;
+    border-radius: var(--radius-lg);
     width: 100%;
     height: 100%;
     min-width: 48px;
@@ -1780,7 +1780,7 @@ select:focus {
     min-width: 220px;
     padding: 0.5rem 0.85rem;
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-size: 0.9rem;
@@ -1820,7 +1820,7 @@ select:focus {
     max-height: 320px;
     overflow: auto;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     background: var(--bg-primary);
     padding: 0.5rem;
 }
@@ -1839,7 +1839,7 @@ select:focus {
     width: 100%;
     text-align: left;
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     background: var(--bg-secondary);
     color: var(--text-primary);
     padding: 0.45rem 0.65rem;
@@ -1872,7 +1872,7 @@ select:focus {
     position: absolute;
     background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     padding: 1rem;
     box-shadow: var(--shadow-lg);
     pointer-events: none;
@@ -1900,7 +1900,7 @@ select:focus {
     height: auto;
     max-height: 240px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     margin-bottom: 0.75rem;
     display: none;
     transition: opacity 0.3s ease;
@@ -1925,7 +1925,7 @@ select:focus {
     background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     font-size: 12px;
     font-weight: 500;
     pointer-events: none;
@@ -1989,7 +1989,7 @@ select:focus {
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s ease;
 }
@@ -2049,7 +2049,7 @@ select:focus {
     color: var(--text-primary);
     background: var(--bg-primary);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     font-size: 0.85rem;
     line-height: 1.35;
     user-select: text;
@@ -2115,7 +2115,7 @@ select:focus {
 
 .tooltip-description code {
     background: rgba(0, 123, 255, 0.08);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     padding: 0.05rem 0.3rem;
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     font-size: 0.85em;
@@ -2127,7 +2127,7 @@ select:focus {
 
 .tooltip-description::-webkit-scrollbar-thumb {
     background: rgba(108, 117, 125, 0.45);
-    border-radius: 999px;
+    border-radius: var(--radius-lg);
 }
 
 .tooltip-source {

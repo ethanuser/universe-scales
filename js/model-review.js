@@ -4,7 +4,7 @@
 // URL parameters: item, view (rest|front|side|top|back), bg (light|dark|sky),
 // zoom, time (freeze animations at seconds), neighbors (1). `window.modelLab`
 // exposes the same controls plus size metrics for scripts/model_lab.cjs.
-import { ModelStage } from './experiences/models.js?v=5acf741d9b';
+import { ModelStage } from './experiences/models.js?v=86f6b91f64';
 import * as THREE from './vendor/three/three.module.min.js';
 const $ = id => document.getElementById(id);
 const params = new URLSearchParams(location.search);

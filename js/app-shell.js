@@ -20,6 +20,8 @@
         // Where the current wheel gesture began (see scroll latching below).
         let wheelOrigin = null;
 
+        let makeResizerLater = () => {};
+
         // --- Drawer and dialogs -------------------------------------------------------
         const setDrawer = open => {
             drawer.hidden = !open;
@@ -72,7 +74,6 @@
         backdrop.addEventListener('click', () => setDrawer(false));
         $('about-open')?.addEventListener('click', () => { setDrawer(false); setDialog(about, true); });
         $('about-close')?.addEventListener('click', () => setDialog(about, false));
-        $('help-toggle')?.addEventListener('click', () => setDialog(help, true));
         document.querySelectorAll('[data-open-help]').forEach(button =>
             button.addEventListener('click', () => { setDrawer(false); setDialog(help, true); }));
         for (const dialog of [about, help, dataEditor].filter(Boolean)) {
@@ -122,7 +123,8 @@
             navTools.append(filter, addItem || '');
             navFooter.append(selectCount, selectAll, selectNone, deleteAll || '');
             nav.append(navTools, navList, navFooter);
-            itemsSection?.prepend(nav);
+            const navResizer = element('div', 'app-resizer app-resizer--editor');
+            itemsSection?.prepend(nav, navResizer);
             dataEditor.querySelector('.data-editor__toolbar')?.remove();
             const empty = element('div', 'data-editor__empty');
             empty.append(element('h3', '', 'No item selected'), element('p', '', 'Choose an item from the list, or add a new one.'));
@@ -186,6 +188,9 @@
                 }
             }, true);
 
+            makeResizerLater = () => makeResizer(navResizer, { variable: '--editor-nav-width', key: 'scale-editor-nav-width', label: 'Item list width',
+                min: 240, max: width => Math.min(560, width * 0.5), apply: () => { if (!dataEditor.hidden) fitTexts(body); } });
+
             // --- Item list ---
             // A plain click opens one item. Checkboxes, Cmd/Ctrl-click and Shift-click (a range)
             // pick several for the bulk pane; a band's checkbox picks its whole band.
@@ -206,7 +211,13 @@
                 row.querySelector('.data-editor__nav-name').textContent = cardName(card) || 'Unnamed item';
                 const value = formatValue(cardValue(card));
                 ScaleSearch.writePowers(row.querySelector('.data-editor__nav-value'), value ? `${value} ${unitSymbol()}`.trim() : '');
+                row.querySelector('.status-meter')?.remove();
+                row.querySelector('.data-editor__nav-item').append(cardMeter(card));
             };
+            // The card's level follows what is typed, before it is saved.
+            const cardLevel = card => ScaleStatus.forItem({ name: cardName(card), description: card.querySelector('textarea[name="description"]')?.value,
+                source: card.querySelector('input[name="source"]')?.value }, app()?.currentDimension);
+            const cardMeter = card => ScaleStatus.meter(cardLevel(card));
             const shownCards = () => [...rows.entries()].filter(([, row]) => !row.hidden).map(([card]) => card);
             const checkedCards = () => [...rows.keys()].filter(card => checked.has(cardKey(card)));
             const pick = (card, on) => { if (on) checked.add(cardKey(card)); else checked.delete(cardKey(card)); };
@@ -347,18 +358,21 @@
                 card.querySelector('.item-editor-form-right')?.prepend(element('h5', 'data-editor__block-title', 'Image'));
                 const heading = card.querySelector('.item-editor-card-title-row h4');
                 const number = heading?.textContent.match(/^\s*(\d+)\./)?.[1];
+                const status = element('span', 'item-status');
+                heading?.after(status);
                 const rename = () => {
                     if (heading) heading.textContent = cardName(card) || 'Unnamed item';
                     const row = rows.get(card);
                     if (row) fillRow(row, card);
+                    status.replaceChildren(cardMeter(card), element('span', '', ScaleStatus.ITEM_LEVELS[cardLevel(card)].label));
                 };
                 if (heading && number) heading.dataset.number = number;
                 // The value is in the dimension's base unit; say which.
                 const valueLabel = card.querySelector('input[name="value"]')?.closest('.item-editor-form-group')?.querySelector('label');
                 if (valueLabel && unitSymbol()) valueLabel.textContent = `Value (${unitSymbol()}) *`;
                 rename();
-                card.querySelector('input[name="name"]')?.addEventListener('input', rename);
-                card.querySelector('input[name="value"]')?.addEventListener('input', rename);
+                for (const field of ['input[name="name"]', 'input[name="value"]', 'input[name="source"]', 'textarea[name="description"]'])
+                    card.querySelector(field)?.addEventListener('input', rename);
             }
             const count = (selector, list) => {
                 const node = dataEditor.querySelector(`[data-count="${selector}"]`);
@@ -370,16 +384,12 @@
             if (itemsList) new MutationObserver(() => { recount(); buildNav(); }).observe(itemsList, { childList: true });
             function applyFilter() {
                 const query = window.ScaleSearch ? ScaleSearch.normalize(filter.value) : filter.value.toLowerCase();
-                let header = null, shown = 0;
-                const closeGroup = () => { if (header) header.hidden = shown === 0; };
-                for (const node of navList.children) {
-                    if (node.classList.contains('data-editor__nav-group')) { closeGroup(); header = node; shown = 0; continue; }
+                for (const node of rows.values()) {
                     const name = node.querySelector('.data-editor__nav-name')?.textContent || '';
                     const text = window.ScaleSearch ? ScaleSearch.normalize(name) : name.toLowerCase();
                     node.hidden = Boolean(query) && !text.includes(query);
-                    if (!node.hidden) shown++;
                 }
-                closeGroup();
+                ScaleSearch.syncHeaders(navList, 'data-editor__nav-group');
                 if (rows.size) refreshChecks();
             }
             filter.addEventListener('input', applyFilter);
@@ -684,6 +694,66 @@
             }, { capture: true, passive: false });
         }
 
+        // --- Resizable panels -------------------------------------------------------------
+        // Drag a panel's edge to set its width; double-click restores the default. The width is a
+        // CSS variable on the root, kept per browser. Left panels start at the window's left edge
+        // and the Options drawer ends at its right, so the pointer position is the width.
+        const clampWidth = (value, low, high) => Math.min(high, Math.max(low, value));
+        const makeResizer = (handle, { variable, key, label, min, max, fromRight = false, apply = () => {} }) => {
+            if (!handle) return;
+            const root = document.documentElement;
+            const limit = () => max(window.innerWidth);
+            const set = (width, save) => {
+                const value = Math.round(clampWidth(width, min, limit()));
+                root.style.setProperty(variable, `${value}px`);
+                handle.setAttribute('aria-valuenow', value);
+                if (save) storage.set(key, value);
+                apply();
+            };
+            const current = () => parseFloat(getComputedStyle(root).getPropertyValue(variable)) || min;
+            handle.tabIndex = 0;
+            handle.title = `${label}: drag to resize`;
+            handle.setAttribute('role', 'separator');
+            handle.setAttribute('aria-orientation', 'vertical');
+            handle.setAttribute('aria-label', label);
+            const saved = Number(storage.get(key));
+            if (saved) set(saved);
+            let dragging = false;
+            handle.addEventListener('pointerdown', event => {
+                dragging = true;
+                handle.setPointerCapture(event.pointerId);
+                document.body.classList.add('is-resizing');
+                event.preventDefault();
+            });
+            handle.addEventListener('pointermove', event => {
+                if (dragging) set(fromRight ? window.innerWidth - event.clientX : event.clientX);
+            });
+            const end = () => {
+                if (!dragging) return;
+                dragging = false;
+                document.body.classList.remove('is-resizing');
+                storage.set(key, Math.round(current()));
+            };
+            handle.addEventListener('pointerup', end);
+            handle.addEventListener('pointercancel', end);
+            handle.addEventListener('dblclick', () => {
+                root.style.removeProperty(variable);
+                storage.set(key, '');
+                apply();
+            });
+            handle.addEventListener('keydown', event => {
+                if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+                event.preventDefault();
+                event.stopPropagation();
+                set(current() + (event.key === 'ArrowRight' ? 16 : -16) * (fromRight ? -1 : 1), true);
+            });
+        };
+        makeResizer($('panel-resizer'), { variable: '--app-panel-width', key: 'scale-panel-width', label: 'Description panel width',
+            min: 240, max: width => Math.min(640, width * 0.5) });
+        makeResizerLater();
+        makeResizer($('drawer-resizer'), { variable: '--app-drawer-width', key: 'scale-drawer-width', label: 'Options panel width',
+            min: 360, max: width => Math.min(760, width), fromRight: true });
+
         // --- Keyboard shortcuts -------------------------------------------------------
         const press = id => $(id)?.click();
         const shortcuts = {
@@ -699,6 +769,8 @@
                 const view = experiences();
                 if (!view?.interactiveButton) return;
                 (view.active ? view.logButton : view.interactiveButton)?.click();
+                // A button clicked earlier keeps focus; its ring would mark the wrong view.
+                if (document.activeElement?.closest?.('.view-switch')) document.activeElement.blur();
             },
             p: () => experiences()?.active ? experiences().togglePanel() : chartPanelToggle?.(),
             f: () => experiences()?.toggleFullscreen(),
@@ -768,7 +840,8 @@
                     const path = app().getImagePath?.(item.name);
                     if (path && !path.startsWith('data:')) thumb.src = `${path.replace(/^images\//, 'images/thumbs/')}.jpg`;
                     thumb.onerror = () => thumb.classList.add('is-missing');
-                    option.append(thumb, Object.assign(document.createElement('span'), { textContent: item.name }));
+                    option.append(thumb, Object.assign(document.createElement('span'), { className: 'experience-picker-name', textContent: item.name }),
+                        ScaleStatus.meter(ScaleStatus.forItem(item, app().currentDimension)));
                     option.classList.toggle('is-active', item.name === current()?.name);
                     option.addEventListener('click', () => choose(item));
                     option.item = item;
@@ -797,10 +870,11 @@
                 const ranked = query ? ScaleSearch.rank(options.map(option => option.item), query) : null;
                 const shown = ranked ? new Set(ranked.map(result => result.index)) : null;
                 options.forEach((option, index) => { option.hidden = Boolean(shown) && !shown.has(index); });
-                list.classList.toggle('is-searching', Boolean(ranked));
-                list.append(...(ranked ? ranked.map(result => options[result.index]) : grouped));
+                const bands = grouped !== options;
+                list.append(...(ranked && !bands ? ranked.map(result => options[result.index]) : grouped));
+                if (bands) ScaleSearch.syncHeaders(list, 'experience-picker-group');
                 empty.hidden = !ranked || ranked.length > 0;
-                highlight(query ? 0 : -1);
+                highlight(ranked?.length ? visible().indexOf(options[ranked[0].index]) : -1);
             };
             const open = () => {
                 build();
@@ -873,18 +947,30 @@
         tip.setAttribute('role', 'tooltip');
         tip.hidden = true;
         (document.querySelector('.app') || document.body).append(tip);
-        let tipTarget = null, tipTimer = 0, warmUntil = 0;
+        let tipTarget = null, tipTimer = 0, tipLinger = 0, warmUntil = 0;
         const hideTip = () => {
             clearTimeout(tipTimer);
+            clearTimeout(tipLinger);
             if (!tip.hidden) warmUntil = performance.now() + 600;
             tip.hidden = true;
             tipTarget = null;
         };
+        // Text cut off with an ellipsis: the tooltip shows it in full.
+        const clippedFrom = node => {
+            for (let depth = 0; node?.nodeType === 1 && depth < 3; node = node.parentElement, depth++)
+                if (node.scrollWidth > node.clientWidth + 1 && getComputedStyle(node).textOverflow === 'ellipsis' &&
+                    !node.matches('input, textarea, select')) return node;
+            return null;
+        };
         const showTip = target => {
+            if (!target.isConnected) return;
+            const full = target.dataset.tipClipped != null;
             const text = target.dataset.tip;
-            if (!text || !target.isConnected) return;
-            const match = text.match(/^(.*?)\s*\(([^()]{1,24})\)$/);
-            tip.replaceChildren(document.createTextNode(match ? match[1] : text));
+            if (!full && !text) return;
+            const match = full ? null : text.match(/^(.*?)\s*\(([^()]{1,24})\)$/);
+            tip.classList.toggle('app-tooltip--text', full);
+            if (full) tip.replaceChildren(...target.cloneNode(true).childNodes);
+            else tip.replaceChildren(document.createTextNode(match ? match[1] : text));
             if (match) tip.append(Object.assign(document.createElement('kbd'), { textContent: match[2] }));
             // Measure at the left edge so the box keeps its natural width, then place it.
             Object.assign(tip.style, { left: '0px', top: '0px' });
@@ -898,8 +984,13 @@
         };
         document.addEventListener('pointerover', event => {
             if (event.pointerType === 'touch') return;
-            const target = event.target.closest?.('[title], [data-tip]');
-            if (!target || target === tipTarget || target.closest('svg') && !target.matches('svg')) return;
+            const clipped = clippedFrom(event.target);
+            if (clipped) clipped.dataset.tipClipped = '';
+            const target = clipped || event.target.closest?.('[title], [data-tip]');
+            if (!target || target === tipTarget || target.closest('svg') && !target.matches('svg')) {
+                if (target === tipTarget) clearTimeout(tipLinger);
+                return;
+            }
             if (target.hasAttribute('title')) {
                 target.dataset.tip = target.getAttribute('title');
                 if (!target.hasAttribute('aria-label')) target.setAttribute('aria-label', target.dataset.tip);
@@ -910,7 +1001,10 @@
             tipTimer = setTimeout(() => showTip(target), performance.now() < warmUntil ? 0 : 450);
         });
         document.addEventListener('pointerout', event => {
-            if (tipTarget && !tipTarget.contains(event.relatedTarget)) hideTip();
+            if (tipTarget && !tipTarget.contains(event.relatedTarget)) {
+                clearTimeout(tipLinger);
+                tipLinger = setTimeout(hideTip, tip.hidden ? 0 : 220);
+            }
         });
         for (const type of ['pointerdown', 'keydown', 'wheel']) document.addEventListener(type, hideTip, { capture: true, passive: true });
 

@@ -153,6 +153,7 @@ class UniversalScales {
             }
             this.dimensionCatalog = catalog;
             this.dimensionCatalogBySlug = new Map(catalog.map(entry => [entry.slug, entry]));
+            this.dimensionStatus = await fetch('content/dimension_status.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
             this.populateDimensionSelector(catalog);
             this.renderDimensionBrowser(catalog);
             this.updateDimensionToggleLabel();
@@ -216,6 +217,7 @@ class UniversalScales {
         }
 
         this.dimensionBrowser.innerHTML = '';
+        this.renderStatusLegend();
 
         const columnCount = this.getDimensionBrowserColumnCount();
         this.dimensionBrowser.style.setProperty('--dimension-browser-columns', String(columnCount));
@@ -259,7 +261,17 @@ class UniversalScales {
                 button.dataset.dimension = entry.slug;
                 button.dataset.searchText = String(entry.name || '').toLowerCase();
                 button.innerHTML = window.DimensionIcons?.icon(entry.slug) || '';
-                button.append(Object.assign(document.createElement('span'), { textContent: entry.name }));
+                button.append(Object.assign(document.createElement('span'), { className: 'dimension-chip__name', textContent: entry.name }));
+                // Explorers stand out: a colored icon and a target mark. Chart-only icons are quiet.
+                const explorer = window.ScaleExplorers?.[entry.slug];
+                button.classList.toggle('has-explorer', Boolean(explorer));
+                if (explorer) {
+                    const mark = Object.assign(document.createElement('span'), { className: 'dimension-chip__explorer', title: `Has an interactive ${explorer[0].toLowerCase()}` });
+                    mark.innerHTML = this.explorerMark;
+                    button.append(mark);
+                }
+                const counts = this.dimensionStatus?.[entry.slug];
+                if (counts && window.ScaleStatus) button.append(ScaleStatus.meter(ScaleStatus.dimensionLevel(counts), ScaleStatus.DIMENSION_LEVELS));
                 button.addEventListener('click', async () => {
                     await this.setDimension(entry.slug);
                 });
@@ -275,6 +287,26 @@ class UniversalScales {
 
         this.updateDimensionBrowserSelection();
         this.filterDimensionBrowser(this.dimensionBrowserSearch?.value || '');
+    }
+
+    get explorerMark() {
+        return '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="10" /></svg>';
+    }
+
+    // The key for the marks on each dimension, above the list.
+    renderStatusLegend() {
+        const legend = document.getElementById('dimension-browser-legend');
+        if (!legend || !window.ScaleStatus) return;
+        legend.replaceChildren();
+        const explorer = Object.assign(document.createElement('span'), { className: 'status-legend__entry' });
+        explorer.innerHTML = `<span class="dimension-chip__explorer">${this.explorerMark}</span>`;
+        explorer.append('Interactive explorer');
+        legend.append(explorer);
+        ScaleStatus.DIMENSION_LEVELS.forEach((level, index) => {
+            const entry = Object.assign(document.createElement('span'), { className: 'status-legend__entry' });
+            entry.append(ScaleStatus.meter(index, ScaleStatus.DIMENSION_LEVELS), level.label);
+            legend.append(entry);
+        });
     }
 
     getDimensionBrowserColumnCount() {
@@ -1378,6 +1410,7 @@ class UniversalScales {
         this.tooltipPinned = false;
         this.tooltip.classList.add('tooltip--panel', 'visible', 'tooltip--empty');
         this.tooltip.querySelector('.tooltip-title').textContent = 'Item details';
+        this.tooltip.querySelector('.tooltip-status')?.replaceChildren();
         this.tooltip.querySelector('.tooltip-value').textContent = '';
         this.tooltip.querySelector('.tooltip-description').textContent =
             'Point at an item in the chart to see it here, or click one to keep it.';
@@ -1410,6 +1443,9 @@ class UniversalScales {
         this.tooltipPinned = pinned || isTouchPrimary || (panelMode && this.tooltipPinned && this.tooltipItem === item);
 
         this.tooltip.querySelector('.tooltip-title').textContent = item.name;
+        const statusLevel = ScaleStatus.forItem(item, this.currentDimension);
+        this.tooltip.querySelector('.tooltip-status')?.replaceChildren(ScaleStatus.meter(statusLevel),
+            Object.assign(document.createElement('span'), { textContent: ScaleStatus.ITEM_LEVELS[statusLevel].label }));
 
         // Handle image - check if image exists before displaying
         const tooltipImage = this.tooltip.querySelector('.tooltip-image');

@@ -605,9 +605,11 @@ class PlotRenderer {
             })
             .on('pointerenter', (event, d) => {
                 if (window.matchMedia('(hover: hover)').matches) {
-                    // Don't show hover tooltip if a tooltip is already pinned
-                    if (!this.app.tooltipPinned) {
-                        this.app.showTooltip(event, d);
+                    // With the docked panel, hovering selects the item, exactly like a click.
+                    // A floating tooltip still leaves a pinned tooltip alone.
+                    const docked = this.app.chartPanelMode();
+                    if (docked || !this.app.tooltipPinned) {
+                        this.app.showTooltip(event, d, docked);
                         const itemGroupElement = event.target.closest('.item-group');
                         if (itemGroupElement) {
                             d3.select(itemGroupElement).select('circle')

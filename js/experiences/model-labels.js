@@ -1,14 +1,16 @@
 // Stable label placement for dense model annotations (e.g. planets). Each label
 // sits at a fixed offset above its anchor, so it never jumps around while the
 // camera zooms; where two labels would overlap, the lower-priority one is
-// hidden rather than moved. Coordinates are SVG user units (labels are 12 px).
+// hidden rather than moved. Coordinates are SVG user units; `size` is a label's font
+// size (12 by default).
 export function placeLabels(labels, viewport) {
     const accepted = [];
     const overlap = (a, b) => a.left < b.right + 4 && a.right + 4 > b.left && a.top < b.bottom + 2 && a.bottom + 2 > b.top;
     const ordered = labels.map((label, index) => ({ ...label, index }))
         .sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99) || a.index - b.index);
     for (const label of ordered) {
-        const width = label.text.length * 6.6 + 4, height = 13;
+        const unit = (label.size ?? 12) / 12;
+        const width = label.text.length * 6.6 * unit + 4, height = 13 * unit;
         const x = label.x + (label.callout?.x ?? 0);
         const y = label.y + (label.callout?.y ?? -(label.offset ?? 6));
         const box = { left: x - width / 2, right: x + width / 2, top: y - height, bottom: y + 2 };
@@ -22,7 +24,7 @@ export function placeLabels(labels, viewport) {
 }
 
 // Final screen-space pass, after item names and all model overlays are present.
-// Keep anchors fixed as the camera moves; omit a lower-priority annotation
+// Keep anchors fixed as the camera moves; fade out a lower-priority annotation
 // instead of letting it collide with an item name or another annotation.
 export function labelVisibility(boxes, gap = 5) {
     const accepted = [], visible = new Set();
@@ -34,7 +36,17 @@ export function labelVisibility(boxes, gap = 5) {
     return visible;
 }
 
-export function resolveLabelCollisions(stage) {
+// Time for a colliding label to fade fully in or out.
+export const LABEL_FADE_SECONDS = 0.22;
+const fades = new WeakMap();
+export function stepFade(alpha, target, seconds) {
+    const step = seconds / LABEL_FADE_SECONDS;
+    return target > alpha ? Math.min(target, alpha + step) : Math.max(target, alpha - step);
+}
+
+// `redraw` runs on the next frame while a fade is unfinished. Item names fade among themselves in
+// the explorer (spatial.js), so only annotations are hidden here, but names still take up room.
+export function resolveLabelCollisions(stage, redraw) {
     const nodes = [...stage.querySelectorAll('.journey-object-label, .journey-model-label')];
     const boxes = nodes.map((node, index) => {
         const style = getComputedStyle(node);
@@ -44,8 +56,25 @@ export function resolveLabelCollisions(stage) {
         return { index, priority, left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom };
     }).filter(box => box && box.right > box.left && box.bottom > box.top);
     const visible = labelVisibility(boxes);
+    const state = fades.get(stage) || { alpha: new Map(), time: 0, frame: 0 };
+    fades.set(stage, state);
+    const now = performance.now();
+    const elapsed = matchMedia('(prefers-reduced-motion: reduce)').matches ? 1 : Math.min(0.05, (now - state.time) / 1000);
+    state.time = now;
+    const alpha = new Map(), repeats = new Map();
+    let moving = false;
     nodes.forEach((node, index) => {
-        if (visible.has(index)) return;
-        (node.closest('[data-label-group]') || node).style.visibility = 'hidden';
+        if (node.classList.contains('journey-object-label')) return;
+        const count = repeats.get(node.textContent) || 0;
+        repeats.set(node.textContent, count + 1);
+        const key = `${node.textContent}#${count}`, target = visible.has(index) ? 1 : 0;
+        const next = stepFade(state.alpha.get(key) ?? target, target, elapsed);
+        alpha.set(key, next);
+        if (next !== target) moving = true;
+        const group = node.closest('[data-label-group]') || node;
+        if (next <= 0) group.style.visibility = 'hidden';
+        else if (next < 1) group.style.opacity = String(next * Number(group.getAttribute('opacity') ?? 1));
     });
+    state.alpha = alpha;
+    if (moving && redraw && !state.frame) state.frame = requestAnimationFrame(() => { state.frame = 0; redraw(); });
 }

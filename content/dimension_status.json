@@ -1,0 +1,317 @@
+{
+  "absorbed-dose": {
+    "items": 18,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "acceleration": {
+    "items": 37,
+    "drafted": 37,
+    "reviewed": 0
+  },
+  "agricultural-density": {
+    "items": 24,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "angle": {
+    "items": 29,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "angular-velocity": {
+    "items": 32,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "area": {
+    "items": 47,
+    "drafted": 34,
+    "reviewed": 0
+  },
+  "attention": {
+    "items": 22,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "brightness": {
+    "items": 39,
+    "drafted": 39,
+    "reviewed": 0
+  },
+  "cell-count": {
+    "items": 18,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "charge": {
+    "items": 29,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "concentration": {
+    "items": 37,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "correlation": {
+    "items": 23,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "costs": {
+    "items": 48,
+    "drafted": 48,
+    "reviewed": 0
+  },
+  "counts": {
+    "items": 50,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "current": {
+    "items": 40,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "density": {
+    "items": 40,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "disease-rarity": {
+    "items": 20,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "duration": {
+    "items": 50,
+    "drafted": 50,
+    "reviewed": 0
+  },
+  "effect-size": {
+    "items": 19,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "energy": {
+    "items": 50,
+    "drafted": 50,
+    "reviewed": 0
+  },
+  "entropy": {
+    "items": 41,
+    "drafted": 22,
+    "reviewed": 0
+  },
+  "event-rate": {
+    "items": 23,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "flops": {
+    "items": 29,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "flow-rate": {
+    "items": 38,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "force": {
+    "items": 39,
+    "drafted": 39,
+    "reviewed": 0
+  },
+  "frequency": {
+    "items": 50,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "friction-coefficient": {
+    "items": 40,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "hardness": {
+    "items": 23,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "historical-time": {
+    "items": 27,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "information-rate": {
+    "items": 50,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "information": {
+    "items": 50,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "intensity": {
+    "items": 14,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "jerk": {
+    "items": 33,
+    "drafted": 15,
+    "reviewed": 0
+  },
+  "length": {
+    "items": 258,
+    "drafted": 258,
+    "reviewed": 0
+  },
+  "magnetic-field": {
+    "items": 37,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "mass": {
+    "items": 50,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "micromorts": {
+    "items": 16,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "moment-of-inertia": {
+    "items": 39,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "odor-concentration": {
+    "items": 29,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "physiological-density": {
+    "items": 20,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "population-density": {
+    "items": 28,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "precision": {
+    "items": 23,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "pressure": {
+    "items": 35,
+    "drafted": 35,
+    "reviewed": 0
+  },
+  "probability": {
+    "items": 31,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "qalys": {
+    "items": 22,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "roughness": {
+    "items": 30,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "salinity": {
+    "items": 32,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "scoville": {
+    "items": 39,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "sound-frequency": {
+    "items": 36,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "sound-intensity": {
+    "items": 32,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "specific-heat": {
+    "items": 26,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "speed": {
+    "items": 36,
+    "drafted": 36,
+    "reviewed": 0
+  },
+  "strain": {
+    "items": 20,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "surface-tension": {
+    "items": 41,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "temperature": {
+    "items": 50,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "thermal-conductivity": {
+    "items": 22,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "torque": {
+    "items": 36,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "utility": {
+    "items": 23,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "viscosity": {
+    "items": 33,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "visual-angle": {
+    "items": 37,
+    "drafted": 0,
+    "reviewed": 0
+  },
+  "volume": {
+    "items": 55,
+    "drafted": 1,
+    "reviewed": 0
+  },
+  "yield-strength": {
+    "items": 36,
+    "drafted": 36,
+    "reviewed": 0
+  },
+  "youngs-modulus": {
+    "items": 36,
+    "drafted": 36,
+    "reviewed": 0
+  }
+}

@@ -6,6 +6,8 @@
     const MIN_DRAWN_PX = 0.5;
     const MIN_MODEL_PX = 4;
     const IN_VIEW_PX = 14;
+    // A name fades out between these on-screen font sizes: below about 4 px it cannot be read.
+    const fadeBySize = pixels => clamp((pixels - 3) / 3, 0, 1);
     // A selected object is framed to about 55% of the stage's smaller side (in decades above
     // the ring size), so it and its in-model labels read clearly on any window shape.
     function frameZoom(ctx) {
@@ -15,6 +17,40 @@
         const wanted = 0.55 * Math.min(box.width, box.height) / (ScaleJourney.RADIAL_SIZE * scale);
         return Math.log10(clamp(wanted || 1.8, 1.2, 4));
     }      // an object this large on screen counts as "in view"
+    // Item names: when two collide, the smaller object's name fades out over a moment rather
+    // than vanishing, and comes back the same way. A fading name no longer takes up room.
+    const LABEL_FADE_SECONDS = 0.22;
+    function labelFader(redraw) {
+        const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+        let alpha = new Map(), time = 0, frame = 0;
+        return (stage, labels) => {
+            const now = performance.now();
+            const step = reduceMotion.matches ? 1 : Math.min(0.05, (now - time) / 1000) / LABEL_FADE_SECONDS;
+            time = now;
+            const next = new Map(), kept = [];
+            let moving = false;
+            for (const label of labels.sort((a, b) => b.rank - a.rank)) {
+                const previous = alpha.get(label.key);
+                // A faded name waits for a little clear space, so it does not flicker at the edge.
+                const margin = previous != null && previous < 1 ? 0.2 * label.fontSize : 0;
+                const box = { left: label.x - label.width / 2 - margin, right: label.x + label.width / 2 + margin,
+                    top: label.y - label.fontSize - margin, bottom: label.y + 0.25 * label.fontSize + margin };
+                const blocked = kept.some(other => box.left < other.right && box.right > other.left &&
+                    box.top < other.bottom && box.bottom > other.top);
+                const target = blocked ? 0 : 1;
+                const value = target > (previous ?? target) ? Math.min(1, previous + step)
+                    : Math.max(target, (previous ?? target) - step);
+                next.set(label.key, value);
+                if (value !== target) moving = true;
+                if (!blocked) kept.push(box);
+                if (value <= 0) continue;
+                label.text.setAttribute('opacity', label.opacity * value);
+                stage.append(label.text);
+            }
+            alpha = next;
+            if (moving && !frame) frame = requestAnimationFrame(() => { frame = 0; redraw(); });
+        };
+    }
     function createSpatialInput(element, { interaction = {}, onStart, onPan, onPinch, onEnd }) {
         const previousTouchAction = element.style.touchAction;
         const previousUserSelect = element.style.userSelect;
@@ -470,6 +506,7 @@
         zoom.input.setAttribute('aria-label', 'Scale camera');
         let areaMaps, modelStage, disposed = false, rulerHTML, attributedModel = null;
         let placement, placementWidth, placementReady;
+        const fadeLabels = labelFader(() => render());
         const widthFactor = item => {
             const map = areaMaps?.entry(item);
             if (map) return map.width;
@@ -647,35 +684,25 @@
                     if (src) g.append(svg('image', { href:src, x:x-size/2,y:y-size,width:size,height:size,
                         preserveAspectRatio:'xMidYMax meet' }));
                 }
-                // Radial view: labels scale with their object (a tenth of its drawn size) between
-                // 9 and 40 px, and only fade out once the object is nearly too small to draw.
+                // Radial view: a name is a fixed fraction of its object's drawn size at every
+                // zoom. It fades out as it becomes too small to read.
                 const drawnPx = extent * view.scale;
-                const fontSize = radial
-                    ? Math.min(Math.max(ScaleJourney.LABEL_EM * extent, 9 / view.scale), 40 / view.scale)
-                    : 19 * extent / ScaleJourney.BASE_SIZE;
-                const labelOpacity = radial ? clamp((drawnPx - 12) / 16, 0, 1) : clamp((fontSize * view.scale - 7) / 5, 0, 1);
+                const fontSize = radial ? ScaleJourney.LABEL_EM * extent : 19 * extent / ScaleJourney.BASE_SIZE;
+                const labelOpacity = radial ? fadeBySize(fontSize * view.scale) : clamp((fontSize * view.scale - 7) / 5, 0, 1);
                 const selected = item === ctx.item && ctx.explicitSelection;
                 if (labelOpacity > 0) {
                     const name = entry?.display_label || item.name;
                     const labelY = radial ? y + fontSize * 1.25 : y + fontSize * 1.8;
                     const text = svg('text',{x,y:labelY,'text-anchor':'middle',class:'journey-object-label',style:`font-size:${fontSize}px${selected ? ';font-weight:700' : ''}`,opacity:labelOpacity},name);
                     text.dataset.labelPriority = selected ? '200' : '100';
-                    labels.push({ text, x, y: labelY, fontSize, width: 0.56 * fontSize * name.length,
+                    labels.push({ key: item.name, text, x, y: labelY, fontSize, opacity: labelOpacity, width: 0.56 * fontSize * name.length,
                         rank: (selected ? 1e9 : 0) + drawnPx });
                 }
             });
             navigationControl.observe(onScreen);
             prefetchModels(entries, view);
-            // Keep the selected item's label, then larger objects' labels; drop any that collide.
-            const kept = [];
-            for (const label of labels.sort((a, b) => b.rank - a.rank)) {
-                const box = { left: label.x - label.width / 2, right: label.x + label.width / 2,
-                    top: label.y - label.fontSize, bottom: label.y + 0.25 * label.fontSize };
-                if (radial && kept.some(other => box.left < other.right && box.right > other.left &&
-                    box.top < other.bottom && box.bottom > other.top)) continue;
-                kept.push(box);
-                ctx.stage.append(label.text);
-            }
+            // The selected item's name wins, then larger objects' names.
+            fadeLabels(ctx.stage, labels);
             modelStage?.finish(zoom.value);
             const rulerWidth = 112;
             const rulerValue = power(zoom.value) * rulerWidth / ((radial ? ScaleJourney.RADIAL_SIZE : ScaleJourney.BASE_SIZE) * view.scale);
@@ -738,6 +765,7 @@
     R.counts = ctx => {
         const zoom=ctx.zoomControl(1,'Count window');
         let examples=0,disposed=false,placement,placementWidth;
+        const fadeLabels=labelFader(()=>render());
         // Counts use the same radial arrangement as the spatial explorers: each total is a
         // square of tiles whose side grows with the square root of the count.
         const radialWorld = index => placement?.[index] &&
@@ -792,21 +820,15 @@
                     if(remainder)g.append(svg('rect',{x:x-extent/2,y:y-extent+fullRows*cell,width:remainder*cell,height:cell,fill:`url(#${id})`,'data-replicas':remainder}));
                     if(represented<1)g.append(svg('circle',{cx:x,cy:y-size/2,r:size/2,fill:'var(--accent-color)'}));
                 }
-                const drawnPx=size*view.scale, opacity=clamp((drawnPx-12)/16,0,1);
+                const drawnPx=size*view.scale, fontSize=ScaleJourney.LABEL_EM*size, opacity=fadeBySize(fontSize*view.scale);
                 if(opacity>0){
-                    const fontSize=Math.min(Math.max(ScaleJourney.LABEL_EM*size,9/view.scale),40/view.scale);
                     const selected=item===ctx.item&&ctx.explicitSelection;
                     const text=svg('text',{x,y:y+fontSize*1.25,'text-anchor':'middle',class:'journey-object-label',
                         style:`font-size:${fontSize}px${selected?';font-weight:700':''}`,opacity},item.name);
-                    labels.push({text,x,y:y+fontSize*1.25,fontSize,width:.56*fontSize*item.name.length,rank:(selected?1e9:0)+drawnPx});
+                    labels.push({key:item.name,text,x,y:y+fontSize*1.25,fontSize,opacity,width:.56*fontSize*item.name.length,rank:(selected?1e9:0)+drawnPx});
                 }
             }
-            const kept=[];
-            for(const label of labels.sort((a,b)=>b.rank-a.rank)){
-                const box={left:label.x-label.width/2,right:label.x+label.width/2,top:label.y-label.fontSize,bottom:label.y+.25*label.fontSize};
-                if(kept.some(o=>box.left<o.right&&box.right>o.left&&box.top<o.bottom&&box.bottom>o.top))continue;
-                kept.push(box); ctx.stage.append(label.text);
-            }
+            fadeLabels(ctx.stage,labels);
             nav.observe(onScreen);
             ctx.stage.append(svg('text',{x:view.left+14,y:470,class:'counts-multiplier',style:`font-size:${13/view.scale}px`},`1 ${imagesShown?'tile':'dot'} = ${number(each)} counted units`));
             ctx.live.textContent=`${/Legal Go positions/i.test(ctx.item.name)?'Four legal examples, not an enumeration':`${totalShown.toLocaleString()} replicas drawn${clipped?'; larger totals truncated at 12,000':''}`}`;

@@ -3,7 +3,7 @@ import { GLTFLoader } from '../vendor/three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from '../vendor/three/addons/utils/BufferGeometryUtils.js';
 import { clone } from '../vendor/three/addons/utils/SkeletonUtils.js';
 import { RoomEnvironment } from '../vendor/three/addons/environments/RoomEnvironment.js';
-import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=fb897a2b3a';
+import { placeLabels, resolveLabelCollisions } from './model-labels.js?v=a7a088e1ab';
 import { SCREEN_LINE_PX, addDistanceBracket, moleculeScene, proceduralLength, proceduralScene } from './procedural-models.js?v=de09502a31';
 import { waveAnimation } from './wave-models.js?v=d9360c0030';
 import './neuron-animation.js?v=a744312505';
@@ -15,6 +15,8 @@ import { ModelCache } from './model-cache.js?v=1f3b449d69';
 import { modelBytes, retainModelResources, releaseModelResources } from './model-resources.js?v=75ad13d002';
 
 const MIB = 1024 * 1024;
+// In-model annotations are this fraction of the model's drawn size, so they scale with it.
+const LABEL_PER_PIXEL = 0.036;
 const models = new ModelCache({ maxEntries: 64, maxBytes: 192 * MIB,
     measure: modelBytes, dispose: releaseModelResources });
 const sourceQueue = [];
@@ -101,6 +103,7 @@ function sampledModelPoints(instance) {
     }
     return points;
 }
+const HOVER_OPACITY = 0.06;
 function addHoverOverlay(instance) {
     const originals = [];
     instance.traverse(child => {
@@ -115,10 +118,10 @@ function addHoverOverlay(instance) {
         overlay.material = child.isPoints
             ? new THREE.PointsMaterial({ color: 0xffffff, size: child.material.size,
                 sizeAttenuation: child.material.sizeAttenuation, transparent: true,
-                opacity: 0.16, depthWrite: false, map: child.material.map,
+                opacity: HOVER_OPACITY, depthWrite: false, map: child.material.map,
                 alphaTest: child.material.alphaTest })
             : new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true,
-                opacity: 0.16, depthWrite: false, polygonOffset: true,
+                opacity: HOVER_OPACITY, depthWrite: false, polygonOffset: true,
                 polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
         overlay.visible = false;
         overlay.renderOrder = child.renderOrder + 1;
@@ -1018,7 +1021,7 @@ export class ModelStage {
         for (const [item, instance] of this.instances)
             for (const overlay of instance?.userData.hoverOverlays || [])
                 overlay.visible = item === this.hovered && instance.visible;
-        resolveLabelCollisions(this.ctx.stage);
+        resolveLabelCollisions(this.ctx.stage, this.redraw);
         this.adaptResolution();
         this.renderer.render(this.scene, this.camera);
         for (const [item, lease] of this.activeLeases) {
@@ -1059,7 +1062,7 @@ export class ModelStage {
         const stableLabels = [];
         for (const node of instance.userData.overlays) {
             const dimension = node.userData.labelRole === 'dimension';
-            const fontPixels = Math.min(13, drawnPixels * 0.032);
+            const fontPixels = drawnPixels * LABEL_PER_PIXEL;
             const labelOpacity = dimension ? THREE.MathUtils.clamp((fontPixels - 2) / 3, 0, 1) : opacity;
             if (!labelOpacity) continue;
             const center = node.getWorldPosition(new THREE.Vector3());
@@ -1085,7 +1088,7 @@ export class ModelStage {
                         < (labelAxis.minPixelLength ?? 10)) continue;
                 }
                 if (node.userData.labelLayout === 'orbit') {
-                    stableLabels.push({ x: at.x, y: at.y, text: node.userData.label,
+                    stableLabels.push({ x: at.x, y: at.y, text: node.userData.label, size: fontPixels / scale,
                         priority: node.userData.labelPriority, offset: radius + 4 / scale,
                         callout: node.userData.labelOffset && { x: node.userData.labelOffset.x / scale,
                             y: node.userData.labelOffset.y / scale } });
@@ -1095,17 +1098,16 @@ export class ModelStage {
                 const label = svgNode('text', { x: at.x + offset.x / scale,
                     y: at.y - radius + (offset.y - (radius ? 6 : 0)) / scale,
                     class: `journey-model-label ${node.userData.labelClass || ''}`, 'text-anchor': 'middle', opacity: labelOpacity });
-                if (dimension) {
-                    label.style.fontSize = `${fontPixels / scale}px`;
-                    label.dataset.labelPriority = '80';
-                }
+                label.style.fontSize = `${fontPixels / scale}px`;
+                if (dimension) label.dataset.labelPriority = '80';
                 label.textContent = node.userData.label;
                 if (node.userData.labelVector) {
                     const group = svgNode('g', { 'data-label-group': '' });
                     group.append(label);
                     // Vector hat: a short right-pointing arrow centered over the text.
-                    const x = at.x, y = at.y - radius - (radius ? 6 : 0) / scale - 12;
-                    group.append(svgNode('path', { d: `M${x - 5.5} ${y}H${x + 5.5}M${x + 2.5} ${y - 3}L${x + 5.5} ${y}L${x + 2.5} ${y + 3}`,
+                    const unit = fontPixels / scale / 12;
+                    const x = at.x, y = at.y - radius - (radius ? 6 : 0) / scale - 12 * unit;
+                    group.append(svgNode('path', { d: `M${x - 5.5 * unit} ${y}H${x + 5.5 * unit}M${x + 2.5 * unit} ${y - 3 * unit}L${x + 5.5 * unit} ${y}L${x + 2.5 * unit} ${y + 3 * unit}`,
                         class: `journey-model-vector ${node.userData.labelClass || ''}`, opacity }));
                 }
             }
@@ -1158,5 +1160,12 @@ export class ModelStage {
         this.orbitEntries?.clear();
     }
 }
-window.ScaleModels = { ModelStage, ModelPreview, baseEntry, convexHull, insideHull };
+// Whether an item has a model, once the registry has arrived (false until then).
+let modelled = null;
+registry.then(data => {
+    modelled = new Set((data.models || []).flatMap(entry => Object.entries(entry.matches || {})
+        .flatMap(([dimension, names]) => names.map(name => `${dimension}::${name}`))));
+});
+const hasModel = (dimension, name) => Boolean((dimension === 'length' && proceduralLength[name]) || modelled?.has(`${dimension}::${name}`));
+window.ScaleModels = { ModelStage, ModelPreview, baseEntry, hasModel, convexHull, insideHull };
 window.dispatchEvent(new Event('scale-models-ready'));

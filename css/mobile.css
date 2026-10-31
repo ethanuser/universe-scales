@@ -62,7 +62,7 @@
         min-width: 60px;
         min-height: 60px;
         font-size: 1.35rem;
-        border-radius: 16px;
+        border-radius: var(--radius-lg);
         background: var(--bg-secondary);
         border: 1px solid var(--border-color);
         color: var(--text-primary);
@@ -80,7 +80,7 @@
         min-width: 60px;
         min-height: 60px;
         font-size: 1.35rem;
-        border-radius: 16px;
+        border-radius: var(--radius-lg);
         background: var(--bg-secondary);
         border: 1px solid var(--border-color);
         color: var(--text-primary);
@@ -399,7 +399,7 @@
         -webkit-appearance: none;
         appearance: none;
         background-color: var(--bg-primary);
-        border-radius: 8px;
+        border-radius: var(--radius-md);
         margin: 0;
     }
     

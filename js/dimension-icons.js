@@ -70,7 +70,7 @@
     // One hue per group; the darker theme gets lighter tints for contrast.
     const GROUP_COLORS = {
         'Fundamental Scales': ['#2563eb', '#7aa6ff'],
-        'Geometry & Scale': ['#0f9488', '#4fd1c1'],
+        'Geometry & Scale': ['#0b7a70', '#4fd1c1'],
         'Motion & Mechanics': ['#d9690b', '#ffa45c'],
         'Materials & Matter': ['#8b6a3e', '#d2ad7a'],
         'Fields, Waves & Radiation': ['#7c4dd8', '#b49bff'],

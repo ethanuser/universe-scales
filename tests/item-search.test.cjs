@@ -54,3 +54,26 @@ test('powers of ten render with superscript digits, and one for ten to the zero'
     assert.equal(power(16), '10¹⁶');
     assert.equal(power(0), '1');
 });
+
+test('item completeness rises with description, source, model and review', () => {
+    const { itemLevel } = require('../js/item-status.js');
+    const full = 'x'.repeat(200), source = 'https://example.org/a';
+    assert.equal(itemLevel({ description: 'Short.', source }), 0);
+    assert.equal(itemLevel({ description: full }), 0);
+    assert.equal(itemLevel({ description: full, sources: [{ url: 'repo://dataset/raw/a.yaml' }] }), 0);
+    assert.equal(itemLevel({ description: full, source }), 1);
+    assert.equal(itemLevel({ description: full, sources: [{ url: source }] }, true), 2);
+    assert.equal(itemLevel({ description: 'Short.', owner_reviewed: true }), 3);
+});
+
+test('dimension completeness needs breadth for Complete and review for Reviewed', () => {
+    const { dimensionLevel } = require('../js/item-status.js');
+    assert.equal(dimensionLevel({ items: 50, drafted: 5, reviewed: 0 }), 0);
+    assert.equal(dimensionLevel({ items: 50, drafted: 50, reviewed: 0 }), 1);
+    assert.equal(dimensionLevel({ items: 258, drafted: 258, reviewed: 0 }), 2);
+    assert.equal(dimensionLevel({ items: 258, drafted: 258, reviewed: 258 }), 3);
+});
+
+test('dimension status file matches the dataset', () => {
+    require('node:child_process').execFileSync('node', ['scripts/build_status.cjs', '--check'], { cwd: require('node:path').join(__dirname, '..') });
+});

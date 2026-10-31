@@ -121,6 +121,16 @@
             return sup;
         }));
     }
-    root.ScaleSearch = { rank, score, normalize, band, groups, power, writePowers };
+    // Hides each band header whose items are all hidden, so a filtered list keeps its dividers.
+    function syncHeaders(list, headerClass) {
+        let header = null, shown = 0;
+        const close = () => { if (header) header.hidden = shown === 0; };
+        for (const node of list.children) {
+            if (node.classList.contains(headerClass)) { close(); header = node; shown = 0; }
+            else if (!node.hidden) shown++;
+        }
+        close();
+    }
+    root.ScaleSearch = { rank, score, normalize, band, groups, power, writePowers, syncHeaders };
     if (typeof module !== 'undefined') module.exports = root.ScaleSearch;
 })(globalThis);

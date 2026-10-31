@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="importmap">{"imports":{"three":"./js/vendor/three/three.module.min.js"}}</script>
-    <script type="module" src="js/experiences/models.js?v=5acf741d9b"></script>
+    <script type="module" src="js/experiences/models.js?v=86f6b91f64"></script>
     <title>Universe Scales</title>
     <link id="favicon" rel="icon" type="image/svg+xml" href="favicon-light.svg">
     <link rel="alternate icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="css/styles.css?v=67aa0bc6d2">
-    <link rel="stylesheet" href="css/mobile.css?v=32b300cc8e">
-    <link rel="stylesheet" href="css/experiences.css?v=c351d1190a">
-    <link rel="stylesheet" href="css/audio-experience.css?v=5ff32778dc">
+    <link rel="stylesheet" href="css/styles.css?v=84dbc35be3">
+    <link rel="stylesheet" href="css/mobile.css?v=ce0f640be3">
+    <link rel="stylesheet" href="css/experiences.css?v=8595d63a1d">
+    <link rel="stylesheet" href="css/audio-experience.css?v=f5b4f1a171">
     <link rel="stylesheet" href="css/perception-experience.css?v=df53354866">
-    <link rel="stylesheet" href="css/app.css?v=b96840314b">
+    <link rel="stylesheet" href="css/app.css?v=d97fa99811">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
@@ -110,7 +110,7 @@
                 <label class="sr-only" for="unit-browser-toggle">Unit</label>
                 <div class="unit-picker">
                     <button id="unit-browser-toggle" class="unit-browser-toggle" type="button" aria-expanded="false"
-                        aria-controls="unit-browser-panel">
+                        aria-controls="unit-browser-panel" title="Choose a unit (U)">
                         <span id="unit-browser-current">meters</span>
                         <span class="unit-browser-toggle__chevron" aria-hidden="true">▾</span>
                     </button>
@@ -126,10 +126,6 @@
                     title="Enter fullscreen (F)" aria-label="Enter fullscreen" aria-pressed="false">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>
                 </button>
-                <button id="help-toggle" class="app-icon-button" type="button" title="Help and keyboard shortcuts (?)">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.6v.6M12 17v.5" /></svg>
-                    <span class="sr-only">Help</span>
-                </button>
                 <button id="options-toggle" class="app-icon-button" type="button" aria-expanded="false"
                     aria-controls="options-drawer" title="Options (O)">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h9M17 7h3M4 17h3M11 17h9" /><circle cx="15" cy="7" r="2" /><circle cx="9" cy="17" r="2" /></svg>
@@ -142,6 +138,7 @@
                     <label class="sr-only" for="dimension-browser-search">Search dimensions</label>
                     <input id="dimension-browser-search" class="dimension-browser-search" type="search"
                         placeholder="Search dimensions" autocomplete="off" spellcheck="false">
+                    <div id="dimension-browser-legend" class="status-legend"></div>
                 </div>
                 <div id="dimension-browser-empty" class="dimension-browser-empty" hidden>
                     No dimensions match that search.
@@ -165,6 +162,7 @@
                 <div class="tooltip-content">
                     <img class="tooltip-image" src="" alt="">
                     <h3 class="tooltip-title"></h3>
+                    <div class="tooltip-status"></div>
                     <p class="tooltip-value"></p>
                     <div class="tooltip-description"></div>
                     <a class="tooltip-source" href="#" target="_blank"></a>
@@ -181,8 +179,10 @@
             </div>
         </main>
 
+        <div id="panel-resizer" class="app-resizer app-resizer--panel"></div>
         <div id="options-backdrop" class="app-backdrop" hidden></div>
         <aside id="options-drawer" class="app-drawer" aria-label="Options" hidden>
+            <div id="drawer-resizer" class="app-resizer app-resizer--drawer"></div>
             <div class="app-drawer__header">
                 <h2>Options</h2>
                 <button id="options-close" class="app-icon-button" type="button" aria-label="Close options" title="Close">
@@ -429,28 +429,29 @@
         </div>
     </div>
 
-    <script src="js/dimension-icons.js?v=2ebb823c56" defer></script>
-    <script src="js/item-search.js?v=4f34c94a47" defer></script>
+    <script src="js/dimension-icons.js?v=a4090cba70" defer></script>
+    <script src="js/item-search.js?v=89fb9f2af1" defer></script>
+    <script src="js/item-status.js?v=9173863977" defer></script>
     <script src="js/model-overrides.js?v=860fc02b1d" defer></script>
     <script src="js/constants.js?v=f64d0fe1ce" defer></script>
     <script src="js/formatting.js?v=f3379dc71b" defer></script>
     <script src="js/editor.js?v=be41d66c80" defer></script>
-    <script src="js/plot.js?v=dc6df64895" defer></script>
+    <script src="js/plot.js?v=143f2764fb" defer></script>
     <script src="js/plot-overview.js?v=71fd992042" defer></script>
     <script src="js/experiences/math.js?v=54aaf7588e" defer></script>
     <script src="js/experiences/controls.js?v=c3382a2eca" defer></script>
     <script src="js/experiences/area-maps.js?v=adb40b5c76" defer></script>
-    <script src="js/experiences/spatial.js?v=5459a387a1" defer></script>
+    <script src="js/experiences/spatial.js?v=f57f4eebfb" defer></script>
     <script src="js/experiences/motion-math.js?v=ea5a56c662" defer></script>
     <script src="js/experiences/motion.js?v=0d2d8b85b1" defer></script>
     <script src="js/experiences/perception.js?v=c8c3b660af" defer></script>
     <script src="js/experiences/journey.js?v=52ba6f161d" defer></script>
     <script src="js/experiences/audio-math.js?v=f55f282587" defer></script>
     <script src="js/experiences/audio.js?v=8743d57c45" defer></script>
-    <script src="js/experiences/controller.js?v=ffe7a4f79d" defer></script>
-    <script src="js/script.js?v=0b04ed6740" defer></script>
+    <script src="js/experiences/controller.js?v=090d9660ae" defer></script>
+    <script src="js/script.js?v=76cebaba6e" defer></script>
     <script src="js/mobile.js?v=9b915523c0" defer></script>
-    <script src="js/app-shell.js?v=51635556c1" defer></script>
+    <script src="js/app-shell.js?v=1074c9dfca" defer></script>
 </body>
 
 </html>
